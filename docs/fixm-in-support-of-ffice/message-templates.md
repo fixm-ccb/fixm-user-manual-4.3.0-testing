@@ -43,15 +43,16 @@ Table 2: Example of the FF-ICE Flight Cancellation Message
 |-|-|-|
 | Message Information        | **List of Recipients**                   | **Mandatory**   |
 |                            | **Message Originator**                   | **Mandatory**   |
-|                            | *Request for Translation and Forwarding* | *Optional*      |
+|                            | *Request for Translation and Delivery*   | *Optional*      |
 |                            | *Requested Recipients*                   | *Optional*      |
+|                            | *Request for Fowarding*                  | *Optional*      |
+|                            | **Relevant ASPs**                        | **Mandatory**   |
 |                            | **Message Date-Time**                    | **Mandatory**   |
 |                            | **Message Identifier**                   | **Mandatory**   |
 |                            | **Type of Request/Response**             | **Mandatory**   |
 |                            | *AFTN Address*                           | *Optional*      |
 |                            | *Contact Information*                    | *Optional*      |
 | Flight Identification      | **GUFI**                                 | **Mandatory**   |
-|                            | **GUFI Originator**                      | **Mandatory**   |
 |                            | **Aircraft Identification**              | **Mandatory**   |
 | Departure/Destination Data | **Departure Aerodrome**                  | **Mandatory**   |
 |                            | **Destination Aerodrome**                | **Mandatory**   |
