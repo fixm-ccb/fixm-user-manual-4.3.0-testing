@@ -6,7 +6,7 @@ Note: The content of the FIXM User Manual is informative. The use of the words *
 
 ## Guidance on FIXM Releases
 
-This edition of the FIXM User Manual provides guidance for [FIXM Core 4.2.0](https://fixm.aero/release.pl?rel=FIXM-4.2.0), the [FF-ICE Application 1.0.0](https://fixm.aero/release.pl?rel=FFICE-Msg-1.0.0) and the [Basic Application 1.0.0](https://fixm.aero/release.pl?rel=Basic-Msg-1.0.0).
+This edition of the FIXM User Manual provides guidance for [FIXM Core 4.3.0](https://fixm.aero/release.html?rel=FIXM-4.3.0&ret=core), the [FF-ICE Application 1.1.0](https://fixm.aero/release.html?rel=FFICE-Msg-1.1.0&ret=app) and the [Basic Application 1.1.0](https://fixm.aero/release.html?rel=Basic-Msg-1.1.0&ret=app).
 
 Guidance for previous releases is available on [FIXM.aero](https://www.fixm.aero).
 
@@ -53,7 +53,7 @@ This sites aims to build a "community knowledge" about the implementation of FIX
 
 [2]: [FIXM web site](https://fixm.aero/)
 
-[3]: [FIXM Work Area](https://ost.eurocontrol.int/sites/FIXM/SitePages/Home.aspx)
+[3]: [FIXM Work Area](https://eurocontrol.sharepoint.com/sites/coll-FIXM)
 
 ### ICAO references
 
@@ -61,7 +61,7 @@ This sites aims to build a "community knowledge" about the implementation of FIX
 
 [5]: [ICAO Doc 9965](http://www.icao.int/Meetings/anconf12/Documents/9965_cons_en.pdf): Manual on Flight and Flow Information for a Collaborative Environment
 
-[6]: [ATMRPP/3-WP/766](hhttps://ost.eurocontrol.int/sites/FIXM/Shared%20Documents/ICAO%20ATMRPP%20inputs%20for%20FIXM/ATMRPP3_WP_766_FF-ICE1%20Implementation%20Guidance_All.pdf): “Manual on FF-ICE Implementation Guidance”
+[6]: [ATMRPP/3-WP/766](https://eurocontrol.sharepoint.com/sites/coll-FIXM/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fcoll%2DFIXM%2FShared%20Documents%2FFIXM%20Change%20Requests%2FICAO%20ATMRPP%20inputs%20for%20FIXM%2FFF%2DICE%20Manual%20d0%2E99%5Fmarkup%2Epdf&parent=%2Fsites%2Fcoll%2DFIXM%2FShared%20Documents%2FFIXM%20Change%20Requests%2FICAO%20ATMRPP%20inputs%20for%20FIXM): “Manual on FF-ICE Implementation Guidance”
 
 [7]: ICAO Doc 7910: Location Indicators
 
@@ -137,11 +137,11 @@ This sites aims to build a "community knowledge" about the implementation of FIX
 | XSD               | XML Schema Definition |
 | XSLT              | Extensible Stylesheet Language Transformations |
 
-[FIXM Core 4.2.0]: https://www.fixm.aero/release.pl?rel=FIXM-4.2.0
-[FF-ICE Application]: https://www.fixm.aero/release.pl?rel=FFICE-Msg-1.0.0
-[Basic Application]: https://www.fixm.aero/release.pl?rel=Basic-Msg-1.0.0
+[FIXM Core 4.2.0]: https://fixm.aero/release.html?rel=FIXM-4.3.0&ret=core
+[FF-ICE Application]: https://fixm.aero/release.html?rel=FFICE-Msg-1.1.0&ret=app
+[Basic Application]: https://fixm.aero/release.html?rel=Basic-Msg-1.1.0&ret=app
 
 [OneSky Online]: https://ext.eurocontrol.int/
 [OneSky Teams]: https://ost.eurocontrol.int/Pages/default.aspx
-[ACCESS THE FIXM WORK AREA]: https://ost.eurocontrol.int/sites/FIXM/SitePages/Home.aspx
+[ACCESS THE FIXM WORK AREA]: https://eurocontrol.sharepoint.com/sites/coll-FIXM
 [SUBMIT CONTENT]: https://www.fixm.aero/content/contact.pl?category=Technical&version=Other&versionOther=FIXM%20User%20Manual&details=Describe%20proposed%20content%20here
