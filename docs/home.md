@@ -6,9 +6,9 @@ Note: The content of the FIXM User Manual is informative. The use of the words *
 
 ## Guidance on FIXM Releases
 
-This edition of the FIXM User Manual provides guidance for [FIXM Core 4.3.0](https://fixm.aero/release.html?rel=FIXM-4.3.0&ret=core), the [FF-ICE Application 1.1.0](https://fixm.aero/release.html?rel=FFICE-Msg-1.1.0&ret=app) and the [Basic Application 1.1.0](https://fixm.aero/release.html?rel=Basic-Msg-1.1.0&ret=app).
+This edition of the FIXM User Manual provides guidance for [FIXM Core 4.3.0], the [FF-ICE Application 1.1.0] and the [Basic Application 1.1.0].
 
-Guidance for previous releases is available on [FIXM.aero](https://www.fixm.aero).
+Guidance for previous releases is available on [FIXM.aero].
 
 ## Content and Target audience
 
@@ -30,7 +30,7 @@ Guidance for previous releases is available on [FIXM.aero](https://www.fixm.aero
 This sites aims to build a "community knowledge" about the implementation of FIXM. You can contribute to its evolution by submitting content and by supporting the technical exchanges of the FIXM Community using the FIXM Work Area.
 
 - [SUBMIT CONTENT][SUBMIT CONTENT]
-- [ACCESS THE FIXM WORK AREA][ACCESS THE FIXM WORK AREA]
+- [ACCESS THE FIXM WORK AREA][FIXM Work Area]
 
 ### How to get access to the FIXM Work Area
 
@@ -49,11 +49,11 @@ This sites aims to build a "community knowledge" about the implementation of FIX
 
 ### FIXM references
 
-[1]: [FIXM Strategy v1.1](https://fixm.aero/documents/FIXM%20Strategy.pdf)
+[1]: [FIXM Strategy v1.1][FIXM Strategy v1.1]
 
-[2]: [FIXM web site](https://fixm.aero/)
+[2]: [FIXM web site][FIXM.aero]
 
-[3]: [FIXM Work Area](https://eurocontrol.sharepoint.com/sites/coll-FIXM)
+[3]: [FIXM Work Area][FIXM Work Area]
 
 ### ICAO references
 
@@ -137,11 +137,14 @@ This sites aims to build a "community knowledge" about the implementation of FIX
 | XSD               | XML Schema Definition |
 | XSLT              | Extensible Stylesheet Language Transformations |
 
-[FIXM Core 4.2.0]: https://fixm.aero/release.html?rel=FIXM-4.3.0&ret=core
-[FF-ICE Application]: https://fixm.aero/release.html?rel=FFICE-Msg-1.1.0&ret=app
-[Basic Application]: https://fixm.aero/release.html?rel=Basic-Msg-1.1.0&ret=app
+[FIXM Core 4.3.0]: https://fixm.aero/release.html?rel=FIXM-4.3.0&ret=core
+[FF-ICE Application 1.1.0]: https://fixm.aero/release.html?rel=FFICE-Msg-1.1.0&ret=app
+[Basic Application 1.1.0]: https://fixm.aero/release.html?rel=Basic-Msg-1.1.0&ret=app
+[FIXM.aero]: https://www.fixm.aero
+[FIXM Strategy v1.1]: https://fixm.aero/documents/FIXM%20Strategy.pdf
+
+[FIXM Work Area]: https://eurocontrol.sharepoint.com/sites/coll-FIXM
 
 [OneSky Online]: https://ext.eurocontrol.int/
 [OneSky Teams]: https://ost.eurocontrol.int/Pages/default.aspx
-[ACCESS THE FIXM WORK AREA]: https://eurocontrol.sharepoint.com/sites/coll-FIXM
 [SUBMIT CONTENT]: https://www.fixm.aero/content/contact.pl?category=Technical&version=Other&versionOther=FIXM%20User%20Manual&details=Describe%20proposed%20content%20here
