@@ -12,7 +12,7 @@ EA<sup><a href="#how-to-generate-xml-schemas/generating-schemas-from-the-logical
 2. Select the component of the model you would like to build in Project
     Browser<sup><a href="#how-to-generate-xml-schemas/generating-schemas-from-the-logical-model?id=notes">[note 2]</a></sup>. For this example, we will be building FIXM Core (model
     available at
-    <https://fixm.aero/releases/FIXM-4.2.0/FIXM_Core_v4.2.0.eap>).
+    <https://fixm.aero/release.html?rel=FIXM-4.3.0&ret=core>).
 
 3. Right click on the chosen component (in this example, “Core”) and
     select “Code Engineering” and then “Generate XML Schema…”.
