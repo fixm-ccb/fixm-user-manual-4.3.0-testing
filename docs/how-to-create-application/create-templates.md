@@ -787,7 +787,7 @@ details).
     ![Image](.//media/image191.png)
 
 4. For each namespace your templates both import and restrict (in this
-    example, only `http://www.fixm.aero/flight/4.2`), create one
+    example, only `http://www.fixm.aero/flight/4.3`), create one
     sub-package under Includes. Like Includes itself, these sub-packages
     will be “Package Only”. Choose a *Name* appropriate to both your
     templates and the schemas they will import. In this example, one
@@ -804,7 +804,8 @@ details).
     tag. The *Schema File* field should be set to something appropriate
     for your templates. In this example, use:
 
-    a.  *Target Namespace* set to: `http://www.fixm.aero/flight/4.2`.
+    a.  *Target Namespace* set to: `http://www.fixm.aero/flight/4.3
+    `.
 
     b.  *Prefix* set to: `fx`.
 
