@@ -16,13 +16,13 @@ provided for convenience.
 <tr class="odd">
 <td>FIXM Schemas</td>
 <td>FIXM Core</td>
-<td>4.2.0</td>
+<td>4.3.0</td>
 <td><a href="https://fixm.aero/release.html?rel=FIXM-4.3.0&ret=core">https://fixm.aero/release.html?rel=FIXM-4.3.0&ret=core</a></td>
 </tr>
 <tr class="even">
 <td></td>
 <td>FF-ICE Message</td>
-<td>1.0.0</td>
+<td>1.1.0</td>
 <td><a href="https://fixm.aero/release.html?rel=FFICE-Msg-1.1.0&ret=app">https://fixm.aero/release.html?rel=FFICE-Msg-1.1.0&ret=app</a></td>
 </tr>
 <tr class="odd">
