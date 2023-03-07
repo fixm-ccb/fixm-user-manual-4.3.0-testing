@@ -54,7 +54,7 @@ Three final notes about using the post-processing script:
     schemas each time it is run, resulting in invalid schemas.
 
 - The script was constructed specifically to run against FIXM Core
-    4.2.0, FF-ICE Message 1.0.0, and Basic Message 1.0.0. Running the
+    4.3.0, FF-ICE Message 1.1.0, and Basic Message 1.1.0. Running the
     script against any other schemas without modifying the script
     appropriately will likely produce either problematic or insufficient
     modifications to the schemas.
