@@ -1,14 +1,14 @@
 # Initial Download and Setup
 
-To save time and reduce setup steps, it is recommended that you begin the process of creating your Application by downloading the FIXM Basic Message v1.0.0 full release.<sup><a href="#how-to-create-application/initial-download-and-setup?id=notes">[note 1]</a></sup>
+To save time and reduce setup steps, it is recommended that you begin the process of creating your Application by downloading the FIXM Basic Message v1.1.0 full release.<sup><a href="#how-to-create-application/initial-download-and-setup?id=notes">[note 1]</a></sup>
 
-1) Download the [full release of FIXM Basic Message v1.0.0](https://fixm.aero/releases/Basic-Msg-1.0.0/FIXM_Basic_Message_v1.0.0_with_Core_v4.2.0_full_archive.zip).
+1) Download the [full release of FIXM Basic Message v1.0.0](https://fixm.aero/releases/Basic-Msg-1.1.0/FIXM_Basic_Message_v1.1.0_with_Core_v4.3.0_full_archive.zip).
 2) Unzip the full release and navigate to the `applications` directory under `schemas`.
 3) Delete the `basicmessage` directory.
 4) Navigate to the `uml` directory.
 5) Rename the .eap file to something appropriate for your Application.
 
-    For this guided example, the .eap file should be renamed to `FIXM_Example_Message_v1.0.0_with_Core_v4.2.0.eap`. The starting directory structure of the example environment is shown below.  
+    For this guided example, the .eap file should be renamed to `FIXM_Example_Message_v1.1.0_with_Core_v4.3.0.eap`. The starting directory structure of the example environment is shown below.  
 
     ![The starting directory structure of the example environment](.//media/image52.png "The starting directory structure of the example environment")
 
@@ -24,6 +24,6 @@ To save time and reduce setup steps, it is recommended that you begin the proces
 
 ## Notes
 
-[1]: Starting with the Basic Message v1.0.0 model and then deleting the BasicMessage package allows you to skip creating and setting up the Applications container and associated schema directory.
+[1]: Starting with the Basic Message v1.1.0 model and then deleting the BasicMessage package allows you to skip creating and setting up the Applications container and associated schema directory.
 
 [2]: The FIXM development team uses Sparx Systems Enterprise Architect version 13.5, build 1352 for all development work.  
