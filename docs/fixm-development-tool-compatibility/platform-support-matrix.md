@@ -23,7 +23,7 @@ provided for convenience.
 <td></td>
 <td>FF-ICE Message</td>
 <td>1.0.0</td>
-<td><a href="https://fixm.aero/release.html?rel=FFICE-Msg-1.1.0&ret=app">https://www.fixm.aero/release.pl?rel=FFICE-Msg-1.0.0</a></td>
+<td><a href="https://fixm.aero/release.html?rel=FFICE-Msg-1.1.0&ret=app">https://fixm.aero/release.html?rel=FFICE-Msg-1.1.0&ret=app</a></td>
 </tr>
 <tr class="odd">
 <td>Java</td>
