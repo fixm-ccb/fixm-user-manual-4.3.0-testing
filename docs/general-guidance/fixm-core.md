@@ -75,7 +75,7 @@ schema.
 ```
 
 ```xml
-<wrong:FlightIdentification xmlns:wrong="..." xmlns:fb="http://www.fixm.aero/base/4.2" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="...">
+<wrong:FlightIdentification xmlns:wrong="..." xmlns:fb="http://www.fixm.aero/base/4.3" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="...">
     <wrong:departureAerodrome>
         <fb:name>LES BARAQUES</fb:name>
     </wrong:departureAerodrome>
