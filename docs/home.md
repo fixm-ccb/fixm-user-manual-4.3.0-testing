@@ -147,4 +147,4 @@ This sites aims to build a "community knowledge" about the implementation of FIX
 
 [OneSky Online]: https://ext.eurocontrol.int/
 [OneSky Teams]: https://ost.eurocontrol.int/Pages/default.aspx
-[SUBMIT CONTENT]: https://www.fixm.aero/content/contact.pl?category=Technical&version=Other&versionOther=FIXM%20User%20Manual&details=Describe%20proposed%20content%20here
+[SUBMIT CONTENT]: https://fixm.aero/contact.pl
