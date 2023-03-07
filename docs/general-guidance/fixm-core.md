@@ -60,7 +60,7 @@ time. It also features an example XML sample that is valid against this
 schema.
 
 ```xml
-<xs:schema xmlns:wrong="fixm_as_library_of_types" xmlns:fx="http://www.fixm.aero/flight/4.2" xmlns:fb="http://www.fixm.aero/base/4.2" xmlns:etc="..." >
+<xs:schema xmlns:wrong="fixm_as_library_of_types" xmlns:fx="http://www.fixm.aero/flight/4.3" xmlns:fb="http://www.fixm.aero/base/4.3" xmlns:etc="..." >
 <!– […] –>
     <xs:element name="FlightIdentification" type="wrong:FlightIdentificationType"/>
     <xs:complexType name="FlightIdentificationType">
