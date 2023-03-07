@@ -72,8 +72,8 @@ elsif ($schema =~ /\/Example.xsd/)
 {
   $line = "\t<xs:include schemaLocation=\"./ExampleEnRoute.xsd\"/>\n" .
           "\t<xs:include schemaLocation=\"./ExampleMessage.xsd\"/>\n" .
-          "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../../core/base/Base.xsd\"/>\n" .
-          "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.2\" schemaLocation=\"../../core/flight/Flight.xsd\"/>\n" .
+          "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../../core/base/Base.xsd\"/>\n" .
+          "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.3\" schemaLocation=\"../../core/flight/Flight.xsd\"/>\n" .
           "\t<xs:import namespace=\"http://www.fixm.aero/app/msg/1.0\" schemaLocation=\"../../applications/basicmessage/BasicMessage.xsd\"/>\n" .
           $line;
 }
