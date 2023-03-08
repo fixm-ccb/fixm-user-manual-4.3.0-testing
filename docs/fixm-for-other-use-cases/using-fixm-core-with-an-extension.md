@@ -158,4 +158,4 @@ updated as appropriate after best practices have been established.
 
 ## Notes
 
-[1]: Note that each Extension must target the same version of FIXM Core and/or Application Library in order to be used together.  For example, you cannot combine one Extension that uses FIXM Core 4.2.0 with another Extension that uses FIXM Core 4.1.0.  
+[1]: Note that each Extension must target the same version of FIXM Core and/or Application Library in order to be used together.  For example, you cannot combine one Extension that uses FIXM Core 4.3.0 with another Extension that uses FIXM Core 4.2.0.  
