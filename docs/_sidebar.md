@@ -72,6 +72,6 @@
 
 - **License**
   - [Copyright 2021](https://fixm.aero/content/disclaimer.pl)
-  - Last updated on April 16th 2021
+  - Last updated on February 3rd 2021
 
 
