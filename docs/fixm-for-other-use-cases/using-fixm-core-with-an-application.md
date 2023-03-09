@@ -105,7 +105,7 @@ exchange or if the user wants to create message templates to more fully
 lock down and describe their message structures and content, they should
 consider creating their own custom FIXM Application.
 
-As described in [FIXM Applications](../general-guidance/applications), FIXM Applications enhance FIXM Core by adding context specific message data structures and provides
+As described in [FIXM Applications](../general-guidance/applications.md), FIXM Applications enhance FIXM Core by adding context specific message data structures and provides
 stricter validation rules via message templates. An Application should
 define its own namespace to distinguish it from FIXM Core as well as
 creating one or more root elements to be used as an entry point into the
