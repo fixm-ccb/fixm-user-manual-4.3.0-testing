@@ -19,9 +19,12 @@ More information in chapter 3.7 GUFI & FLIGHT PLAN ASSOCIATION of the FF-ICE/R1 
 
 #### Encoding the UUID v4
 
-Here is a list of off-the-shelf IT libraries whose use is recommeneded for the UUID 4 generation:
-TODO
+Here is a list of off-the-shelf IT libraries whose use is recommended for the UUID 4 generation:
 
+|Language|URL|Notes|
+|:-|:-|:-|
+|Java|https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/UUID.html||
+|Python|https://docs.python.org/3/library/uuid.html#uuid.uuid4||
 
 #### Encoding the namespace
 
@@ -30,12 +33,9 @@ The namespace is encoded using two fields: the `namespace domain` and the `names
 - `namespace domain` = `OPERATING_AGENCY_DESIGNATOR` when the `namespace identifier` is a three-letter Operating Agency Designator (as per ICAO Doc. 8585).
 - `namespace domain` = `LOCATION_INDICATOR` when the `namespace identifier` is a four-letter Location Indicator (as per ICAO Doc. 7910). 
 
-It is recommended that the GUFI originator use a single consistent namespace whenever possible to allow namespace uniqueness to be testable for that organisation.
+It is up to each GUFI originator to choose the most suitable option for the namespace. It is also recommended that the GUFI originator use a single consistent namespace whenever possible to allow namespace uniqueness to be testable for that organisation.
 
-Note: 
-> The GUFI originator is not necessarily the flight plan or message originator, although they may be the same entity. 
-> For example, it is possible that an independent GUFI creation service could be used by flight plan originators that do not wish to create their own GUFIs. 
-> The namespace associated with these GUFIs would be that of the creation service and would have no connection to the flight plan originator.
+?> Note: The GUFI originator is not necessarily the flight plan or message originator, although they may be the same entity. For example, it is possible that an independent GUFI creation service could be used by flight plan originators that do not wish to create their own GUFIs. The namespace associated with these GUFIs would be that of the creation service and would have no connection to the flight plan originator.
 
 
 #### Encoding the creation timestamp
@@ -48,7 +48,10 @@ The creation timestamp is expressed as a `DateTimeUTC`. For more guidance, see p
 - Example of GUFI encoding whereby the originator of the GUFI is an airline that has been allocated a 3-letter code listed in ICAO Doc 8585.
 
 ```xml
-<fx:gufi codeSpace="urn:uuid" creationTime="2022-12-01T12:18:36Z" namespaceDomain="OPERATING_AGENCY_DESIGNATOR" namespaceIdentifier="AIB">dd056de9-0ba9-4d55-82cf-7b976b0b6d29</fx:gufi>
+<!-- xmlns:fx="http://www.fixm.aero/flight/4.3" -->
+<fx:flight>
+  <fx:flightIdentification>
+    <fx:gufi codeSpace="urn:uuid" creationTime="2022-12-01T12:18:36Z" namespaceDomain="OPERATING_AGENCY_DESIGNATOR" namespaceIdentifier="AIB">dd056de9-0ba9-4d55-82cf-7b976b0b6d29</fx:gufi>
 ```
 
 ---
@@ -56,7 +59,10 @@ The creation timestamp is expressed as a `DateTimeUTC`. For more guidance, see p
 - Example of GUFI encoding whereby the originator of the GUFI is an ATM unit that has been allocated a 4-letter location indicator listed in ICAO Doc 7910.
 
 ```xml
-<fx:gufi codeSpace="urn:uuid" creationTime="2022-12-01T12:18:36Z" namespaceDomain="LOCATION_INDICATOR" namespaceIdentifier="KZDC">dd056de9-0ba9-4d55-82cf-7b976b0b6d29</fx:gufi>
+<!-- xmlns:fx="http://www.fixm.aero/flight/4.3" -->
+<fx:flight>
+  <fx:flightIdentification>
+    <fx:gufi codeSpace="urn:uuid" creationTime="2022-12-01T12:18:36Z" namespaceDomain="LOCATION_INDICATOR" namespaceIdentifier="KZDC">dd056de9-0ba9-4d55-82cf-7b976b0b6d29</fx:gufi>
 ```
 
 ---
@@ -64,7 +70,10 @@ The creation timestamp is expressed as a `DateTimeUTC`. For more guidance, see p
 - Example of GUFI encoding whereby the originator of the GUFI is an organisation identified by its registered specific internet Fully Qualified Domain Name.
 
 ```xml
-<fx:gufi codeSpace="urn:uuid" creationTime="2022-12-01T12:18:36Z" namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME" namespaceIdentifier="example.com">dd056de9-0ba9-4d55-82cf-7b976b0b6d29</fx:gufi>
+<!-- xmlns:fx="http://www.fixm.aero/flight/4.3" -->
+<fx:flight>
+  <fx:flightIdentification>
+    <fx:gufi codeSpace="urn:uuid" creationTime="2022-12-01T12:18:36Z" namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME" namespaceIdentifier="example.com">dd056de9-0ba9-4d55-82cf-7b976b0b6d29</fx:gufi>
 ```
 
 ---
@@ -80,7 +89,7 @@ GUFIs are encoded in FIXM Core 4.2.0 as version 4 UUID only, with no namespace a
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 <!-- xmlns:fx="http://www.fixm.aero/flight/4.2" -->
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-<fx:gufi codeSpace="urn:uuid">dd056de9-0ba9-4d55-82cf-7b976b0b6d29</fx:gufiLegacy>
+<fx:gufi codeSpace="urn:uuid">dd056de9-0ba9-4d55-82cf-7b976b0b6d29</fx:gufi>
 ```
 
 ```xml
