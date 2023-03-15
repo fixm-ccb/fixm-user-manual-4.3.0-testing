@@ -23,9 +23,9 @@ Here is a list of off-the-shelf IT libraries whose use is recommended for the UU
 
 |Language|URL|Notes|
 |:-|:-|:-|
-|Java|https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/UUID.html||
+|Java|https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/UUID.html#randomUUID()||
 |Python|https://docs.python.org/3/library/uuid.html#uuid.uuid4||
-|.|.|.|
+|..|..|..|
 
 #### Encoding the namespace
 
