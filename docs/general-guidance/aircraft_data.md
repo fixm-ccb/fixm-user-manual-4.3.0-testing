@@ -10,7 +10,7 @@ Examples:
 
 - Aircraft Registration = `PH-NSC`, as visible on the airframe of this DR-400
 
-![Aircraft Registration PHNSC](./media/aircraft_reg_PHNSC.png)
+![Image](.//media/aircraft_reg_PHNSC.png "Example of aircraft registration - PHNSC")
 
 Corresponding encoding in `FIXM 4.3.0`
 
@@ -25,7 +25,7 @@ Corresponding encoding in `FIXM 4.3.0`
 
 - Aircraft Registration = `9M-MRO` for the aircraft operated during flight `MAS370`
 
-![Aircraft Registration 9MMRO](./media/MH370_aircraft_reg.png)
+![Image](.//media/MH370_aircraft_reg.png "Example of aircraft registration - 9MMRO")
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->	
