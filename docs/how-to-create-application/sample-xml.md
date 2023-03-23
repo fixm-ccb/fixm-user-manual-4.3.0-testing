@@ -5,7 +5,7 @@ Extension described in this section:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<xmg:ExampleMessage xsi:type="xmg:ExampleDA_ExampleMessageType" xmlns:xmg="http://www.fixm.aero/app/example/1.0" xmlns:fb="http://www.fixm.aero/base/4.3" xmlns:fx="http://www.fixm.aero/flight/4.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<xmg:ExampleMessage xsi:type="xmg:ExampleDA_ExampleMessageType" xmlns:xmg="http://www.fixm.aero/app/example/1.0" xmlns:fb="http://www.fixm.aero/base/4.2" xmlns:fx="http://www.fixm.aero/flight/4.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xmg:flight>
     <fx:departure>
       <fx:actualTimeOfDeparture>2020-01-15T00:00:00Z</fx:actualTimeOfDeparture>
