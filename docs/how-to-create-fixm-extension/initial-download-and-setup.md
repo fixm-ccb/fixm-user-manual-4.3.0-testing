@@ -7,7 +7,7 @@ Extension.
 1. Determine which FIXM product(s) you wish to target with your
     Extension.
 
-2. Download the full release from [here](https://fixm.aero/release.html?rel=FIXM-4.2.0&ret=core).
+2. Download the full release from [here](https://fixm.aero/releases/FIXM-4.2.0/FIXM_Core_v4.2.0_Schemas.zip).
 
 3. Unzip the full release and navigate to the “uml” directory.
 
@@ -17,7 +17,7 @@ Extension.
     (EA).
 
 For this guided example, the extension will target both Core and
-BasicMessage (download available [here](https://fixm.aero/release.html?rel=Basic-Msg-1.0.0&ret=app)). The .eap file
+BasicMessage (download available [here](https://fixm.aero/releases/Basic-Msg-1.0.0/FIXM_Basic_Message_v1.0.0_with_Core_v4.2.0_full_archive.zip)). The .eap file
 should be renamed to
 `FIXM_Example_Extension_v1.0.0_with_Basic_Message_v1.0.0_and_Core_v4.2.0.eap`.
 The starting basic directory structure for the example environment is
