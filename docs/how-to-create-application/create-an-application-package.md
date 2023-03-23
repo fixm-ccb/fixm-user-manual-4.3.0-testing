@@ -8,7 +8,7 @@ with two templates, one for arrival alerts and one for departure alerts.
 1. Right click on the Applications container and choose “Add a
     Package…”.
 
-    ![Choose “Add a Package…”](../media/image56.png "Choose “Add a Package…”")
+    ![Choose “Add a Package…”](.//media/image56.png "Choose “Add a Package…”")
 
 2. In the New Package dialogue box, change the *Name* field to
     something appropriate for your Application (in this example,
