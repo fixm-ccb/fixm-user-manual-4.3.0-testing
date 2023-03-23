@@ -78,8 +78,8 @@ Atlantic Ocean. **The examples shall never be used as operational data**.
 </fb:relativePoint>
 ```
 
-[AeronauticalReference.xsd]: https://www.fixm.aero/releases/FIXM-4.2.0/schemas/core/base/AeronauticalReference.xsd
-[RelativePointType]: https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_RelativePointType.html
+[AeronauticalReference.xsd]: https://www.fixm.aero/releases/FIXM-4.3.0/schemas/core/base/AeronauticalReference.xsd
+[RelativePointType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_RelativePointType.html
 
 ### References
 

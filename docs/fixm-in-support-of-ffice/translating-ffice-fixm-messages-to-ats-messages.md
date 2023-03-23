@@ -18,7 +18,7 @@ message type (e.g. field 13b is estimated off block time in a FPL, but actual ta
 
 ### Purpose & Scope
 
-This chapter provides a mapping between the FIXM Logical Model v4.2.0
+This chapter provides a mapping between the FIXM Logical Model v4.3.0
 and International Civil Aviation Organisation (ICAO) Air Traffic
 Services (ATS) message content as defined in ICAO Doc 4444
 \[PANS-ATM\] <sup>[[4]](#references)</sup>.

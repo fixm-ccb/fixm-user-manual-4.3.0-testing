@@ -48,7 +48,7 @@ position reports may appear.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<msg:Message xmlns:xmp="http://www.fixm.aero/ext/example/1.0" xmlns:fx="http://www.fixm.aero/flight/4.2" xmlns:fb="http://www.fixm.aero/base/4.2" xmlns:msg="http://www.fixm.aero/app/msg/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<msg:Message xmlns:xmp="http://www.fixm.aero/ext/example/1.0" xmlns:fx="http://www.fixm.aero/flight/4.3" xmlns:fb="http://www.fixm.aero/base/4.3" xmlns:msg="http://www.fixm.aero/app/msg/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <msg:extension xsi:type="xmp:ExampleMessageType">
     <xmp:sequenceNumber>1</xmp:sequenceNumber>
   </msg:extension>
@@ -107,9 +107,9 @@ reports. Below is an example of what that schema file may look like.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fx="http://www.fixm.aero/flight/4.2" xmlns:fb="http://www.fixm.aero/base/4.2" xmlns:msg="http://www.fixm.aero/app/msg/1.0" xmlns:xmp="http://www.fixm.aero/ext/example/1.0" xmlns:hdf="http://www.fixm.aero/ext/handoff/1.0" elementFormDefault="qualified" version="1.0.0">
-  <xs:import namespace="http://www.fixm.aero/base/4.2" schemaLocation="../../core/base/Base.xsd"/>
-  <xs:import namespace="http://www.fixm.aero/flight/4.2" schemaLocation="../../core/flight/Flight.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fx="http://www.fixm.aero/flight/4.3" xmlns:fb="http://www.fixm.aero/base/4.3" xmlns:msg="http://www.fixm.aero/app/msg/1.0" xmlns:xmp="http://www.fixm.aero/ext/example/1.0" xmlns:hdf="http://www.fixm.aero/ext/handoff/1.0" elementFormDefault="qualified" version="1.0.0">
+  <xs:import namespace="http://www.fixm.aero/base/4.3" schemaLocation="../../core/base/Base.xsd"/>
+  <xs:import namespace="http://www.fixm.aero/flight/4.3" schemaLocation="../../core/flight/Flight.xsd"/>
   <xs:import namespace="http://www.fixm.aero/app/msg/1.0" schemaLocation="../../applications/basicmessage/BasicMessage.xsd"/>
   <xs:import namespace="http://www.fixm.aero/ext/example/1.0" schemaLocation="../example/Example.xsd"/>
   <xs:import namespace="http://www.fixm.aero/ext/handoff/1.0" schemaLocation="../handoff/Handoff.xsd"/>
@@ -158,4 +158,4 @@ updated as appropriate after best practices have been established.
 
 ## Notes
 
-[1]: Note that each Extension must target the same version of FIXM Core and/or Application Library in order to be used together.  For example, you cannot combine one Extension that uses FIXM Core 4.2.0 with another Extension that uses FIXM Core 4.1.0.  
+[1]: Note that each Extension must target the same version of FIXM Core and/or Application Library in order to be used together.  For example, you cannot combine one Extension that uses FIXM Core 4.3.0 with another Extension that uses FIXM Core 4.2.0.  

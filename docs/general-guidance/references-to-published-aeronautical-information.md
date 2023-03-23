@@ -1130,15 +1130,15 @@ as described in chapter [Generic hypertext references](#generic-hypertext-refere
 </table>
 
 
-[AeronauticalReference.xsd]: https://www.fixm.aero/releases/FIXM-4.2.0/schemas/core/base/AeronauticalReference.xsd
-[DesignatedPointType]: https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_DesignatedPointType.html
-[NavaidType]: https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_NavaidType.html
-[AerodromeReferenceType]: https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_AerodromeReferenceType.html
-[RunwayDirectionDesignatorType]: https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_RunwayDirectionDesignatorType.html
-[RouteDesignatorType]: https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_RouteDesignatorType.html
-[SidStarReferenceType]: https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_SidStarReferenceType.html
-[AirspaceDesignatorType]: https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_AirspaceDesignatorType.html
-[AtcUnitReferenceType]: https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_AtcUnitReferenceType.html
+[AeronauticalReference.xsd]: https://www.fixm.aero/releases/FIXM-4.3.0/schemas/core/base/AeronauticalReference.xsd
+[DesignatedPointType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_DesignatedPointType.html
+[NavaidType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_NavaidType.html
+[AerodromeReferenceType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_AerodromeReferenceType.html
+[RunwayDirectionDesignatorType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_RunwayDirectionDesignatorType.html
+[RouteDesignatorType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_RouteDesignatorType.html
+[SidStarReferenceType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_SidStarReferenceType.html
+[AirspaceDesignatorType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_AirspaceDesignatorType.html
+[AtcUnitReferenceType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_AtcUnitReferenceType.html
 
 ## Notes
 

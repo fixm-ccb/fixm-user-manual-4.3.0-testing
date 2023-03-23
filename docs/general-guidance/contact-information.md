@@ -40,7 +40,7 @@ address and an Internet address expressed as a resolvable URL.
 ```xml
 <fb:onlineContact>
      <fb:email>fixm.secretariat@eurocontrol.int</fb:email>
-     <fb:linkage>https://www.fixm.aero/content/contact.pl</fb:linkage>
+     <fb:linkage>https://fixm.aero/contact.pl</fb:linkage>
      <fb:network>
           <fb:type>INTERNET</fb:type>
      </fb:network>

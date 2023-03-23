@@ -804,7 +804,8 @@ details).
     tag. The *Schema File* field should be set to something appropriate
     for your templates. In this example, use:
 
-    a.  *Target Namespace* set to: `http://www.fixm.aero/flight/4.2`.
+    a.  *Target Namespace* set to: `http://www.fixm.aero/flight/4.2
+    `.
 
     b.  *Prefix* set to: `fx`.
 

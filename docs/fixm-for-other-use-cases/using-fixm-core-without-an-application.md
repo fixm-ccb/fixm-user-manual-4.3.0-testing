@@ -31,7 +31,7 @@ alert coming from this service may appear.
 
 ``` xml
 <?xml version="1.0" encoding="UTF-8"?>
-<fx:Flight xmlns:fx="http://www.fixm.aero/flight/4.2" xmlns:fb="http://www.fixm.aero/base/4.2">
+<fx:Flight xmlns:fx="http://www.fixm.aero/flight/4.3" xmlns:fb="http://www.fixm.aero/base/4.3">
   <fx:departure>
     <fx:actualTimeOfDeparture>2020-01-01T00:03:00Z</fx:actualTimeOfDeparture>
     <fx:aerodrome>
