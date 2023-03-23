@@ -1,6 +1,6 @@
 # Initial Download and Setup
 
-To save time and reduce setup steps, it is recommended that you begin the process of creating your Application by downloading the FIXM Basic Message v1.1.0 full release.<sup><a href="#how-to-create-application/initial-download-and-setup?id=notes">[note 1]</a></sup>
+To save time and reduce setup steps, it is recommended that you begin the process of creating your Application by downloading the FIXM Basic Message v1.0.0 full release.<sup><a href="#how-to-create-application/initial-download-and-setup?id=notes">[note 1]</a></sup>
 
 1) Download the [full release of FIXM Basic Message v1.0.0](https://fixm.aero/release.html?rel=Basic-Msg-1.0.0&ret=app).
 2) Unzip the full release and navigate to the `applications` directory under `schemas`.
