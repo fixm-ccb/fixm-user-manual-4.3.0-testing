@@ -5,7 +5,7 @@ Extension described in this section:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<msg:Message xmlns:xmp="http://www.fixm.aero/ext/example/1.0" xmlns:fx="http://www.fixm.aero/flight/4.3" xmlns:fb="http://www.fixm.aero/base/4.3" xmlns:msg="http://www.fixm.aero/app/msg/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<msg:Message xmlns:xmp="http://www.fixm.aero/ext/example/1.0" xmlns:fx="http://www.fixm.aero/flight/4.2" xmlns:fb="http://www.fixm.aero/base/4.2" xmlns:msg="http://www.fixm.aero/app/msg/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <msg:extension xsi:type="xmp:ExampleMessageType">
     <xmp:sequenceNumber>1903</xmp:sequenceNumber>
   </msg:extension>
