@@ -14,6 +14,7 @@
   - [Vertical distances](general-guidance/vertical-distances.md)
   - [Sequence numbers](general-guidance/sequence-numbers.md)
   - [Contact information](general-guidance/contact-information.md)
+  - [Aircraft data](general-guidance/aircraft_data.md)
   - [General rules for data correctness](general-guidance/general-rules-for-data-correctness.md)
   - [Rules for absent data](general-guidance/rules-for-absent-data.md)
   - [The use of other exchange models](general-guidance/the-use-of-other-exchange-models.md)
@@ -73,5 +74,4 @@
 - **License**
   - [Copyright 2023](https://fixm.aero/disclaimer.html)
   - Last updated on February 3rd 2023
-
 
