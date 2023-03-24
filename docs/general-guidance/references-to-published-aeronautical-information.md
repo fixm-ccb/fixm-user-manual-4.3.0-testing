@@ -904,7 +904,7 @@ that is published in the French AIPs.
 </table>
 
 FIXM also supports the supplementary provision of the abbreviated
-designator of the SID or the STAR which is commonly used in FMS
+designator of the SID which is commonly used in FMS
 databases and in some ground automation systems. The ‘abbreviated
 designator’, if provided, should be the designator obtained after
 applying the rules for shortening names specified by the ARINC 424
@@ -962,7 +962,7 @@ that is published in the Argentinian AIPs.
 </table>
 
 FIXM also supports the supplementary provision of the abbreviated
-designator of the SID or the STAR which is commonly used in FMS
+designator of the STAR which is commonly used in FMS
 databases and in some ground automation systems. The ‘abbreviated
 designator’, if provided, should be the designator obtained after
 applying the rules for shortening names specified by the ARINC 424
