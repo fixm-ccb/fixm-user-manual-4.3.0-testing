@@ -411,7 +411,8 @@ Route String: MRSSH2 ZALEA DCT SWB DCT HRV Q105 BLVNS Y290 BAGGS SSCOT5
          SID: MRSSH2
         STAR: SSCOT5
 ```
-![Image](../media/translating-ffice-image14.png)
+![Image](../media/translating-ffice-image16.png)
+
 ![Image](../media/translating-ffice-image15.png)
 
 ##### Direct Route Segments
