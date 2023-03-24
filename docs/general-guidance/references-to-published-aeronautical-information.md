@@ -917,7 +917,7 @@ specification, chapter 7.4. Example:
 </fx:standardInstrumentDeparture>
 ```
 
-The table below depicts examples of FIXM references to STAR “KOVUK 7C”
+The table below depicts examples of FIXM references to STAR “KOVUK 7D”
 that is published in the Argentinian AIPs.
 
 <table>
@@ -936,7 +936,7 @@ that is published in the Argentinian AIPs.
 
 ```xml
 <fx:standardInstrumentArrival>
-   <fb:designator>KOVUK7C</fb:designator>
+   <fb:designator>KOVUK7D</fb:designator>
 </fx:standardInstrumentArrival>
 ```
 
@@ -951,7 +951,7 @@ that is published in the Argentinian AIPs.
 
 ```xml
 <fx:standardInstrumentArrival href="urn:uuid:...">
-   <fb:designator>KOVUK7C</fb:designator>
+   <fb:designator>KOVUK7D</fb:designator>
 </fx:standardInstrumentArrival>
 ```
 
@@ -970,8 +970,8 @@ specification, chapter 7.4. Example:
 
 ```xml
 <fx:standardInstrumentArrival>
-   <fb:abbreviatedDesignator>KOVU7C</fb:abbreviatedDesignator>
-   <fb:designator>KOVUK7C</fb:designator>
+   <fb:abbreviatedDesignator>KOVU7D</fb:abbreviatedDesignator>
+   <fb:designator>KOVUK7D</fb:designator>
 </fx:standardInstrumentArrival>
 ```
 
