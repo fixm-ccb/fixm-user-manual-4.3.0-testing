@@ -403,6 +403,24 @@ When creating a FIXM object from ATS message content:
 -   A STAR, if included in a route, must appear in the last element of
     the sequence of instances of `RouteTrajectoryElement`.
 
+```
+-YSSY2315
+
+Example 1
+NAS Route String: KDFW.JASPA6.WINDU.SEWZY6.KAUS/2210
+where
+SID = JASPA6
+STAR = SEWZY6
+Converted to ATS messages : JASPA6 WINDU SEWZY6
+Use ATS message as example
+Example 2
+NAS Route String: KDFW.MRSSH2.ZALEA..SWB..HRV.Q105.BLVNS.Y290.BAGGS.SSCOT5.KMIA/0210
+Converted to ATS messages: MRSSH2 ZALEA DCT SWB DCT HRV Q105 BLVNS Y290 BAGGS SSCOT5
+SID = MRSSH2
+STAR = SSCOT5
+
+```
+
 ##### Direct Route Segments
 
 In ICAO ATS messages, the presence of DCT between two route points
