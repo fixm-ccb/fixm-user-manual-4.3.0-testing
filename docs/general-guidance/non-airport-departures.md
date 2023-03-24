@@ -8,6 +8,7 @@ There are three use cases associated with departure points that can be represent
 
 The first of these is by far the most common use case, and while the  second two cases are infrequent, 
 they are required. 
+
 Per the PANSATM, see the final clause of the DEP/ indicator under the Field Type 18 
 section of Appendix 3 for the specific need to provide representation for a non-aerodrome departure point:  
 
