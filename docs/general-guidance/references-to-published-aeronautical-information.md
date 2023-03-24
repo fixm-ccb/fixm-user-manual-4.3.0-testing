@@ -917,6 +917,65 @@ specification, chapter 7.4. Example:
 </fx:standardInstrumentDeparture>
 ```
 
+The table below depicts examples of FIXM references to STAR “KOVUK 7C”
+that is published in the Argentinian AIPs.
+
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Examples of STAR references in FIXM</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p><strong>OPTION 1</strong></p>
+<p>designator</p></td>
+<td><p>
+
+```xml
+<fx:standardInstrumentArrival>
+   <fb:designator>KOVUK7C</fb:designator>
+</fx:standardInstrumentArrival>
+```
+
+</p></td>
+<td>This is the minimum reference that SHALL be provided.</td>
+</tr>
+<tr class="even">
+<td><p><strong>OPTION 2</strong></p>
+<p>designator<br />
++href</p></td>
+<td><p>
+
+```xml
+<fx:standardInstrumentArrival href="urn:uuid:...">
+   <fb:designator>KOVUK7C</fb:designator>
+</fx:standardInstrumentArrival>
+```
+
+</p></td>
+<td>Hypertext reference to be provided in accordance with the <a href="http://www.aixm.aero/sites/aixm.aero/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf"><em>AIXM feature Identification and Reference document</em></a>, chapter 3.4.1.</td>
+</tr>
+</tbody>
+</table>
+
+FIXM also supports the supplementary provision of the abbreviated
+designator of the SID or the STAR which is commonly used in FMS
+databases and in some ground automation systems. The ‘abbreviated
+designator’, if provided, should be the designator obtained after
+applying the rules for shortening names specified by the ARINC 424
+specification, chapter 7.4. Example:
+
+```xml
+<fx:standardInstrumentArrival>
+   <fb:abbreviatedDesignator>KOVU7C</fb:abbreviatedDesignator>
+   <fb:designator>KOVUK7C</fb:designator>
+</fx:standardInstrumentArrival>
+```
+
+
 ## References to Airspace
 
 ### Logical Model
