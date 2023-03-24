@@ -21,7 +21,7 @@ INTRODUCTION TO THE LOGICAL MODEL (AND SCHEMA) HERE.
 
 The figure below illustrates how both common aerodrome and non-aerodrome departures are represented in FIXM.
 
-![Image](../media/non-aerodrome-departures-01.png)
+![Image](../media/non-aerodrome-departures-01.png ':size=150%')
 
 ### XML schemas
 
