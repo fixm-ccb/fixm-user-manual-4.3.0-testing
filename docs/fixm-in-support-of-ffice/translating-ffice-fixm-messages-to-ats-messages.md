@@ -404,13 +404,14 @@ When creating a FIXM object from ATS message content:
     the sequence of instances of `RouteTrajectoryElement`.
 
 The image below presents the object model corresponding to SID and STAR 
-in the below route string.
+in the following route string.
 
 ```
 Route String: MRSSH2 ZALEA DCT SWB DCT HRV Q105 BLVNS Y290 BAGGS SSCOT5
          SID: MRSSH2
         STAR: SSCOT5
 ```
+![Image](../media/translating-ffice-image14.png)
 
 ##### Direct Route Segments
 
