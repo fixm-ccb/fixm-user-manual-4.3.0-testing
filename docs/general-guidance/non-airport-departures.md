@@ -1,4 +1,4 @@
-# Non-Airport Departures
+# Non-Aerodrome Departures
 
 There are three use cases associated with departure points that can be represented in FIXM:
  
@@ -21,7 +21,7 @@ INTRODUCTION TO THE LOGICAL MODEL (AND SCHEMA) HERE.
 
 The figure below illustrates how both common aerodrome and non-aerodrome departures are represented in FIXM.
 
-![Image](../media/non-aerodrome-departures-01.png ':size=75%')
+![Image](../media/non-aerodrome-departures-01.png)
 
 ### XML schemas
 
