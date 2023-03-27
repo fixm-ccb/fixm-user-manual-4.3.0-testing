@@ -81,7 +81,7 @@ MORE EXPLANATORY TEXT HERE.
 <SCHEMA STUFF HERE>
 
 ```
-[DepartureType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/DepartureType.html
+[DepartureType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_DepartureType.html
 [Departure.xsd]: https://www.fixm.aero/releases/FIXM-4.3.0/schemas/core/flight/departure/Departure.xsd
 
 
