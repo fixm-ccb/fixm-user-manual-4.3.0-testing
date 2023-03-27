@@ -92,8 +92,16 @@ UML Class `Departure` in package `FIXM.Flight.Departure`
 
 ```xml
 <fx:departure>
-    <fx:departurePoint>DFW</fx:departurePoint>
-    <fx:departurePointPrevious>DAL</fx:departurePointPrevious>
+    <fx:departurePoint>
+        <fb:position srsName="urn:ogc:def:crs:EPSG::4326">
+            <fb:pos>59.0 -30.0</fb:pos>
+        </fb:position>
+    </fx:departurePoint>
+    <fx:departurePointPrevious>
+        <fb:position srsName="urn:ogc:def:crs:EPSG::4326">
+            <fb:pos>59.1 -30.2</fb:pos>
+        </fb:position>
+    </fx:departurePointPrevious>
     <fx:estimatedOffBlockTime>2023-01-13T15:18:00Z</fx:estimatedOffBlockTime>
     <fx:estimatedOffBlockTime>2023-01-13T20:05:00Z</fx:estimatedOffBlockTime>
 </fx:departure>
