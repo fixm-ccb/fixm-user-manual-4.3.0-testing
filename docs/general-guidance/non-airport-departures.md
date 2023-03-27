@@ -27,11 +27,11 @@ Air file flights will represent the current and previous route start points in `
 
 ### Logical Model
 
-The figure below illustrates how both common aerodrome and non-aerodrome departures are represented in FIXM.
+The figure below illustrates how both common aerodrome and non-aerodrome departures are represented in FIXM.<sup><a href="#general-guidance/non-aerodrome-departures?id=notes">[note 1]</a></sup>
 
 ![Image](../media/non-aerodrome-departures-02.png)
 
-UML Class 'Departure' in package 'FIXM.Flight.Departure'
+UML Class `Departure` in package `FIXM.Flight.Departure`
 
 ### XML schema
 
@@ -93,7 +93,7 @@ MORE EXPLANATORY TEXT HERE.
 
 
 ## Notes
-[1]: FIXM does not use GML but mimics it for geographic positions. GML encodes geographic locations as sequences of values since it employs the same construct to represent polygons.
+[1]: To create the logical model, four new embedded choice classes using the <<XSDchoice>> stereotype were created named DepartureLocationChoice, DepartureLocationPreviousChoice, DepartureTimeChoice, and DepartureTimePreviousChoice all with the same definition:  “Helper class to create an embedded choice structure.” This approach was used to retain the explicit representation for the departure aerodrome as its own field with non-aerodrome departure points collected under a second field.
 
 ## References
 
