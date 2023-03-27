@@ -110,8 +110,21 @@ UML Class `Departure` in package `FIXM.Flight.Departure`
 
 ```xml
 <fx:departure>
-    <fx:departurePoint>DFW</fx:departurePoint>
-    <fx:departurePointPrevious>DAL</fx:departurePointPrevious>
+    <fx:departurePoint>
+        <fb:navaid>
+              <fb:designator>FAM<fb:designator>
+              <fb:position srsName="urn:ogc:def:crs:EPSG::4326">
+                  <fb:pos>37.6734614 -90.2340597</fb:pos>
+              </fb:position>
+        </fb:navaid>
+    </fx:departurePoint>
+    <fx:departurePointPrevious>
+         <fb:designatedPoint>
+              <fb:designator>PLESS<fb:designator>
+              <fb:position srsName="urn:ogc:def:crs:EPSG::4326">
+                  <fb:pos>37.80957778 -88.96318889</fb:pos>
+              </fb:position>
+    </fx:departurePointPrevious>
     <fx:estimatedRouteStartTime>2023-01-13T15:18:00Z</fx:estimatedRouteStartTime>
     <fx:estimatedRouteStartTime>2023-01-13T20:05:00Z</fx:estimatedRouteStartTime>
     <fx:airfileIndicator>AIRFILE</fx:airfileIndicator>
