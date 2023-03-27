@@ -30,9 +30,42 @@ The figure below illustrates how both common aerodrome and non-aerodrome departu
 ### XML schemas
 
 ```xml
-
-<SCHEMA STUFF HERE>
-
+<xs:complexType name="DepartureType">
+    <xs:annotation>
+        <xs:documentation>Groups information pertaining to the flight's departure.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+        ...
+        <xs:element name="airfileIndicator" type="fx:AirfileIndicatorType" minOccurs="0" maxOccurs="1" nillable="true">
+        </xs:element>
+        ...
+        <xs:choice minOccurs="0" maxOccurs="1">
+            <xs:element name="departureAerodrome" type="fb:AerodromeReferenceType" minOccurs="1" maxOccurs="1" nillable="true">
+            </xs:element>
+            <xs:element name="departurePoint" type="fx:DeparturePointChoiceType" minOccurs="1" maxOccurs="1" nillable="true">
+            </xs:element>
+        </xs:choice>
+        <xs:choice minOccurs="0" maxOccurs="1">
+            <xs:element name="departureAerodromePrevious" type="fb:AerodromeReferenceType" minOccurs="1" maxOccurs="1" nillable="true">
+            </xs:element>
+            <xs:element name="departurePointPrevious" type="fx:DeparturePointChoiceType" minOccurs="1" maxOccurs="1" nillable="true">
+            </xs:element>
+        </xs:choice>
+        <xs:choice minOccurs="0" maxOccurs="1">
+            <xs:element name="estimatedOffBlockTime" type="fb:DateTimeUtcType" minOccurs="1" maxOccurs="1" nillable="true">
+            </xs:element>
+            <xs:element name="estimatedRouteStartTime" type="fb:DateTimeUtcType" minOccurs="1" maxOccurs="1" nillable="true">
+            </xs:element>
+        </xs:choice>
+        <xs:choice minOccurs="0" maxOccurs="1">
+            <xs:element name="estimatedOffBlockTimePrevious" type="fb:DateTimeUtcType" minOccurs="1" maxOccurs="1" nillable="true">
+            </xs:element>
+            <xs:element name="estimatedRouteStartTimePrevious" type="fb:DateTimeUtcType" minOccurs="1" maxOccurs="1" nillable="true">
+            </xs:element>
+        </xs:choice>
+        ...
+    </xs:sequence>
+</xs:complexType>
 ```
 
 [DepartureType][DepartureType] in file [Departure.xsd][Departure.xsd]
