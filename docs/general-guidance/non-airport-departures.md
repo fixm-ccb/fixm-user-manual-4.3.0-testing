@@ -29,7 +29,7 @@ Air file flights will represent the current and previous route start points in `
 
 The figure below illustrates how both common aerodrome and non-aerodrome departures are represented in FIXM.<sup><a href="#general-guidance/non-aerodrome-departures?id=notes">[note 1]</a></sup>
 
-![Image](../media/non-aerodrome-departures-02.png)
+![Image](.//media/non-aerodrome-departures-02.png)
 
 UML Class `Departure` in package `FIXM.Flight.Departure`
 
