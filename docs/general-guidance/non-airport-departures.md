@@ -78,13 +78,38 @@ UML Class `Departure` in package `FIXM.Flight.Departure`
 
 ## Examples
 
-### Example
+### Aerodrome Departure Example
 
 ```xml
-
-<SCHEMA STUFF HERE>
-
+<fx:departure>
+    <fx:departureAerodrome>DFW</fx:departureAerodrome>
+    <fx:departureAerodromePrevious>DAL</fx:departureAerodromePrevious>
+    <fx:estimatedOffBlockTime>2023-01-13T15:18:00Z</fx:estimatedOffBlockTime>
+    <fx:estimatedOffBlockTime>2023-01-13T20:05:00Z</fx:estimatedOffBlockTime>
+</fx:departure>
 ```
+### Non-Aerodrome Departure Example
+
+```xml
+<fx:departure>
+    <fx:departurePoint>DFW</fx:departurePoint>
+    <fx:departurePointPrevious>DAL</fx:departurePointPrevious>
+    <fx:estimatedOffBlockTime>2023-01-13T15:18:00Z</fx:estimatedOffBlockTime>
+    <fx:estimatedOffBlockTime>2023-01-13T20:05:00Z</fx:estimatedOffBlockTime>
+</fx:departure>
+```
+### Air File Example
+
+```xml
+<fx:departure>
+    <fx:departurePoint>DFW</fx:departurePoint>
+    <fx:departurePointPrevious>DAL</fx:departurePointPrevious>
+    <fx:estimatedRouteStartTime>2023-01-13T15:18:00Z</fx:estimatedRouteStartTime>
+    <fx:estimatedRouteStartTime>2023-01-13T20:05:00Z</fx:estimatedRouteStartTime>
+    <fx:airfileIndicator>AIRFILE</fx:airfileIndicator>
+</fx:departure>
+```
+
 [DepartureType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_DepartureType.html
 [Departure.xsd]: https://www.fixm.aero/releases/FIXM-4.3.0/schemas/core/flight/departure/Departure.xsd
 
