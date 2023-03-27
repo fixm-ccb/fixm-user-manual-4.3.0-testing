@@ -19,11 +19,11 @@ Further, the departure aerodrome/point represents a key field for traditional fl
 
 ## FIXM representation
 
-For most flights, i.e., flights departing from aerodromes, the current departure aerodrome and previous departure aerodrome (if a change has been made) will be represented in 'departureAerodrome' and 'departureAerodromePrevious' respectively. Likewise, the current and previous estimated off block times will be represented in 'estimatedOffBlockTime' and 'estimatedOffBlockTimePrevious'.
+For most flights, i.e., flights departing from aerodromes, the current departure aerodrome and previous departure aerodrome (if a change has been made) will be represented in `departureAerodrome` and `departureAerodromePrevious` respectively. Likewise, the current and previous estimated off block times will be represented in `estimatedOffBlockTime` and `estimatedOffBlockTimePrevious`.
 
-Flights that file non-aerodrome departure points will represent the current and previous departure points in 'departurePoint' and 'departurePointPrevious' respectively, and will use 'estimatedOffBlockTime' and 'estimatedOffBlockTimePrevious' for the current and previous estimated off block times.
+Flights that file non-aerodrome departure points will represent the current and previous departure points in `departurePoint` and `departurePointPrevious` respectively, and will use `estimatedOffBlockTime` and `estimatedOffBlockTimePrevious` for the current and previous estimated off block times.
 
-Air file flights will represent the current and previous route start points in 'departurePoint' and 'departurePointPrevious' respectively, but will use 'estimatedRouteStartTime' and 'estimatedRouteStartTimePrevious' for the the current and previous route start times. In addition, air file flights will set the 'airFileIndicator' to 'AIRFILE'.
+Air file flights will represent the current and previous route start points in `departurePoint` and `departurePointPrevious` respectively, and will use `estimatedRouteStartTime` and `estimatedRouteStartTimePrevious` for the the current and previous route start times. In addition, air file flights will set the `airFileIndicator` to `"AIRFILE"`.
 
 ### Logical Model
 
