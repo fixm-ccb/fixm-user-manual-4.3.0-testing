@@ -27,7 +27,7 @@ The figure below illustrates how both common aerodrome and non-aerodrome departu
 
 ![Image](../media/non-aerodrome-departures-02.png)
 
-### XML schemas
+### XML schema
 
 ```xml
 <xs:complexType name="DepartureType">
