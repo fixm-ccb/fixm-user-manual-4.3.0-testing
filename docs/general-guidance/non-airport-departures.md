@@ -2,11 +2,11 @@
 
 There are three use cases associated with departure points that can be represented in FIXM:
  
-    1.	Flights that depart from an aerodrome.
-    2.	Flights that file a flight plan while en route (a so called airfile or AFIL flight).
-    3.	Flights that file non-aerodrome departure points.
+    1.	Flights that depart from aerodromes.
+    2.	Flights that file non-aerodrome departure points.
+    3.	Flights that file a flight plan that begins at an en route point (a so called airfile or AFIL flight).
 
-The first of these is by far the most common use case, and while the  second two cases are infrequent, 
+The first of these is by far the most common use case, and while the second two cases are infrequent, 
 they are required. 
 
 Per the PANSATM, see the final clause of the DEP/ indicator under the Field Type 18 
@@ -19,13 +19,17 @@ Further, the departure aerodrome/point represents a key field for traditional fl
 
 ## FIXM representation
 
-INTRODUCTION TO THE LOGICAL MODEL (AND SCHEMA) HERE.
+For most flights, i.e., flights departing from aerodromes, the current departure aerodrome and previous departure aerodrome (if a change has been made) will be represented in departureAerodrome and departureAerodromePrevious respectively. Likewise, the current and previous estimated off block times will be represented in estimatedOffBlockTime and estimatedOffBlockTimePrevious.
+Flights that file non-aerodrome departure points will represent the current and previous departure points in departurePoint and departurePointPrevious respectively, and will use estimatedOffBlockTime and estimatedOffBlockTimePrevious for the current and previous estimated off block times.
+Air file flights will represent the current and previous route start points in departurePoint and departurePointPrevious respectively, but will use estimatedRouteStartTime and estimatedRouteStartTimePrevious for the the current and previous route start times. In addition, air file flights will set the airFileIndicator to "AIRFILE".
 
 ### Logical Model
 
 The figure below illustrates how both common aerodrome and non-aerodrome departures are represented in FIXM.
 
 ![Image](../media/non-aerodrome-departures-02.png)
+
+UML Class Departure in package FIXM.Flight.Departure
 
 ### XML schema
 
