@@ -81,6 +81,8 @@ MORE EXPLANATORY TEXT HERE.
 <SCHEMA STUFF HERE>
 
 ```
+[DepartureType]: https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Departure.html
+
 ## Notes
 [1]: FIXM does not use GML but mimics it for geographic positions. GML encodes geographic locations as sequences of values since it employs the same construct to represent polygons.
 
