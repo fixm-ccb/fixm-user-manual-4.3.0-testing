@@ -76,8 +76,6 @@ UML Class `Departure` in package `FIXM.Flight.Departure`
 
 [DepartureType][DepartureType] in file [Departure.xsd][Departure.xsd]
 
-MORE EXPLANATORY TEXT HERE.
-
 ## Examples
 
 ### Example
