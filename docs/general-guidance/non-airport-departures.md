@@ -93,7 +93,7 @@ MORE EXPLANATORY TEXT HERE.
 
 
 ## Notes
-[1]: To create the logical model, four new embedded choice classes using the <<XSDchoice>> stereotype were created named DepartureLocationChoice, DepartureLocationPreviousChoice, DepartureTimeChoice, and DepartureTimePreviousChoice all with the same definition:  “Helper class to create an embedded choice structure.” This approach was used to retain the explicit representation for the departure aerodrome as its own field with non-aerodrome departure points collected under a second field.
+[1]: To create the logical model, four new embedded choice classes using the <\<XSDchoice\>> stereotype were created named DepartureLocationChoice, DepartureLocationPreviousChoice, DepartureTimeChoice, and DepartureTimePreviousChoice all with the same definition:  “Helper class to create an embedded choice structure.” This approach was used to retain the explicit representation for the departure aerodrome as its own field with non-aerodrome departure points collected under a second field.
 
 ## References
 
