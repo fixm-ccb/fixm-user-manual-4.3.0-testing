@@ -37,7 +37,7 @@ the context of the information exchange:
 > data. Data items that were included in the previous version of the
 > flight plan and have not been included in the Flight Plan Update will
 > remain unchanged. This means that a mechanism is required to identify
-> when a flight plan data item is to be deleted.”*
+> when a flight plan data item is to be deleted.*
 
 <ul>This use of nil is only appropriate for non-repeating elements. As 
      explained in the Implementation Guidance, repeating elements must 
