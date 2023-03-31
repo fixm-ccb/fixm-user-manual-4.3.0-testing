@@ -23,7 +23,7 @@ For most flights, i.e., flights departing from aerodromes, the current departure
 
 Flights that file non-aerodrome departure points will represent the current and previous departure points in `departurePoint` and `departurePointPrevious` respectively, and will use `estimatedOffBlockTime` and `estimatedOffBlockTimePrevious` for the current and previous estimated off block times.
 
-Air file flights will represent the current and previous route start points in `departurePoint` and `departurePointPrevious` respectively, and will use `estimatedRouteStartTime` and `estimatedRouteStartTimePrevious` for the the current and previous route start times. In addition, air file flights will set the `airFileIndicator` to `"AIRFILE"`.
+Airfile flights will represent the current and previous route start points in `departurePoint` and `departurePointPrevious` respectively, and will use `estimatedRouteStartTime` and `estimatedRouteStartTimePrevious` for the the current and previous route start times. In addition, airfile flights will set the `airFileIndicator` to `"AIRFILE"`.
 
 ### Logical Model
 
@@ -106,7 +106,7 @@ UML Class `Departure` in package `FIXM.Flight.Departure`
     <fx:estimatedOffBlockTime>2023-01-13T20:05:00Z</fx:estimatedOffBlockTime>
 </fx:departure>
 ```
-### Air File Example
+### AirFile Example
 
 ```xml
 <fx:departure>
