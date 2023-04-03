@@ -23,13 +23,17 @@
 - **Using FIXM in support of FF-ICE**
   - [The FF-ICE Application for FIXM](fixm-in-support-of-ffice/ffice-application-for-fixm.md)
   - [FF-ICE message templates](fixm-in-support-of-ffice/message-templates.md)
-  - [Translating FF-ICE FIXM messages to ATS messages](fixm-in-support-of-ffice/translating-ffice-fixm-messages-to-ats-messages.md)
 
 
 - **Using FIXM for other use cases**
   - [Using FIXM Core without a FIXM Application](fixm-for-other-use-cases/using-fixm-core-without-an-application.md)
   - [Using FIXM Core with a FIXM Application](fixm-for-other-use-cases/using-fixm-core-with-an-application.md)
   - [Using FIXM Core with an Extension](fixm-for-other-use-cases/using-fixm-core-with-an-extension.md)
+
+
+- **FIXM/ATS Mapping**
+  - [Translating FF-ICE FIXM messages to ATS messages](fixm-in-support-of-ffice/translating-ffice-fixm-messages-to-ats-messages.md)
+  - [Mapping of ATS fields to FIXM](ats-message-to-fixm-mapping/mapping-of-ats-fields-to-fixm.md)
 
 
 - **How to create a FIXM Application**
@@ -65,11 +69,6 @@
   - [Future testing](fixm-development-tool-compatibility/future-testing.md)
   - [Platform support matrix](fixm-development-tool-compatibility/platform-support-matrix.md)
   - [Other topics](fixm-development-tool-compatibility/other-topics.md)
-
-
-- **ATS message  to FIXM mapping**
-  - [Mapping of ATS fields to FIXM](ats-message-to-fixm-mapping/mapping-of-ats-fields-to-fixm.md)
-
 
 - **License**
   - [Copyright 2023](https://fixm.aero/disclaimer.html)
