@@ -18,6 +18,7 @@
   - [General rules for data correctness](general-guidance/general-rules-for-data-correctness.md)
   - [Rules for absent data](general-guidance/rules-for-absent-data.md)
   - [The use of other exchange models](general-guidance/the-use-of-other-exchange-models.md)
+  - [Constraints](general-guidance/Constraints.md)
 
 
 - **Using FIXM in support of FF-ICE**
