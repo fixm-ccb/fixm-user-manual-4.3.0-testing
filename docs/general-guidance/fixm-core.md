@@ -129,28 +129,8 @@ identified in [this chapter](general-guidance/general-rules-for-data-correctness
 #### Example of FIXM Core usage NOT satisfying the requirement on data correctness
 
 ```xml
-<fx:aircraft>
-  <fx:aircraftType>
-    <fx:numberOfAircraft>2</fx:numberOfAircraft>
-    <fx:type>
-      <fx:icaoAircraftTypeDesignator>MIR2</fx:icaoAircraftTypeDesignator>
-    </fx:type>
-  </fx:aircraftType>
-  <fx:aircraftType>
-  <fx:numberOfAircraft>1</fx:numberOfAircraft>
-    <fx:type>
-      <fx:icaoAircraftTypeDesignator>RFAL</fx:icaoAircraftTypeDesignator>
-    </fx:type>
-  </fx:aircraftType>
-  <fx:formationCount>2</fx:formationCount>
-</fx:aircraft>
+   <fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+                <fb:pos>19.740115 NaN</fb:pos>
+   </fx:position>
 ```
-
-This example represents a description of a fictitious formation of
-military aircraft composed of two Mirages 2000 and one Rafale which
-altogether constitute a single (formation) flight. This example is valid
-from a data structure point of view (it validates against the FIXM Core
-XML schemas) but is not correct in so far as the sum of all
-`AircraftType.numberOfAircraft` properties does not match
-`Aircraft.formationCount`, which breaks a rule from [this chapter](general-guidance/general-rules-for-data-correctness). This
-example does not qualify as valid FIXM Core usage.
+This example represents a description of a lat lon pair that is a valid XML but fails to follow the rules of the data correctness from [this chapter](general-guidance/general-rules-for-data-correctness). This example validates from a data structure point of view (it validates against the FIXM Core XML schemas) but is not correct because “NaN” is not a valid number as Lat/Lon.
