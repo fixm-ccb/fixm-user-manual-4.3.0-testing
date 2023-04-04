@@ -63,7 +63,7 @@ provide, may be a candidate means to enforce the business rules below.
 </tr>
 <tr class="odd">
 <td>Aircraft</td>
-<td>The property formationCount, if provided, shall be equal to or greater than 2.</td>
+<td>The property aircraftcount, if provided, shall be equal to or greater than 0.</td>
 </tr>
 <tr class="odd">
 <td>OnlineContact</td>
