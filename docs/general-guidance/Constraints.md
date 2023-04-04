@@ -2,8 +2,7 @@
 
 ## RouteTrajectoryConstraint
 
-The FF-ICE 0.99 requirements B-3.4.3, B-3.4.4, and B-3.4.5 outline[Uploading CR 177 Table in markdown format (1).txt…]()
- the speed, Level, and Time Constraints that FIXM must represent:
+The FF-ICE 0.99 requirements B-3.4.3, B-3.4.4, and B-3.4.5 outline the speed, Level, and Time Constraints that FIXM must represent:
 
 at, at or above, at or below, or between 2 levels
 at, at or above, at or below, or between 2 speeds
