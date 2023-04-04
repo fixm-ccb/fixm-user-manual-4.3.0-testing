@@ -84,24 +84,19 @@ implicit in the class name:` ModeACode`).
 When creating ATS message content from a FIXM object, set the SSR mode
 (field 7b) to A.
 
-#### Formation Count
+#### Aircraft Count
 
-ATS field 9a is the number of aircraft. PANS-ATM restricts this value to
-be in the range 2 through 99. FIXM allows any number greater than or
-equal to 2.
+ATS field 9a is the total number of aircrafts in the formation. In order to capture the the total count of aircrafts, the data receiver must add up the Aircraft.aircraftType.aircraftCount fields. The PANS-ATM restricts this value to be in the range 2 through 99. FIXM allows any number greater than or equal to 2.
 
-When creating ATS message content from a FIXM object, if the
-`Aircraft.formationCount` value is greater than 99, truncate to 99.
+When creating ATS message content from a FIXM object, if the AircraftCount value is greater than 99, truncate to 99.
 
-A similar comment applies to other ATS message fields that contain
-counts where FIXM is less restrictive:
+A similar comment applies to other ATS message fields that contain counts where FIXM is less restrictive:
 
 -   Field 18 TYP (range 2..10);
 
 -   Field 19b (range 1..99);
 
--   Field 19f (range 1..99 for number of dinghies, 1..999 for dinghy
-    capacity).
+-   Field 19f (range 1..99 for number of dinghies, 1..999 for dinghy capacity).
 
 #### Wake Turbulence Category
 
@@ -574,12 +569,11 @@ fragment is an example.
 
 \....
 
--TYP/2F15 5F5 3B2
+-TYP/2F16 3K35R
 ````
 
-Note the structured nature of the TYP field: two F15s, five F5s, and
-three B2s. The value in field 18 TYP may exhibit structure as in this
-example above for a formation. However, this may not be so in other
+Note the structured nature of the TYP field: two F16s, and three K35Rs. The value in field 18 TYP may exhibit structure as in this
+example above for a aircraft count and type. However, this may not be so in other
 cases, where the (non-designator) type of aircraft is listed, as in
 
 ```
@@ -590,24 +584,18 @@ cases, where the (non-designator) type of aircraft is listed, as in
 -TYP/ECLIPSE 500
 ```
 
-The image below presents the object model corresponding to each of the
+The images below presents the object model corresponding to each of the
 above flight plan fragments.
 
-![Image](.//media/translating-ffice-image7.png)
+![Image](.//media/Aircraft_AircraftType_AircraftTypeChoice_1.png)
+
+![Image](.//media/Aircraft_AircraftType_AircraftTypeChoice_2.png)
 
 Notes:
 
--   If it is not possible to decode the content of field 18 TYP, create
-    a single instance of class `AircraftType` to record the entire content
-    of 18 TYP.
-
--   The sum of the `numberOfAircraft` attributes in the instances
-    of `AircraftType` class should equal the `formationCount` attribute (if
-    present) in class `Aircraft`.
-
--   When the flight is not a formation, the `formationCount` attribute
-    must be omitted. The `numberOfAircraft` attribute should be omitted as
-    well (though it can be included for extra specificity if desired).
+- If it is not possible to decode the content of field 18 TYP, create a single instance of class AircraftType to record the entire content of 18 TYP.
+- The sum of the aircraftcount attributes in this instance is the total count of aircrafts in the model
+- When the flight is not a formation, The aircraftcount attribute can be omitted (though it can be included for extra specificity if desired).
 
 #### Aircraft Registration
 
