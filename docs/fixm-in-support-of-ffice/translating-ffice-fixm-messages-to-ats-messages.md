@@ -587,9 +587,9 @@ cases, where the (non-designator) type of aircraft is listed, as in
 The images below presents the object model corresponding to each of the
 above flight plan fragments.
 
-![Image](../media/Aircraft_AircraftType_AircraftTypeChoice_1.png)
+![Image](../../media/Aircraft_AircraftType_AircraftTypeChoice_1.png)
 
-![Image](../media/Aircraft_AircraftType_AircraftTypeChoice_2.png)
+![Image](../../media/Aircraft_AircraftType_AircraftTypeChoice_2.png)
 
 Notes:
 
