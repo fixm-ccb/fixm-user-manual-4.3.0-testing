@@ -23,7 +23,7 @@ The below table provides an example of how to encode each of the constraints in 
 | **SpeedConstraint** | Single Value             | Single Value                        | Single Value                        | Value 1 to Value 2                                                                |
 | **Examples**        | Speed.speed.Value:###### | Speed.speed.range.lowerBound:###### | Speed.speed.range.upperBound:###### | Speed.speed.range.upperBound:######<br>and<br>Speed.speed.range.lowerBound:###### |
 
-### Time Constrainte
+### Time Constraints
 
 | ****               | **AT**                        | **AT_OR_AFTER**                        | **AT_OR_BEFORE**                     | **BETWEEN**                                                                           |
 |--------------------|-------------------------------|----------------------------------------|--------------------------------------|---------------------------------------------------------------------------------------|
