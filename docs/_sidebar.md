@@ -10,6 +10,7 @@
   - [Date/Time specification](general-guidance/date-time-specification.md)
   - [Geographical positions](general-guidance/geographical-positions.md)
   - [References to published aeronautical information](general-guidance/references-to-published-aeronautical-information.md)
+  - [Non-Aerodrome Departures](general-guidance/non-aerodrome-departures.md)
   - [Relative points](general-guidance/relative-points.md)
   - [Vertical distances](general-guidance/vertical-distances.md)
   - [Sequence numbers](general-guidance/sequence-numbers.md)
@@ -17,8 +18,7 @@
   - [General rules for data correctness](general-guidance/general-rules-for-data-correctness.md)
   - [Rules for absent data](general-guidance/rules-for-absent-data.md)
   - [The use of other exchange models](general-guidance/the-use-of-other-exchange-models.md)
-  - [Non-Airport Departures](general-guidance/non-airport-departures.md)
-
+  
 
 - **Using FIXM in support of FF-ICE**
   - [The FF-ICE Application for FIXM](fixm-in-support-of-ffice/ffice-application-for-fixm.md)
