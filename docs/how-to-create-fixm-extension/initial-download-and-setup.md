@@ -7,7 +7,7 @@ Extension.
 1. Determine which FIXM product(s) you wish to target with your
     Extension.
 
-2. Download the full release from [here](https://fixm.aero/releases/FIXM-4.2.0/FIXM_Core_v4.2.0_Schemas.zip).
+2. Download the full release from [here](https://fixm.aero/downloads.html).
 
 3. Unzip the full release and navigate to the “uml” directory.
 
