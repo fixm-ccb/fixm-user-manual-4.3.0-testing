@@ -133,4 +133,4 @@ identified in [this chapter](general-guidance/general-rules-for-data-correctness
                 <fb:pos>19.740115 NaN</fb:pos>
    </fx:position>
 ```
-This example represents a description of a lat lon pair that is a valid XML but fails to follow the rules of the data correctness from [this chapter](general-guidance/general-rules-for-data-correctness). This example validates from a data structure point of view (it validates against the FIXM Core XML schemas) but is not correct because “NaN” is not a valid number as Lat/Lon.
+This example represents a description of a latitude longitude pair that is a valid XML but fails to follow the rules of the data correctness from [this chapter](general-guidance/general-rules-for-data-correctness). This example validates from a data structure point of view (it validates against the FIXM Core XML schemas) but is not correct because “NaN” is not a valid number in latitude longitude pair.
