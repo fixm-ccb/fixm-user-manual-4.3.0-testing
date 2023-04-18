@@ -572,7 +572,7 @@ fragment is an example.
 ````
 
 Note the structured nature of the TYP field: two F16s, and three K35Rs. The value in field 18 TYP may exhibit structure as in this
-example above for a aircraft count and type. However, this may not be so in other
+example above for a formation. However, this may not be so in other
 cases, where the (non-designator) type of aircraft is listed, as in
 
 ```
@@ -583,7 +583,7 @@ cases, where the (non-designator) type of aircraft is listed, as in
 -TYP/ECLIPSE 500
 ```
 
-The images below presents the object model corresponding to each of the
+The images below present the object model corresponding to each of the
 above flight plan fragments.
 
 ![Image](.//media/Aircraft_AircraftType_AircraftTypeChoice_1.png)
@@ -592,9 +592,9 @@ above flight plan fragments.
 
 Notes:
 
-- If it is not possible to decode the content of field 18 TYP, create a single instance of class AircraftType to record the entire content of 18 TYP.
-- The sum of the aircraftcount attributes in this instance is the total count of aircrafts in the model
-- When the flight is not a formation, The aircraftcount attribute can be omitted (though it can be included for extra specificity if desired).
+- If it is not possible to decode the content of field 18 TYP, create a single instance of class `AircraftType` to record the entire content of 18 TYP.
+- The sum of the `aircraftCount` attributes in each instance of `AircraftType` is the total number of aircraft in the formation.
+- When the flight is not a formation, the `aircraftCount` attribute should be omitted (though it can be included for extra specificity if desired).
 
 #### Aircraft Registration
 
