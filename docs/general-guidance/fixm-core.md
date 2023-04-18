@@ -129,8 +129,8 @@ identified in [this chapter](general-guidance/general-rules-for-data-correctness
 #### Example of FIXM Core usage NOT satisfying the requirement on data correctness
 
 ```xml
-   <fx:position srsName="urn:ogc:def:crs:EPSG::4326">
-                <fb:pos>19.740115 NaN</fb:pos>
-   </fx:position>
+<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+  <fb:pos>19.740115 NaN</fb:pos>
+</fx:position>
 ```
-This example represents a description of a latitude longitude pair that is a valid XML but fails to follow the rules of the data correctness from [this chapter](general-guidance/general-rules-for-data-correctness). This example validates from a data structure point of view (it validates against the FIXM Core XML schemas) but is not correct because “NaN” is not a valid number in latitude longitude pair.
+This example shows the FIXM encoding of a latitude/longitude pair that fails to follow the rules for data correctness from [this chapter](general-guidance/general-rules-for-data-correctness). This example validates from a data structure point of view (that is, it validates against the FIXM Core XML schemas) but is not correct because “NaN” is not a valid number in a latitude/longitude pair.
