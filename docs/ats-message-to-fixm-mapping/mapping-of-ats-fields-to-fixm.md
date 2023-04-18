@@ -91,8 +91,8 @@ field 3 in FIXM.
 
 | ICAO 4444 Field   | Package    | Class      | Path from Flight   |
 |:----------------|:-|:-|:-|
-| 9a             | Base.Types     | Count          | aircraft.AircraftCount If the FIXM number of aircraft is greater than 99, set field 9a to 99.      |
-| 9b             | Base.Types     | AircraftTypeDesignator      | \[9b≠ZZZZ\]     aircraft.aircraftType.AircraftCount |
+| 9a             | Base.Types     | CountPositive          | aircraft.aircraftType.aircraftCount Use the sum of all individual FIXM aircraft counts.  If the sum is greater than 99, set field 9a to 99.      |
+| 9b             | Base.Types     | AircraftTypeDesignator      | \[9b≠ZZZZ\]     aircraft.aircraftType.icaoAircraftTypeDesignator |
 | 9c             | Flight.Aircraft              | WakeTurbulenceCategory | aircraft.wakeTurbulence |
 
 ## Field 10
