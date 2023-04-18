@@ -6,8 +6,7 @@ This chapter targets FIXM implementers who want to realise a conversion from FF-
 
 ## Overview
 
-The transition from present day practices to FF-ICE operations is likely to be somewhat protracted. This is a topic that is being pursued actively by the ATMRPP \[ATMRPP-WG/24-WP/564\] <sup>[[11]](#references)</sup>,
-and is recognized as a key issue in the System Wide Information
+The transition from present day practices to FF-ICE operations is likely to be somewhat protracted. This is a topic that is being pursued actively by the ATMRPP \[ATMRPP-WG/24-WP/564\] <sup>[[11]](#references)</sup>, and is recognized as a key issue in the System Wide Information
 Management (SWIM) concept <sup>[[10]](#references)</sup> \[ICAO Doc 10039\]. During that transition period, there will be stakeholders who are able to send and receive flight plan information employing FIXM, while others will employ ICAO ATS messages. In such a hybrid environment, it is expected that a significant effort will be expended translating between the FIXM format and the ATS message format. It is critical for interoperability purposes, and to ensure meaning is not lost in translation, that the conversion between FIXM and ATS message
 content is precisely defined, and that all stakeholders employ the same translation rules.
 
@@ -84,11 +83,11 @@ implicit in the class name:` ModeACode`).
 When creating ATS message content from a FIXM object, set the SSR mode
 (field 7b) to A.
 
-#### Aircraft Count
+#### Number of Aircraft
 
-ATS field 9a is the total number of aircrafts in the formation. In order to capture the the total count of aircrafts, the data receiver must add up the Aircraft.aircraftType.aircraftCount fields. The PANS-ATM restricts this value to be in the range 2 through 99. FIXM allows any number greater than or equal to 2.
+ATS field 9a is the total number of aircraft (if more than one). This field is only used in the case of formation flights. The PANS-ATM restricts this value to be in the range 2 through 99. FIXM does not represent this number directly. Rather, it can be derived by adding up the individual values for each `aircraftCount` field.
 
-When creating ATS message content from a FIXM object, if the AircraftCount value is greater than 99, truncate to 99.
+When creating ATS message content from a FIXM object, the sum of all of the individual `aircraftCount` fields is used for field 9a. If the sum is greater than 99, truncate to 99.
 
 A similar comment applies to other ATS message fields that contain counts where FIXM is less restrictive:
 
