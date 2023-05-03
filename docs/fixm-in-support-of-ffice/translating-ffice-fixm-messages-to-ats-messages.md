@@ -876,7 +876,7 @@ be applied:
 -   Populate the `airfileIndicator` of class `Departure` (with the constant
     value AIRFILE).
 
--   Populate `airfileRouteStartTime` of
+-   Populate the element `airfileRouteStartTime` of
     class `FlightRouteInformation` in
     package `Flight.FlightRouteTrajectory.RouteTrajectory` with the
     content of field 13b.
