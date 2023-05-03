@@ -866,18 +866,17 @@ name then `referencePoint` in order of preference for creating 18 TALT.
 When a flight plan is filed in the air, the value AFIL is inserted in
 field 13a and the ATS unit from which supplementary flight plan
 information can be obtained is specified in field 18 DEP. The mapping
-employs the attribute `flightPlanSubmitter` of class `Flight` for this
-purpose, though the name is not immediately suggestive of the purpose
-for which it is being used. In this situation the following rules should
+employs the element `flightPlanOriginator` of class `Flight` for this
+purpose. In this situation the following rules should
 be applied:
 
--   Populate the name attribute of `PersonOrOrganization` (via
-    attribute `flightPlanSubmitter`) with the content of field 18 DEP.
+-   Populate the name element of `PersonOrOrganization` (via
+    element `flightPlanSubmitter`) with the content of field 18 DEP.
 
 -   Populate the `airfileIndicator` of class `Departure` (with the constant
     value AIRFILE).
 
--   Populate the attribute `airfileRouteStartTime` of
+-   Populate `airfileRouteStartTime` of
     class `FlightRouteInformation` in
     package `Flight.FlightRouteTrajectory.RouteTrajectory` with the
     content of field 13b.
