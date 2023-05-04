@@ -157,107 +157,107 @@ sub modifyLine
     {
       if ($schema =~ /\/filedflightplan\/flight\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../../base/FficeFFP_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../../base/FficeFFP_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/filedflightplan\/fficemessage\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../base/FficeFFP_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../base/FficeFFP_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/filingstatus\/flight\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../../base/FficeFS_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../../base/FficeFS_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/filingstatus\/fficemessage\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../base/FficeFS_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../base/FficeFS_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/flightarrival\/flight\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../../base/FficeFA_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../../base/FficeFA_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/flightarrival\/fficemessage\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../base/FficeFA_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../base/FficeFA_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/flightcancellation\/flight\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../../base/FficeFC_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../../base/FficeFC_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/flightcancellation\/fficemessage\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../base/FficeFC_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../base/FficeFC_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/flightdatarequest\/flight\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../../base/FficeFDRQ_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../../base/FficeFDRQ_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/flightdatarequest\/fficemessage\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../base/FficeFDRQ_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../base/FficeFDRQ_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/flightdataresponse\/flight\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../../base/FficeFDRP_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../../base/FficeFDRP_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/flightdataresponse\/fficemessage\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../base/FficeFDRP_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../base/FficeFDRP_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/flightdeparture\/flight\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../../base/FficeFD_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../../base/FficeFD_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/flightdeparture\/fficemessage\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../base/FficeFD_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../base/FficeFD_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/flightplanupdate\/flight\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../../base/FficeFPU_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../../base/FficeFPU_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/flightplanupdate\/fficemessage\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../base/FficeFPU_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../base/FficeFPU_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/planningstatus\/flight\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../../base/FficePS_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../../base/FficePS_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/planningstatus\/fficemessage\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../base/FficePS_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../base/FficePS_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/preliminaryflightplan\/flight\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../../base/FficePFP_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../../base/FficePFP_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/preliminaryflightplan\/fficemessage\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../base/FficePFP_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../base/FficePFP_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/submissionresponse\/flight\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../../base/FficeSR_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../../base/FficeSR_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/submissionresponse\/fficemessage\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../base/FficeSR_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../base/FficeSR_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/trialrequest\/flight\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../../base/FficeTRQ_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../../base/FficeTRQ_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/trialrequest\/fficemessage\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../base/FficeTRQ_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../base/FficeTRQ_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/trialresponse\/flight\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../../base/FficeTRP_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../../base/FficeTRP_Base.xsd\"/>\n";
       }
       elsif ($schema =~ /\/trialresponse\/fficemessage\//)
       {
-        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"../base/FficeTRP_Base.xsd\"/>\n";
+        $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"../base/FficeTRP_Base.xsd\"/>\n";
       }
       else
       {
@@ -275,8 +275,8 @@ sub modifyLine
     # Add package imports to Fixm.xsd
     if ($schema =~ /\/Fixm.xsd/)
     {
-      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"./base/Base.xsd\"/>\n" .
-              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.2\" schemaLocation=\"./flight/Flight.xsd\"/>\n" .
+      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"./base/Base.xsd\"/>\n" .
+              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.3\" schemaLocation=\"./flight/Flight.xsd\"/>\n" .
               $line;
     }
     # Add package-wide includes to Base.xsd
@@ -304,7 +304,6 @@ sub modifyLine
               "\t<xs:include schemaLocation=\"./enroute/EnRoute.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./flightdata/FlightData.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./flightroutetrajectory/FlightRouteTrajectory.xsd\"/>\n" .
-              "\t<xs:include schemaLocation=\"./rankedtrajectory/RankedTrajectory.xsd\"/>\n" .
               $line;
     }
     # Add package-wide includes to Cargo.xsd
@@ -326,8 +325,8 @@ sub modifyLine
     # Add package imports/includes to FficeTemplates.xsd
     elsif ($schema =~ /\/FficeTemplates.xsd/)
     {
-      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"./FficeBase.xsd\"/>\n" .
-              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.2\" schemaLocation=\"./FficeFlight.xsd\"/>\n" .
+      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"./FficeBase.xsd\"/>\n" .
+              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.3\" schemaLocation=\"./FficeFlight.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./filedflightplan/fficemessage/FficeFFP_FficeMessage.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./filingstatus/fficemessage/FficeFS_FficeMessage.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./flightarrival/fficemessage/FficeFA_FficeMessage.xsd\"/>\n" .
@@ -382,8 +381,8 @@ sub modifyLine
     # Add package imports/includes to FiledFlightPlan.xsd
     elsif ($schema =~ /\/FiledFlightPlan.xsd/)
     {
-      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"./base/FficeFFP_Base.xsd\"/>\n" .
-              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.2\" schemaLocation=\"./flight/FficeFFP_Flight.xsd\"/>\n" .
+      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"./base/FficeFFP_Base.xsd\"/>\n" .
+              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.3\" schemaLocation=\"./flight/FficeFFP_Flight.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./fficemessage/FficeFFP_FficeMessage.xsd\"/>\n" .
               $line;
     }
@@ -399,6 +398,7 @@ sub modifyLine
     {
       $line = "\t<xs:include schemaLocation=\"./aircraft/FficeFFP_Aircraft.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./arrival/FficeFFP_Arrival.xsd\"/>\n" .
+              "\t<xs:include schemaLocation=\"./capability/FficeFFP_Capability.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./departure/FficeFFP_Departure.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./enroute/FficeFFP_EnRoute.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./flightdata/FficeFFP_FlightData.xsd\"/>\n" .
@@ -416,8 +416,8 @@ sub modifyLine
     # Add package imports/includes to FilingStatus.xsd
     elsif ($schema =~ /\/FilingStatus.xsd/)
     {
-      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"./base/FficeFS_Base.xsd\"/>\n" .
-              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.2\" schemaLocation=\"./flight/FficeFS_Flight.xsd\"/>\n" .
+      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"./base/FficeFS_Base.xsd\"/>\n" .
+              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.3\" schemaLocation=\"./flight/FficeFS_Flight.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./fficemessage/FficeFS_FficeMessage.xsd\"/>\n" .
               $line;
     }
@@ -431,7 +431,9 @@ sub modifyLine
     # Add package-wide includes to FficeFS_Flight.xsd
     elsif ($schema =~ /\/FficeFS_Flight.xsd/)
     {
-      $line = "\t<xs:include schemaLocation=\"./flightdata/FficeFS_FlightData.xsd\"/>\n" .
+      $line = "\t<xs:include schemaLocation=\"./arrival/FficeFS_Arrival.xsd\"/>\n" .
+              "\t<xs:include schemaLocation=\"./departure/FficeFS_Departure.xsd\"/>\n" .
+              "\t<xs:include schemaLocation=\"./flightdata/FficeFS_FlightData.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./flightroutetrajectory/FficeFS_FlightRouteTrajectory.xsd\"/>\n" .
               $line;
     }
@@ -446,8 +448,8 @@ sub modifyLine
     # Add package imports/includes to FlightArrival.xsd
     elsif ($schema =~ /\/FlightArrival.xsd/)
     {
-      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"./base/FficeFA_Base.xsd\"/>\n" .
-              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.2\" schemaLocation=\"./flight/FficeFA_Flight.xsd\"/>\n" .
+      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"./base/FficeFA_Base.xsd\"/>\n" .
+              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.3\" schemaLocation=\"./flight/FficeFA_Flight.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./fficemessage/FficeFA_FficeMessage.xsd\"/>\n" .
               $line;
     }
@@ -469,8 +471,8 @@ sub modifyLine
     # Add package imports/includes to FlightCancellation.xsd
     elsif ($schema =~ /\/FlightCancellation.xsd/)
     {
-      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"./base/FficeFC_Base.xsd\"/>\n" .
-              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.2\" schemaLocation=\"./flight/FficeFC_Flight.xsd\"/>\n" .
+      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"./base/FficeFC_Base.xsd\"/>\n" .
+              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.3\" schemaLocation=\"./flight/FficeFC_Flight.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./fficemessage/FficeFC_FficeMessage.xsd\"/>\n" .
               $line;
     }
@@ -492,8 +494,8 @@ sub modifyLine
     # Add package imports/includes to FlightDataRequest.xsd
     elsif ($schema =~ /\/FlightDataRequest.xsd/)
     {
-      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"./base/FficeFDRQ_Base.xsd\"/>\n" .
-              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.2\" schemaLocation=\"./flight/FficeFDRQ_Flight.xsd\"/>\n" .
+      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"./base/FficeFDRQ_Base.xsd\"/>\n" .
+              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.3\" schemaLocation=\"./flight/FficeFDRQ_Flight.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./fficemessage/FficeFDRQ_FficeMessage.xsd\"/>\n" .
               $line;
     }
@@ -515,8 +517,8 @@ sub modifyLine
     # Add package imports/includes to FlightDataResponse.xsd
     elsif ($schema =~ /\/FlightDataResponse.xsd/)
     {
-      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"./base/FficeFDRP_Base.xsd\"/>\n" .
-              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.2\" schemaLocation=\"./flight/FficeFDRP_Flight.xsd\"/>\n" .
+      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"./base/FficeFDRP_Base.xsd\"/>\n" .
+              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.3\" schemaLocation=\"./flight/FficeFDRP_Flight.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./fficemessage/FficeFDRP_FficeMessage.xsd\"/>\n" .
               $line;
     }
@@ -536,8 +538,8 @@ sub modifyLine
     # Add package imports/includes to FlightDeparture.xsd
     elsif ($schema =~ /\/FlightDeparture.xsd/)
     {
-      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"./base/FficeFD_Base.xsd\"/>\n" .
-              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.2\" schemaLocation=\"./flight/FficeFD_Flight.xsd\"/>\n" .
+      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"./base/FficeFD_Base.xsd\"/>\n" .
+              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.3\" schemaLocation=\"./flight/FficeFD_Flight.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./fficemessage/FficeFD_FficeMessage.xsd\"/>\n" .
               $line;
     }
@@ -559,8 +561,8 @@ sub modifyLine
     # Add package imports/includes to FlightPlanUpdate.xsd
     elsif ($schema =~ /\/FlightPlanUpdate.xsd/)
     {
-      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"./base/FficeFPU_Base.xsd\"/>\n" .
-              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.2\" schemaLocation=\"./flight/FficeFPU_Flight.xsd\"/>\n" .
+      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"./base/FficeFPU_Base.xsd\"/>\n" .
+              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.3\" schemaLocation=\"./flight/FficeFPU_Flight.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./fficemessage/FficeFPU_FficeMessage.xsd\"/>\n" .
               $line;
     }
@@ -574,7 +576,9 @@ sub modifyLine
     # Add package-wide includes to FficeFPU_Flight.xsd
     elsif ($schema =~ /\/FficeFPU_Flight.xsd/)
     {
-      $line = "\t<xs:include schemaLocation=\"./arrival/FficeFPU_Arrival.xsd\"/>\n" .
+      $line = "\t<xs:include schemaLocation=\"./aircraft/FficeFPU_Aircraft.xsd\"/>\n" .
+              "\t<xs:include schemaLocation=\"./arrival/FficeFPU_Arrival.xsd\"/>\n" .
+              "\t<xs:include schemaLocation=\"./capability/FficeFPU_Capability.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./departure/FficeFPU_Departure.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./enroute/FficeFPU_EnRoute.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./flightdata/FficeFPU_FlightData.xsd\"/>\n" .
@@ -592,8 +596,8 @@ sub modifyLine
     # Add package imports/includes to PlanningStatus.xsd
     elsif ($schema =~ /\/PlanningStatus.xsd/)
     {
-      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"./base/FficePS_Base.xsd\"/>\n" .
-              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.2\" schemaLocation=\"./flight/FficePS_Flight.xsd\"/>\n" .
+      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"./base/FficePS_Base.xsd\"/>\n" .
+              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.3\" schemaLocation=\"./flight/FficePS_Flight.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./fficemessage/FficePS_FficeMessage.xsd\"/>\n" .
               $line;
     }
@@ -607,7 +611,9 @@ sub modifyLine
     # Add package-wide includes to FficePS_Flight.xsd
     elsif ($schema =~ /\/FficePS_Flight.xsd/)
     {
-      $line = "\t<xs:include schemaLocation=\"./flightdata/FficePS_FlightData.xsd\"/>\n" .
+      $line = "\t<xs:include schemaLocation=\"./arrival/FficePS_Arrival.xsd\"/>\n" .
+              "\t<xs:include schemaLocation=\"./departure/FficePS_Departure.xsd\"/>\n" .
+              "\t<xs:include schemaLocation=\"./flightdata/FficePS_FlightData.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./flightroutetrajectory/FficePS_FlightRouteTrajectory.xsd\"/>\n" .
               $line;
     }
@@ -622,8 +628,8 @@ sub modifyLine
     # Add package imports/includes to PreliminaryFlightPlan.xsd
     elsif ($schema =~ /\/PreliminaryFlightPlan.xsd/)
     {
-      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"./base/FficePFP_Base.xsd\"/>\n" .
-              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.2\" schemaLocation=\"./flight/FficePFP_Flight.xsd\"/>\n" .
+      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"./base/FficePFP_Base.xsd\"/>\n" .
+              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.3\" schemaLocation=\"./flight/FficePFP_Flight.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./fficemessage/FficePFP_FficeMessage.xsd\"/>\n" .
               $line;
     }
@@ -637,12 +643,13 @@ sub modifyLine
     # Add package-wide includes to FficePFP_Flight.xsd
     elsif ($schema =~ /\/FficePFP_Flight.xsd/)
     {
-      $line = "\t<xs:include schemaLocation=\"./arrival/FficePFP_Arrival.xsd\"/>\n" .
+      $line = "\t<xs:include schemaLocation=\"./aircraft/FficePFP_Aircraft.xsd\"/>\n" .
+              "\t<xs:include schemaLocation=\"./arrival/FficePFP_Arrival.xsd\"/>\n" .
+              "\t<xs:include schemaLocation=\"./capability/FficePFP_Capability.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./departure/FficePFP_Departure.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./enroute/FficePFP_EnRoute.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./flightdata/FficePFP_FlightData.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./flightroutetrajectory/FficePFP_FlightRouteTrajectory.xsd\"/>\n" .
-              "\t<xs:include schemaLocation=\"./rankedtrajectory/FficePFP_RankedTrajectory.xsd\"/>\n" .
               $line;
     }
     # Add package-wide includes to FficePFP_FlightRouteTrajectory.xsd
@@ -656,8 +663,8 @@ sub modifyLine
     # Add package imports/includes to SubmissionResponse.xsd
     elsif ($schema =~ /\/SubmissionResponse.xsd/)
     {
-      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"./base/FficeSR_Base.xsd\"/>\n" .
-              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.2\" schemaLocation=\"./flight/FficeSR_Flight.xsd\"/>\n" .
+      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"./base/FficeSR_Base.xsd\"/>\n" .
+              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.3\" schemaLocation=\"./flight/FficeSR_Flight.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./fficemessage/FficeSR_FficeMessage.xsd\"/>\n" .
               $line;
     }
@@ -677,8 +684,8 @@ sub modifyLine
     # Add package imports/includes to TrialRequest.xsd
     elsif ($schema =~ /\/TrialRequest.xsd/)
     {
-      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"./base/FficeTRQ_Base.xsd\"/>\n" .
-              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.2\" schemaLocation=\"./flight/FficeTRQ_Flight.xsd\"/>\n" .
+      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"./base/FficeTRQ_Base.xsd\"/>\n" .
+              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.3\" schemaLocation=\"./flight/FficeTRQ_Flight.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./fficemessage/FficeTRQ_FficeMessage.xsd\"/>\n" .
               $line;
     }
@@ -692,12 +699,13 @@ sub modifyLine
     # Add package-wide includes to FficeTRQ_Flight.xsd
     elsif ($schema =~ /\/FficeTRQ_Flight.xsd/)
     {
-      $line = "\t<xs:include schemaLocation=\"./arrival/FficeTRQ_Arrival.xsd\"/>\n" .
+      $line = "\t<xs:include schemaLocation=\"./aircraft/FficeTRQ_Aircraft.xsd\"/>\n" .
+              "\t<xs:include schemaLocation=\"./arrival/FficeTRQ_Arrival.xsd\"/>\n" .
+              "\t<xs:include schemaLocation=\"./capability/FficeTRQ_Capability.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./departure/FficeTRQ_Departure.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./enroute/FficeTRQ_EnRoute.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./flightdata/FficeTRQ_FlightData.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./flightroutetrajectory/FficeTRQ_FlightRouteTrajectory.xsd\"/>\n" .
-              "\t<xs:include schemaLocation=\"./rankedtrajectory/FficeTRQ_RankedTrajectory.xsd\"/>\n" .
               $line;
     }
     # Add package-wide includes to FficeTRQ_FlightRouteTrajectory.xsd
@@ -711,8 +719,8 @@ sub modifyLine
     # Add package imports/includes to TrialResponse.xsd
     elsif ($schema =~ /\/TrialResponse.xsd/)
     {
-      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.2\" schemaLocation=\"./base/FficeTRP_Base.xsd\"/>\n" .
-              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.2\" schemaLocation=\"./flight/FficeTRP_Flight.xsd\"/>\n" .
+      $line = "\t<xs:import namespace=\"http://www.fixm.aero/base/4.3\" schemaLocation=\"./base/FficeTRP_Base.xsd\"/>\n" .
+              "\t<xs:import namespace=\"http://www.fixm.aero/flight/4.3\" schemaLocation=\"./flight/FficeTRP_Flight.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./fficemessage/FficeTRP_FficeMessage.xsd\"/>\n" .
               $line;
     }
@@ -726,7 +734,9 @@ sub modifyLine
     # Add package-wide includes to FficeTRP_Flight.xsd
     elsif ($schema =~ /\/FficeTRP_Flight.xsd/)
     {
-      $line = "\t<xs:include schemaLocation=\"./flightdata/FficeTRP_FlightData.xsd\"/>\n" .
+      $line = "\t<xs:include schemaLocation=\"./arrival/FficeTRP_Arrival.xsd\"/>\n" .
+              "\t<xs:include schemaLocation=\"./departure/FficeTRP_Departure.xsd\"/>\n" .
+              "\t<xs:include schemaLocation=\"./flightdata/FficeTRP_FlightData.xsd\"/>\n" .
               "\t<xs:include schemaLocation=\"./flightroutetrajectory/FficeTRP_FlightRouteTrajectory.xsd\"/>\n" .
               $line;
     }
