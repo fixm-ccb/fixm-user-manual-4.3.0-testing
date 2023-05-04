@@ -403,6 +403,18 @@ When creating a FIXM object from ATS message content:
 -   A STAR, if included in a route, must appear in the last element of
     the sequence of instances of `RouteTrajectoryElement`.
 
+The images below present, respectively, the object model corresponding to
+the SID and STAR in the following route string.
+
+```
+Route String: MRSSH2 ZALEA DCT SWB DCT HRV Q105 BLVNS Y290 BAGGS SSCOT5
+         SID: MRSSH2
+        STAR: SSCOT5
+```
+![Image](.//media/translating-ffice-image16.png)
+
+![Image](.//media/translating-ffice-image15.png)
+
 ##### Direct Route Segments
 
 In ICAO ATS messages, the presence of DCT between two route points
