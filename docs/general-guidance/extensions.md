@@ -21,11 +21,7 @@ Examples:
 A number of rules are established in order to ensure that extensions are
 not developed as a replacement of FIXM Core or a subset thereof.
 
-The requirements on FIXM extensions are provided below. They are equally
-applicable to verified and non-verified extensions, but are enforceable
-only for verified extension. Non-verified extensions satisfying the
-requirements below will be recognised as a valid usage of the FIXM
-extension mechanism.
+The requirements on FIXM extensions are provided below.
 
 -----
 

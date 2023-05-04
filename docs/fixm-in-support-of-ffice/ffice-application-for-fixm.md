@@ -26,10 +26,10 @@ Application include:
   possible types of FF-ICE Messages: Filed Flight Plan message,
   Submission Response message, Filing Status message etc.
 
-- Model elements representing the different FF-ICE statuses with their
-    possible values: Planning statuses `CONCUR` / `NON_CONCUR` / `NEGOTIATE`,
-    Filing statuses `ACCEPTABLE` / `NOT_ACCEPTABLE`, Submission statuses
-    `ACK` / `MANUAL` / `REJECT` etc.
+- Model elements representing the different FF-ICE statuses with their possible values: 
+    - Planning statuses: `CONCUR` / `NEGOTIATE` / `NON_CONCUR`
+    - Filing statuses: `ACCEPTABLE` / `NOT_ACCEPTABLE` / `PENDING` 
+    - Submission statuses: `ACK` / `MAN` / `REJ`
 
 - Model elements representing the FF-ICE participants and their
     properties, which are used for identifying the operational
