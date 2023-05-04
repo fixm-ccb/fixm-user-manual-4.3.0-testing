@@ -10,6 +10,7 @@
   - [Date/Time specification](general-guidance/date-time-specification.md)
   - [Geographical positions](general-guidance/geographical-positions.md)
   - [References to published aeronautical information](general-guidance/references-to-published-aeronautical-information.md)
+  - [Non-Aerodrome Departures](general-guidance/non-aerodrome-departures.md)
   - [Relative points](general-guidance/relative-points.md)
   - [Vertical distances](general-guidance/vertical-distances.md)
   - [Sequence numbers](general-guidance/sequence-numbers.md)
