@@ -6,8 +6,7 @@ This chapter targets FIXM implementers who want to realise a conversion from FF-
 
 ## Overview
 
-The transition from present day practices to FF-ICE operations is likely to be somewhat protracted. This is a topic that is being pursued actively by the ATMRPP \[ATMRPP-WG/24-WP/564\] <sup>[[11]](#references)</sup>,
-and is recognized as a key issue in the System Wide Information
+The transition from present day practices to FF-ICE operations is likely to be somewhat protracted. This is a topic that is being pursued actively by the ATMRPP \[ATMRPP-WG/24-WP/564\] <sup>[[11]](#references)</sup>, and is recognized as a key issue in the System Wide Information
 Management (SWIM) concept <sup>[[10]](#references)</sup> \[ICAO Doc 10039\]. During that transition period, there will be stakeholders who are able to send and receive flight plan information employing FIXM, while others will employ ICAO ATS messages. In such a hybrid environment, it is expected that a significant effort will be expended translating between the FIXM format and the ATS message format. It is critical for interoperability purposes, and to ensure meaning is not lost in translation, that the conversion between FIXM and ATS message
 content is precisely defined, and that all stakeholders employ the same translation rules.
 
@@ -84,24 +83,19 @@ implicit in the class name:` ModeACode`).
 When creating ATS message content from a FIXM object, set the SSR mode
 (field 7b) to A.
 
-#### Formation Count
+#### Number of Aircraft
 
-ATS field 9a is the number of aircraft. PANS-ATM restricts this value to
-be in the range 2 through 99. FIXM allows any number greater than or
-equal to 2.
+ATS field 9a is the total number of aircraft (if more than one). This field is only used in the case of formation flights. The PANS-ATM restricts this value to be in the range 2 through 99. FIXM does not represent this number directly. Rather, it can be derived by adding up the individual values for each `aircraftCount` field.
 
-When creating ATS message content from a FIXM object, if the
-`Aircraft.formationCount` value is greater than 99, truncate to 99.
+When creating ATS message content from a FIXM object, the sum of all of the individual `aircraftCount` fields is used for field 9a. If the sum is greater than 99, truncate to 99.
 
-A similar comment applies to other ATS message fields that contain
-counts where FIXM is less restrictive:
+A similar comment applies to other ATS message fields that contain counts where FIXM is less restrictive:
 
 -   Field 18 TYP (range 2..10);
 
 -   Field 19b (range 1..99);
 
--   Field 19f (range 1..99 for number of dinghies, 1..999 for dinghy
-    capacity).
+-   Field 19f (range 1..99 for number of dinghies, 1..999 for dinghy capacity).
 
 #### Wake Turbulence Category
 
@@ -586,11 +580,10 @@ fragment is an example.
 
 \....
 
--TYP/2F15 5F5 3B2
+-TYP/2F16 3K35R
 ````
 
-Note the structured nature of the TYP field: two F15s, five F5s, and
-three B2s. The value in field 18 TYP may exhibit structure as in this
+Note the structured nature of the TYP field: two F16s, and three K35Rs. The value in field 18 TYP may exhibit structure as in this
 example above for a formation. However, this may not be so in other
 cases, where the (non-designator) type of aircraft is listed, as in
 
@@ -602,24 +595,18 @@ cases, where the (non-designator) type of aircraft is listed, as in
 -TYP/ECLIPSE 500
 ```
 
-The image below presents the object model corresponding to each of the
+The images below present the object model corresponding to each of the
 above flight plan fragments.
 
-![Image](.//media/translating-ffice-image7.png)
+![Image](.//media/Aircraft_AircraftType_AircraftTypeChoice_1.png)
+
+![Image](.//media/Aircraft_AircraftType_AircraftTypeChoice_2.png)
 
 Notes:
 
--   If it is not possible to decode the content of field 18 TYP, create
-    a single instance of class `AircraftType` to record the entire content
-    of 18 TYP.
-
--   The sum of the `numberOfAircraft` attributes in the instances
-    of `AircraftType` class should equal the `formationCount` attribute (if
-    present) in class `Aircraft`.
-
--   When the flight is not a formation, the `formationCount` attribute
-    must be omitted. The `numberOfAircraft` attribute should be omitted as
-    well (though it can be included for extra specificity if desired).
+- If it is not possible to decode the content of field 18 TYP, create a single instance of class `AircraftType` to record the entire content of 18 TYP.
+- The sum of the `aircraftCount` attributes in each instance of `AircraftType` is the total number of aircraft in the formation.
+- When the flight is not a formation, the `aircraftCount` attribute should be omitted (though it can be included for extra specificity if desired).
 
 #### Aircraft Registration
 
