@@ -4,9 +4,9 @@ The evaluation process included the following components:
 
 1. **FIXM Schemas**
 
-    a.  FIXM Core 4.2.0
+    a.  FIXM Core 4.3.0
 
-    b.  FF-ICE Message 1.0.0 (with restrictions)
+    b.  FF-ICE Message 1.1.0 (with restrictions)
 
 2. **WSDL file**
 

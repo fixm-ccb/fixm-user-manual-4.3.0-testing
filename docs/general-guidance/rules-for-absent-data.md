@@ -48,7 +48,7 @@ reason” attribute, if the need for it is identified by the FIXM
 Community.
 
 *Note: the support for nillable elements has implied a significant
-design change in FIXM Core 4.2.0. The previous FIXM Core versions relied
+design change starting in FIXM Core 4.2.0. Previous FIXM Core versions relied
 extensively on XSD attributes, which are not nillable. These XSD
 attributes were converted to XSD elements in FIXM Core 4.2.0 so that the
 built-in XSD attribute nillable could be leveraged.*

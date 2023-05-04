@@ -129,8 +129,8 @@ geospatial data. The reasons for not adopting GML are the following:
     technologies have been identified as *incompatible* with the GML
     usage.
 
-[AeronauticalReference.xsd]: https://www.fixm.aero/releases/FIXM-4.2.0/schemas/core/base/AeronauticalReference.xsd
-[GeographicalPositionType]: https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_GeographicalPositionType.html
+[AeronauticalReference.xsd]: https://www.fixm.aero/releases/FIXM-4.3.0/schemas/core/base/AeronauticalReference.xsd
+[GeographicalPositionType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_GeographicalPositionType.html
 
 ## Notes
 [1]: FIXM does not use GML but mimics it for geographic positions. GML encodes geographic locations as sequences of values since it employs the same construct to represent polygons.

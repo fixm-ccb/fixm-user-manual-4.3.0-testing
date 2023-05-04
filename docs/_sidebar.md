@@ -15,6 +15,7 @@
   - [Sequence numbers](general-guidance/sequence-numbers.md)
   - [Contact information](general-guidance/contact-information.md)
   - [Aircraft data](general-guidance/aircraft_data.md)
+  - [Flight Identification](general-guidance/flight_identification.md)
   - [Flight Capabilities](general-guidance/flight_capabilities.md)
   - [General rules for data correctness](general-guidance/general-rules-for-data-correctness.md)
   - [Rules for absent data](general-guidance/rules-for-absent-data.md)
@@ -73,7 +74,6 @@
 
 
 - **License**
-  - [Copyright 2021](https://fixm.aero/content/disclaimer.pl)
-  - Last updated on February 3rd 2021
-
+  - [Copyright 2023](https://fixm.aero/disclaimer.html)
+  - Last updated on February 3rd 2023
 
