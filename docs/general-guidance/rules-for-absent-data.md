@@ -31,13 +31,29 @@ the context of the information exchange:
     interpretation is dictated by the FF-ICE Implementation Guidance
     Manual which states the following:
 
-> *7.4.3.6 A Flight Plan Update is only required to contain those items
+> *6.4.3.6 A Flight Plan Update is only required to contain those items
 > that have changed (in addition to the mandatory items specified for an
 > Update message), i.e. it is not necessary to resend complete flight
 > data. Data items that were included in the previous version of the
 > flight plan and have not been included in the Flight Plan Update will
 > remain unchanged. This means that a mechanism is required to identify
-> when a flight plan data item is to be deleted.”*
+> when a flight plan data item is to be deleted.*
+
+<ul>This use of nil is only appropriate for non-repeating elements. As 
+     explained in the Implementation Guidance, repeating elements must 
+     be updated as a group rather than modifying or deleting individual
+     components:</ul>
+
+> *6.4.3.9 Individual elements within a repeating sequence of elements 
+> such as those found within a route/trajectory group or a climb/descent 
+> performance profile cannot be modified or deleted. The entire group 
+> must be updated as required.*
+
+<ul>Though not stated explicitly in the Implementation Guidance, this 
+     also applies to elements found under choice structures. That is,
+     elements under a choice structure do not need to be nilled out 
+     and replaced. When a choice structure is received as part of an 
+     update, it replaces the previous entry entirely.</ul>
 
 -   A nil element included in an FF-ICE Flight Data Response Message
     will indicate that the data item is explicitly declared as not
