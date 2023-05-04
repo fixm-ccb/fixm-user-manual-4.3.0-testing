@@ -116,6 +116,36 @@ sub-classes. XSD complex type restrictions are therefore linked together to form
 [FficeTRQ]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/trialrequest/fficemessage/FficeTRQ_FficeMessage.xsd
 [FficeTRP]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/trialresponse/fficemessage/FficeTRP_FficeMessage.xsd
 
+## Intentional Differences between the Implementation Guidance and Templates
+
+There are a number of intentional differences between the message content as described in the FF-ICE Implementation Guidance Manual, Appendices B & C, and the FF-ICE Application v1.1.0 templates.  These discrepancies fall into two categories:  __technical__ and __forward looking__.  The technical differences are present to accommodate the realities of implementing concepts in a physical model, such as including fields for backwards compatibility reasons or accommodating FF-ICE content that could preferably be represented outside of an XML payload.  The forward looking differences are instances where significant, upcoming changes were incorporated into FIXM even though they were not present in the version of the Implementation Guidance the model was based on.
+
+### Technical
+
+Perhaps the most visible of the technical differences between the FF-ICE templates and Appendix C are the mandatory Message Information fields marked with "Note 1".  From the Implementation Guidance:
+
+> "Note 1: Can be implemented by communications infrastructure."
+
+This is further described in the beginning of Appendix C:
+
+> "Data items identified in "Message Information" are information that should be made available to the application that processes the message; however some of the data elements could logically be implemented within the communications infrastructure, e.g. a header - analogous to the AFTN header described in Annex 10. For example, the list of relevant ANSPs for an existing flight may be obtained from existing data, possibly obtained via the communications infrastructure, and therefore does not need to be repeated in subsequent messages for that flight. Because a communications infrastructure has not been specified, only general data items can be defined at this time."
+
+To accommodate this, the FF-ICE templates leave these fields optional, even though they described as mandatory, to allow these fields to be absent from the XML body of a message if capturing this information in the communications infrastructure's header fields is preferred.
+
+Another notable technical difference is the inclusion of the legacy version of the GUFI in the FF-ICE templates.  Though FF-ICE has updated the composition of the GUFI, FIXM needed to include the legacy version of the GUFI to allow for messages published using older versions to be translated to the latest version, supporting so called backwards compatibility.
+
+Additionally, there are a number of other, small technical variations throughout the model, such as letting the "type" of a constraint be derived from the provided constraint value(s) (e.g., providing only a lower bound indicates a constraint type of "at or above", providing both an upper and lower bound indicates a constraint type of "between") to avoid possible points of data integrity failure.  These differences are largely considered minor enough to not need to be documented here.
+
+### Forward Looking
+
+The most important forward looking difference is the change between how the composition of the GUFI is described in the Implementation Guidance and how it is implemented in FIXM.  The version in FIXM incorporates the simplification of the possible namespace domains eventually adopted by the ATMRPP, leaving only `LOCATION_INDICATOR`, `OPERATING_AGENCY_DESIGNATOR`, and the newly introduced `FULLY_QUALIFIED_DOMAIN_NAME` as options.  
+
+Other forward looking changes include the addition of fields in the FF-ICE templates that had been unintentionally left out of Appendix C:
+* The addition of General Flight Constraints to the templates corresponding to C-2, C-3, C-4, C-5, C-6, C-7, and C-9.
+* The addition of runway information to the templates corresponding to C-3 and C-7.
+
+And an update to make `airspeed` optional for performance profile points.
+
 ## References
 
 [6]: [ATMRPP/3-WP/766](https://eurocontrol.sharepoint.com/sites/coll-FIXM/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fcoll%2DFIXM%2FShared%20Documents%2FFIXM%20Change%20Requests%2FICAO%20ATMRPP%20inputs%20for%20FIXM%2FFF%2DICE%20Manual%20d0%2E99%5Fmarkup%2Epdf&parent=%2Fsites%2Fcoll%2DFIXM%2FShared%20Documents%2FFIXM%20Change%20Requests%2FICAO%20ATMRPP%20inputs%20for%20FIXM): “Manual on FF-ICE Implementation Guidance”
