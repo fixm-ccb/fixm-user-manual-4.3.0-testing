@@ -18,6 +18,7 @@
   - [Aircraft data](general-guidance/aircraft_data.md)
   - [Flight Identification](general-guidance/flight_identification.md)
   - [Flight Capabilities](general-guidance/flight_capabilities.md)
+  - [Trajectory Point Properties](general-guidance/trajectory-point-properties.md)
   - [General rules for data correctness](general-guidance/general-rules-for-data-correctness.md)
   - [Rules for absent data](general-guidance/rules-for-absent-data.md)
   - [The use of other exchange models](general-guidance/the-use-of-other-exchange-models.md)
