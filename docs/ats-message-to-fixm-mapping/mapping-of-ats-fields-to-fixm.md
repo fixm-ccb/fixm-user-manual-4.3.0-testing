@@ -224,15 +224,16 @@ field 3 in FIXM.
 <p>departure.departureAerodrome.name</p>
 <p>departure.departureAerodrome.referencePoint</p></td>
 </tr>
+
 <tr class="even">
 <td></td>
 <td>Flight</td>
-<td>
-SupplementaryInformationChoice</td>
+<td>SupplementaryInformationChoice</td>
 <td><p>[13a=AFIL]</p>
-supplementaryInformation.supplementaryInformationSource.unit.locationIndicator
+<p>supplementaryInformation.supplementaryInformationSource.unit.locationIndicator</p>
 <p>supplementaryInformation.supplementaryInformationSource.unit.atcUnitNameOrAlternate</p></td>
 </tr>
+
 <tr class="odd">
 <td>DEST</td>
 <td>Base.Aerodrome</td>
@@ -241,6 +242,7 @@ supplementaryInformation.supplementaryInformationSource.unit.locationIndicator
 <p>destination.destinationAerodrome.name</p>
 <p>destination.destinationAerodrome.referencePoint</p></td>
 </tr>
+
 <tr class="even">
 <td>DOF</td>
 <td>Base.Types</td>
