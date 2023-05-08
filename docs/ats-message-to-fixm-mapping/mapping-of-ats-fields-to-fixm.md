@@ -221,8 +221,8 @@ field 3 in FIXM.
 <td>Base.Aerodrome</td>
 <td>AerodromeReference</td>
 <td><p>[13a=ZZZZ]</p>
-<p>departure.aerodrome.name</p>
-<p>departure.aerodrome.referencePoint</p></td>
+<p>departure.departureAerodrome.name</p>
+<p>departure.departureAerodrome.referencePoint</p></td>
 </tr>
 <tr class="even">
 <td></td>
@@ -319,7 +319,7 @@ field 3 in FIXM.
 <td></td>
 <td>Base.Types</td>
 <td>Duration</td>
-<td>routeTrajectoryGroup.〈kind〉.element.enRouteDelay.delayValue</td>
+<td>routeTrajectoryGroup.〈kind〉.element.plannedDelay.delayValue</td>
 </tr>
 <tr class="even">
 <td>OPR</td>
@@ -404,13 +404,13 @@ field 3 in FIXM.
 <td>19a</td>
 <td>Base.Types</td>
 <td>Duration</td>
-<td>supplementaryData.fuelEndurance</td>
+<td>supplementaryInformation.fuelEndurance</td>
 </tr>
 <tr class="even">
 <td>19b</td>
 <td>Base.Types</td>
 <td>Count</td>
-<td>supplementaryData.personsOnBoard</td>
+<td>supplementaryInformation.personsOnBoard</td>
 </tr>
 <tr class="odd">
 <td>19c</td>
@@ -470,7 +470,7 @@ field 3 in FIXM.
 <td>19i</td>
 <td>Base.Types</td>
 <td>TextName</td>
-<td>supplementaryData.pilotInCommand.name</td>
+<td>supplementaryInformation.pilotInCommand.name</td>
 </tr>
 </tbody>
 </table>
