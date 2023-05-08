@@ -292,7 +292,7 @@ field 3 in FIXM.
 <tr class="odd">
 <td>TYP</td>
 <td>Base.Types</td>
-<td>Count</td>
+<td>CountPositive</td>
 <td><p>[9b=ZZZZ]</p>
 <p>aircraft.aircraftType.aircraftCount</p></td>
 </tr>
