@@ -870,8 +870,7 @@ employs the attribute `supplementaryInformation` of class `Flight` for this
 purpose. In this situation the following rules should
 be applied:
 
--   Populate the attribute `unit` of `supplementaryInformationSource` (via
-    the `supplementaryInformation` attribute) with the content of field 18 DEP.
+-   Populate either the `locationIndicator` or `atcUnitNameOrAlternate` attribute of `unit`, which is an attritbute of `supplementaryInformationSourceChoice`, which is in turn an association of 'supplementaryInformation', with the contents of field 18 DEP.
 
 -   Populate the attribute `airfileIndicator` of class `Departure` (with the constant
     value AIRFILE).
