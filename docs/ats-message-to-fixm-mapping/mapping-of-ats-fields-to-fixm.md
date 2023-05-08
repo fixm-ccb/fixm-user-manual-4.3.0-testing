@@ -227,9 +227,9 @@ field 3 in FIXM.
 <tr class="even">
 <td></td>
 <td>Base.Types</td>
-<td>CharacterStringType</td>
+<td>TextNameType</td>
 <td><p>[13a=AFIL]</p>
-<p>flightPlanOriginator.identifier</p></td>
+<p>supplementaryInformation.supplementaryInformationSource.unit.atcUnitNameOrAlternate</p></td>
 </tr>
 <tr class="odd">
 <td>DEST</td>
