@@ -161,7 +161,7 @@ field 3 in FIXM.
 |:-|:-|:-|:-|
 |17a|Base.Organization|LocationIndicator|\[17a≠ZZZZ\] arrival.arrivalAerodrome.locationIndicator|
 |17b|Base.Types|Time|arrival.actualTimeOfArrival|
-|17c|Base.Aerodrome|AerodromeName|\[17a=ZZZZ\] arrival.arrivalAerodrome.name |
+|17c|Base.AeronauticalReference|AerodromeName|\[17a=ZZZZ\] arrival.arrivalAerodrome.name |
 
 ## Field 18
 
@@ -218,7 +218,7 @@ field 3 in FIXM.
 </tr>
 <tr class="odd">
 <td>DEP</td>
-<td>Base.Aerodrome</td>
+<td>Base.AeronauticalReference</td>
 <td>AerodromeReference</td>
 <td><p>[13a=ZZZZ]</p>
 <p>departure.departureAerodrome.name</p>
@@ -227,8 +227,8 @@ field 3 in FIXM.
 
 <tr class="even">
 <td></td>
-<td>Flight</td>
-<td>SupplementaryInformationChoice</td>
+<td>Base.AeronauticalReference</td>
+<td>AtcUnitReference</td>
 <td><p>[13a=AFIL]</p>
 <p>supplementaryInformation.supplementaryInformationSource.unit.locationIndicator</p>
 <p>supplementaryInformation.supplementaryInformationSource.unit.atcUnitNameOrAlternate</p></td>
@@ -236,7 +236,7 @@ field 3 in FIXM.
 
 <tr class="odd">
 <td>DEST</td>
-<td>Base.Aerodrome</td>
+<td>Base.AeronauticalReference</td>
 <td>AerodromeReference</td>
 <td><p>[16a=ZZZZ]</p>
 <p>destination.destinationAerodrome.name</p>
@@ -353,7 +353,7 @@ field 3 in FIXM.
 </tr>
 <tr class="even">
 <td>ALTN</td>
-<td>Base.Aerodrome</td>
+<td>Base.AeronauticalReference</td>
 <td>OtherReference</td>
 <td><p>[ZZZZ∈16c]</p>
 <p>arrival.destinationAerodromeAlternate.name</p>
@@ -361,13 +361,13 @@ field 3 in FIXM.
 </tr>
 <tr class="odd">
 <td>RALT</td>
-<td>Base.Aerodrome</td>
+<td>Base.AeronauticalReference</td>
 <td>AerodromeReference</td>
 <td>enRoute.alternateAerodrome</td>
 </tr>
 <tr class="even">
 <td>TALT</td>
-<td>Base.Aerodrome</td>
+<td>Base.AeronauticalReference</td>
 <td>AerodromeReference</td>
 <td>departure.takeOffAlternateAerodrome</td>
 </tr>
@@ -379,7 +379,7 @@ field 3 in FIXM.
 </tr>
 <tr class="even">
 <td></td>
-<td>Base.Aerodrome</td>
+<td>Base.AeronauticalReference</td>
 <td>AerodromeReference</td>
 <td>arrival.reclearanceInFlight.filedRevisedDestinationAerodrome</td>
 </tr>
