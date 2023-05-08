@@ -83,7 +83,7 @@ field 3 in FIXM.
 
   |ICAO 4444 Field|Package|Class|Path from Flight|
   |:----------------|:-|:-|:-|
-  |8a    |                Flight.FlightRouteTrajectory.RouteTrajectory |  FlightRulesCategory  | routeTrajectoryGroup.〈kind〉.routeInformation.flightRulesCategory|
+  |8a    |                Flight.FlightData |  FlightRulesCategory  | flightRulesCategory|
   |8b             |       Flight.FlightData        |                      TypeOfFlight     |     flightType|
 
 ## Field 9
@@ -91,7 +91,7 @@ field 3 in FIXM.
 
 | ICAO 4444 Field   | Package    | Class      | Path from Flight   |
 |:----------------|:-|:-|:-|
-| 9a             | Base.Types     | CountPositive          | aircraft.aircraftType.aircraftCount<br><br>Use the sum of all of the individual FIXM aircraft counts.  If the sum is greater than 99, set field 9a to 99.      |
+| 9a             | Base.Types     | CountPositive          | aircraft.aircraftType.aircraftCount<br><br>If the sum is greater than 99, set field 9a to 99.      |
 | 9b             | Base.Types     | AircraftTypeDesignator      | \[9b≠ZZZZ\]     aircraft.aircraftType.icaoAircraftTypeDesignator |
 | 9c             | Flight.Aircraft              | WakeTurbulenceCategory | aircraft.wakeTurbulence |
 
@@ -113,7 +113,7 @@ field 3 in FIXM.
 | |   Flight.Departure | AirfileIndicator|\[13a=AFIL\] departure.airfileIndicator = AIRFILE| 
 | 13b| Base.Types   |Time |\[13a≠AFIL ∧ message∈{FPL,ARR,CHG,CNL,DLA,RQS,RQP}\] departure.estimatedOffBlockTime| 
 | | | | \[13a≠AFIL ∧ message∈{ALR,DEP,SPL}\] departure.actualTimeOfDeparture|
-| | | |\[13a=AFIL\] routeTrajectoryGroup.〈kind〉.routeInformation.airfileRouteStartTime | 
+| | | |\[13a=AFIL\] departure.estimatedRouteStartTime | 
 
 ## Field 14
 
@@ -122,7 +122,7 @@ field 3 in FIXM.
  | 14a   |                Base.AeronauticalReference   |SignificantPointChoice    |    enroute.boundaryCrossingCoordination.crossingPoint|
  | 14b |                  Base.Types     |              Time           |               enroute.boundaryCrossingCoordination.crossingTime|
  | 14c |                  Base.RangesAndChoices   |     FlightLevelOrAltitudeChoice  | enroute.boundaryCrossingCoordination.clearedLevel|
- | 14d  |                 Flight.EnRoute |              FlightLevelOrAltitudeChoice  | enroute.boundaryCrossingCoordination.altitudeInTransition.level|
+ | 14d  |                 Base.RangesAndChoices |              FlightLevelOrAltitudeChoice  | enroute.boundaryCrossingCoordination.altitudeInTransition.level|
  | 14e  |                 Flight.EnRoute   |            BoundaryCrossingCondition   |  enroute.boundaryCrossingCoordination.altitudeInTransition.crossingCondition|
 
 ## Field 15
@@ -130,7 +130,7 @@ field 3 in FIXM.
 |ICAO 4444 Field|Package|Class|Path from Flight|
 |:-|:-|:-|:-|
 | 15a            | Base.Measures  | TrueAirspeed   | routeTrajectoryGroup.〈kind〉.routeInformation.cruisingSpeed           |
-| 15b            | Base.RangesAndChoices        | FlightLevelOrAltitudeChoice  | \[15b≠VFR\]   routeTrajectoryGroup.〈kind〉.routeInformation.cruisingLevel |
+| 15b            | Base.RangesAndChoices        | FlightLevelOrAltitudeOrVfrChoiceType  | \[15b≠VFR\]   routeTrajectoryGroup.〈kind〉.routeInformation.cruisingLevel |
 |15c|Flight.FlightRouteTrajectory.RouteTrajectory|RouteTrajectoryElement|routeTrajectoryGroup.〈kind〉.element|
 ||Base.Types|CharacterString|routeTrajectoryGroup.〈kind〉.routeInformation.routeText|
 |15c1|Base.AeronauticalReference|SidStarReference|routeTrajectoryGroup.〈kind〉.element.routeDesignatorToNextElement.standardInstrumentDeparture|
@@ -144,8 +144,8 @@ field 3 in FIXM.
 ||Flight.FlightRouteTrajectory.RouteTrajectory|RouteTruncationIndicator|\[15c5=T\] routeTrajectoryGroup.〈kind〉.element.routeTruncationIndicator = ROUTE_TRUNCATION|
 |15c6|Base.AeronauticalReference|SignificantPointChoice|routeTrajectoryGroup.〈kind〉.element.elementStartPoint|
 ||Base.Measures|TrueAirspeed|routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.speed|
-||Base.RangesAndChoices|VerticalRange|\[PLUS∉15c6\] routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.level.flightLevelOrAltitudeRange|
-||Base.RangesAndChoices|FlightLevelOrAltitudeChoice|\[PLUS∈15c6\] routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.level.flightLevelOrAltitudeValue|
+||Base.RangesAndChoices|VerticalRange|\[PLUS∉15c6\] routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.lowerLevel.flightLevelOrAltitudeRange|
+||Base.RangesAndChoices|FlightLevelOrAltitudeChoice|\[PLUS∈15c6\] routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.upperLevel.upperLevelChoiceType|
 |15c7|Base.AeronauticalReference|SidStarReference|routeTrajectoryGroup.〈kind〉.element.routeDesignatorToNextElement.standardInstrumentArrival|
 
 ## Field 16
