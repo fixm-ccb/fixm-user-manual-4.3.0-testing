@@ -144,8 +144,8 @@ field 3 in FIXM.
 ||Flight.FlightRouteTrajectory.RouteTrajectory|RouteTruncationIndicator|\[15c5=T\] routeTrajectoryGroup.〈kind〉.element.routeTruncationIndicator = ROUTE_TRUNCATION|
 |15c6|Base.AeronauticalReference|SignificantPointChoice|routeTrajectoryGroup.〈kind〉.element.elementStartPoint|
 ||Base.Measures|TrueAirspeed|routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.speed|
-||Base.RangesAndChoices|VerticalRange|\[PLUS∉15c6\] routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.lowerLevel.flightLevelOrAltitudeRange|
-||Base.RangesAndChoices|FlightLevelOrAltitudeChoice|\[PLUS∈15c6\] routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.upperLevel.upperLevelChoiceType|
+||Base.RangesAndChoices|FlightLevelOrAltitudeChoiceType|\[PLUS∉15c6\] routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.lowerLevel|
+||Flight.FlightRouteTrajectory.RouteTrajectory.RouteChanges|UpperLevelChoiceType|\[PLUS∈15c6\] routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.upperLevel|
 |15c7|Base.AeronauticalReference|SidStarReference|routeTrajectoryGroup.〈kind〉.element.routeDesignatorToNextElement.standardInstrumentArrival|
 
 ## Field 16
