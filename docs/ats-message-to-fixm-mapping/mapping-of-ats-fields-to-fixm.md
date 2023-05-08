@@ -130,7 +130,7 @@ field 3 in FIXM.
 |ICAO 4444 Field|Package|Class|Path from Flight|
 |:-|:-|:-|:-|
 | 15a            | Base.Measures  | TrueAirspeed   | routeTrajectoryGroup.〈kind〉.routeInformation.cruisingSpeed           |
-| 15b            | Base.RangesAndChoices        | FlightLevelOrAltitudeOrVfrChoiceType  | \[15b≠VFR\]   routeTrajectoryGroup.〈kind〉.routeInformation.cruisingLevel |
+| 15b            | Base.RangesAndChoices        | FlightLevelOrAltitudeOrVfrChoice  | \[15b≠VFR\]   routeTrajectoryGroup.〈kind〉.routeInformation.cruisingLevel |
 |15c|Flight.FlightRouteTrajectory.RouteTrajectory|RouteTrajectoryElement|routeTrajectoryGroup.〈kind〉.element|
 ||Base.Types|CharacterString|routeTrajectoryGroup.〈kind〉.routeInformation.routeText|
 |15c1|Base.AeronauticalReference|SidStarReference|routeTrajectoryGroup.〈kind〉.element.routeDesignatorToNextElement.standardInstrumentDeparture|
@@ -144,7 +144,7 @@ field 3 in FIXM.
 ||Flight.FlightRouteTrajectory.RouteTrajectory|RouteTruncationIndicator|\[15c5=T\] routeTrajectoryGroup.〈kind〉.element.routeTruncationIndicator = ROUTE_TRUNCATION|
 |15c6|Base.AeronauticalReference|SignificantPointChoice|routeTrajectoryGroup.〈kind〉.element.elementStartPoint|
 ||Base.Measures|TrueAirspeed|routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.speed|
-||Base.RangesAndChoices|FlightLevelOrAltitudeChoiceType|\[PLUS∉15c6\] routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.lowerLevel|
+||Base.RangesAndChoices|FlightLevelOrAltitudeChoice|\[PLUS∉15c6\] routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.lowerLevel|
 ||Flight.FlightRouteTrajectory.RouteTrajectory.RouteChanges|UpperLevelChoiceType|\[PLUS∈15c6\] routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.upperLevel|
 |15c7|Base.AeronauticalReference|SidStarReference|routeTrajectoryGroup.〈kind〉.element.routeDesignatorToNextElement.standardInstrumentArrival|
 
@@ -226,9 +226,11 @@ field 3 in FIXM.
 </tr>
 <tr class="even">
 <td></td>
-<td>Base.Types</td>
-<td>TextNameType</td>
+<td>Flight</td>
+<td>
+SupplementaryInformationChoice</td>
 <td><p>[13a=AFIL]</p>
+supplementaryInformation.supplementaryInformationSource.unit.locationIndicator
 <p>supplementaryInformation.supplementaryInformationSource.unit.atcUnitNameOrAlternate</p></td>
 </tr>
 <tr class="odd">
