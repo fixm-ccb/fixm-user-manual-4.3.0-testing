@@ -863,25 +863,17 @@ name then `referencePoint` in order of preference for creating 18 TALT.
 
 #### Air Filed
 
-When a flight plan is filed in the air, the value AFIL is inserted in
-field 13a and the ATS unit from which supplementary flight plan
-information can be obtained is specified in field 18 DEP. The mapping
-employs the attribute `supplementaryInformation` of class `Flight` for this
-purpose. In this situation the following rules should
-be applied:
+When a flight plan is filed in the air, the value AFIL is inserted in field 13a and the ATS unit from which supplementary flight plan information can be obtained is specified in field 18 DEP. When creating a FIXM object from an ATS message, the following rules should be applied:
 
--   Populate either the `locationIndicator` or `atcUnitNameOrAlternate` attribute of `unit`, which is an attribute of `supplementaryInformationSourceChoice`, which is in turn an association of `supplementaryInformation`, with the contents of field 18 DEP.
+-   Populate either the `locationIndicator` or `atcUnitNameOrAlternate` attribute (whichever is appropriate given the information provided) under `Flight.supplementaryInformation.supplementaryInformationSource.unit` with the contents of field 18 DEP.
 
--   Populate the attribute `airfileIndicator` of class `Departure` (with the constant
-    value AIRFILE).
+-   Populate `Flight.departure.airfileIndicator` with the constant value AIRFILE.
 
--   Populate the attribute `estimatedRouteStartTime` of
-    class `Departure` in
-    package `Flight.Departure` with the
-    content of field 13b.
+-   Populate `Flight.departure.estimatedRouteStartTime` with the time provided in field 13b.
 
--   The departure aerodrome (`aerodrome`) and departure time
-    (`estimatedOffBlockTime`) of class `Departure` are not populated.
+-   Populate the relevant option under `Flight.departure.departurePoint` with the first significant point in the route (if available).
+
+When creating an ATS message from a FIXM object, the presence of AIRFILE under `Flight.departure.airfileIndicator` will indicate the need to place AFIL in field 13a.  Extract the other needed information from the FIXM fields specified above to populate fields 13b and 18 DEP.
 
 The image below presents the FIXM representation of the following air
 filed flight plan (fragment) as an object model.
