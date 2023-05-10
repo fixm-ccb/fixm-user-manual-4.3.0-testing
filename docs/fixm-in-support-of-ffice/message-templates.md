@@ -132,7 +132,7 @@ This is further described in the beginning of Appendix C:
 
 To accommodate this, the FF-ICE templates leave these fields optional, even though they described as mandatory, to allow these fields to be absent from the XML body of a message if capturing this information in the communications infrastructure's header fields is preferred.
 
-Another notable technical difference is the inclusion of the legacy version of the GUFI in the FF-ICE templates.  Though FF-ICE has updated the composition of the GUFI, FIXM needed to include the legacy version of the GUFI to allow for messages published using older versions to be translated to the latest version, supporting so called backwards compatibility.
+Another notable technical difference is the inclusion of the legacy version of the GUFI in the FF-ICE templates.  Though FF-ICE has updated the composition of the GUFI, FIXM needed to include the legacy version of the GUFI to allow for messages published using older versions to be translated to the latest version, supporting so-called backwards compatibility.
 
 Additionally, there are a number of other, small technical variations throughout the model, such as letting the "type" of a constraint be derived from the provided constraint value(s) (e.g., providing only a lower bound indicates a constraint type of "at or above", providing both an upper and lower bound indicates a constraint type of "between") to avoid possible points of data integrity failure.  These differences are largely considered minor enough to not need to be documented here.
 
