@@ -10,13 +10,13 @@ The Flight Information Exchange Model (`FIXM`) is an exchange model capturing Fl
 
 According to the ICAO SWIM concept <sup>[[I-10]](#references)</sup>, `FIXM` is one of the models that belong to the “Information Exchange Models” layer of the ICAO SWIM Global Interoperability framework.
 
-### 1.2	Purpose of the document
+### 1.2	Purpose of the strategy
 
-This document details the high-level requirements on the `FIXM` content, structure and scope to guide the overall `FIXM` evolution.
+This strategy details the high-level requirements on the `FIXM` content, structure and scope to guide the overall `FIXM` evolution.
 
 ### 1.3	Revision process
 
-This document is approved and published by the FIXM Change Control Board (`FIXM CCB`). Future evolutions of the document shall be managed via the FIXM change management <sup>[[F-03]](#references)</sup>.
+This strategy is approved and published by the FIXM Change Control Board (`FIXM CCB`). Future evolutions of the strategy shall be managed via the FIXM change management <sup>[[F-03]](#references)</sup>.
 
 ## 2	FIXM Requirements
 
@@ -71,7 +71,7 @@ The `FIXM Applications` managed by the `FIXM CCB` shall cover at least the use o
 #### 2.2.3	FIXM Supporting artefacts
 
 The supporting FIXM artefacts should include, at least:
-- The `FIXM Primer`: this document shall serve as a high-level introduction to `FIXM`, targeting the widest possible audience. It shall include references to the main FIXM components, to the FIXM artefacts listed below, and to this FIXM Strategy document.
+- The `FIXM Primer`: this document shall serve as a high-level introduction to `FIXM`, targeting the widest possible audience. It shall include references to the main FIXM components, to the FIXM artefacts listed below, and to this FIXM Strategy.
 - `Requirements Traceability Reports` for `FIXM Core` and the `FIXM Application for FF-ICE`: these reports shall provide evidence that the content of FIXM Core and of the FIXM Application for FF-ICE satisfy, and are duly traceable to, the applicable ICAO requirements for FF-ICE.
 - `Release Notes`: these notes shall list the FIXM CCB-approved changes integrated into the different versions of the FIXM components.
 - The `FIXM User Manual`: this document shall provide guidance and clarifications for the implementation of `FIXM`. It shall cover rules and guidance for the good use of `FIXM` in all contexts, rules and guidance for the good use of `FIXM` in the specific context of FF-ICE, including the translation of FF-ICE Messages into ATS messages, illustrative data samples, and guidance for the development `FIXM Applications` and `Extensions` by third parties. The `FIXM User Manual` should be made available as an online documentation.
