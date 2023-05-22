@@ -247,8 +247,8 @@ is_consolidation_wanted --> |NO, consolidation is not considered necessary <br>a
 is_consolidation_wanted --> |YES, CR is openly reviewed by <br>the FIXM CoI and amended accordingly| CONSOLIDATED
 CONSOLIDATED --> | | SUBMITTED
 SUBMITTED --> | | is_CR_acceptable
-is_CR_acceptable --> |YES| REJECTED
-is_CR_acceptable --> |NO| APPROVED
+is_CR_acceptable --> |NO| REJECTED
+is_CR_acceptable --> |YES| APPROVED
 APPROVED --> |The changes described in the CR <br>are implemented in the master FIXM copy| IMPLEMENTED
 IMPLEMENTED --> END_STATE
 REJECTED --> should_CR_be_revisited
