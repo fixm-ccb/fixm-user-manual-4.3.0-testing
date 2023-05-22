@@ -57,8 +57,14 @@ Encoding Rules:
 * Rules for [`<fx:totalEstimatedElapsedTime>`](https://docs.fixm.aero/#/general-guidance/date-time-specification)
 
 ## Content of `<fx:routeTrajectoryGroup>` - FF-ICE Basic Route
+Departure Aerodrome `KHGR`, Route `DCT HGR V268 EMI DCT`, Destination Aerodrome `KBWI`
 
-Route `DCT HGR V268 EMI DCT`
+|#|Route Element<br>Start Point|Route Element<br>Along Route Distance|Route to<br>Next Element|
+|:-|:-|:-|:-|
+|1|KHGR|0.00 NM|Direct|
+|2|HGR|6.12 NM|V268|
+|3|EMI|48.67 NM|Direct|
+|4|KBWI|72.47 NM|N/A|
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
@@ -90,7 +96,7 @@ Route `DCT HGR V268 EMI DCT`
     </fx:element>
     <!-- ROUTE ELEMENT 3 -->    
     <fx:element seqNum="2">
-      <fx:alongRouteDistance uom="NM">48.49</fx:alongRouteDistance>
+      <fx:alongRouteDistance uom="NM">48.67</fx:alongRouteDistance>
       <fx:elementStartPoint>
         <fb:navaid>
           <fb:designator>EMI</fb:designator>
@@ -102,7 +108,7 @@ Route `DCT HGR V268 EMI DCT`
     </fx:element>
     <!-- ROUTE ELEMENT 4 -->    
     <fx:element seqNum="3">
-      <fx:alongRouteDistance uom="NM">72.45</fx:alongRouteDistance>
+      <fx:alongRouteDistance uom="NM">72.47</fx:alongRouteDistance>
       <fx:elementStartPoint>
         <fb:aerodromeReferencePoint>
           <fb:locationIndicator>KBWI</fb:locationIndicator>
@@ -120,6 +126,14 @@ Encoding Rules:
 * ...
 
 ## Content of `<fx:routeTrajectoryGroup>` - FF-ICE Expanded Route
+
+|#|Route Element<br>Start Point|Route Element<br>Along Route Distance|Route Element<br>Start Point Geographic Position|Route to<br>Next Element|
+|:-|:-|:-|:-|:-|
+|1|KHGR|0.00 NM|N39:42:31 W077:43:35|Direct|
+|2|HGR|6.12 NM|N39:41:52 W077:51:21|V268|
+|3|KEMAR|34.48 NM|N39:33:45 W077:16:02|V268|
+|4|EMI|48.67 NM|N39:29:42 W076:58:43|Direct|
+|5|KBWI|72.47 NM|N39:10:33 W076:40:08|N/A|
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
@@ -172,7 +186,7 @@ Encoding Rules:
     </fx:element>
     <!-- ROUTE ELEMENT 4 -->    
     <fx:element seqNum="3">
-      <fx:alongRouteDistance uom="NM">48.49</fx:alongRouteDistance>
+      <fx:alongRouteDistance uom="NM">48.67</fx:alongRouteDistance>
       <fx:elementStartPoint>
         <fb:navaid>
           <fb:designator>EMI</fb:designator>
@@ -187,7 +201,7 @@ Encoding Rules:
     </fx:element>
     <!-- ROUTE ELEMENT 5 -->    
     <fx:element seqNum="4">
-      <fx:alongRouteDistance uom="NM">72.45</fx:alongRouteDistance>
+      <fx:alongRouteDistance uom="NM">72.47</fx:alongRouteDistance>
       <fx:elementStartPoint>
         <fb:aerodromeReferencePoint>
           <fb:locationIndicator>KBWI</fb:locationIndicator>
@@ -199,6 +213,5 @@ Encoding Rules:
     </fx:element>
   </fx:desired>
 </fx:routeTrajectoryGroup>
-
 ```
 
