@@ -34,7 +34,7 @@ This sites aims to build a "community knowledge" about the implementation of FIX
 
 ### How to get access to the FIXM Work Area
 
-First-time users should follow these [Instructions](https://www.fixm.aero/content/accessing-the-fixm-work-area) to register for a free account.
+First-time users should follow these [instructions](https://www.fixm.aero/content/accessing-the-fixm-work-area) to register for a free account.
 
 ## How to use this web site
 
