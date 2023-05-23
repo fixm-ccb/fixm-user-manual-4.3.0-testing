@@ -63,12 +63,6 @@ Future FIXM versions may support the exchange of an additional “nil
 reason” attribute, if the need for it is identified by the FIXM
 Community.
 
-*Note: the support for nillable elements has implied a significant
-design change starting in FIXM Core 4.2.0. Previous FIXM Core versions relied
-extensively on XSD attributes, which are not nillable. These XSD
-attributes were converted to XSD elements in FIXM Core 4.2.0 so that the
-built-in XSD attribute nillable could be leveraged.*
-
 ## Declaring null Measures and Geographical Position
 
 The FIXM Measures types enforce the provision of the “uom” attribute
