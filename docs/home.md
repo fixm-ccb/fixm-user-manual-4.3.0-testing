@@ -34,10 +34,7 @@ This sites aims to build a "community knowledge" about the implementation of FIX
 
 ### How to get access to the FIXM Work Area
 
-1. Create a OneSky Online account (This step can be skipped if you have already an account) : Access [OneSky Online][OneSky Online], click on *New user? Register now.*, fill in the form and click on *Submit*
-2. Get access to OneSky Teams: Access [OneSky Teams][OneSky Teams], and log in with your credentials obtained in Step 1
-3. Request access to the FIXM Work Area: Click on *All Teams* in the top navigation, browse for the FIXM Work Area and click on its title, click on *Access can be requested via this link*, and send the access request.
-4. You will then receive an email when the request is approved, with the link to the FIXM Work Area
+First-time users should follow these [instructions](https://www.fixm.aero/content/accessing-the-fixm-work-area) to register for a free account.
 
 ## How to use this web site
 
