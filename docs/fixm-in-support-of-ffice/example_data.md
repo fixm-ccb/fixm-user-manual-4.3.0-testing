@@ -59,7 +59,7 @@ Encoding Rules:
 ## Content of `<fx:routeTrajectoryGroup>` - FF-ICE Basic Route
 Departure Aerodrome `KHGR`, Route `DCT HGR V268 EMI DCT`, Destination Aerodrome `KBWI`
 
-|#|Route Element<br>Start Point|Route Element<br>Along Route Distance|Route to<br>Next Element|
+|#|Route Element (RE)<br>Start Point|RE Along Route Distance|Route to Next Element|
 |:-|:-|:-|:-|
 |1|KHGR|0.00 NM|Direct|
 |2|HGR|6.12 NM|V268|
@@ -127,7 +127,7 @@ Encoding Rules:
 
 ## Content of `<fx:routeTrajectoryGroup>` - FF-ICE Expanded Route
 
-|#|Route Element (RE)<br>Start Point|RE<br>Along Route Distance|RE<br>Start Point Geographic Position|Route to<br>Next Element|
+|#|RE Start Point|RE Along Route Distance|RE Start Point<BR>Geographic Position|Route to Next Element|
 |:-|:-|:-|:-|:-|
 |1|KHGR|0.00 NM|N39:42:31 W077:43:35|Direct|
 |2|HGR|6.12 NM|N39:41:52 W077:51:21|V268|
@@ -217,7 +217,7 @@ Encoding Rules:
 
 ## Content of `<fx:routeTrajectoryGroup>` - FF-ICE Trajectory
 
-|#|RE<br>Start Point|RE<br>Along Route Dist.|RE<br>Start Point Geo. Pos.|Route to<br>Next Element|Trajectory Point (TP)<br>Geo. Pos.|TP<br>Point Property|TP <br>Altitude|TP<br>Ind. Air Speed|TP<br>Time|
+|#|RE Start Point|RE Start Point<BR>Geo. Pos.|RE Along Route Distance|Route to<br>Next Element|Trajectory Point (TP)<br>Geo. Pos.|TP Point Property|TP Altitude|TP Ind. Air Speed|TP Time|
 |:-|:-|:-|:-|:-|:-|:-|:-|:-|:-|
 |1|KHGR|N39:42:31<br>W077:43:35|0.00 NM|Direct|N39:42:31<br>W077:43:35|Airport Reference Loc.<br><br>Initial Prediction Point|703|125|Absolute: 07:00:00|
 |2|HGR|N39:41:52<br>W077:51:21|6.02 NM|V268|N39:41:52<br>W077:51:21|TCP- Lateral|2732|125|Relative: 00:02:35|
