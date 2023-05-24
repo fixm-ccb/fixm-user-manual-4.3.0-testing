@@ -522,7 +522,7 @@ based on which type of FF-ICE message is being translated.
 <tr class="odd">
 <td>21a</td>
 <td>Base.Types</td>
-<td>Time</td>
+<td>DateTimeUtc</td>
 <td>radioCommunicationFailure.contact.lastContactTime</td>
 </tr>
 <tr class="even">
@@ -540,7 +540,7 @@ based on which type of FF-ICE message is being translated.
 <tr class="even">
 <td>21d</td>
 <td>Base.Types</td>
-<td>Time</td>
+<td>DateTimeUtc</td>
 <td>radioCommunicationFailure.contact.position.timeAtPosition</td>
 </tr>
 <tr class="odd">
