@@ -43,13 +43,12 @@ Examples of message data structures can be found in the FF-ICE
 Implementation Guidance Manual. The Figure below shows the message data
 structures associated with the FF-ICE Flight Cancellation Message.
 
-![Image](.//media/general-guidance-application-libraries-03.jpg "Example of Message Data structures from FF-ICE")
+![Image](.//media/general-guidance-application-libraries-03.jpg ':size=30%')
 
 
 <img
   src=".//media/general-guidance-application-libraries-03.jpg"
-  alt="Example of Message Data structures from FF-ICE - 2"
-  title="Example of Message Data structures from FF-ICE - 2"
+  title="Example of Message Data structures from FF-ICE"
   style="display: inline-block; margin: 0 auto; max-width: 520px">
   
 ## Message Templates
