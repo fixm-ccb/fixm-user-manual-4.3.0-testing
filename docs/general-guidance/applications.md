@@ -50,7 +50,7 @@ structures associated with the FF-ICE Flight Cancellation Message.
   src=".//media/general-guidance-application-libraries-03.jpg"
   alt="Example of Message Data structures from FF-ICE - 2"
   title="Example of Message Data structures from FF-ICE - 2"
-  style="display: inline-block; margin: 0 auto; max-width: 799">
+  style="display: inline-block; margin: 0 auto; max-width: 100px">
   
 ## Message Templates
 
