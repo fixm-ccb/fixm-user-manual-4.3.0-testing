@@ -505,7 +505,7 @@ based on which type of FF-ICE message is being translated.
 </thead>
 <tbody>
 <tr class="odd">
-<td>20a<a href=".//docs/ats-message-to-fixm-mapping/mapping-of-ats-fields-to-fixm.md?id=notes"><sup><u>[1]</u></sup></a></td>
+<td>20a<a href=".//ats-message-to-fixm-mapping/mapping-of-ats-fields-to-fixm.md?id=notes"><sup><u>[1]</u></sup></a></td>
 <td>Base.Organization</td>
 <td>AircraftOperatorDesignator</td>
 <td><p>[ICAO designator specified]</p>
