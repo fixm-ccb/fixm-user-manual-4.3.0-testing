@@ -43,10 +43,11 @@ Examples of message data structures can be found in the FF-ICE
 Implementation Guidance Manual. The Figure below shows the message data
 structures associated with the FF-ICE Flight Cancellation Message.
 
-![Image](.//media/general-guidance-application-libraries-03.png "Example of Message Data structures from FF-ICE")
+![Image](.//media/general-guidance-application-libraries-03.jpg "Example of Message Data structures from FF-ICE")
+
 
 <img
-  src="[.//media/general-guidance-application-libraries-03.png](https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/assets/84803916/508ad95c-ed58-4953-92af-dcdd1b791bd8)"
+  src=".//media/general-guidance-application-libraries-03.jpg"
   alt="Example of Message Data structures from FF-ICE - 2"
   title="Example of Message Data structures from FF-ICE - 2"
   style="display: inline-block; margin: 0 auto; max-width: 799">
