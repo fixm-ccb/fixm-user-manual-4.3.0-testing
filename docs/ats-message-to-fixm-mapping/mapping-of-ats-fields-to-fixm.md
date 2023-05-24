@@ -47,7 +47,7 @@ Table 10: Constraint Notation
 The term '〈kind〉' in the subsequent tables (fields 8, 13, 15, 16 and
 18) is a reference to the kind of route/trajectory information to which
 a field is mapped. That route information is dependent on the message
-type. Refer to section Varieties of Route for a mapping between the
+type. Refer to section [Varieties of Route](fixm-in-support-of-ffice/translating-ffice-fixm-messages-to-ats-messages?id=varieties-of-route) for a mapping between the
 message type and the kind of route information.
 
 The mapping below lists each ATS field with the corresponding FIXM field
@@ -58,10 +58,9 @@ ATS messages from FIXM content.
 
 ## Field 3
 
-Field 3 in an ATS message denotes the message type. FIXM is concerned
-with modelling information that may be included in a message, but FIXM
-itself does not define messages. As such, there is no equivalent of ATS
-field 3 in FIXM.
+Field 3 in an ATS message denotes the message type. FIXM Core is concerned with modelling information that may be included in a message but does not 
+define messages itself. As such, there is no equivalent of ATS field 3 in FIXM Core. When translating FF-ICE messages to ATS format, Field 3 will be 
+based on which type of FF-ICE message is being translated.
 
 ## Field 5
 
@@ -91,7 +90,7 @@ field 3 in FIXM.
 
 | ICAO 4444 Field   | Package    | Class      | Path from Flight   |
 |:----------------|:-|:-|:-|
-| 9a             | Base.Types     | CountPositive          | aircraft.aircraftType.aircraftCount<br><br>If the sum is greater than 99, set field 9a to 99.      |
+| 9a     | Base.Types | CountPositive | aircraft.aircraftType.aircraftCount<br><br>Use the sum of all of the individual FIXM aircraftCounts to determine field 9a. If the sum is greater than 99, set field 9a to 99. |
 | 9b             | Base.Types     | AircraftTypeDesignator      | \[9b≠ZZZZ\]     aircraft.aircraftType.icaoAircraftTypeDesignator |
 | 9c             | Flight.Aircraft              | WakeTurbulenceCategory | aircraft.wakeTurbulence |
 
@@ -109,10 +108,10 @@ field 3 in FIXM.
 
 |ICAO 4444 Field|Package|Class|Path from Flight|
 |:-|:-|:-|:-|
-| 13a            | Base.Organization            | LocationIndicator            | \[13a≠AFIL ∧ 13a≠ZZZZ\] departure.aerodrome.locationIndicator |
+| 13a            | Base.AeronauticalReference | LocationIndicator            | \[13a≠AFIL ∧ 13a≠ZZZZ\] departure.departureAerodrome.locationIndicator |
 | |   Flight.Departure | AirfileIndicator|\[13a=AFIL\] departure.airfileIndicator = AIRFILE| 
-| 13b| Base.Types   |Time |\[13a≠AFIL ∧ message∈{FPL,ARR,CHG,CNL,DLA,RQS,RQP}\] departure.estimatedOffBlockTime| 
-| | | | \[13a≠AFIL ∧ message∈{ALR,DEP,SPL}\] departure.actualTimeOfDeparture|
+| 13b| Base.Types   |DateTimeUtc |\[13a≠AFIL ∧ message∈{FPL,ARR,CHG,CNL,DLA,RQS,RQP}\] departure.estimatedOffBlockTime| 
+| | | | \[13a≠AFIL ∧ message∈{ALR,DEP,SPL}\] departure.actualTimeOfDeparture.time|
 | | | |\[13a=AFIL\] departure.estimatedRouteStartTime | 
 
 ## Field 14
@@ -120,7 +119,7 @@ field 3 in FIXM.
 |ICAO 4444 Field|Package|Class|Path from Flight|
 |:-|:-|:-|:-|
  | 14a   |                Base.AeronauticalReference   |SignificantPointChoice    |    enroute.boundaryCrossingCoordination.crossingPoint|
- | 14b |                  Base.Types     |              Time           |               enroute.boundaryCrossingCoordination.crossingTime|
+ | 14b |                  Base.Types     |              DateTimeUtc           |               enroute.boundaryCrossingCoordination.crossingTime|
  | 14c |                  Base.RangesAndChoices   |     FlightLevelOrAltitudeChoice  | enroute.boundaryCrossingCoordination.clearedLevel|
  | 14d  |                 Base.RangesAndChoices |              FlightLevelOrAltitudeChoice  | enroute.boundaryCrossingCoordination.altitudeInTransition.level|
  | 14e  |                 Flight.EnRoute   |            BoundaryCrossingCondition   |  enroute.boundaryCrossingCoordination.altitudeInTransition.crossingCondition|
@@ -130,7 +129,7 @@ field 3 in FIXM.
 |ICAO 4444 Field|Package|Class|Path from Flight|
 |:-|:-|:-|:-|
 | 15a            | Base.Measures  | TrueAirspeed   | routeTrajectoryGroup.〈kind〉.routeInformation.cruisingSpeed           |
-| 15b            | Base.RangesAndChoices        | FlightLevelOrAltitudeOrVfrChoice  | \[15b≠VFR\]   routeTrajectoryGroup.〈kind〉.routeInformation.cruisingLevel |
+| 15b            | Base.RangesAndChoices        | FlightLevelOrAltitudeOrVfrChoice  | routeTrajectoryGroup.〈kind〉.routeInformation.cruisingLevel |
 |15c|Flight.FlightRouteTrajectory.RouteTrajectory|RouteTrajectoryElement|routeTrajectoryGroup.〈kind〉.element|
 ||Base.Types|CharacterString|routeTrajectoryGroup.〈kind〉.routeInformation.routeText|
 |15c1|Base.AeronauticalReference|SidStarReference|routeTrajectoryGroup.〈kind〉.element.routeDesignatorToNextElement.standardInstrumentDeparture|
@@ -144,23 +143,23 @@ field 3 in FIXM.
 ||Flight.FlightRouteTrajectory.RouteTrajectory|RouteTruncationIndicator|\[15c5=T\] routeTrajectoryGroup.〈kind〉.element.routeTruncationIndicator = ROUTE_TRUNCATION|
 |15c6|Base.AeronauticalReference|SignificantPointChoice|routeTrajectoryGroup.〈kind〉.element.elementStartPoint|
 ||Base.Measures|TrueAirspeed|routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.speed|
-||Base.RangesAndChoices|FlightLevelOrAltitudeChoice|\[PLUS∉15c6\] routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.lowerLevel|
-||Flight.FlightRouteTrajectory.RouteTrajectory.RouteChanges|UpperLevelChoiceType|\[PLUS∈15c6\] routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.upperLevel|
+||Base.RangesAndChoices|FlightLevelOrAltitudeChoice|routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.lowerLevel|
+||Flight.FlightRouteTrajectory.RouteTrajectory.RouteChanges|UpperLevelChoice|routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.upperLevel|
 |15c7|Base.AeronauticalReference|SidStarReference|routeTrajectoryGroup.〈kind〉.element.routeDesignatorToNextElement.standardInstrumentArrival|
 
 ## Field 16
 |ICAO 4444 Field|Package|Class|Path from Flight|
 |:-|:-|:-|:-|
-|16a|Base.Organization|LocationIndicator|\[16a≠ZZZZ\] arrival.destinationAerodrome.locationIndicator |
+|16a|Base.AeronauticalReference|LocationIndicator|\[16a≠ZZZZ\] arrival.destinationAerodrome.locationIndicator |
 |16b|Base.Types|Duration|routeTrajectoryGroup.〈kind〉.routeInformation.totalEstimatedElapsedTime|
-|16c|Base.Organization|LocationIndicator|\[16c≠ZZZZ\] arrival.destinationAerodromeAlternate.locationIndicator If there are more than two FIXM destination alternates, only the first two are used when translating to field 16c.|
+|16c|Base.AeronauticalReference|LocationIndicator|\[16c≠ZZZZ\] arrival.destinationAerodromeAlternate.locationIndicator If there are more than two FIXM destination alternates, only the first two are used when translating to field 16c.|
 
 ## Field 17
 
 |ICAO 4444 Field|Package|Class|Path from Flight|
 |:-|:-|:-|:-|
-|17a|Base.Organization|LocationIndicator|\[17a≠ZZZZ\] arrival.arrivalAerodrome.locationIndicator|
-|17b|Base.Types|Time|arrival.actualTimeOfArrival|
+|17a|Base.AeronauticalReference|LocationIndicator|\[17a≠ZZZZ\] arrival.arrivalAerodrome.locationIndicator|
+|17b|Base.Types|DateTimeUtc|arrival.actualTimeOfArrival.time|
 |17c|Base.AeronauticalReference|AerodromeName|\[17a=ZZZZ\] arrival.arrivalAerodrome.name |
 
 ## Field 18
