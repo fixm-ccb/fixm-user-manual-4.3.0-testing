@@ -186,7 +186,7 @@ based on which type of FF-ICE message is being translated.
 <td>PerformanceBasedNavigationCapabilityCode</td>
 <td><p>[R∈10a]</p>
 <p>aircraft.capabilities.navigation.performanceBasedCode</p>
-<p>If there are more than eight FIXM PBN codes, apply the rules defined in FF-ICE Implementation Guidance section 13.2.2 s) when translating to field 18 PBN.</p></td>
+<p>If there are more than eight FIXM PBN codes, apply the rules defined in FF-ICE Implementation Guidance section 12.2.3 v) when translating to field 18 PBN.</p></td>
 </tr>
 <tr class="odd">
 <td>NAV</td>
@@ -221,9 +221,8 @@ based on which type of FF-ICE message is being translated.
 <td>AerodromeReference</td>
 <td><p>[13a=ZZZZ]</p>
 <p>departure.departureAerodrome.name</p>
-<p>departure.departureAerodrome.referencePoint</p></td>
+<p>departure.departureAerodrome.referencePoint<br>or<br>departure.departureAerodrome.referenceRelativePoint</p></td>
 </tr>
-
 <tr class="even">
 <td></td>
 <td>Base.AeronauticalReference</td>
@@ -232,25 +231,23 @@ based on which type of FF-ICE message is being translated.
 <p>supplementaryInformation.supplementaryInformationSource.unit.locationIndicator</p>
 <p>supplementaryInformation.supplementaryInformationSource.unit.atcUnitNameOrAlternate</p></td>
 </tr>
-
 <tr class="odd">
 <td>DEST</td>
 <td>Base.AeronauticalReference</td>
 <td>AerodromeReference</td>
 <td><p>[16a=ZZZZ]</p>
 <p>destination.destinationAerodrome.name</p>
-<p>destination.destinationAerodrome.referencePoint</p></td>
+<p>destination.destinationAerodrome.referencePoint<br>or<br>destination.destinationAerodrome.referenceRelativePoint</p></td>
 </tr>
-
 <tr class="even">
 <td>DOF</td>
 <td>Base.Types</td>
-<td>Time</td>
+<td>DateTimeUtc</td>
 <td><p>[13a≠AFIL]</p>
 <p>departure.estimatedOffBlockTime</p>
 <p>[13a=AFIL]</p>
-<p>routeTrajectoryGroup.〈kind〉.route.airfileRouteStartTime</p>
-<p>Note: DOF is not modelled as a distinct attribute in FIXM, it is a component of the departure or air filed start date/time (see field 13b on page 111)</p></td>
+<p>departure.estimatedRouteStartTime</p>
+<p>Note: DOF is not modelled as a distinct attribute in FIXM, it is a component of the FIXM date/time fields</p></td>
 </tr>
 <tr class="odd">
 <td>REG</td>
@@ -262,29 +259,46 @@ based on which type of FF-ICE message is being translated.
 <tr class="even">
 <td>EET</td>
 <td>Base.AeronauticalReference</td>
-<td>AirspaceDesignator</td>
-<td><p>[Airspace boundary specified]</p>
+<td>LocationIndicator</td>
+<td><p>[EstimatedElapsedTime airspace boundary specified]</p>
 <p>routeTrajectoryGroup.〈kind〉.routeInformation.estimatedElapsedTime.location.region</p></td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>Base.AeronauticalReference</td>
 <td>SignificantPointChoice</td>
-<td><p>[Significant point specified]</p>
+<td><p>[EstimatedElapsedTime significant point specified]</p>
 <p>routeTrajectoryGroup.〈kind〉.routeInformation.estimatedElapsedTime.location.point</p></td>
 </tr>
 <tr class="even">
 <td></td>
 <td>Base.AeronauticalReference</td>
 <td>Longitude</td>
-<td><p>[Longitude specified]</p>
+<td><p>[EstimatedElapsedTime longitude specified]</p>
 <p>routeTrajectoryGroup.〈kind〉.routeInformation.estimatedElapsedTime.location.longitude</p></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Base.AeronauticalReference</td>
+<td>SignificantPointType</td>
+<td><p>[4DT point specified]</p>
+<p> If a 4DT point has a Trajectory Point Property of PRESCRIBED_EET_POINT, the EET entry can be extracted from the associated elementStartPoint (if present) or the point4D.position otherwise</p>
+<p>routeTrajectoryGroup.〈kind〉.element.elementStartPoint</p>
+<p>routeTrajectoryGroup.〈kind〉.element.point4D.position</p></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Base.Types</td>
+<td>Duration</td>
+<td><p>[EstimatedElapsedTime duration specified]</p>
+<p>routeTrajectoryGroup.〈kind〉.routeInformation.estimatedElapsedTime.elapsedTime</p></td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>Base.Types</td>
 <td>Duration</td>
-<td>routeTrajectoryGroup.〈kind〉.routeInformation.estimatedElapsedTime.elapsedTime</td>
+<td><p>[4DT point specified]</p>
+<p>routeTrajectoryGroup.〈kind〉.element.point4D.time.relativeTimeFromInitialPredictionPoint</p></td>
 </tr>
 <tr class="even">
 <td>SEL</td>
@@ -316,7 +330,7 @@ based on which type of FF-ICE message is being translated.
 <td>DLE</td>
 <td>Base.AeronauticalReference</td>
 <td>SignificantPoint</td>
-<td>routeTrajectoryGroup.〈kind〉.element.elementStartPoint (see also field 15c3, 15c4 and 15c6)</td>
+<td>routeTrajectoryGroup.〈kind〉.element.elementStartPoint</td>
 </tr>
 <tr class="odd">
 <td></td>
@@ -353,22 +367,22 @@ based on which type of FF-ICE message is being translated.
 <tr class="even">
 <td>ALTN</td>
 <td>Base.AeronauticalReference</td>
-<td>OtherReference</td>
+<td>AerodromeReference</td>
 <td><p>[ZZZZ∈16c]</p>
 <p>arrival.destinationAerodromeAlternate.name</p>
-<p>arrival.destinationAerodromeAlternate.referencePoint</p></td>
+<p>arrival.destinationAerodromeAlternate.referencePoint<br>or<br>arrival.destinationAerodromeAlternate.referenceRelativePoint</p></td>
 </tr>
 <tr class="odd">
 <td>RALT</td>
 <td>Base.AeronauticalReference</td>
 <td>AerodromeReference</td>
-<td>enRoute.alternateAerodrome</td>
+<td>enRoute.alternateAerodrome (locationIndicator or name and referencePoint/referenceRelativePoint)</td>
 </tr>
 <tr class="even">
 <td>TALT</td>
 <td>Base.AeronauticalReference</td>
 <td>AerodromeReference</td>
-<td>departure.takeOffAlternateAerodrome</td>
+<td>departure.takeOffAlternateAerodrome (locationIndicator or name and referencePoint/referenceRelativePoint)</td>
 </tr>
 <tr class="odd">
 <td>RIF</td>
@@ -491,7 +505,7 @@ based on which type of FF-ICE message is being translated.
 </thead>
 <tbody>
 <tr class="odd">
-<td>20a<a href="#notes"><sup><u>[note 1]</u></sup></a></td>
+<td>20a<a href=".//docs/ats-message-to-fixm-mapping/mapping-of-ats-fields-to-fixm.md?id=notes"><sup><u>[1]</u></sup></a></td>
 <td>Base.Organization</td>
 <td>AircraftOperatorDesignator</td>
 <td><p>[ICAO designator specified]</p>
@@ -513,7 +527,7 @@ based on which type of FF-ICE message is being translated.
 <tr class="even">
 <td>20c</td>
 <td>Base.Types</td>
-<td>Time</td>
+<td>DateTimeUtc</td>
 <td>emergency.lastContact.lastContactTime</td>
 </tr>
 <tr class="odd">
@@ -531,7 +545,7 @@ based on which type of FF-ICE message is being translated.
 <tr class="odd">
 <td></td>
 <td>Base.Types</td>
-<td>Time</td>
+<td>DateTimeUtc</td>
 <td>emergency.lastContact.position.timeAtPosition</td>
 </tr>
 <tr class="even">
@@ -554,11 +568,6 @@ based on which type of FF-ICE message is being translated.
 </tr>
 </tbody>
 </table>
-
-1.  Field 20a maps to the same FIXM field as field 18 OPR. An ALR can
-    include field 18 and field 20 with potentially conflicting values.
-    Further consideration of this is
-    required.
 
 ## Field 21   
 
@@ -619,7 +628,14 @@ just a modification to elements that appear in other fields. As such,
 there are no mapping rules for field 22. The mapping of the information
 that can be specified in field 22 is captured in the other fields. For
 example, the entry *-7/NEWACID* in field 22 has the same mapping as
-if *--NEWACID* appeared in field 7.
+if *NEWACID* appeared in field 7.
+
+The only caveat to this is that, if field 22 is used to provide new values
+for the flight's ACID, EOBT, departure point, or destination point, FIXM also captures 
+the previous values for these fields in `aircaftIdentificationPrevious`, 
+`estimatedOffBlockTimePrevious` (or `estimatedRouteStartTimePrevious`), 
+`departureAerodromePrevious` (or `departurePointPrevious`), and/or 
+`destinationAerodromePrevious`, respectively.
 
 ## Notes
 
