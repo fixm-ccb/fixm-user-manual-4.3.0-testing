@@ -45,7 +45,12 @@ structures associated with the FF-ICE Flight Cancellation Message.
 
 ![Image](.//media/general-guidance-application-libraries-03.png "Example of Message Data structures from FF-ICE")
 
-
+<img
+  src="[.//media/general-guidance-application-libraries-03.png](https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/assets/84803916/508ad95c-ed58-4953-92af-dcdd1b791bd8)"
+  alt="Example of Message Data structures from FF-ICE - 2"
+  title="Example of Message Data structures from FF-ICE - 2"
+  style="display: inline-block; margin: 0 auto; max-width: 799">
+  
 ## Message Templates
 
 A message template is a more restrictive subset of message and flight
