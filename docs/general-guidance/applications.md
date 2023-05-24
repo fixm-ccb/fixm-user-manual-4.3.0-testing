@@ -18,7 +18,7 @@ FIXM Core is independent and does not require an update when changes in a FIXM A
 A **FIXM Application** may also leverage **Extensions**, as
 illustrated on the picture below.
 
-![Image](.//media/general-guidance-application-libraries-02.png ':size=40%')
+![Image](.//media/general-guidance-application-libraries-02.png)
 
 An example of a FIXM Application is the **FF-ICE Application** developed and released by the FIXM CCB. This application addresses
 the use of FIXM Core in the specific context of FF-ICE. It provides
@@ -43,13 +43,9 @@ Examples of message data structures can be found in the FF-ICE
 Implementation Guidance Manual. The Figure below shows the message data
 structures associated with the FF-ICE Flight Cancellation Message.
 
-![Image](.//media/general-guidance-application-libraries-03.jpg "Example of Message Data structures from FF-ICE")
-
-
 <img
   src=".//media/general-guidance-application-libraries-03.jpg"
-  alt="Example of Message Data structures from FF-ICE - 2"
-  title="Example of Message Data structures from FF-ICE - 2"
+  title="Example of Message Data structures from FF-ICE"
   style="display: inline-block; margin: 0 auto; max-width: 520px">
   
 ## Message Templates
