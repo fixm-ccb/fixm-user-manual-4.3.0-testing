@@ -9,7 +9,7 @@ essentially provides context-specific **‘message data structures’** and
 **‘message templates’** which enables harmonized representation of the
 FIXM-based messages exchanged using SWIM information services, as
 outlined in the figure below.
-<img src=.//media/general-guidance-application-libraries-01.png "General structure of a message and role of an Application" width="250"> 
+
 ![Image](.//media/general-guidance-application-libraries-01.png "General structure of a message and role of an Application")
 
 A **FIXM Application** captures messaging related data elements and reuses and restricts relevant subsets of the FIXM Core data structures.
@@ -45,7 +45,12 @@ structures associated with the FF-ICE Flight Cancellation Message.
 
 ![Image](.//media/general-guidance-application-libraries-03.png "Example of Message Data structures from FF-ICE")
 
-
+<img
+  src="[.//media/general-guidance-application-libraries-03.png](https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/assets/84803916/508ad95c-ed58-4953-92af-dcdd1b791bd8)"
+  alt="Example of Message Data structures from FF-ICE - 2"
+  title="Example of Message Data structures from FF-ICE - 2"
+  style="display: inline-block; margin: 0 auto; max-width: 799">
+  
 ## Message Templates
 
 A message template is a more restrictive subset of message and flight
