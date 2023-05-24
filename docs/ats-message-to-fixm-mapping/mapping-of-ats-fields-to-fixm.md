@@ -494,80 +494,18 @@ based on which type of FF-ICE message is being translated.
 
 ## Field 20   
 
-<table>
-<thead>
-<tr class="header">
-<th><strong>ICAO 4444 Field</strong></th>
-<th><strong>Package</strong></th>
-<th><strong>Class</strong></th>
-<th><strong>Path from Flight</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>20a<a href=".//ats-message-to-fixm-mapping/mapping-of-ats-fields-to-fixm?id=notes"><sup><u>[1]</u></sup></a></td>
-<td>Base.Organization</td>
-<td>AircraftOperatorDesignator</td>
-<td><p>[ICAO designator specified]</p>
-<p>operator.designatorIcao</p></td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Base.Types</td>
-<td>TextName</td>
-<td><p>[ICAO designator not specified]</p>
-<p>operator.operatingOrganization.name</p></td>
-</tr>
-<tr class="odd">
-<td>20b</td>
-<td>Base.AeronauticalReference</td>
-<td>AtcUnitName</td>
-<td>emergency.lastContact.lastContactUnit</td>
-</tr>
-<tr class="even">
-<td>20c</td>
-<td>Base.Types</td>
-<td>DateTimeUtc</td>
-<td>emergency.lastContact.lastContactTime</td>
-</tr>
-<tr class="odd">
-<td>20d</td>
-<td>Base.Measures</td>
-<td>Frequency</td>
-<td>emergency.lastContact.lastContactFrequency</td>
-</tr>
-<tr class="even">
-<td>20e</td>
-<td>Base.AeronauticalReference</td>
-<td>SignificantPointChoice</td>
-<td>emergency.lastContact.position.position</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Base.Types</td>
-<td>DateTimeUtc</td>
-<td>emergency.lastContact.position.timeAtPosition</td>
-</tr>
-<tr class="even">
-<td>20f</td>
-<td>Base.Types</td>
-<td>CharacterString</td>
-<td>emergency.lastContact.position.determinationMethod</td>
-</tr>
-<tr class="odd">
-<td>20g</td>
-<td>Base.Types</td>
-<td>CharacterString</td>
-<td>emergency.actionTaken</td>
-</tr>
-<tr class="even">
-<td>20h</td>
-<td>Base.Types</td>
-<td>CharacterString</td>
-<td>emergency.otherInformation</td>
-</tr>
-</tbody>
-</table>
+  |ICAO 4444 Field|Package|Class|Path from Flight|
+  |:--------------|:------|:----|:---------------|
+  |20a<sup>[[1]](#notes)</sup>|Base.Organization|AircraftOperatorDesignator|<p>[ICAO designator specified]</p><p>operator.designatorIcao</p>|
+  ||Base.Types|TextName|<p>[ICAO designator not specified]</p><p>operator.operatingOrganization.name</p>|
+  |20b|Base.AeronauticalReference|AtcUnitName|emergency.lastContact.lastContactUnit|
+  |20c|Base.Types|DateTimeUtc|emergency.lastContact.lastContactTime|
+  |20d|Base.Measures|Frequency|emergency.lastContact.lastContactFrequency|
+  |20e|Base.AeronauticalReference|SignificantPointChoice|emergency.lastContact.position.position|
+  ||Base.Types|DateTimeUtc|emergency.lastContact.position.timeAtPosition|
+  |20f|Base.Types|CharacterString|emergency.lastContact.position.determinationMethod|
+  |20g|Base.Types|CharacterString|emergency.actionTaken|
+  |20h|Base.Types|CharacterString|emergency.otherInformation|
 
 ## Field 21   
 
