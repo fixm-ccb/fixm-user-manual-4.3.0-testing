@@ -9,7 +9,7 @@ essentially provides context-specific **‘message data structures’** and
 **‘message templates’** which enables harmonized representation of the
 FIXM-based messages exchanged using SWIM information services, as
 outlined in the figure below.
-
+<img src=.//media/general-guidance-application-libraries-01.png "General structure of a message and role of an Application" width="250"> 
 ![Image](.//media/general-guidance-application-libraries-01.png "General structure of a message and role of an Application")
 
 A **FIXM Application** captures messaging related data elements and reuses and restricts relevant subsets of the FIXM Core data structures.
