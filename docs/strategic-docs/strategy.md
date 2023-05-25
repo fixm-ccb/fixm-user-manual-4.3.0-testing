@@ -237,7 +237,7 @@ The picture below provides an illustration of the catalogue of third-parties FIX
 
 [F-01]: [FIXM Web Site](https://fixm.aero/)
 
-[F-03]: [FIXM Change Management Charter]()
+[F-03]: [FIXM Change Management Charter](strategic-docs/charter.md)
 
 ### ICAO references
 
