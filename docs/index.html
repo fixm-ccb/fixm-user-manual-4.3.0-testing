@@ -86,8 +86,13 @@
   <!-- Pagination Plugin-->
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   
-
-
+  <!-- Mermaid Plugin-->
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true });
+    window.mermaid = mermaid;
+  </script>
+  <script src="//unpkg.com/docsify-mermaid@2.0.0/dist/docsify-mermaid.js"></script>
 
   <script src="assets/js/prism.js"></script>
 </body>
