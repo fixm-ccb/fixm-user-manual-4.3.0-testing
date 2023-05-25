@@ -89,6 +89,16 @@ the applicable implementation context.
 [This chapter](how-to-create-fixm-extension/initial-download-and-setup.md) provides a rulebook and detailed guidance for creating
 extensions.
 
+## How to apply an extension in the physical model
+
+As noted above, each extension hook has its own associated class, different from all other extension hook locations.  This allows extension developers to target the specific area where they want to add their new fields.  In the logical model, this is accomplished by making the extension class generalize the targeted extension hook class (again, a thorough overview of this process is provided in the chapter on [How to Create a FIXM Extension](how-to-create-fixm-extension/initial-download-and-setup.md)).  
+
+In the physical model, when it comes time to apply an extension to a particular extension hook, the XML attribute `xsi:type` is employed.  This attribute allows the associated type of an element to be explicitly set.  Because the extension class will have been derived from the extension hook class, this substitution is valid and it allows the type of the extension hook to be modified in the particular XML instance where `xsi:type` is used.  And, because there are multiple extension hooks available in each location, this also allows for different extension hooks to make use of different `xsi:type` attributes - the basis for FIXM allowing multiple extensions to be applied to a single XML document.  Below is an example of what applying an `xsi:type` to an XML element looks like:
+
+```xml
+<fx:extension xsi:type="xmp:ExampleExtensionType">
+```
+
 ## Ignoring extension data
 
 Consumers of FIXM information may not need, and/or may not be able to

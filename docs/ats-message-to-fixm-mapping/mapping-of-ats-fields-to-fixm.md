@@ -47,7 +47,7 @@ Table 10: Constraint Notation
 The term '〈kind〉' in the subsequent tables (fields 8, 13, 15, 16 and
 18) is a reference to the kind of route/trajectory information to which
 a field is mapped. That route information is dependent on the message
-type. Refer to section Varieties of Route for a mapping between the
+type. Refer to section [Varieties of Route](fixm-in-support-of-ffice/translating-ffice-fixm-messages-to-ats-messages?id=varieties-of-route) for a mapping between the
 message type and the kind of route information.
 
 The mapping below lists each ATS field with the corresponding FIXM field
@@ -58,10 +58,9 @@ ATS messages from FIXM content.
 
 ## Field 3
 
-Field 3 in an ATS message denotes the message type. FIXM is concerned
-with modelling information that may be included in a message, but FIXM
-itself does not define messages. As such, there is no equivalent of ATS
-field 3 in FIXM.
+Field 3 in an ATS message denotes the message type. FIXM Core is concerned with modelling information that may be included in a message but does not 
+define messages itself. As such, there is no equivalent of ATS field 3 in FIXM Core. When translating FF-ICE messages to ATS format, Field 3 will be 
+based on which type of FF-ICE message is being translated.
 
 ## Field 5
 
@@ -83,7 +82,7 @@ field 3 in FIXM.
 
   |ICAO 4444 Field|Package|Class|Path from Flight|
   |:----------------|:-|:-|:-|
-  |8a    |                Flight.FlightRouteTrajectory.RouteTrajectory |  FlightRulesCategory  | routeTrajectoryGroup.〈kind〉.routeInformation.flightRulesCategory|
+  |8a    |                Flight.FlightData |  FlightRulesCategory  | flightRulesCategory|
   |8b             |       Flight.FlightData        |                      TypeOfFlight     |     flightType|
 
 ## Field 9
@@ -91,7 +90,7 @@ field 3 in FIXM.
 
 | ICAO 4444 Field   | Package    | Class      | Path from Flight   |
 |:----------------|:-|:-|:-|
-| 9a             | Base.Types     | CountPositive          | aircraft.aircraftType.aircraftCount<br><br>Use the sum of all of the individual FIXM aircraft counts.  If the sum is greater than 99, set field 9a to 99.      |
+| 9a     | Base.Types | CountPositive | aircraft.aircraftType.aircraftCount<br><br>Use the sum of all of the individual FIXM aircraftCounts to determine field 9a. If the sum is greater than 99, set field 9a to 99. |
 | 9b             | Base.Types     | AircraftTypeDesignator      | \[9b≠ZZZZ\]     aircraft.aircraftType.icaoAircraftTypeDesignator |
 | 9c             | Flight.Aircraft              | WakeTurbulenceCategory | aircraft.wakeTurbulence |
 
@@ -109,20 +108,20 @@ field 3 in FIXM.
 
 |ICAO 4444 Field|Package|Class|Path from Flight|
 |:-|:-|:-|:-|
-| 13a            | Base.Organization            | LocationIndicator            | \[13a≠AFIL ∧ 13a≠ZZZZ\] departure.aerodrome.locationIndicator |
+| 13a            | Base.AeronauticalReference | LocationIndicator            | \[13a≠AFIL ∧ 13a≠ZZZZ\] departure.departureAerodrome.locationIndicator |
 | |   Flight.Departure | AirfileIndicator|\[13a=AFIL\] departure.airfileIndicator = AIRFILE| 
-| 13b| Base.Types   |Time |\[13a≠AFIL ∧ message∈{FPL,ARR,CHG,CNL,DLA,RQS,RQP}\] departure.estimatedOffBlockTime| 
-| | | | \[13a≠AFIL ∧ message∈{ALR,DEP,SPL}\] departure.actualTimeOfDeparture|
-| | | |\[13a=AFIL\] routeTrajectoryGroup.〈kind〉.routeInformation.airfileRouteStartTime | 
+| 13b| Base.Types   |DateTimeUtc |\[13a≠AFIL ∧ message∈{FPL,ARR,CHG,CNL,DLA,RQS,RQP}\] departure.estimatedOffBlockTime| 
+| | | | \[13a≠AFIL ∧ message∈{ALR,DEP,SPL}\] departure.actualTimeOfDeparture.time|
+| | | |\[13a=AFIL\] departure.estimatedRouteStartTime | 
 
 ## Field 14
 
 |ICAO 4444 Field|Package|Class|Path from Flight|
 |:-|:-|:-|:-|
  | 14a   |                Base.AeronauticalReference   |SignificantPointChoice    |    enroute.boundaryCrossingCoordination.crossingPoint|
- | 14b |                  Base.Types     |              Time           |               enroute.boundaryCrossingCoordination.crossingTime|
+ | 14b |                  Base.Types     |              DateTimeUtc           |               enroute.boundaryCrossingCoordination.crossingTime|
  | 14c |                  Base.RangesAndChoices   |     FlightLevelOrAltitudeChoice  | enroute.boundaryCrossingCoordination.clearedLevel|
- | 14d  |                 Flight.EnRoute |              FlightLevelOrAltitudeChoice  | enroute.boundaryCrossingCoordination.altitudeInTransition.level|
+ | 14d  |                 Base.RangesAndChoices |              FlightLevelOrAltitudeChoice  | enroute.boundaryCrossingCoordination.altitudeInTransition.level|
  | 14e  |                 Flight.EnRoute   |            BoundaryCrossingCondition   |  enroute.boundaryCrossingCoordination.altitudeInTransition.crossingCondition|
 
 ## Field 15
@@ -130,7 +129,7 @@ field 3 in FIXM.
 |ICAO 4444 Field|Package|Class|Path from Flight|
 |:-|:-|:-|:-|
 | 15a            | Base.Measures  | TrueAirspeed   | routeTrajectoryGroup.〈kind〉.routeInformation.cruisingSpeed           |
-| 15b            | Base.RangesAndChoices        | FlightLevelOrAltitudeChoice  | \[15b≠VFR\]   routeTrajectoryGroup.〈kind〉.routeInformation.cruisingLevel |
+| 15b            | Base.RangesAndChoices        | FlightLevelOrAltitudeOrVfrChoice  | routeTrajectoryGroup.〈kind〉.routeInformation.cruisingLevel |
 |15c|Flight.FlightRouteTrajectory.RouteTrajectory|RouteTrajectoryElement|routeTrajectoryGroup.〈kind〉.element|
 ||Base.Types|CharacterString|routeTrajectoryGroup.〈kind〉.routeInformation.routeText|
 |15c1|Base.AeronauticalReference|SidStarReference|routeTrajectoryGroup.〈kind〉.element.routeDesignatorToNextElement.standardInstrumentDeparture|
@@ -144,24 +143,24 @@ field 3 in FIXM.
 ||Flight.FlightRouteTrajectory.RouteTrajectory|RouteTruncationIndicator|\[15c5=T\] routeTrajectoryGroup.〈kind〉.element.routeTruncationIndicator = ROUTE_TRUNCATION|
 |15c6|Base.AeronauticalReference|SignificantPointChoice|routeTrajectoryGroup.〈kind〉.element.elementStartPoint|
 ||Base.Measures|TrueAirspeed|routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.speed|
-||Base.RangesAndChoices|VerticalRange|\[PLUS∉15c6\] routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.level.flightLevelOrAltitudeRange|
-||Base.RangesAndChoices|FlightLevelOrAltitudeChoice|\[PLUS∈15c6\] routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.level.flightLevelOrAltitudeValue|
+||Base.RangesAndChoices|FlightLevelOrAltitudeChoice|routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.lowerLevel|
+||Flight.FlightRouteTrajectory.RouteTrajectory.RouteChanges|UpperLevelChoice|routeTrajectoryGroup.〈kind〉.element.routeChange.cruiseClimbStart.upperLevel|
 |15c7|Base.AeronauticalReference|SidStarReference|routeTrajectoryGroup.〈kind〉.element.routeDesignatorToNextElement.standardInstrumentArrival|
 
 ## Field 16
 |ICAO 4444 Field|Package|Class|Path from Flight|
 |:-|:-|:-|:-|
-|16a|Base.Organization|LocationIndicator|\[16a≠ZZZZ\] arrival.destinationAerodrome.locationIndicator |
+|16a|Base.AeronauticalReference|LocationIndicator|\[16a≠ZZZZ\] arrival.destinationAerodrome.locationIndicator |
 |16b|Base.Types|Duration|routeTrajectoryGroup.〈kind〉.routeInformation.totalEstimatedElapsedTime|
-|16c|Base.Organization|LocationIndicator|\[16c≠ZZZZ\] arrival.destinationAerodromeAlternate.locationIndicator If there are more than two FIXM destination alternates, only the first two are used when translating to field 16c.|
+|16c|Base.AeronauticalReference|LocationIndicator|\[16c≠ZZZZ\] arrival.destinationAerodromeAlternate.locationIndicator If there are more than two FIXM destination alternates, only the first two are used when translating to field 16c.|
 
 ## Field 17
 
 |ICAO 4444 Field|Package|Class|Path from Flight|
 |:-|:-|:-|:-|
-|17a|Base.Organization|LocationIndicator|\[17a≠ZZZZ\] arrival.arrivalAerodrome.locationIndicator|
-|17b|Base.Types|Time|arrival.actualTimeOfArrival|
-|17c|Base.Aerodrome|AerodromeName|\[17a=ZZZZ\] arrival.arrivalAerodrome.name |
+|17a|Base.AeronauticalReference|LocationIndicator|\[17a≠ZZZZ\] arrival.arrivalAerodrome.locationIndicator|
+|17b|Base.Types|DateTimeUtc|arrival.actualTimeOfArrival.time|
+|17c|Base.AeronauticalReference|AerodromeName|\[17a=ZZZZ\] arrival.arrivalAerodrome.name |
 
 ## Field 18
 
@@ -187,7 +186,7 @@ field 3 in FIXM.
 <td>PerformanceBasedNavigationCapabilityCode</td>
 <td><p>[R∈10a]</p>
 <p>aircraft.capabilities.navigation.performanceBasedCode</p>
-<p>If there are more than eight FIXM PBN codes, apply the rules defined in FF-ICE Implementation Guidance section 13.2.2 s) when translating to field 18 PBN.</p></td>
+<p>If there are more than eight FIXM PBN codes, apply the rules defined in FF-ICE Implementation Guidance section 12.2.3 v) when translating to field 18 PBN.</p></td>
 </tr>
 <tr class="odd">
 <td>NAV</td>
@@ -218,36 +217,37 @@ field 3 in FIXM.
 </tr>
 <tr class="odd">
 <td>DEP</td>
-<td>Base.Aerodrome</td>
+<td>Base.AeronauticalReference</td>
 <td>AerodromeReference</td>
 <td><p>[13a=ZZZZ]</p>
-<p>departure.aerodrome.name</p>
-<p>departure.aerodrome.referencePoint</p></td>
+<p>departure.departureAerodrome.name</p>
+<p>departure.departureAerodrome.referencePoint<br>or<br>departure.departureAerodrome.referenceRelativePoint</p></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Base.Types</td>
-<td>TextName</td>
+<td>Base.AeronauticalReference</td>
+<td>AtcUnitReference</td>
 <td><p>[13a=AFIL]</p>
-<p>flightPlanSubmitter.name</p></td>
+<p>supplementaryInformation.supplementaryInformationSource.unit.locationIndicator</p>
+<p>supplementaryInformation.supplementaryInformationSource.unit.atcUnitNameOrAlternate</p></td>
 </tr>
 <tr class="odd">
 <td>DEST</td>
-<td>Base.Aerodrome</td>
+<td>Base.AeronauticalReference</td>
 <td>AerodromeReference</td>
 <td><p>[16a=ZZZZ]</p>
 <p>destination.destinationAerodrome.name</p>
-<p>destination.destinationAerodrome.referencePoint</p></td>
+<p>destination.destinationAerodrome.referencePoint<br>or<br>destination.destinationAerodrome.referenceRelativePoint</p></td>
 </tr>
 <tr class="even">
 <td>DOF</td>
 <td>Base.Types</td>
-<td>Time</td>
+<td>DateTimeUtc</td>
 <td><p>[13a≠AFIL]</p>
 <p>departure.estimatedOffBlockTime</p>
 <p>[13a=AFIL]</p>
-<p>routeTrajectoryGroup.〈kind〉.route.airfileRouteStartTime</p>
-<p>Note: DOF is not modelled as a distinct attribute in FIXM, it is a component of the departure or air filed start date/time (see field 13b on page 111)</p></td>
+<p>departure.estimatedRouteStartTime</p>
+<p>Note: DOF is not modelled as a distinct attribute in FIXM, it is a component of the FIXM date/time fields</p></td>
 </tr>
 <tr class="odd">
 <td>REG</td>
@@ -259,29 +259,46 @@ field 3 in FIXM.
 <tr class="even">
 <td>EET</td>
 <td>Base.AeronauticalReference</td>
-<td>AirspaceDesignator</td>
-<td><p>[Airspace boundary specified]</p>
+<td>LocationIndicator</td>
+<td><p>[EstimatedElapsedTime airspace boundary specified]</p>
 <p>routeTrajectoryGroup.〈kind〉.routeInformation.estimatedElapsedTime.location.region</p></td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>Base.AeronauticalReference</td>
 <td>SignificantPointChoice</td>
-<td><p>[Significant point specified]</p>
+<td><p>[EstimatedElapsedTime significant point specified]</p>
 <p>routeTrajectoryGroup.〈kind〉.routeInformation.estimatedElapsedTime.location.point</p></td>
 </tr>
 <tr class="even">
 <td></td>
 <td>Base.AeronauticalReference</td>
 <td>Longitude</td>
-<td><p>[Longitude specified]</p>
+<td><p>[EstimatedElapsedTime longitude specified]</p>
 <p>routeTrajectoryGroup.〈kind〉.routeInformation.estimatedElapsedTime.location.longitude</p></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Base.AeronauticalReference</td>
+<td>SignificantPointType</td>
+<td><p>[4DT point specified]</p>
+<p> If a 4DT point has a Trajectory Point Property of PRESCRIBED_EET_POINT, the EET entry can be extracted from the associated elementStartPoint (if present) or the point4D.position otherwise</p>
+<p>routeTrajectoryGroup.〈kind〉.element.elementStartPoint</p>
+<p>routeTrajectoryGroup.〈kind〉.element.point4D.position</p></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Base.Types</td>
+<td>Duration</td>
+<td><p>[EstimatedElapsedTime duration specified]</p>
+<p>routeTrajectoryGroup.〈kind〉.routeInformation.estimatedElapsedTime.elapsedTime</p></td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>Base.Types</td>
 <td>Duration</td>
-<td>routeTrajectoryGroup.〈kind〉.routeInformation.estimatedElapsedTime.elapsedTime</td>
+<td><p>[4DT point specified]</p>
+<p>routeTrajectoryGroup.〈kind〉.element.point4D.time.relativeTimeFromInitialPredictionPoint</p></td>
 </tr>
 <tr class="even">
 <td>SEL</td>
@@ -292,7 +309,7 @@ field 3 in FIXM.
 <tr class="odd">
 <td>TYP</td>
 <td>Base.Types</td>
-<td>Count</td>
+<td>CountPositive</td>
 <td><p>[9b=ZZZZ]</p>
 <p>aircraft.aircraftType.aircraftCount</p></td>
 </tr>
@@ -313,13 +330,13 @@ field 3 in FIXM.
 <td>DLE</td>
 <td>Base.AeronauticalReference</td>
 <td>SignificantPoint</td>
-<td>routeTrajectoryGroup.〈kind〉.element.elementStartPoint (see also field 15c3, 15c4 and 15c6)</td>
+<td>routeTrajectoryGroup.〈kind〉.element.elementStartPoint</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>Base.Types</td>
 <td>Duration</td>
-<td>routeTrajectoryGroup.〈kind〉.element.enRouteDelay.delayValue</td>
+<td>routeTrajectoryGroup.〈kind〉.element.plannedDelay.delayValue</td>
 </tr>
 <tr class="even">
 <td>OPR</td>
@@ -349,23 +366,23 @@ field 3 in FIXM.
 </tr>
 <tr class="even">
 <td>ALTN</td>
-<td>Base.Aerodrome</td>
-<td>OtherReference</td>
+<td>Base.AeronauticalReference</td>
+<td>AerodromeReference</td>
 <td><p>[ZZZZ∈16c]</p>
 <p>arrival.destinationAerodromeAlternate.name</p>
-<p>arrival.destinationAerodromeAlternate.referencePoint</p></td>
+<p>arrival.destinationAerodromeAlternate.referencePoint<br>or<br>arrival.destinationAerodromeAlternate.referenceRelativePoint</p></td>
 </tr>
 <tr class="odd">
 <td>RALT</td>
-<td>Base.Aerodrome</td>
+<td>Base.AeronauticalReference</td>
 <td>AerodromeReference</td>
-<td>enRoute.alternateAerodrome</td>
+<td>enRoute.alternateAerodrome (locationIndicator or name and referencePoint/referenceRelativePoint)</td>
 </tr>
 <tr class="even">
 <td>TALT</td>
-<td>Base.Aerodrome</td>
+<td>Base.AeronauticalReference</td>
 <td>AerodromeReference</td>
-<td>departure.takeOffAlternateAerodrome</td>
+<td>departure.takeOffAlternateAerodrome (locationIndicator or name and referencePoint/referenceRelativePoint)</td>
 </tr>
 <tr class="odd">
 <td>RIF</td>
@@ -375,7 +392,7 @@ field 3 in FIXM.
 </tr>
 <tr class="even">
 <td></td>
-<td>Base.Aerodrome</td>
+<td>Base.AeronauticalReference</td>
 <td>AerodromeReference</td>
 <td>arrival.reclearanceInFlight.filedRevisedDestinationAerodrome</td>
 </tr>
@@ -404,13 +421,13 @@ field 3 in FIXM.
 <td>19a</td>
 <td>Base.Types</td>
 <td>Duration</td>
-<td>supplementaryData.fuelEndurance</td>
+<td>supplementaryInformation.fuelEndurance</td>
 </tr>
 <tr class="even">
 <td>19b</td>
 <td>Base.Types</td>
 <td>Count</td>
-<td>supplementaryData.personsOnBoard</td>
+<td>supplementaryInformation.personsOnBoard</td>
 </tr>
 <tr class="odd">
 <td>19c</td>
@@ -470,92 +487,25 @@ field 3 in FIXM.
 <td>19i</td>
 <td>Base.Types</td>
 <td>TextName</td>
-<td>supplementaryData.pilotInCommand.name</td>
+<td>supplementaryInformation.pilotInCommand.name</td>
 </tr>
 </tbody>
 </table>
 
 ## Field 20   
 
-<table>
-<thead>
-<tr class="header">
-<th><strong>ICAO 4444 Field</strong></th>
-<th><strong>Package</strong></th>
-<th><strong>Class</strong></th>
-<th><strong>Path from Flight</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>20a<a href="#notes"><sup><u>[note 1]</u></sup></a></td>
-<td>Base.Organization</td>
-<td>AircraftOperatorDesignator</td>
-<td><p>[ICAO designator specified]</p>
-<p>operator.designatorIcao</p></td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Base.Types</td>
-<td>TextName</td>
-<td><p>[ICAO designator not specified]</p>
-<p>operator.operatingOrganization.name</p></td>
-</tr>
-<tr class="odd">
-<td>20b</td>
-<td>Base.AeronauticalReference</td>
-<td>AtcUnitName</td>
-<td>emergency.lastContact.lastContactUnit</td>
-</tr>
-<tr class="even">
-<td>20c</td>
-<td>Base.Types</td>
-<td>Time</td>
-<td>emergency.lastContact.lastContactTime</td>
-</tr>
-<tr class="odd">
-<td>20d</td>
-<td>Base.Measures</td>
-<td>Frequency</td>
-<td>emergency.lastContact.lastContactFrequency</td>
-</tr>
-<tr class="even">
-<td>20e</td>
-<td>Base.AeronauticalReference</td>
-<td>SignificantPointChoice</td>
-<td>emergency.lastContact.position.position</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Base.Types</td>
-<td>Time</td>
-<td>emergency.lastContact.position.timeAtPosition</td>
-</tr>
-<tr class="even">
-<td>20f</td>
-<td>Base.Types</td>
-<td>CharacterString</td>
-<td>emergency.lastContact.position.determinationMethod</td>
-</tr>
-<tr class="odd">
-<td>20g</td>
-<td>Base.Types</td>
-<td>CharacterString</td>
-<td>emergency.actionTaken</td>
-</tr>
-<tr class="even">
-<td>20h</td>
-<td>Base.Types</td>
-<td>CharacterString</td>
-<td>emergency.otherInformation</td>
-</tr>
-</tbody>
-</table>
-
-1.  Field 20a maps to the same FIXM field as field 18 OPR. An ALR can
-    include field 18 and field 20 with potentially conflicting values.
-    Further consideration of this is
-    required.
+  |ICAO 4444 Field|Package|Class|Path from Flight|
+  |:--------------|:------|:----|:---------------|
+  |20a<sup>[[1]](#notes)</sup>|Base.Organization|AircraftOperatorDesignator|<p>[ICAO designator specified]</p><p>operator.designatorIcao</p>|
+  ||Base.Types|TextName|<p>[ICAO designator not specified]</p><p>operator.operatingOrganization.name</p>|
+  |20b|Base.AeronauticalReference|AtcUnitName|emergency.lastContact.lastContactUnit|
+  |20c|Base.Types|DateTimeUtc|emergency.lastContact.lastContactTime|
+  |20d|Base.Measures|Frequency|emergency.lastContact.lastContactFrequency|
+  |20e|Base.AeronauticalReference|SignificantPointChoice|emergency.lastContact.position.position|
+  ||Base.Types|DateTimeUtc|emergency.lastContact.position.timeAtPosition|
+  |20f|Base.Types|CharacterString|emergency.lastContact.position.determinationMethod|
+  |20g|Base.Types|CharacterString|emergency.actionTaken|
+  |20h|Base.Types|CharacterString|emergency.otherInformation|
 
 ## Field 21   
 
@@ -572,7 +522,7 @@ field 3 in FIXM.
 <tr class="odd">
 <td>21a</td>
 <td>Base.Types</td>
-<td>Time</td>
+<td>DateTimeUtc</td>
 <td>radioCommunicationFailure.contact.lastContactTime</td>
 </tr>
 <tr class="even">
@@ -590,7 +540,7 @@ field 3 in FIXM.
 <tr class="even">
 <td>21d</td>
 <td>Base.Types</td>
-<td>Time</td>
+<td>DateTimeUtc</td>
 <td>radioCommunicationFailure.contact.position.timeAtPosition</td>
 </tr>
 <tr class="odd">
@@ -616,7 +566,14 @@ just a modification to elements that appear in other fields. As such,
 there are no mapping rules for field 22. The mapping of the information
 that can be specified in field 22 is captured in the other fields. For
 example, the entry *-7/NEWACID* in field 22 has the same mapping as
-if *--NEWACID* appeared in field 7.
+if *NEWACID* appeared in field 7.
+
+The only caveat to this is that, if field 22 is used to provide new values
+for the flight's ACID, EOBT, departure point, or destination point, FIXM also captures 
+the previous values for these fields in `aircaftIdentificationPrevious`, 
+`estimatedOffBlockTimePrevious` (or `estimatedRouteStartTimePrevious`), 
+`departureAerodromePrevious` (or `departurePointPrevious`), and/or 
+`destinationAerodromePrevious`, respectively.
 
 ## Notes
 

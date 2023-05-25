@@ -43,9 +43,8 @@ Examples of message data structures can be found in the FF-ICE
 Implementation Guidance Manual. The Figure below shows the message data
 structures associated with the FF-ICE Flight Cancellation Message.
 
-![Image](.//media/general-guidance-application-libraries-03.png "Example of Message Data structures from FF-ICE")
-
-
+![Image](.//media/general-guidance-application-libraries-03.jpg ':size=40%')
+  
 ## Message Templates
 
 A message template is a more restrictive subset of message and flight
