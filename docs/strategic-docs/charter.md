@@ -292,4 +292,4 @@ click CLICK_HERE "https://teams.microsoft.com/l/entity/2a527703-1f6f-4559-a332-d
 
 [F-01]: [FIXM Web Site](https://fixm.aero/)
 
-[F-02]: [FIXM Strategy](https://fixm.aero/documents/FIXM%20Strategy.pdf)
+[F-02]: [FIXM Strategy](strategic-docs/strategy.md)
