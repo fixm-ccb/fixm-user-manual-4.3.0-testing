@@ -89,37 +89,57 @@ This sites aims to build a "community knowledge" about the implementation of FIX
 
 ### FIXM references
 
-[1]: [FIXM Strategy v1.1][FIXM Strategy v1.1]
+[F-01]: [FIXM Web Site](https://fixm.aero/)
 
-[2]: [FIXM web site][FIXM.aero]
+[F-02]: [FIXM Strategy](strategic-docs/strategy.md)
 
-[3]: [FIXM Work Area][FIXM Work Area]
+[F-03]: [FIXM Change Management Charter](strategic-docs/charter.md)
+
+[F-04]: [FIXM Work Area](https://eurocontrol.sharepoint.com/sites/coll-FIXM/)
 
 ### ICAO references
 
-[4]: PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management, ICAO Doc 4444, 16th edition
+[I-01]: [ICAO Doc 9854 - Global Air Traffic Management Operational Concept (First Edition - 2005)](https://www.icao.int/Meetings/anconf12/Document%20Archive/9854_cons_en[1].pdf)
 
-[5]: [ICAO Doc 9965](http://www.icao.int/Meetings/anconf12/Documents/9965_cons_en.pdf): Manual on Flight and Flow Information for a Collaborative Environment
+[I-02]: [ICAO Doc 9882 - Manual on Air Traffic Management System Requirements (First Edition – 2007)](https://www.icao.int/airnavigation/IMP/Documents/Doc%209882%20-%20Manual%20on%20ATM%20Requirements.pdf)
 
-[6]: [ATMRPP/3-WP/766](https://eurocontrol.sharepoint.com/sites/coll-FIXM/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fcoll%2DFIXM%2FShared%20Documents%2FFIXM%20Change%20Requests%2FICAO%20ATMRPP%20inputs%20for%20FIXM%2FFF%2DICE%20Manual%20d0%2E99%5Fmarkup%2Epdf&parent=%2Fsites%2Fcoll%2DFIXM%2FShared%20Documents%2FFIXM%20Change%20Requests%2FICAO%20ATMRPP%20inputs%20for%20FIXM): “Manual on FF-ICE Implementation Guidance”
+[I-03]: [Global Air Navigation Plan](https://www4.icao.int/ganpportal/)
 
-[7]: ICAO Doc 7910: Location Indicators
+[I-04]: ICAO Doc 4444, 16th edition - PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management 
 
-[8]: [ICAO Doc 8643](https://www.icao.int/publications/DOC8643/Pages/default.aspx): Aircraft Type Designators
+[I-05]: [ICAO Doc 9965, 1st edition - Manual on Flight and Flow Information for a Collaborative Environment](http://www.icao.int/Meetings/anconf12/Documents/9965_cons_en.pdf)
 
-[9]: PAN AIDC ICD: PAN Regional (NAT and APAC) Interface Control Document for ATC Interfacility Data Communications (PAN AIDC ICD), version 1.0
+[I-06]: DRAFT ICAO Doc 9965, 2nd edition, Volume II "FF-ICE/R1 Implementation Guidance Manual" v.0.99
 
-[10]: ICAO Doc 10039: Manual on System Wide Information Management (SWIM) Concept
+[I-07]: ICAO Doc 7910 - Location Indicators
 
-[11]: ATMRPP-WG/24-WP/564: Flight Plan Filing Provisions for FF-ICE
+[I-08]: [ICAO Doc 8643 - Aircraft Type Designators](https://www.icao.int/publications/DOC8643/Pages/default.aspx)
+
+[I-09]: PAN AIDC ICD: PAN Regional (NAT and APAC) Interface Control Document for ATC Interfacility Data Communications (PAN AIDC ICD), version 1.0
+
+[I-10]: ICAO Doc 10039, Advanced Edition 2015 - Manual on System Wide Information Management (SWIM) Concept
+
+[I-11]: ATMRPP-WG/24-WP/564: Flight Plan Filing Provisions for FF-ICE
+
+[I-12]: ICAO Doc 9883, 1st edition - Manual on Global Performance of the Air Navigation System
+
+[I-13]: ICAO Doc 9971, 1st edition - Manual on Collaborative Air Traffic Flow Management
+
+[I-14]: ASBU Working Document, Edition 2, Version 3
 
 ### Other references
 
-[12]: [Donlon AIP data Set](https://github.com/aixm/donlon): a fictitious set of digital AIS data sets complying with the ICAO Annex 15, 16th edition and the new PANS-AIM provisions, in AIXM 5.1.1 format.
+[O-01]: [Donlon AIP data Set](https://github.com/aixm/donlon): a fictitious set of digital AIS data sets complying with the ICAO Annex 15, 16th edition and the new PANS-AIM provisions, in AIXM 5.1.1 format.
 
-[13]: [W3C XML Linking Language (xlink) v1.1](https://www.w3.org/TR/xlink11/)
+[O-02]: [W3C XML Linking Language (xlink) v1.1](https://www.w3.org/TR/xlink11/)
 
-[14]: [OGC 12-028r1](https://portal.opengeospatial.org/files/?artifact_id=62061): Use of Geography Markup Language (GML) for Aviation Data
+[O-03]: [OGC 12-028r1](https://portal.opengeospatial.org/files/?artifact_id=62061): Use of Geography Markup Language (GML) for Aviation Data
+
+[O-04]: Introduction to Aeronautical Information Exchange Model (AIXM) / Weather Information Exchange Model (WXXM) / FIXM Extensions, ICAO ATMRPP WP520
+
+[O-05]: [ATM Information Reference Model](https://airm.aero/)
+
+[O-06]: [EUROCONTROL Specification on SWIM Information Definition](https://www.eurocontrol.int/publication/eurocontrol-specification-swim-information-definition)
 
 ## Acronyms
 
@@ -188,6 +208,4 @@ This sites aims to build a "community knowledge" about the implementation of FIX
 [User Manual for FIXM 4.2.0 and related Applications]: https://fixm-ccb.github.io/FIXM-Core-4.2.0/#/
 [Implementation Guidance for FIXM 4.1.0]: https://www.fixm.aero/documents/FIXM%20Implementation%20Guidance_FIXM%20v4.1.0.zip
 
-[OneSky Online]: https://ext.eurocontrol.int/
-[OneSky Teams]: https://ost.eurocontrol.int/Pages/default.aspx
 [SUBMIT CONTENT]: https://fixm.aero/contact.pl?category=Technical&version=Other&versionOther=FIXM%20User%20Manual&details=Describe%20proposed%20content%20here
