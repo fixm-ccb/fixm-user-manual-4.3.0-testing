@@ -6,12 +6,9 @@ This chapter targets FIXM implementers who want to realise a conversion from FF-
 
 ## Overview
 
-The transition from present day practices to FF-ICE operations is likely to be somewhat protracted. This is a topic that is being pursued actively by the ATMRPP \[ATMRPP-WG/24-WP/564\] <sup>[[11]](#references)</sup>, and is recognized as a key issue in the System Wide Information
-Management (SWIM) concept <sup>[[10]](#references)</sup> \[ICAO Doc 10039\]. During that transition period, there will be stakeholders who are able to send and receive flight plan information employing FIXM, while others will employ ICAO ATS messages. In such a hybrid environment, it is expected that a significant effort will be expended translating between the FIXM format and the ATS message format. It is critical for interoperability purposes, and to ensure meaning is not lost in translation, that the conversion between FIXM and ATS message
-content is precisely defined, and that all stakeholders employ the same translation rules.
+The transition from present day practices to FF-ICE operations is likely to be somewhat protracted. This is a topic that is being pursued actively by the ATMRPP \[ATMRPP-WG/24-WP/564\] <sup>[[11]](#references)</sup>, and is recognized as a key issue in the System Wide Information Management (SWIM) concept <sup>[[10]](#references)</sup> \[ICAO Doc 10039\]. During that transition period, there will be stakeholders who are able to send and receive flight plan information employing FIXM, while others will employ ICAO ATS messages. In such a hybrid environment, it is expected that a significant effort will be expended translating between the FIXM format and the ATS message format. It is critical for interoperability purposes, and to ensure meaning is not lost in translation, that the conversion between FIXM and ATS message content is precisely defined, and that all stakeholders employ the same translation rules.
 
-There is not a direct correspondence between ATS messages and FIXM, though there is a close association. At the message level, the association is with the FF-ICE messages described in [this chapter](fixm-in-support-of-ffice/message-templates?id=overview). The mapping from FF-ICE Messages to ATS messages focuses on the individual ATS message fields (7, 8, etc.) rather than the messages themselves. In general, the mapping is independent of the message type: regardless of which ATS message field 7 appears in, the aircraft identification always maps to the same FIXM element. In the cases where an ATS message field item maps to different FIXM elements based on the
-message type (e.g. field 13b is estimated off block time in a FPL, but actual take off time in a DEP), that difference is made explicit in the mapping rule.
+There is not a direct correspondence between ATS messages and FIXM, though there is a close association. At the message level, the association is with the FF-ICE messages described in [this chapter](fixm-in-support-of-ffice/message-templates?id=overview). The mapping from FF-ICE Messages to ATS messages focuses on the individual ATS message fields (7, 8, etc.) rather than the messages themselves. In general, the mapping is independent of the message type: regardless of which ATS message field 7 appears in, the aircraft identification always maps to the same FIXM element. In the cases where an ATS message field item maps to different FIXM elements based on the message type (e.g. field 13b is estimated off block time in a FPL, but actual take off time in a DEP), that difference is made explicit in the mapping rule.
 
 ## ATS Message Content to FIXM Logical Model Map
 
@@ -31,9 +28,8 @@ is believed this additional mapping detail will aid users familiar with
 the PANS-ATM but new to FIXM in their understanding of the FIXM model.
 
 The scope of this chapter covers all message content defined in appendix
-3 of PANS-ATM
-<sup>[[4]](#references)</sup>.
-Supporting description is provided where the mapping from ATS message
+3 of PANS-ATM <sup>[[4]](#references)</sup>.
+Supporting descriptions are provided where the mapping from ATS message
 content to the FIXM Logical Model is not clear. The reader is assumed to
 be familiar with ICAO ATS messages and the FIXM Logical Model.
 
@@ -46,16 +42,16 @@ relatively straightforward.
 [Section (Mapping of ATS Fields to FIXM)](ats-message-to-fixm-mapping/mapping-of-ats-fields-to-fixm) provides
 the mapping between the individual data elements in ATS messages and the
 corresponding elements in the FIXM Logical Model. However, it is not
-always clear how the structural aspects of an ATS message and a FIXM
+always obvious how the structural aspects of an ATS message and a FIXM
 object correlate. This section provides explanation and guidelines where
-the structure is not clear.
+the translation is not clear.
 
 The ATS message format consists of a mixture of structured and free
 text. The free text components create problems when decoding ATS
-messages. The format of ATS messages is in part dictated by the need for
+messages. The format of ATS messages is, in part, dictated by the need for
 such messages to be readable by a human (presentation is a concern),
-whereas FIXM focuses purely on the content and structure (presentation
-is not a concern). Those free text aspects of ATS messages that cause
+whereas FIXM focuses mainly on content and structure (presentation
+is less of a concern). Those free text aspects of ATS messages that cause
 difficulties when decoding are highlighted and discussed.
 
 #### Emergency Message Originator
@@ -70,13 +66,14 @@ either X or a letter identifying the ATS unit division.
 
 -   When creating ATS message content from a FIXM object, it is only
     possible to create a valid ATS message field 5b from FIXM if the
-    attribute `atcUnitNameOrAlternate` is three or four upper case
+    `locationIndicator` attribute is present and the 
+    `atcUnitNameOrAlternate` attribute is three or four upper case
     letters. If it is three letters, add an X to the end.
 
 #### SSR Mode
 
 ATS field 7b is Secondary Surveillance Radar (SSR) mode. PANS-ATM
-restricts this to mode A only. FIXM supports SSR code but does not
+restricts this to mode A only. FIXM supports SSR codes but does not
 include explicitly a field for mode (that mode A alone is supported is
 implicit in the class name:` ModeACode`).
 
@@ -91,9 +88,7 @@ When creating ATS message content from a FIXM object, the sum of all of the indi
 
 A similar comment applies to other ATS message fields that contain counts where FIXM is less restrictive:
 
--   Field 18 TYP (range 2..10);
-
--   Field 19b (range 1..99);
+-   Field 19b (range 1..999);
 
 -   Field 19f (range 1..99 for number of dinghies, 1..999 for dinghy capacity).
 
@@ -116,18 +111,16 @@ COM/NAV/approach aid equipment for the route to be flown is carried, or
 the equipment is unserviceable". FIXM does not explicitly model the
 field 10a code `N`. Rather it leaves that code implicit to avoid
 redundancy. The relevant items in the FIXM Logical Model are
-class `FlightCapabilities` and its
-associations `navigation`, `communication` and `standardCapabilities`.
+class `FlightCapabilities` and its associations `navigation`, 
+`communication` and `standardCapabilities`.
 
 -   When creating a FIXM object from ATS message content, ignore
-    code `N` in field 10a
-    <sup><a href="#notes">[note 1]</a></sup>.
+    code `N` in field 10a <sup>[[note 1]](#notes)</sup>.
 
 -   When creating ATS message content from a FIXM object, insert `N` in
     field 10a if an instance of class `FlightCapabilities` is absent, or
-    it is present and
-    associations `navigation`, `communication` and `standardCapabilities` are
-    all absent.
+    it is present and associations `navigation`, `communication` and 
+    `standardCapabilities` are all absent.
 
 ##### Standard Equipment
 
@@ -135,8 +128,8 @@ The value `S` in field 10a of an ATS message indicates, "Standard
 COM/NAV/approach aid equipment for the route to be flown is carried and
 serviceable". `S` is not specific to navigation or communication
 capabilities. As such, FIXM represents standard equipment and
-capabilities via class `StandardCapabilitiesIndicator` that is associated
-with `FlightCapabilities`.
+capabilities via the class `StandardCapabilitiesIndicator` that is 
+associated with `FlightCapabilities`.
 
 ##### PBN Approved
 
@@ -146,8 +139,7 @@ does not explicitly model the field 10a code `R`. Rather it leaves that
 code implicit to avoid redundancy.
 
 -   When creating a FIXM object from ATS message content, ignore
-    code `R` in field 10a
-    <sup><a href="#notes">[note 2]</a></sup>.
+    code `R` in field 10a <sup>[[note 2]](#notes)</sup>.
 
 -   When creating ATS message content from a FIXM object, insert `R` in
     field 10a if one or more PBN codes are present in the navigation
@@ -161,8 +153,7 @@ DAT). FIXM does not explicitly model field 10a code `Z`. Rather, it leaves
 that code implicit to avoid redundancy.
 
 -   When creating a FIXM object from ATS message content, ignore
-    code `Z` in field
-    10a <sup><a href="#notes">[note 3]</a></sup>.
+    code `Z` in field 10a <sup>[[note 3]](#notes)</sup>.
 
 -   When creating ATS message content from a FIXM object, insert `Z` in
     field 10a if at least one of the "other navigation, communication or
@@ -181,31 +172,20 @@ The following code block presents a flight plan in ICAO 4444 format,
 with equipment and capabilities related to navigation and communication
 highlighted.
 
-```
+<pre>
 (FPL-QFA8-IS
-
--B744/H-SDE2E3FGHIJ3J5M1RWYZ/LB1D1
-
+-B744/H-<b>SDE2E3FGHIJ3J5M1RWYZ</b>/LB1D1
 -KDFW0400
-
 -N0501F280 DCT ABI J4 INK/N0504F300 J50 ELP J26 HMO V2 GRN
-
 2704N11627W 26N119W 2544N12000W 24N126W/M084F320 22N133W 19N139W
-
 16N144W/M084F340 11N152W 06N159W/M084F360 01N166W 01S169W
-
 0500S17435W 06S176W 12S176E/M084F380 18S168E 2125S16300E GUXIB R587
-
 HARVS Q21 SAVER G329 BN DCT
-
 -YBBN1519
-
--PBN/A1B1D1L1S1 NAV/GPSRNAV RNVD1A1 DOF/130202 REG/VHOEG
-
+-<b>PBN/A1B1D1L1S1 NAV/GPSRNAV RNVD1A1</b> DOF/130202 REG/VHOEG
 DLE/INK0100 26N119W0200 SEL/MQDE
-
 PER/D RIF/GUXIB R587 MEPAB G591 LTO NWWW)
-```
+</pre>
 
 The image below presents the equipment/capabilities portion of the
 flight plan as a FIXM object model. Only the highlighted items in the
@@ -223,8 +203,7 @@ items in the FIXM Logical Model are class `FlightCapabilities` and its
 association `surveillance`.
 
 -   When creating a FIXM object from ATS message content, ignore
-    code `N` in field
-    10b <sup><a href="#notes">[note 4]</a></sup>.
+    code `N` in field 10b <sup>[[note 4]](#notes)</sup>.
 
 -   When creating ATS message content from a FIXM object, insert `N` in
     field 10b if an instance of class `FlightCapabilities` is absent, or
@@ -238,17 +217,18 @@ Date/time values in ATS messages are always expressed in Coordinated
 Universal Time (UTC). Likewise, FIXM requires times to be expressed in
 UTC.
 
-A constraint is placed on class `Base.Types.Time`, the class used to
-represent all date/time values in FIXM, such that only UTC times can be
-expressed. The constraint mandates that the time zone is `Z`.
+A constraint is placed on class `Base.Types.DateTimeUtc`, the class used 
+to represent most date/time values in FIXM, such that only UTC times can 
+be expressed. The constraint mandates that the time zone is `Z`.
 
 Example: 20<sup>th</sup> July 1969 at 20:18UTC is expressed as
 
-`1969-07-20T20:18:00.000Z`
+`1969-07-20T20:18:00Z`
 
 In ATS messages, times are expressed in hours and minutes only, while
-FIXM supports seconds and fractions of seconds. When converting FIXM to
-ATS message content, seconds should be truncated.
+FIXM supports seconds and, in some cases, fractions of seconds. When 
+converting FIXM to ATS message content, times should be truncated to 
+only include hours and minutes.
 
 ##### Date of Flight
 
@@ -257,21 +237,17 @@ is expressed as a four digit UTC value (HHMM). The date on which the
 flight departs optionally appears in field 18 DOF (YYMMDD). FIXM encodes
 such values as a full date/time, not as distinct date and time values.
 As such, the full and unambiguous departure date/time of a flight is
-composed from fields 13b and 18
-DOF <sup><a href="#notes">[note 5]</a></sup>.
+composed from fields 13b and 18 DOF <sup>[[note 5]](#notes)</sup>.
 
 The image below presents the object model corresponding to highlighted
 parts of the following flight plan fragment.
 
-```
--YSSY2315
-
--N0501F280 \....
-
+<pre>
+-YSSY<b>2315</b>
+-N0501F280 ...
 -YBBN0115
-
--DOF/141105
-```
+-<b>DOF/141105</b>
+</pre>
 
 ![Image](.//media/translating-ffice-image2.png)
 
@@ -299,13 +275,16 @@ package `Flight.FlightRouteTrajectory.RouteTrajectory`.
 
 The initial cruising speed (field 15a) and level (field 15b) are
 captured in class `FlightRouteInformation`. Field 15b of an ATS route may
-contain the token VFR instead of a level. In that case
-the `cruisingLevel` attribute of `FlightRouteInformation` should be omitted.
+contain the token VFR instead of a level. In that case, the 
+`cruisingLevel` attribute of `FlightRouteInformation` should make use of
+the `visualFlightRules` association between 
+`FlightLevelOrAltitudeOrVfrChoice` and `VisualFlightRulesLevel` to 
+indicate this.
 
 The route is modelled as a series of route elements
-(class `RouteTrajectoryElement`) each consisting of a route point and the
-designator of the ATS route to the next point, together with associated
-information such as delay and changes.
+(class `RouteTrajectoryElement`), each consisting of a route point and 
+the designator of the ATS route to the next point, together with 
+associated information such as delays or speed/level changes.
 
 Note this package also accommodates 4D trajectories. Hence, it is far
 richer in content than is required for ATS message routes. When mapping
@@ -314,36 +293,34 @@ corresponding 4D trajectory.
 
 ##### Varieties of Route
 
-The mapping from field 15 to FIXM is complicated by the fact that a FIXM
-object, class `Flight`, can be associated with up to five routes or
-trajectories to support FF-ICE processes. The associations are:
-
--   negotiating (exchange between eASP and eAU during the Planning
-    Phase)
-
--   agreed (by the eASP and eAU during the Planning Phase)
-
--   filed (by the eAU)
-
--   current (latest known information)
+The mapping from field 15 to FIXM is complicated by the fact that the FIXM
+`Flight` class can be associated with up to four route/trajectories. The 
+associations are:
 
 -   desired (by the eAU)
+
+-   negotiating (exchanged between eASP and eAU during the Planning and/or 
+    Filing Phase)
+
+-   agreed (by the eASP and eAU during the Planning and/or Filing Phase)
+
+-   current (latest known information)
 
 When mapping ATS message content to FIXM, it must be decided which of
 the associations is employed to model the route information. Such a
 decision cannot be made with respect to field 15 in isolation. The
 decision is dependent on the message type in which the route occurs.
-Table 3 presents the mapping between kinds of route and the message
+Table 1 presents the mapping between kinds of route and the message
 types that contain field 15 (including those where field 15 is
 incorporated in field 22).
 
-Table 3: Messages Types Supporting Field 15
+Table 1: Messages Types Supporting Field 15
 
   | Message Type    | Route Association |
   |:----------------|:------------------|
   |ALR              |current            |
-  |FPL              |filed              |
-  |CHG              |filed              |
+  |FPL              |desired            |
+  |CHG              |desired            |
   |CPL              |current            |   
   |CDN              |current            |
 
@@ -394,17 +371,20 @@ When creating a FIXM object from ATS message content:
 -   A SID, if included in a route, must appear in the first element of
     the sequence of instances of `RouteTrajectoryElement`.
 
--   A STAR, if included in a route, must appear in the last element of
-    the sequence of instances of `RouteTrajectoryElement`.
+-   A STAR, if included in a route, must appear in the second to last 
+    element of the sequence of instances of `RouteTrajectoryElement` 
+    (with the final instance containing the destination aerodrome and
+    no `routeDesignatorToNextElement`).
 
 The images below present, respectively, the object model corresponding to
 the SID and STAR in the following route string.
 
-```
-Route String: MRSSH2 ZALEA DCT SWB DCT HRV Q105 BLVNS Y290 BAGGS SSCOT5
+<pre>
+Route String: <b>MRSSH2</b> ZALEA DCT SWB DCT HRV Q105 BLVNS Y290 BAGGS <b>SSCOT5</b>
          SID: MRSSH2
         STAR: SSCOT5
-```
+</pre>
+
 ![Image](.//media/translating-ffice-image16.png)
 
 ![Image](.//media/translating-ffice-image15.png)
@@ -413,24 +393,23 @@ Route String: MRSSH2 ZALEA DCT SWB DCT HRV Q105 BLVNS Y290 BAGGS SSCOT5
 
 In ICAO ATS messages, the presence of DCT between two route points
 indicates the aircraft will fly between the points outside a designated
-ATS route. In the ICAO ATS message it is also allowed to specify two
+ATS route. In the ICAO ATS message, it is also allowed to specify two
 consecutive route points that are separated neither by an ATS route
 designator nor by DCT; this is most commonly seen in User Preferred
 Routes (UPR). In such a case there is an implied DCT between the route
 points.
 
 FIXM models DCT through class `OtherRouteDesignator`, related to
-class `RouteDesignatorToNextElementChoice` by attribute
+class `RouteDesignatorToNextElementChoice` by association
 `otherRouteDesignator`.
 
 -   When creating a FIXM object from ATS message content, indicate a
-    direct route segment by setting attribute `otherRouteDesaignator` to
-    DIRECT.
+    direct route segment by setting association `otherRouteDesignator` 
+    to DIRECT.
 
 -   When creating ATS message content from a FIXM object,
-    if `otherRouteDesignator` of
-    class `RouteDesignatorToNextElementChoice` is set to DIRECT, insert
-    "DCT" into the ATS route.
+    if `otherRouteDesignator` is set to DIRECT, insert "DCT" into 
+    the ATS route.
 
 -   When creating ATS message content from a FIXM object, if an instance
     of class `RouteDesignatorToNextElementChoice` is not present, or is
@@ -438,7 +417,7 @@ class `RouteDesignatorToNextElementChoice` by attribute
     UNSPECIFIED, do not insert any text between the current and next
     point.
 
-Refer to [Route Changes](fixm-in-support-of-ffice/translating-ffice-fixm-messages-to-ats-messages?id=route-changes) for
+Refer to [Route Changes](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages?id=route-changes) for
 an example of "DCT" in a route.
 
 ##### Route Truncation
@@ -455,7 +434,7 @@ of instances of `RouteTrajectoryElement`. The truncation indicator may
 only be associated with the last element in the sequence (it is
 meaningless to truncate a route prior to the last element).
 
-Refer to [Route Changes](fixm-in-support-of-ffice/translating-ffice-fixm-messages-to-ats-messages?id=route-changes) for
+Refer to [Route Changes](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages?id=route-changes) for
 an example of route truncation.
 
 ##### Route Changes
@@ -469,15 +448,15 @@ This section defines how the route changes defined in PANS-ATM are
 mapped to the FIXM Logical Model. There are three variants allowed in an
 ATS message: speed/level change, cruise/climb, and cruise/climb with no
 specific upper limit. One example of each of those changes and how they
-map to the FIXM logical model is presented in Table 4.
+map to the FIXM logical model is presented in Table 2.
 
-Table 4: Route Changes
+Table 2: Route Changes
 
 | Example       | Description   | Modelled As   |
 |:-|:-|:-|
-| N0430F300     | Change TAS to 430 knots and request FL300.    | CruisingSpeedChange and CrusingLevelChange    |
-| N0430F300F320 | Change TAS to 430 knots and request climb from FL300 to FL320. | CruiseClimbStart (with level/altitude range)  |
-| N0430F300PLUS | Change TAS to 430 knots and request climb commencing above FL300. | CruiseClimbStart (with single level/altitude)  |
+| N0430F300     | Change TAS to 430 knots and request FL300.    | `CruisingSpeedChange` and `CrusingLevelChange`    |
+| N0430F300F320 | Change TAS to 430 knots and request climb from FL300 to FL320. | `CruiseClimbStart` (with specific upper level/altitude)  |
+| N0430F300PLUS | Change TAS to 430 knots and request climb commencing above FL300. | `CruiseClimbStart` (with `AtOrAboveIndicator`)  |
 
 Notes:
 
@@ -486,32 +465,31 @@ Notes:
     of an instance of class `CruiseClimbStart` indicates cruise climb, as
     demonstrated in the image below.
 
--   The token PLUS is used to indicate cruise climb is planned to
-    commence above the specified level. This does not appear in the FIXM
-    logical model. PLUS is indicated by an instance
-    of `CruiseClimbStart` where level (of
-    class `FlightLevelOrAltitudeOrRangeChoice`) is populated with an
-    instance of `FlightLevelOrAltitudeChoice`), whereas a cruise/climb
-    with an upper limit is indicated by an instance
-    of `CruiseClimbStart` where level is populated with an instance
-    of `VerticalRange`.
+-   The token PLUS is used to indicate a cruise climb is planned to
+    commence above the specified lower level. This token does not appear 
+    in the FIXM logical model. PLUS is indicated by an instance of 
+    `CruiseClimbStart` where the `atOrAbove` association (between class 
+    `UpperLevelChoice` and `AtOrAboveIndicator`) is set to 
+    `AT_OR_ABOVE_LOWER_LEVEL`, whereas a cruise/climb with a specific upper 
+    limit is indicated by an instance of `CruiseClimbStart` where the 
+    `altitude` or `flightLevel` attribute of `UpperLevelChoice` is 
+    populated.
 
 -   `CrusingSpeedChange` and `CruisingLevelChange` have an optional
     association `activation`. There is no equivalent to this field in ATS
     message content.
 
 The image below presents examples of the three kinds of level
-constraint.
+changes.
 
 ![Image](.//media/translating-ffice-image3.png)
+
 
 The image below presents the object model corresponding to the
 (contrived) ATS message field 15 route
 
 ```
-N0430F220 GORLO2N 3910N02230W/N0430F300 DCT C/IVA/N0430F300F320 B9
-
-ENTRA VFR T
+N0430F220 GORLO2N 3910N02230W/N0430F300 DCT C/IVA/N0430F300F320 B9 ENTRA VFR T
 ```
 
 ![Image](.//media/translating-ffice-image4.png)
@@ -976,10 +954,10 @@ consists of a choice between flight level (class `FlightLevel`) or
 altitude (class `Altitude`). In each case a unit of measure is specified
 (respectively `UomFlightLevel` and `UomAltitude`) and a vertical distance
 (class `VerticalDistance` in package `Base.Measures`) expressed as a
-floating point number. Table 5 provides a mapping between the
+floating point number. Table 3 provides a mapping between the
 level/altitude in PANS-ATM ATS messages and the level/altitude in FIXM.
 
-Table 5: Level/Altitude Mapping
+Table 3: Level/Altitude Mapping
 
   | ATS Message Type |  ATS Message Value | FIXM FlightLevelOrAltitude |FIXM Uom |FIXM Value|
   |:-|:-|:-|:-|:-| 
@@ -1018,10 +996,10 @@ Notes:
 In ATS messaging speed is either true air speed or Mach number. This is
 captured by class `TrueAirspeed` in package `Base.Measures`. It consists of
 the unit of measurement (class `UomAirspeed`) and a (floating point)
-value. Table 6 provides a mapping between the speed in ATS messages and
+value. Table 4 provides a mapping between the speed in ATS messages and
 the speed in FIXM.
 
-Table 6: Speed Mapping
+Table 4: Speed Mapping
 
 | ATS Message Type  | ATS Message Value         |FIXM UomAirspeed   |FIXM Value                 |
 |:-|:-|:-|:-|
@@ -1105,9 +1083,9 @@ examples always states MHz.
 The global guidance for ATC Interfacility Data Communications (AIDC)
 \[PAN AIDC
 ICD\] <sup>[[9]](#references)</sup> is
-more specific as presented in Table 7.
+more specific as presented in Table 5.
 
-Table 7: PAN AIDC ICD Frequency
+Table 5: PAN AIDC ICD Frequency
 
 |       | Range             | Units |
 |:------|:------------------|:------|
@@ -1124,8 +1102,8 @@ or MHZ. If the frequency is four or five digits without a decimal point,
 set the `uom` attribute to KHZ, otherwise set the `uom` attribute to MHZ.
 
 ## Notes
-\[1\]: It is assumed that validation of the flight plan ensures when
-code 'N' is included in field 10a, no other code is included, but such
+\[1\]: It is assumed that validation of the flight plan ensures code 'N' 
+is included in field 10a only when no other code is included, but such
 validation is not part of the translation rules.
 
 \[2\]: It is assumed that validation of the flight plan ensures the
@@ -1136,8 +1114,8 @@ validation is not part of the translation rules.
 field 10a code 'Z' is always paired with at least one of field 18 NAV,
 COM or DAT, but such validation is not part of the translation rules.
 
-\[4\]: It is assumed that validation of the flight plan ensures when
-code 'N' is included in field 10b, no other code is included, but such
+\[4\]: It is assumed that validation of the flight plan ensures code 'N' 
+is included in field 10b only when no other code is included, but such
 validation is not part of the translation rules.
 
 \[5\]: If field 18 DOF is omitted it is necessary to apply business
