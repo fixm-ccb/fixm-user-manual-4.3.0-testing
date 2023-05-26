@@ -17,12 +17,12 @@ The FIXM Core classes `Departure` and `Arrival` both have a property `airportSlo
 classDiagram	
 class Departure
 <<XSDcomplexType>> Departure
-link Departure "https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA5/EA311.htm" "Go to definition"	
+link Departure "https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA5/EA311.htm" "Go to definition"
 Departure : + airportSlotIdentification [0..1] AirportSlotIdentification	
 
 class Arrival
 <<XSDcomplexType>> Arrival
-link Arrival "https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA2/EA243.htm" "Go to definition"	
+link Arrival "https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA2/EA243.htm" "Go to definition"
 Arrival : + airportSlotIdentification [0..1] AirportSlotIdentification	
 
 class Flight
