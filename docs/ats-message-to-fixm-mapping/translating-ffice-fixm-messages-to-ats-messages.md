@@ -417,8 +417,7 @@ class `RouteDesignatorToNextElementChoice` by association
     UNSPECIFIED, do not insert any text between the current and next
     point.
 
-Refer to [Route Changes](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages?id=route-changes) for
-an example of "DCT" in a route.
+Refer to [Route Changes](#route-changes) for an example of "DCT" in a route.
 
 ##### Route Truncation
 
@@ -434,7 +433,7 @@ of instances of `RouteTrajectoryElement`. The truncation indicator may
 only be associated with the last element in the sequence (it is
 meaningless to truncate a route prior to the last element).
 
-Refer to [Route Changes](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages?id=route-changes) for
+Refer to [Route Changes](#route-changes) for
 an example of route truncation.
 
 ##### Route Changes
@@ -508,7 +507,7 @@ However, in FIXM the route to revised destination is modelled as an
 unstructured string.
 
 The image below presents the object model corresponding to field 18 RIF
-of the sample flight plan in [Equipment/Capabilities Example](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages?id=equipmentcapabilities-example):
+of the sample flight plan in [Equipment/Capabilities Example](#equipmentcapabilities-example):
 
 ```
 RIF/GUXIB R587 MEPAB G591 LTO NWWW
@@ -535,7 +534,7 @@ When creating a FIXM object from ATS message content, `delayReason`, 
 `delayReference` and `delayType` should be omitted.
 
 The image below presents the object model for a fragment of the route in
-the flight plan contained in [Equipment/Capabilities Example](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages?id=equipmentcapabilities-example),
+the flight plan contained in [Equipment/Capabilities Example](#equipmentcapabilities-example),
 incorporating the information in field 18 DLE:
 
 ```
@@ -660,7 +659,7 @@ DEST for the population of FIXM:
 -   The name of the departure aerodrome may consist of multiple words so
     it may not be obvious how to parse the content of 18 DEST.
 
-Refer to section [Departure Aerodrome](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages?id=departure-aerodrome) for
+Refer to section [Departure Aerodrome](#departure-aerodrome) for
 an equivalent example in the context of field 18 DEP.
 
 When creating an ATS message from a FIXM object, if the FIXM object
