@@ -1,0 +1,69 @@
+<fx:Flight xmlns:fb="http://www.fixm.aero/base/4.3" xmlns:fx="http://www.fixm.aero/flight/4.3" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.fixm.aero/flight/4.3 https://www.fixm.aero/releases/FIXM-4.3.0/schemas/core/flight/Flight.xsd">
+	<fx:arrival>
+		<fx:destinationAerodrome>
+			<fb:locationIndicator>KBWI</fb:locationIndicator>
+		</fx:destinationAerodrome>
+	</fx:arrival>
+	<fx:departure>
+		<fx:departureAerodrome>
+			<fb:locationIndicator>KHGR</fb:locationIndicator>
+		</fx:departureAerodrome>
+		<fx:estimatedOffBlockTime>2023-05-22T07:00:00Z</fx:estimatedOffBlockTime>
+	</fx:departure>
+	<fx:routeTrajectoryGroup>
+		<fx:desired>
+			<!-- ROUTE ELEMENT 1 -->
+			<fx:element seqNum="0">
+				<fx:alongRouteDistance uom="NM">0.0</fx:alongRouteDistance>
+				<fx:elementStartPoint>
+					<fb:aerodromeReferencePoint>
+						<fb:locationIndicator>KHGR</fb:locationIndicator>
+					</fb:aerodromeReferencePoint>
+				</fx:elementStartPoint>
+				<fx:routeDesignatorToNextElement>
+					<fx:otherRouteDesignator>DIRECT</fx:otherRouteDesignator>
+				</fx:routeDesignatorToNextElement>
+			</fx:element>
+			<!-- ROUTE ELEMENT 2 -->
+			<fx:element seqNum="1">
+				<fx:alongRouteDistance uom="NM">6.12</fx:alongRouteDistance>
+				<fx:elementStartPoint>
+					<fb:navaid>
+						<fb:designator>HGR</fb:designator>
+					</fb:navaid>
+				</fx:elementStartPoint>
+				<fx:routeDesignatorToNextElement>
+					<fx:routeDesignator>V268</fx:routeDesignator>
+				</fx:routeDesignatorToNextElement>
+			</fx:element>
+			<!-- ROUTE ELEMENT 3 -->
+			<fx:element seqNum="2">
+				<fx:alongRouteDistance uom="NM">48.67</fx:alongRouteDistance>
+				<fx:elementStartPoint>
+					<fb:navaid>
+						<fb:designator>EMI</fb:designator>
+					</fb:navaid>
+				</fx:elementStartPoint>
+				<fx:routeDesignatorToNextElement>
+					<fx:otherRouteDesignator>DIRECT</fx:otherRouteDesignator>
+				</fx:routeDesignatorToNextElement>
+			</fx:element>
+			<!-- ROUTE ELEMENT 4 -->
+			<fx:element seqNum="3">
+				<fx:alongRouteDistance uom="NM">72.47</fx:alongRouteDistance>
+				<fx:elementStartPoint>
+					<fb:aerodromeReferencePoint>
+						<fb:locationIndicator>KBWI</fb:locationIndicator>
+					</fb:aerodromeReferencePoint>
+				</fx:elementStartPoint>
+			</fx:element>
+			<fx:routeInformation>
+				<fx:cruisingLevel>
+					<fb:altitude uom="FT">5000</fb:altitude>
+				</fx:cruisingLevel>
+				<fx:cruisingSpeed uom="KT">160</fx:cruisingSpeed>
+				<fx:totalEstimatedElapsedTime>P0Y0M0DT0H27M15S</fx:totalEstimatedElapsedTime>
+			</fx:routeInformation>
+		</fx:desired>
+	</fx:routeTrajectoryGroup>
+</fx:Flight>

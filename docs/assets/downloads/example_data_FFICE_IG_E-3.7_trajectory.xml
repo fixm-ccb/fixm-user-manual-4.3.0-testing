@@ -1,0 +1,297 @@
+<fx:Flight xmlns:fb="http://www.fixm.aero/base/4.3" xmlns:fx="http://www.fixm.aero/flight/4.3" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.fixm.aero/flight/4.3 https://www.fixm.aero/releases/FIXM-4.3.0/schemas/core/flight/Flight.xsd">
+	<fx:arrival>
+		<fx:destinationAerodrome>
+			<fb:locationIndicator>KBWI</fb:locationIndicator>
+		</fx:destinationAerodrome>
+	</fx:arrival>
+	<fx:departure>
+		<fx:departureAerodrome>
+			<fb:locationIndicator>KHGR</fb:locationIndicator>
+		</fx:departureAerodrome>
+		<fx:estimatedOffBlockTime>2023-05-22T07:00:00Z</fx:estimatedOffBlockTime>
+	</fx:departure>
+	<fx:routeTrajectoryGroup>
+		<fx:desired>
+			<!-- ROUTE ELEMENT 1 -->
+			<fx:element seqNum="0">
+				<fx:alongRouteDistance uom="NM">0.0</fx:alongRouteDistance>
+				<fx:elementStartPoint>
+					<fb:aerodromeReferencePoint>
+						<fb:locationIndicator>KHGR</fb:locationIndicator>
+						<fb:referencePoint srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>39.70861111 -77.72638889</fb:pos>
+						</fb:referencePoint>
+					</fb:aerodromeReferencePoint>
+				</fx:elementStartPoint>
+				<fx:point4D>
+					<fx:level>
+						<fb:altitude uom="FT">703</fb:altitude>
+					</fx:level>
+					<fx:pointProperty>
+						<fx:propertyType>AIRPORT_REFERENCE_LOCATION</fx:propertyType>
+					</fx:pointProperty>
+					<fx:pointProperty>
+						<fx:propertyType>INITIAL_PREDICTION_POINT</fx:propertyType>
+					</fx:pointProperty>
+					<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+						<fb:pos>39.70861111 -77.72638889</fb:pos>
+					</fx:position>
+					<fx:predictedAirspeed uom="KT">125</fx:predictedAirspeed>
+					<fx:time>
+						<fx:absoluteTime>2023-05-22T07:00:00Z</fx:absoluteTime>
+					</fx:time>
+				</fx:point4D>
+				<fx:routeDesignatorToNextElement>
+					<fx:otherRouteDesignator>DIRECT</fx:otherRouteDesignator>
+				</fx:routeDesignatorToNextElement>
+			</fx:element>
+			<!-- ROUTE ELEMENT 2 -->
+			<fx:element seqNum="1">
+				<fx:alongRouteDistance uom="NM">6.02</fx:alongRouteDistance>
+				<fx:elementStartPoint>
+					<fb:navaid>
+						<fb:designator>HGR</fb:designator>
+						<fb:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>39.69777778 -77.85583333</fb:pos>
+						</fb:position>
+					</fb:navaid>
+				</fx:elementStartPoint>
+				<fx:point4D>
+					<fx:level>
+						<fb:altitude uom="FT">2732</fb:altitude>
+					</fx:level>
+					<fx:pointProperty>
+						<fx:propertyType>TCP_LATERAL</fx:propertyType>
+					</fx:pointProperty>
+					<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+						<fb:pos>39.70861111 -77.72638889</fb:pos>
+					</fx:position>
+					<fx:predictedAirspeed uom="KT">125</fx:predictedAirspeed>
+					<fx:time>
+						<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H2M35S</fx:relativeTimeFromInitialPredictionPoint>
+					</fx:time>
+				</fx:point4D>
+				<fx:routeDesignatorToNextElement>
+					<fx:routeDesignator>V268</fx:routeDesignator>
+				</fx:routeDesignatorToNextElement>
+			</fx:element>
+			<!-- ROUTE ELEMENT 3 -->
+			<fx:element seqNum="2">
+				<fx:alongRouteDistance uom="NM">10.35</fx:alongRouteDistance>
+				<fx:point4D>
+					<fx:level>
+						<fb:altitude uom="FT">4389</fb:altitude>
+					</fx:level>
+					<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+						<fb:pos>39.67722222 -77.76583333</fb:pos>
+					</fx:position>
+					<fx:predictedAirspeed uom="KT">125</fx:predictedAirspeed>
+					<fx:time>
+						<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H4M43S</fx:relativeTimeFromInitialPredictionPoint>
+					</fx:time>
+				</fx:point4D>
+				<fx:routeDesignatorToNextElement>
+					<fx:routeDesignator>V268</fx:routeDesignator>
+				</fx:routeDesignatorToNextElement>
+			</fx:element>
+			<!-- ROUTE ELEMENT 4 -->
+			<fx:element seqNum="3">
+				<fx:alongRouteDistance uom="NM">12.18</fx:alongRouteDistance>
+				<fx:point4D>
+					<fx:level>
+						<fb:altitude uom="FT">5000</fb:altitude>
+					</fx:level>
+					<fx:pointProperty>
+						<fx:propertyType>TOP_OF_CLIMB</fx:propertyType>
+					</fx:pointProperty>
+					<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+						<fb:pos>39.66833333 -77.72666667</fb:pos>
+					</fx:position>
+					<fx:predictedAirspeed uom="KT">125</fx:predictedAirspeed>
+					<fx:time>
+						<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H5M35S</fx:relativeTimeFromInitialPredictionPoint>
+					</fx:time>
+				</fx:point4D>
+				<fx:routeDesignatorToNextElement>
+					<fx:routeDesignator>V268</fx:routeDesignator>
+				</fx:routeDesignatorToNextElement>
+			</fx:element>
+			<!-- ROUTE ELEMENT 5 -->
+			<fx:element seqNum="4">
+				<fx:alongRouteDistance uom="NM">13.26</fx:alongRouteDistance>
+				<fx:point4D>
+					<fx:level>
+						<fb:altitude uom="FT">5000</fb:altitude>
+					</fx:level>
+					<fx:pointProperty>
+						<fx:propertyType>TCP_SPEED</fx:propertyType>
+					</fx:pointProperty>
+					<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+						<fb:pos>39.66333333 -77.70416667</fb:pos>
+					</fx:position>
+					<fx:predictedAirspeed uom="KT">160</fx:predictedAirspeed>
+					<fx:time>
+						<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H6M2S</fx:relativeTimeFromInitialPredictionPoint>
+					</fx:time>
+				</fx:point4D>
+				<fx:routeDesignatorToNextElement>
+					<fx:routeDesignator>V268</fx:routeDesignator>
+				</fx:routeDesignatorToNextElement>
+			</fx:element>
+			<!-- ROUTE ELEMENT 6 -->
+			<fx:element seqNum="5">
+				<fx:alongRouteDistance uom="NM">34.48</fx:alongRouteDistance>
+				<fx:elementStartPoint>
+					<fb:designatedPoint>
+						<fb:designator>KEMAR</fb:designator>
+						<fb:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>39.5625 -77.26722222</fb:pos>
+						</fb:position>
+					</fb:designatedPoint>
+				</fx:elementStartPoint>
+				<fx:point4D>
+					<fx:level>
+						<fb:altitude uom="FT">5000</fb:altitude>
+					</fx:level>
+					<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+						<fb:pos>39.5625 -77.26722222</fb:pos>
+					</fx:position>
+					<fx:predictedAirspeed uom="KT">160</fx:predictedAirspeed>
+					<fx:time>
+						<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H13M56S</fx:relativeTimeFromInitialPredictionPoint>
+					</fx:time>
+				</fx:point4D>
+				<fx:routeDesignatorToNextElement>
+					<fx:routeDesignator>V268</fx:routeDesignator>
+				</fx:routeDesignatorToNextElement>
+			</fx:element>
+			<!-- ROUTE ELEMENT 7 -->
+			<fx:element seqNum="6">
+				<fx:alongRouteDistance uom="NM">48.49</fx:alongRouteDistance>
+				<fx:elementStartPoint>
+					<fb:navaid>
+						<fb:designator>EMI</fb:designator>
+						<fb:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>39.495 -76.97861111</fb:pos>
+						</fb:position>
+					</fb:navaid>
+				</fx:elementStartPoint>
+				<fx:point4D>
+					<fx:level>
+						<fb:altitude uom="FT">5000</fb:altitude>
+					</fx:level>
+					<fx:pointProperty>
+						<fx:propertyType>TCP_LATERAL</fx:propertyType>
+					</fx:pointProperty>
+					<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+						<fb:pos>39.495 -76.97861111</fb:pos>
+					</fx:position>
+					<fx:predictedAirspeed uom="KT">160</fx:predictedAirspeed>
+					<fx:time>
+						<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H19M2S</fx:relativeTimeFromInitialPredictionPoint>
+					</fx:time>
+				</fx:point4D>
+				<fx:routeDesignatorToNextElement>
+					<fx:otherRouteDesignator>DIRECT</fx:otherRouteDesignator>
+				</fx:routeDesignatorToNextElement>
+			</fx:element>
+			<!-- ROUTE ELEMENT 8 -->
+			<fx:element seqNum="7">
+				<fx:alongRouteDistance uom="NM">51.18</fx:alongRouteDistance>
+				<fx:point4D>
+					<fx:level>
+						<fb:altitude uom="FT">5000</fb:altitude>
+					</fx:level>
+					<fx:pointProperty>
+						<fx:propertyType>TOP_OF_DESCENT</fx:propertyType>
+					</fx:pointProperty>
+					<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+						<fb:pos>39.45722222 -76.94166667</fb:pos>
+					</fx:position>
+					<fx:predictedAirspeed uom="KT">160</fx:predictedAirspeed>
+					<fx:time>
+						<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H20M1S</fx:relativeTimeFromInitialPredictionPoint>
+					</fx:time>
+				</fx:point4D>
+				<fx:routeDesignatorToNextElement>
+					<fx:otherRouteDesignator>DIRECT</fx:otherRouteDesignator>
+				</fx:routeDesignatorToNextElement>
+			</fx:element>
+			<!-- ROUTE ELEMENT 9 -->
+			<fx:element seqNum="8">
+				<fx:alongRouteDistance uom="NM">51.84</fx:alongRouteDistance>
+				<fx:point4D>
+					<fx:level>
+						<fb:altitude uom="FT">4852</fb:altitude>
+					</fx:level>
+					<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+						<fb:pos>39.44833333 -76.93305556</fb:pos>
+					</fx:position>
+					<fx:predictedAirspeed uom="KT">160</fx:predictedAirspeed>
+					<fx:time>
+						<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H20M15S</fx:relativeTimeFromInitialPredictionPoint>
+					</fx:time>
+				</fx:point4D>
+				<fx:routeDesignatorToNextElement>
+					<fx:otherRouteDesignator>DIRECT</fx:otherRouteDesignator>
+				</fx:routeDesignatorToNextElement>
+			</fx:element>
+			<!-- ROUTE ELEMENT 10 -->
+			<fx:element seqNum="9">
+				<fx:alongRouteDistance uom="NM">71.52</fx:alongRouteDistance>
+				<fx:point4D>
+					<fx:level>
+						<fb:altitude uom="FT">366</fb:altitude>
+					</fx:level>
+					<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+						<fb:pos>39.18777778 -76.68055556</fb:pos>
+					</fx:position>
+					<fx:predictedAirspeed uom="KT">120</fx:predictedAirspeed>
+					<fx:time>
+						<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H26M55S</fx:relativeTimeFromInitialPredictionPoint>
+					</fx:time>
+				</fx:point4D>
+				<fx:routeDesignatorToNextElement>
+					<fx:otherRouteDesignator>DIRECT</fx:otherRouteDesignator>
+				</fx:routeDesignatorToNextElement>
+			</fx:element>
+			<!-- ROUTE ELEMENT 11 -->
+			<fx:element seqNum="10">
+				<fx:alongRouteDistance uom="NM">72.45</fx:alongRouteDistance>
+				<fx:elementStartPoint>
+					<fb:aerodromeReferencePoint>
+						<fb:locationIndicator>KBWI</fb:locationIndicator>
+						<fb:referencePoint srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>39.17583333 -76.66888889</fb:pos>
+						</fb:referencePoint>
+					</fb:aerodromeReferencePoint>
+				</fx:elementStartPoint>
+				<fx:point4D>
+					<fx:level>
+						<fb:altitude uom="FT">143</fb:altitude>
+					</fx:level>
+					<fx:pointProperty>
+						<fx:propertyType>AIRPORT_REFERENCE_LOCATION</fx:propertyType>
+					</fx:pointProperty>
+					<fx:pointProperty>
+						<fx:propertyType>END_PREDICTION_POINT</fx:propertyType>
+					</fx:pointProperty>
+					<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+						<fb:pos>39.17583333 -76.66888889</fb:pos>
+					</fx:position>
+					<fx:predictedAirspeed uom="KT">100</fx:predictedAirspeed>
+					<fx:time>
+						<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H27M15S</fx:relativeTimeFromInitialPredictionPoint>
+					</fx:time>
+				</fx:point4D>
+			</fx:element>
+			<fx:routeInformation>
+				<fx:cruisingLevel>
+					<fb:altitude uom="FT">5000</fb:altitude>
+				</fx:cruisingLevel>
+				<fx:cruisingSpeed uom="KT">160</fx:cruisingSpeed>
+				<fx:totalEstimatedElapsedTime>P0Y0M0DT0H27M15S</fx:totalEstimatedElapsedTime>
+			</fx:routeInformation>
+		</fx:desired>
+	</fx:routeTrajectoryGroup>
+</fx:Flight>
