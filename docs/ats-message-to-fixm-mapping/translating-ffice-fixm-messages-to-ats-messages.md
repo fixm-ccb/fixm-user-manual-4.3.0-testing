@@ -804,7 +804,7 @@ attribute `takeOffAlternateAerodrome` of class `Departure` in
 package `Flight.Departure`. Each alternate is
 an `AerodromeReference` (see [this chapter](general-guidance/references-to-published-aeronautical-information?id=references-to-aerodromes)).
 
-Refer to section [En-Route Alternate](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages?id=en-route-alternate) for
+Refer to section [En-Route Alternate](#en-route-alternate) for
 an equivalent example in the context of en-route alternate.
 
 When creating an ATS message from a FIXM object, if the FIXM object contains more 
@@ -1057,8 +1057,8 @@ from a navaid), or an aerodrome. The five classes under 
     `GeographicalPosition` as above), and `referenceRelativePoint` 
     (a `RelativePoint` as above).
 
-Examples of significant points are presented in [Field 15 Overall Example](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages?id=field-15-overall-example) 
-and [DLE](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages?id=dle)
+Examples of significant points are presented in [Field 15 Overall Example](#field-15-overall-example) 
+and [DLE](#dle)
 
 #### Frequency
 
