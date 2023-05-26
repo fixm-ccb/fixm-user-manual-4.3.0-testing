@@ -5,9 +5,8 @@ demand exceeds this capacity. The process of allocating airport slots at
 coordinated airports is based on the IATA Worldwide Slot Guidelines as a globally accepted standard.
 
 Some countries require that an airport slot reference is obtained and reflected in the flight plan 
-for non-scheduled air transport operations or general aviation.
-
-The airport slot reference is defined as *the identifier of the scheduled time of arrival or departure available for allocation by, 
+for non-scheduled air transport operations or general aviation. The airport slot reference is defined as 
+*the identifier of the scheduled time of arrival or departure available for allocation by, 
 or as allocated by, a coordinator for an aircraft movement on a specific date at a coordinated airport*. 
 
 ## FIXM representation
@@ -34,11 +33,11 @@ Flight --> Arrival : +arrival [0..1]
 
 This airport slot reference is expressed as a CharacterString with a maxLength set to 10. This is based on the recommendation of the taskforce of experts from 
 the European Airport Coordinators Association (EUACA), the International Air Transport Association (IATA) and EUROCONTROL 
-which was set-up as to discuss solutions for integrating airport slot information into FF-ICE information. 
+which was set-up in order to discuss solutions for integrating airport slot information into FF-ICE information.
 
 ## Examples
 
-Example of departure airport slot allocated to a General Aviation/Business Aviation (from ATMRPP-WG/28-WP/653)
+Identification of a departure airport slot allocated to a General Aviation/Business Aviation (from ATMRPP-WG/28-WP/653)
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
 <fx:flight>
@@ -46,7 +45,7 @@ Example of departure airport slot allocated to a General Aviation/Business Aviat
     <fx:airportSlotIdentification>1407011234</fx:airportSlotIdentification>    
 ```
 
-Example of departure airport slot allocated to a scheduled flight (from EUROCONTROL IFPS User Manual R27).
+Identification of a departure airport slot allocated in Europe (from EUROCONTROL IFPS User Manual R27).
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
 <fx:flight>
