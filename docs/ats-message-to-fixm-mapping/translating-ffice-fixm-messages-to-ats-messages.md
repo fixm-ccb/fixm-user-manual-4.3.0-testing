@@ -484,6 +484,7 @@ changes.
 
 ![Image](.//media/translating-ffice-image3.png)
 
+##### Field 15 Overall Example
 
 The image below presents the object model corresponding to the
 (contrived) ATS message field 15 route
@@ -499,16 +500,15 @@ N0430F220 GORLO2N 3910N02230W/N0430F300 DCT C/IVA/N0430F300F320 B9 ENTRA VFR T
 ICAO field 18 RIF, if present, contains the route details to the revised
 destination, followed by the revised destination aerodrome. This is
 modelled in FIXM by class `ReclearanceInFlight` in package `Flight.Arrival`.
-The route component is modelled by
-attribute `routeToRevisedDestination` and the destination by
-attribute `filedRevisedDestinationAerodrome`.
+The route component is modelled by attribute `routeToRevisedDestination` 
+and the destination by attribute `filedRevisedDestinationAerodrome`.
 
 The route component is constructed via the same rules as for field 15c.
 However, in FIXM the route to revised destination is modelled as an
 unstructured string.
 
 The image below presents the object model corresponding to field 18 RIF
-of the sample flight plan in [Equipment/Capabilities Example](fixm-in-support-of-ffice/translating-ffice-fixm-messages-to-ats-messages?id=equipmentcapabilities-example):
+of the sample flight plan in [Equipment/Capabilities Example](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages?id=equipmentcapabilities-example):
 
 ```
 RIF/GUXIB R587 MEPAB G591 LTO NWWW
@@ -519,23 +519,23 @@ RIF/GUXIB R587 MEPAB G591 LTO NWWW
 ##### DLE
 
 ICAO field 18 DLE, if present, contains points along the route at which
-delay will occur; the aircraft essentially goes 'off plan' for the
+delays will occur; the aircraft essentially goes 'off plan' for the
 stated duration. Each DLE point must appear in the route (field 15c).
 For ATS messages, this requires that a consistency check be performed on
 the flight plan to ensure the DLE points are listed in the route. FIXM
 avoids the need for a check and the duplication of route points by
 incorporating a delay value in the corresponding route element.
 Specifically, the delay duration appears in attribute `delayValue` of
-class `EnRouteDelay`, which is associated with
-class `RouteTrajectoryElement`.
+class `PlannedDelay`, which is associated with class 
+`RouteTrajectoryElement`.
 
-The `EnRouteDelay` class additionally has
-attributes `delayReason`, `delayReference` and `delayType`. When creating a
-FIXM object from ATS message content, the
-attributes `delayReason`, `delayReference` and `delayType` should be omitted.
+The `PlannedDelay` class additionally has
+attributes `delayReason` and `delayReference` and assocation `delayType`. 
+When creating a FIXM object from ATS message content, `delayReason`, 
+`delayReference` and `delayType` should be omitted.
 
 The image below presents the object model for a fragment of the route in
-the flight plan contained in [Equipment/Capabilities Example](fixm-in-support-of-ffice/translating-ffice-fixm-messages-to-ats-messages?id=equipmentcapabilities-example),
+the flight plan contained in [Equipment/Capabilities Example](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages?id=equipmentcapabilities-example),
 incorporating the information in field 18 DLE:
 
 ```
@@ -547,31 +547,26 @@ DLE/INK0100 26N119W0200
 #### Aircraft Type
 
 When the type of aircraft that conducts a flight does not have an ICAO
-aircraft type designator \[ICAO Doc
-8643\] <sup>[[8]](#references)</sup> or
+aircraft type designator \[ICAO Doc 8643\] <sup>[[8]](#references)</sup> or
 the flight is a formation, the value ZZZZ is inserted in field 9b and
 the aircraft type information is inserted in field 18 TYP. The following
 fragment is an example.
 
-```
--10ZZZZ/M
-
-\....
-
--TYP/2F16 3K35R
-````
+<pre>
+-10<b>ZZZZ</b>/M
+...
+-<b>TYP/2F16 3K35R</b>
+</pre>
 
 Note the structured nature of the TYP field: two F16s, and three K35Rs. The value in field 18 TYP may exhibit structure as in this
 example above for a formation. However, this may not be so in other
 cases, where the (non-designator) type of aircraft is listed, as in
 
-```
--ZZZZ/L
-
-\....
-
--TYP/ECLIPSE 500
-```
+<pre>
+-<b>ZZZZ</b>/L
+...
+-<b>TYP/ECLIPSE 500</b>
+</pre>
 
 The images below present the object model corresponding to each of the
 above flight plan fragments.
@@ -584,7 +579,7 @@ Notes:
 
 - If it is not possible to decode the content of field 18 TYP, create a single instance of class `AircraftType` to record the entire content of 18 TYP.
 - The sum of the `aircraftCount` attributes in each instance of `AircraftType` is the total number of aircraft in the formation.
-- When the flight is not a formation, the `aircraftCount` attribute should be omitted (though it can be included for extra specificity if desired).
+- When the flight is not a formation, the `aircraftCount` attribute should be omitted.
 
 #### Aircraft Registration
 
@@ -607,10 +602,9 @@ sequence.
 #### Departure Aerodrome
 
 When the departure aerodrome for a flight does not have an ICAO location
-indicator code \[ICAO Doc
-7910\] <sup>[[7]](#references)</sup>,
+indicator code \[ICAO Doc 7910\] <sup>[[7]](#references)</sup>,
 the value `ZZZZ` is inserted in field 13a and the departure point is
-inserted in field 18 DEP. According to PANS-ATM the content of 18 DEP is
+inserted in field 18 DEP. According to PANS-ATM, the content of 18 DEP is
 "name and location of departure aerodrome" where the location is
 expressed either as a latitude/longitude or as a bearing and distance
 from a designated point. In the case the aircraft did not take off from
@@ -629,13 +623,11 @@ population of FIXM:
 The image below presents two object models corresponding to the
 following flight plan fragment.
 
-```
--ZZZZ1231
-
-\....
-
--DEP/WESTMEAD HOSPITAL 3349S15059E
-```
+<pre>
+-<b>ZZZZ</b>1231
+...
+-<b>DEP/WESTMEAD HOSPITAL 3349S15059E</b>
+</pre>
 
 ![Image](.//media/translating-ffice-image8.png)
 
@@ -645,15 +637,14 @@ of 18 DEP in the name attribute of `AerodromeReference`.
 
 When creating an ATS message from a FIXM object, if the FIXM object
 contains `locationIndicator` insert its value into field 13a and ignore
-the name and `referencePoint` fields (if present). Otherwise, insert
-`ZZZZ` in field 13a and use a combination of name and `referencePoint` to
-create 18 DEP.
+the name and reference fields (if present). Otherwise, insert `ZZZZ` in 
+field 13a and use a combination of name and `referencePoint` or 
+`referenceRelativePoint` to create 18 DEP.
 
 #### Destination Aerodrome
 
 When the destination aerodrome for a flight does not have an ICAO
-location indicator code \[ICAO Doc
-7910\] <sup>[[7]](#references)</sup>,
+location indicator code \[ICAO Doc 7910\] <sup>[[7]](#references)</sup>,
 the value `ZZZZ` is inserted in field 16a and the destination point is
 inserted in field 18 DEST. According to PANS-ATM the content of 18 DEST
 is "name and location of destination aerodrome" where the location is
@@ -669,14 +660,14 @@ DEST for the population of FIXM:
 -   The name of the departure aerodrome may consist of multiple words so
     it may not be obvious how to parse the content of 18 DEST.
 
-Refer to section [Departure Aerodrome](fixm-in-support-of-ffice/translating-ffice-fixm-messages-to-ats-messages?id=departure-aerodrome) for
+Refer to section [Departure Aerodrome](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages?id=departure-aerodrome) for
 an equivalent example in the context of field 18 DEP.
 
 When creating an ATS message from a FIXM object, if the FIXM object
 contains `locationIndicator` insert its value into field 16a and ignore
-the `name` and `referencePoint` fields (if present). Otherwise, insert
-`ZZZZ` in field 16a and use a combination of name and `referencePoint` to
-create 18 DEST.
+the `name` and reference fields (if present). Otherwise, insert
+`ZZZZ` in field 16a and use a combination of name and `referencePoint` or
+`referenceRelativePoint` to create 18 DEST.
 
 #### Arrival Aerodrome
 
@@ -690,47 +681,41 @@ arrival aerodrome.
 
 -   Record the actual arrival aerodrome in
     attribute `arrivalAerodrome.locationIndicator` of
-    class `Arrival.AerodromeReference`;
+    class `Arrival`;
 
 -   If the actual arrival aerodrome does not have an ICAO location
     indicator, record the arrival aerodrome name in
-    attribute `arrivalAerodorme.name` of class `Arrival.AerodromeReference`.
+    attribute `arrivalAerodrome.name` of class `Arrival`.
 
 The image below presents an object model for destination/arrival
 information assuming reception of the FPL
 
-```
+<pre>
 (FPL-RAQ-VG
-
 -C172/L-V/C
-
 -YBSU0540
-
 -N0115A035 DCT
-
--YRED0021
-
+-<b>YRED</b>0021
 -DOF/140622 REG/RAQ)
-```
+</pre>
 
 Followed by the ARR
 
-```
-(ARR-RAQ-YBSU-YRED-ZZZZ0622 CABOOLTURE)
-```
+<pre>
+(ARR-RAQ-YBSU-YRED-<b>ZZZZ</b>0622 <b>CABOOLTURE</b>)
+</pre>
 
 ![Image](.//media/translating-ffice-image9.png)
 
 When creating an ATS message from a FIXM object, if the FIXM object
-contains `locationIndicator` insert its value into field 17a and ignore
-the `name` field (if present). Otherwise, insert `ZZZZ `in field 17a and
+contains `locationIndicator`, insert its value into field 17a and ignore
+the `name` field (if present). Otherwise, insert `ZZZZ` in field 17a and
 insert the contents of `name` into 17c.
 
 #### Alternate Destination
 
 When the alternate destination aerodrome for a flight does not have an
-ICAO location indicator code \[ICAO Doc
-7910\] <sup>[[7]](#references)</sup>,
+ICAO location indicator code \[ICAO Doc 7910\] <sup>[[7]](#references)</sup>,
 the value `ZZZZ` is inserted in field 16c and the alternate destination
 point is inserted in field 18 ALTN. Although similar to 18 DEP and 18
 DEST there is an added complication that up to two alternates may be
@@ -742,13 +727,11 @@ attribute `destinationAerodromeAlternate` of class `Arrival`.
 The following flight plan fragment presents field 16 and field 18 items
 that relate to destination aerodrome and alternates.
 
-```
--ZZZZ0035 YSBK ZZZZ
-
-........
-
--DEST/WESTMEAD HOSPITAL 3348S15059E ALTN/EASTERN CREEK
-```
+<pre>
+-<b>ZZZZ</b>0035 <b>YSBK ZZZZ</b>
+...
+-<b>DEST/WESTMEAD HOSPITAL 3348S15059E ALTN/EASTERN CREEK</b>
+</pre>
 
 The image below presents the FIXM representation in an object model.
 
@@ -757,25 +740,23 @@ The image below presents the FIXM representation in an object model.
 Decoding is problematic if two free text names are included in ALTN. For
 example, consider the flight plan fragment
 
-```
--YSBK0035 ZZZZ ZZZZ
-
-........
-
--ALTN/WESTMEAD HOSPITAL EASTERN CREEK
-```
+<pre>
+-YSBK0035 <b>ZZZZ ZZZZ</b>
+...
+-<b>ALTN/WESTMEAD HOSPITAL EASTERN CREEK</b>
+</pre>
 
 where `WESTMEAD HOSPITAL` and `EASTERN CREEK` are distinct points. None of
 the tokens are a latitude/longitude or a bearing and distance, so it is
-very difficult to distinguish them. In this case create a single
-alternate location (instance of `AerodromeReference`) and set
-the name attribute to `WESTMEAD HOSPITAL EASTERN CREEK`.
+very difficult to distinguish the two points. In cases such as this, create 
+a single alternate location (instance of `AerodromeReference`) and set the 
+name attribute to `WESTMEAD HOSPITAL EASTERN CREEK`.
 
 When creating an ATS message from a FIXM object, if the FIXM object
-contains `locationIndicator` insert its value into field 16c and ignore
-the name and `referencePoint` fields (if present). Otherwise, insert
-`ZZZZ `in field 16c and use a combination of name and `referencePoint` to
-create 18 ALTN.
+contains `locationIndicator`, insert its value into field 16c and ignore
+the name and reference fields (if present). Otherwise, insert `ZZZZ` in 
+field 16c and use a combination of name and `referencePoint` or 
+`referenceRelativePoint` to create 18 ALTN.
 
 #### En-Route Alternate
 
@@ -784,59 +765,52 @@ alternates. Each alternate is one of:
 
 -   ICAO location indicator;
 
--   Aerodrome name as listed in Aeronautical Information Publication
-    (AIP);
+-   Aerodrome name and/or geographic location as a latitude/longitude or bearing and distance from a navaid.
 
--   Geographic location as a latitude/longitude;
-
--   Bearing and distance from a designated point.
-
-An en-route alternate is represented in the model by
-attribute `alternateAerodrome` of class `EnRoute` in package `Flight.EnRoute`.
+An en-route alternate is represented in the model by attribute 
+`alternateAerodrome` of class `EnRoute` in package `Flight.EnRoute`.
 Each alternate is an `AerodromeReference` (see [this chapter](general-guidance/references-to-published-aeronautical-information?id=references-to-aerodromes)).
 
-The image below presents two object models that represent the en-route
+The image below presents two possible object models that represent the en-route
 alternate listed below.
 
 ```
-RALT/YSBK 3910N02230W WESTMEAD HOSPITAL
+RALT/YSBK WESTMEAD HOSPITAL 3348S15059E
 ```
 
 ![Image](.//media/translating-ffice-image11.png)
 
-The first object shows the fully decoded 18 RALT. The second object
-shows the approach where 18 RALT cannot be decoded successfully: insert
-the entire content of 18 RALT in the name attribute
-of `AerodromeReference`.
+As for other field 18 entries, decoding 18 RALT can be problematic.  The first 
+object shows the fully decoded 18 RALT. The second shows the approach where 
+18 RALT cannot be decoded successfully: inserting the entire content of 18 RALT 
+in the name attribute of `AerodromeReference`.
 
-When creating an ATS message from a FIXM object, if the FIXM object
-contains more than one viable RALT identifier use `locationIndicator` then
-name then `referencePoint` in order of preference for creating 18 RALT.
+When creating an ATS message from a FIXM object, if the FIXM object contains more 
+than one viable RALT identifier, use `locationIndicator` (if available) and ignore 
+the other fields.  Otherwise, use `name` and `referencePoint` or 
+`referenceRelativePoint` for creating 18 RALT.
 
 #### Take-off Alternate
 
-ICAO field 18 TALT, if present, indicates the (one or more) take-off
+ICAO field 18 TALT, if present, indicates the (one or two) take-off
 alternates. Each alternate is one of:
 
 -   ICAO location indicator;
 
--   Aerodrome name as listed in AIP;
-
--   Geographic location as a latitude/longitude;
-
--   Bearing and distance from a designated point.
+-   Aerodrome name and/or geographic location as a latitude/longitude or bearing and distance from a navaid.
 
 A take-off alternate is represented in the model by
 attribute `takeOffAlternateAerodrome` of class `Departure` in
 package `Flight.Departure`. Each alternate is
 an `AerodromeReference` (see [this chapter](general-guidance/references-to-published-aeronautical-information?id=references-to-aerodromes)).
 
-Refer to section [En-Route Alternate](fixm-in-support-of-ffice/translating-ffice-fixm-messages-to-ats-messages?id=en-route-alternate) for
+Refer to section [En-Route Alternate](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages?id=en-route-alternate) for
 an equivalent example in the context of en-route alternate.
 
-When creating an ATS message from a FIXM object, if the FIXM object
-contains more than one viable TALT identifier use `locationIndicator` then
-name then `referencePoint` in order of preference for creating 18 TALT.
+When creating an ATS message from a FIXM object, if the FIXM object contains more 
+than one viable TALT identifier, use `locationIndicator` (if available) and ignore 
+the other fields.  Otherwise, use `name` and `referencePoint` or 
+`referenceRelativePoint` for creating 18 TALT.
 
 #### Air Filed
 
@@ -857,9 +831,7 @@ filed flight plan (fragment) as an object model.
 
 ```
 -AFIL1254
-
-\....
-
+...
 -DEP/YBBBZQZA
 ```
 
@@ -877,7 +849,7 @@ RMK/TCAS II EQUIPPED
 
 results in
 
-```xml
+```
 remarks = TCAS II EQUIPPED
 ````
 
@@ -897,7 +869,7 @@ field 19b and its presence with value `TBN`.
 
 -   When converting ATS message content to FIXM, if field 19b is
     populated with `TBN`, omit the `personsOnBoard` attribute from the
-    FIXM `SupplementaryData` object.
+    FIXM `SupplementaryInformation` class.
 
 -   When converting a FIXM object to ATS message field 19, if
     the `personsOnBoard` attribute is absent, do not include any text for
@@ -919,21 +891,35 @@ field 19 example.
 
 Field 20 of an ATS message, alerting search and rescue information,
 consists of eight items, each of which, if not known by the originator,
-is replaced by `NIL` or `NOT KNOWN`. The first five items are precisely
-defined, but the final three are free text fields, which leads to
-difficulties when decoding.
+is replaced by `NIL` or `NOT KNOWN`. 
 
-It is beyond the scope of this chapter to address such a decoding issue.
+-   When converting ATS message content to FIXM, if an entry is `NIL` 
+    or `NOT KNOWN`, it should be omitted in the FIXM version.
+
+-   When converting a FIXM object to ATS message field 20, if a field 
+    is absent in the FIXM version, supply `NIL` or `NOT KNOWN` in the 
+    ATS version.
+
+The first five items of Field 20 are precisely defined, but the final three 
+are free text fields, which leads to difficulties when decoding. It is beyond 
+the scope of this chapter to address such a decoding issue.
 
 #### Radio Failure Information
 
 Field 21 of an ATS message, radio failure information, consists of six
 items, each of which, if not known by the originator, is replaced
-by `NIL` or `NOT KNOWN`. The first four items are precisely defined, but the
-final two are free text fields, which leads to difficulties when
-decoding.
+by `NIL` or `NOT KNOWN`. 
 
-It is beyond the scope of this chapter to address such a decoding issue.
+-   When converting ATS message content to FIXM, if an entry is `NIL` 
+    or `NOT KNOWN`, it should be omitted in the FIXM version.
+
+-   When converting a FIXM object to ATS message field 21, if a field 
+    is absent in the FIXM version, supply `NIL` or `NOT KNOWN` in the 
+    ATS version.
+
+The first four items are precisely defined, but the final two are free text 
+fields, which leads to difficulties when decoding. It is beyond the scope of 
+this chapter to address such a decoding issue.
 
 ### Base Constructs
 
@@ -953,8 +939,9 @@ class `FlightLevelOrAltitudeChoice` in package `Base.RangesAndChoices`. It
 consists of a choice between flight level (class `FlightLevel`) or
 altitude (class `Altitude`). In each case a unit of measure is specified
 (respectively `UomFlightLevel` and `UomAltitude`) and a vertical distance
-(class `VerticalDistance` in package `Base.Measures`) expressed as a
-floating point number. Table 3 provides a mapping between the
+(inherited from, respectively, class `RestrictedVerticalDistance` or 
+`VerticalDistance` in package `Base.Measures`) expressed as a
+decimal number. Table 3 provides a mapping between the
 level/altitude in PANS-ATM ATS messages and the level/altitude in FIXM.
 
 Table 3: Level/Altitude Mapping
@@ -968,13 +955,9 @@ Table 3: Level/Altitude Mapping
 
 Notes:
 
--   For ICAO flight level type `F`, the ICAO and FIXM values are the same
-    (though the ICAO value is a whole number while the FIXM value is a
-    floating point number).
+-   For ICAO flight level type `F`, the ICAO and FIXM values are the same.
 
--   For ICAO flight level type `S`, the ICAO and FIXM values are the same
-    (though the ICAO value is a whole number while the FIXM value is a
-    floating point number).
+-   For ICAO flight level type `S`, the ICAO and FIXM values are the same.
 
 -   For ICAO altitude type `A`, multiply by 100 when converting to FIXM.
 
@@ -993,11 +976,11 @@ Notes:
 
 #### TrueAirspeed
 
-In ATS messaging speed is either true air speed or Mach number. This is
+In ATS messaging, speed is either true air speed or Mach number. This is
 captured by class `TrueAirspeed` in package `Base.Measures`. It consists of
-the unit of measurement (class `UomAirspeed`) and a (floating point)
-value. Table 4 provides a mapping between the speed in ATS messages and
-the speed in FIXM.
+the unit of measurement (class `UomAirspeed`) and a (decimal) value. Table 
+4 provides a mapping between the speed in ATS messages and the speed in 
+FIXM.
 
 Table 4: Speed Mapping
 
@@ -1009,8 +992,8 @@ Table 4: Speed Mapping
 
 Notes:
 
--   In an ATS message the Mach value is represented by a three-digit
-    string, which when interpreted as a number is 100 times greater than
+-   In an ATS message, the Mach value is represented by a three-digit
+    string, which, when interpreted as a number, is 100 times greater than
     the Mach value (e.g. M080 is Mach 0.8).
 
 -   Converting from FIXM to ATS message, multiply by 100 and round.
@@ -1051,38 +1034,41 @@ Convert back to FIXM: 12.4166... degrees
 
 A significant point can be a designated point, a navaid, a geographic
 location (latitude/longitude), a relative point (bearing and distance
-from a designated point), or an aerodrome. The five classes
-under `SignificantPointChoice` capture these options:
+from a navaid), or an aerodrome. The five classes under 
+`SignificantPointChoice` capture these options:
 
--   Class `DesignatedPoint` models the designated point value via
-    designator of class `DesignatedPointDesignator`.
+-   Class `DesignatedPoint` models the designated point value via a
+    designator of class `DesignatedPointDesignator` along with an optional
+    `position` (a `GeographicalPosition` as below).
 
--   Class `Navaid` models the navaid via designator of class
-    `NavaidDesignator`.
+-   Class `Navaid` models the navaid via a designator of class
+    `NavaidDesignator` along with an optional `position` (a 
+    `GeographicalPosition` as below).
 
--   Class `RelativePoint` models the relative point via
-    attributes `referencePoint` (a `Navaid`), `bearing` and `distance`.
+-   Class `RelativePoint` models the relative point via a
+    `referencePoint` (a `Navaid` as above), `bearing`, and `distance` along 
+    with an optional `position` (a `GeographicalPosition` as below).
 
 -   Class `GeographicalPosition` models the geographical location via
     attribute `pos` of class `LatLongPos` ([see GeographicalPosition](general-guidance/geographical-positions)).
 
 -   Class `AerodromeReference` models the aerodrome via attributes
-    `locationIndicator`, `name`, and `referencePoint`.
+    `locationIndicator`, `name`, `referencePoint` (a 
+    `GeographicalPosition` as above), and `referenceRelativePoint` 
+    (a `RelativePoint` as above).
 
-Examples of significant points are presented in [Departure
-Aerodrome](fixm-in-support-of-ffice/translating-ffice-fixm-messages-to-ats-messages?id=departure-aerodrome) and [En-Route
-Alternate](fixm-in-support-of-ffice/translating-ffice-fixm-messages-to-ats-messages?id=en-route-alternate)
+Examples of significant points are presented in [Field 15 Overall Example](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages?id=field-15-overall-example) 
+and [DLE](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages?id=dle)
 
 #### Frequency
 
 Radio frequency can appear in fields 20d and 21b of an ATS message. In
-all examples in PANS-ATM this is presented as an unadorned decimal
+all examples in PANS-ATM, this is presented as an unadorned decimal
 number (e.g. 126.7). The expanded text in PANS-ATM describing the
 examples always states MHz.
 
 The global guidance for ATC Interfacility Data Communications (AIDC)
-\[PAN AIDC
-ICD\] <sup>[[9]](#references)</sup> is
+\[PAN AIDC ICD\] <sup>[[9]](#references)</sup> is
 more specific as presented in Table 5.
 
 Table 5: PAN AIDC ICD Frequency
