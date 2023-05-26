@@ -12,6 +12,7 @@
 	</fx:departure>
 	<fx:routeTrajectoryGroup>
 		<fx:desired>
+			<!-- ROUTE ELEMENT 1 -->
 			<fx:element seqNum="0">
 				<fx:alongRouteDistance uom="NM">0.0</fx:alongRouteDistance>
 				<fx:elementStartPoint>
@@ -23,6 +24,7 @@
 					<fx:otherRouteDesignator>DIRECT</fx:otherRouteDesignator>
 				</fx:routeDesignatorToNextElement>
 			</fx:element>
+			<!-- ROUTE ELEMENT 2 -->
 			<fx:element seqNum="1">
 				<fx:alongRouteDistance uom="NM">6.12</fx:alongRouteDistance>
 				<fx:elementStartPoint>
@@ -34,6 +36,7 @@
 					<fx:routeDesignator>V268</fx:routeDesignator>
 				</fx:routeDesignatorToNextElement>
 			</fx:element>
+			<!-- ROUTE ELEMENT 3 -->
 			<fx:element seqNum="2">
 				<fx:alongRouteDistance uom="NM">48.67</fx:alongRouteDistance>
 				<fx:elementStartPoint>
@@ -45,6 +48,7 @@
 					<fx:otherRouteDesignator>DIRECT</fx:otherRouteDesignator>
 				</fx:routeDesignatorToNextElement>
 			</fx:element>
+			<!-- ROUTE ELEMENT 4 -->
 			<fx:element seqNum="3">
 				<fx:alongRouteDistance uom="NM">72.47</fx:alongRouteDistance>
 				<fx:elementStartPoint>
