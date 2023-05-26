@@ -209,7 +209,7 @@ INITIAL_STATE
 CLICK_HERE>Click here to report a new bug]
 end click_here_to_report_a_bug
 
-click CLICK_HERE "[https://teams.microsoft.com/l/entity/2a527703-1f6f-4559-a332-d8a7d288cd88/_djb2_msteams_prefix_3974824283?context=%7B%22subEntityId%22%3Anull%2C%22channelId%22%3A%2219%3A1922dacb8fd24c2cb21a0a188d3e8f43%40thread.tacv2%22%7D&groupId=75ac9b42-6d91-445a-98b7-df959b285110&tenantId=76f33c20-5979-4408-adf7-8b3c4be95e52&allowXTenantAccess=false](https://teams.microsoft.com/l/entity/2a527703-1f6f-4559-a332-d8a7d288cd88/_djb2_msteams_prefix_3974824283?context=%7B%22subEntityId%22%3Anull%2C%22channelId%22%3A%2219%3A1922dacb8fd24c2cb21a0a188d3e8f43%40thread.tacv2%22%7D&groupId=75ac9b42-6d91-445a-98b7-df959b285110&tenantId=76f33c20-5979-4408-adf7-8b3c4be95e52&allowXTenantAccess=false)" "Click to report a new bug" _blank
+click CLICK_HERE "https://teams.microsoft.com/l/entity/2a527703-1f6f-4559-a332-d8a7d288cd88/_djb2_msteams_prefix_3974824283?context=%7B%22subEntityId%22%3Anull%2C%22channelId%22%3A%2219%3A1922dacb8fd24c2cb21a0a188d3e8f43%40thread.tacv2%22%7D&groupId=75ac9b42-6d91-445a-98b7-df959b285110&tenantId=76f33c20-5979-4408-adf7-8b3c4be95e52&allowXTenantAccess=false" "Click to report a new bug"
 ```
 
 - a) A FIXM Bug can be reported at any time by any `FIXM stakeholder`. A FIXM Bug being reported is visible to the entire `FIXM CoI` and can be discussed by all the members of the `FIXM CoI`.
@@ -269,7 +269,7 @@ INITIAL_STATE
 CLICK_HERE>Click here to submit a new FIXM CR]
 end click_here_to_submit_a_cr
 
-click CLICK_HERE "[https://teams.microsoft.com/l/entity/2a527703-1f6f-4559-a332-d8a7d288cd88/_djb2_msteams_prefix_3304927545?context=%7B%22subEntityId%22%3Anull%2C%22channelId%22%3A%2219%3A9a9dc2f87f224a4fac86e8b96b2b1a81%40thread.tacv2%22%7D&groupId=75ac9b42-6d91-445a-98b7-df959b285110&tenantId=76f33c20-5979-4408-adf7-8b3c4be95e52&allowXTenantAccess=false](https://teams.microsoft.com/l/entity/2a527703-1f6f-4559-a332-d8a7d288cd88/_djb2_msteams_prefix_3304927545?context=%7B%22subEntityId%22%3Anull%2C%22channelId%22%3A%2219%3A9a9dc2f87f224a4fac86e8b96b2b1a81%40thread.tacv2%22%7D&groupId=75ac9b42-6d91-445a-98b7-df959b285110&tenantId=76f33c20-5979-4408-adf7-8b3c4be95e52&allowXTenantAccess=false)" "Click to issue a new change request" _blank
+click CLICK_HERE "https://teams.microsoft.com/l/entity/2a527703-1f6f-4559-a332-d8a7d288cd88/_djb2_msteams_prefix_3304927545?context=%7B%22subEntityId%22%3Anull%2C%22channelId%22%3A%2219%3A9a9dc2f87f224a4fac86e8b96b2b1a81%40thread.tacv2%22%7D&groupId=75ac9b42-6d91-445a-98b7-df959b285110&tenantId=76f33c20-5979-4408-adf7-8b3c4be95e52&allowXTenantAccess=false" "Click to issue a new change request"
 ```
 
 - a) A FIXM CR can be issued at any time by any `FIXM stakeholder`.
