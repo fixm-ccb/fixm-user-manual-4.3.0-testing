@@ -18,6 +18,9 @@
 				<fx:elementStartPoint>
 					<fb:aerodromeReferencePoint>
 						<fb:locationIndicator>KHGR</fb:locationIndicator>
+						<fb:referencePoint srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>39.70861111 -77.72638889</fb:pos>
+						</fb:referencePoint>
 					</fb:aerodromeReferencePoint>
 				</fx:elementStartPoint>
 				<fx:routeDesignatorToNextElement>
@@ -30,6 +33,9 @@
 				<fx:elementStartPoint>
 					<fb:navaid>
 						<fb:designator>HGR</fb:designator>
+						<fb:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>39.69777778 -77.85583333</fb:pos>
+						</fb:position>
 					</fb:navaid>
 				</fx:elementStartPoint>
 				<fx:routeDesignatorToNextElement>
@@ -38,22 +44,43 @@
 			</fx:element>
 			<!-- ROUTE ELEMENT 3 -->
 			<fx:element seqNum="2">
+				<fx:alongRouteDistance uom="NM">34.48</fx:alongRouteDistance>
+				<fx:elementStartPoint>
+					<fb:designatedPoint>
+						<fb:designator>KEMAR</fb:designator>
+						<fb:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>39.5625 -77.26722222</fb:pos>
+						</fb:position>
+					</fb:designatedPoint>
+				</fx:elementStartPoint>
+				<fx:routeDesignatorToNextElement>
+					<fx:routeDesignator>V268</fx:routeDesignator>
+				</fx:routeDesignatorToNextElement>
+			</fx:element>
+			<!-- ROUTE ELEMENT 4 -->
+			<fx:element seqNum="3">
 				<fx:alongRouteDistance uom="NM">48.67</fx:alongRouteDistance>
 				<fx:elementStartPoint>
 					<fb:navaid>
 						<fb:designator>EMI</fb:designator>
+						<fb:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>39.495 -76.97861111</fb:pos>
+						</fb:position>
 					</fb:navaid>
 				</fx:elementStartPoint>
 				<fx:routeDesignatorToNextElement>
 					<fx:otherRouteDesignator>DIRECT</fx:otherRouteDesignator>
 				</fx:routeDesignatorToNextElement>
 			</fx:element>
-			<!-- ROUTE ELEMENT 4 -->
-			<fx:element seqNum="3">
+			<!-- ROUTE ELEMENT 5 -->
+			<fx:element seqNum="4">
 				<fx:alongRouteDistance uom="NM">72.47</fx:alongRouteDistance>
 				<fx:elementStartPoint>
 					<fb:aerodromeReferencePoint>
 						<fb:locationIndicator>KBWI</fb:locationIndicator>
+						<fb:referencePoint srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>39.17583333 -76.66888889</fb:pos>
+						</fb:referencePoint>
 					</fb:aerodromeReferencePoint>
 				</fx:elementStartPoint>
 			</fx:element>
