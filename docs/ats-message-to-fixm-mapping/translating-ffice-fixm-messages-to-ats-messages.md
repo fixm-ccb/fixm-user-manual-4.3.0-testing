@@ -182,7 +182,7 @@ highlighted.
 0500S17435W 06S176W 12S176E/M084F380 18S168E 2125S16300E GUXIB R587
 HARVS Q21 SAVER G329 BN DCT
 -YBBN1519
--<b>PBN/A1B1D1L1S1 NAV/GPSRNAV RNVD1A1</b> DOF/130202 REG/VHOEG
+-<b>PBN/A1B1D1L1S1 NAV/GPSRNAV RNVD1A1</b> DOF/191003 REG/VHOEG
 DLE/INK0100 26N119W0200 SEL/MQDE
 PER/D RIF/GUXIB R587 MEPAB G591 LTO NWWW)
 </pre>
@@ -246,7 +246,7 @@ parts of the following flight plan fragment.
 -YSSY<b>2315</b>
 -N0501F280 ...
 -YBBN0115
--<b>DOF/141105</b>
+-<b>DOF/210403</b>
 </pre>
 
 ![Image](.//media/translating-ffice-image2.png)
@@ -385,7 +385,7 @@ Route String: <b>MRSSH2</b> ZALEA DCT SWB DCT HRV Q105 BLVNS Y290 BAGGS <b>SSCOT
         STAR: SSCOT5
 </pre>
 
-![Image](.//media/translating-ffice-image16.png)
+![Image](.//media/translating-ffice-image14.png)
 
 ![Image](.//media/translating-ffice-image15.png)
 
@@ -554,10 +554,10 @@ fragment is an example.
 <pre>
 -10<b>ZZZZ</b>/M
 ...
--<b>TYP/2F16 3K35R</b>
+-<b>TYP/2F15 4K35R 3B2</b>
 </pre>
 
-Note the structured nature of the TYP field: two F16s, and three K35Rs. The value in field 18 TYP may exhibit structure as in this
+Note the structured nature of the TYP field: two F15s, four K35Rs, and three B2s. The value in field 18 TYP may exhibit structure as in this
 example above for a formation. However, this may not be so in other
 cases, where the (non-designator) type of aircraft is listed, as in
 
@@ -570,13 +570,11 @@ cases, where the (non-designator) type of aircraft is listed, as in
 The images below present the object model corresponding to each of the
 above flight plan fragments.
 
-![Image](.//media/Aircraft_AircraftType_AircraftTypeChoice_1.png)
-
-![Image](.//media/Aircraft_AircraftType_AircraftTypeChoice_2.png)
+![Image](.//media/translating-ffice-image7.png)
 
 Notes:
 
-- If it is not possible to decode the content of field 18 TYP, create a single instance of class `AircraftType` to record the entire content of 18 TYP.
+- If it is not possible to decode the content of field 18 TYP, create a single instance of class `AircraftType` to record the entire content of 18 TYP under `otherAircraftType`.
 - The sum of the `aircraftCount` attributes in each instance of `AircraftType` is the total number of aircraft in the formation.
 - When the flight is not a formation, the `aircraftCount` attribute should be omitted.
 
@@ -695,7 +693,7 @@ information assuming reception of the FPL
 -YBSU0540
 -N0115A035 DCT
 -<b>YRED</b>0021
--DOF/140622 REG/RAQ)
+-DOF/160502 REG/RAQ)
 </pre>
 
 Followed by the ARR
@@ -729,7 +727,7 @@ that relate to destination aerodrome and alternates.
 <pre>
 -<b>ZZZZ</b>0035 <b>YSBK ZZZZ</b>
 ...
--<b>DEST/WESTMEAD HOSPITAL 3348S15059E ALTN/EASTERN CREEK</b>
+-<b>DEST/WESTMEAD HOSPITAL 3349S15059E ALTN/EASTERN CREEK</b>
 </pre>
 
 The image below presents the FIXM representation in an object model.
@@ -774,7 +772,7 @@ The image below presents two possible object models that represent the en-route
 alternate listed below.
 
 ```
-RALT/YSBK WESTMEAD HOSPITAL 3348S15059E
+RALT/YSBK WESTMEAD HOSPITAL 3349S15059E
 ```
 
 ![Image](.//media/translating-ffice-image11.png)
