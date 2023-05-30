@@ -37,6 +37,7 @@
   - [FF-ICE message templates](fixm-in-support-of-ffice/message-templates.md)
   - [Route/Trajectory Example Data](fixm-in-support-of-ffice/example_data.md)
 
+
 - **Using FIXM for other use cases**
   - [Using FIXM Core without a FIXM Application](fixm-for-other-use-cases/using-fixm-core-without-an-application.md)
   - [Using FIXM Core with a FIXM Application](fixm-for-other-use-cases/using-fixm-core-with-an-application.md)
@@ -84,6 +85,7 @@
   - [Future testing](fixm-development-tool-compatibility/future-testing.md)
   - [Platform support matrix](fixm-development-tool-compatibility/platform-support-matrix.md)
   - [Other topics](fixm-development-tool-compatibility/other-topics.md)
+
 
 - **License**
   - [Copyright 2023](https://fixm.aero/disclaimer.html)
