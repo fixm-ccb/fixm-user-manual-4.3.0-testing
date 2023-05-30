@@ -65,7 +65,7 @@ within the FIXM (Base) namespace<sup><a href="#general-guidance/references-to-pu
 
 ### Logical Model
 
-![Image](.//media/image13.png ':size=50%')
+![Image](..//media/image13.png ':size=50%')
 
 UML Class `DesignatedPoint` in package `FIXM.Base.AeronauticalReference`
 
@@ -331,7 +331,7 @@ to these cases. The following table quotes a few random examples.
 
 ### Logical Model
 
-![Image](.//media/image14.png ':size=50%')
+![Image](..//media/image14.png ':size=50%')
 
 UML Class `Navaid` in package `FIXM.Base.AeronauticalReference`
 
@@ -493,7 +493,7 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 
 ### Logical Model
 
-![Image](.//media/image15.png ':size=50%')
+![Image](..//media/image15.png ':size=50%')
 
 UML Class `AerodromeReference` in package `FIXM.Base.AeronauticalReference`
 
@@ -633,7 +633,7 @@ is at the discretion of the consuming system / service.
 
 ### Logical Model
 
-![Image](.//media/image16.png ':size=50%')
+![Image](..//media/image16.png ':size=50%')
 
 UML Class `RunwayDirectionDesignator` in package `FIXM.Base.AeronauticalReference`
 
@@ -718,7 +718,7 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 
 ### Logical Model
 
-![Image](.//media/image17.png)
+![Image](..//media/image17.png)
 
 UML Class `RouteDesignator` in package `FIXM.Base.AeronauticalReference`
 
@@ -808,7 +808,7 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 
 ### Logical Model
 
-![Image](.//media/image18.png)
+![Image](..//media/image18.png)
 
 UML Class `SidStarReference` in package `FIXM.Base.AeronauticalReference`
 
@@ -980,7 +980,7 @@ specification, chapter 7.4. Example:
 
 ### Logical Model
 
-![Image](.//media/image19.png)
+![Image](..//media/image19.png)
 
 UML Class `AirspaceDesignator` in package `FIXM.Base.AeronauticalReference`
 
@@ -1081,7 +1081,7 @@ Examples (NOT for OPERATIONAL USE)
 
 ### Logical Model
 
-![Image](.//media/image20.png ':size=50%')
+![Image](..//media/image20.png ':size=50%')
 
 UML Class `ATCUnitReference` in package `FIXM.Base.AeronauticalReference`
 
