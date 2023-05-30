@@ -493,7 +493,7 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 
 ### Logical Model
 
-![Image](..//media/image15.png ':size=50%')
+![Image](..//media/image15.png ':size=75%')
 
 UML Class `AerodromeReference` in package `FIXM.Base.AeronauticalReference`
 
@@ -718,7 +718,7 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 
 ### Logical Model
 
-![Image](..//media/image17.png)
+![Image](..//media/image17.png ':size=120%')
 
 UML Class `RouteDesignator` in package `FIXM.Base.AeronauticalReference`
 
@@ -808,7 +808,7 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 
 ### Logical Model
 
-![Image](..//media/image18.png)
+![Image](..//media/image18.png ':size=120%')
 
 UML Class `SidStarReference` in package `FIXM.Base.AeronauticalReference`
 
@@ -980,7 +980,7 @@ specification, chapter 7.4. Example:
 
 ### Logical Model
 
-![Image](..//media/image19.png)
+![Image](..//media/image19.png ':size=120%')
 
 UML Class `AirspaceDesignator` in package `FIXM.Base.AeronauticalReference`
 
@@ -1081,7 +1081,7 @@ Examples (NOT for OPERATIONAL USE)
 
 ### Logical Model
 
-![Image](..//media/image20.png ':size=50%')
+![Image](..//media/image20.png ':size=75%')
 
 UML Class `ATCUnitReference` in package `FIXM.Base.AeronauticalReference`
 
