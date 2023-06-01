@@ -13,7 +13,7 @@ use the `Basic Message Application`.
 This FIXM Application contains two root fields that can be used as an
 entry point: `Message` and `MessageCollection`.
 
-![Basic Message Application](.//media/other-using-fixm-core-with-an-application-library-01.PNG "Basic Message Application")
+![Basic Message Application](.//media/other-using-fixm-core-with-an-application-library-01.png "Basic Message Application")
 
 When using Basic Message for data representation, all XML documents must
 begin with one of these two elements. Similarly, like `Fixm.xsd` for Core,
