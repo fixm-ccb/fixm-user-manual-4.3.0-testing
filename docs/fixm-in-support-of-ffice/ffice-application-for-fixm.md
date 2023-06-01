@@ -39,7 +39,7 @@ Application include:
 The FF-ICE Message data structures are traceable to the FF-ICE
 Implementation Guidance Manual Appendix B. For instance:
 
-![Example of FF-ICE Message data structures tracing to the FF-ICE Implementation Guidance Manual, Appendix B](.//media/image29.png "Example of FF-ICE Message data structures tracing to the FF-ICE Implementation Guidance Manual, Appendix B")
+![Example of FF-ICE Message data structures tracing to the FF-ICE Implementation Guidance Manual, Appendix B](.//media/image29.png "Example of FF-ICE Message data structures tracing to the FF-ICE Implementation Guidance Manual, Appendix B" ':size=40%')
 
 The FF-ICE message data structures other than Choices and Enumerations are
 extendable. This enables implementers to accommodate additional FF-ICE
