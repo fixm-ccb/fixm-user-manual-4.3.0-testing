@@ -9,7 +9,7 @@ Manual (ICAO Doc 9965 Volume II)<sup>[[6]](#references)</sup>.
 
 The content of the FF-ICE Application is the following:
 
-![Overview of the FF-ICE Application content](.//media/ffice-application-library-for-fixm-01.PNG "Overview of the FF-ICE Application content")
+![Overview of the FF-ICE Application content](.//media/ffice-application-library-for-fixm-01.png "Overview of the FF-ICE Application content")
 
 The FF-ICE Application, together with FIXM Core, is developed and published by the FIXM CCB.
 
