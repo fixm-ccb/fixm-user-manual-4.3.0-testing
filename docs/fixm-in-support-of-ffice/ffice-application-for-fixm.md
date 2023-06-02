@@ -50,7 +50,7 @@ similar fashion as for FIXM Core data structures.
 The picture below provides an overview of the FF-ICE Message data
 structures modelled in the FF-ICE Application.
 
-![Overview of the FF-ICE Message Data Structures](.//media/image30.png "Overview of the FF-ICE Message Data Structures")
+![Overview of the FF-ICE Message Data Structures](.//media/image30.png ':size=80%')
 
 ## References
 
