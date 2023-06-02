@@ -4,7 +4,7 @@
 
 ### Logical Model
 
-![Image](..//media/image21.png)
+![Image](.//media/image21.png)
 
 UML Class `RelativePoint` in package `FIXM.Base.AeronauticalReference`
 
