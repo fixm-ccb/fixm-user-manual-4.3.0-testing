@@ -61,7 +61,7 @@ Table 2: Example of the FF-ICE Flight Cancellation Message
 The FF-ICE Application translates this table into an implementable message template. This is illustrated by the picture
 below. The message template resulting from the translation of this table is displayed with a blue background.
 
-![The FF-ICE Flight Cancellation Message Template](.//media/image31.png "The FF-ICE Flight Cancellation Message Template")
+![The FF-ICE Flight Cancellation Message Template](.//media/image31.png ':size=40%')
 
 ### Explanations
 
