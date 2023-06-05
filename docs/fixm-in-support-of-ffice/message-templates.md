@@ -61,7 +61,7 @@ Table 2: Example of the FF-ICE Flight Cancellation Message
 The FF-ICE Application translates this table into an implementable message template. This is illustrated by the picture
 below. The message template resulting from the translation of this table is displayed with a blue background.
 
-![The FF-ICE Flight Cancellation Message Template](.//media/image31.png ':size=80%')
+![The FF-ICE Flight Cancellation Message Template](.//media/image31.png "The FF-ICE Flight Cancellation Message Template")
 
 ### Explanations
 
@@ -77,7 +77,7 @@ class that generalizes the class to be restricted and then applying the
 `<<XSDrestriction>>` stereotype to the generalization
 connector, as shown in brown on the picture above.
 
-![Explanations](.//media/image33.png  ':size=50%')
+![Explanations](.//media/image33.png  ':size=70%')
 
 XML elements being irrelevant in the context of the message template are
 eliminated by removing them from the model, as shown in red on the
