@@ -24,8 +24,8 @@ Here is a list of off-the-shelf IT libraries whose use is recommended for the UU
 |Language|URL|Notes|
 |:-|:-|:-|
 |Java|https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/UUID.html#randomUUID()||
+|.NET|https://learn.microsoft.com/en-us/dotnet/api/system.guid.newguid?view=net-7.0#system-guid-newguid||
 |Python|https://docs.python.org/3/library/uuid.html#uuid.uuid4||
-|..|..|..|
 
 #### Encoding the namespace
 
@@ -34,14 +34,14 @@ The namespace is encoded using two fields: the `namespace domain` and the `names
 - `namespace domain` = `OPERATING_AGENCY_DESIGNATOR` when the `namespace identifier` is a three-letter Operating Agency Designator (as per ICAO Doc. 8585).
 - `namespace domain` = `LOCATION_INDICATOR` when the `namespace identifier` is a four-letter Location Indicator (as per ICAO Doc. 7910). 
 
-It is up to each GUFI originator to choose the most suitable option for the namespace but keep in mind the intent is for the namespace chosen to uniquely identify the GUFI originator. It is also recommended that the GUFI originator use a single consistent namespace whenever possible to allow namespace uniqueness to be testable for that organisation.
+It is up to each GUFI originator to choose the most suitable option for the namespace, but keep in mind that the intent is for the namespace chosen to uniquely identify the GUFI originator. It is also recommended that the GUFI originator use a single consistent namespace whenever possible to allow namespace uniqueness to be testable for that organisation.
 
 ?> Note: The GUFI originator is not necessarily the flight plan or message originator, although they may be the same entity. For example, it is possible that an independent GUFI creation service could be used by flight plan originators that do not wish to create their own GUFIs. The namespace associated with these GUFIs would be that of the creation service and would have no connection to the flight plan originator.
 
 
 #### Encoding the creation timestamp
 
-The creation timestamp is expressed as a `DateTimeUTC`. For more guidance, see page ADD LINK.
+The creation timestamp is expressed as a `DateTimeUTC`. For more guidance, see [this section](general-guidance/date-time-specification.md).
 
 
 #### Examples of GUFI encoding
@@ -68,7 +68,7 @@ The creation timestamp is expressed as a `DateTimeUTC`. For more guidance, see p
 
 ---
 
-- Example of GUFI encoding whereby the originator of the GUFI is an organisation identified by its registered specific internet Fully Qualified Domain Name.
+- Example of GUFI encoding whereby the originator of the GUFI is an organisation identified by its registered, specific internet Fully Qualified Domain Name.
 
 ```xml
 <!-- xmlns:fx="http://www.fixm.aero/flight/4.3" -->
