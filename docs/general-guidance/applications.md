@@ -99,7 +99,7 @@ validate.
 
 ## How to build a FIXM Application?
 
-[This chapter](how-to-create-application/initial-download-and-setup.md.md) provides detailed guidance for creating FIXM Applications.
+[This chapter](how-to-create-application/introduction.md) provides detailed guidance for creating FIXM Applications.
 
 ## Notes
 
