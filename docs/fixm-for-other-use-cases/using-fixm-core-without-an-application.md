@@ -33,14 +33,16 @@ alert coming from this service may appear.
 <?xml version="1.0" encoding="UTF-8"?>
 <fx:Flight xmlns:fx="http://www.fixm.aero/flight/4.3" xmlns:fb="http://www.fixm.aero/base/4.3">
   <fx:departure>
-    <fx:actualTimeOfDeparture>2020-01-01T00:03:00Z</fx:actualTimeOfDeparture>
-    <fx:aerodrome>
+    <fx:actualTimeOfDeparture>
+      <fx:time>2020-01-01T00:03:00Z</fx:time>
+    </fx:actualTimeOfDeparture>
+    <fx:departureAerodrome>
       <fb:locationIndicator>KBOS</fb:locationIndicator>
-    </fx:aerodrome>
+    </fx:departureAerodrome>
   </fx:departure>
   <fx:flightIdentification>
     <fx:aircraftIdentification>ABC1234</fx:aircraftIdentification>
+    <fx:gufi codeSpace="urn:uuid" creationTime="2018-05-21T15:03:00Z" namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME" namespaceIdentifier="example.com">3e7f6a63-6c3b-4f0f-844b-4b84338ed103</fx:gufi>
   </fx:flightIdentification>
-  <fx:gufi codeSpace="urn:uuid">3e7f6a63-6c3b-4f0f-844b-4b84338ed103</fx:gufi>
 </fx:Flight>
 ```
