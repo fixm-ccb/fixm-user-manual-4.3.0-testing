@@ -15,8 +15,7 @@ departure alerts and arrival alerts.
 ## Create an Overall Template Container
 
 The steps for creating this package are largely identical to those
-outlined in [Create an Application
-Package](#create-an-application-package) above. Key differences are
+outlined in [Create an Application Package](/how-to-create-application/create-an-application-package). Key differences are
 noted below.
 
 1. Begin by right clicking on your Application package and choose “Add
@@ -32,8 +31,8 @@ noted below.
     ![Image](.//media/image100.png)
 
 3. Apply a schema stereotype and begin setting up schema properties as
-    outlined in [Apply Schema Stereotype](#apply-schema-stereotype) and
-    [Set Up Schema Properties](#set-up-schema-properties) using
+    outlined in [Apply Schema Stereotype](/how-to-create-application/create-an-application-package?id=apply-schema-stereotype) and
+    [Set Up Schema Properties](/how-to-create-application/create-an-application-package?id=set-up-schema-properties) using
     the same *Target Namespace* and *Prefix* as was used for your
     Application package<sup><a href="#how-to-create-application/create-templates?id=notes">[note 1]</a></sup>.
 
@@ -73,7 +72,7 @@ See below for examples showing how each Namespace Details dialogue box should be
     ![Image](.//media/image105.png)
 
 7. Finally, follow the steps outlined in [Add Schema Description and
-    Tags](#add-schema-description-and-tags) to complete the setup of
+    Tags](/how-to-create-application/create-an-application-package?id=add-schema-description-and-tags) to complete the setup of
     your template container.
 
 ## Create a Container for each Type of Message Template
@@ -169,7 +168,7 @@ an associated diagram – some packages won’t), their schema descriptions,
 and the *Schema File* field of their schema properties.
 
 1. Follow the steps outlined in [Create an Application
-    Package](#create-an-application-package) to recreate, under your
+    Package](/how-to-create-application/create-an-application-package) to recreate, under your
     message template container, the packages you wish to restrict in
     your template. All names, properties, descriptions, tags, etc.,
     should be the same<sup><a href="#how-to-create-application/create-templates?id=notes">[note 3]</a></sup>. except:
@@ -270,7 +269,7 @@ When constructing a template, we found it easiest to start at the leaf
 3. Create a new class of the same type as the class you wish to
     restrict. In this example, that would be a complexType class,
     created as outlined in [Create a ComplexType
-    Class](#create-a-complextype-class). The *Name* and *Annotation*
+    Class](/how-to-create-application/create-application-content?id=create-a-complextype-class). The *Name* and *Annotation*
     should be the same as the class you are restricting except the
     *Name* should begin with your template’s prefix.
 
@@ -314,7 +313,7 @@ you wish to retain.
 
 We will begin with class attributes. If desired, attributes can be added
 by following the steps listed in [Add an Attribute to a
-Class](#add-an-attribute-to-a-class), being sure to replicate the values
+Class](/how-to-create-application/create-application-content?id=add-an-attribute-to-a-class), being sure to replicate the values
 used by the attributes in the class you are restricting. However, the
 steps listed below can be used as a shortcut that should make adding the
 attributes both easier and less error prone.
@@ -416,7 +415,7 @@ In this example, the first association we will add back in is
     ![Image](.//media/image136.png)
 
 2. Use the steps detailed in [Add an Association Between
-    Classes](#add-an-association-between-classes) to create the
+    Classes](/how-to-create-application/create-application-content?id=add-an-association-between-classes) to create the
     association desired for your restricted class. Like with class
     attributes, you will want to reuse all of the same values as the
     original association with the possible exception of multiplicity and
@@ -765,7 +764,7 @@ to increase its usability with a number of XML tools. The packages
 contained under the Includes package facilitate this and will be
 modified by the post-processing script to contain the needed content
 (see [Set Up and Use Package-Wide Include
-Files](how-to-create-application/post-process-the-application-schemas?id=set-up-and-use-package-wide-include-files) for more
+Files](/how-to-create-application/post-process-the-application-schemas?id=set-up-and-use-package-wide-include-files) for more
 details).
 
 1. Right click on your overall templates container (in this example,
@@ -788,9 +787,9 @@ details).
     ![Image](.//media/image192.png)
 
 5. Follow the steps detailed in [Apply Schema
-    Stereotype](#apply-schema-stereotype), [Set Up Schema
-    Properties](#set-up-schema-properties), and [Add Schema Description
-    and Tags](#add-schema-description-and-tags) to configure this
+    Stereotype](/how-to-create-application/create-an-application-package?id=apply-schema-stereotype), [Set Up Schema
+    Properties](/how-to-create-application/create-an-application-package?id=set-up-schema-properties), and [Add Schema Description
+    and Tags](/how-to-create-application/create-an-application-package?id=add-schema-description-and-tags) to configure this
     package. The *Target Namespace* and *Prefix* fields should match
     those of the schemas you will be importing, as should the “version”
     tag. The *Schema File* field should be set to something appropriate
