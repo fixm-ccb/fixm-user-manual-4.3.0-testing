@@ -27,7 +27,7 @@ namespace prefix needs to be added to the script for proper processing.
     the search field. These lines need to be modified to include the
     namespace prefix used by your Application.
 
-    For the example created here, this change should be implemented as shown below (modification in red):
+    For the example created here, this change should be implemented as shown below (with `|xmg` added to each line):
 
     ```perl
     $line =~ s/<xs:(restriction|extension).*base="(fb|fx|xmg):[^"]*/$&Type/;
@@ -190,5 +190,5 @@ issue:
     }
     ```
 
-Finally, as noted in APPENDIX C, be careful not to run your modified
+Finally, as noted in [this section](how-to-create-fixm-extension/introduction), be careful not to run your modified
 post-processing script against any schema files that have already been post-processed. To avoid this issue, either regenerate the Core schemas you need before post-processing the entire schemas directory or only run the script exclusively against the generated Applications schemas.
