@@ -8,7 +8,7 @@ structures reside. The root field of the entire flight information
 hierarchy is the `Flight` class (in the physical model, the `Flight`
 element).
 
-![Using FIXM Core without an Application](.//media/other-using-fixm-fixm-core-without-an-application-library-01.png "Using FIXM Core without an Application")
+![Using FIXM Core without an Application](.//media/other-using-fixm-fixm-core-without-an-application-library-01.png ':size=100%')
 
 When using FIXM Core for data representation, all XML documents must
 begin with this `Flight` element. Similarly, the `Fixm.xsd` schema file is
