@@ -331,7 +331,7 @@ to these cases. The following table quotes a few random examples.
 
 ### Logical Model
 
-![Image](.//media/image14.png ':size=35%')
+![Image](.//media/image14.png ':size=45%')
 
 UML Class `Navaid` in package `FIXM.Base.AeronauticalReference`
 
