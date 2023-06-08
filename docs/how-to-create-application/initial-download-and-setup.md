@@ -1,3 +1,5 @@
+!> **Note to implementers:** This detailed "How To" section was originally developed using FIXM Core v4.2.0 and uses this version as the foundation for the modeling guidance provided in this section. The details presented here should be equally applicable for FIXM Core v4.3.0 as no fundamental shifts in modeling best practices exist between these two versions.
+
 # Initial Download and Setup
 
 To save time and reduce setup steps, it is recommended that you begin the process of creating your Application by downloading the FIXM Basic Message v1.0.0 full release.<sup><a href="#how-to-create-application/initial-download-and-setup?id=notes">[note 1]</a></sup>
