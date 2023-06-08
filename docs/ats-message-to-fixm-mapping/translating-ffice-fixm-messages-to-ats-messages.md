@@ -172,20 +172,18 @@ The following code block presents a flight plan in ICAO 4444 format,
 with equipment and capabilities related to navigation and communication
 highlighted.
 
-<pre>
-(FPL-QFA8-IS
--B744/H-<b>SDE2E3FGHIJ3J5M1RWYZ</b>/LB1D1
--KDFW0400
--N0501F280 DCT ABI J4 INK/N0504F300 J50 ELP J26 HMO V2 GRN
-2704N11627W 26N119W 2544N12000W 24N126W/M084F320 22N133W 19N139W
-16N144W/M084F340 11N152W 06N159W/M084F360 01N166W 01S169W
-0500S17435W 06S176W 12S176E/M084F380 18S168E 2125S16300E GUXIB R587
-HARVS Q21 SAVER G329 BN DCT
--YBBN1519
--<b>PBN/A1B1D1L1S1 NAV/GPSRNAV RNVD1A1</b> DOF/191003 REG/VHOEG
-DLE/INK0100 26N119W0200 SEL/MQDE
-PER/D RIF/GUXIB R587 MEPAB G591 LTO NWWW)
-</pre>
+> (FPL-QFA8-IS<br>
+> -B744/H-<mark>SDE2E3FGHIJ3J5M1RWYZ</mark>/LB1D1<br>
+> -KDFW0400<br>
+> -N0501F280 DCT ABI J4 INK/N0504F300 J50 ELP J26 HMO V2 GRN<br>
+> 2704N11627W 26N119W 2544N12000W 24N126W/M084F320 22N133W 19N139W<br>
+> 16N144W/M084F340 11N152W 06N159W/M084F360 01N166W 01S169W<br>
+> 0500S17435W 06S176W 12S176E/M084F380 18S168E 2125S16300E GUXIB R587<br>
+> HARVS Q21 SAVER G329 BN DCT<br>
+> -YBBN1519<br>
+> -<mark>PBN/A1B1D1L1S1 NAV/GPSRNAV RNVD1A1</mark> DOF/191003 REG/VHOEG<br>
+> DLE/INK0100 26N119W0200 SEL/MQDE<br>
+> PER/D RIF/GUXIB R587 MEPAB G591 LTO NWWW)<br>
 
 The image below presents the equipment/capabilities portion of the
 flight plan as a FIXM object model. Only the highlighted items in the
@@ -242,12 +240,10 @@ composed from fields 13b and 18 DOF <sup>[[note 5]](#notes)</sup>.
 The image below presents the object model corresponding to highlighted
 parts of the following flight plan fragment.
 
-<pre>
--YSSY<b>2315</b>
--N0501F280 ...
--YBBN0115
--<b>DOF/210403</b>
-</pre>
+> -YSSY<mark>2315</mark><br>
+> -N0501F280 ...<br>
+> -YBBN0115<br>
+> -<mark>DOF/210403</mark><br>
 
 ![Image](.//media/translating-ffice-image2.png)
 
@@ -379,11 +375,9 @@ When creating a FIXM object from ATS message content:
 The images below present, respectively, the object model corresponding to
 the SID and STAR in the following route string.
 
-<pre>
-Route String: <b>MRSSH2</b> ZALEA DCT SWB DCT HRV Q105 BLVNS Y290 BAGGS <b>SSCOT5</b>
-         SID: MRSSH2
-        STAR: SSCOT5
-</pre>
+> Route String: <mark>MRSSH2</mark> ZALEA DCT SWB DCT HRV Q105 BLVNS Y290 BAGGS <mark>SSCOT5</mark><br>
+>          SID: MRSSH2<br>
+>         STAR: SSCOT5<br>
 
 ![Image](.//media/translating-ffice-image14.png)
 
@@ -488,9 +482,7 @@ changes.
 The image below presents the object model corresponding to the
 (contrived) ATS message field 15 route
 
-```
-N0430F220 GORLO2N 3910N02230W/N0430F300 DCT C/IVA/N0430F300F320 B9 ENTRA VFR T
-```
+> N0430F220 GORLO2N 3910N02230W/N0430F300 DCT C/IVA/N0430F300F320 B9 ENTRA VFR T
 
 ![Image](.//media/translating-ffice-image4.png)
 
@@ -509,9 +501,7 @@ unstructured string.
 The image below presents the object model corresponding to field 18 RIF
 of the sample flight plan in [Equipment/Capabilities Example](#equipmentcapabilities-example):
 
-```
-RIF/GUXIB R587 MEPAB G591 LTO NWWW
-````
+> RIF/GUXIB R587 MEPAB G591 LTO NWWW
 
 ![Image](.//media/translating-ffice-image5.png)
 
@@ -537,9 +527,7 @@ The image below presents the object model for a fragment of the route in
 the flight plan contained in [Equipment/Capabilities Example](#equipmentcapabilities-example),
 incorporating the information in field 18 DLE:
 
-```
-DLE/INK0100 26N119W0200
-````
+> DLE/INK0100 26N119W0200
 
 ![Image](.//media/translating-ffice-image6.png)
 
@@ -551,21 +539,17 @@ the flight is a formation, the value ZZZZ is inserted in field 9b and
 the aircraft type information is inserted in field 18 TYP. The following
 fragment is an example.
 
-<pre>
--10<b>ZZZZ</b>/M
-...
--<b>TYP/2F15 4K35R 3B2</b>
-</pre>
+> -10<mark>ZZZZ</mark>/M<br>
+> ...<br>
+> -<mark>TYP/2F15 4K35R 3B2</mark><br>
 
 Note the structured nature of the TYP field: two F15s, four K35Rs, and three B2s. The value in field 18 TYP may exhibit structure as in this
 example above for a formation. However, this may not be so in other
 cases, where the (non-designator) type of aircraft is listed, as in
 
-<pre>
--<b>ZZZZ</b>/L
-...
--<b>TYP/ECLIPSE 500</b>
-</pre>
+> -<mark>ZZZZ</mark>/L<br>
+> ...<br>
+> -<mark>TYP/ECLIPSE 500</mark><br>
 
 The images below present the object model corresponding to each of the
 above flight plan fragments.
@@ -620,11 +604,9 @@ population of FIXM:
 The image below presents two object models corresponding to the
 following flight plan fragment.
 
-<pre>
--<b>ZZZZ</b>1231
-...
--<b>DEP/WESTMEAD HOSPITAL 3349S15059E</b>
-</pre>
+> -<mark>ZZZZ</mark>1231<br>
+> ...<br>
+> -<mark>DEP/WESTMEAD HOSPITAL 3349S15059E</mark><br>
 
 ![Image](.//media/translating-ffice-image8.png)
 
@@ -687,20 +669,16 @@ arrival aerodrome.
 The image below presents an object model for destination/arrival
 information assuming reception of the FPL
 
-<pre>
-(FPL-RAQ-VG
--C172/L-V/C
--YBSU0540
--N0115A035 DCT
--<b>YRED</b>0021
--DOF/160502 REG/RAQ)
-</pre>
+> (FPL-RAQ-VG<br>
+> -C172/L-V/C<br>
+> -YBSU0540<br>
+> -N0115A035 DCT<br>
+> -<mark>YRED</mark>0021<br>
+> -DOF/160502 REG/RAQ)<br>
 
 Followed by the ARR
 
-<pre>
-(ARR-RAQ-YBSU-YRED-<b>ZZZZ</b>0622 <b>CABOOLTURE</b>)
-</pre>
+> (ARR-RAQ-YBSU-YRED-<mark>ZZZZ</mark>0622 <mark>CABOOLTURE</mark>)
 
 ![Image](.//media/translating-ffice-image9.png)
 
@@ -724,11 +702,9 @@ attribute `destinationAerodromeAlternate` of class `Arrival`.
 The following flight plan fragment presents field 16 and field 18 items
 that relate to destination aerodrome and alternates.
 
-<pre>
--<b>ZZZZ</b>0035 <b>YSBK ZZZZ</b>
-...
--<b>DEST/WESTMEAD HOSPITAL 3349S15059E ALTN/EASTERN CREEK</b>
-</pre>
+> -<mark>ZZZZ</mark>0035 <mark>YSBK ZZZZ</mark><br>
+> ...<br>
+> -<mark>DEST/WESTMEAD HOSPITAL 3349S15059E ALTN/EASTERN CREEK</mark><br>
 
 The image below presents the FIXM representation in an object model.
 
@@ -737,11 +713,9 @@ The image below presents the FIXM representation in an object model.
 Decoding is problematic if two free text names are included in ALTN. For
 example, consider the flight plan fragment
 
-<pre>
--YSBK0035 <b>ZZZZ ZZZZ</b>
-...
--<b>ALTN/WESTMEAD HOSPITAL EASTERN CREEK</b>
-</pre>
+> -YSBK0035 <mark>ZZZZ ZZZZ</mark><br>
+> ...<br>
+> -<mark>ALTN/WESTMEAD HOSPITAL EASTERN CREEK</mark><br>
 
 where `WESTMEAD HOSPITAL` and `EASTERN CREEK` are distinct points. None of
 the tokens are a latitude/longitude or a bearing and distance, so it is
@@ -771,9 +745,7 @@ Each alternate is an `AerodromeReference` (see [this chapter](general-guidanc
 The image below presents two possible object models that represent the en-route
 alternate listed below.
 
-```
-RALT/YSBK WESTMEAD HOSPITAL 3349S15059E
-```
+> RALT/YSBK WESTMEAD HOSPITAL 3349S15059E
 
 ![Image](.//media/translating-ffice-image11.png)
 
@@ -826,11 +798,9 @@ When creating an ATS message from a FIXM object, the presence of AIRFILE under `
 The image below presents the FIXM representation of the following air
 filed flight plan (fragment) as an object model.
 
-```
--AFIL1254
-...
--DEP/YBBBZQZA
-```
+> -AFIL1254
+> ...
+> -DEP/YBBBZQZA
 
 ![Image](.//media/translating-ffice-image12.png)
 
@@ -840,15 +810,11 @@ The remarks item (RMK/) of field 18 of a flight plan maps to
 attribute `remarks` of class `Flight`. The content of remarks should not
 include the RMK/ label. That is, a flight plan containing
 
-```
-RMK/TCAS II EQUIPPED
-````
+> RMK/TCAS II EQUIPPED
 
 results in
 
-```
-remarks = TCAS II EQUIPPED
-````
+> remarks = TCAS II EQUIPPED
 
 The same is true of all field 18 items. The item label is not included
 in the content; it is implied by the structure.
@@ -878,9 +844,7 @@ text `P/TBN` to be removed from the original ATS message.
 The image below presents the object model corresponding to the following
 field 19 example.
 
-```
---E/0745 P/6 R/VE S/M J/L D/2 8 C YELLOW A/YELLOW RED TAIL N/145E C/SMITH
-```
+> --E/0745 P/6 R/VE S/M J/L D/2 8 C YELLOW A/YELLOW RED TAIL N/145E C/SMITH
 
 ![Image](.//media/translating-ffice-image13.png)
 
