@@ -490,7 +490,7 @@ enumeration to only allow a specific value.
     diagram.
 
 2. Next, add a new enumeration to the diagram as outlined in [Create an
-    Enumeration Class](#create-an-enumeration-class). However, the
+    Enumeration Class](/how-to-create-application/create-application-content?id=create-an-enumeration-class). However, the
     *Name* field should begin with your message template’s prefix (in
     this example, “MessageAA\_”) followed by the same name as the
     enumeration you are restricting, the *Annotation* should be the same
