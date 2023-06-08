@@ -190,5 +190,5 @@ issue:
     }
     ```
 
-Finally, as noted in [this section](how-to-create-fixm-extension/introduction), be careful not to run your modified
+Finally, as noted in [this section](/how-to-generate-xml-schemas/post-processing-the-fixm-schemas), be careful not to run your modified
 post-processing script against any schema files that have already been post-processed. To avoid this issue, either regenerate the Core schemas you need before post-processing the entire schemas directory or only run the script exclusively against the generated Applications schemas.
