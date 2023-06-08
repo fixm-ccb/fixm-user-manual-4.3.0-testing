@@ -16,7 +16,6 @@ The steps for creating this package are largely identical to those
 outlined in [Create an Application
 Package](#create-an-application-package) above. Key differences are
 noted below.
-)
 
 1. Begin by right clicking on your Application package and choose “Add
     a Package…”.
@@ -32,7 +31,7 @@ noted below.
 
 3. Apply a schema stereotype and begin setting up schema properties as
     outlined in [Apply Schema Stereotype](#apply-schema-stereotype) and
-    [Set Up Schema Properties](#set-up-schema-properties) above using
+    [Set Up Schema Properties](#set-up-schema-properties) using
     the same *Target Namespace* and *Prefix* as was used for your
     Application package<sup><a href="#how-to-create-application/create-templates?id=notes">[note 1]</a></sup>.
 
@@ -116,13 +115,13 @@ repeating all the steps from the previous section.
     each message template. For this example, the following values should
     be used:
 
-    a.  ArrivalAlert template
+    a. ArrivalAlert template
 
     - *Schema Name* set to: `ArrivalAlert`
 
     - *Schema File* set to: `.\schemas\applications\examplemessage\exampletemplates\arrivalalert\ArrivalAlert.xsd`
 
-    b.  DepartureAlert template
+    b. DepartureAlert template
 
     - *Schema Name* set to: `DepartureAlert`
 
@@ -149,9 +148,9 @@ content itself is modified using XSD restrictions.
 
 The convention used so far in FIXM when naming template material is to
 prefix the existing names with text to identify the Application followed
-by text to identify the particular message. So, for this example, fields
-under ArrivalAlert will be prefixed with “ExampleAA\_” while fields
-under DepartureAlert will be prefixed with “ExampleDA\_”.
+by text to identify the particular message (typically the initials of the type of message). So, for this example, fields
+under <mark>A</mark>rrival<mark>A</mark>lert will be prefixed with “Example<mark>AA</mark>\_” while fields
+under <mark>D</mark>eparture<mark>A</mark>lert will be prefixed with “Example<mark>DA</mark>\_”.
 
 ### Create Template Packages
 
@@ -164,7 +163,7 @@ message.
 
 These template packages should replicate all the settings of the package
 they correspond to except for their diagram’s *Name* field (if they have
-an associated diagram – some packages won’t), the schema description,
+an associated diagram – some packages won’t), their schema descriptions,
 and the *Schema File* field of their schema properties.
 
 1. Follow the steps outlined in [Create an Application
@@ -173,18 +172,9 @@ and the *Schema File* field of their schema properties.
     your template. All names, properties, descriptions, tags, etc.,
     should be the same<sup><a href="#how-to-create-application/create-templates?id=notes">[note 3]</a></sup>. except:
 
-    a.  If your package has an associated diagram, change the diagram
-        *Name* to include your template’s prefix. While not strictly
-        necessary, this helps prevent confusing template diagrams with
-        the originals.
+    a.  If your package has an associated diagram, change the diagram *Name* to include your template’s prefix. While not strictly necessary, this helps prevent confusing template diagrams with the originals.
 
-    b.  Change the *Schema File* field to use a path corresponding to
-        your message template and a filename beginning with your
-        template’s prefix. Template schema files should be located under
-        the directory of your message container but their paths should
-        otherwise include creating any intermediate directories, etc.,
-        so that they are structured similar to the paths to the files
-        they are restricting.
+    b.  Change the *Schema File* field to use a path corresponding to your message template and a filename beginning with your template’s prefix. Template schema files should be located under the directory of your message container but their paths should otherwise include creating any intermediate directories, etc., so that they are structured similar to the paths to the files they are restricting.
 
     c.  Indicate that the schema is a template in the description text.
 
@@ -229,7 +219,7 @@ with fewer fields and/or more restricted content than the classes they
 are derived from.
 
 We will illustrate in more detail how these restrictions are applied by
-looking first at how to constructe the ArrivalAlert template. When
+looking first at how to construct the ArrivalAlert template. When
 finished, this template should provide the following fields:
 
 - 1 ExampleMessage with:
@@ -238,25 +228,25 @@ finished, this template should provide the following fields:
 
   - 1..99 recipients
 
-    - 1 timestamp
+  - 1 timestamp
 
-    - 1 type (set to ARRIVAL)
+  - 1 type (set to ARRIVAL)
 
-    - 1 flight with:
+  - 1 flight with:
 
-      - 1 arrival with:
+    - 1 arrival with:
 
-        - 1 actualTimeOfArrival
+      - 1 actualTimeOfArrival
 
-        - 1 arrivalAerodrome
+      - 1 arrivalAerodrome
 
-      - 1 gufi
+    - 1 gufi
 
-      - 1 flightIdentification with:
+    - 1 flightIdentification with:
 
-        - 1 aircraftIdentification
+      - 1 aircraftIdentification
 
-      - 0..1 flightType
+    - 0..1 flightType
 
 When constructing a template, we found it easiest to start at the leaf
 (outermost) fields and work backwards to the root (innermost) fields.
@@ -286,7 +276,7 @@ When constructing a template, we found it easiest to start at the leaf
 
 4. Click on your new restricted class in the diagram. You will see an
     upward arrow icon
-    \[    ![Image](.//media/image79.png)
+    \[![Image](.//media/image79.png)\]
     appear near the upper right hand corner of the class. Click on this
     arrow and drag it over the class you are restricting. Then release
     the mouse button and choose “Generalization” from the list of
@@ -330,7 +320,7 @@ attributes both easier and less error prone.
 1. Once again, locate the class you wish to restrict in Project Browser
     (in this example, Fixm -&gt; Core -&gt; Flight -&gt; Arrival -&gt;
     &lt;&lt;XSDcomplexType&gt;&gt;Arrival). Click on the arrow
-    \[    ![Image](.//media/image124.png)
+    \[![Image](.//media/image124.png)\]
     to the left of the class to display its associated attributes.
 
     ![Image](.//media/image125.png)
@@ -371,7 +361,7 @@ to “true”.
     navigate to the *Tagged Values* tab, and then erase the nillable tag
     by clicking on it and then clicking the fifth icon from the left ![Image](.//media/image130.png).
     In this example, the nillable tags should be erased from all
-    attributes with a multiplicity lower bound of “1” or higher.
+    attributes with a multiplicity lower bound of “1” or higher (so that required fields are not nillable).
 
     ![Image](.//media/image131.png)
 
@@ -383,7 +373,7 @@ to “true”.
 #### Set Up Restricted Class Associations
 
 Next, we will focus on setting up associations. Like attributes, any
-associations that resolve to XML elements not added back to your
+associations that resolve to XML elements that are not added back to your
 restricted class will be removed. For example, the “reclearanceInFlight”
 association attached to Core’s Arrival class (shown below) was removed
 from ExampleAA\_Arrival because the association was never recreated.
@@ -652,7 +642,7 @@ needed for this version of the package.
     copied package in Project Browser to access and adjust the schema
     properties. In this example, only the *Schema Location* field needs
     to be adjusted. It should be modified to use:
-    “.\\schemas\\applications\\examplemessage\\exampletemplates\\departurealert\\flight\\flightdata\\ExampleDA\_FlightData.xsd”<sup><a href="#how-to-create-application/create-templates?id=notes">[note 7]</a></sup>.
+    `.\schemas\applications\examplemessage\exampletemplates\departurealert\flight\flightdata\ExampleDA_FlightData.xsd`<sup><a href="#how-to-create-application/create-templates?id=notes">[note 7]</a></sup>.
     Click OK to save the new settings.
 
 2. Again, double click (or right click and choose “Properties…”) on
@@ -773,7 +763,7 @@ to increase its usability with a number of XML tools. The packages
 contained under the Includes package facilitate this and will be
 modified by the post-processing script to contain the needed content
 (see [Set Up and Use Package-Wide Include
-Files](#set-up-and-use-package-wide-include-files) for more
+Files](how-to-create-application/post-process-the-application-schemas?id=set-up-and-use-package-wide-include-files) for more
 details).
 
 1. Right click on your overall templates container (in this example,
