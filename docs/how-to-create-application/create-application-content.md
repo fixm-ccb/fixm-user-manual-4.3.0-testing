@@ -1,3 +1,5 @@
+!> **Note to implementers:** This detailed "How To" section was originally developed using FIXM Core v4.2.0 and uses this version as the foundation for the modeling guidance provided in this section. The details presented here should be equally applicable for FIXM Core v4.3.0 as no fundamental shifts in modeling best practices exist between these two versions.
+
 # Create Application Content
 
 Now it is time to create any content needed for your Application. For
