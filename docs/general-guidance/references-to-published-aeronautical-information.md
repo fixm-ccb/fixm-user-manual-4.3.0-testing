@@ -2,8 +2,8 @@
 
 Describing the predicted movement of a flight commonly means indicating
 which parts of the infrastructure (ATS routes, waypoints, radio
-navigation aids etc.) are expected to be used by the flight. This is
-enabled in FIXM by a set of “references” constructs. These references
+navigation aids, etc.) are expected to be used by the flight. This is
+enabled in FIXM by a set of “reference” constructs. These references
 are not flight-specific information; they pertain to the aeronautical
 information domain.
 
@@ -11,15 +11,15 @@ Different formats exist for exchanging aeronautical information, whose
 usages depend on specific implementation considerations and actual
 context within the overall data chain. For instance:
 
-- AIXM is developed in order to enable the provision in digital format
+- AIXM is developed in order to enable the provision, in digital format,
     of the aeronautical information that is in the scope of Aeronautical
     Information Services (AIS). AIXM 5.1 covers both the content of
     Aeronautical Information Publications (AIP) and of the NOTAM
     information.
 
 - The ARINC 424 standard defines a format for navigation (and
-    communication) information, including but not limited to, aerodrome,
-    runway, navaid, airway and terminal approach procedure information
+    communication) information, including, but not limited to, aerodrome,
+    runway, navaid, airway, and terminal approach procedure information,
     that is exchanged between data suppliers and avionics vendors.
 
 - The Aerodrome Mapping Exchange Schema (AMXM XML Schema) is an
@@ -33,7 +33,7 @@ defines its own structures for referring to aeronautical information
 that are **self-contained** but mappable to their AIXM/AMXM… equivalents
 thanks to the reuse of a common semantics. FIXM also provides an
 **optional** mechanism enabling these self-contained references to be
-supplemented with, but not replaced by, **hypertext** **references** to
+supplemented with, but not replaced by, **hypertext references** to
 AIXM features.
 
 The following sections provide guidance for correctly encoding these
@@ -53,7 +53,7 @@ system depending on its capabilities.
 Example:
 
 ```xml
-<fx:[FIXMelement] href="urn:uuid:81e47548-9f00-4970-b641-8ff8f99098a5">
+<fx:[FIXM element] href="urn:uuid:81e47548-9f00-4970-b641-8ff8f99098a5">
 ```
 
 Important note: FIXM does not import the W3C XML Linking Language<sup>[[13]](#references)</sup>
@@ -65,7 +65,7 @@ within the FIXM (Base) namespace<sup><a href="#general-guidance/references-to-pu
 
 ### Logical Model
 
-![Image](.//media/image13.png ':size=75%')
+![Image](.//media/image13.png ':size=35%')
 
 UML Class `DesignatedPoint` in package `FIXM.Base.AeronauticalReference`
 
@@ -108,7 +108,7 @@ This is the minimum reference that SHALL be provided.
 The coded designator of a waypoint is not always sufficient for
 unambiguously referring to that element. The 5-letter coded designator
 of a waypoint is supposed to be unique world-wide (according to ICAO
-Annex 11) but is not in reality. There are at least 5%
+Annex 11) but, in reality, is not. There are at least 5%
 duplicates/triplicates/even more…
 
 FIXM adds an optional property 'position' which may be used as a
@@ -128,10 +128,10 @@ ambiguity on the designator.
 shall not be interpreted as a natural key uniquely identifying the
 waypoint, in so far as producing and consuming systems/services may use
 different aeronautical information sources with different degree of
-precisions for lat/long, leading to small variations of the position
+precisions for latitude/longitude, leading to small variations of the position
 information. The supplementary fields shall be used for disambiguation
 purposes only (i.e. plausibility checks based on position) in case of
-duplicate/triplicate/…
+duplicates/triplicates/…
 
 ### OPTION 3 - Minimum reference with supplementary AIXM pointer
 
@@ -331,7 +331,7 @@ to these cases. The following table quotes a few random examples.
 
 ### Logical Model
 
-![Image](.//media/image14.png ':size=75%')
+![Image](.//media/image14.png ':size=35%')
 
 UML Class `Navaid` in package `FIXM.Base.AeronauticalReference`
 
@@ -383,7 +383,7 @@ systems/services may use different aeronautical information sources with
 different degree of precisions for lat/long, leading to small variations
 of the position information. The supplementary fields shall be used for
 disambiguation purposes only (i.e. plausibility checks based on position
-and navaid service type) in case of duplicate/triplicate/…
+and navaid service type) in case of duplicates/triplicates/…
 
 ### OPTION 3 - Minimum reference with supplementary AIXM pointer
 
@@ -493,7 +493,7 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 
 ### Logical Model
 
-![Image](.//media/image15.png ':size=100%')
+![Image](.//media/image15.png ':size=75%')
 
 UML Class `AerodromeReference` in package `FIXM.Base.AeronauticalReference`
 
@@ -512,6 +512,8 @@ UML Class `AerodromeReference` in package `FIXM.Base.AeronauticalReference`
       </xs:element>
       <xs:element name="referencePoint" type="fb:GeographicalPositionType" nillable="true" minOccurs="0" maxOccurs="1">
       </xs:element>
+      <xs:element name="referenceRelativePoint" type="fb:RelativePointType" nillable="true" minOccurs="0" maxOccurs="1">
+      </xs:element>
    </xs:sequence>
    <xs:attribute name="href" type="fb:HypertextReferenceType" use="optional">
    </xs:attribute>
@@ -526,7 +528,7 @@ The minimum aerodrome reference shall consist of the aerodrome location
 indicator, if provided by ICAO Doc 7910 <sup>[[7]](#references)</sup>. If the aerodrome has no
 ICAO Doc 7910 location indicator, the minimum aerodrome reference shall
 consist of the name of the aerodrome and its geographical location,
-namely the aerodrome reference point.
+namely the aerodrome reference point or relative reference point.
 
 ### OPTION 2 - Minimum reference with supplementary AIXM pointer
 
@@ -611,8 +613,8 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 </tbody>
 </table>
 
-Important note: FIXM enables the encoding of richer aerodrome
-“reference” structures, such as
+Important note: FIXM enables the encoding of “richer” aerodrome
+reference structures, such as
 
 ```xml
  <fx:destinationAerodrome href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
@@ -633,7 +635,7 @@ is at the discretion of the consuming system / service.
 
 ### Logical Model
 
-![Image](.//media/image16.png ':size=75%')
+![Image](.//media/image16.png ':size=35%')
 
 UML Class `RunwayDirectionDesignator` in package `FIXM.Base.AeronauticalReference`
 
@@ -718,7 +720,7 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 
 ### Logical Model
 
-![Image](.//media/image17.png ':size=75%')
+![Image](.//media/image17.png ':size=35%')
 
 UML Class `RouteDesignator` in package `FIXM.Base.AeronauticalReference`
 
@@ -808,7 +810,7 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 
 ### Logical Model
 
-![Image](.//media/image18.png ':size=75%')
+![Image](.//media/image18.png ':size=35%')
 
 UML Class `SidStarReference` in package `FIXM.Base.AeronauticalReference`
 
@@ -819,7 +821,7 @@ UML Class `SidStarReference` in package `FIXM.Base.AeronauticalReference`
    <xs:sequence>
       <xs:element name="abbreviatedDesignator" type="fb:SidStarAbbreviatedDesignatorType" nillable="true" minOccurs="0" maxOccurs="1">
       </xs:element>
-      <xs:element name="designator" type="fb:SidStarDesignatorType" nillable="true" minOccurs="0" maxOccurs="1">
+      <xs:element name="designator" type="fb:SidStarDesignatorType" minOccurs="1" maxOccurs="1">
       </xs:element>
       <xs:element name="extension" type="fb:SidStarReferenceExtensionType" nillable="true" minOccurs="0" maxOccurs="2000">
       </xs:element>
@@ -980,7 +982,7 @@ specification, chapter 7.4. Example:
 
 ### Logical Model
 
-![Image](.//media/image19.png ':size=75%')
+![Image](.//media/image19.png ':size=35%')
 
 UML Class `AirspaceDesignator` in package `FIXM.Base.AeronauticalReference`
 
@@ -1081,7 +1083,7 @@ Examples (NOT for OPERATIONAL USE)
 
 ### Logical Model
 
-![Image](.//media/image20.png ':size=100%')
+![Image](.//media/image20.png ':size=75%')
 
 UML Class `ATCUnitReference` in package `FIXM.Base.AeronauticalReference`
 
@@ -1112,7 +1114,7 @@ Complex type [AtcUnitReferenceType][AtcUnitReferenceType] in file [AeronauticalR
 
 The minimum ATC unit reference shall consist of the location indicator
 of the unit, if provided by ICAO Doc 7910 <sup>[[7]](#references)</sup>. If the unit has no
-ICAO Doc 7910 location indicator, the minimum airspace reference shall
+ICAO Doc 7910 location indicator, the minimum reference shall
 consist of the name of the unit or any alternate name, as published in
 the AIP.
 
