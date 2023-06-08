@@ -22,11 +22,11 @@ illustrated on the picture below.
 
 An example of a FIXM Application is the **FF-ICE Application** developed and released by the FIXM CCB. This application addresses
 the use of FIXM Core in the specific context of FF-ICE. It provides
-harmonized FF-ICE Message data structure (e.g. data structures for
-representing the FF-ICE Filing Status, the FF-ICE Planning Status etc.)
+harmonized FF-ICE Message data structures (e.g. data structures for
+representing the FF-ICE Filing Status, the FF-ICE Planning Status, etc.)
 and the FF-ICE message templates (e.g. the template for the FF-ICE Filed
 Flight Plan Message, the template for the FF-ICE Flight Cancellation
-Message etc.), in line with the FF-ICE Implementation Guidance Manual.
+Message, etc.) in line with the FF-ICE Implementation Guidance Manual.
 
 More details about this FF-ICE Application can be found in [this chapter](fixm-in-support-of-ffice/ffice-application-for-fixm.md) .
 
@@ -63,7 +63,7 @@ A list of benefits for employing templates is detailed below.
 
 | **Benefit of templates** | **Without templates** | **With templates** |
 |-|-|-|
-| Reduced Development Overhead | Increased development overhead as each user must independently interpret how message content requirements should be represented in FIXM format. | Tailored schemas reduce development overhead by providing additional guidance for creating messages with a FIXM-based content. |
+| Reduced Development Overhead | Increased development overhead as each user must independently interpret how message content requirements should be represented in FIXM format. | Tailored schemas reduce development overhead by providing additional guidance for creating messages with FIXM-based content. |
 | Consistent Message Structure | Individual interpretations of requirements could lead to inconsistent message content implementation across users. | Making dedicated implementation templates available to all users should improve implementation consistency. |
 | Improved XML Validation      | XML-based validation limited to data syntax checking with no guidance for required vs. optional or allowed vs. not allowed content (failing to fully leverage a major benefit of using XML). | XML-based validation enforces both syntax and content completeness rules (fully leveraging benefits of XML-based validation).  |
 
@@ -74,10 +74,10 @@ the same time allowing FIXM to remain open and flexible.
 
 ### XML representation of FIXM-based Message Templates
 
-The XML representation of FIXM-based Message templates is currently
-achieved by restricting complex types defined by FIXM. Restricting
-complex types is a standard-based approach for removing unwanted
-elements and/or attributes and to apply tighter restraints to
+The XML representation of FIXM-based message templates is currently
+primarily achieved by restricting complex types defined by FIXM. 
+Restricting types is a standards-based approach for removing unwanted
+elements and/or attributes and applying tighter restraints to
 multiplicities, patterns, and facets. Complex type restrictions also
 provide built-in validation: if the restriction is not correctly formed
 in relation to the parent type then the resulting schemas will not
@@ -90,7 +90,7 @@ validate.
     that are explicitly declared;
 
 - XSD restrictions provide some built-in validation for quality
-    assurance
+    assurance;
 
 - XSD restrictions represent a natural use of the XSD standard;
 
@@ -99,10 +99,10 @@ validate.
 
 ## How to build a FIXM Application?
 
-[This chapter](how-to-create-application/initial-download-and-setup.md.md) provides detailed guidance for creating FIXM Applications.
+[This chapter](how-to-create-application/introduction.md) provides detailed guidance for creating FIXM Applications.
 
 ## Notes
 
 [1]: They should not, however, include any additional flight data structures needed to support the specific data exchange.  If such fields are required, they should be supplied via Extensions.
 
-[2]: When newer versions of FIXM products are released, upgrading the restrictions only requires updating the reference to the newer versions and implementing the ad-hoc adaptations only for the parts that have changed.
+[2]: When newer versions of FIXM products are released, upgrading the restrictions only requires updating the reference to the newer versions and implementing the ad-hoc adaptations for the parts that have changed.
