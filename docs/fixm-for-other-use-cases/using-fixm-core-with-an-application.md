@@ -23,11 +23,11 @@ validation or use with any XML utilities.
 
 Unlike FF-ICE Message, the Basic Message Application focuses
 only on providing users with generic and reusable message data
-structures. It does not provide any message template since it is not
+structures. It does not provide any message templates since it is not
 linked to any particular operational use of FIXM.
 
 Users who wish to include additional message data structures beyond what
-is provided in Basic Message (but who do not wish to create templates
+is provided in Basic Message (but do not wish to create templates
 for a pre-defined set of messages) are encouraged to do so via creating
 an Extension to Basic Message (see [Creating a new Extension](fixm-for-other-use-cases/using-fixm-core-with-an-extension?id=creating-a-new-extension) and [Using an Extension together with an Application](fixm-for-other-use-cases/using-fixm-core-with-an-extension?id=using-an-extension-together-with-an-application)
 for more on this). Users who wish to create message templates for their
@@ -56,19 +56,21 @@ update may look like.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<msg:MessageCollection xmlns:msg="http://www.fixm.aero/app/msg/1.0" xmlns:fx="http://www.fixm.aero/flight/4.3" xmlns:fb="http://www.fixm.aero/base/4.3">
+<msg:MessageCollection xmlns:msg="http://www.fixm.aero/app/msg/1.1" xmlns:fx="http://www.fixm.aero/flight/4.3" xmlns:fb="http://www.fixm.aero/base/4.3">
   <msg:message>
     <msg:flight>
       <fx:departure>
-        <fx:actualTimeOfDeparture>2020-01-01T00:03:00Z</fx:actualTimeOfDeparture>
-        <fx:aerodrome>
+        <fx:actualTimeOfDeparture>
+          <fx:time>2020-01-01T00:03:00Z</fx:time>
+        </fx:actualTimeOfDeparture>
+        <fx:departureAerodrome>
           <fb:locationIndicator>KBOS</fb:locationIndicator>
-        </fx:aerodrome>
+        </fx:departureAerodrome>
       </fx:departure>
       <fx:flightIdentification>
         <fx:aircraftIdentification>ABC1234</fx:aircraftIdentification>
+        <fx:gufi codeSpace="urn:uuid" creationTime="2019-12-31T23:03:00Z" namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME" namespaceIdentifier="example.com">3e7f6a63-6c3b-4f0f-844b-4b84338ed103</fx:gufi>
       </fx:flightIdentification>
-      <fx:gufi codeSpace="urn:uuid">3e7f6a63-6c3b-4f0f-844b-4b84338ed103</fx:gufi>
     </msg:flight>
     <msg:timestamp>2020-01-01T00:03:01Z</msg:timestamp>
     <msg:type>DEPARTURE</msg:type>
@@ -79,15 +81,17 @@ update may look like.
   <msg:message>
     <msg:flight>
       <fx:arrival>
-        <fx:actualTimeOfArrival>2020-01-01T23:58:00Z</fx:actualTimeOfArrival>
+        <fx:actualTimeOfArrival>
+          <fx:time>2020-01-01T23:58:00Z</fx:time>
+        </fx:actualTimeOfArrival>
         <fx:arrivalAerodrome>
           <fb:locationIndicator>KLAX</fb:locationIndicator>
         </fx:arrivalAerodrome>
       </fx:arrival>
       <fx:flightIdentification>
         <fx:aircraftIdentification>XYZ1234</fx:aircraftIdentification>
+        <fx:gufi codeSpace="urn:uuid" creationTime="2020-01-01T20:33:00Z" namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME" namespaceIdentifier="example.com">3808e010-3c24-4a04-afd2-f62ba9ec43f6</fx:gufi>
       </fx:flightIdentification>
-      <fx:gufi codeSpace="urn:uuid">3808e010-3c24-4a04-afd2-f62ba9ec43f6</fx:gufi>
     </msg:flight>
     <msg:timestamp>2020-01-01T23:58:01Z</msg:timestamp>
     <msg:type>ARRIVAL</msg:type>
@@ -103,7 +107,7 @@ update may look like.
 If the organization of Basic Message does not suit the user’s data
 exchange or if the user wants to create message templates to more fully
 lock down and describe their message structures and content, they should
-consider creating their own custom FIXM Application.
+consider creating their own FIXM Application.
 
 As described in [FIXM Applications](../general-guidance/applications.md), FIXM Applications enhance FIXM Core by adding context specific message data structures and provides
 stricter validation rules via message templates. An Application should
@@ -113,16 +117,16 @@ Application. If the Application includes message templates, it may have more
 than one root schema: one for using the Application alone with
 no further restrictions and one (or more) for use with the templates.
 [The FF-ICE Application](fixm-in-support-of-ffice/ffice-application-for-fixm) is a good example of this, with
-users referencing FficeMessage.xsd for unrestricted use of the Application,
+users referencing `FficeMessage.xsd` for unrestricted use of the Application,
 `FficeTemplates.xsd` for making use of all thirteen templates used to
 represent the FF-ICE messages, or one of the thirteen template-specific
 schemas files corresponding to each FF-ICE message.
 
 While the content and organization of a FIXM Application depends
 entirely on the needs of the data exchange it is intended to support,
-the FF-ICE and Basic Message Applications should
+the FF-ICE Message and Basic Message Applications should
 provide a useful set of examples for how to build an Application with and
-without associated templates. To supplement this, [How to create a FIXM Application](how-to-create-application/initial-download-and-setup)
+without associated templates. To supplement this, [How to create a FIXM Application](how-to-create-application/introduction)
 provides step-by-step instructions on how to create a simple
 Application.
 
@@ -131,25 +135,24 @@ Application.
 At this point, our fictitious user XAS has decided to upgrade their
 original alert service to be able to send departure and arrival messages
 to specific recipients (rather than maintaining a single, common
-endpoint for all consumers) as well as making use of templates to
+endpoint for all consumers), as well as making use of templates to
 clearly lockdown the expected format of the alert messages. To
 accomplish this, XAS decides to create their own FIXM Application.
 
 This custom FIXM Application defines its own namespace
 `http://www.fixm.aero/app/example/1.0` and root
 element (`ExampleMessage`) as well as a number of header fields needed to
-represent data XAS wants to exchange with each alert (`sender`,
+represent the data XAS wants to exchange with each alert (`sender`,
 `recipient`, `timestamp`, and `type`).
 
-?> The namespace of the custom FIXM Application does not have to be tied to www.fixm.aero.
+?> The namespace of a FIXM Applications does not have to be tied to www.fixm.aero. On the contrary, creators of new Applications should ideally use a namespace unique to them (such as one that starts with a fully qualified domain name that they own) to avoid a possible collision with other Applications.  This was the motiviation for using www.fixm.aero for this example.
 
-XAS then goes on to create two
-templates: one that locks down the content of a departure alert and
-another for the arrival alert. Details on how to build this FIXM Application along with more specifics as to its content are supplied below
-in [How to create a FIXM Application](how-to-create-application/initial-download-and-setup).
+XAS then goes on to create two templates: one that concretely specifies the content of a departure alert and
+another doing the same for the arrival alert. Details on how to build this FIXM Application along with more specifics as to its content are supplied
+in [How to create a FIXM Application](how-to-create-application/introduction).
 
 With the Application built, XAS instructs consumers to make use
-of the `ExampleTemplates.xsd` file described in [How to create a FIXM Application](how-to-create-application/initial-download-and-setup) when validating
+of the `ExampleTemplates.xsd` file described in [How to create a FIXM Application](how-to-create-application/introduction) when validating
 the new alert messages. Below is an example of how the XML payload of
 one of the new arrival alert messages coming from this service may
 appear.
@@ -159,18 +162,20 @@ appear.
 <xmg:ExampleMessage xsi:type="xmg:ExampleDA_ExampleMessageType" xmlns:xmg="http://www.fixm.aero/app/example/1.0" xmlns:fb="http://www.fixm.aero/base/4.3" xmlns:fx="http://www.fixm.aero/flight/4.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xmg:flight>
     <fx:departure>
-      <fx:actualTimeOfDeparture>1903-12-17T03:35:00Z</fx:actualTimeOfDeparture>
-      <fx:aerodrome>
+      <fx:actualTimeOfDeparture>
+        <fx:time>1903-12-17T03:35:00Z</fx:time>
+      </fx:actualTimeOfDeparture>
+      <fx:departureAerodrome>
         <fb:name>KILL DEVIL HILL</fb:name>
         <fb:referencePoint srsName="urn:ogc:def:crs:EPSG::4326">
           <fb:pos>36.019970 -75.668760</fb:pos>
         </fb:referencePoint>
-      </fx:aerodrome>
+      </fx:departureAerodrome>
     </fx:departure>
     <fx:flightIdentification>
       <fx:aircraftIdentification>WRF01</fx:aircraftIdentification>
+      <fx:gufi codeSpace="urn:uuid" creationTime="1903-12-17T03:35:00Z" namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME" namespaceIdentifier="example.com">18611e54-52b8-4fb5-a2fa-12173b1d39db</fx:gufi>
     </fx:flightIdentification>
-    <fx:gufi codeSpace="urn:uuid">18611e54-52b8-4fb5-a2fa-12173b1d39db</fx:gufi>
   </xmg:flight>
   <xmg:recipient>
     <fb:name>HISTORY</fb:name>
