@@ -23,7 +23,7 @@ following:
 #### Example of FIXM Core usage satisfying the requirement on data structure
 
 ```xml
-<fx:aerodrome>
+<fx:departureAerodrome>
 
     <fb:locationIndicator>EBBR</fb:locationIndicator>
 
@@ -37,7 +37,7 @@ aerodrome references defined by the FIXM Core XML schemas.
 #### Example of FIXM Core usage **NOT** satisfying the requirement on data structure
 
 ```xml
-<fx:aerodrome>
+<fx:departureAerodrome>
 
     <fb:locationIndicator>BRU</fb:locationIndicator>
 
@@ -55,7 +55,7 @@ usage.
 
 This example below features a valid XML schema that defines a Flight
 Identification structure comprising the departure & arrival aerodrome
-references, the aircraft identification and the estimated off-block
+references, the aircraft identification, and the estimated off-block
 time. It also features an example XML sample that is valid against this
 schema.
 
@@ -68,7 +68,7 @@ schema.
             <xs:element name="departureAerodrome" type="fb:AerodromeReferenceType"/>
             <xs:element name="arrivalAerodrome" type="fb:AerodromeReferenceType"/>
             <xs:element name="ACID" type="fb:AircraftIdentificationType"/>
-            <xs:element name="EOBT" type="fb:TimeType"/>
+            <xs:element name="EOBT" type="fb:DateTimeUtcType"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>
@@ -83,7 +83,7 @@ schema.
         <fb:name>NORTHFALL MEADOW</fb:name>
     </wrong:arrivalAerodrome>
     <wrong:ACID>BLXI</wrong:ACID>
-    <wrong:EOBT>1909-07-25T04:41:00.000Z</wrong:EOBT>
+    <wrong:EOBT>1909-07-25T04:41:00Z</wrong:EOBT>
 </wrong:FlightIdentification>
 <!– https://en.wikipedia.org/wiki/Louis\_Bl%C3%A9riot\#1909\_Channel\_crossing –>
 ```
@@ -96,7 +96,7 @@ typing these elements (e.g. `type="fb:AerodromeReferenceType"`).
 This example illustrates the reuse of FIXM Core as a library of
 datatypes. While this practice is technically feasible and produces
 valid schemas, it is not considered a valid FIXM Core usage because it
-breaks the hierarchy of properties defined by FIXM Core. An information
+breaks the hierarchy defined by FIXM Core. An information
 service relying on such an implementation practice would fail to satisfy
 the FIXM Core requirement on data structure.
 
@@ -111,14 +111,14 @@ the FIXM Core requirement on data structure.
 #### Example of FIXM Core usage satisfying the requirement on data correctness
 
 ```xml
-<fx:verticalRange>
+<fx:range>
   <fb:lowerBound>
     <fb:flightLevel uom="FL">240</fb:flightLevel>
   </fb:lowerBound>
   <fb:upperBound>
     <fb:flightLevel uom="FL">250</fb:flightLevel>
   </fb:upperBound>
-</fx:verticalRange>
+</fx:range>
 ```
 
 This example shows the FIXM encoding of vertical range \[FL240;FL250\].
