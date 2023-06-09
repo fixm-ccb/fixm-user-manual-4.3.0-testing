@@ -1,4 +1,4 @@
-!> **Note to implementers:** This detailed "How To" section was originally developed using FIXM Core v4.2.0 and uses this version as the foundation for the modeling guidance provided in this section. The details presented here should be equally applicable for FIXM Core v4.3.0 as no fundamental shifts in modeling best practices exist between these two versions.
+!> Note to implementers: This "How To" section was originally developed using FIXM Core v4.2.0 and uses that version as the foundation for the modeling guidance provided. The details presented here should be equally applicable for FIXM Core v4.3.0 as no fundamental shifts in modeling best practices exist between these two versions.
 
 # Create an Extension Root Package
 
@@ -119,7 +119,7 @@ controlled in Sparx EA via tagged values.
 
     a. FIXM standardly sets attributeFormDefault to `unqualified`.
 
-    b. FIXM standardly sets elementFormDefault to “qualified”.
+    b. FIXM standardly sets elementFormDefault to `qualified`.
 
     c. Version should be set as appropriate for your Extension (`1.0.0` in this example).
 

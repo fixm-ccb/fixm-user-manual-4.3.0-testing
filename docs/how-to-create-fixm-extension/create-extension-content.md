@@ -1,4 +1,4 @@
-!> **Note to implementers:** This detailed "How To" section was originally developed using FIXM Core v4.2.0 and uses this version as the foundation for the modeling guidance provided in this section. The details presented here should be equally applicable for FIXM Core v4.3.0 as no fundamental shifts in modeling best practices exist between these two versions.
+!> Note to implementers: This "How To" section was originally developed using FIXM Core v4.2.0 and uses that version as the foundation for the modeling guidance provided. The details presented here should be equally applicable for FIXM Core v4.3.0 as no fundamental shifts in modeling best practices exist between these two versions.
 
 # Create Extension Content
 
@@ -11,7 +11,7 @@ to accomplish. In this very simple example, the Extension will be used
 to:
 
 - Add a new field called “position” to the EnRoute section of Core to
-    report a flight’s current whereabouts.
+    report a flight’s current location.
 
 - Add a new field called “sequenceNumber” to the BasicMessage section
     to help with message ordering.
@@ -52,16 +52,16 @@ contain diagrams and Extension classes.
     ![Image](.//media/image209.png)
 
 6. Next, apply the XSDschema stereotype to your subcomponent as
-    described in the [Apply Schema Stereotype](how-to-create-fixm-extension/create-an-extension-root-package?id=apply-schema-stereotype) section above.
+    described in the [Apply Schema Stereotype](how-to-create-fixm-extension/create-an-extension-root-package?id=apply-schema-stereotype) section.
 
 7. After the stereotype is applied, continue the schema setup as
-    described in [Set Up Schema Properties](how-to-create-fixm-extension/create-an-extension-root-package?id=set-up-schema-properties)
-    above. The following property values should be used for this
+    described in [Set Up Schema Properties](how-to-create-fixm-extension/create-an-extension-root-package?id=set-up-schema-properties). 
+    The following property values should be used for this
     subcomponent in this example:
 
     a.  *Target Namespace* set to: `http://www.fixm.aero/ext/example/1.0`.
 
-    b.  *Prefix* set to: “xmp”.
+    b.  *Prefix* set to: `xmp`.
 
     c.  *Schema File* set to: `.\schemas\extensions\example\ExampleEnRoute.xsd`.
 
@@ -78,9 +78,9 @@ contain diagrams and Extension classes.
     [Add Schema Description and Tags](how-to-create-fixm-extension/create-an-extension-root-package?id=add-schema-description-and-tags).
     As described in that section, the following tags should be added:
 
-    a.  An attributeFormDefault tag set to: “unqualified”.
+    a.  An attributeFormDefault tag set to: `unqualified`.
 
-    b.  An elementFormDefault tag to: “qualified”.
+    b.  An elementFormDefault tag to: `qualified`.
 
     c.  A version tag set to an appropriate version for your Extension (`1.0.0` for this example).
 
@@ -95,7 +95,7 @@ Now it is time to create any Extension classes needed. This is typically done in
     the diagram section of the screen. This will open up an XSD
     complexType Properties dialogue box.
 
-3. Add an appropriate *Name* and *Annotation* for your new class.
+3. Add an appropriate *Name* (in this example, `ExampleEnRoute`) and *Annotation* for your new class.
 
 4. Then click OK.
 
@@ -187,7 +187,7 @@ You can now begin to add content to your new Extension class.
 
     ![Image](.//media/image220.png)
 
-11. Continue adding as many attributes as desired. When finished,  click Close on the Features dialogue box. The class diagram should display the name, type, and multiplicity of each attribute added to the
+11. Continue adding as many attributes as desired. When finished,  click Close on the Features dialogue box. The class diagram should display the name, type, and multiplicity<sup><a href="#how-to-create-fixm-extension/create-extension-content?id=notes">[note 2]</a></sup> of each attribute added to the
     class.
 
     ![Image](.//media/image221.png)
@@ -216,3 +216,5 @@ You can now begin to add content to your new Extension class.
 ## Notes
 
 [1]: In FIXM, attributes are standardly used when the field you are adding is of a Type defined in the Core’s Base package.  When defining your own types, they are standardly attached to a class by using an association instead.  In this example, we will be adding a new field of type GeographicalPosition from the AeronauticalReference package under Base so using an attribute is the appropriate choice.
+
+[2]: If an attribute is made mandatory and is not a repeating field (i.e., multiplicity of 1..1), then EA does not display its multiplicity in the diagram, so there will be no numbers shown to the right of the attribute.
