@@ -26,6 +26,6 @@ To save time and reduce setup steps, it is recommended that you begin the proces
 
 ## Notes
 
-[1]: Starting with the Basic Message v1.0.0 model and then deleting the BasicMessage package allows you to skip creating and setting up the Applications container and associated schema directory.
+[1]: Starting with the Basic Message v1.0.0 model and then deleting the BasicMessage package allows you to skip creating and setting up the Applications container and associated schema directory. For more details on to do this if you don't want to use this shortcut, see [this section](/how-to-create-fixm-extension/create-top-level-extensions-container) but create a package named Applications rather than Extensions.
 
 [2]: The FIXM development team uses Sparx Systems Enterprise Architect version 13.5, build 1352 for all development work.  
