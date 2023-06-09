@@ -217,4 +217,4 @@ You can now begin to add content to your new Extension class.
 
 [1]: In FIXM, attributes are standardly used when the field you are adding is of a Type defined in the Core’s Base package.  When defining your own types, they are standardly attached to a class by using an association instead.  In this example, we will be adding a new field of type GeographicalPosition from the AeronauticalReference package under Base so using an attribute is the appropriate choice.
 
-[2]: If an attribute is made mandatory and is not a repeating field (multiplicity of 1..1), then EA does not display its multiplicity in the diagram (i.e., there will be no numbers shown to the right of the attribute).
+[2]: If an attribute is made mandatory and is not a repeating field (i.e., multiplicity of 1..1), then EA does not display its multiplicity in the diagram, so there will be no numbers shown to the right of the attribute.
