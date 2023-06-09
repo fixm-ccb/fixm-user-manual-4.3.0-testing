@@ -1,4 +1,4 @@
-!> **Note to implementers:** This detailed "How To" section was originally developed using FIXM Core v4.2.0 and uses this version as the foundation for the modeling guidance provided in this section. The details presented here should be equally applicable for FIXM Core v4.3.0 as no fundamental shifts in modeling best practices exist between these two versions.
+!> Note to implementers: This "How To" section was originally developed using FIXM Core v4.2.0 and uses that version as the foundation for the modeling guidance provided. The details presented here should be equally applicable for FIXM Core v4.3.0 as no fundamental shifts in modeling best practices exist between these two versions.
 
 # Initial Download and Setup
 
@@ -6,7 +6,7 @@ FIXM Extensions can be applied to Core, Applications, or both. Which
 FIXM product(s) you begin with is entirely based on the scope of your
 Extension.
 
-1. Determine which FIXM product(s) you wish to target with your
+1. Determine which FIXM product you wish to target with your
     Extension.
 
 2. Download the full release from [here](https://fixm.aero/downloads.html).
