@@ -18,7 +18,7 @@ FIXM Core is independent and does not require an update when changes in a FIXM A
 A **FIXM Application** may also leverage **Extensions**, as
 illustrated on the picture below.
 
-![Image](.//media/general-guidance-application-libraries-02.png ':size=10%')
+![Image](.//media/general-guidance-application-libraries-02.png)
 
 An example of a FIXM Application is the **FF-ICE Application** developed and released by the FIXM CCB. This application addresses
 the use of FIXM Core in the specific context of FF-ICE. It provides
