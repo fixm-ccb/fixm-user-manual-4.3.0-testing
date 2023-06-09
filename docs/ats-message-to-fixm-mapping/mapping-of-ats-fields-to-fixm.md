@@ -47,7 +47,7 @@ Table 10: Constraint Notation
 The term '〈kind〉' in the subsequent tables (fields 8, 13, 15, 16 and
 18) is a reference to the kind of route/trajectory information to which
 a field is mapped. That route information is dependent on the message
-type. Refer to section [Varieties of Route](fixm-in-support-of-ffice/translating-ffice-fixm-messages-to-ats-messages?id=varieties-of-route) for a mapping between the
+type. Refer to section [Varieties of Route](/ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages?id=varieties-of-route) for a mapping between the
 message type and the kind of route information.
 
 The mapping below lists each ATS field with the corresponding FIXM field
