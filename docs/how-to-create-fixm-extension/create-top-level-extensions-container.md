@@ -3,8 +3,8 @@
 # Create a Top-Level Extensions Container
 
 Before creating the Extension itself, you should first create a
-top-level container under which to place your Extension (similar to
-[Applications](/how-to-create-application/introduction)).
+top-level container under which to place your Extension (a step skipped in the
+[Applications](/how-to-create-application/introduction) example through reuse of the structure for BasicMessage).
 
 1. Right click on the Core package in Project Browser and choose “Add a
     Package…”.
