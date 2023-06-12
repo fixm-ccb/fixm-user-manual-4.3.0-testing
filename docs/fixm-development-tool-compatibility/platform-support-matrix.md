@@ -68,7 +68,7 @@ provided for convenience.
 <tr class="odd">
 <td>Code Generation</td>
 <td>WSDL2Java</td>
-<td>Axis2 Version 1.7.9</td>
+<td>Axis2 Version v1.8.0</td>
 <td><a href="https://axis.apache.org/axis2/java/core/docs/quickstartguide.html"><u>https://axis.apache.org/axis2/java/core/docs/quickstartguide.html</u></a></td>
 </tr>
 <tr class="even">
@@ -80,13 +80,13 @@ provided for convenience.
 <tr class="odd">
 <td>API Testing T</td>
 <td>Postman</td>
-<td>7.23</td>
+<td>9.21.2</td>
 <td><a href="https://www.postman.com/downloads/"><u>https://www.postman.com/downloads/</u></a></td>
 </tr>
 <tr class="even">
 <td></td>
 <td>SoapUI</td>
-<td>5.5.0</td>
+<td>5.7.0</td>
 <td><a href="https://www.soapui.org/downloads/soapui.html"><u>https://www.soapui.org/downloads/soapui.html</u></a></td>
 </tr>
 </tbody>
