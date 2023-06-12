@@ -73,8 +73,8 @@ provided for convenience.
 </tr>
 <tr class="even">
 <td>Code Generation</td>
-<td>WSDL2Java</td>
-<td>Axis2 Version v1.8.0</td>
+<td>WSDL2Java Axis2</td>
+<td>1.8.0</td>
 <td><a href="https://axis.apache.org/axis2/java/core/docs/quickstartguide.html"><u>https://axis.apache.org/axis2/java/core/docs/quickstartguide.html</u></a></td>
 </tr>
 <tr class="odd">
