@@ -28,27 +28,27 @@ provided for convenience.
 <tr class="odd">
 <td>Java</td>
 <td>Java JDK</td>
-<td>1.8</td>
+<td>11+</td>
 <td><a href="https://www.oracle.com/java/technologies/javase-jdk8-downloads.html"><u>https://www.oracle.com/java/technologies/javase-jdk8-downloads.html</u></a></td>
 </tr>
 <tr class="even">
 <td>Operating System</td>
 <td><p>Windows Server</p>
-<p><em>using Java JDK 1.8</em></p></td>
+<p><em>using Java JDK 11+</em></p></td>
 <td>10</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Web Server</td>
 <td><p>Apache Tomcat</p>
-<p><em>using Java JDK 1.8</em></p></td>
+<p><em>using Java JDK 11+</em></p></td>
 <td>8.5.49</td>
 <td><a href="https://tomcat.apache.org/download-80.cgi"><u>https://tomcat.apache.org/download-80.cgi</u></a></td>
 </tr>
 <tr class="even">
 <td>IDE</td>
 <td><p>IntelliJ</p>
-<p><em>using Java JDK 1.8</em></p></td>
+<p><em>using Java JDK 11+</em></p></td>
 <td>2020.1.1</td>
 <td><a href="https://www.jetbrains.com/idea/download/#section=windows"><u>https://www.jetbrains.com/idea/download/#section=windows</u></a></td>
 </tr>
