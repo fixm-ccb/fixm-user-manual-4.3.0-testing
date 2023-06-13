@@ -80,6 +80,7 @@
 - **FIXM development tool compatibility**
   - [Introduction](fixm-development-tool-compatibility/introduction.md)
   - [Compatibility Analysis Results](fixm-development-tool-compatibility/compatibility-analysis-results.md)
+  - [Detailed Results](fixm-development-tool-compatibility/detailed-results.md)
 
 
 - **License**
