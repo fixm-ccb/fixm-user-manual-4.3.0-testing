@@ -1,4 +1,4 @@
-# Detailed Results - Schema
+# Detailed Results
 
 FIXM does not manage the software listed below .This list of tools is
 provided for convenience.
