@@ -60,15 +60,8 @@ provided for convenience.
 </tr>
 <tr class="even">
 <td>Data Binding Options</td>
-<td>ADP</td>
-<td>Axis1</td>
-<td>n/a</td>
-</tr>
-<tr class="odd">
-<td></td>
 <td>JAXBRI</td>
-<td><p>Axis1</p>
-<p>Axis2</p></td>
+<td>Axis2</td>
 <td><a href="http://axis.apache.org/axis2/java/core/download.cgi">http://axis.apache.org/axis2/java/core/download.cgi</a></td>
 </tr>
 <tr class="even">
