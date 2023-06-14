@@ -20,7 +20,7 @@ For each approach testing involved
 - several common development tools.  
 
 The result of this compatibility analysis was the creation of the FIXM
-support matrix. The section [Platform Support Matrix](fixm-development-tool-compatibility/platform-support-matrix)
+support matrix. The section [Testing Results](fixm-development-tool-compatibility/compatibility-analysis-results.md)
 supplies a list of the supported tools and technologies. This list of
 currently supported software versions is also located on the FIXM work
 area.
