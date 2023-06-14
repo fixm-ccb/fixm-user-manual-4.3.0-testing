@@ -1,4 +1,4 @@
-# Detailed Results - Schame
+# Detailed Results - Schema
 
 FIXM does not manage the software listed below .This list of tools is
 provided for convenience.
@@ -64,7 +64,7 @@ provided for convenience.
 </tr>
 <tr class="odd">
 <td>C#</td>
-<td>.NET Webservices JDK</td>
+<td>.NET Webservices</td>
 <td>REST</td>
 <td>C#</td>
 <td>PASSED</td>  
@@ -98,7 +98,7 @@ provided for convenience.
 </tr>
 <tr class="odd">
 <td>C#</td>
-<td>.NET Webservices JDK</td>
+<td>.NET Webservices</td>
 <td>REST</td>
 <td>C#</td>
 <td>PASSED</td>  
@@ -245,7 +245,7 @@ provided for convenience.
 <tr class="odd">
   <td>JAX-WS</td>
   <td>SOAP</td>
-  <td>3.5.3</td>
+  <td>3.3.13</td>
   <td>FAILED</td>
 </tr>
 <tr class="odd">
