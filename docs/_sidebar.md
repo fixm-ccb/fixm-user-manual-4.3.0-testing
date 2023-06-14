@@ -79,12 +79,8 @@
 
 - **FIXM development tool compatibility**
   - [Introduction](fixm-development-tool-compatibility/introduction.md)
-  - [Evaluation environment](fixm-development-tool-compatibility/evaluation-environment.md)
-  - [Apache Axis library and the WSDL2Java tool](fixm-development-tool-compatibility/apache-axis-library-and-the-wsdl2java-tool.md)
-  - [Evaluation results](fixm-development-tool-compatibility/evaluation-results.md)
-  - [Future testing](fixm-development-tool-compatibility/future-testing.md)
-  - [Platform support matrix](fixm-development-tool-compatibility/platform-support-matrix.md)
-  - [Other topics](fixm-development-tool-compatibility/other-topics.md)
+  - [Compatibility Analysis Results](fixm-development-tool-compatibility/compatibility-analysis-results.md)
+  - [Detailed Results](fixm-development-tool-compatibility/detailed-results.md)
 
 
 - **License**
