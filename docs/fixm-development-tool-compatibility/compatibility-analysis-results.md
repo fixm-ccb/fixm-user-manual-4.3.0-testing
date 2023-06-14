@@ -29,7 +29,7 @@ provided for convenience.
 <td>Java</td>
 <td>Java JDK</td>
 <td>11+</td>
-<td><a href="https://www.oracle.com/java/technologies/javase-jdk8-downloads.html"><u>https://www.oracle.com/java/technologies/javase-jdk8-downloads.html</u></a></td>
+<td><a href="https://www.oracle.com/java/technologies/javase-jdk8-downloads.html">https://www.oracle.com/java/technologies/downloads/#java11</a></td>
 </tr>
 <tr class="even">
 <td>C#</td>
