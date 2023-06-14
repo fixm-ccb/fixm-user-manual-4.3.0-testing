@@ -1,6 +1,6 @@
 # Compatibility Analysis Results
 
-FIXM does not manage the software listed below .This list of tools is
+Except for the linked schemas, FIXM does not manage any of the entries listed below. This list is
 provided for convenience.
 
 <table>
