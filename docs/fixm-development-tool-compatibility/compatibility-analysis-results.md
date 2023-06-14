@@ -77,7 +77,7 @@ provided for convenience.
 <td><a href="https://ant.apache.org/bindownload.cgi"><u>https://ant.apache.org/bindownload.cgi</u></a></td>
 </tr>
 <tr class="even">
-<td>API Testing T</td>
+<td>API Testing</td>
 <td>Postman</td>
 <td>9.21.2</td>
 <td><a href="https://www.postman.com/downloads/"><u>https://www.postman.com/downloads/</u></a></td>
