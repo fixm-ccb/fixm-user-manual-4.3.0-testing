@@ -1,99 +1,154 @@
-# Detailed Results
+# Detailed Results - Schame
 
 FIXM does not manage the software listed below .This list of tools is
 provided for convenience.
 
+## Approach 1: FIXM Schema
+
+### FIXM Source Code Generation
 <table>
 <thead>
 <tr class="header">
-<th><strong>Purpose</strong></th>
-<th><strong>Name</strong></th>
+<th rowspan="2"><strong>Language</strong></th>
+<th rowspan="2"><strong>Library</strong></th>
+<th rowspan="2"><strong>Utility</strong></th>
+<th colspan="2"><strong>FIXM Core v4.3.0 / FF-ICE Message v1.1.0</strong></th>
+</tr>
+
+<tr class="header">
 <th><strong>Version</strong></th>
-<th><strong>Links</strong></th>
+<th><strong>Result</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>FIXM Schemas</td>
-<td>FIXM Core</td>
-<td>4.3.0</td>
-<td><a href="https://fixm.aero/release.html?rel=FIXM-4.3.0&ret=core">https://fixm.aero/release.html?rel=FIXM-4.3.0&ret=core</a></td>
+<td>JAVA</td>
+<td>JAXB</td>
+<td>Jakarta xjc</td>
+<td>3.0.0</td>
+<td>PASSED</td>  
 </tr>
 <tr class="even">
-<td></td>
-<td>FF-ICE Message</td>
-<td>1.1.0</td>
-<td><a href="https://fixm.aero/release.html?rel=FFICE-Msg-1.1.0&ret=app">https://fixm.aero/release.html?rel=FFICE-Msg-1.1.0&ret=app</a></td>
-</tr>
-<tr class="odd">
-<td>Java</td>
-<td>Java JDK</td>
-<td>11+</td>
-<td><a href="https://www.oracle.com/java/technologies/javase-jdk8-downloads.html"><u>https://www.oracle.com/java/technologies/javase-jdk8-downloads.html</u></a></td>
-</tr>
-<tr class="even">
-<td>C#</td>
-<td>.Net Webservices</td>
+<td>c#</td>
+<td>.NET</td>
+<td>xsd.exe</td>
 <td>4.9.3928</td>
-<td><a href="https://dotnet.microsoft.com/en-us/download "><u>https://dotnet.microsoft.com/en-us/download</u></a></td>
+<td>PASSED</td>  
+</tr>
+</tbody>
+</table>
+
+### Rest Endpoint Generation
+
+<table>
+<thead>
+<tr class="header">
+<th rowspan="2"><strong>Language</strong></th>
+<th rowspan="2"><strong>Library</strong></th>
+<th rowspan="2"><strong>Protocol</strong></th>
+<th colspan="2"><strong>FIXM Core v4.3.0 / FF-ICE Message v1.1.0</strong></th>
+</tr>
+
+<tr class="header">
+<th><strong>Version</strong></th>
+<th><strong>Result</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>JAVA</td>
+<td>JAVA JDK</td>
+<td>REST</td>
+<td>Java JDK 11+</td>
+<td>PASSED</td>  
 </tr>
 <tr class="odd">
-<td>Operating System</td>
-<td><p>Windows Server</p>
-<p><em>using Java JDK 11+</em></p></td>
-<td>10</td>
-<td></td>
+<td>C#</td>
+<td>.NET Webservices JDK</td>
+<td>REST</td>
+<td>C#</td>
+<td>PASSED</td>  
+</tr> 
+</tbody>
+</table>
+
+### Rest Client Generation
+
+<table>
+<thead>
+<tr class="header">
+<th rowspan="2"><strong>Language</strong></th>
+<th rowspan="2"><strong>Library</strong></th>
+<th rowspan="2"><strong>Protocol</strong></th>
+<th colspan="2"><strong>FIXM Core v4.3.0 / FF-ICE Message v1.1.0</strong></th>
 </tr>
-<tr class="even">
-<td>Web Server</td>
-<td><p>Apache Tomcat</p>
-<p><em>using Java JDK 11+</em></p></td>
-<td>8.5.49</td>
-<td><a href="https://tomcat.apache.org/download-80.cgi"><u>https://tomcat.apache.org/download-80.cgi</u></a></td>
+
+<tr class="header">
+<th><strong>Version</strong></th>
+<th><strong>Result</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>JAVA</td>
+<td>JAVA JDK</td>
+<td>REST</td>
+<td>Java JDK 11+</td>
+<td>PASSED</td>  
 </tr>
 <tr class="odd">
-<td>IDE</td>
-<td><p>Eclipse IDE</p>
-<p><em>using Java JDK 11+</em></p></td>
-<td>2020.1.1</td>
-<td><a href="https://www.eclipse.org/downloads/"><u>https://www.eclipse.org/downloads/</u></a></td>
+<td>C#</td>
+<td>.NET Webservices JDK</td>
+<td>REST</td>
+<td>C#</td>
+<td>PASSED</td>  
+</tr> 
+</tbody>
+</table>
+
+
+### Use of Automated Client
+
+<table>
+<thead>
+<tr class="header">
+<th rowspan="2"><strong>Language</strong></th>
+<th rowspan="2"><strong>Tool</strong></th>
+<th rowspan="2"><strong>Protocol</strong></th>
+<th colspan="2"><strong>FIXM Core v4.3.0 / FF-ICE Message v1.1.0</strong></th>
 </tr>
-<tr class="even">
-<td>Data Binding Options</td>
-<td>ADP</td>
-<td>Axis1</td>
-<td>n/a</td>
+
+<tr class="header">
+<th><strong>Version</strong></th>
+<th><strong>Result</strong></th>
 </tr>
+</thead>
+<tbody>
 <tr class="odd">
-<td></td>
-<td>JAXBRI</td>
-<td><p>Axis1</p>
-<p>Axis2</p></td>
-<td><a href="http://axis.apache.org/axis2/java/core/download.cgi">http://axis.apache.org/axis2/java/core/download.cgi</a></td>
-</tr>
-<tr class="even">
-<td>Code Generation</td>
-<td>WSDL2Java Axis2</td>
-<td>1.8.0</td>
-<td><a href="https://axis.apache.org/axis2/java/core/docs/quickstartguide.html"><u>https://axis.apache.org/axis2/java/core/docs/quickstartguide.html</u></a></td>
-</tr>
-<tr class="odd">
-<td>Build</td>
-<td>Apache Ant</td>
-<td>1.10.7</td>
-<td><a href="https://ant.apache.org/bindownload.cgi"><u>https://ant.apache.org/bindownload.cgi</u></a></td>
-</tr>
-<tr class="even">
-<td>API Testing T</td>
+<td rowspan="2">JAVA</td>
 <td>Postman</td>
+<td>SOAP,REST</td>
 <td>9.21.2</td>
-<td><a href="https://www.postman.com/downloads/"><u>https://www.postman.com/downloads/</u></a></td>
+<td>PASSED</td>  
 </tr>
 <tr class="odd">
-<td></td>
 <td>SoapUI</td>
+<td>N/A</td>
 <td>5.7.0</td>
-<td><a href="https://www.soapui.org/downloads/soapui.html"><u>https://www.soapui.org/downloads/soapui.html</u></a></td>
-</tr>
+<td>PASSED</td>  
+</tr>  
+<tr class="even">
+<td rowspan="2">C#</td>
+<td>Postman</td>
+<td>SOAP,REST</td>
+<td>9.21.2</td>
+<td>PASSED</td>  
+</tr> 
+<tr class="even">
+<td>SoapUI</td>
+<td>N/A</td>
+<td>5.7.0</td>
+<td>PASSED</td>  
+</tr>  
 </tbody>
 </table>
