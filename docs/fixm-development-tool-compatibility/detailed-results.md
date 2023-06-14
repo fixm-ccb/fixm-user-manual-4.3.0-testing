@@ -1,8 +1,5 @@
 # Detailed Results
 
-FIXM does not manage the software listed below .This list of tools is
-provided for convenience.
-
 ## Approach 1: FIXM Schema
 
 ### FIXM Source Code Generation
@@ -66,7 +63,7 @@ provided for convenience.
 <td>C#</td>
 <td>.NET Webservices</td>
 <td>REST</td>
-<td>C#</td>
+<td>4.9.3928</td>
 <td>PASSED</td>  
 </tr> 
 </tbody>
@@ -100,7 +97,7 @@ provided for convenience.
 <td>C#</td>
 <td>.NET Webservices</td>
 <td>REST</td>
-<td>C#</td>
+<td>4.9.3928</td>
 <td>PASSED</td>  
 </tr> 
 </tbody>
@@ -222,7 +219,7 @@ provided for convenience.
 <th rowspan="2"><strong>Language</strong></th>
 <th rowspan="2"><strong>Web Server</strong></th>
 <th rowspan="2"><strong>Library</strong></th>
-<th rowspan="2"><strong>Buiild Method</strong></th>
+<th rowspan="2"><strong>Build Method</strong></th>
 <th rowspan="2"><strong>Protocol</strong></th>
 <th colspan="2"><strong>FIXM Core v4.3.0 / FF-ICE Message v1.1.0</strong></th>
 </tr>
@@ -296,7 +293,7 @@ provided for convenience.
 <td>C#</td>
 <td>.NET</td>
 <td>SOAP, REST</td>
-<td>C#</td>
+<td>4.9.3928</td>
 <td>PASSED</td>  
 </tr> 
 </tbody>
