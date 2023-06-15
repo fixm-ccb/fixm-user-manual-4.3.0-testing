@@ -1,26 +1,18 @@
 # Introduction
 
-Typically, the development of data exchange standards are based on
-Logical and Physical Model best practices. Logical Models use UML best
-practices to show the relationships between key concepts whereas the
-Physical Model use schema best practices to develop the data exchange
-standard. The development of different standards deviate from best
-practices to accommodate unique use cases required by stakeholders.
-Although it is not the responsibility of exchange models to be
-“compatible” with various development tools, compatibility is indeed
-critical for stakeholder and industry adoption making an analysis of
-Development Tool Compatibility essential.
+Although it is not a requirement for exchange models to be
+"compatible" with specific development tools, tool compatibility, generally speaking, is 
+critical for stakeholder and industry adoption, making an analysis of
+development tool compatibility an important topic.
 
 To this end, a compatibility analysis was run using two approaches:
-- Approach #1 utilized FIXM Core 4.3.0 and FF-ICE Message 1.1.0 Schema
-- Approach #2 utilized FIXM Core 4.3.0 and FF-ICE Message 1.1.0 Test WSDL
+- Approach #1 used FIXM Core 4.3.0 and FF-ICE Message 1.1.0 schemas for creating REST endpoints
+- Approach #2 used FIXM Core 4.3.0 and FF-ICE Message 1.1.0 schemas for creating WSDL endpoints
 
-For each approach testing involved
+For each approach, testing involved:
 - a variety of technologies (e.g., SOAP, REST, JMS)
-- several common development tools.  
+- several common development tools 
 
-The result of this compatibility analysis was the creation of the FIXM
+The result of this compatibility analysis was the creation of a FIXM
 support matrix. The section [Compatibility Analysis Results](fixm-development-tool-compatibility/compatibility-analysis-results.md)
-supplies a list of the supported tools and technologies. This list of
-currently supported software versions is also located on the FIXM work
-area.
+supplies a list of the supported tools and technologies. 
