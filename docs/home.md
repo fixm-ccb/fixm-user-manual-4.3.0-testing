@@ -146,6 +146,8 @@ First-time users should follow these [instructions](https://www.fixm.aero/conten
 
 | **Acronym** |                                                                          |
 |-------------|--------------------------------------------------------------------------|
+| ACID              | Aircraft Identification |
+| AFTN              | Aeronautical Fixed Telecommunication Network |
 | AIDC              | ATS Interfacility Data Communications |
 | AIP               | Aeronautical Information Publication |
 | AIRM              | ATM Information Reference Model |
@@ -153,18 +155,27 @@ First-time users should follow these [instructions](https://www.fixm.aero/conten
 | AIXM              | Aeronautical Information Exchange Model |
 | AMDB              | Aerodrome Mapping Database |
 | AMXM              | Aerodrome Mapping Exchange Model |
+| ARINC             | Aeronautical Radio, Incorporated |
+| ATC               | Air Traffic Control |
 | ATM               | Air Traffic Management |
 | ATMRPP            | ATM Requirements and Performance Panel |
 | ATS               | Air Traffic Services |
 | CCB               | Change Control Board |
 | DME               | Distance measuring equipment |
+| EA                | Enterprise Architect |
 | EAD               | European AIS Database |
+| EET               | Estimated Elapsed Time |
+| EOBT              | Estimated Off-Block Time |
+| FAA               | Federal Aviation Administration |
 | FF-ICE            | Flight and Flow Information for a Collaborative Environment |
 | FF-ICE/R1         | FF-ICE Release 1 |
+| FIR               | Flight Information Region |
 | FIXM              | Flight Information Exchange Model |
 | FPL               | Filed Flight Plan |
 | GML               | Geography Markup Language |
 | GUFI              | Globally unique flight identifier |
+| IAS               | Indicated Airspeed |
+| IATA              | International Air Transport Association |
 | ICAO              | International Civil Aviation Organisation |
 | IDE               | Integrated development environment |
 | IFPS              | Integrated initial flight plan processing system |
@@ -177,9 +188,11 @@ First-time users should follow these [instructions](https://www.fixm.aero/conten
 | NDB               | Non-directional radio beacon |
 | NM (EUROCONTROL)  | (EUROCONTROL) Network Manager |
 | OGC               | Open Geospatial Consortium |
+| PANSATM           | Procedures for Air Navigation Services - Air Traffic Management |
 | PBN               | Performance-based navigation |
 | REST              | Representational state transfer |
 | SID               | Standard instrument departure |
+| SITA              | Société Internationale de Télécommunications Aéronautiques |
 | SOAP              | Simple Object Access Protocol |
 | SSR               | Secondary surveillance radar |
 | STAR              | Standard instrument arrival |
