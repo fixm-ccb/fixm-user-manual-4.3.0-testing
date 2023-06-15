@@ -108,7 +108,7 @@ This page formalizes the organization of the FIXM community and its operating pr
 2.19 The working language of `FIXM CCB` is (Oxford Dictionary) English.
 
 2.20 All `FIXM CCB` activities will be conducted using on-line tools to which all `FIXM CCB Participants` shall have access, including: 
-- a) The distribution list, FIXM.CCB@lists.eurocontrol.int, which is used for internal `FIXM CCB` communication and serves as the primary means for external stakeholders to contact the `FIXM CCB members`. This distribution list will support the decision making-process (see 2.12).
+- a) The distribution list, FIXM_CCB@lists.eurocontrol.int, which is used for internal `FIXM CCB` communication and serves as the primary means for external stakeholders to contact the `FIXM CCB members`. This distribution list will support the decision making-process (see 2.12).
 - b) The FIXM CCB Repository, FIXM CCB Action Lists and FIXM CCB Discussion Forum on the FIXM Work Area. The FIXM CCB Repository is used for storing the main `FIXM CCB` materials (minutes of meetings, working documents, etc.).
 
 2.21 In order to effectively apply the provisions of this Charter, a change management process is put in place and supported via on-line tools. It is configured in order to ensure that FIXM change proposals are publicly and transparently captured, analysed and eventually submitted to the `FIXM CCB` for resolution. The change management process is described in Article 5 – Change Management Process.
