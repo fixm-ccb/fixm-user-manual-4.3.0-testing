@@ -1,6 +1,6 @@
 # Translating FF-ICE FIXM Messages to ATS Messages
 
-## Target audience
+## Target Audience
 
 This chapter targets FIXM implementers who want to realise a conversion from FF-ICE Messages to ATS message content.
 
