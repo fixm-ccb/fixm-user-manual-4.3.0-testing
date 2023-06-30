@@ -75,12 +75,12 @@ This sites aims to build a "community knowledge" about the implementation of FIX
 - [SUBMIT CONTENT][SUBMIT CONTENT]
 - [ACCESS THE FIXM WORK AREA][FIXM Work Area]
 
-### How to get access to the FIXM Work Area
+### How to get Access to the FIXM Work Area
 
 First-time users should follow these [instructions](https://www.fixm.aero/content/accessing-the-fixm-work-area) to register for a free account.
 
 
-## How to use this web site
+## How to use this Web Site
 
 - Use the side bar opposite to access the various sections of the FIXM User Manual;
 - Use the search engine to look for a specific entry;
@@ -88,7 +88,7 @@ First-time users should follow these [instructions](https://www.fixm.aero/conten
 
 ## References
 
-### FIXM references
+### FIXM References
 
 [F-01]: [FIXM Web Site](https://fixm.aero/)
 
@@ -98,7 +98,7 @@ First-time users should follow these [instructions](https://www.fixm.aero/conten
 
 [F-04]: [FIXM Work Area](https://eurocontrol.sharepoint.com/sites/coll-FIXM/)
 
-### ICAO references
+### ICAO References
 
 [I-01]: [ICAO Doc 9854 - Global Air Traffic Management Operational Concept (First Edition - 2005)](https://www.icao.int/Meetings/anconf12/Document%20Archive/9854_cons_en[1].pdf)
 
@@ -128,7 +128,7 @@ First-time users should follow these [instructions](https://www.fixm.aero/conten
 
 [I-14]: ASBU Working Document, Edition 2, Version 3
 
-### Other references
+### Other References
 
 [O-01]: [Donlon AIP data Set](https://github.com/aixm/donlon): a fictitious set of digital AIS data sets complying with the ICAO Annex 15, 16th edition and the new PANS-AIM provisions, in AIXM 5.1.1 format.
 
