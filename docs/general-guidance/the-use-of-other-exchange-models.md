@@ -1,4 +1,4 @@
-# The use of other exchange models
+# The Use of Other Exchange Models
 
 *An information exchange model is designed to enable the sharing of
 information in a digital format within a specific domain*<sup><a href="#general-guidance/the-use-of-other-exchange-models?id=notes">[note 1]</a></sup> (e.g. AIXM
@@ -16,7 +16,7 @@ models (e.g. AIXM and FIXM) is one approach. This document briefly
 touches on two possible options for doing so in an attempt to aid FIXM
 users wishing to create multi-model data exchanges.
 
-## Correlation references
+## Correlation References
 
 The first option to consider is breaking down a multi-model data
 transmission into separate messages for each involved exchange model.
@@ -32,7 +32,7 @@ end user must perform the correlation work themselves. This would
 include creating procedures for how to handle a situation where only a
 subset of a message group is received.
 
-## Correlation models
+## Correlation Models
 
 The second option to consider is creating a new model that provides
 direct references within itself to the required exchange models – thus
