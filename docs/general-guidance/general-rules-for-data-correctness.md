@@ -1,4 +1,4 @@
-# General rules for data correctness
+# General Rules for Data Correctness
 
 ?> The table below compiles an initial set of business rules 
 identified in the GENERAL GUIDANCE part, or already
