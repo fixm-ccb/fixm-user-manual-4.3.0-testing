@@ -16,7 +16,7 @@ Examples:
 
 - The EUROCONTROL Network Manager is able to exchange structured IFPS errors to serve as FF-ICE Filing Status explanations. This error information is specific to the EUROCONTROL Network Manager and exemplifies what could be modelled as part of a EUROCONTROL extension to the FF-ICE Message data structures provided by the FF-ICE Application.
 
-## What is a valid use of an extension?
+## What is a Valid Use of an Extension?
 
 A number of rules are established in order to ensure that extensions are
 not developed as a replacement of FIXM Core or a subset thereof.
@@ -25,7 +25,7 @@ The requirements on FIXM extensions are provided below.
 
 -----
 
-### Requirement on extension design
+### Requirement on Extension Design
 
 | | | |
 |-|-|-|
@@ -36,7 +36,7 @@ The requirements on FIXM extensions are provided below.
 
 -----
 
-### Requirement on extension content
+### Requirement on Extension Content
 
 | | | |
 |-|-|-|
@@ -65,7 +65,7 @@ with a character string allowing any content. This is an example of a
 FIXM extension redefining content from FIXM Core. It does NOT qualify as 
 valid usage of the FIXM extension mechanism.
 
-## How to build an extension?
+## How to Build an Extension?
 
 The FIXM extension mechanism distributes class-specific extension hooks
 throughout the model that implementers can leverage to define their
@@ -90,7 +90,7 @@ the applicable implementation context.
 [This chapter](how-to-create-fixm-extension/introduction.md) provides a rulebook and detailed guidance for creating
 extensions.
 
-## How to apply an extension in the physical model
+## How to Apply an Extension in the Physical Model
 
 As noted above, each extension hook has its own associated class, different from all other extension hook locations.  This allows extension developers to target the specific area where they want to add their new fields.  In the logical model, this is accomplished by making the extension class generalize the targeted extension hook class (again, a thorough overview of this process is provided in the chapter on [How to Create a FIXM Extension](how-to-create-fixm-extension/introduction.md)).  
 
@@ -100,7 +100,7 @@ In the physical model, when it comes time to apply an extension to a particular 
 <fx:extension xsi:type="xmp:ExampleExtensionType">
 ```
 
-## Ignoring extension data
+## Ignoring Extension Data
 
 Consumers of FIXM information may not need, and/or may not be able to
 process and interpret, extension data supplementing a Core FIXM dataset.
