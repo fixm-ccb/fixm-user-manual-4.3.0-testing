@@ -1,6 +1,6 @@
 !> Note to implementers: This "How To" section was originally developed using FIXM Core v4.2.0 and uses that version as the foundation for the modeling guidance provided. The details presented here should be equally applicable for FIXM Core v4.3.0 as no fundamental shifts in modeling best practices exist between these two versions.
 
-# Create a Top-Level Extensions Container
+# Create a Top-level Extensions Container
 
 Before creating the Extension itself, you should first create a
 top-level container under which to place your Extension (a step skipped in the
