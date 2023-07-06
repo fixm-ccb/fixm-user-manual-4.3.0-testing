@@ -847,12 +847,12 @@ UML Class `SidStarReference` in package `FIXM.Base.AeronauticalReference`
 
 Simple types [SidStarReferenceType][SidStarReferenceType] in file [AeronauticalReference.xsd][AeronauticalReference.xsd]
 
-### OPTION 1 - Minimum Seference
+### OPTION 1 - Minimum Reference
 
 The minimum SID or STAR reference shall consist of the SID or STAR
 designator as published in the AIP.
 
-### OPTION 2 - Minimum Seference with Supplementary AIXM Pointer
+### OPTION 2 - Minimum Reference with Supplementary AIXM Pointer
 
 *(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
 
