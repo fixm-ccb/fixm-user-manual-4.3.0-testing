@@ -288,7 +288,7 @@ click CLICK_HERE "https://teams.microsoft.com/l/entity/2a527703-1f6f-4559-a332-d
 
 ## References
 
-### FIXM references
+### FIXM References
 
 [F-01]: [FIXM Web Site](https://fixm.aero/)
 
