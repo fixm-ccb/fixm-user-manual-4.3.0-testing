@@ -1,4 +1,4 @@
-# Sequence numbers
+# Sequence Numbers
 
 The FIXM Logical Model specifies several ordered repeating sequences.
 The FIXM XML schemas add an optional sequence number attribute to the
