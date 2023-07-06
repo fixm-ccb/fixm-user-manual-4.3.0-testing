@@ -26,7 +26,7 @@
   - [Flight Capabilities](general-guidance/flight_capabilities.md)
   - [Constraints](general-guidance/constraints.md)
   - [Trajectory Point Properties](general-guidance/trajectory-point-properties.md)
-  - [Airport slot identification](general-guidance/airport_slot.md)
+  - [Airport Slot Identification](general-guidance/airport_slot.md)
   - [General Rules for Data Correctness](general-guidance/general-rules-for-data-correctness.md)
   - [Rules for Absent Data](general-guidance/rules-for-absent-data.md)
   - [The Use of Other Exchange Models](general-guidance/the-use-of-other-exchange-models.md)
