@@ -1,4 +1,4 @@
-# Vertical distances
+# Vertical Distances
 
 ## Definitions
 
