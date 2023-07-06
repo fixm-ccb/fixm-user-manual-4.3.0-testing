@@ -45,7 +45,7 @@
 
 
 - **FIXM/ATS Mapping**
-  - [Translating FF-ICE FIXM messages to ATS Messages](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages.md)
+  - [Translating FF-ICE FIXM Messages to ATS Messages](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages.md)
   - [Mapping of ATS Fields to FIXM](ats-message-to-fixm-mapping/mapping-of-ats-fields-to-fixm.md)
 
 
