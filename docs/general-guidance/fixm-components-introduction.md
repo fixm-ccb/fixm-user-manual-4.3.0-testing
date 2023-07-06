@@ -1,4 +1,4 @@
-# FIXM components
+# FIXM Components
 
 This section provides explanations about the main FIXM components.
 
