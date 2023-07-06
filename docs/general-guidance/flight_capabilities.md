@@ -1,6 +1,6 @@
-# Flight capabilities
+# Flight Capabilities
 
-## Communication capabilities
+## Communication Capabilities
 
 ### Selective Calling Code
 
