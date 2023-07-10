@@ -1,4 +1,4 @@
-# Geographical positions
+# Geographical Positions
 
 FIXM captures the concept of Geographical Position as defined by ICAO
 Annex 15.
@@ -10,7 +10,7 @@ position of a point on the surface of the Earth.*
 This model element maps to the ISO 19107 “Point” construct, defined as a
 single location given by a direct position.
 
-## FIXM representation
+## FIXM Representation
 
 ### Logical Model
 
@@ -18,7 +18,7 @@ single location given by a direct position.
 
 UML Class `GeographicalPosition` in package `FIXM.Base.AeronauticalReference`
 
-### XML schemas
+### XML Schemas
 
 ```xml
 <xs:complexType name="GeographicalPositionType">
@@ -38,7 +38,7 @@ UML Class `GeographicalPosition` in package `FIXM.Base.AeronauticalReference`
 A geographic location consists of a co-ordinate reference system and
 geographic co-ordinates.
 
-## Co-ordinate reference system
+## Co-Ordinate Reference System
 
 ICAO Annex 11 chapter 2.29.1 states that World Geodetic System — 1984
 (WGS-84) shall be used as the horizontal (geodetic) reference system for
@@ -58,7 +58,7 @@ use the WGS-84 reference datum.
 
 FIXM implements a fixed co-ordinate reference system: `urn:ogc:def:crs:EPSG::4326`.
 
-## Geographic co-ordinates
+## Geographic Co-Ordinates
 
 The EPSG:4326 CRS has latitude as the primary axis, which indicates that
 **the order of the values in the fb:pos element is** **first latitude**,
