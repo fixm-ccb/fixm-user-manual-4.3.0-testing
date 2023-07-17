@@ -6,7 +6,7 @@ captured in the FIXM Core model as model element notes. This table will be
 gradually enriched based on implementers’ feedback. Submit new rules using the [*Contact Us*](https://fixm.aero/contact.pl) form. 
 
 ?> The overall formulation and description method for
-the business rules below may be also revisted, in particular in the light of the [AIXM experience with
+the business rules below may be also revisited, in particular in the light of the [AIXM experience with
 regards to business rules](http://aixm.aero/page/business-rules). 
 In particular, the use of Schematron, which is a validation language capable of handling business rules that an XML schema alone cannot
 provide, may be a candidate means to enforce the business rules below.
