@@ -38,7 +38,7 @@ UML Class `GeographicalPosition` in package `FIXM.Base.AeronauticalReference`
 A geographic location consists of a co-ordinate reference system and
 geographic co-ordinates.
 
-## Co-ordinate Reference System
+## Co-Ordinate Reference System
 
 ICAO Annex 11 chapter 2.29.1 states that World Geodetic System — 1984
 (WGS-84) shall be used as the horizontal (geodetic) reference system for
@@ -58,7 +58,7 @@ use the WGS-84 reference datum.
 
 FIXM implements a fixed co-ordinate reference system: `urn:ogc:def:crs:EPSG::4326`.
 
-## Geographic Co-ordinates
+## Geographic Co-Ordinates
 
 The EPSG:4326 CRS has latitude as the primary axis, which indicates that
 **the order of the values in the fb:pos element is** **first latitude**,
