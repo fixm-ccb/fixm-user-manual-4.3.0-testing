@@ -1,4 +1,4 @@
-# Airport slot identification
+# Airport Slot Identification
 
 Airport slots are being used to balance demand against available airport capacity at airports where the
 demand exceeds this capacity. The process of allocating airport slots at
@@ -9,7 +9,7 @@ for non-scheduled air transport operations or general aviation. The airport slot
 *the identifier of the scheduled time of arrival or departure available for allocation by, 
 or as allocated by, a coordinator for an aircraft movement on a specific date at a coordinated airport*. 
 
-## FIXM representation
+## FIXM Representation
 
 The FIXM Core classes `Departure` and `Arrival` both have a property `airportSlotIdentification` that can be used for exchanging a departure or arrival airport slot reference. 
 

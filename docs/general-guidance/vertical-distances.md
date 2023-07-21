@@ -1,4 +1,4 @@
-# Vertical distances
+# Vertical Distances
 
 ## Definitions
 
@@ -23,7 +23,7 @@ and heights, as defined by ICAO
     ellipsoid, measured along the ellipsoidal outer normal through the
     point in question. **\[ICAO\]**
 
-## FIXM representation of vertical distances
+## FIXM Representation of Vertical Distances
 
 FIXM supports the representation of altitudes expressed in feet or
 meters (FIXM construct `Altitude`), of altitudes expressed as flight

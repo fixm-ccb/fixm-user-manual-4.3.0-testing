@@ -1,4 +1,4 @@
-# Using FIXM Core without an Application
+# Using FIXM Core without a FIXM Application
 
 In some cases, the nature of the messaging infrastructure employed for a
 particular data exchange makes the use of [FIXM Applications](general-guidance/applications.md) unnecessary or irrelevant (perhaps due to the infrastructure’s robust metadata/messaging header support) or the nature of the exchange itself does not require any accompanying message data structures (perhaps due to the exchange’s simplicity). In these situations, the use of [FIXM Core](general-guidance/fixm-core.md) alone should be sufficient.

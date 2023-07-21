@@ -10,11 +10,11 @@ The Flight Information Exchange Model (`FIXM`) is an exchange model capturing Fl
 
 According to the ICAO SWIM concept <sup>[[I-10]](#references)</sup>, `FIXM` is one of the models that belong to the “Information Exchange Models” layer of the ICAO SWIM Global Interoperability framework.
 
-### 1.2	Purpose of the strategy
+### 1.2	Purpose of the Strategy
 
 This strategy details the high-level requirements on the `FIXM` content, structure and scope to guide the overall `FIXM` evolution.
 
-### 1.3	Revision process
+### 1.3	Revision Process
 
 This strategy is approved and published by the FIXM Change Control Board (`FIXM CCB`). Future evolutions of the strategy shall be managed via the FIXM change management <sup>[[F-03]](#references)</sup>.
 
@@ -35,7 +35,7 @@ The `FIXM CCB` shall provide this change management.
 
 The FIXM charter <sup>[[F-03]](#references)</sup> describes the principles of the FIXM change management, and the exact roles and responsibilities of the FIXM actors.
 
-### 2.2	FIXM Components and Artefacts
+### 2.2	FIXM Components and Artifacts
 
 The term `FIXM` refers collectively to:
 -	`FIXM Core`, as described in chapter 2.2.1;
@@ -68,7 +68,7 @@ A `FIXM Application` can evolve independently from `FIXM Core` and should be ext
 
 The `FIXM Applications` managed by the `FIXM CCB` shall cover at least the use of `FIXM Core` in the context of FF-ICE.
 
-#### 2.2.3	FIXM Supporting artefacts
+#### 2.2.3	FIXM Supporting Artifacts
 
 The supporting FIXM artefacts should include, at least:
 - The `FIXM Primer`: this document shall serve as a high-level introduction to `FIXM`, targeting the widest possible audience. It shall include references to the main FIXM components, to the FIXM artefacts listed below, and to this FIXM Strategy.
@@ -99,7 +99,7 @@ These developments are good from a FIXM adoption perspective. However, they may 
 The `FIXM CCB` should support the identification of these issues and contribute to their resolution by building and maintaining a catalogue of `FIXM Applications` and `FIXM Extensions` developed by third parties, and by liaising with the appropriate stakeholders when potential synergies and collaboration opportunities are identified. 
 Appendix B – Third-parties FIXM Applications and Extensions provides additional considerations about this catalogue.
 
-### 2.4	FIXM, one of many ATM standards
+### 2.4	FIXM, One of Many ATM Standards
 
 Many initiatives have been historically conducted by various ATM communities of interest in order to specify standards supporting the exchange of domain-specific information. ATM modernisation programmes are now moving towards integrated ATM information where these existing standards, developed to meet domain-specific requirements, have to be brought together and aligned to a certain extent.
 
@@ -164,14 +164,14 @@ Therefore, `FIXM` shall ensure it retains and releases content that remains comp
 However, whilst needing to retain compatibility with the ATS Message content, `FIXM` shall ensure it is not constrained to just meeting such message-based needs and is thus also able to provide the additional and enhanced content needs for the evolving ATM needs, in line with ICAO requirements.
 
 
-## Appendix A – Eligibility criteria for FIXM Core
+## Appendix A – Eligibility Criteria for FIXM Core
 
 The flight information identified as globally applicable by ICAO FF-ICE <sup>[[I-05]](#references)</sup><sup>[[I-06]](#references)</sup> shall feed into `FIXM Core`, as stated in chapter 2.2.1. The criteria elaborated in this appendix clarify the expectations towards:
 - Any ICAO FF-ICE regional requirements;
 - Any ICAO requirements not originating from the ICAO ATMRPP;
 - The requirements not originating from ICAO but from other community of interests.
 
-### ICAO FF-ICE regional requirements
+### ICAO FF-ICE Regional Requirements
 
 ICAO FF-ICE <sup>[[I-05]](#references)</sup> specifies requirements for Flight and Flow Information exchanges. Definitions of information elements for the FF-ICE are globally standardized.
 
@@ -179,15 +179,15 @@ ICAO FF-ICE <sup>[[I-05]](#references)</sup> states however that not all informa
 
 ICAO FF-ICE <sup>[[I-05]](#references)</sup> Figure 3-1 provides a graphical illustration of this environment.
 
-### Other ICAO requirements
+### Other ICAO Requirements
 
 ICAO may develop additional concepts of operations that `FIXM` could support, such as the ICAO A-CDM concept whose development is underway.
 Therefore, ICAO requirements not originating from the ICAO ATMRPP, but laid down by other ICAO panels, may be considered as drivers for `FIXM`.
 
-### Other stakeholders’ requirements
+### Other Stakeholders’ Requirements
 While ICAO FF-ICE provides the main driver for `FIXM`, some stakeholders may have additional Flight and Flow Information exchange requirements that could possibly be satisfied by FIXM. In other terms, non-ICAO requirements might be considered for `FIXM`. Among these non-ICAO requirements, some may still prove to be globally applicable, while others may remain applicable to (a) specific region(s).
 
-### Eligibility criteria for FIXM Core
+### Eligibility Criteria for FIXM Core
 The following criteria are applicable for unambiguously deciding whether particular pieces of flight information qualify for `FIXM Core`.
 - The ICAO FF-ICE Information Requirements applicable only at regional level are not supported by `FIXM Core`.
 - `FIXM` supports primarily the ICAO FF-ICE concept, but may satisfy other requirements laid down by other ICAO panels or groups.
@@ -233,13 +233,13 @@ The picture below provides an illustration of the catalogue of third-parties FIX
 
 ## References
 
-### FIXM references
+### FIXM References
 
 [F-01]: [FIXM Web Site](https://fixm.aero/)
 
 [F-03]: [FIXM Change Management Charter](strategic-docs/charter.md)
 
-### ICAO references
+### ICAO References
 
 [I-01]: [ICAO Doc 9854 - Global Air Traffic Management Operational Concept (First Edition - 2005)](https://www.icao.int/Meetings/anconf12/Document%20Archive/9854_cons_en[1].pdf)
 
@@ -259,7 +259,7 @@ The picture below provides an illustration of the catalogue of third-parties FIX
 
 [I-14]: ASBU Working Document, Edition 2, Version 3
 
-### Other references
+### Other References
 
 [O-04]: Introduction to Aeronautical Information Exchange Model (AIXM) / Weather Information Exchange Model (WXXM) / FIXM Extensions, ICAO ATMRPP WP520
 

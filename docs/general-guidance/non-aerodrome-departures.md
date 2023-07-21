@@ -17,7 +17,7 @@ off from an aerodrome.”
 
 Further, the departure aerodrome/point represents a key field for traditional flight matching.
 
-## FIXM representation
+## FIXM Representation
 
 For most flights, i.e., flights departing from aerodromes, the current departure aerodrome or previous departure aerodrome (if a change has been made) will be represented in `departureAerodrome` or `departureAerodromePrevious` respectively. Likewise, the current or previous estimated off block times will be represented in `estimatedOffBlockTime` or `estimatedOffBlockTimePrevious`.
 
@@ -33,7 +33,7 @@ The figure below illustrates how both common aerodrome and less common non-aerod
 
 UML Class `Departure` (and relevant, associated classes) in package `FIXM.Flight.Departure`
 
-### XML schema
+### XML Schema
 
 ```xml
 <xs:complexType name="DepartureType">

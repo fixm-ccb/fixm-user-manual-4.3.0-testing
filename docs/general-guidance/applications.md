@@ -72,7 +72,7 @@ quality, and ease and cost of development for any exchange they are
 applied to. They provide FIXM users with guidance and structure while at
 the same time allowing FIXM to remain open and flexible.
 
-### XML representation of FIXM-based Message Templates
+### XML Representation of FIXM-based Message Templates
 
 The XML representation of FIXM-based message templates is currently
 primarily achieved by restricting complex types defined by FIXM. 
@@ -83,7 +83,7 @@ provide built-in validation: if the restriction is not correctly formed
 in relation to the parent type then the resulting schemas will not
 validate.
 
-### Benefits of XSD restrictions
+### Benefits of XSD Restrictions
 
 - XSD restrictions are explicit: using an XSD schema with restrictions
     means using the rules of the base XSD schema plus additional rules
@@ -97,7 +97,7 @@ validate.
 - XSD restrictions deliver benefits in terms of model development and
     maintenance. <sup><a href="#general-guidance/applications?id=notes">[note 2]</a></sup>
 
-## How to build a FIXM Application?
+## How to Build a FIXM Application?
 
 [This chapter](how-to-create-application/introduction.md) provides detailed guidance for creating FIXM Applications.
 

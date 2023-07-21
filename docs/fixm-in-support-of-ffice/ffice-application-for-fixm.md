@@ -13,7 +13,7 @@ The content of the FF-ICE Application is the following:
 
 The FF-ICE Application, together with FIXM Core, is developed and published by the FIXM CCB.
 
-## FF-ICE Message data structures
+## FF-ICE Message Data Structures
 
 The FF-ICE message data structures are the data elements that
 specifically qualify the FF-ICE Messages. They do not describe a Flight

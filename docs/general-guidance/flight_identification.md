@@ -27,7 +27,7 @@ Here is a list of off-the-shelf IT libraries whose use is recommended for the UU
 |.NET|https://learn.microsoft.com/en-us/dotnet/api/system.guid.newguid?view=net-7.0#system-guid-newguid||
 |Python|https://docs.python.org/3/library/uuid.html#uuid.uuid4||
 
-#### Encoding the namespace
+#### Encoding the Namespace
 
 The namespace is encoded using two fields: the `namespace domain` and the `namespace identifier`. The `namespace domain` identifies the particular type of namespace that is encoded, while the `namespace identifier` holds the actual namespace value. There are three options for the encoding of the namespace:
 - `namespace domain` = `FULLY_QUALIFIED_DOMAIN_NAME` when the `namespace identifier` is a domain name from either the organisation's email or from the organisation's website.
@@ -39,12 +39,12 @@ It is up to each GUFI originator to choose the most suitable option for the name
 ?> Note: The GUFI originator is not necessarily the flight plan or message originator, although they may be the same entity. For example, it is possible that an independent GUFI creation service could be used by flight plan originators that do not wish to create their own GUFIs. The namespace associated with these GUFIs would be that of the creation service and would have no connection to the flight plan originator.
 
 
-#### Encoding the creation timestamp
+#### Encoding the Creation Timestamp
 
 The creation timestamp is expressed as a `DateTimeUTC`. For more guidance, see [this section](general-guidance/date-time-specification.md).
 
 
-#### Examples of GUFI encoding
+#### Examples of GUFI Encoding
 
 - Example of GUFI encoding whereby the originator of the GUFI is an airline that has been allocated a 3-letter code listed in ICAO Doc 8585.
 

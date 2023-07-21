@@ -1,6 +1,6 @@
 # Using FIXM Core with an Extension
 
-## Creating a new Extension
+## Creating a New Extension
 
 If a FIXM user requires additional fields beyond what is available in
 [FIXM Core](general-guidance/fixm-core) or a [FIXM Application](general-guidance/applications), [Extensions](general-guidance/extensions) can be used to meet this

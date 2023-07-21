@@ -1,6 +1,6 @@
-# Relative points
+# Relative Points
 
-## FIXM representation
+## FIXM Representation
 
 ### Logical Model
 
@@ -8,7 +8,7 @@
 
 UML Class `RelativePoint` in package `FIXM.Base.AeronauticalReference`
 
-### XML schemas
+### XML Schemas
 
 ```xml
 <xs:complexType name="RelativePointType">

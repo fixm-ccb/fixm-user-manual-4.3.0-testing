@@ -1,6 +1,6 @@
 # Constraints 
 
-## RouteTrajectoryConstraints
+## Route/Trajectory Constraints
 
 FF-ICE outlines the route/trajectory speed, level, and time constraints that FIXM must be able to represent in sections B-3.4.3, B-3.4.4, and B-3.4.5 of the FF-ICE Implementation Guidance v0.99. This includes characterizing the type of constraint by specifying it as occuring:
 

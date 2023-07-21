@@ -1,4 +1,4 @@
-# Rules for absent data
+# Rules for Absent Data
 
 FIXM supports the representation of fields that are explicitly absent or
 that are deleted. It does so by leveraging the XSD specification for
@@ -63,7 +63,7 @@ Future FIXM versions may support the exchange of an additional “nil
 reason” attribute, if the need for it is identified by the FIXM
 Community.
 
-## Declaring null Measures and Geographical Position
+## Declaring Null Measures and Geographical Position
 
 The FIXM Measures types enforce the provision of the “uom” attribute
 together with the numeric value of the measure. Likewise, the FIXM
@@ -107,7 +107,7 @@ When a geographical position is to be declared null:
 -   Information consumer side: Ignore the provided srsName provided
     together with the null position.
 
-### Example of valid null measure declaration with a fake uom to be ignored:
+### Example of Valid Null Measure Declaration with a Fake UOM to be Ignored:
 
 ```xml
 <fx:desired>

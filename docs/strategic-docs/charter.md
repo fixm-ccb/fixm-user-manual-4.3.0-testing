@@ -69,7 +69,7 @@ This page formalizes the organization of the FIXM community and its operating pr
 
 ?> Note: The `AIRM liaison` is established following the planned Q4-2021 availability date of the draft PANS-IM provisions and in anticipation of the Q4-2024 applicability date of the expected PANS-IM provisions.
 
-### Code of conduct
+### Code of Conduct
 
 2.10 `FIXM CCB Participants` agree to respect the following code of conduct when participating in the `FIXM CCB` and other FIXM activities:
 - a) Behave courteously;
@@ -85,7 +85,7 @@ This page formalizes the organization of the FIXM community and its operating pr
 2.13 `FIXM CCB Members` are invited to inform the `FIXM CCB` about their plans for developing FIXM extensions and to share publicly these extensions using FIXM resources.
 
 
-### Decision making process
+### Decision Making Process
 
 2.14 `FIXM CCB Members` aim to actively support FIXM evolution activities and thus, `FIXM CCB Members` agree to participate in supporting the decision-making processes.
 
@@ -288,7 +288,7 @@ click CLICK_HERE "https://teams.microsoft.com/l/entity/2a527703-1f6f-4559-a332-d
 
 ## References
 
-### FIXM references
+### FIXM References
 
 [F-01]: [FIXM Web Site](https://fixm.aero/)
 

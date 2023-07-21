@@ -6,12 +6,12 @@ The main context for the use of **FIXM Core** is ICAO FF-ICE. Therefore, **FIXM 
 
 **FIXM Core** exists as a standard for exchanging flight data rather than as a set of pre-defined messages, allowing flexible exchanges between users rather than enforcing rigid communication patterns. However, once a given exchange is well-defined, it is useful to be able to enforce syntax and content validation checks to ensure the data being exchanged is of high quality. This is addressed by **FIXM Applications**.
 
-## What is a valid FIXM Core usage
+## What is a Valid FIXM Core Usage
 
 The general requirements for a valid **FIXM Core** usage are the
 following:
 
-### Requirement on data structure
+### Requirement on Data Structure
 
 | | | |
 |-|-|-|
@@ -100,7 +100,7 @@ breaks the hierarchy defined by FIXM Core. An information
 service relying on such an implementation practice would fail to satisfy
 the FIXM Core requirement on data structure.
 
-### Requirement on data correctness
+### Requirement on Data Correctness
 
 | | | |
 |-|-|-|
