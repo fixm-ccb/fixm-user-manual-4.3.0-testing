@@ -42,3 +42,19 @@ FIXM Core 4.2.0 was released before the publication of Amendment 91 to ICAO Anne
    <fx:otherCommunicationCapabilities>selectiveCallingCode=ABC3</...>  
 <!-- USE ";" as separator if the property fx:otherCommunicationCapabilities contains additional information -->
 ```
+
+## Absence of capabilities - no or unserviceable equipments
+
+`FIXM Core 4.3.0` has no explicit property for expressing that the flight has no communication, navigation of surveillance capability, which might happens when the aircraft is not equipped or has unserviceable equipments on board. This is a known defect that will be resolved in a future version of FIXM. 
+
+As a workaround, the following encoding rules is established for `FIXM Core 4.3.0`: 
+- when the flight has no surveillance capability, encode the value `NO_OR_UNSERVICEABLE_EQUIPMENT` in property `<fx:otherSurveillanceCapabilities>`
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:capabilities>
+  <fx:surveillance>
+    <fx:otherSurveillanceCapabilities>NO_OR_UNSERVICEABLE_EQUIPMENT</fx:otherSurveillanceCapabilities>
+```
+- xxx
+
+
