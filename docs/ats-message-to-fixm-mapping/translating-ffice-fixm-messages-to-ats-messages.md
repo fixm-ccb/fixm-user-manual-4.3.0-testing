@@ -6,7 +6,7 @@ This chapter targets FIXM implementers who want to realise a conversion from FF-
 
 ## Overview
 
-The transition from present day practices to FF-ICE operations is likely to be somewhat protracted. This is a topic that is being pursued actively by the ATMRPP \[ATMRPP-WG/24-WP/564\] <sup>[[11]](#references)</sup>, and is recognized as a key issue in the System Wide Information Management (SWIM) concept <sup>[[10]](#references)</sup> \[ICAO Doc 10039\]. During that transition period, there will be stakeholders who are able to send and receive flight plan information employing FIXM, while others will employ ICAO ATS messages. In such a hybrid environment, it is expected that a significant effort will be expended translating between the FIXM format and the ATS message format. It is critical for interoperability purposes, and to ensure meaning is not lost in translation, that the conversion between FIXM and ATS message content is precisely defined, and that all stakeholders employ the same translation rules.
+The transition from present day practices to FF-ICE operations is likely to be somewhat protracted. This is recognised by the ICAO  ATMRPP in the FF-ICE/R1 Provisions <sup>[[I-11]](#references)</sup> and the FF-ICE/R1 Implementation Guidance Manual <sup>[[I-06]](#references)</sup>, and by the ICAO IMP in in the System Wide Information Management (SWIM) Manual <sup>[[I-10]](#references)</sup>. During that transition period, there will be stakeholders who are able to send and receive flight plan information employing FIXM, while others will employ ICAO ATS messages. In such a hybrid environment, it is expected that a significant effort will be expended translating between the FIXM format and the ATS message format. It is critical for interoperability purposes, and to ensure meaning is not lost in translation, that the conversion between FIXM and ATS message content is precisely defined, and that all stakeholders employ the same translation rules.
 
 There is not a direct correspondence between ATS messages and FIXM, though there is a close association. At the message level, the association is with the FF-ICE messages described in [this chapter](fixm-in-support-of-ffice/message-templates?id=overview). The mapping from FF-ICE Messages to ATS messages focuses on the individual ATS message fields (7, 8, etc.) rather than the messages themselves. In general, the mapping is independent of the message type: regardless of which ATS message field 7 appears in, the aircraft identification always maps to the same FIXM element. In the cases where an ATS message field item maps to different FIXM elements based on the message type (e.g. field 13b is estimated off block time in a FPL, but actual take off time in a DEP), that difference is made explicit in the mapping rule.
 
@@ -17,7 +17,7 @@ There is not a direct correspondence between ATS messages and FIXM, though there
 This chapter provides a mapping between the FIXM Logical Model v4.3.0
 and International Civil Aviation Organisation (ICAO) Air Traffic
 Services (ATS) message content as defined in ICAO Doc 4444
-\[PANS-ATM\] <sup>[[4]](#references)</sup>.
+\[PANS-ATM\] <sup>[[I-04]](#references)</sup>.
 Within the context of FF-ICE, translation between FIXM and ATS is
 uni-directional from FIXM into ATS. However, the mapping presented here
 provides traceability *from* ATS message content *to* FIXM content for
@@ -28,7 +28,7 @@ is believed this additional mapping detail will aid users familiar with
 the PANS-ATM but new to FIXM in their understanding of the FIXM model.
 
 The scope of this chapter covers all message content defined in appendix
-3 of PANS-ATM <sup>[[4]](#references)</sup>.
+3 of PANS-ATM <sup>[[I-04]](#references)</sup>.
 Supporting descriptions are provided where the mapping from ATS message
 content to the FIXM Logical Model is not clear. The reader is assumed to
 be familiar with ICAO ATS messages and the FIXM Logical Model.
@@ -534,7 +534,7 @@ incorporating the information in field 18 DLE:
 #### Aircraft Type
 
 When the type of aircraft that conducts a flight does not have an ICAO
-aircraft type designator \[ICAO Doc 8643\] <sup>[[8]](#references)</sup> or
+aircraft type designator \[ICAO Doc 8643\] <sup>[[I-08]](#references)</sup> or
 the flight is a formation, the value ZZZZ is inserted in field 9b and
 the aircraft type information is inserted in field 18 TYP. The following
 fragment is an example.
@@ -583,7 +583,7 @@ sequence.
 #### Departure Aerodrome
 
 When the departure aerodrome for a flight does not have an ICAO location
-indicator code \[ICAO Doc 7910\] <sup>[[7]](#references)</sup>,
+indicator code \[ICAO Doc 7910\] <sup>[[I-07]](#references)</sup>,
 the value `ZZZZ` is inserted in field 13a and the departure point is
 inserted in field 18 DEP. According to PANS-ATM, the content of 18 DEP is
 "name and location of departure aerodrome" where the location is
@@ -623,7 +623,7 @@ field 13a and use a combination of name and `referencePoint` or
 #### Destination Aerodrome
 
 When the destination aerodrome for a flight does not have an ICAO
-location indicator code \[ICAO Doc 7910\] <sup>[[7]](#references)</sup>,
+location indicator code \[ICAO Doc 7910\] <sup>[[I-07]](#references)</sup>,
 the value `ZZZZ` is inserted in field 16a and the destination point is
 inserted in field 18 DEST. According to PANS-ATM the content of 18 DEST
 is "name and location of destination aerodrome" where the location is
@@ -690,7 +690,7 @@ insert the contents of `name` into 17c.
 #### Alternate Destination
 
 When the alternate destination aerodrome for a flight does not have an
-ICAO location indicator code \[ICAO Doc 7910\] <sup>[[7]](#references)</sup>,
+ICAO location indicator code \[ICAO Doc 7910\] <sup>[[I-07]](#references)</sup>,
 the value `ZZZZ` is inserted in field 16c and the alternate destination
 point is inserted in field 18 ALTN. Although similar to 18 DEP and 18
 DEST there is an added complication that up to two alternates may be
@@ -1029,7 +1029,7 @@ number (e.g. 126.7). The expanded text in PANS-ATM describing the
 examples always states MHz.
 
 The global guidance for ATC Interfacility Data Communications (AIDC)
-\[PAN AIDC ICD\] <sup>[[9]](#references)</sup> is
+\[PAN AIDC ICD\] <sup>[[I-09]](#references)</sup> is
 more specific as presented in Table 5.
 
 Table 5: PAN AIDC ICD Frequency
@@ -1072,14 +1072,18 @@ stakeholders.
 
 ## References
 
-[4]: PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management, ICAO Doc 4444, 16th edition
+### ICAO References
 
-[7]: ICAO Doc 7910: Location Indicators
+[I-04]: [ICAO Doc 4444, 16th Edition, 2016](https://portal.icao.int/icao-net/ICAO%20Documents/4444_cons_en.pdf) - PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management
 
-[8]: [ICAO Doc 8643](https://www.icao.int/publications/DOC8643/Pages/default.aspx): Aircraft Type Designators
+[I-06]: [ICAO Doc 9965, 2nd Edition, Volume II, v0.993 (DRAFT)](https://portal.icao.int/atmrpp/ATMRPP5%20Montreal%2059%20June%202023/1_Working%20papers/ATMRPP5_WP1000_Appendix%20C%20Doc%209965%20Vol%20II%20Implementation%20Guidance%20d0.993_markup.pdf) - Manual on FF-ICE, FF-ICE/R1 Implementation Guidance Manual **DRAFT** 
 
-[9]: PAN AIDC ICD: PAN Regional (NAT and APAC) Interface Control Document for ATC Interfacility Data Communications (PAN AIDC ICD), version 1.0
+[I-07]: [ICAO Doc 7910](https://www.icao.int/safety/OPS/OPS-Tools/Pages/location-indicator.aspx) - Location Indicators
 
-[10]: ICAO Doc 10039: Manual on System Wide Information Management (SWIM) Concept
+[I-08]: [ICAO Doc 8643](https://www.icao.int/publications/DOC8643/Pages/default.aspx) - Aircraft Type Designators
 
-[11]: ATMRPP-WG/24-WP/564: Flight Plan Filing Provisions for FF-ICE
+[I-09]: [PAN AIDC ICD, version 1.0](https://www.icao.int/APAC/Documents/edocs/PAN_ICD_AIDC_v1%200.pdf) - PAN Regional (NAT and APAC) Interface Control Document for ATC Interfacility Data Communications
+
+[I-10]: [**DRAFT** ICAO Manual on System Wide Information Management (SWIM) Implementation, version September 2021](https://portal.icao.int/imp/MeetingDocs/IMP-2/Working%20Papers/Appendix%20A%20to%20IMP_2%20WP006%20%E2%80%93%20Manual%20on%20SWIM%20Implementation.pdf)
+
+[I-11]: [ATMRPP/4-WP/922](https://portal.icao.int/atmrpp/Virtual%20ATMRPP4%201930%20April%202021/1_Working%20papers/ATMRPP4_WP_922_Updated%20FF-ICE%20R1%20Provisions_Appendix%20B_Clean.pdf) - Proposed Amendments to Annex 2, Doc 10066, and Doc 4444 concerning the initial implementation of FF-ICE Services
