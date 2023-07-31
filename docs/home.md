@@ -130,6 +130,10 @@ First-time users should follow these [instructions](https://www.fixm.aero/conten
 
 [I-14]: ​[ICAO Aviation System Block Upgrades (ASBU) framework](https://www4.icao.int/ganpportal/ASBU?_gl=1*1k7ewhd*_ga*MTc2MDEwOTgyOS4xNjU4MzAxNzIy*_ga_992N3YDLBQ*MTY5MDc5MTQzNC4xNi4xLjE2OTA3OTM4NjIuMC4wLjA.)
 
+[I-15]: [ICAO Doc 8585](https://www.icao.int/safety/OPS/OPS-Tools/Pages/3LD.aspx) - Designators for Aircraft Operating Agencies, Aeronautical Authorities and Services
+
+[I-16]: [ICAO Doc 10150, 1st Edition, 2021](https://portal.icao.int/icao-net/ICAO%20Documents/10150_cons_en.PDF) - Manual on the Functional Specifications for the Location of an Aircraft in Distress Repository (LADR)
+
 ### Other References
 
 [O-01]: [Donlon AIP data Set](https://github.com/aixm/donlon) - A fictitious set of digital AIS data sets complying with the ICAO Annex 15, 16th edition and the new PANS-AIM provisions, in AIXM 5.1.1 format.
