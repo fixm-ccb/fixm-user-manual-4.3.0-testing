@@ -5,7 +5,7 @@ that addresses the specific use of FIXM Core in the context of ICAO
 FF-ICE. It provides harmonized FF-ICE Message data structures and the
 individual FF-ICE Message templates in line with the requirements on
 FF-ICE Messages defined by the ICAO FF-ICE Implementation Guidance
-Manual (ICAO Doc 9965 Volume II)<sup>[[6]](#references)</sup>.
+Manual (ICAO Doc 9965 Volume II)<sup>[[I-06]](#references)</sup>.
 
 The content of the FF-ICE Application is the following:
 
@@ -54,4 +54,6 @@ structures modelled in the FF-ICE Application.
 
 ## References
 
-[6]: [ATMRPP/3-WP/766](https://eurocontrol.sharepoint.com/sites/coll-FIXM/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fcoll%2DFIXM%2FShared%20Documents%2FFIXM%20Change%20Requests%2FICAO%20ATMRPP%20inputs%20for%20FIXM%2FFF%2DICE%20Manual%20d0%2E99%5Fmarkup%2Epdf&parent=%2Fsites%2Fcoll%2DFIXM%2FShared%20Documents%2FFIXM%20Change%20Requests%2FICAO%20ATMRPP%20inputs%20for%20FIXM): “Manual on FF-ICE Implementation Guidance”
+### ICAO References
+
+[I-06]: [ICAO Doc 9965, 2nd Edition, Volume II, v0.993 (DRAFT)](https://portal.icao.int/atmrpp/ATMRPP5%20Montreal%2059%20June%202023/1_Working%20papers/ATMRPP5_WP1000_Appendix%20C%20Doc%209965%20Vol%20II%20Implementation%20Guidance%20d0.993_markup.pdf) - Manual on FF-ICE, FF-ICE/R1 Implementation Guidance Manual **DRAFT**
