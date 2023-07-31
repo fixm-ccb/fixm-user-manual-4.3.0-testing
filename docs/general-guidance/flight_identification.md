@@ -11,11 +11,11 @@
 
 > The operator, or its designated representative, is required to generate and allocate a GUFI to its FF-ICE flight plan.
 
-More information in chapter 3.7 GUFI & FLIGHT PLAN ASSOCIATION of the FF-ICE/R1 Implementation Guidance Manual.
+More information in chapter 3.7 GUFI & FLIGHT PLAN ASSOCIATION of the FF-ICE/R1 Implementation Guidance Manual <sup>[[I-06]](#references)</sup>.
 
 ### Encoding a GUFI in FIXM Core 4.3.0
 
-`FIXM Core 4.3.0` supports the representation of the GUFI as specified in the draft d0.992 of the FF-ICE/R1 Implementation Guidance Manual. The GUFI consists of a version 4 UUID, as standardised by IETF RFC 4122 and ISO/IEC 9834-8:2014, supplemented with a namespace identifying the originator of the GUFI and a creation timestamp. For further details, browse APPENDIX G – GUFI Construction of the FF-ICE/R1 Implementation Guidance Manual.
+`FIXM Core 4.3.0` supports the representation of the GUFI as specified in the FF-ICE/R1 Implementation Guidance Manual <sup>[[I-06]](#references)</sup>. The GUFI consists of a version 4 UUID, as standardised by IETF RFC 4122 <sup>[[O-07]](#references)</sup> and ISO/IEC 9834-8:2014 <sup>[[O-08]](#references)</sup>, supplemented with a namespace identifying the originator of the GUFI and a creation timestamp. For further details, browse APPENDIX G – GUFI Construction of the FF-ICE/R1 Implementation Guidance Manual <sup>[[I-06]](#references)</sup>.
 
 #### Encoding the UUID v4
 
@@ -32,7 +32,7 @@ Here is a list of off-the-shelf IT libraries whose use is recommended for the UU
 The namespace is encoded using two fields: the `namespace domain` and the `namespace identifier`. The `namespace domain` identifies the particular type of namespace that is encoded, while the `namespace identifier` holds the actual namespace value. There are three options for the encoding of the namespace:
 - `namespace domain` = `FULLY_QUALIFIED_DOMAIN_NAME` when the `namespace identifier` is a domain name from either the organisation's email or from the organisation's website.
 - `namespace domain` = `OPERATING_AGENCY_DESIGNATOR` when the `namespace identifier` is a three-letter Operating Agency Designator (as per ICAO Doc. 8585).
-- `namespace domain` = `LOCATION_INDICATOR` when the `namespace identifier` is a four-letter Location Indicator (as per ICAO Doc. 7910). 
+- `namespace domain` = `LOCATION_INDICATOR` when the `namespace identifier` is a four-letter Location Indicator (as per ICAO Doc. 7910 <sup>[[I-07]](#references)</sup>). 
 
 It is up to each GUFI originator to choose the most suitable option for the namespace, but keep in mind that the intent is for the namespace chosen to uniquely identify the GUFI originator. It is also recommended that the GUFI originator use a single consistent namespace whenever possible to allow namespace uniqueness to be testable for that organisation.
 
@@ -57,7 +57,7 @@ The creation timestamp is expressed as a `DateTimeUTC`. For more guidance, see [
 
 ---
 
-- Example of GUFI encoding whereby the originator of the GUFI is an ATM unit that has been allocated a 4-letter location indicator listed in ICAO Doc 7910.
+- Example of GUFI encoding whereby the originator of the GUFI is an ATM unit that has been allocated a 4-letter location indicator listed in ICAO Doc 7910 <sup>[[I-07]](#references)</sup>.
 
 ```xml
 <!-- xmlns:fx="http://www.fixm.aero/flight/4.3" -->
@@ -118,3 +118,16 @@ Encoding of ACID in `FIXM Core 4.3.0`
     <fx:aircraftIdentification>AFR447</fx:aircraftIdentification>
 ```
 
+## References
+
+### ICAO References
+
+[I-06]: [ICAO Doc 9965, 2nd Edition, Volume II, v0.993 (DRAFT)](https://portal.icao.int/atmrpp/ATMRPP5%20Montreal%2059%20June%202023/1_Working%20papers/ATMRPP5_WP1000_Appendix%20C%20Doc%209965%20Vol%20II%20Implementation%20Guidance%20d0.993_markup.pdf) - Manual on FF-ICE, FF-ICE/R1 Implementation Guidance Manual **DRAFT** 
+
+[I-07]: [ICAO Doc 7910](https://www.icao.int/safety/OPS/OPS-Tools/Pages/location-indicator.aspx) - Location Indicators
+
+### Other References
+
+[O-07]: [IETF RFC 4122](https://datatracker.ietf.org/doc/html/rfc4122)
+
+[O-08]: [ISO/IEC 9834-8:2014](https://www.iso.org/obp/ui#iso:std:iso-iec:9834:-8:ed-3:v1:en)
