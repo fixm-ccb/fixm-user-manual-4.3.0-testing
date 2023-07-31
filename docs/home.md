@@ -100,33 +100,33 @@ First-time users should follow these [instructions](https://www.fixm.aero/conten
 
 ### ICAO References
 
-[I-01]: [ICAO Doc 9854 - Global Air Traffic Management Operational Concept (First Edition - 2005)](https://www.icao.int/Meetings/anconf12/Document%20Archive/9854_cons_en[1].pdf)
+[I-01]: [ICAO Doc 9854, 1st Edition, 2005](https://www.icao.int/Meetings/anconf12/Document%20Archive/9854_cons_en[1].pdf) - Global Air Traffic Management Operational Concept
 
-[I-02]: [ICAO Doc 9882 - Manual on Air Traffic Management System Requirements (First Edition – 2007)](https://www.icao.int/airnavigation/IMP/Documents/Doc%209882%20-%20Manual%20on%20ATM%20Requirements.pdf)
+[I-02]: [ICAO Doc 9882, 1st Edition, 2007](https://www.icao.int/airnavigation/IMP/Documents/Doc%209882%20-%20Manual%20on%20ATM%20Requirements.pdf) - Manual on Air Traffic Management System Requirements
 
 [I-03]: [Global Air Navigation Plan](https://www4.icao.int/ganpportal/)
 
-[I-04]: [ICAO Doc 4444, 16th edition - PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management](https://portal.icao.int/icao-net/ICAO%20Documents/4444_cons_en.pdf)
+[I-04]: [ICAO Doc 4444, 16th edition, 2016](https://portal.icao.int/icao-net/ICAO%20Documents/4444_cons_en.pdf) - PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management
 
-[I-05]: [ICAO Doc 9965, 1st edition - Manual on Flight and Flow Information for a Collaborative Environment](http://www.icao.int/Meetings/anconf12/Documents/9965_cons_en.pdf)
+[I-05]: [ICAO Doc 9965, 1st edition, 2012](http://www.icao.int/Meetings/anconf12/Documents/9965_cons_en.pdf) - Manual on Flight and Flow Information for a Collaborative Environment
 
-[I-06]: DRAFT ICAO Doc 9965, 2nd edition, Volume II "FF-ICE/R1 Implementation Guidance Manual" v0.99
+[I-06]: [DRAFT ICAO Doc 9965, 2nd edition, Volume II, v0.993](https://portal.icao.int/atmrpp/ATMRPP5%20Montreal%2059%20June%202023/1_Working%20papers/ATMRPP5_WP1000_Appendix%20C%20Doc%209965%20Vol%20II%20Implementation%20Guidance%20d0.993_markup.pdf) - **DRAFT** FF-ICE/R1 Implementation Guidance Manual
 
-[I-07]: [ICAO Doc 7910 - Location Indicators](https://www.icao.int/safety/OPS/OPS-Tools/Pages/location-indicator.aspx)
+[I-07]: [ICAO Doc 7910](https://www.icao.int/safety/OPS/OPS-Tools/Pages/location-indicator.aspx) - Location Indicators
 
-[I-08]: [ICAO Doc 8643 - Aircraft Type Designators](https://www.icao.int/publications/DOC8643/Pages/default.aspx)
+[I-08]: [ICAO Doc 8643](https://www.icao.int/publications/DOC8643/Pages/default.aspx) - Aircraft Type Designators
 
-[I-09]: [PAN AIDC ICD: PAN Regional (NAT and APAC) Interface Control Document for ATC Interfacility Data Communications (PAN AIDC ICD), version 1.0](https://www.icao.int/APAC/Documents/edocs/PAN_ICD_AIDC_v1%200.pdf)
+[I-09]: [PAN AIDC ICD, version 1.0](https://www.icao.int/APAC/Documents/edocs/PAN_ICD_AIDC_v1%200.pdf) - PAN Regional (NAT and APAC) Interface Control Document for ATC Interfacility Data Communications
 
-[I-10]: ICAO Doc 10039, Advanced Edition 2015 - Manual on System Wide Information Management (SWIM) Concept
+[I-10]: [**DRAFT** ICAO Manual on System Wide Information Management (SWIM) Implementation, version September 2021](https://portal.icao.int/imp/MeetingDocs/IMP-2/Working%20Papers/Appendix%20A%20to%20IMP_2%20WP006%20%E2%80%93%20Manual%20on%20SWIM%20Implementation.pdf)
 
-[I-11]: ATMRPP-WG/24-WP/564: Flight Plan Filing Provisions for FF-ICE
+<!---[I-11]: ATMRPP-WG/24-WP/564: Flight Plan Filing Provisions for FF-ICE-->
 
-[I-12]: [ICAO Doc 9883, 1st edition - Manual on Global Performance of the Air Navigation System](https://portal.icao.int/icao-net/ICAO%20Documents/9883_cons_en.pdf)
+[I-12]: [ICAO Doc 9883, 1st edition](https://portal.icao.int/icao-net/ICAO%20Documents/9883_cons_en.pdf) - Manual on Global Performance of the Air Navigation System
 
-[I-13]: [ICAO Doc 9971, 3st edition - Manual on Collaborative Air Traffic Flow Management](https://portal.icao.int/icao-net/ICAO%20Documents/9971_cons_en.pdf)
+[I-13]: [ICAO Doc 9971, 3st edition](https://portal.icao.int/icao-net/ICAO%20Documents/9971_cons_en.pdf) - Manual on Collaborative Air Traffic Flow Management]
 
-[I-14]: ASBU Working Document, Edition 2, Version 3
+[I-14]: ​[ICAO Aviation System Block Upgrades (ASBU) framework](https://www4.icao.int/ganpportal/ASBU?_gl=1*1k7ewhd*_ga*MTc2MDEwOTgyOS4xNjU4MzAxNzIy*_ga_992N3YDLBQ*MTY5MDc5MTQzNC4xNi4xLjE2OTA3OTM4NjIuMC4wLjA.)
 
 ### Other References
 
@@ -136,7 +136,7 @@ First-time users should follow these [instructions](https://www.fixm.aero/conten
 
 [O-03]: [OGC 12-028r1](https://portal.opengeospatial.org/files/?artifact_id=62061): Use of Geography Markup Language (GML) for Aviation Data
 
-[O-04]: Introduction to Aeronautical Information Exchange Model (AIXM) / Weather Information Exchange Model (WXXM) / FIXM Extensions, ICAO ATMRPP WP520
+<!---[O-04]: Introduction to Aeronautical Information Exchange Model (AIXM) / Weather Information Exchange Model (WXXM) / FIXM Extensions, ICAO ATMRPP WP520-->
 
 [O-05]: [ATM Information Reference Model](https://airm.aero/)
 
