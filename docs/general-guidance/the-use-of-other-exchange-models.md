@@ -46,8 +46,8 @@ and receive this data.
 
 ## Notes
 
-[1]: From draft Volume I of the ICAO Manual on SWIM (ICAO Doc 10039)<sup>[[10]](#references)</sup>
+[1]: From draft Volume I of the ICAO Manual on SWIM (ICAO Doc 10039)<sup>[[I-10]](#references)</sup>
 
 ## References
 
-[10]: ICAO Doc 10039: Manual on System Wide Information Management (SWIM) Concept
+[I-10]: [**DRAFT** ICAO Manual on System Wide Information Management (SWIM) Implementation, version September 2021](https://portal.icao.int/imp/MeetingDocs/IMP-2/Working%20Papers/Appendix%20A%20to%20IMP_2%20WP006%20%E2%80%93%20Manual%20on%20SWIM%20Implementation.pdf)
