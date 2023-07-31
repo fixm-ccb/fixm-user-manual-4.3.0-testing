@@ -1,8 +1,8 @@
 # FIXM Core
 
-**FIXM Core** provides globally harmonized flight data structures that can be exchanged in various contexts. Only flight data structures that are globally applicable qualify for FIXM Core. Flight data structures that are local or regional in nature do not qualify for **FIXM Core**. An **Extensions** mechanism is implemented so that **FIXM Core** can be extended in order to cover these local or regional data structures, as appropriate.
+**FIXM Core** provides globally harmonized flight data structures that can be exchanged in various contexts. The scope of `FIXM Core 4.3.0` is the following: provide harmonised representation of the flight data structures exchanged 1) in the context of FF-ICE/R1 as specified in the FF-ICE/R1 Implementation Guidance Manual <sup>[[I-06]](#references)</sup> (main context of use), and 2) in the context of ICAO GADSS/LADR as specified in ICAO Doc 10150 <sup>[[I-16]](#references)</sup>.
 
-The main context for the use of **FIXM Core** is ICAO FF-ICE. Therefore, **FIXM Core** currently captures the flight data structures that are identified in the ICAO FF-ICE Implementation Guidance Manual <sup>[[I-06]](#references)</sup>. 
+Only flight data structures that are globally applicable qualify for FIXM Core. Flight data structures that are local or regional in nature do not qualify for **FIXM Core**. An **Extensions** mechanism is implemented so that **FIXM Core** can be extended in order to cover these local or regional data structures, as appropriate.
 
 **FIXM Core** exists as a standard for exchanging flight data rather than as a set of pre-defined messages, allowing flexible exchanges between users rather than enforcing rigid communication patterns. However, once a given exchange is well-defined, it is useful to be able to enforce syntax and content validation checks to ensure the data being exchanged is of high quality. This is addressed by **FIXM Applications**.
 
