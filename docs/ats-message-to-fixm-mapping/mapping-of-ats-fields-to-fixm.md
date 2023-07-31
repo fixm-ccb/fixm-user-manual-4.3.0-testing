@@ -8,7 +8,7 @@ Table 8: Column Definitions
 
   |Column   | Description|
   |:-|:-|
-  |PANS-ATM Field     |The field number as defined in ICAO Doc 4444 \[PANS-ATM\]<sup>[[4]](#references)</sup>.|
+  |PANS-ATM Field     |The field number as defined in ICAO Doc 4444 \[PANS-ATM\]<sup>[[I-04]](#references)</sup>.|
   |Package            |The package that contains the definition of the PANS-ATM field in the logical model.|
   |Class              |The class (in the specified package) that models the PANS-ATM field.|
   |Path from Flight   |Starting from class *Flight* in package *Flight.FlightData*, this defines the path to the location in the logical model where the field is encoded.|
@@ -583,5 +583,6 @@ Further consideration of this is required.
 
 ## References
 
-[4]: PANS-ATM: Procedures for Air Navigation Services: Air Traffic
-Management, ICAO Doc 4444, 16th edition
+### ICAO References
+
+[I-04]: [ICAO Doc 4444, 16th Edition, 2016](https://portal.icao.int/icao-net/ICAO%20Documents/4444_cons_en.pdf) - PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management
