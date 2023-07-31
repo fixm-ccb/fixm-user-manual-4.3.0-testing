@@ -31,7 +31,7 @@ Here is a list of off-the-shelf IT libraries whose use is recommended for the UU
 
 The namespace is encoded using two fields: the `namespace domain` and the `namespace identifier`. The `namespace domain` identifies the particular type of namespace that is encoded, while the `namespace identifier` holds the actual namespace value. There are three options for the encoding of the namespace:
 - `namespace domain` = `FULLY_QUALIFIED_DOMAIN_NAME` when the `namespace identifier` is a domain name from either the organisation's email or from the organisation's website.
-- `namespace domain` = `OPERATING_AGENCY_DESIGNATOR` when the `namespace identifier` is a three-letter Operating Agency Designator (as per ICAO Doc. 8585).
+- `namespace domain` = `OPERATING_AGENCY_DESIGNATOR` when the `namespace identifier` is a three-letter Operating Agency Designator (as per ICAO Doc. 8585 <sup>[[I-15]](#references)</sup>).
 - `namespace domain` = `LOCATION_INDICATOR` when the `namespace identifier` is a four-letter Location Indicator (as per ICAO Doc. 7910 <sup>[[I-07]](#references)</sup>). 
 
 It is up to each GUFI originator to choose the most suitable option for the namespace, but keep in mind that the intent is for the namespace chosen to uniquely identify the GUFI originator. It is also recommended that the GUFI originator use a single consistent namespace whenever possible to allow namespace uniqueness to be testable for that organisation.
@@ -46,7 +46,7 @@ The creation timestamp is expressed as a `DateTimeUTC`. For more guidance, see [
 
 #### Examples of GUFI Encoding
 
-- Example of GUFI encoding whereby the originator of the GUFI is an airline that has been allocated a 3-letter code listed in ICAO Doc 8585.
+- Example of GUFI encoding whereby the originator of the GUFI is an airline that has been allocated a 3-letter code listed in ICAO Doc 8585 <sup>[[I-15]](#references)</sup>.
 
 ```xml
 <!-- xmlns:fx="http://www.fixm.aero/flight/4.3" -->
@@ -125,6 +125,8 @@ Encoding of ACID in `FIXM Core 4.3.0`
 [I-06]: [ICAO Doc 9965, 2nd Edition, Volume II, v0.993 (DRAFT)](https://portal.icao.int/atmrpp/ATMRPP5%20Montreal%2059%20June%202023/1_Working%20papers/ATMRPP5_WP1000_Appendix%20C%20Doc%209965%20Vol%20II%20Implementation%20Guidance%20d0.993_markup.pdf) - Manual on FF-ICE, FF-ICE/R1 Implementation Guidance Manual **DRAFT** 
 
 [I-07]: [ICAO Doc 7910](https://www.icao.int/safety/OPS/OPS-Tools/Pages/location-indicator.aspx) - Location Indicators
+
+[I-15]: [ICAO Doc 8585](https://www.icao.int/safety/OPS/OPS-Tools/Pages/3LD.aspx) - Designators for Aircraft Operating Agencies, Aeronautical Authorities and Services
 
 ### Other References
 
