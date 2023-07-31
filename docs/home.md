@@ -106,25 +106,25 @@ First-time users should follow these [instructions](https://www.fixm.aero/conten
 
 [I-03]: [Global Air Navigation Plan](https://www4.icao.int/ganpportal/)
 
-[I-04]: ICAO Doc 4444, 16th edition - PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management 
+[I-04]: [ICAO Doc 4444, 16th edition - PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management](https://portal.icao.int/icao-net/ICAO%20Documents/4444_cons_en.pdf)
 
 [I-05]: [ICAO Doc 9965, 1st edition - Manual on Flight and Flow Information for a Collaborative Environment](http://www.icao.int/Meetings/anconf12/Documents/9965_cons_en.pdf)
 
 [I-06]: DRAFT ICAO Doc 9965, 2nd edition, Volume II "FF-ICE/R1 Implementation Guidance Manual" v0.99
 
-[I-07]: ICAO Doc 7910 - Location Indicators
+[I-07]: [ICAO Doc 7910 - Location Indicators](https://www.icao.int/safety/OPS/OPS-Tools/Pages/location-indicator.aspx)
 
 [I-08]: [ICAO Doc 8643 - Aircraft Type Designators](https://www.icao.int/publications/DOC8643/Pages/default.aspx)
 
-[I-09]: PAN AIDC ICD: PAN Regional (NAT and APAC) Interface Control Document for ATC Interfacility Data Communications (PAN AIDC ICD), version 1.0
+[I-09]: [PAN AIDC ICD: PAN Regional (NAT and APAC) Interface Control Document for ATC Interfacility Data Communications (PAN AIDC ICD), version 1.0](https://www.icao.int/APAC/Documents/edocs/PAN_ICD_AIDC_v1%200.pdf)
 
 [I-10]: ICAO Doc 10039, Advanced Edition 2015 - Manual on System Wide Information Management (SWIM) Concept
 
 [I-11]: ATMRPP-WG/24-WP/564: Flight Plan Filing Provisions for FF-ICE
 
-[I-12]: ICAO Doc 9883, 1st edition - Manual on Global Performance of the Air Navigation System
+[I-12]: [ICAO Doc 9883, 1st edition - Manual on Global Performance of the Air Navigation System](https://portal.icao.int/icao-net/ICAO%20Documents/9883_cons_en.pdf)
 
-[I-13]: ICAO Doc 9971, 1st edition - Manual on Collaborative Air Traffic Flow Management
+[I-13]: [ICAO Doc 9971, 3st edition - Manual on Collaborative Air Traffic Flow Management](https://portal.icao.int/icao-net/ICAO%20Documents/9971_cons_en.pdf)
 
 [I-14]: ASBU Working Document, Edition 2, Version 3
 
@@ -141,6 +141,12 @@ First-time users should follow these [instructions](https://www.fixm.aero/conten
 [O-05]: [ATM Information Reference Model](https://airm.aero/)
 
 [O-06]: [EUROCONTROL Specification on SWIM Information Definition](https://www.eurocontrol.int/publication/eurocontrol-specification-swim-information-definition)
+
+[O-07]: [IETF RFC 4122](https://datatracker.ietf.org/doc/html/rfc4122)
+
+[O-08]: [ISO/IEC 9834-8:2014](https://www.iso.org/obp/ui#iso:std:iso-iec:9834:-8:ed-3:v1:en)
+
+
 
 ## Acronyms
 
