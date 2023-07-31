@@ -100,17 +100,19 @@ First-time users should follow these [instructions](https://www.fixm.aero/conten
 
 ### ICAO References
 
+?> Access to some ICAO references listed below may require an [ICAO Portal](https://portallogin.icao.int/) account. Alternatively, you may get copies via the [ICAO Store](https://store.icao.int/).
+
 [I-01]: [ICAO Doc 9854, 1st Edition, 2005](https://www.icao.int/Meetings/anconf12/Document%20Archive/9854_cons_en[1].pdf) - Global Air Traffic Management Operational Concept
 
 [I-02]: [ICAO Doc 9882, 1st Edition, 2007](https://www.icao.int/airnavigation/IMP/Documents/Doc%209882%20-%20Manual%20on%20ATM%20Requirements.pdf) - Manual on Air Traffic Management System Requirements
 
 [I-03]: [Global Air Navigation Plan](https://www4.icao.int/ganpportal/)
 
-[I-04]: [ICAO Doc 4444, 16th edition, 2016](https://portal.icao.int/icao-net/ICAO%20Documents/4444_cons_en.pdf) - PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management
+[I-04]: [ICAO Doc 4444, 16th Edition, 2016](https://portal.icao.int/icao-net/ICAO%20Documents/4444_cons_en.pdf) - PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management
 
-[I-05]: [ICAO Doc 9965, 1st edition, 2012](http://www.icao.int/Meetings/anconf12/Documents/9965_cons_en.pdf) - Manual on Flight and Flow Information for a Collaborative Environment
+[I-05]: [ICAO Doc 9965, 2nd Edition, Volume I, v2022a (DRAFT)](https://portal.icao.int/atmrpp/ATMRPP5%20Montreal%2059%20June%202023/1_Working%20papers/ATMRPP5_WP1000_%20Appendix%20B%20Doc%209965%20Vol%20I%20Concept%20Document_v2022a%20_clean.pdf) - Manual on FF-ICE, Concept document **DRAFT** 
 
-[I-06]: [DRAFT ICAO Doc 9965, 2nd edition, Volume II, v0.993](https://portal.icao.int/atmrpp/ATMRPP5%20Montreal%2059%20June%202023/1_Working%20papers/ATMRPP5_WP1000_Appendix%20C%20Doc%209965%20Vol%20II%20Implementation%20Guidance%20d0.993_markup.pdf) - **DRAFT** FF-ICE/R1 Implementation Guidance Manual
+[I-06]: [ICAO Doc 9965, 2nd Edition, Volume II, v0.993 (DRAFT)](https://portal.icao.int/atmrpp/ATMRPP5%20Montreal%2059%20June%202023/1_Working%20papers/ATMRPP5_WP1000_Appendix%20C%20Doc%209965%20Vol%20II%20Implementation%20Guidance%20d0.993_markup.pdf) - Manual on FF-ICE, FF-ICE/R1 Implementation Guidance Manual **DRAFT** 
 
 [I-07]: [ICAO Doc 7910](https://www.icao.int/safety/OPS/OPS-Tools/Pages/location-indicator.aspx) - Location Indicators
 
@@ -120,21 +122,21 @@ First-time users should follow these [instructions](https://www.fixm.aero/conten
 
 [I-10]: [**DRAFT** ICAO Manual on System Wide Information Management (SWIM) Implementation, version September 2021](https://portal.icao.int/imp/MeetingDocs/IMP-2/Working%20Papers/Appendix%20A%20to%20IMP_2%20WP006%20%E2%80%93%20Manual%20on%20SWIM%20Implementation.pdf)
 
-<!---[I-11]: ATMRPP-WG/24-WP/564: Flight Plan Filing Provisions for FF-ICE-->
+[I-11]: [ATMRPP/4-WP/922](https://portal.icao.int/atmrpp/Virtual%20ATMRPP4%201930%20April%202021/1_Working%20papers/ATMRPP4_WP_922_Updated%20FF-ICE%20R1%20Provisions_Appendix%20B_Clean.pdf) - Proposed Amendments to Annex 2, Doc 10066, and Doc 4444 concerning the initial implementation of FF-ICE Services
 
-[I-12]: [ICAO Doc 9883, 1st edition](https://portal.icao.int/icao-net/ICAO%20Documents/9883_cons_en.pdf) - Manual on Global Performance of the Air Navigation System
+[I-12]: [ICAO Doc 9883, 1st Edition](https://portal.icao.int/icao-net/ICAO%20Documents/9883_cons_en.pdf) - Manual on Global Performance of the Air Navigation System
 
-[I-13]: [ICAO Doc 9971, 3st edition](https://portal.icao.int/icao-net/ICAO%20Documents/9971_cons_en.pdf) - Manual on Collaborative Air Traffic Flow Management]
+[I-13]: [ICAO Doc 9971, 3st Edition](https://portal.icao.int/icao-net/ICAO%20Documents/9971_cons_en.pdf) - Manual on Collaborative Air Traffic Flow Management]
 
 [I-14]: ​[ICAO Aviation System Block Upgrades (ASBU) framework](https://www4.icao.int/ganpportal/ASBU?_gl=1*1k7ewhd*_ga*MTc2MDEwOTgyOS4xNjU4MzAxNzIy*_ga_992N3YDLBQ*MTY5MDc5MTQzNC4xNi4xLjE2OTA3OTM4NjIuMC4wLjA.)
 
 ### Other References
 
-[O-01]: [Donlon AIP data Set](https://github.com/aixm/donlon): a fictitious set of digital AIS data sets complying with the ICAO Annex 15, 16th edition and the new PANS-AIM provisions, in AIXM 5.1.1 format.
+[O-01]: [Donlon AIP data Set](https://github.com/aixm/donlon) - A fictitious set of digital AIS data sets complying with the ICAO Annex 15, 16th edition and the new PANS-AIM provisions, in AIXM 5.1.1 format.
 
 [O-02]: [W3C XML Linking Language (xlink) v1.1](https://www.w3.org/TR/xlink11/)
 
-[O-03]: [OGC 12-028r1](https://portal.opengeospatial.org/files/?artifact_id=62061): Use of Geography Markup Language (GML) for Aviation Data
+[O-03]: [OGC 12-028r1](https://portal.opengeospatial.org/files/?artifact_id=62061) - Use of Geography Markup Language (GML) for Aviation Data
 
 <!---[O-04]: Introduction to Aeronautical Information Exchange Model (AIXM) / Weather Information Exchange Model (WXXM) / FIXM Extensions, ICAO ATMRPP WP520-->
 
