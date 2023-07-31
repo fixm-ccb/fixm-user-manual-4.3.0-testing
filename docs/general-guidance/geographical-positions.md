@@ -51,7 +51,7 @@ coordinate axes in which coordinate values are provided, e.g. latitude
 before longitude – which is an important convention for the aviation
 domain.*
 >
-> -- <cite>OGC 12-028r1 <sup>[[14]](#references)</sup></cite>
+> -- <cite>OGC 12-028r1 <sup>[[O-03]](#references)</sup></cite>
 
 The EPSG:4326 CRS is the recommended choice for AIXM 5.1 data sets that
 use the WGS-84 reference datum.
@@ -137,4 +137,4 @@ geospatial data. The reasons for not adopting GML are the following:
 
 ## References
 
-[14]: [OGC 12-028r1](https://portal.opengeospatial.org/files/?artifact_id=62061): Use of Geography Markup Language (GML) for Aviation Data
+[O-03]: [OGC 12-028r1](https://portal.opengeospatial.org/files/?artifact_id=62061) - Use of Geography Markup Language (GML) for Aviation Data

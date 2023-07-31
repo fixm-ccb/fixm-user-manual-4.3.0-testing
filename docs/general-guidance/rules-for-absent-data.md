@@ -29,7 +29,7 @@ the context of the information exchange:
 -   A nil element included in an FF-ICE Flight Plan Update message will
     indicate that this flight plan data item is to be deleted. This
     interpretation is dictated by the FF-ICE Implementation Guidance
-    Manual which states the following:
+    Manual <sup>[[I-06]](#references)</sup> which states the following:
 
 > *6.4.3.6 A Flight Plan Update is only required to contain those items
 > that have changed (in addition to the mandatory items specified for an
@@ -114,3 +114,9 @@ When a geographical position is to be declared null:
   <fx:takeoffMass xsi:nil="true" uom="KG"/>
 </fx:desired>
 ```
+
+## References
+
+### ICAO References
+
+[I-06]: [ICAO Doc 9965, 2nd Edition, Volume II, v0.993 (DRAFT)](https://portal.icao.int/atmrpp/ATMRPP5%20Montreal%2059%20June%202023/1_Working%20papers/ATMRPP5_WP1000_Appendix%20C%20Doc%209965%20Vol%20II%20Implementation%20Guidance%20d0.993_markup.pdf) - Manual on FF-ICE, FF-ICE/R1 Implementation Guidance Manual **DRAFT** 

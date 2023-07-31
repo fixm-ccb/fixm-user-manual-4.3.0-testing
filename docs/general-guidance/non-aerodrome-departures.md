@@ -9,7 +9,7 @@ There are three use cases associated with departure points that can be represent
 The first of these is by far the most common use case, and, while the second two cases are infrequent, 
 they are also required. 
 
-Per the PANSATM, see the final clause of the DEP/ indicator under the Field Type 18 
+Per the PANSATM <sup>[[I-04]](#references)</sup>, see the final clause of the DEP/ indicator under the Field Type 18 
 section of Appendix 3 for the specific need to provide representation for a non-aerodrome departure point:  
 
 > “The first point of the route (name or LAT/LONG) or the marker radio beacon, if the aircraft has not taken 
@@ -138,3 +138,12 @@ Edited [DepartureType][DepartureType] in file [Departure.xsd][Departure.xsd]
 
 ## Notes
 [1]: To create the logical model, four new embedded choice classes using the <\<XSDchoice\>> stereotype were created named DepartureLocationChoice, DepartureLocationPreviousChoice, DepartureTimeChoice, and DepartureTimePreviousChoice. This approach was used to retain the explicit representation for the departure aerodrome as its own field with non-aerodrome departure points collected under a second field.
+
+
+## References
+
+### ICAO References
+
+[I-04]: [ICAO Doc 4444, 16th Edition, 2016](https://portal.icao.int/icao-net/ICAO%20Documents/4444_cons_en.pdf) - PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management
+
+

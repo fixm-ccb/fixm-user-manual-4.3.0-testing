@@ -37,7 +37,7 @@ which was set-up in order to discuss solutions for integrating airport slot info
 
 ## Examples
 
-Identification of a departure airport slot allocated to a General Aviation/Business Aviation (from ATMRPP-WG/28-WP/653)
+Identification of a departure airport slot allocated to a General Aviation/Business Aviation (from [ATMRPP-WG/28-WP/653](https://eurocontrol.sharepoint.com/:b:/r/sites/coll-FIXM/Shared%20Documents/FIXM%20Change%20Requests/ICAO%20ATMRPP%20inputs%20for%20FIXM/WP653%20SLOT%20in%20FF-ICE.pdf?csf=1&web=1&e=JBfNqO))
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
 <fx:flight>
@@ -45,7 +45,7 @@ Identification of a departure airport slot allocated to a General Aviation/Busin
     <fx:airportSlotIdentification>1407011234</fx:airportSlotIdentification>    
 ```
 
-Identification of a departure airport slot allocated in Europe (from EUROCONTROL IFPS User Manual R27).
+Identification of a departure airport slot allocated in Europe (from [EUROCONTROL IFPS User Manual R27](https://www.eurocontrol.int/publication/ifps-users-manual)).
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
 <fx:flight>

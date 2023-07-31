@@ -11,7 +11,7 @@ table provides the correspondence between the FF-ICE message templates
 from the application and their corresponding description in the FF-ICE
 Implementation Guidance Manual, Appendix C.
 
-Table 1: Correspondences between FF-ICE Message templates and their ICAO Doc 9965 Volume II<sup>[[6]](#references)</sup> description
+Table 1: Correspondences between FF-ICE Message templates and their ICAO Doc 9965 Volume II<sup>[[I-06]](#references)</sup> description
 
 | **FF-ICE Message templates** | **Associated Requirements from the FF-ICE Implementation Guidance Manual, Appendix C** |
 |-|-|
@@ -149,4 +149,6 @@ There was also an update to make `airspeed` optional for performance profile poi
 
 ## References
 
-[6]: [ATMRPP/3-WP/766](https://eurocontrol.sharepoint.com/sites/coll-FIXM/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fcoll%2DFIXM%2FShared%20Documents%2FFIXM%20Change%20Requests%2FICAO%20ATMRPP%20inputs%20for%20FIXM%2FFF%2DICE%20Manual%20d0%2E99%5Fmarkup%2Epdf&parent=%2Fsites%2Fcoll%2DFIXM%2FShared%20Documents%2FFIXM%20Change%20Requests%2FICAO%20ATMRPP%20inputs%20for%20FIXM): “Manual on FF-ICE Implementation Guidance”
+### ICAO References
+
+[I-06]: [ICAO Doc 9965, 2nd Edition, Volume II, v0.993 (DRAFT)](https://portal.icao.int/atmrpp/ATMRPP5%20Montreal%2059%20June%202023/1_Working%20papers/ATMRPP5_WP1000_Appendix%20C%20Doc%209965%20Vol%20II%20Implementation%20Guidance%20d0.993_markup.pdf) - Manual on FF-ICE, FF-ICE/R1 Implementation Guidance Manual **DRAFT** 
