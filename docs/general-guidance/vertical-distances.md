@@ -58,3 +58,5 @@ always represented with integer values.
 ```xml
 <fb:altitude uom="M">3500.1</fb:altitude>
 ```
+
+!> **Note to implementers:** FIXM supports multiple units of measure. When exchanging information in FIXM format, please ensure the recipient of your data can accept information using the units you provide.
