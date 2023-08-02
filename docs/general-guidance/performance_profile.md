@@ -20,7 +20,7 @@ The FIXM Core classes `RouteTrajectoryGroup` has two properties `climbProfile` a
 classDiagram	
 class ProfilePoint
 <<XSDcomplexType>> ProfilePoint
-link ProfilePoint "https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA5/EA311.htm" "Go to definition"
+link ProfilePoint "https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA9/EA2/EA372.htm" "Go to definition"
 ProfilePoint : + airspeed [0..1] TrueAirspeed
 ProfilePoint : + distance [0..1] Distance
 ProfilePoint : + level [0..1] FlightLevelOrAltitudeChoice
@@ -29,7 +29,7 @@ ProfilePoint : + seqNum [0..1] Count
 
 class PerformanceProfile
 <<XSDcomplexType>> PerformanceProfile
-link PerformanceProfile "https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA2/EA243.htm" "Go to definition"
+link PerformanceProfile "https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA9/EA2/EA372.htm" "Go to definition"
 PerformanceProfile --> ProfilePoint : +profilePoint [0..2000]
 
 class RouteTrajectoryGroup
