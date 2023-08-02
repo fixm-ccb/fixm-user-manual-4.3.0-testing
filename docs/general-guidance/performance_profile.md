@@ -1,6 +1,7 @@
 # Performance Profile
 
-As explained in the FF-ICE/R1 Implementation Guidance Manual, the `Performance Profile` is a zero-wind, standard atmosphere profile reflective of the flight capabilities and desired parameters. 
+As explained in the FF-ICE/R1 Implementation Guidance Manual <sup>[[I-06]](#references)</sup>,
+the `Performance Profile` is a zero-wind, standard atmosphere profile reflective of the flight capabilities and desired parameters. 
 It does not include any flight-specific constraints such as altitude or speed restrictions applicable to the route of flight. 
 However, it does incorporate constraints that are always applicable (e.g., a 250 knot constraint applicable to all flights below 10,000 feet), 
 and gradients required for obstacle clearance along the route of flight.
@@ -282,3 +283,9 @@ RouteTrajectoryGroup --> PerformanceProfile : +descentProfile [0..1]
     </fx:profilePoint>
 </fx:climbProfile>
 ```
+
+## References
+
+### ICAO References
+
+[I-06]: [ICAO Doc 9965, 2nd Edition, Volume II, v0.993 (DRAFT)](https://portal.icao.int/atmrpp/ATMRPP5%20Montreal%2059%20June%202023/1_Working%20papers/ATMRPP5_WP1000_Appendix%20C%20Doc%209965%20Vol%20II%20Implementation%20Guidance%20d0.993_markup.pdf) - Manual on FF-ICE, FF-ICE/R1 Implementation Guidance Manual **DRAFT** 
