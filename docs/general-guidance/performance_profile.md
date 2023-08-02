@@ -40,6 +40,9 @@ RouteTrajectoryGroup --> PerformanceProfile : +descentProfile [0..1]
 
 ## Examples
 
+![Image](.//media/example_climb_profile.png ':size=100%')
+
+
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
 <fx:climbProfile>
