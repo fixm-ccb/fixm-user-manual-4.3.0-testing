@@ -14,7 +14,7 @@ Descent profiles begin at a top-of-descent at the maximum operational cruise alt
 
 ## FIXM Representation
 
-The FIXM Core classes `RouteTrajectoryGroup` has two properties `climbProfile` and `descentProfile` that can be used for exchanging the `Performance Profile`.
+The FIXM Core class `RouteTrajectoryGroup` has two properties `climbProfile` and `descentProfile` that can be used for exchanging the `Performance Profile`.
 
 ```mermaid	
 classDiagram	
@@ -38,10 +38,9 @@ RouteTrajectoryGroup --> PerformanceProfile : +climbProfile [0..1]
 RouteTrajectoryGroup --> PerformanceProfile : +descentProfile [0..1]
 ```
 
-## Examples
+## Example of Climb Profile
 
 ![Image](.//media/example_climb_profile.png ':size=100%')
-
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
