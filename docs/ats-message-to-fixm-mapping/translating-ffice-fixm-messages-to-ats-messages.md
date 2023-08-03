@@ -204,8 +204,8 @@ association `surveillance`.
     `<fx:otherSurveillanceCapabilities>`
     <sup>[[note 4]](#notes)</sup>.
 
--   When creating ATS message content from a FIXM object, insert `Z` in
-    field 10a if property `<fx:otherSurveillanceCapabilities>` has the 
+-   When creating ATS message content from a FIXM object, insert `N` in
+    field 10b if property `<fx:otherSurveillanceCapabilities>` has the 
     value `NO_OR_UNSERVICEABLE_EQUIPMENT`.
 
 #### Date/Time/Duration Specification
