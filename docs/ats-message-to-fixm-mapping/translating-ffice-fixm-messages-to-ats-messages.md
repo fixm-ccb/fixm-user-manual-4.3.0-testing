@@ -108,19 +108,19 @@ in the ATS message.
 
 The value N in field 10a of an ATS messages indicates, "no
 COM/NAV/approach aid equipment for the route to be flown is carried, or
-the equipment is unserviceable". FIXM does not explicitly model the
-field 10a code `N`. Rather it leaves that code implicit to avoid
-redundancy. The relevant items in the FIXM Logical Model are
-class `FlightCapabilities` and its associations `navigation`, 
-`communication` and `standardCapabilities`.
+the equipment is unserviceable". The relevant items in the FIXM Logical Model are
+class `FlightCapabilities` and its associations `navigation` and 
+`communication`.
 
--   When creating a FIXM object from ATS message content, ignore
-    code `N` in field 10a <sup>[[note 1]](#notes)</sup>.
+-   When creating a FIXM object from ATS message content, encode the value
+    `NO_OR_UNSERVICEABLE_EQUIPMENT` in both properties 
+    `<fx:otherCommunicationCapabilities>` and `<fx:otherNavigationCapabilities`.
+    <sup>[[note 1]](#notes)</sup>.
 
 -   When creating ATS message content from a FIXM object, insert `N` in
-    field 10a if an instance of class `FlightCapabilities` is absent, or
-    it is present and associations `navigation`, `communication` and 
-    `standardCapabilities` are all absent.
+    field 10a if both properties 
+    `<fx:otherCommunicationCapabilities>` and `<fx:otherNavigationCapabilities`
+    have the value `NO_OR_UNSERVICEABLE_EQUIPMENT`.
 
 ##### Standard Equipment
 
@@ -195,17 +195,18 @@ code block above are included in the diagram.
 
 The value `N` in field 10b of an ATS messages indicates, "no surveillance
 equipment for the route to be flown is carried, or the equipment is
-unserviceable". FIXM does not explicitly model the field 10b code `N`.
-Rather it leaves that code implicit to avoid redundancy. The relevant
+unserviceable". The relevant
 items in the FIXM Logical Model are class `FlightCapabilities` and its
 association `surveillance`.
 
--   When creating a FIXM object from ATS message content, ignore
-    code `N` in field 10b <sup>[[note 4]](#notes)</sup>.
+-   When creating a FIXM object from ATS message content, encode the value
+    `NO_OR_UNSERVICEABLE_EQUIPMENT` in property 
+    `<fx:otherSurveillanceCapabilities>`
+    <sup>[[note 4]](#notes)</sup>.
 
 -   When creating ATS message content from a FIXM object, insert `N` in
-    field 10b if an instance of class `FlightCapabilities` is absent, or
-    it is present but no surveillance capability codes are present.
+    field 10b if property `<fx:otherSurveillanceCapabilities>` has the 
+    value `NO_OR_UNSERVICEABLE_EQUIPMENT`.
 
 #### Date/Time/Duration Specification
 
