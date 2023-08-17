@@ -24,6 +24,7 @@
   - [Aircraft Data](general-guidance/aircraft_data.md)
   - [Flight Identification](general-guidance/flight_identification.md)
   - [Flight Capabilities](general-guidance/flight_capabilities.md)
+  - [Performance Profile](general-guidance/performance_profile.md)
   - [Constraints](general-guidance/constraints.md)
   - [Trajectory Point Properties](general-guidance/trajectory-point-properties.md)
   - [Airport Slot Identification](general-guidance/airport_slot.md)
