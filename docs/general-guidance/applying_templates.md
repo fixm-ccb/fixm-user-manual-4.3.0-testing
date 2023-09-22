@@ -84,7 +84,7 @@ Again, validating against a template schema is not enough to apply a template.  
                 namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME" 
                 namespaceIdentifier="example.com"&gt;e30a7f6d-19c2-44da-b35d-e8bfd4e341ff&lt;/gufi&gt;
         &lt;/fx:flightIdentification&gt;
-        <mark>&lt;fx:flightRulesCategory&gt;I&lt;/fx:flightRulesCategory&gt;</mark> <mark>&lt;!-- Note 4 --&gt;</mark>
+        <mark style='color:red'>&lt;fx:flightRulesCategory&gt;I&lt;/fx:flightRulesCategory&gt;</mark> <mark>&lt;!-- Note 4 --&gt;</mark>
     &lt;/ffice:flight&gt;
     &lt;ffice:relevantAtmServiceProvider&gt;
         &lt;ffice:provider/&gt;
