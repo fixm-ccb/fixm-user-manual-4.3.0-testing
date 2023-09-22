@@ -14,7 +14,6 @@ The restricted complex types defined in the templates will require their sub-ele
 - Only the root element needs an explicit xsi:type - for a properly constructed template, each sub-element will have the appropriate type inherently applied based on its parent’s restricted type.
 
 Below is a sample XML message showing a flawed attempt to apply an FF-ICE Flight Cancellation template. This message should fail schema validation because it incorrectly includes the <flightRulesCategory> element but, instead, it will pass schema validation.  Several key sections of the message are highlighted, with explanatory notes following the XML block explaining why this unexpected behavior occurs.
-
 <pre><code class="language-xml">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 <mark>&lt;!-- Note 2 --&gt;</mark>
@@ -58,7 +57,6 @@ Below is a sample XML message showing a flawed attempt to apply an FF-ICE Flight
 4. And that means the inclusion of the <flightRulesCategory> element will be considered legal during schema validation.
 
 Again, validating against a template schema is not enough to apply a template.  You must make sure you type your root element correctly in order to apply the template.  Below is a second sample XML message that correctly applies an FF-ICE Flight Cancellation template.  Several key sections are again highlighted, with explanatory notes provided below.
-
 <pre><code class="language-xml">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 <mark>&lt;!-- Note 2 --&gt;</mark>
