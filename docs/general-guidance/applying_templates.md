@@ -56,7 +56,7 @@ Below is a sample XML message showing a flawed attempt to apply an FF-ICE Flight
 1. This message references the correct template schema for a Flight Cancellation message, but no xsi:type is present to actually apply the template.
 2. With no xsi:type in place, the `<FficeMessage>` element is still using the "FficeMessageType" complex type instead of the restricted "FficeFC_FficeMessageType".  As such, no template restrictions are being applied.
 3. This, in turn, means the `<flight>` element is still using the complex type "FlightType".
-4. And that means the inclusion of the `<flightRulesCategory>` element will be considered <b style='color:green'>valid</ b> during schema validation.
+4. And that means the inclusion of the `<flightRulesCategory>` element will be considered <b style='color:green'>valid</b> during schema validation.
 
 ## Example of Correct Usage (Templates are applied)
 
