@@ -13,7 +13,9 @@ The restricted complex types defined in the templates will require their sub-ele
 - This chaining together of restricted types (starting from the root element) is the means by which templates are formed and their content enforced.
 - Only the root element needs an explicit xsi:type - for a properly constructed template, each sub-element will have the appropriate type inherently applied based on its parent’s restricted type.
 
-Below is a sample XML message showing a flawed attempt to apply an FF-ICE Flight Cancellation template. This message should fail schema validation because it incorrectly includes the <flightRulesCategory> element but, instead, it will pass schema validation.  Several key sections of the message are highlighted, with explanatory notes following the XML block explaining why this unexpected behavior occurs.
+## Example of Incorrect Usage (Templates are not applied)
+
+Below is a sample XML message showing a flawed attempt to apply an FF-ICE Flight Cancellation template. This message should fail schema validation because it incorrectly includes the `<flightRulesCategory>` element but, instead, it will pass schema validation.  Several key sections of the message are highlighted, with explanatory notes following the XML block explaining why this unexpected behavior occurs.
 <pre><code class="language-xml">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 <mark>&lt;!-- Note 2 --&gt;</mark>
@@ -41,7 +43,7 @@ Below is a sample XML message showing a flawed attempt to apply an FF-ICE Flight
                 namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME" 
                 namespaceIdentifier="example.com"&gt;e30a7f6d-19c2-44da-b35d-e8bfd4e341ff&lt;/gufi&gt;
         &lt;/fx:flightIdentification&gt;
-        <mark>&lt;fx:flightRulesCategory&gt;I&lt;/fx:flightRulesCategory&gt;</mark> <mark>&lt;!-- Note 4--&gt;</mark>
+        <mark style='color:green'>&lt;fx:flightRulesCategory&gt;I&lt;/fx:flightRulesCategory&gt;</mark> <mark>&lt;!-- Note 4--&gt;</mark>
     &lt;/ffice:flight&gt;
     &lt;ffice:relevantAtmServiceProvider&gt;
         &lt;ffice:provider/&gt;
@@ -52,9 +54,11 @@ Below is a sample XML message showing a flawed attempt to apply an FF-ICE Flight
 </code></pre>
 
 1. This message references the correct template schema for a Flight Cancellation message, but no xsi:type is present to actually apply the template.
-2. With no xsi:type in place, the <FficeMessage> element is still using the "FficeMessageType" complex type instead of the restricted "FficeFC_FficeMessageType".  As such, no template restrictions are being applied.
-3. This, in turn, means the <flight> element is still using the complex type "FlightType".
-4. And that means the inclusion of the <flightRulesCategory> element will be considered legal during schema validation.
+2. With no xsi:type in place, the `<FficeMessage>` element is still using the "FficeMessageType" complex type instead of the restricted "FficeFC_FficeMessageType".  As such, no template restrictions are being applied.
+3. This, in turn, means the `<flight>` element is still using the complex type "FlightType".
+4. And that means the inclusion of the `<flightRulesCategory>` element will be considered <span style='color:green'>valid</span> during schema validation.
+
+## Example of Correct Usage (Templates are applied)
 
 Again, validating against a template schema is not enough to apply a template.  You must make sure you type your root element correctly in order to apply the template.  Below is a second sample XML message that correctly applies an FF-ICE Flight Cancellation template.  Several key sections are again highlighted, with explanatory notes provided below.
 <pre><code class="language-xml">
@@ -95,6 +99,6 @@ Again, validating against a template schema is not enough to apply a template.  
 </code></pre>
 
 1. This message correctly applies an xsi:type to the root element.
-2. This changes the underlying type of <FficeMessage> to use the "FficeFC_FlightMessageType" complex type.
-3. This, in turn, through the chaining of complex type restrictions in the template schemas, means the <flight> element will be evaluated using the "FficeFC_FlightType" complex type.
-4. And that means that the inclusion of the <flightRulesCategory> element will be correctly flagged as invalid during schema validation.
+2. This changes the underlying type of `<FficeMessage>` to use the "FficeFC_FlightMessageType" complex type.
+3. This, in turn, through the chaining of complex type restrictions in the template schemas, means the `<flight>` element will be evaluated using the "FficeFC_FlightType" complex type.
+4. And that means that the inclusion of the `<flightRulesCategory>` element will be correctly flagged as <span style='color:green'>invalid</span> during schema validation.
