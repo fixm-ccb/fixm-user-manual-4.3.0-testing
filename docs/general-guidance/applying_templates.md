@@ -23,8 +23,7 @@ Below is a sample XML message showing a flawed attempt to apply an FF-ICE Flight
         xmlns:ffice="http://www.fixm.aero/app/ffice/1.1" 
         xmlns:fb="http://www.fixm.aero/base/4.3" xmlns:fx="http://www.fixm.aero/flight/4.3" 
         xsi:schemaLocation="http://www.fixm.aero/app/ffice/1.1 
-            <mark>file:///C:/schemas/applications/fficemessage/fficetemplates/flightcancellation/FlightCancellation.xsd"</mark>&gt;
-            <mark>&lt;!-- Note 1 --&gt;</mark>
+            <mark>file:///C:/schemas/applications/fficemessage/fficetemplates/flightcancellation/FlightCancellation.xsd"</mark>&gt; <mark>&lt;!-- Note 1 --&gt;</mark>
     <mark>&lt;ffice:flight&gt;</mark> <mark>&lt;!-- Note 3 --&gt;</mark>
         &lt;fx:arrival&gt;
             &lt;fx:destinationAerodrome&gt;
@@ -43,7 +42,7 @@ Below is a sample XML message showing a flawed attempt to apply an FF-ICE Flight
                 namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME" 
                 namespaceIdentifier="example.com"&gt;e30a7f6d-19c2-44da-b35d-e8bfd4e341ff&lt;/gufi&gt;
         &lt;/fx:flightIdentification&gt;
-        <mark style='color:green'>&lt;fx:flightRulesCategory&gt;I&lt;/fx:flightRulesCategory&gt;</mark> <mark>&lt;!-- Note 4--&gt;</mark>
+        <mark style='color:green'><b>&lt;fx:flightRulesCategory&gt;I&lt;/fx:flightRulesCategory&gt;</b></mark> <mark>&lt;!-- Note 4--&gt;</mark>
     &lt;/ffice:flight&gt;
     &lt;ffice:relevantAtmServiceProvider&gt;
         &lt;ffice:provider/&gt;
@@ -88,7 +87,7 @@ Again, validating against a template schema is not enough to apply a template.  
                 namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME" 
                 namespaceIdentifier="example.com"&gt;e30a7f6d-19c2-44da-b35d-e8bfd4e341ff&lt;/gufi&gt;
         &lt;/fx:flightIdentification&gt;
-        <mark style='color:red'>&lt;fx:flightRulesCategory&gt;I&lt;/fx:flightRulesCategory&gt;</mark> <mark>&lt;!-- Note 4 --&gt;</mark>
+        <mark style='color:red'><b>&lt;fx:flightRulesCategory&gt;I&lt;/fx:flightRulesCategory&gt;</b></mark> <mark>&lt;!-- Note 4 --&gt;</mark>
     &lt;/ffice:flight&gt;
     &lt;ffice:relevantAtmServiceProvider&gt;
         &lt;ffice:provider/&gt;
