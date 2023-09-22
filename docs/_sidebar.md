@@ -30,6 +30,7 @@
   - [Airport Slot Identification](general-guidance/airport_slot.md)
   - [General Rules for Data Correctness](general-guidance/general-rules-for-data-correctness.md)
   - [Rules for Absent Data](general-guidance/rules-for-absent-data.md)
+  - [Applying Templates in XML](general-guidance/applying_templates.md)
   - [The Use of Other Exchange Models](general-guidance/the-use-of-other-exchange-models.md)
 
 
