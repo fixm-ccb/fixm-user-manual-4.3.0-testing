@@ -25,7 +25,7 @@ As such, it should not be necessary to make use of the xsi:type attribute for ev
 As noted above, validating against a template schema is not sufficient to actually apply a template.  You must make sure that you "type" your root element correctly in order for the template to be applied.  Below is a sample XML message that correctly applies an FF-ICE Flight Cancellation template.  Several key sections are highlighted, with explanatory notes linked to each section provided below.
 
 1. This message references the correct template schema for a Flight Cancellation message as well as correctly applying an xsi:type to the root element.  These are the only actions that must be taken to apply a template but it is critical to do so.
-2. Doing this changes the underlying type of `<FficeMessage>` element to use the "FficeFC_FlightMessageType" complex type rather than the unrestricted "FlightMessageType".
+2. Doing this changes the underlying type of the `<FficeMessage>` element to use the "FficeFC_FlightMessageType" complex type rather than the unrestricted "FlightMessageType".
 3. This, in turn, through the chaining of complex type restrictions in the template schemas, means the `<flight>` element will be evaluated using the "FficeFC_FlightType" complex type rather than the unrestricted "FlightType".
 4. And that means that the inclusion of the `<flightRulesCategory>` element will be correctly flagged as <b style='color:red'>invalid</b> during schema validation.
 
@@ -73,7 +73,7 @@ Below is a second sample XML message that shows a flawed attempt to apply an FF-
 1. This message references the correct template schema for a Flight Cancellation message, but no xsi:type is present to actually apply the template.
 2. With no xsi:type in place, the `<FficeMessage>` element is still using the unrestricted "FficeMessageType" complex type instead of the restricted "FficeFC_FficeMessageType".  As such, no template restrictions are being applied.
 3. This, in turn, means the `<flight>` element is still using the unrestricted complex type "FlightType".
-4. And that means the inclusion of the `<flightRulesCategory>` element will correctly but unexpectedly be considered <b style='color:green'>valid</b> during schema validation.
+4. And that means the inclusion of the `<flightRulesCategory>` element will correctly but unexpectedly be considered <b style='color:green'>valid</b> during schema validation, removing this data correctness check along with any other benefits the template should have afforded this data exchange.
 
 <pre><code class="language-xml">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
