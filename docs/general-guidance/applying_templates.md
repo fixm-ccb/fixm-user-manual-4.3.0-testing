@@ -1,10 +1,10 @@
 # Applying Templates in XML Messages
 
-Applying a FIXM template is a straightfoward process but it requires one important, extra step beyond just using the template schemas for message construction and validation.  
+Applying a FIXM template is a straightfoward process that requires one important step in addition to using the template schemas for message construction and validation - correctly setting the type of the message's root element.
 
 ## Using the Built-In xsi:type Attribute
 
-FIXM templates exist as pure restrictions, adding no new fields of their own - including a root XML element that uses the correct template-based complex type.  Therefore, the only way to employ a template's complex types when using the template schemas is to make use of the xsi:type attribute.  
+FIXM templates exist as pure restrictions, adding no new fields of their own.  This means the templates do not natively contain a root XML element that uses the correct template-based complex type.  Therefore, the only way to employ a template's complex types when using the template schemas is to make use of the xsi:type attribute.  
 
 - This attribute allows the complex type of an element to be explicitly set within the XML document where it is used.
 - This is how you can correctly set the type of the message’s root element to use the intended template even though the template schemas themselves don’t provide their own root elements of that type.
