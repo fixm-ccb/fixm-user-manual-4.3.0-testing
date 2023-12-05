@@ -386,6 +386,12 @@ RouteTrajectoryGroup --> PerformanceProfile : +descentProfile [0..1]
 </fx:descentProfile>		
 ```
 
+## How to use the performance profile
+
+As of today, the only way for an eASP to compute a 4D trajectory which looks like more or less as an actual one, is to take the BADA performance profile. But, as it is based on static performances - meaning it does not consider a company cost of index, a take of mass, the take off A/D location, etc - then the BADA performance profiles are far from perfect. And this is where the FF-ICE performance profile can bring an added value, because this one should convey that information. An eASP should choose the FF-ICE performance profile, in replacement of the BADA one, whenever possible.
+
+
+
 ## References
 
 ### ICAO References
