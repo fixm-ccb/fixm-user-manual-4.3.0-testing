@@ -10,7 +10,19 @@
   - [FIXM Applications](general-guidance/applications.md)
   - [Extensions](general-guidance/extensions.md)
 
+- **Working With FIXM Components**
+  - [Introduction](general-guidance/fixm-components-introduction.md)
+  - [Core Only](fixm-for-other-use-cases/using-fixm-core-without-an-application.md)
+  - [Using FIXM Core with an Extension](fixm-for-other-use-cases/using-fixm-core-with-an-extension.md)
+  - [[Using FIXM Core with an Extension and Application]
+  - [Using FIXM Core with a FIXM Application](fixm-for-other-use-cases/using-fixm-core-with-an-application.md)
+ 
+  - - **Using FIXM in Support of FF-ICE**
+  - [The FF-ICE Application for FIXM](fixm-in-support-of-ffice/ffice-application-for-fixm.md)
+  - [FF-ICE Message Templates](fixm-in-support-of-ffice/message-templates.md)
+  - [Route/Trajectory Example Data](fixm-in-support-of-ffice/example_data.md)
 
+    
 - **General Guidance**
   - [Introduction](general-guidance/introduction.md)
   - [Date/Time Specification & AIRAC Effective Date](general-guidance/date-time-specification.md)
@@ -32,19 +44,6 @@
   - [Rules for Absent Data](general-guidance/rules-for-absent-data.md)
   - [Applying Templates in XML](general-guidance/applying_templates.md)
   - [The Use of Other Exchange Models](general-guidance/the-use-of-other-exchange-models.md)
-
-
-- **Using FIXM in Support of FF-ICE**
-  - [The FF-ICE Application for FIXM](fixm-in-support-of-ffice/ffice-application-for-fixm.md)
-  - [FF-ICE Message Templates](fixm-in-support-of-ffice/message-templates.md)
-  - [Route/Trajectory Example Data](fixm-in-support-of-ffice/example_data.md)
-
-
-- **Using FIXM for Other Use Cases**
-  - [Using FIXM Core without a FIXM Application](fixm-for-other-use-cases/using-fixm-core-without-an-application.md)
-  - [Using FIXM Core with a FIXM Application](fixm-for-other-use-cases/using-fixm-core-with-an-application.md)
-  - [Using FIXM Core with an Extension](fixm-for-other-use-cases/using-fixm-core-with-an-extension.md)
-
 
 - **FIXM/ATS Mapping**
   - [Translating FF-ICE FIXM Messages to ATS Messages](ats-message-to-fixm-mapping/translating-ffice-fixm-messages-to-ats-messages.md)
