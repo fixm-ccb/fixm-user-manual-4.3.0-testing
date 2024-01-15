@@ -15,7 +15,7 @@
   - [Core Only](fixm-for-other-use-cases/using-fixm-core-without-an-application.md)
   - [Using FIXM Core with an Extension](fixm-for-other-use-cases/using-fixm-core-with-an-extension.md)
   - [Using FIXM Core with a FIXM Application](fixm-for-other-use-cases/using-fixm-core-with-an-application.md)
-  - [[Using FIXM Core with an Extension and Application](fixm-for-other-use-cases/using-fixm-core-with-an-application-and-extension.md)
+  - [[Using FIXM Core with an Extension and Application](fixm-for-other-use-cases/using-an-extension-together-with-an-application.md)
 
 - **Using FIXM in Support of FF-ICE**
   - [The FF-ICE Application for FIXM](fixm-in-support-of-ffice/ffice-application-for-fixm.md)
