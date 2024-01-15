@@ -1,4 +1,4 @@
-## Using an Extension together with an Application
+# Using an Extension together with an Application
 
 In principle, as can be seen in detail in [How to create a FIXM extension](how-to-create-fixm-extension/introduction), applying an
 Extension to an Application is no different than applying one to FIXM
