@@ -236,8 +236,8 @@ based on which type of FF-ICE message is being translated.
 <td>Base.AeronauticalReference</td>
 <td>AerodromeReference</td>
 <td><p>[16a=ZZZZ]</p>
-<p>destination.destinationAerodrome.name</p>
-<p>destination.destinationAerodrome.referencePoint<br>or<br>destination.destinationAerodrome.referenceRelativePoint</p></td>
+<p>arrival.destinationAerodrome.name</p>
+<p>arrival.destinationAerodrome.referencePoint<br>or<br>arrival.destinationAerodrome.referenceRelativePoint</p></td>
 </tr>
 <tr class="even">
 <td>DOF</td>
