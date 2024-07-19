@@ -3,7 +3,7 @@
 The following table provides fictitious examples of FF-ICE Messages.
 
 | FF-ICE Message template | FF-ICE Message | XML samples | Notes |
-|:-|:-|:-|
+|:-|:-|:-|:-|
 | C-1 Submission Response       | [SubmissionResponse][FficeSR]            |  go to [XML]() |    |
 | C-2 Preliminary Flight Plan   | [PreliminaryFlightPlan][FficePFP]        |  go to [XML]() |    |
 | C-3 Planning Status           | [PlanningStatus][FficePS]                |  go to [XML]() |    |
