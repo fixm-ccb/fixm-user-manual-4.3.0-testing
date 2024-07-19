@@ -6,14 +6,16 @@ These samples shall never be used operationally.
 
 |Example|Description|
 |:-|:-|
-|xxx|Explains how the route/trajectory example from the FF-ICE/R1 Implementation Guidance Manual (Appendix E-3.7) is concretely encoded in FIXM 4.3.0.|
-|xxx|Provides examples for all 13 FF-ICE messages specified by the the FF-ICE/R1 Implementation Guidance Manual (Appendix C) |
+| [Route/Trajectory Example Data](/fixm-in-support-of-ffice/example_data.md)   |  Explains how the route/trajectory example from the FF-ICE/R1 Implementation Guidance Manual (Appendix E-3.7) is concretely encoded in FIXM 4.3.0.|
+| [Examples of FF-ICE Messages](/fixm-in-support-of-ffice/example_messages.md) |  Provides examples for all 13 FF-ICE messages specified by the the FF-ICE/R1 Implementation Guidance Manual (Appendix C) |
+
+All samples are available in [github]().
 
 
 ## Real world FIXM data
 
-The following table provides an inventory of information services from which real world FIXM data may be retrieved. 
-Access to, and use of, this FIXM data may be subject to particular access conditions and rules.
+The following table provides an nventory of information services from which real world FIXM data may be retrieved. This list is non-exhaustive. 
+Access to, and use of, this FIXM data may be subject to particular access and use conditions.
 
 | Information Service | Information Service Provider | Description | Type of FIXM data served | Access conditions |
 |:-|:-|:-|:-|:-|
