@@ -13,8 +13,8 @@ The following table provides fictitious examples of FF-ICE Messages.
 | C-7 Trial Response            | [TrialResponse][FficeTRP]                |  go to [XML]() |    |
 | C-8 Flight Cancellation       | [FlightCancellation][FficeFC]            |  go to [XML]() |    |
 | C-9 Flight Plan Update        | [FlightPlanUpdate][FficeFPU]             |  go to [XML]() |    |
-| C-10 Flight Data Request      | [FlightDataRequest][FficeFDRQ]           |  go to [XML]() |    |
-| C-11 Flight Data Response     | [FlightDataResponse][FficeFDRP]          |  go to [XML]() |    |
+| C-10 Flight Data Request      | [FlightDataRequest][FficeFDRQ]           | [Example 1]() <br> [Example 2]()  | Example 1 = request of type FLIGHT_PLAN<br> Example 2 =  request of type FLIGHT_STATUS  |
+| C-11 Flight Data Response     | [FlightDataResponse][FficeFDRP]          | [Example 1]() <br> [Example 2]() | Example 1 = response to a request of type FLIGHT_PLAN. Also illustrates the use of the bugfix for exchanging element flightRulesCategory. <br>Example 2 = response to a request of type FLIGHT_STATUS   |
 | C-12 Flight Departure         | [FlightDeparture][FficeFD]               |  go to [XML]() |    |
 | C-13 Flight Arrival           | [FlightArrival][FficeFA]                 |  go to [XML]() |    |
 
