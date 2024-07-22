@@ -75,11 +75,11 @@ The authoritative reference for FIXM is www.FIXM.aero. Details on the FIXM CCB a
 			</fb:contact>
 			<fb:identifier>NA</fb:identifier>
 			<fb:identifierDomain>FF-ICE</fb:identifierDomain>
-			<fb:name>EUC</fb:name>
+			<fb:name>UFO</fb:name>
 		</fx:flightPlanOriginator>
 		<fx:flightType>S</fx:flightType>
 		<fx:operator>
-			<fb:designatorIcao>EUC</fb:designatorIcao>
+			<fb:designatorIcao>UFO</fb:designatorIcao>
 		</fx:operator>
 		<fx:remarks>TCAS EQUIPPED</fx:remarks>
 		<fx:routeTrajectoryGroup>

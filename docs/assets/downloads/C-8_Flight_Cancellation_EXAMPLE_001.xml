@@ -25,5 +25,6 @@
 		</ffice:provider>
 		<ffice:providerType>FFICE_PARTICIPANT</ffice:providerType>
 	</ffice:relevantAtmServiceProvider>
+	<ffice:type>FLIGHT_CANCELLATION</ffice:type>
 	<ffice:uniqueMessageIdentifier codeSpace="urn:uuid">6cf3f130-2f47-4ea2-956b-403243ee54cf</ffice:uniqueMessageIdentifier>
 </ffice:FficeMessage>
