@@ -14,7 +14,7 @@ The following table provides fictitious examples of FF-ICE Messages.
 | C-8 Flight Cancellation       | [FlightCancellation][FficeFC]            |  [Example 1][FficeFC_Example_1]    |
 | C-9 Flight Plan Update        | [FlightPlanUpdate][FficeFPU]             |  [Example 1][FficeFPU_Example_1]   |
 | C-10 Flight Data Request      | [FlightDataRequest][FficeFDRQ]           |  [Example 1][FficeFDRQ_Example_1]  |
-| C-11 Flight Data Response     | [FlightDataResponse][FficeFDRP]          |  [Example 1][FficeFDRP_Example_1] <br> *Example 1 is a response to a request of type FLIGHT_PLAN. It also illustrates the use of the bugfix for exchanging element flightRulesCategory.* <br> [Example 2][FficeFDRP_Example_2] <br> *Example 2 is response to a request of type FLIGHT_STATUS* |
+| C-11 Flight Data Response     | [FlightDataResponse][FficeFDRP]          |  [Example 1][FficeFDRP_Example_1] *(a response to a request of type FLIGHT_PLAN. It also illustrates the use of the bugfix for exchanging element flightRulesCategory.)* <br> [Example 2][FficeFDRP_Example_2] *(a response to a request of type FLIGHT_STATUS.)* |
 | C-12 Flight Departure         | [FlightDeparture][FficeFD]               |  [Example 1][FficeFD_Example_1]    |
 | C-13 Flight Arrival           | [FlightArrival][FficeFA]                 |  [Example 1][FficeFA_Example_1]    |
 
