@@ -2,7 +2,7 @@
 
 The following table provides fictitious examples of FF-ICE Messages.
 
-| FF-ICE Message template | FF-ICE Message | XML samples |
+| FF-ICE Message | FIXM Template | FIXM XML samples |
 |:-|:-|:-|
 | C-1 Submission Response       | [SubmissionResponse][FficeSR]            |  [Example 1][FficeSR_Example_1]    |
 | C-2 Preliminary Flight Plan   | [PreliminaryFlightPlan][FficePFP]        |  Coming soon                       |
