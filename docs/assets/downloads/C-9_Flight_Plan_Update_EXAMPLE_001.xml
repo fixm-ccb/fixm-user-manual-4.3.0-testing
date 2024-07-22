@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- =========================================== Copyright (c) 2024, Members of the FIXM CCB =========================================== 
+All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 
+* Redistributions of source code must retain the above copyright notice, this list of conditions and the disclaimer. 
+* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the disclaimer in the documentation and/or other materials provided with the distribution. 
+* Neither the names of the FIXM CCB members nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission. 
+
+DISCLAIMER THIS SPECIFICATION IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+
+========================================== 
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php 
+The authoritative reference for FIXM is www.FIXM.aero. Details on the FIXM CCB and a list of its members is available on the FIXM Work Area at https://eurocontrol.sharepoint.com/sites/coll-FIXM/.-->
+<!-- NOT FOR OPERATIONAL USE -->
+<ffice:FficeMessage xmlns:ffice="http://www.fixm.aero/app/ffice/1.1" xmlns:fb="http://www.fixm.aero/base/4.3" xmlns:fx="http://www.fixm.aero/flight/4.3" xmlns:fficebugfix="http://www.fixm.aero/ffice/1.1/bugfix/2024.04.30" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.fixm.aero/app/ffice/1.1 https://fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/flightplanupdate/FlightPlanUpdate.xsd" xs:type="ffice:FficeFPU_FficeMessageType">
+	<ffice:flight>
+		<fx:aircraft>
+			<fx:aircraftAddress>1A1A1A</fx:aircraftAddress>
+			<fx:aircraftApproachCategory>C</fx:aircraftApproachCategory>
+			<fx:aircraftType>
+				<fx:aircraftCount>1</fx:aircraftCount>
+				<fx:icaoAircraftTypeDesignator>A321</fx:icaoAircraftTypeDesignator>
+			</fx:aircraftType>
+			<fx:capabilities>
+				<fx:communication>
+					<fx:communicationCapabilityCode>E2 E3 Y</fx:communicationCapabilityCode>
+					<fx:datalinkCommunicationCapabilityCode>J1</fx:datalinkCommunicationCapabilityCode>
+					<fx:otherDatalinkCapabilities>VM</fx:otherDatalinkCapabilities>
+				</fx:communication>
+				<fx:navigation>
+					<fx:navigationCapabilityCode>D F G I L O W X</fx:navigationCapabilityCode>
+					<fx:performanceBasedCode>A1 B1 C1 D1 O1 S2</fx:performanceBasedCode>
+				</fx:navigation>
+				<fx:standardCapabilities>STANDARD</fx:standardCapabilities>
+				<fx:surveillance>
+					<fx:otherSurveillanceCapabilities>A2</fx:otherSurveillanceCapabilities>
+					<fx:surveillanceCapabilityCode>B1 H</fx:surveillanceCapabilityCode>
+				</fx:surveillance>
+			</fx:capabilities>
+			<fx:registration>AAAAAA</fx:registration>
+			<fx:wakeTurbulence>M</fx:wakeTurbulence>
+		</fx:aircraft>
+		<fx:arrival>
+			<fx:destinationAerodrome>
+				<fb:locationIndicator>EDDL</fb:locationIndicator>
+			</fx:destinationAerodrome>
+			<fx:destinationAerodromeAlternate>
+				<fb:locationIndicator>EDDG</fb:locationIndicator>
+			</fx:destinationAerodromeAlternate>
+		</fx:arrival>
+		<fx:departure>
+			<fx:departureAerodrome>
+				<fb:locationIndicator>EDDM</fb:locationIndicator>
+			</fx:departureAerodrome>
+			<fx:estimatedOffBlockTime>2024-06-20T00:00:00Z</fx:estimatedOffBlockTime>
+		</fx:departure>
+		<fx:enRoute/>
+		<fx:flightIdentification>
+			<fx:aircraftIdentification>UFO666</fx:aircraftIdentification>
+			<fx:gufi creationTime="2024-06-03T19:10:03Z" namespaceDomain="OPERATING_AGENCY_DESIGNATOR" namespaceIdentifier="UFO" codeSpace="urn:uuid">9942cf0b-6fff-47e8-9f98-6c7067117932</fx:gufi>
+			<fx:iataFlightDesignator>
+				<fx:flightNumber>1234</fx:flightNumber>
+				<fx:iataOperatorCode>UFO</fx:iataOperatorCode>
+			</fx:iataFlightDesignator>
+		</fx:flightIdentification>
+		<fx:flightPlanOriginator>
+			<fb:contact>
+				<fb:onlineContact>
+					<fb:linkage>ABCDEFGH</fb:linkage>
+					<fb:network>
+						<fb:type>AFTN</fb:type>
+					</fb:network>
+				</fb:onlineContact>
+			</fb:contact>
+			<fb:name>UFO</fb:name>
+		</fx:flightPlanOriginator>
+		<fx:flightRulesCategory>I</fx:flightRulesCategory>
+		<fx:flightType>S</fx:flightType>
+		<fx:operator>
+			<fb:designatorIcao>EUC</fb:designatorIcao>
+		</fx:operator>
+		<fx:remarks>TCAS EQUIPPED</fx:remarks>
+		<fx:routeTrajectoryGroup>
+			<fx:desired>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">0.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:aerodromeReferencePoint>
+							<fb:locationIndicator>EDDM</fb:locationIndicator>
+						</fb:aerodromeReferencePoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">441.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">13.7</fx:temperature>
+							<fx:windDirection uom="DEG">327.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">2.76</fx:windSpeed>
+						</fx:metData>
+						<fx:pointProperty>
+							<fx:propertyType>AIRPORT_REFERENCE_LOCATION</fx:propertyType>
+						</fx:pointProperty>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>48.35378333333333 11.78608611111111</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:absoluteTime>2024-06-20T00:10:00Z</fx:absoluteTime>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:standardInstrumentDeparture>
+							<fb:designator>GIVMI1N</fb:designator>
+						</fx:standardInstrumentDeparture>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">9260.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:designatedPoint>
+							<fb:designator>DM060</fb:designator>
+						</fb:designatedPoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">1273.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">8.5</fx:temperature>
+							<fx:windDirection uom="DEG">333.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">3.11</fx:windSpeed>
+						</fx:metData>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>48.356430555555555 11.681363888888889</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H1M58S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:standardInstrumentDeparture>
+							<fb:designator>GIVMI1N</fb:designator>
+						</fx:standardInstrumentDeparture>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">30885.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:designatedPoint>
+							<fb:designator>DM063</fb:designator>
+						</fb:designatedPoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">2979.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">0.9</fx:temperature>
+							<fx:windDirection uom="DEG">350.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">3.38</fx:windSpeed>
+						</fx:metData>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>48.4579 11.431669444444445</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H4M22S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:standardInstrumentDeparture>
+							<fb:designator>GIVMI1N</fb:designator>
+						</fx:standardInstrumentDeparture>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">58388.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:designatedPoint>
+							<fb:designator>GIVMI</fb:designator>
+						</fb:designatedPoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">4527.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">-8.3</fx:temperature>
+							<fx:windDirection uom="DEG">16.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">4.74</fx:windSpeed>
+						</fx:metData>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>48.70109444444444 11.364802777777777</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H6M39S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:routeDesignator>Y101</fx:routeDesignator>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">77598.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:designatedPoint>
+							<fb:designator>ERNAS</fb:designator>
+						</fb:designatedPoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">5452.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">-14.0</fx:temperature>
+							<fx:windDirection uom="DEG">25.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">5.96</fx:windSpeed>
+						</fx:metData>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>48.844722222222224 11.219444444444445</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H8M7S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:routeDesignator>Y101</fx:routeDesignator>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">108522.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:designatedPoint>
+							<fb:designator>TALAL</fb:designator>
+						</fb:designatedPoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">6623.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">-21.9</fx:temperature>
+							<fx:windDirection uom="DEG">19.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">6.07</fx:windSpeed>
+						</fx:metData>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>49.108333333333334 11.085277777777778</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H10M22S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:routeDesignator>Y101</fx:routeDesignator>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">117841.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:designatedPoint>
+							<fb:designator>ERMEL</fb:designator>
+						</fb:designatedPoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">6905.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">-25.1</fx:temperature>
+							<fx:windDirection uom="DEG">18.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">5.84</fx:windSpeed>
+						</fx:metData>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>49.187777777777775 11.044722222222223</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H11M2S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:routeDesignator>Y101</fx:routeDesignator>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">141288.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:designatedPoint>
+							<fb:designator>INBED</fb:designator>
+						</fb:designatedPoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">7515.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">-29.6</fx:temperature>
+							<fx:windDirection uom="DEG">15.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">5.19</fx:windSpeed>
+						</fx:metData>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>49.3875 10.941666666666666</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H12M38S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:otherRouteDesignator>DIRECT</fx:otherRouteDesignator>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">174581.0</fx:alongRouteDistance>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">8534.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">-36.7</fx:temperature>
+							<fx:windDirection uom="DEG">8.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">5.04</fx:windSpeed>
+						</fx:metData>
+						<fx:pointProperty>
+							<fx:propertyType>TOP_OF_CLIMB</fx:propertyType>
+						</fx:pointProperty>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>49.57598333333333 10.583930555555556</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H14M55S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:otherRouteDesignator>DIRECT</fx:otherRouteDesignator>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">188597.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:designatedPoint>
+							<fb:designator>REKDI</fb:designator>
+						</fb:designatedPoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">8534.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">-39.6</fx:temperature>
+							<fx:windDirection uom="DEG">1.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">4.88</fx:windSpeed>
+						</fx:metData>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>49.655 10.4325</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H15M53S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:otherRouteDesignator>DIRECT</fx:otherRouteDesignator>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">270482.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:designatedPoint>
+							<fb:designator>LOHRE</fb:designator>
+						</fb:designatedPoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">8534.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">-39.5</fx:temperature>
+							<fx:windDirection uom="DEG">356.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">6.02</fx:windSpeed>
+						</fx:metData>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>50.066944444444445 9.48638888888889</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H21M35S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:routeDesignator>Z850</fx:routeDesignator>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">310016.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:designatedPoint>
+							<fb:designator>TEKTU</fb:designator>
+						</fb:designatedPoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">8534.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">-38.9</fx:temperature>
+							<fx:windDirection uom="DEG">13.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">6.68</fx:windSpeed>
+						</fx:metData>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>50.342777777777776 9.136388888888888</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H24M20S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:routeDesignator>Z850</fx:routeDesignator>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">336567.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:designatedPoint>
+							<fb:designator>SOGMI</fb:designator>
+						</fb:designatedPoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">8534.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">-38.3</fx:temperature>
+							<fx:windDirection uom="DEG">21.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">7.05</fx:windSpeed>
+						</fx:metData>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>50.5275 8.899166666666666</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H26M10S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:routeDesignator>Z850</fx:routeDesignator>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">396971.0</fx:alongRouteDistance>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">8534.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">-37.6</fx:temperature>
+							<fx:windDirection uom="DEG">33.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">6.26</fx:windSpeed>
+						</fx:metData>
+						<fx:pointProperty>
+							<fx:propertyType>TOP_OF_DESCENT</fx:propertyType>
+						</fx:pointProperty>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>50.95856666666667 8.377513888888888</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H30M21S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:routeDesignator>Z850</fx:routeDesignator>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">405127.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:designatedPoint>
+							<fb:designator>ARPEG</fb:designator>
+						</fb:designatedPoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">7801.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">-34.4</fx:temperature>
+							<fx:windDirection uom="DEG">0.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">4.09</fx:windSpeed>
+						</fx:metData>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>51.01659166666666 8.306338888888888</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H30M54S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:routeDesignator>Z850</fx:routeDesignator>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">415264.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:designatedPoint>
+							<fb:designator>BADGO</fb:designator>
+						</fb:designatedPoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">6969.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">-28.2</fx:temperature>
+							<fx:windDirection uom="DEG">314.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">3.64</fx:windSpeed>
+						</fx:metData>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>51.096111111111114 8.235555555555555</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H31M37S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:routeDesignator>Z850</fx:routeDesignator>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">455305.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:designatedPoint>
+							<fb:designator>ABILU</fb:designator>
+						</fb:designatedPoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">3982.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">-15.2</fx:temperature>
+							<fx:windDirection uom="DEG">290.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">3.32</fx:windSpeed>
+						</fx:metData>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>51.41 7.954166666666667</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H34M35S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:routeDesignator>Z850</fx:routeDesignator>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">464590.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:designatedPoint>
+							<fb:designator>ADEMI</fb:designator>
+						</fb:designatedPoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">3335.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">-3.3</fx:temperature>
+							<fx:windDirection uom="DEG">301.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">3.33</fx:windSpeed>
+						</fx:metData>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>51.48277777777778 7.8886111111111115</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H35M20S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:routeDesignator>T854</fx:routeDesignator>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">475860.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:designatedPoint>
+							<fb:designator>INBAX</fb:designator>
+						</fb:designatedPoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">3130.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">-0.7</fx:temperature>
+							<fx:windDirection uom="DEG">299.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">3.33</fx:windSpeed>
+						</fx:metData>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>51.455 7.732222222222222</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H36M23S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:routeDesignator>T854</fx:routeDesignator>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">489995.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:designatedPoint>
+							<fb:designator>DOMUX</fb:designator>
+						</fb:designatedPoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">2531.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">1.8</fx:temperature>
+							<fx:windDirection uom="DEG">282.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">3.38</fx:windSpeed>
+						</fx:metData>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>51.41985 7.536355555555556</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H37M55S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:standardInstrumentArrival>
+							<fb:designator>DOMUX2G</fb:designator>
+						</fx:standardInstrumentArrival>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">517775.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:designatedPoint>
+							<fb:designator>BAM</fb:designator>
+						</fb:designatedPoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">1055.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">4.5</fx:temperature>
+							<fx:windDirection uom="DEG">18.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">4.2</fx:windSpeed>
+						</fx:metData>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>51.327758333333335 7.176983333333333</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H41M13S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+					<fx:routeDesignatorToNextElement>
+						<fx:standardInstrumentArrival>
+							<fb:designator>DOMUX2G</fb:designator>
+						</fx:standardInstrumentArrival>
+					</fx:routeDesignatorToNextElement>
+				</fx:element>
+				<fx:element>
+					<fx:alongRouteDistance uom="M">556668.0</fx:alongRouteDistance>
+					<fx:elementStartPoint>
+						<fb:aerodromeReferencePoint>
+							<fb:locationIndicator>EDDL</fb:locationIndicator>
+						</fb:aerodromeReferencePoint>
+					</fx:elementStartPoint>
+					<fx:point4D>
+						<fx:level>
+							<fb:altitude uom="M">41.0</fb:altitude>
+						</fx:level>
+						<fx:metData>
+							<fx:temperature uom="C">11.2</fx:temperature>
+							<fx:windDirection uom="DEG">5.0</fx:windDirection>
+							<fx:windSpeed uom="M_SEC">3.2</fx:windSpeed>
+						</fx:metData>
+						<fx:pointProperty>
+							<fx:propertyType>AIRPORT_REFERENCE_LOCATION</fx:propertyType>
+						</fx:pointProperty>
+						<fx:position srsName="urn:ogc:def:crs:EPSG::4326">
+							<fb:pos>51.280925 6.757311111111111</fb:pos>
+						</fx:position>
+						<fx:time>
+							<fx:relativeTimeFromInitialPredictionPoint>P0Y0M0DT0H47M27S</fx:relativeTimeFromInitialPredictionPoint>
+						</fx:time>
+					</fx:point4D>
+				</fx:element>
+				<fx:routeInformation>
+					<fx:cruisingLevel>
+						<fb:flightLevel uom="FL">280</fb:flightLevel>
+					</fx:cruisingLevel>
+					<fx:cruisingSpeed uom="KT">472.0</fx:cruisingSpeed>
+					<fx:totalEstimatedElapsedTime>P0Y0M0DT0H48M0S</fx:totalEstimatedElapsedTime>
+				</fx:routeInformation>
+				<fx:takeoffMass uom="KG">69577.0</fx:takeoffMass>
+			</fx:desired>
+		</fx:routeTrajectoryGroup>
+	</ffice:flight>
+	<ffice:operatorFlightPlanVersion>4</ffice:operatorFlightPlanVersion>
+	<ffice:relevantAtmServiceProvider>
+		<ffice:provider>
+			<fb:identifier>NOT APPLICABLE</fb:identifier>
+			<fb:identifierDomain>FF-ICE</fb:identifierDomain>
+		</ffice:provider>
+		<ffice:providerType>FFICE_PARTICIPANT</ffice:providerType>
+	</ffice:relevantAtmServiceProvider>
+	<ffice:type>FLIGHT_PLAN_UPDATE</ffice:type>
+	<ffice:uniqueMessageIdentifier codeSpace="urn:uuid">26876e80-2567-46a4-9a7b-e9544091d74c</ffice:uniqueMessageIdentifier>
+</ffice:FficeMessage>
