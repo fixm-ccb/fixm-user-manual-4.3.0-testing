@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ffice:FficeMessage xmlns:ffice="http://www.fixm.aero/app/ffice/1.1" xmlns:fb="http://www.fixm.aero/base/4.3" xmlns:fx="http://www.fixm.aero/flight/4.3" xmlns:fficebugfix="http://www.fixm.aero/ffice/1.1/bugfix/2024.04.30" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.fixm.aero/app/ffice/1.1 https://fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/flightcancellation/FlightCancellation.xsd" xs:type="ffice:FficeFC_FficeMessageType">
+	<ffice:flight>
+		<fx:arrival>
+			<fx:destinationAerodrome>
+				<fb:locationIndicator>EDDM</fb:locationIndicator>
+			</fx:destinationAerodrome>
+		</fx:arrival>
+		<fx:departure>
+			<fx:departureAerodrome>
+				<fb:locationIndicator>EDDL</fb:locationIndicator>
+			</fx:departureAerodrome>
+			<fx:estimatedOffBlockTime>2024-06-20T00:00:00Z</fx:estimatedOffBlockTime>
+		</fx:departure>
+		<fx:flightIdentification>
+			<fx:aircraftIdentification>UFO666</fx:aircraftIdentification>
+			<fx:gufi creationTime="2024-06-18T14:41:12Z" namespaceDomain="OPERATING_AGENCY_DESIGNATOR" namespaceIdentifier="UFO" codeSpace="urn:uuid">edb3a584-7df9-4dbe-ab38-a5d4bbed274f</fx:gufi>
+		</fx:flightIdentification>
+	</ffice:flight>
+	<ffice:relevantAtmServiceProvider>
+		<ffice:provider>
+			<fb:contact>
+				<fb:name>AAA</fb:name>
+			</fb:contact>
+		</ffice:provider>
+		<ffice:providerType>FFICE_PARTICIPANT</ffice:providerType>
+	</ffice:relevantAtmServiceProvider>
+	<ffice:uniqueMessageIdentifier codeSpace="urn:uuid">6cf3f130-2f47-4ea2-956b-403243ee54cf</ffice:uniqueMessageIdentifier>
+</ffice:FficeMessage>

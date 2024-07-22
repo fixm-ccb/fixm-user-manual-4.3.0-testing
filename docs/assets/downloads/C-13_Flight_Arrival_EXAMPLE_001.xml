@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- =========================================== Copyright (c) 2024, Members of the FIXM CCB =========================================== 
+All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 
+* Redistributions of source code must retain the above copyright notice, this list of conditions and the disclaimer. 
+* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the disclaimer in the documentation and/or other materials provided with the distribution. 
+* Neither the names of the FIXM CCB members nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission. 
+
+DISCLAIMER THIS SPECIFICATION IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+
+========================================== 
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php 
+The authoritative reference for FIXM is www.FIXM.aero. Details on the FIXM CCB and a list of its members is available on the FIXM Work Area at https://eurocontrol.sharepoint.com/sites/coll-FIXM/.-->
+<!-- NOT FOR OPERATIONAL USE -->
+<ffice:FficeMessage xmlns:ffice="http://www.fixm.aero/app/ffice/1.1" xmlns:fb="http://www.fixm.aero/base/4.3" xmlns:fx="http://www.fixm.aero/flight/4.3" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.fixm.aero/app/ffice/1.1 https://fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/flightarrival/FlightArrival.xsd" xs:type="ffice:FficeFA_FficeMessageType">
+	<ffice:flight>
+		<fx:arrival>
+			<fx:actualTimeOfArrival>
+				<fx:time>2024-06-19T20:43:26Z</fx:time>
+				<fx:type>WHEELS_ON</fx:type>
+			</fx:actualTimeOfArrival>
+			<fx:arrivalAerodrome>
+				<fb:locationIndicator>EBBR</fb:locationIndicator>
+			</fx:arrivalAerodrome>
+			<fx:destinationAerodrome>
+				<fb:locationIndicator>EBBR</fb:locationIndicator>
+			</fx:destinationAerodrome>
+		</fx:arrival>
+		<fx:departure>
+			<fx:departureAerodrome>
+				<fb:locationIndicator>EPKK</fb:locationIndicator>
+			</fx:departureAerodrome>
+			<fx:estimatedOffBlockTime>2024-06-19T17:15:26Z</fx:estimatedOffBlockTime>
+		</fx:departure>
+		<fx:flightIdentification>
+			<fx:aircraftIdentification>UFO888</fx:aircraftIdentification>
+			<fx:gufi creationTime="2024-06-19T10:15:47Z" namespaceDomain="OPERATING_AGENCY_DESIGNATOR" namespaceIdentifier="UFO" codeSpace="urn:uuid">bf3fc293-99b7-4a41-be7c-29544fe88135</fx:gufi>
+		</fx:flightIdentification>
+	</ffice:flight>
+	<ffice:relevantAtmServiceProvider>
+		<ffice:provider>
+			<fb:identifier>DEFAULT</fb:identifier>
+			<fb:identifierDomain>FF-ICE</fb:identifierDomain>
+		</ffice:provider>
+		<ffice:providerType>FFICE_PARTICIPANT</ffice:providerType>
+	</ffice:relevantAtmServiceProvider>
+	<ffice:type>FLIGHT_ARRIVAL</ffice:type>
+	<ffice:uniqueMessageIdentifier codeSpace="urn:uuid">4d694bb0-471d-4dd6-93ac-9e6ab0e81c07</ffice:uniqueMessageIdentifier>
+</ffice:FficeMessage>
