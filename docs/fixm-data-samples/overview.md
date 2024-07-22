@@ -1,4 +1,4 @@
-# Overview of FIXM Data samples
+# List of FIXM Data samples
 
 ## Fictitious FIXM data
 The following examples are fictitious samples. They represent valid FIXM data and can be used for training purpose, or for initial testing.
