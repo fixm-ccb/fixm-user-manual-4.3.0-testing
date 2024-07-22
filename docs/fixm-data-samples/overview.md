@@ -19,8 +19,8 @@ Access to, and use of, this FIXM data may be subject to particular access and us
 
 | Information Service | Information Service Provider | Description | Type of FIXM data served | Access conditions |
 |:-|:-|:-|:-|:-|
-|Flight Data Request Service|EUROCONTROL NM|See description on the [European SWIM Registry][EUROCONTROL_FLIGHT_DATA_REQUEST_SERVICE_DESCRIPTION] |eFPLs and filing statuses encoded in FF-ICE Message 1.1.0 / FIXM Core 4.3.0 format | See [here][EUROCONTROL_NM_B2B_SERVICES] |
-|Publication Service|EUROCONTROL NM|See description on [European SWIM Registry][EUROCONTROL_PUBLICATION_SERVICE_DESCRIPTION]|Flight data including agreed eFPLs and converted FPL in FIXM Core 4.3.0 format | See [here][EUROCONTROL_NM_B2B_SERVICES] |
+|Flight Data Request Service|EUROCONTROL NM|See [European SWIM Registry][EUROCONTROL_FLIGHT_DATA_REQUEST_SERVICE_DESCRIPTION] |eFPLs and filing statuses encoded in FF-ICE Message 1.1.0 / FIXM Core 4.3.0 format | See [here][EUROCONTROL_NM_B2B_SERVICES] |
+|Publication Service|EUROCONTROL NM|See [European SWIM Registry][EUROCONTROL_PUBLICATION_SERVICE_DESCRIPTION]|Flight data including agreed eFPLs and converted FPL in FIXM Core 4.3.0 format | See [here][EUROCONTROL_NM_B2B_SERVICES] |
 |...|...|...|...|...|
 
 
