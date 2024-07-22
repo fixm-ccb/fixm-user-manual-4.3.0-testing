@@ -9,7 +9,7 @@ These samples shall never be used operationally.
 | [Route/Trajectory Example Data](/fixm-in-support-of-ffice/example_data.md)   |  Explains how the route/trajectory example from the FF-ICE/R1 Implementation Guidance Manual (Appendix E-3.7) is concretely encoded in FIXM 4.3.0.|
 | [Examples of FF-ICE Messages](/fixm-in-support-of-ffice/example_messages.md) |  Provides examples for all 13 FF-ICE messages specified by the the FF-ICE/R1 Implementation Guidance Manual (Appendix C) |
 
-All samples are available in [github]().
+All samples are available in [github][GIHUB_SAMPLES_REPOSITORY].
 
 
 ## Real world FIXM data
@@ -27,3 +27,5 @@ Access to, and use of, this FIXM data may be subject to particular access and us
 [EUROCONTROL_FLIGHT_DATA_REQUEST_SERVICE_DESCRIPTION]: https://eur-registry.swim.aero/services/eurocontrol-nm-flightdatarequestservice-270
 [EUROCONTROL_PUBLICATION_SERVICE_DESCRIPTION]: https://eur-registry.swim.aero/services/eurocontrol-nm-publicationservice-270
 [EUROCONTROL_NM_B2B_SERVICES]: https://www.eurocontrol.int/service/network-manager-business-business-b2b-web-services
+
+[GIHUB_SAMPLES_REPOSITORY]: https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads
