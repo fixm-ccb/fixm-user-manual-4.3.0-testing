@@ -1,4 +1,4 @@
-# Non-Aerodrome Departures
+# Departure Information
 
 There are three use cases associated with departure points that can be represented in FIXM:
  
@@ -15,15 +15,14 @@ section of Appendix 3 for the specific need to provide representation for a non-
 > “The first point of the route (name or LAT/LONG) or the marker radio beacon, if the aircraft has not taken 
 off from an aerodrome.”
 
-Further, the departure aerodrome/point represents a key field for traditional flight matching.
 
 ## FIXM Representation
 
-For most flights, i.e., flights departing from aerodromes, the current departure aerodrome or previous departure aerodrome (if a change has been made) will be represented in `departureAerodrome` or `departureAerodromePrevious` respectively. Likewise, the current or previous estimated off block times will be represented in `estimatedOffBlockTime` or `estimatedOffBlockTimePrevious`.
+For most flights, i.e., flights departing from aerodromes, the departure aerodrome will be represented in `departureAerodrome`, and the estimated off block time will be represented in `estimatedOffBlockTime`.
 
-Flights that file non-aerodrome departure points will represent the current or previous departure points in `departurePoint` or `departurePointPrevious` respectively, and will use `estimatedRouteStartTime` or `estimatedRouteStartTimePrevious` for the current or previous takeoff times.
+Flights that file non-aerodrome departure points will represent the departure point in `departurePoint`, and will use `estimatedRouteStartTime` for the departure time.
 
-Airfile flights will represent the current or previous route start points in `departurePoint` or `departurePointPrevious` respectively, and will use `estimatedRouteStartTime` or `estimatedRouteStartTimePrevious` for the the current or previous airfile route start times. In addition, airfile flights will set the `airFileIndicator` to `AIRFILE`.
+Airfile flights will represent the route start point in `departurePoint`, and will use `estimatedRouteStartTime` for the the airfile route start time. In addition, airfile flights will set the `airFileIndicator` to `AIRFILE`.
 
 ### Logical Model
 
@@ -82,10 +81,8 @@ Edited [DepartureType][DepartureType] in file [Departure.xsd][Departure.xsd]
 
 ```xml
 <fx:departure>
-    <fx:departureAerodrome>DFW</fx:departureAerodrome>
-    <fx:departureAerodromePrevious>DAL</fx:departureAerodromePrevious>
+    <fx:departureAerodrome>KDFW</fx:departureAerodrome>
     <fx:estimatedOffBlockTime>2023-01-13T15:18:00Z</fx:estimatedOffBlockTime>
-    <fx:estimatedOffBlockTime>2023-01-13T20:05:00Z</fx:estimatedOffBlockTime>
 </fx:departure>
 ```
 ### Non-Aerodrome Departure Example
@@ -97,13 +94,7 @@ Edited [DepartureType][DepartureType] in file [Departure.xsd][Departure.xsd]
             <fb:pos>59.0 -30.0</fb:pos>
         </fb:position>
     </fx:departurePoint>
-    <fx:departurePointPrevious>
-        <fb:position srsName="urn:ogc:def:crs:EPSG::4326">
-            <fb:pos>59.1 -30.2</fb:pos>
-        </fb:position>
-    </fx:departurePointPrevious>
     <fx:estimatedRouteStartTimeTime>2023-01-13T15:18:00Z</fx:estimatedRouteStartTimeTime>
-    <fx:estimatedRouteStartTimeTime>2023-01-13T20:05:00Z</fx:estimatedRouteStartTimeTime>
 </fx:departure>
 ```
 ### AirFile Example
@@ -118,14 +109,6 @@ Edited [DepartureType][DepartureType] in file [Departure.xsd][Departure.xsd]
               </fb:position>
         </fb:navaid>
     </fx:departurePoint>
-    <fx:departurePointPrevious>
-         <fb:designatedPoint>
-              <fb:designator>PLESS<fb:designator>
-              <fb:position srsName="urn:ogc:def:crs:EPSG::4326">
-                  <fb:pos>37.80957778 -88.96318889</fb:pos>
-              </fb:position>
-    </fx:departurePointPrevious>
-    <fx:estimatedRouteStartTime>2023-01-13T15:18:00Z</fx:estimatedRouteStartTime>
     <fx:estimatedRouteStartTime>2023-01-13T20:05:00Z</fx:estimatedRouteStartTime>
     <fx:airfileIndicator>AIRFILE</fx:airfileIndicator>
 </fx:departure>
@@ -134,6 +117,19 @@ Edited [DepartureType][DepartureType] in file [Departure.xsd][Departure.xsd]
 [DepartureType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_DepartureType.html
 [Departure.xsd]: https://www.fixm.aero/releases/FIXM-4.3.0/schemas/core/flight/departure/Departure.xsd
 
+## Special case - Use of the `...Previous` elements
+
+The process of associating FF-ICE Messages with flights, although faciliated by the gufi, can still involve several key fields, including the aircraft identification, the departure airport, the departure time and the destination aerodrome. The departure time, commonly the EOBT, may not always be fixed and may for instance be changed by a Flight Plan Update. 
+
+FIXM enables the exchange of the key fields as they were initially (i.e. prior to any change) using the fields `...Previous` (`estimatedOffBlockTimePrevious`, `estimatedRouteStartTimePrevious`, ...), so that the traditional message/flight matching remains easily doable, and also so that translation to an ATS message (e.g. CHG or DLA) remains possible.
+
+```xml
+<fx:departure>
+    <fx:departureAerodrome>KDFW</fx:departureAerodrome>
+    <fx:estimatedOffBlockTime>2023-01-13T15:21:30Z</fx:estimatedOffBlockTime>
+    <fx:estimatedOffBlockTimePrevious>2023-01-13T15:18:00Z</fx:estimatedOffBlockTimePrevious>
+</fx:departure>
+```
 
 
 ## Notes
