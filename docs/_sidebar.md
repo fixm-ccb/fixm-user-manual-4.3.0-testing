@@ -20,7 +20,7 @@
   - [Date/Time Specification & AIRAC Effective Date](general-guidance/date-time-specification.md)
   - [Geographical Positions](general-guidance/geographical-positions.md)
   - [References to Published Aeronautical Information](general-guidance/references-to-published-aeronautical-information.md)
-  - [Non-Aerodrome Departures](general-guidance/non-aerodrome-departures.md)
+  - [Departure Information](general-guidance/departure.md)
   - [Relative Points](general-guidance/relative-points.md)
   - [Vertical Distances](general-guidance/vertical-distances.md)
   - [Sequence Numbers](general-guidance/sequence-numbers.md)
