@@ -119,9 +119,13 @@ Edited [DepartureType][DepartureType] in file [Departure.xsd][Departure.xsd]
 
 ## Special case - Use of the `...Previous` elements
 
-The process of associating FF-ICE Messages with flights, although faciliated by the gufi, can still involve several key fields, including the aircraft identification, the departure airport, the departure time and the destination aerodrome. The departure time, commonly the EOBT, may not always be fixed and may for instance be changed by a Flight Plan Update. 
+The process of associating FF-ICE Messages with flights, although faciliated by the gufi, can still involve several key fields, 
+including the aircraft identification, the departure airport, the departure time and the destination aerodrome. 
 
-FIXM enables the exchange of the key fields as they were initially (i.e. prior to any change) using the fields `...Previous` (`estimatedOffBlockTimePrevious`, `estimatedRouteStartTimePrevious`, ...), so that the traditional message/flight matching remains easily doable, and also so that translation to an ATS message (e.g. CHG or DLA) remains possible.
+The departure time, commonly the EOBT, may not always be fixed and may for instance be changed by a Flight Plan Update. 
+FIXM enables the exchange of the key fields as they were initially (i.e. prior to any change) using the fields `...Previous` 
+(`estimatedOffBlockTimePrevious`, `estimatedRouteStartTimePrevious`, ...), so that the traditional message/flight matching remains 
+easily doable, and also so that translation to an ATS message (e.g. CHG or DLA) remains possible.
 
 ```xml
 <fx:departure>
