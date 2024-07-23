@@ -20,7 +20,7 @@ off from an aerodrome.”
 
 For most flights, i.e., flights departing from aerodromes, the departure aerodrome will be represented in `departureAerodrome`, and the estimated off block time will be represented in `estimatedOffBlockTime`.
 
-Flights that file non-aerodrome departure points will represent the departure point in `departurePoint`, and will use `estimatedRouteStartTime` for the departure time.
+Flights that file non-aerodrome departure points will represent the departure point in `departurePoint`, and will use `estimatedRouteStartTime` for the estimated departure time.
 
 Airfile flights will represent the route start point in `departurePoint`, and will use `estimatedRouteStartTime` for the the airfile route start time. In addition, airfile flights will set the `airFileIndicator` to `AIRFILE`.
 
