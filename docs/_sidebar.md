@@ -17,7 +17,7 @@
 
 - **General Guidance**
   - [Introduction](general-guidance/introduction.md)
-    - [Test](general-guidance/introduction.md)
+    - [Test](general-guidance/geographical-positions.md)
   - [Date/Time Specification & AIRAC Effective Date](general-guidance/date-time-specification.md)
   - [Geographical Positions](general-guidance/geographical-positions.md)
   - [References to Published Aeronautical Information](general-guidance/references-to-published-aeronautical-information.md)
