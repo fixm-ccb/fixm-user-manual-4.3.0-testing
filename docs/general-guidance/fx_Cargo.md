@@ -7,3 +7,9 @@ Encoding guidance for fx:Cargo
 ---
 
 ## ...
+
+---
+
+## References
+
+...
