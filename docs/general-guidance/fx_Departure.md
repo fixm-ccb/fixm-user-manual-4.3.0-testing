@@ -2,7 +2,11 @@
 
 ![Image](https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA5/EA312.png)
 
+Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_DepartureType.html)
+
 ---
+
+## Departure locations and times
 
 There are three use cases associated with departure points that can be represented in FIXM:
  
@@ -19,68 +23,11 @@ section of Appendix 3 for the specific need to provide representation for a non-
 > “The first point of the route (name or LAT/LONG) or the marker radio beacon, if the aircraft has not taken 
 off from an aerodrome.”
 
-
----
-
 For most flights, i.e., flights departing from aerodromes, the departure aerodrome will be represented in `departureAerodrome`, and the estimated off block time will be represented in `estimatedOffBlockTime`.
 
 Flights that file non-aerodrome departure points will represent the departure point in `departurePoint`, and will use `estimatedRouteStartTime` for the estimated departure time.
 
 Airfile flights will represent the route start point in `departurePoint`, and will use `estimatedRouteStartTime` for the the airfile route start time. In addition, airfile flights will set the `airFileIndicator` to `AIRFILE`.
-
----
-
-
-### XML Schema
-
-<details>
- <summary>XML Schema - click to expand</summary>
- 
-```xml
-<xs:complexType name="DepartureType">
-    <xs:annotation>
-        <xs:documentation>Groups information pertaining to the flight's departure.</xs:documentation>
-    </xs:annotation>
-    <xs:sequence>
-        ...
-        <xs:element name="airfileIndicator" type="fx:AirfileIndicatorType" minOccurs="0" maxOccurs="1" nillable="true">
-        </xs:element>
-        ...
-        <xs:choice minOccurs="0" maxOccurs="1">
-            <xs:element name="departureAerodrome" type="fb:AerodromeReferenceType" minOccurs="1" maxOccurs="1" nillable="true">
-            </xs:element>
-            <xs:element name="departurePoint" type="fx:DeparturePointChoiceType" minOccurs="1" maxOccurs="1" nillable="true">
-            </xs:element>
-        </xs:choice>
-        <xs:choice minOccurs="0" maxOccurs="1">
-            <xs:element name="departureAerodromePrevious" type="fb:AerodromeReferenceType" minOccurs="1" maxOccurs="1" nillable="true">
-            </xs:element>
-            <xs:element name="departurePointPrevious" type="fx:DeparturePointChoiceType" minOccurs="1" maxOccurs="1" nillable="true">
-            </xs:element>
-        </xs:choice>
-        <xs:choice minOccurs="0" maxOccurs="1">
-            <xs:element name="estimatedOffBlockTime" type="fb:DateTimeUtcType" minOccurs="1" maxOccurs="1" nillable="true">
-            </xs:element>
-            <xs:element name="estimatedRouteStartTime" type="fb:DateTimeUtcType" minOccurs="1" maxOccurs="1" nillable="true">
-            </xs:element>
-        </xs:choice>
-        <xs:choice minOccurs="0" maxOccurs="1">
-            <xs:element name="estimatedOffBlockTimePrevious" type="fb:DateTimeUtcType" minOccurs="1" maxOccurs="1" nillable="true">
-            </xs:element>
-            <xs:element name="estimatedRouteStartTimePrevious" type="fb:DateTimeUtcType" minOccurs="1" maxOccurs="1" nillable="true">
-            </xs:element>
-        </xs:choice>
-        ...
-    </xs:sequence>
-</xs:complexType>
-```
-</details>
-
-
-
-Edited [DepartureType][DepartureType] in file [Departure.xsd][Departure.xsd]
-
-## Examples
 
 ### Aerodrome Departure Example
 
@@ -90,6 +37,7 @@ Edited [DepartureType][DepartureType] in file [Departure.xsd][Departure.xsd]
     <fx:estimatedOffBlockTime>2023-01-13T15:18:00Z</fx:estimatedOffBlockTime>
 </fx:departure>
 ```
+
 ### Non-Aerodrome Departure Example
 
 ```xml
@@ -102,6 +50,7 @@ Edited [DepartureType][DepartureType] in file [Departure.xsd][Departure.xsd]
     <fx:estimatedRouteStartTime>2023-01-13T15:18:00Z</fx:estimatedRouteStartTime>
 </fx:departure>
 ```
+
 ### AirFile Example
 
 ```xml
@@ -135,27 +84,7 @@ for non-scheduled air transport operations or general aviation. The airport slot
 *the identifier of the scheduled time of arrival or departure available for allocation by, 
 or as allocated by, a coordinator for an aircraft movement on a specific date at a coordinated airport*. 
 
-### FIXM Representation
-
-The FIXM Core classes `Departure` and `Arrival` both have a property `airportSlotIdentification` that can be used for exchanging a departure or arrival airport slot reference. 
-
-```mermaid	
-classDiagram	
-class Departure
-<<XSDcomplexType>> Departure
-link Departure "https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA5/EA311.htm" "Go to definition"
-Departure : + airportSlotIdentification [0..1] AirportSlotIdentification	
-
-class Arrival
-<<XSDcomplexType>> Arrival
-link Arrival "https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA2/EA243.htm" "Go to definition"
-Arrival : + airportSlotIdentification [0..1] AirportSlotIdentification	
-
-class Flight
-<<XSDcomplexType>> Flight
-Flight --> Departure : +departure [0..1]
-Flight --> Arrival : +arrival [0..1]
-```
+The FIXM Core class `Departure` andhas  a property `airportSlotIdentification` that can be used for exchanging a departure slot reference. 
 
 This airport slot reference is expressed as a CharacterString with a maxLength set to 10. This is based on the recommendation of the taskforce of experts from 
 the European Airport Coordinators Association (EUACA), the International Air Transport Association (IATA) and EUROCONTROL 
