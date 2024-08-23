@@ -30,8 +30,12 @@ Airfile flights will represent the route start point in `departurePoint`, and wi
 
 ---
 
+
 ### XML Schema
 
+<details>
+ <summary>XML Schema - click to expand</summary>
+ 
 ```xml
 <xs:complexType name="DepartureType">
     <xs:annotation>
@@ -70,6 +74,9 @@ Airfile flights will represent the route start point in `departurePoint`, and wi
     </xs:sequence>
 </xs:complexType>
 ```
+</details>
+
+
 
 Edited [DepartureType][DepartureType] in file [Departure.xsd][Departure.xsd]
 
