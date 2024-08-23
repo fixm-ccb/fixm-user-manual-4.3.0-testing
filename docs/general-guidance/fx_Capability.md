@@ -46,3 +46,10 @@ FIXM Core 4.2.0 was released before the publication of Amendment 91 to ICAO Anne
    <fx:otherCommunicationCapabilities>selectiveCallingCode=ABC3</...>  
 <!-- USE ";" as separator if the property fx:otherCommunicationCapabilities contains additional information -->
 ```
+
+---
+
+## References
+
+...
+
