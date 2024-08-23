@@ -6,6 +6,8 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
+## Departure locations and times
+
 There are three use cases associated with departure points that can be represented in FIXM:
  
     1.	Flights that depart from aerodromes.
@@ -20,11 +22,6 @@ section of Appendix 3 for the specific need to provide representation for a non-
 
 > “The first point of the route (name or LAT/LONG) or the marker radio beacon, if the aircraft has not taken 
 off from an aerodrome.”
-
-
----
-
-## Departure locations and times
 
 For most flights, i.e., flights departing from aerodromes, the departure aerodrome will be represented in `departureAerodrome`, and the estimated off block time will be represented in `estimatedOffBlockTime`.
 
