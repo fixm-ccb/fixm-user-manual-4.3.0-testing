@@ -94,7 +94,7 @@ Edited [DepartureType][DepartureType] in file [Departure.xsd][Departure.xsd]
             <fb:pos>59.0 -30.0</fb:pos>
         </fb:position>
     </fx:departurePoint>
-    <fx:estimatedRouteStartTimeTime>2023-01-13T15:18:00Z</fx:estimatedRouteStartTimeTime>
+    <fx:estimatedRouteStartTime>2023-01-13T15:18:00Z</fx:estimatedRouteStartTime>
 </fx:departure>
 ```
 ### AirFile Example
