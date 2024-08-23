@@ -1,4 +1,9 @@
-# Guidance for fx:Aircraft
+# Encoding guidance for fx:Aircraft
+
+## FIXM Representation
+?> COMING SOON
+
+---
 
 ## Aircraft Address
 
