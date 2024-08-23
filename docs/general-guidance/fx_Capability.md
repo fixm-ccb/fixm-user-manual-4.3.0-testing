@@ -1,6 +1,6 @@
-# Encoding guidance fx_Capability
+# Encoding guidance for fx:Capability
 
-## FIXM Representation
+![Image](https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA3/EA251.png)
 
 ---
 

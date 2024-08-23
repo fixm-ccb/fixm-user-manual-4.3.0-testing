@@ -1,5 +1,9 @@
 # Encoding guidance for fx:Departure
 
+![Image](https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA5/EA312.png)
+
+---
+
 There are three use cases associated with departure points that can be represented in FIXM:
  
     1.	Flights that depart from aerodromes.
@@ -16,7 +20,7 @@ section of Appendix 3 for the specific need to provide representation for a non-
 off from an aerodrome.”
 
 
-## FIXM Representation
+---
 
 For most flights, i.e., flights departing from aerodromes, the departure aerodrome will be represented in `departureAerodrome`, and the estimated off block time will be represented in `estimatedOffBlockTime`.
 
@@ -24,13 +28,7 @@ Flights that file non-aerodrome departure points will represent the departure po
 
 Airfile flights will represent the route start point in `departurePoint`, and will use `estimatedRouteStartTime` for the the airfile route start time. In addition, airfile flights will set the `airFileIndicator` to `AIRFILE`.
 
-### Logical Model
-
-The figure below illustrates how both common aerodrome and less common non-aerodrome departures are represented in FIXM.<sup><a href="#general-guidance/non-aerodrome-departures?id=notes">[note 1]</a></sup>
-
-![Image](.//media/non-aerodrome-departures-02.png)
-
-UML Class `Departure` (and relevant, associated classes) in package `FIXM.Flight.Departure`
+---
 
 ### XML Schema
 

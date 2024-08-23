@@ -16,7 +16,7 @@
 
 
 - **FIXM Encoding Guidance**
-  - [Introduction](general-guidance/introduction.md)
+  - [Overview](general-guidance/introduction.md)
   - [fx:Aircraft](general-guidance/fx_Aircraft.md)
   - [fx:Arrival](general-guidance/fx_Arrival.md)
   - [fx:Capability](general-guidance/fx_Capability.md)
@@ -25,7 +25,9 @@
   - [fx:Emergency](general-guidance/fx_Emergency.md)
   - [fx:EnRoute](general-guidance/fx_EnRoute.md)
   - [fx:FlightData](general-guidance/fx_FlightData.md)
-  - [fx:FlightRouteTrajectory](general-guidance/fx_FlightRouteTrajectory.md)
+  - [fx:RouteChanges](general-guidance/fx_RouteChanges.md)
+  - [fx:RouteTrajectory](general-guidance/fx_RouteTrajectory.md)
+  - [fx:Constraints](general-guidance/fx_Constraints.md)
   - [fb:Address](general-guidance/fb_Address.md)
   - [fb:AeronauticalReference](general-guidance/fb_AeronauticalReference.md)
   - [fb:Measures](general-guidance/fb_Measures.md)
@@ -35,26 +37,7 @@
   - [Rules for Data Correctness](general-guidance/general-rules-for-data-correctness.md)
   - [Rules for Absent Data](general-guidance/rules-for-absent-data.md)
   - [Applying Templates in XML](general-guidance/applying_templates.md)
-  - [The Use of Other Exchange Models](general-guidance/the-use-of-other-exchange-models.md)
-
-
-  - [Test](general-guidance/geographical-positions.md)
-  - [Date/Time Specification & AIRAC Effective Date](general-guidance/date-time-specification.md)
-  - [Geographical Positions](general-guidance/geographical-positions.md)
-  - [References to Published Aeronautical Information](general-guidance/references-to-published-aeronautical-information.md)
-  - [Relative Points](general-guidance/relative-points.md)
-  - [Vertical Distances](general-guidance/vertical-distances.md)
-  - [Sequence Numbers](general-guidance/sequence-numbers.md)
-  - [Contact Information](general-guidance/contact-information.md)
-  - [Departure Information](general-guidance/departure.md)
-  - [Aircraft Data](general-guidance/aircraft_data.md)
-  - [Flight Identification](general-guidance/flight_identification.md)
-  - [Flight Capabilities](general-guidance/flight_capabilities.md)
-  - [Performance Profile](general-guidance/performance_profile.md)
-  - [Constraints](general-guidance/constraints.md)
-  - [Trajectory Point Properties](general-guidance/trajectory-point-properties.md)
-  - [Airport Slot Identification](general-guidance/airport_slot.md)
-
+  - [Use of other -XMs](general-guidance/the-use-of-other-exchange-models.md)
 
 
 - **Using FIXM in Support of FF-ICE**
