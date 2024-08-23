@@ -2,6 +2,8 @@
 
 ![Image](https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA5/EA312.png)
 
+Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_AircraftType.html)
+
 ---
 
 There are three use cases associated with departure points that can be represented in FIXM:
