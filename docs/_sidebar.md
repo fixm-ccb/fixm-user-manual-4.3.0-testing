@@ -15,9 +15,30 @@
   - [Overview](fixm-data-samples/overview.md)
 
 
-- **General Guidance**
+- **FIXM Encoding Guidance**
   - [Introduction](general-guidance/introduction.md)
-    - [Test](general-guidance/geographical-positions.md)
+  - [fx:Aircraft](general-guidance/fx_Aircraft.md)
+  - [fx:Arrival](general-guidance/fx_Arrival.md)
+  - [fx:Capability](general-guidance/fx_Capability.md)
+  - [fx:Cargo](general-guidance/fx_Cargo.md)
+  - [fx:Departure](general-guidance/fx_Departure.md)
+  - [fx:Emergency](general-guidance/fx_Emergency.md)
+  - [fx:EnRoute](general-guidance/fx_EnRoute.md)
+  - [fx:FlightData](general-guidance/fx_FlightData.md)
+  - [fx:FlightRouteTrajectory](general-guidance/fx_FlightRouteTrajectory.md)
+  - [fb:Address](general-guidance/fb_Address.md)
+  - [fb:AeronauticalReference](general-guidance/fb_AeronauticalReference.md)
+  - [fb:Measures](general-guidance/fb_Measures.md)
+  - [fb:Organization](general-guidance/fb_Organization.md)
+  - [fb:RangesAndChoices](general-guidance/fb_RangesAndChoice.md)
+  - [fb:Types](general-guidance/fb_Types.md)
+  - [General Rules for Data Correctness](general-guidance/general-rules-for-data-correctness.md)
+  - [Rules for Absent Data](general-guidance/rules-for-absent-data.md)
+  - [Applying Templates in XML](general-guidance/applying_templates.md)
+  - [The Use of Other Exchange Models](general-guidance/the-use-of-other-exchange-models.md)
+
+
+  - [Test](general-guidance/geographical-positions.md)
   - [Date/Time Specification & AIRAC Effective Date](general-guidance/date-time-specification.md)
   - [Geographical Positions](general-guidance/geographical-positions.md)
   - [References to Published Aeronautical Information](general-guidance/references-to-published-aeronautical-information.md)
@@ -33,10 +54,7 @@
   - [Constraints](general-guidance/constraints.md)
   - [Trajectory Point Properties](general-guidance/trajectory-point-properties.md)
   - [Airport Slot Identification](general-guidance/airport_slot.md)
-  - [General Rules for Data Correctness](general-guidance/general-rules-for-data-correctness.md)
-  - [Rules for Absent Data](general-guidance/rules-for-absent-data.md)
-  - [Applying Templates in XML](general-guidance/applying_templates.md)
-  - [The Use of Other Exchange Models](general-guidance/the-use-of-other-exchange-models.md)
+
 
 
 - **Using FIXM in Support of FF-ICE**
