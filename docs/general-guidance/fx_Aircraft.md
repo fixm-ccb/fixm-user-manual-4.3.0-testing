@@ -84,3 +84,8 @@ In the case of a formation flight, FIXM does not represent the total number of a
 
 Although technically permitted, when the flight is not a formation, the `<aircraftCount>` element should be omitted.  It is only intended to be used for formation flights.
 
+---
+
+## References
+
+...
