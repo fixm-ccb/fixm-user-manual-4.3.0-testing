@@ -1,6 +1,6 @@
 # Encoding guidance for fx:FlightData
 
-## FIXM Representation
+![Image](https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA8/EA339.png)
 
 ---
 
