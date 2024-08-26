@@ -1,6 +1,6 @@
 # Encoding guidance for fb:Address
 
-![Image](.//media/image24.png")
+![Image](https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA1/EA2/EA25.png)
 
 ---
 
