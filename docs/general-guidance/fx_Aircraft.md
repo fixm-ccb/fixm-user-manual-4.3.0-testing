@@ -22,6 +22,32 @@ Corresponding encoding in `FIXM 4.3.0`
     <fx:aircraftAddress>4010DA</fx:aircraftAddress>
 ```
 
+--- 
+
+## aircraftCount
+
+In the case of a formation flight, FIXM does not represent the total number of aircraft within the formation directly. Rather, this number can be derived by adding up the individual values for each `<aircraftCount>` element under each `<aircraftType>` element of the formation.  For example, the following XML snippet would be used to represent a formation of nine aircraft including two F15s, four K35Rs, and three B2s:
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->	
+<fx:flight>
+  <fx:aircraft>
+    <fx:aircraftType>
+      <fx:aircraftCount>2</fx:aircraftCount>
+      <fx:otherAircraftType>F15</fx:otherAircraftType>
+    </fx:aircraftType>
+    <fx:aircraftType>
+      <fx:aircraftCount>4</fx:aircraftCount>
+      <fx:icaoAircraftTypeDesignator>K35R</fx:icaoAircraftTypeDesignator>
+    </fx:aircraftType>
+    <fx:aircraftType>
+      <fx:aircraftCount>3</fx:aircraftCount>
+      <fx:otherAircraftType>B2</fx:otherAircraftType>
+    </fx:aircraftType>
+```
+
+Although technically permitted, when the flight is not a formation, the `<aircraftCount>` element should be omitted.  It is only intended to be used for formation flights.
+
 ---
 
 ## registration
@@ -58,32 +84,6 @@ Corresponding encoding in `FIXM 4.3.0`
   <fx:aircraft>
     <fx:registration>9MMRO</fx:registration>
 ```
-
---- 
-
-## aircraftCount
-
-In the case of a formation flight, FIXM does not represent the total number of aircraft within the formation directly. Rather, this number can be derived by adding up the individual values for each `<aircraftCount>` element under each `<aircraftType>` element of the formation.  For example, the following XML snippet would be used to represent a formation of nine aircraft including two F15s, four K35Rs, and three B2s:
-
-```xml
-<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->	
-<fx:flight>
-  <fx:aircraft>
-    <fx:aircraftType>
-      <fx:aircraftCount>2</fx:aircraftCount>
-      <fx:otherAircraftType>F15</fx:otherAircraftType>
-    </fx:aircraftType>
-    <fx:aircraftType>
-      <fx:aircraftCount>4</fx:aircraftCount>
-      <fx:icaoAircraftTypeDesignator>K35R</fx:icaoAircraftTypeDesignator>
-    </fx:aircraftType>
-    <fx:aircraftType>
-      <fx:aircraftCount>3</fx:aircraftCount>
-      <fx:otherAircraftType>B2</fx:otherAircraftType>
-    </fx:aircraftType>
-```
-
-Although technically permitted, when the flight is not a formation, the `<aircraftCount>` element should be omitted.  It is only intended to be used for formation flights.
 
 ---
 
