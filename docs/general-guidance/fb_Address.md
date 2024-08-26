@@ -1,12 +1,12 @@
 # Encoding guidance for fb:Address
 
-## FIXM Representation
-
 ![Image](.//media/image24.png")
 
 ---
 
-## Online Contact
+## ContactInformation
+
+## OnlineContact
 
 In FIXM, the online contact information can include an email address
 and/or a network address.
@@ -80,3 +80,13 @@ Message Submission to IFPS (FP1 - Brussels (Haren)).
      </fb:network>
 </fb:onlineContact>
 ```
+
+---
+
+## PostalAddress
+
+---
+
+## TelephoneContact
+
+---
