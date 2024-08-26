@@ -1,12 +1,34 @@
 # Encoding guidance for fb:Measures
 
-## FIXM Representation
+![Image](https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA1/EA5/EA142.png)
 
 ---
 
-## Vertical Distances
+## Angle
 
-### Definitions
+---
+
+## Frequency
+
+---
+
+## Length & Distance
+
+---
+
+## Mass & Weight
+
+---
+
+## Speed
+
+---
+
+## Temperature
+
+---
+
+## VerticalDistance
 
 The term vertical distance collectively refers to altitudes, elevations,
 and heights, as defined by ICAO
@@ -29,15 +51,12 @@ and heights, as defined by ICAO
     ellipsoid, measured along the ellipsoidal outer normal through the
     point in question. **\[ICAO\]**
 
-### FIXM Representation of Vertical Distances
 
 FIXM supports the representation of altitudes expressed in feet or
 meters (FIXM construct `Altitude`), of altitudes expressed as flight
 level number or standard metric level (FIXM construct `FlightLevel`) and
 of ellipsoid heights & SFC heights expressed in feet or meters (FIXM
 construct `Height` used in conjunction with a `VerticalReference`).
-
-![Image](.//media/image23.png ':size=50%')
 
 These vertical distances are specialisations of the generic class
 `Measure` which serves as the parent class for all measure types including
@@ -67,4 +86,7 @@ always represented with integer values.
 
 !> **Note to implementers:** FIXM supports multiple units of measure. When exchanging information in FIXM format, please ensure the recipient of your data can accept information using the units you provide.
 
+---
+
+## Volume
 
