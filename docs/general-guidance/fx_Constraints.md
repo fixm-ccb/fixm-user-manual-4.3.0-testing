@@ -6,6 +6,25 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
+## description
+
+?> COMING SOON
+
+---
+
+## departureOrArrivalIndicator
+
+?> COMING SOON
+
+---
+
+## level / speed / time
+?> COMING SOON
+
+---
+
+## restrictionReference
+
 ?> COMING SOON
 
 ---
