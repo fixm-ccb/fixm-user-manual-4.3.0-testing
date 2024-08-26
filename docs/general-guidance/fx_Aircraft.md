@@ -6,7 +6,7 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
-## Aircraft Address
+## aircraftAddress
 
 The `Aircraft Address` is *A unique combination of twenty-four bits available for assignment to an aircraft for the purpose of air-ground communications, navigation and surveillance.* The `Aircraft Address` is hardcoded in the aircraft and is commonly called Mode S Address.
 
@@ -24,7 +24,7 @@ Corresponding encoding in `FIXM 4.3.0`
 
 ---
 
-## Aircraft Registration
+## registration
 
 The `Aircraft Registration` is *a unique, alphanumeric string that identifies a civil aircraft and consists of the Aircraft Nationality or Common Mark and an additional alphanumeric string assigned by the state of registry or common mark registering authority.* 
 
@@ -61,7 +61,7 @@ Corresponding encoding in `FIXM 4.3.0`
 
 --- 
 
-## Number of Aircraft
+## aircraftCount
 
 In the case of a formation flight, FIXM does not represent the total number of aircraft within the formation directly. Rather, this number can be derived by adding up the individual values for each `<aircraftCount>` element under each `<aircraftType>` element of the formation.  For example, the following XML snippet would be used to represent a formation of nine aircraft including two F15s, four K35Rs, and three B2s:
 
