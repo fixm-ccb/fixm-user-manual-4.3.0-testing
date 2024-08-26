@@ -22,6 +22,12 @@ Corresponding encoding in `FIXM 4.3.0`
     <fx:aircraftAddress>4010DA</fx:aircraftAddress>
 ```
 
+---
+
+## aircraftApproachCategory
+
+?> COMING SOON
+
 --- 
 
 ## aircraftCount
@@ -47,6 +53,18 @@ In the case of a formation flight, FIXM does not represent the total number of a
 ```
 
 Although technically permitted, when the flight is not a formation, the `<aircraftCount>` element should be omitted.  It is only intended to be used for formation flights.
+
+---
+
+## coloursAndMarkings
+
+?> COMING SOON
+
+---
+
+## aircraftType
+
+?> COMING SOON
 
 ---
 
@@ -84,6 +102,12 @@ Corresponding encoding in `FIXM 4.3.0`
   <fx:aircraft>
     <fx:registration>9MMRO</fx:registration>
 ```
+
+---
+
+## wakeTurbulence
+
+?> COMING SOON
 
 ---
 
