@@ -1,12 +1,13 @@
 Encoding guidance for fb:Organization
 
-?> COMING SOON
+![Image](https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA1/EA6/EA194.png)
 
-## FIXM Representation
+
+## AircraftOperator
 
 ---
 
-## ...
+## PersonrOrOrganization
 
 ---
 
