@@ -6,7 +6,58 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
-## GUFI
+## aircraftIdentification
+
+The `Aircraft Identification`, abbreviated ACID (or ARCID in the [ADEXP specification](https://www.eurocontrol.int/publication/eurocontrol-specification-ats-data-exchange-presentation-adexp)), is defined by ICAO as *A group of letters, figures or a combination thereof which is either identical to, or the coded equivalent of, the aircraft call sign to be used in air-ground communications, and which is used to identify the aircraft in ground-ground air traffic services communications.* 
+The `Aircraft Identification` is NOT an identifier of an aircraft. It is an identifier of a flight, i.e. the operation of an aircraft from A to B.
+
+Examples of ACID: 
+- ACID = `BAW1234`, pronounced as `Speedbird One-Two-Three-Four` (= the callsign)
+- ACID = `MAS370`, pronounced as `Malaysia Airlines Three-Seven-Zero` (= the callsign)
+- ACID = `AFR447`, pronounced as `Air France Four-Four-Seven` (= the callsign)
+
+Encoding of ACID in `FIXM Core 4.3.0`
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->	
+<fx:flight>
+  <fx:flightIdentification>
+    <fx:aircraftIdentification>AFR447</fx:aircraftIdentification>
+```
+
+---
+
+## flightConstraint
+
+?> COMING SOON
+
+---
+
+## flightPlanOriginator
+
+?> COMING SOON
+
+---
+
+## flightPlanSubmitter
+
+?> COMING SOON
+
+---
+
+## flightRulesCategory
+
+?> COMING SOON
+
+---
+
+## flightType
+
+?> COMING SOON
+
+---
+
+## gufi
 
 ### What is it?
 
@@ -105,24 +156,31 @@ GUFIs are encoded in FIXM Core 4.2.0 as version 4 UUID only, with no namespace a
 <fx:gufiLegacy codeSpace="urn:uuid">dd056de9-0ba9-4d55-82cf-7b976b0b6d29</fx:gufiLegacy>
 ```
 
-## Aircraft Identification
+---
 
-The `Aircraft Identification`, abbreviated ACID (or ARCID in the [ADEXP specification](https://www.eurocontrol.int/publication/eurocontrol-specification-ats-data-exchange-presentation-adexp)), is defined by ICAO as *A group of letters, figures or a combination thereof which is either identical to, or the coded equivalent of, the aircraft call sign to be used in air-ground communications, and which is used to identify the aircraft in ground-ground air traffic services communications.* 
-The `Aircraft Identification` is NOT an identifier of an aircraft. It is an identifier of a flight, i.e. the operation of an aircraft from A to B.
+## iataFlightDesignator
 
-Examples of ACID: 
-- ACID = `BAW1234`, pronounced as `Speedbird One-Two-Three-Four` (= the callsign)
-- ACID = `MAS370`, pronounced as `Malaysia Airlines Three-Seven-Zero` (= the callsign)
-- ACID = `AFR447`, pronounced as `Air France Four-Four-Seven` (= the callsign)
+?> COMING SOON
 
-Encoding of ACID in `FIXM Core 4.3.0`
+---
 
-```xml
-<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->	
-<fx:flight>
-  <fx:flightIdentification>
-    <fx:aircraftIdentification>AFR447</fx:aircraftIdentification>
-```
+## remarks
+
+?> COMING SOON
+
+---
+
+## specialHandling
+
+?> COMING SOON
+
+---
+
+## supplementaryInformation
+
+?> COMING SOON
+
+---
 
 ## References
 
