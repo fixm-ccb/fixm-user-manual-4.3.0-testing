@@ -20,31 +20,7 @@ Climb profiles begin at take-off with distance and time expressed relative to th
 
 Descent profiles begin at a top-of-descent at the maximum operational cruise altitude for the specific route/trajectory. Time and distance are expressed relative to the top-of-descent. Descent profiles end at touchdown.
 
-### FIXM Representation
-
 The FIXM Core class `RouteTrajectoryGroup` has two properties `climbProfile` and `descentProfile` that can be used for exchanging the `Performance Profile`.
-
-```mermaid	
-classDiagram	
-class ProfilePoint
-<<XSDcomplexType>> ProfilePoint
-link ProfilePoint "https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA9/EA2/EA372.htm" "Go to definition"
-ProfilePoint : + airspeed [0..1] TrueAirspeed
-ProfilePoint : + distance [0..1] Distance
-ProfilePoint : + level [0..1] FlightLevelOrAltitudeChoice
-ProfilePoint : + time [0..1] Duration
-ProfilePoint : + seqNum [0..1] Count
-
-class PerformanceProfile
-<<XSDcomplexType>> PerformanceProfile
-link PerformanceProfile "https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA9/EA2/EA372.htm" "Go to definition"
-PerformanceProfile --> ProfilePoint : +profilePoint [0..2000]
-
-class RouteTrajectoryGroup
-<<XSDcomplexType>> RouteTrajectoryGroup
-RouteTrajectoryGroup --> PerformanceProfile : +climbProfile [0..1]
-RouteTrajectoryGroup --> PerformanceProfile : +descentProfile [0..1]
-```
 
 ### Example of Climb Profile
 
@@ -411,6 +387,8 @@ RouteTrajectoryGroup --> PerformanceProfile : +descentProfile [0..1]
 ### plannedDelay
 
 ### point4D
+
+#### pointProperty
 
 Each Trajectory Point in a FIXM four-dimensional trajectory can indicate, via use of Trajectory Point Properties, the events of interest that occur at that particular point. The following table is intended to help clarify what each Trajectory Point Property is for and when each of the property types should be used.
 
