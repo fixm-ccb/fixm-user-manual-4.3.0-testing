@@ -6,7 +6,16 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
-## aircraftIdentification
+
+## flightConstraint
+
+?> COMING SOON
+
+---
+
+## flightIdentification
+
+### aircraftIdentification
 
 The `Aircraft Identification`, abbreviated ACID (or ARCID in the [ADEXP specification](https://www.eurocontrol.int/publication/eurocontrol-specification-ats-data-exchange-presentation-adexp)), is defined by ICAO as *A group of letters, figures or a combination thereof which is either identical to, or the coded equivalent of, the aircraft call sign to be used in air-ground communications, and which is used to identify the aircraft in ground-ground air traffic services communications.* 
 The `Aircraft Identification` is NOT an identifier of an aircraft. It is an identifier of a flight, i.e. the operation of an aircraft from A to B.
@@ -25,41 +34,7 @@ Encoding of ACID in `FIXM Core 4.3.0`
     <fx:aircraftIdentification>AFR447</fx:aircraftIdentification>
 ```
 
----
-
-## flightConstraint
-
-?> COMING SOON
-
----
-
-## flightPlanOriginator
-
-?> COMING SOON
-
----
-
-## flightPlanSubmitter
-
-?> COMING SOON
-
----
-
-## flightRulesCategory
-
-?> COMING SOON
-
----
-
-## flightType
-
-?> COMING SOON
-
----
-
-## gufi
-
-### What is it?
+### gufi
 
 > The Globally Unique Flight Identifier (GUFI) is intended to provide a unique reference to a specific flight, civil or military.
 > Its purpose is to assist in associating a message to the correct flight and to help in distinguishing between similar flights.
@@ -70,11 +45,9 @@ Encoding of ACID in `FIXM Core 4.3.0`
 
 More information in chapter 3.7 GUFI & FLIGHT PLAN ASSOCIATION of the FF-ICE/R1 Implementation Guidance Manual <sup>[[I-06]](#references)</sup>.
 
-### Encoding a GUFI in FIXM Core 4.3.0
+**Encoding a GUFI in FIXM Core 4.3.0**
 
 `FIXM Core 4.3.0` supports the representation of the GUFI as specified in the FF-ICE/R1 Implementation Guidance Manual <sup>[[I-06]](#references)</sup>. The GUFI consists of a version 4 UUID, as standardised by IETF RFC 4122 <sup>[[O-07]](#references)</sup> and ISO/IEC 9834-8:2014 <sup>[[O-08]](#references)</sup>, supplemented with a namespace identifying the originator of the GUFI and a creation timestamp. For further details, browse APPENDIX G – GUFI Construction of the FF-ICE/R1 Implementation Guidance Manual <sup>[[I-06]](#references)</sup>.
-
-#### Encoding the UUID v4
 
 Here is a list of off-the-shelf IT libraries whose use is recommended for the UUID 4 generation:
 
@@ -83,8 +56,6 @@ Here is a list of off-the-shelf IT libraries whose use is recommended for the UU
 |Java|https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/UUID.html#randomUUID()||
 |.NET|https://learn.microsoft.com/en-us/dotnet/api/system.guid.newguid?view=net-7.0#system-guid-newguid||
 |Python|https://docs.python.org/3/library/uuid.html#uuid.uuid4||
-
-#### Encoding the Namespace
 
 The namespace is encoded using two fields: the `namespace domain` and the `namespace identifier`. The `namespace domain` identifies the particular type of namespace that is encoded, while the `namespace identifier` holds the actual namespace value. There are three options for the encoding of the namespace:
 - `namespace domain` = `FULLY_QUALIFIED_DOMAIN_NAME` when the `namespace identifier` is a domain name from either the organisation's email or from the organisation's website.
@@ -95,8 +66,6 @@ It is up to each GUFI originator to choose the most suitable option for the name
 
 ?> Note: The GUFI originator is not necessarily the flight plan or message originator, although they may be the same entity. For example, it is possible that an independent GUFI creation service could be used by flight plan originators that do not wish to create their own GUFIs. The namespace associated with these GUFIs would be that of the creation service and would have no connection to the flight plan originator.
 
-
-#### Encoding the Creation Timestamp
 
 The creation timestamp is expressed as a `DateTimeUTC`. For more guidance, see [this section](general-guidance/date-time-specification.md).
 
@@ -136,11 +105,11 @@ The creation timestamp is expressed as a `DateTimeUTC`. For more guidance, see [
 
 ---
 
-### Compatibility with FIXM Core 4.2.0
+#### Compatibility with FIXM Core 4.2.0
 
 GUFIs are encoded in FIXM Core 4.2.0 as version 4 UUID only, with no namespace and no creation timestamp. In order to preserve compatibility with FIXM Core 4.2.0, `FIXM Core 4.3.0` introduces a property `gufiLegacy` which should only be used when the GUFI assigned to a flight is in Core 4.2.0 format but there is a need to publish information about the flight in FIXM Core 4.3.0 format.
 
-#### Example
+Example
 
 ```xml
 <!-- FF-ICE Flight Plan filed in old 4.2.0 format...-->
@@ -158,7 +127,25 @@ GUFIs are encoded in FIXM Core 4.2.0 as version 4 UUID only, with no namespace a
 
 ---
 
-## iataFlightDesignator
+## flightPlanOriginator
+
+?> COMING SOON
+
+---
+
+## flightPlanSubmitter
+
+?> COMING SOON
+
+---
+
+## flightRulesCategory
+
+?> COMING SOON
+
+---
+
+## flightType
 
 ?> COMING SOON
 
