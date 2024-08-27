@@ -91,8 +91,6 @@ Message Submission to IFPS (FP1 - Brussels (Haren)).
 
 ## PostalAddress
 
-?> COMING SOON
-
 The `countryName` shall always be populated with the full name, not an ISO 3166 abbreviation.
 The `countryCode` shall always be populated using an ISO 3166 abbreviation.
 
