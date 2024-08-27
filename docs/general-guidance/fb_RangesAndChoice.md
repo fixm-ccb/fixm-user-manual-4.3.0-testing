@@ -6,7 +6,7 @@
 
 ## TimeRange
 
-?> COMING SOON
+The `earliest` time shall always be before the `latest` time.
 
 ---
 
