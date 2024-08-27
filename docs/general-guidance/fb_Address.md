@@ -6,6 +6,8 @@
 
 ## ContactInformation
 
+?> COMING SOON
+
 ## OnlineContact
 
 In FIXM, the online contact information can include an email address
