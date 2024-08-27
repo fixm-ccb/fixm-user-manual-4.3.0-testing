@@ -161,6 +161,12 @@ Example
 
 ---
 
+## routeTrajectoryGroup
+
+?> COMING SOON
+
+---
+
 ## specialHandling
 
 ?> COMING SOON
