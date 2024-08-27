@@ -4,6 +4,24 @@
 
 ---
 
+## TimeRange
+
 ?> COMING SOON
+
+---
+
+## TrueAirspeedRange
+
+The `lowerSpeed` shall always be lower than the `upperSpeed`.
+
+---
+
+## VerticalRange
+
+The `lowerBound` shall always be lower than the `upperBound`.
+
+---
+
+
 
 
