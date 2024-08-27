@@ -468,10 +468,6 @@ The indication that the aeronautical dataset for cycle `2202` has been used for 
 
 ---
 
-## seqNum
-
----
-
 ## takeOffMass
 
 ---
