@@ -125,6 +125,10 @@ Example
 <fx:gufiLegacy codeSpace="urn:uuid">dd056de9-0ba9-4d55-82cf-7b976b0b6d29</fx:gufiLegacy>
 ```
 
+### iataFlightDesignator
+
+?> COMING SOON
+
 ---
 
 ## flightPlanOriginator
