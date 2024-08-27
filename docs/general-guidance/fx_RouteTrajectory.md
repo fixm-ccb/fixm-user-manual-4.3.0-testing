@@ -459,6 +459,25 @@ Each Trajectory Point in a FIXM four-dimensional trajectory can indicate, via us
 
 ### airacReference
 
+`FIXM Core 4.3.0` enables implementers, and in particular operators, to indicate, by reference to the AIRAC Effective date, the aeronautical dataset used in the creation of the flight plan and calculation of the route/trajectory. The AIRAC Effective Date is based on the [ICAO published schedule](https://www.icao.int/airnavigation/information-management/Pages/AIRAC.aspx).
+
+Example:
+
+|Cycle|Ident|**AIRAC Effective Date**|
+|:-|:-|:-|
+|1|2201|27 JAN 22|
+|**2**|**`2202`**|**`24 FEB 22`**|
+|...|...|...|
+
+The indication that the aeronautical dataset for cycle `2202` has been used for the computation of the route/trajectory will be expressed as:
+
+```xml
+<fx:routeInformation>
+  <fx:airacReference>2022-02-24Z</fx:airacReference>
+```
+
+!> **Note to implementers:** When used as the AIRAC reference in the FF-ICE Flight Plan, the AIRAC Effective Date shall be solely interpreted as an indication of the aeronautical data set that has been used by the operator for the computation of the flight plan, and not as the actual date at which that data set will effectively become applicable. Indeed, the date at which a new AIRAC cycle effectively becomes applicable may be subject to regional or domestic procedures and may therefore differ from the ICAO published schedule. For instance, in some Asians countries, a new AIRAC cycle would become effective on 00LCL, which is the day before AIRAC day in UTC as published by ICAO.
+
 ### cruisingLevel
 
 ### cruisingSpeed
