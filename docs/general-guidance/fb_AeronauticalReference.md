@@ -43,7 +43,7 @@ references in FIXM.
 
 ---
 
-## about Generic Hypertext References
+## href
 
 If an AIXM 5.1 feature exists that corresponds to the element being
 referred to, an **optional** hypertext reference to that AIXM feature
@@ -522,7 +522,7 @@ single location given by a direct position.
 A geographic location consists of a co-ordinate reference system and
 geographic co-ordinates.
 
-## Co-Ordinate Reference System
+### Co-Ordinate Reference System
 
 ICAO Annex 11 chapter 2.29.1 states that World Geodetic System — 1984
 (WGS-84) shall be used as the horizontal (geodetic) reference system for
@@ -618,10 +618,6 @@ geospatial data. The reasons for not adopting GML are the following:
 
 ### Notes
 [1]: FIXM does not use GML but mimics it for geographic positions. GML encodes geographic locations as sequences of values since it employs the same construct to represent polygons.
-
-## References
-
-[O-03]: [OGC 12-028r1](https://portal.opengeospatial.org/files/?artifact_id=62061) - Use of Geography Markup Language (GML) for Aviation Data
 
 --- 
 
@@ -1110,18 +1106,6 @@ as described in chapter [Generic hypertext references](#generic-hypertext-refere
 
 [1]: This design is intentional. It saves FIXM from being tied to an external standard for such a small use case and also aims to avoid potential issues or difficulties when marshalling / unmarshalling the standard xlink:href attribute.
 
-### References
-
-#### ICAO References
-
-[I-07]: [ICAO Doc 7910](https://www.icao.int/safety/OPS/OPS-Tools/Pages/location-indicator.aspx) - Location Indicators
-
-#### Other References
-
-[O-01]: [Donlon AIP data Set](https://github.com/aixm/donlon) - A fictitious set of digital AIS data sets complying with the ICAO Annex 15, 16th edition and the new PANS-AIM provisions, in AIXM 5.1.1 format.
-
-[O-02]: [W3C XML Linking Language (xlink) v1.1](https://www.w3.org/TR/xlink11/)
-
 
 ## RelativePoint
 
@@ -1177,6 +1161,15 @@ Atlantic Ocean. **The examples shall never be used as operational data**.
 [AeronauticalReference.xsd]: https://www.fixm.aero/releases/FIXM-4.3.0/schemas/core/base/AeronauticalReference.xsd
 [RelativePointType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_RelativePointType.html
 
-#### References
+
+## -references
+
+### ICAO References
+
+[I-07]: [ICAO Doc 7910](https://www.icao.int/safety/OPS/OPS-Tools/Pages/location-indicator.aspx) - Location Indicators
+
+### Other References
 
 [O-01]: [Donlon AIP data Set](https://github.com/aixm/donlon) - A fictitious set of digital AIS data sets complying with the ICAO Annex 15, 16th edition and the new PANS-AIM provisions, in AIXM 5.1.1 format.
+[O-02]: [W3C XML Linking Language (xlink) v1.1](https://www.w3.org/TR/xlink11/)
+[O-03]: [OGC 12-028r1](https://portal.opengeospatial.org/files/?artifact_id=62061) - Use of Geography Markup Language (GML) for Aviation Data
