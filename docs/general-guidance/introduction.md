@@ -5,22 +5,22 @@ This section describes general guidance that is always applicable, whatever the 
 <details>
   <summary>fx:Aircraft</summary>
 
-- fx:AircraftType
-  - [aircraftAddress](https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft?id=aircraftaddress)
-  - aircraftApproachCategory
-  - aircraftType
-  - capabilities
-  - coloursAndMarkings
-  - registration
-  - wakeTurbulence
+- **fx:Aircraft:** [aircraftAddress], aircraftApproachCategory, aircraftType, [capabilities], coloursAndMarkings, [registration], wakeTurbulence
+- **fx:AircraftType:** [aircraftCount], icaoAircraftTypeDesignator, otherAircraftType
+  
+</details>
+
+<details>
+  <summary>fx:Arrival</summary>
+
+- **fx:Arrival:** actualTimeOfArrival, airportSlotIdentification, arrivalAerodrome, destinationAerodrome, destinationAerodromeAlternate, destinationAerodromePrevious, reclearanceInFlight, runwayDirection
+- **fx:ActualTimeOfArrival:** position, time, type
   
 </details>
 
 
 
-| Package                  | Encoding guidance |
-|:-                        |:-----             |
-| fx:Aircraft              | [Aircraft Address](general-guidance/fx_Aircraft.md)|
-||||
-||||
-||||
+[aircraftAddress]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft?id=aircraftaddress
+[registration]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft?id=registration
+[capabilities]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Capability
+[aircraftCount]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft?id=aircraftcount
