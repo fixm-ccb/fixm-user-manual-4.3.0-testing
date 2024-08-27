@@ -8,6 +8,10 @@
 
 ?> COMING SOON
 
+If the usage of ContactInformation is associated with a person, the ContactInformation.name field should not be used and the PersonOrOrganization.name should be used instead.
+
+
+
 ## OnlineContact
 
 In FIXM, the online contact information can include an email address
@@ -87,8 +91,15 @@ Message Submission to IFPS (FP1 - Brussels (Haren)).
 
 ## PostalAddress
 
+?> COMING SOON
+
+The `countryName` shall always be populated with the full name, not an ISO 3166 abbreviation.
+The `countryCode` shall always be populated using an ISO 3166 abbreviation.
+
 ---
 
 ## TelephoneContact
+
+?> COMING SOON
 
 ---
