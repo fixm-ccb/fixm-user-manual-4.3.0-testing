@@ -120,6 +120,9 @@ Airfile flights will represent the route start point in `departurePoint`, and wi
 [DepartureType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_DepartureType.html
 [Departure.xsd]: https://www.fixm.aero/releases/FIXM-4.3.0/schemas/core/flight/departure/Departure.xsd
 
+### Notes
+[1]: To create the logical model, four new embedded choice classes using the <\<XSDchoice\>> stereotype were created named DepartureLocationChoice, DepartureLocationPreviousChoice, DepartureTimeChoice, and DepartureTimePreviousChoice. This approach was used to retain the explicit representation for the departure aerodrome as its own field with non-aerodrome departure points collected under a second field.
+
 ---
 
 ## estimatedOffBlockTime / estimatedRouteStartTime
@@ -139,10 +142,6 @@ See above - chapter departureAerodrome / departurePoint.
 ?> COMING SOON
 
 ---
-
-## -notes
-[1]: To create the logical model, four new embedded choice classes using the <\<XSDchoice\>> stereotype were created named DepartureLocationChoice, DepartureLocationPreviousChoice, DepartureTimeChoice, and DepartureTimePreviousChoice. This approach was used to retain the explicit representation for the departure aerodrome as its own field with non-aerodrome departure points collected under a second field.
-
 
 ## -references
 
