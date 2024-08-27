@@ -140,11 +140,11 @@ See above - chapter departureAerodrome / departurePoint.
 
 ---
 
-## Notes
+## -notes
 [1]: To create the logical model, four new embedded choice classes using the <\<XSDchoice\>> stereotype were created named DepartureLocationChoice, DepartureLocationPreviousChoice, DepartureTimeChoice, and DepartureTimePreviousChoice. This approach was used to retain the explicit representation for the departure aerodrome as its own field with non-aerodrome departure points collected under a second field.
 
 
-## References
+## -references
 
 ### ICAO References
 

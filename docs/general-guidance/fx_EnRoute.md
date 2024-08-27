@@ -6,10 +6,24 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
+## alternateAerodrome
+
 ?> COMING SOON
 
 ---
 
-## References
+## boundaryCrossingCoordination
+
+?> COMING SOON
+
+---
+
+## currentModeACode
+
+?> COMING SOON
+
+---
+
+## -references
 
 ...

@@ -1,149 +1,6 @@
 # Encoding guidance for fb:AeronauticalReference
 
-## Geographical Positions
-
-FIXM captures the concept of Geographical Position as defined by ICAO
-Annex 15.
-
-*Position (geographical). Set of coordinates (latitude and longitude)
-referenced to the mathematical reference ellipsoid which define the
-position of a point on the surface of the Earth.*
-
-This model element maps to the ISO 19107 “Point” construct, defined as a
-single location given by a direct position.
-
-### FIXM Representation
-
-#### Logical Model
-
-![Image](.//media/general-guidance-geographical-positions-01.png ':size=35%')
-
-UML Class `GeographicalPosition` in package `FIXM.Base.AeronauticalReference`
-
-#### XML Schemas
-
-```xml
-<xs:complexType name="GeographicalPositionType">
-    <xs:sequence>
-        <xs:element name="extension" type="fb:GeographicalPositionExtensionType" nillable="true" minOccurs="0" maxOccurs="2000">
-        </xs:element>
-        <xs:element name="pos" type="fb:LatLongPosType" minOccurs="1" maxOccurs="1">
-        </xs:element>
-    </xs:sequence>
-    <xs:attribute name="srsName" type="xs:string" use="required" fixed="urn:ogc:def:crs:EPSG::4326">
-    </xs:attribute>
-</xs:complexType>
-```
-
-[GeographicalPositionType][GeographicalPositionType] in file [AeronauticalReference.xsd][AeronauticalReference.xsd]
-
-A geographic location consists of a co-ordinate reference system and
-geographic co-ordinates.
-
-## Co-Ordinate Reference System
-
-ICAO Annex 11 chapter 2.29.1 states that World Geodetic System — 1984
-(WGS-84) shall be used as the horizontal (geodetic) reference system for
-air navigation. The Coordinate Reference System reference is critical
-for the correct encoding and processing of FIXM positions. 
-
->*This is because a CRS not only indicates the geodetic datum and ellipsoid for
-which point coordinates are expressed but also the order of the
-coordinate axes in which coordinate values are provided, e.g. latitude
-before longitude – which is an important convention for the aviation
-domain.*
->
-> -- <cite>OGC 12-028r1 <sup>[[O-03]](#references)</sup></cite>
-
-The EPSG:4326 CRS is the recommended choice for AIXM 5.1 data sets that
-use the WGS-84 reference datum.
-
-FIXM implements a fixed co-ordinate reference system: `urn:ogc:def:crs:EPSG::4326`.
-
-### Geographic Co-Ordinates
-
-The EPSG:4326 CRS has latitude as the primary axis, which indicates that
-**the order of the values in the fb:pos element is** **first latitude**,
-**second longitude**. This ordering convention is the one applied to the
-aviation domain.
-
-The co-ordinates are represented in FIXM by a two-valued sequence<sup><a href="#general-guidance/geographical-positions?id=notes">[note 1]</a></sup>,
-the first being the latitude and the second being the longitude, each of
-which is a floating point number (the decimal value in degrees). The
-direction is determined by the sign of the value, as specified in the
-next table.
-
-| Sign     | Latitude | Longitude |
-|----------|----------|-----------|
-| Positive | N        | E         |
-| Negative | S        | W         |
-
-Note the latitude and longitude values are encoded as double in FIXM.
-Imposition of range restriction (-90≤latitude≤90, -180≤longitude≤180)
-does not appear in the model since different elements of the sequence of
-values have different constraints.
-
-### Examples
-
-#### Example
-
-```xml
-<fb:position srsName="urn:ogc:def:crs:EPSG::4326">
-    <fb:pos>59.0 -30.0</fb:pos>
-</fb:position>
-```
-
-#### Example
-
-```xml
-<fx:point4D srsName="urn:ogc:def:crs:EPSG::4326">
-    <fb:pos>50.03330555555556 8.570455555555556</fb:pos>
-<!– [...] –>
-```
-
-On EXAMPLE 1 above, number `59.0` represents the latitude and number
-`-30.0` represents the longitude.
-
-### Miscellaneous
-
-The W3C XML schema 1.0 specification defines three special values for
-float/double: positive infinity, negative infinity and not-a-number. In
-this context, a `pos` element expressed as `<fb:pos>INF -INF</fb:pos>` or `<fb:pos>NaN NaN</fb:pos> ` would be syntactically correct; it would validate against the core FIXM XML
-schemas. However, it would not represent any plausible location. The use
-of these special values is therefore not accepted when exchanging
-geographical positions in FIXM.
-
-### Why FIXM does not use the Geography Markup Language (GML)
-
-FIXM does not adopt the GML standard for the representation of
-geospatial data. The reasons for not adopting GML are the following:
-
--   Wherever a GML dependency is introduced, there would be a need for
-    users to use the GML schemas and therefore to understand GML, which
-    increases implementation costs.
-
--   The Flight Planning community is not traditionally familiar with
-    geospatial concepts. The introduction of GML would become an
-    important drawback for FIXM adoption in support of FF-ICE/R1.
-
--   Introducing a dependency on GML would make FIXM more difficult to
-    implement particularly in certain environments. For instance, .NET
-    technologies have been identified as *incompatible* with the GML
-    usage.
-
-[AeronauticalReference.xsd]: https://www.fixm.aero/releases/FIXM-4.3.0/schemas/core/base/AeronauticalReference.xsd
-[GeographicalPositionType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_GeographicalPositionType.html
-
-### Notes
-[1]: FIXM does not use GML but mimics it for geographic positions. GML encodes geographic locations as sequences of values since it employs the same construct to represent polygons.
-
-## References
-
-[O-03]: [OGC 12-028r1](https://portal.opengeospatial.org/files/?artifact_id=62061) - Use of Geography Markup Language (GML) for Aviation Data
-
---- 
-
-## References to Published Aeronautical Information
+![Image](https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA1/EA3/EA39.png)
 
 Describing the predicted movement of a flight commonly means indicating
 which parts of the infrastructure (ATS routes, waypoints, radio
@@ -184,7 +41,9 @@ AIXM features.
 The following sections provide guidance for correctly encoding these
 references in FIXM.
 
-### Generic Hypertext References
+---
+
+## about Generic Hypertext References
 
 If an AIXM 5.1 feature exists that corresponds to the element being
 referred to, an **optional** hypertext reference to that AIXM feature
@@ -206,32 +65,206 @@ Important note: FIXM does not import the W3C XML Linking Language<sup>[[O-02]](#
 FIXM mimics the xlink Locator attribute named “href” but defines it
 within the FIXM (Base) namespace<sup><a href="#general-guidance/references-to-published-aeronautical-information?id=notes">[note 1]</a></sup>.
 
-### References to Waypoints
+---
 
-#### Logical Model
+## AerodromeReference
 
-![Image](.//media/image13.png ':size=35%')
+#### OPTION 1 - Minimum Reference
 
-UML Class `DesignatedPoint` in package `FIXM.Base.AeronauticalReference`
+The minimum aerodrome reference shall consist of the aerodrome location
+indicator, if provided by ICAO Doc 7910 <sup>[[I-07]](#references)</sup>. If the aerodrome has no
+ICAO Doc 7910 location indicator, the minimum aerodrome reference shall
+consist of the name of the aerodrome and its geographical location,
+namely the aerodrome reference point or relative reference point.
 
-#### XML Schemas
+#### OPTION 2 - Minimum Reference with Supplementary AIXM Pointer
+
+*(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
+
+Option 2 corresponds to Option 1 with an additional hypertext reference
+as described in chapter [Generic hypertext references](#generic-hypertext-references).
+
+#####  Examples (NOT for OPERATIONAL USE)
+
+The table below depicts examples of FIXM references to fictitious
+aerodrome “DONLON” that is ‘published’ in AIXM 5.1 as part of the
+fictitious Donlon
+dataset<sup>[[O-01]](#references)</sup>. The
+data is entirely fictitious, located somewhere in the middle of the
+Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
+
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Examples of aerodrome references in FIXM</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><strong>CASE 1 – The Aerodrome has an ICAO Doc 7910 location indicator</strong></td>
+<td><strong>CASE 2 – The Aerodrome has no ICAO Doc. 7910 location indicator</strong></td>
+</tr>
+<tr class="even">
+<td><p><strong>OPTION 1</strong></p>
+<p>minimum</p></td>
+<td><p>
 
 ```xml
-<xs:complexType name="DesignatedPointType">
-   <xs:sequence>
-      <xs:element name="designator" type="fb:DesignatedPointDesignatorType" minOccurs="1" maxOccurs="1">
-      </xs:element>
-      <xs:element name="extension" type="fb:DesignatedPointExtensionType" nillable="true" minOccurs="0" maxOccurs="2000">
-      </xs:element>
-      <xs:element name="position" type="fb:GeographicalPositionType" nillable="true" minOccurs="0" maxOccurs="1">
-      </xs:element>
-   </xs:sequence>
-   <xs:attribute name="href" type="fb:HypertextReferenceType" use="optional">
-   </xs:attribute>
-</xs:complexType>
+<fx:destinationAerodrome>
+  <fb:locationIndicator>EADD</fb:locationIndicator>
+</fx:destinationAerodrome>
 ```
 
-Complex type [DesignatedPointType][DesignatedPointType] in file [AeronauticalReference.xsd][AeronauticalReference.xsd]
+</p></td>
+<td><p>
+
+```xml
+<fx:destinationAerodrome>
+   <fb:name>DONLON</fb:name>
+   <fb:referencePoint srsName="urn:ogc:def:crs:EPSG::4326">
+      <fb:pos>52.3716666666667 -31.9494444444444</fb:pos>
+   </fb:referencePoint>
+</fx:destinationAerodrome>
+```
+
+</p></td>
+</tr>
+<tr class="odd">
+<td><p><strong>OPTION 2</strong></p>
+<p>with href</p></td>
+<td><p>
+
+```xml
+<fx:destinationAerodrome href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+   <fb:locationIndicator>EADD</fb:locationIndicator>
+</fx:destinationAerodrome>
+```
+
+</p></td>
+<td><p>
+
+```xml
+<fx:destinationAerodrome href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+   <fb:name>DONLON</fb:name>
+   <fb:referencePoint srsName="urn:ogc:def:crs:EPSG::4326">
+      <fb:pos>52.3716666666667 -31.9494444444444</fb:pos>
+   </fb:referencePoint>
+</fx:destinationAerodrome>
+```
+
+</p></td>
+</tr>
+</tbody>
+</table>
+
+Important note: FIXM enables the encoding of “richer” aerodrome
+reference structures, such as
+
+```xml
+ <fx:destinationAerodrome href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+   <fb:iataDesignator>DLN</fb:iataDesignator>
+   <fb:locationIndicator>EADD</fb:locationIndicator>	
+   <fb:name>DONLON</fb:name>
+   <fb:referencePoint srsName="urn:ogc:def:crs:EPSG::4326">
+      <fb:pos>52.3716666666667 -31.9494444444444</fb:pos>
+   </fb:referencePoint>
+</fx:destinationAerodrome>
+```
+The above example includes all fields from both varieties of option 1 and option 2 as well as providing the aerodrome's IATA designator. This implementation practice only
+aims to provide consumers with richer information about the aerodrome
+being referred to. Whether or not to use this supplementary information
+is at the discretion of the consuming system / service.
+
+---
+
+## AtcUnitReference
+
+#### OPTION 1 - Minimum Reference
+
+The minimum ATC unit reference shall consist of the location indicator
+of the unit, if provided by ICAO Doc 7910 <sup>[[I-07]](#references)</sup>. If the unit has no
+ICAO Doc 7910 location indicator, the minimum reference shall
+consist of the name of the unit or any alternate name, as published in
+the AIP.
+
+#### OPTION 2 - Minimum Reference with Supplementary AIXM Pointer
+
+*(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
+
+Option 2 corresponds to Option 1 with an additional hypertext reference
+as described in chapter [Generic hypertext references](#generic-hypertext-references).
+
+#### Examples (NOT for OPERATIONAL USE)
+
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Examples of Unit references in FIXM</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><strong>CASE 1 – The Unit has an ICAO Doc 7910 location indicator</strong></td>
+<td><strong>CASE 2 – The Unit has no ICAO Doc. 7910 location indicator</strong></td>
+</tr>
+<tr class="even">
+<td><p><strong>OPTION 1</strong></p>
+<p>designator</p></td>
+<td><p>
+
+```xml
+<fx:originator>
+   <fb:locationIndicator>EBBU</fb:locationIndicator>
+</fx:originator>
+```
+
+</p></td>
+<td><p>&lt;fx:originator&gt;</p>
+<p>
+
+```xml
+<fx:originator>
+   <fb:atcUnitNameOrAlternate>MILITARY DONLON TWR</fb:atcUnitNameOrAlternate>
+</fx:originator>
+```
+
+</p></td>
+</tr>
+<tr class="odd">
+<td><p><strong>OPTION 2</strong></p>
+<p>designator<br />
++href</p></td>
+<td><p>
+
+```xml
+<fx:originator href="urn:uuid:...">
+   <fb:locationIndicator>EBBU</fb:locationIndicator>
+</fx:originator>
+```
+
+</p></td>
+<td><p>
+
+```xml
+<fx:originator href="urn:uuid:...">
+   <fb:atcUnitNameOrAlternate>MILITARY DONLON TWR</fb:atcUnitNameOrAlternate>
+</fx:originator>
+```
+
+</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+## DesignatedPoint
 
 #### OPTION 1 - Minimum Reference
 
@@ -472,34 +505,127 @@ to these cases. The following table quotes a few random examples.
 | ECHO                  | 504818N      | 0051950E      | ADHP     |
 | ECHO                  | 482129.75N   | 0703422.93W   | OTHER    |
 
-### References to Navaid
+---
 
-#### Logical Model
+## GeographicalPosition
 
-![Image](.//media/image14.png ':size=45%')
+FIXM captures the concept of Geographical Position as defined by ICAO
+Annex 15.
 
-UML Class `Navaid` in package `FIXM.Base.AeronauticalReference`
+*Position (geographical). Set of coordinates (latitude and longitude)
+referenced to the mathematical reference ellipsoid which define the
+position of a point on the surface of the Earth.*
 
-#### XML Schemas
+This model element maps to the ISO 19107 “Point” construct, defined as a
+single location given by a direct position.
+
+A geographic location consists of a co-ordinate reference system and
+geographic co-ordinates.
+
+## Co-Ordinate Reference System
+
+ICAO Annex 11 chapter 2.29.1 states that World Geodetic System — 1984
+(WGS-84) shall be used as the horizontal (geodetic) reference system for
+air navigation. The Coordinate Reference System reference is critical
+for the correct encoding and processing of FIXM positions. 
+
+>*This is because a CRS not only indicates the geodetic datum and ellipsoid for
+which point coordinates are expressed but also the order of the
+coordinate axes in which coordinate values are provided, e.g. latitude
+before longitude – which is an important convention for the aviation
+domain.*
+>
+> -- <cite>OGC 12-028r1 <sup>[[O-03]](#references)</sup></cite>
+
+The EPSG:4326 CRS is the recommended choice for AIXM 5.1 data sets that
+use the WGS-84 reference datum.
+
+FIXM implements a fixed co-ordinate reference system: `urn:ogc:def:crs:EPSG::4326`.
+
+### Geographic Co-Ordinates
+
+The EPSG:4326 CRS has latitude as the primary axis, which indicates that
+**the order of the values in the fb:pos element is** **first latitude**,
+**second longitude**. This ordering convention is the one applied to the
+aviation domain.
+
+The co-ordinates are represented in FIXM by a two-valued sequence<sup><a href="#general-guidance/geographical-positions?id=notes">[note 1]</a></sup>,
+the first being the latitude and the second being the longitude, each of
+which is a floating point number (the decimal value in degrees). The
+direction is determined by the sign of the value, as specified in the
+next table.
+
+| Sign     | Latitude | Longitude |
+|----------|----------|-----------|
+| Positive | N        | E         |
+| Negative | S        | W         |
+
+Note the latitude and longitude values are encoded as double in FIXM.
+Imposition of range restriction (-90≤latitude≤90, -180≤longitude≤180)
+does not appear in the model since different elements of the sequence of
+values have different constraints.
+
+### Examples
+
+#### Example
 
 ```xml
-<xs:complexType name="NavaidType">
-   <xs:sequence>
-      <xs:element name="designator" type="fb:NavaidDesignatorType" minOccurs="1" maxOccurs="1">
-      </xs:element>
-      <xs:element name="extension" type="fb:NavaidExtensionType" nillable="true" minOccurs="0" maxOccurs="2000">
-      </xs:element>
-      <xs:element name="navaidServiceType" type="fb:NavaidServiceTypeType" nillable="true" minOccurs="0" maxOccurs="1">
-      </xs:element>
-      <xs:element name="position" type="fb:GeographicalPositionType" nillable="true" minOccurs="0" maxOccurs="1">
-      </xs:element>
-   </xs:sequence>
-   <xs:attribute name="href" type="fb:HypertextReferenceType" use="optional">
-   </xs:attribute>
-</xs:complexType>
+<fb:position srsName="urn:ogc:def:crs:EPSG::4326">
+    <fb:pos>59.0 -30.0</fb:pos>
+</fb:position>
 ```
 
-Complex type [NavaidType][NavaidType] in file [AeronauticalReference.xsd][AeronauticalReference.xsd]
+#### Example
+
+```xml
+<fx:point4D srsName="urn:ogc:def:crs:EPSG::4326">
+    <fb:pos>50.03330555555556 8.570455555555556</fb:pos>
+<!– [...] –>
+```
+
+On EXAMPLE 1 above, number `59.0` represents the latitude and number
+`-30.0` represents the longitude.
+
+### Miscellaneous
+
+The W3C XML schema 1.0 specification defines three special values for
+float/double: positive infinity, negative infinity and not-a-number. In
+this context, a `pos` element expressed as `<fb:pos>INF -INF</fb:pos>` or `<fb:pos>NaN NaN</fb:pos> ` would be syntactically correct; it would validate against the core FIXM XML
+schemas. However, it would not represent any plausible location. The use
+of these special values is therefore not accepted when exchanging
+geographical positions in FIXM.
+
+### Why FIXM does not use the Geography Markup Language (GML)
+
+FIXM does not adopt the GML standard for the representation of
+geospatial data. The reasons for not adopting GML are the following:
+
+-   Wherever a GML dependency is introduced, there would be a need for
+    users to use the GML schemas and therefore to understand GML, which
+    increases implementation costs.
+
+-   The Flight Planning community is not traditionally familiar with
+    geospatial concepts. The introduction of GML would become an
+    important drawback for FIXM adoption in support of FF-ICE/R1.
+
+-   Introducing a dependency on GML would make FIXM more difficult to
+    implement particularly in certain environments. For instance, .NET
+    technologies have been identified as *incompatible* with the GML
+    usage.
+
+[AeronauticalReference.xsd]: https://www.fixm.aero/releases/FIXM-4.3.0/schemas/core/base/AeronauticalReference.xsd
+[GeographicalPositionType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_GeographicalPositionType.html
+
+### Notes
+[1]: FIXM does not use GML but mimics it for geographic positions. GML encodes geographic locations as sequences of values since it employs the same construct to represent polygons.
+
+## References
+
+[O-03]: [OGC 12-028r1](https://portal.opengeospatial.org/files/?artifact_id=62061) - Use of Geography Markup Language (GML) for Aviation Data
+
+--- 
+
+## Navaid
 
 #### OPTION 1 - Minimum Reference
 
@@ -634,175 +760,9 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 </tbody>
 </table>
 
-### References to Aerodromes
 
-#### Logical Model
 
-![Image](.//media/image15.png ':size=75%')
-
-UML Class `AerodromeReference` in package `FIXM.Base.AeronauticalReference`
-
-#### XML Schemas
-
-```xml
-<xs:complexType name="AerodromeReferenceType">
-   <xs:sequence>
-      <xs:element name="extension" type="fb:AerodromeReferenceExtensionType" nillable="true" minOccurs="0" maxOccurs="2000">
-      </xs:element>
-      <xs:element name="iataDesignator" type="fb:IataAerodromeDesignatorType" nillable="true" minOccurs="0" maxOccurs="1">
-      </xs:element>
-      <xs:element name="locationIndicator" type="fb:LocationIndicatorType" nillable="true" minOccurs="0" maxOccurs="1">
-      </xs:element>
-      <xs:element name="name" type="fb:AerodromeNameType" nillable="true" minOccurs="0" maxOccurs="1">
-      </xs:element>
-      <xs:element name="referencePoint" type="fb:GeographicalPositionType" nillable="true" minOccurs="0" maxOccurs="1">
-      </xs:element>
-      <xs:element name="referenceRelativePoint" type="fb:RelativePointType" nillable="true" minOccurs="0" maxOccurs="1">
-      </xs:element>
-   </xs:sequence>
-   <xs:attribute name="href" type="fb:HypertextReferenceType" use="optional">
-   </xs:attribute>
-</xs:complexType>
-```
-
-Complex types [AerodromeReferenceType][AerodromeReferenceType] in file [AeronauticalReference.xsd][AeronauticalReference.xsd]
-
-#### OPTION 1 - Minimum Reference
-
-The minimum aerodrome reference shall consist of the aerodrome location
-indicator, if provided by ICAO Doc 7910 <sup>[[I-07]](#references)</sup>. If the aerodrome has no
-ICAO Doc 7910 location indicator, the minimum aerodrome reference shall
-consist of the name of the aerodrome and its geographical location,
-namely the aerodrome reference point or relative reference point.
-
-#### OPTION 2 - Minimum Reference with Supplementary AIXM Pointer
-
-*(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
-
-Option 2 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references](#generic-hypertext-references).
-
-#####  Examples (NOT for OPERATIONAL USE)
-
-The table below depicts examples of FIXM references to fictitious
-aerodrome “DONLON” that is ‘published’ in AIXM 5.1 as part of the
-fictitious Donlon
-dataset<sup>[[O-01]](#references)</sup>. The
-data is entirely fictitious, located somewhere in the middle of the
-Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
-
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th><strong>Examples of aerodrome references in FIXM</strong></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td><strong>CASE 1 – The Aerodrome has an ICAO Doc 7910 location indicator</strong></td>
-<td><strong>CASE 2 – The Aerodrome has no ICAO Doc. 7910 location indicator</strong></td>
-</tr>
-<tr class="even">
-<td><p><strong>OPTION 1</strong></p>
-<p>minimum</p></td>
-<td><p>
-
-```xml
-<fx:destinationAerodrome>
-  <fb:locationIndicator>EADD</fb:locationIndicator>
-</fx:destinationAerodrome>
-```
-
-</p></td>
-<td><p>
-
-```xml
-<fx:destinationAerodrome>
-   <fb:name>DONLON</fb:name>
-   <fb:referencePoint srsName="urn:ogc:def:crs:EPSG::4326">
-      <fb:pos>52.3716666666667 -31.9494444444444</fb:pos>
-   </fb:referencePoint>
-</fx:destinationAerodrome>
-```
-
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>OPTION 2</strong></p>
-<p>with href</p></td>
-<td><p>
-
-```xml
-<fx:destinationAerodrome href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
-   <fb:locationIndicator>EADD</fb:locationIndicator>
-</fx:destinationAerodrome>
-```
-
-</p></td>
-<td><p>
-
-```xml
-<fx:destinationAerodrome href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
-   <fb:name>DONLON</fb:name>
-   <fb:referencePoint srsName="urn:ogc:def:crs:EPSG::4326">
-      <fb:pos>52.3716666666667 -31.9494444444444</fb:pos>
-   </fb:referencePoint>
-</fx:destinationAerodrome>
-```
-
-</p></td>
-</tr>
-</tbody>
-</table>
-
-Important note: FIXM enables the encoding of “richer” aerodrome
-reference structures, such as
-
-```xml
- <fx:destinationAerodrome href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
-   <fb:iataDesignator>DLN</fb:iataDesignator>
-   <fb:locationIndicator>EADD</fb:locationIndicator>	
-   <fb:name>DONLON</fb:name>
-   <fb:referencePoint srsName="urn:ogc:def:crs:EPSG::4326">
-      <fb:pos>52.3716666666667 -31.9494444444444</fb:pos>
-   </fb:referencePoint>
-</fx:destinationAerodrome>
-```
-The above example includes all fields from both varieties of option 1 and option 2 as well as providing the aerodrome's IATA designator. This implementation practice only
-aims to provide consumers with richer information about the aerodrome
-being referred to. Whether or not to use this supplementary information
-is at the discretion of the consuming system / service.
-
-### References to Runway Directions
-
-#### Logical Model
-
-![Image](.//media/image16.png ':size=35%')
-
-UML Class `RunwayDirectionDesignator` in package `FIXM.Base.AeronauticalReference`
-
-#### XML Schemas
-
-```xml
-<xs:simpleType name="RestrictedRunwayDirectionDesignatorType">
-   <xs:restriction base="fb:CharacterStringType">
-      <xs:pattern value="(0[1-9]|[12][0-9]|3[0-6])[LRC]{0,1}"/>
-   </xs:restriction>
-</xs:simpleType>
-<xs:complexType name="RunwayDirectionDesignatorType">
-   <xs:simpleContent>
-      <xs:extension base="fb:RestrictedRunwayDirectionDesignatorType">
-         <xs:attribute name="href" type="fb:HypertextReferenceType" use="optional">
-         </xs:attribute>
-      </xs:extension>
-   </xs:simpleContent>
-</xs:complexType>
-```
-
-Simple type [RunwayDirectionDesignatorType][RunwayDirectionDesignatorType] in file [AeronauticalReference.xsd][AeronauticalReference.xsd]
+## RunwayDirectionDesignator
 
 #### OPTION 1 - Minimum Reference
 
@@ -862,33 +822,7 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 </tbody>
 </table>
 
-### References to Enroute ATS routes
-
-#### Logical Model
-
-![Image](.//media/image17.png ':size=35%')
-
-UML Class `RouteDesignator` in package `FIXM.Base.AeronauticalReference`
-
-#### XML schemas
-
-```xml
-<xs:simpleType name="RestrictedRouteDesignatorType">
-   <xs:restriction base="fb:CharacterStringType">
-      <xs:pattern value="[A-Z][A-Z0-9]{1,7}"/>
-   </xs:restriction>
-</xs:simpleType>
-<xs:complexType name="RouteDesignatorType">
-   <xs:simpleContent>
-      <xs:extension base="fb:RestrictedRouteDesignatorType">
-         <xs:attribute name="href" type="fb:HypertextReferenceType" use="optional">
-         </xs:attribute>
-      </xs:extension>
-   </xs:simpleContent>
-</xs:complexType>
-```
-
-Simple type [RouteDesignatorType][RouteDesignatorType] in file [AeronauticalReference.xsd][AeronauticalReference.xsd]
+## RouteDesignator
 
 #### OPTION 1 - Minimum Reference
 
@@ -952,46 +886,7 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 </tbody>
 </table>
 
-### References to SIDs and STARs
-
-#### Logical Model
-
-![Image](.//media/image18.png ':size=35%')
-
-UML Class `SidStarReference` in package `FIXM.Base.AeronauticalReference`
-
-#### XML Schemas
-
-```xml
-<xs:complexType name="SidStarReferenceType">
-   <xs:sequence>
-      <xs:element name="abbreviatedDesignator" type="fb:SidStarAbbreviatedDesignatorType" nillable="true" minOccurs="0" maxOccurs="1">
-      </xs:element>
-      <xs:element name="designator" type="fb:SidStarDesignatorType" minOccurs="1" maxOccurs="1">
-      </xs:element>
-      <xs:element name="extension" type="fb:SidStarReferenceExtensionType" nillable="true" minOccurs="0" maxOccurs="2000">
-      </xs:element>
-   </xs:sequence>
-   <xs:attribute name="href" type="fb:HypertextReferenceType" use="optional">
-   </xs:attribute>
-</xs:complexType>
-<xs:simpleType name="SidStarAbbreviatedDesignatorType">
-   <xs:restriction base="fb:CharacterStringType">
-      <xs:minLength value="1"/>
-      <xs:maxLength value="6"/>
-      <xs:pattern value="([A-Z]|[0-9])+([ \+\-/]*([A-Z]|[0-9])+)*"/>
-   </xs:restriction>
-</xs:simpleType>
-<xs:simpleType name="SidStarDesignatorType">
-   <xs:restriction base="fb:CharacterStringType">
-      <xs:minLength value="1"/>
-      <xs:maxLength value="7"/>
-      <xs:pattern value="([A-Z]|[0-9])+([ \+\-/]*([A-Z]|[0-9])+)*"/>
-   </xs:restriction>
-</xs:simpleType>
-```
-
-Simple types [SidStarReferenceType][SidStarReferenceType] in file [AeronauticalReference.xsd][AeronauticalReference.xsd]
+### SidStarReference
 
 #### OPTION 1 - Minimum Reference
 
@@ -1124,35 +1019,7 @@ specification, chapter 7.4. Example:
 ```
 
 
-### References to Airspace
-
-#### Logical Model
-
-![Image](.//media/image19.png ':size=35%')
-
-UML Class `AirspaceDesignator` in package `FIXM.Base.AeronauticalReference`
-
-#### XML Schemas
-
-```xml
-<xs:simpleType name="RestrictedAirspaceDesignatorType">
-   <xs:restriction base="fb:CharacterStringType">
-      <xs:minLength value="1"/>
-      <xs:maxLength value="10"/>
-      <xs:pattern value="([A-Z]|[0-9]|[, !&quot;&amp;#$%'\(\)\*\+\-\./:;&lt;=&gt;\?@\[\\\]\^_\|\{\}])*"/>
-   </xs:restriction>
-</xs:simpleType>
-<xs:complexType name="AirspaceDesignatorType">
-   <xs:simpleContent>
-      <xs:extension base="fb:RestrictedAirspaceDesignatorType">
-         <xs:attribute name="href" type="fb:HypertextReferenceType" use="optional">
-         </xs:attribute>
-      </xs:extension>
-   </xs:simpleContent>
-</xs:complexType>
-```
-
-Simple type [AirspaceDesignatorType][AirspaceDesignatorType] in file [AeronauticalReference.xsd][AeronauticalReference.xsd]
+## AirspaceDesignator
 
 #### OPTION 1 - Minimum Reference
 
@@ -1225,116 +1092,8 @@ as described in chapter [Generic hypertext references](#generic-hypertext-refere
 </tbody>
 </table>
 
-### References to (ATC) Units
 
-#### Logical Model
 
-![Image](.//media/image20.png ':size=75%')
-
-UML Class `ATCUnitReference` in package `FIXM.Base.AeronauticalReference`
-
-#### XML Schemas
-
-```xml
-<xs:complexType name="AtcUnitReferenceType">
-   <xs:sequence>
-      <xs:element name="atcUnitNameOrAlternate" type="fb:TextNameType" nillable="true" minOccurs="0" maxOccurs="1">
-      </xs:element>
-      <xs:element name="controlSectorDesignator" type="fb:AirspaceDesignatorType" nillable="true" minOccurs="0" maxOccurs="1">
-      </xs:element>
-      <xs:element name="extension" type="fb:AtcUnitReferenceExtensionType" nillable="true" minOccurs="0" maxOccurs="2000">
-      </xs:element>
-      <xs:element name="locationIndicator" type="fb:LocationIndicatorType" nillable="true" minOccurs="0" maxOccurs="1">
-      </xs:element>
-      <xs:element name="position" type="fb:GeographicalPositionType" nillable="true" minOccurs="0" maxOccurs="1">
-      </xs:element>
-   </xs:sequence>
-   <xs:attribute name="href" type="fb:HypertextReferenceType" use="optional">
-   </xs:attribute>
-</xs:complexType>
-```
-
-Complex type [AtcUnitReferenceType][AtcUnitReferenceType] in file [AeronauticalReference.xsd][AeronauticalReference.xsd]
-
-#### OPTION 1 - Minimum Reference
-
-The minimum ATC unit reference shall consist of the location indicator
-of the unit, if provided by ICAO Doc 7910 <sup>[[I-07]](#references)</sup>. If the unit has no
-ICAO Doc 7910 location indicator, the minimum reference shall
-consist of the name of the unit or any alternate name, as published in
-the AIP.
-
-#### OPTION 2 - Minimum Reference with Supplementary AIXM Pointer
-
-*(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
-
-Option 2 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references](#generic-hypertext-references).
-
-#### Examples (NOT for OPERATIONAL USE)
-
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th><strong>Examples of Unit references in FIXM</strong></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td><strong>CASE 1 – The Unit has an ICAO Doc 7910 location indicator</strong></td>
-<td><strong>CASE 2 – The Unit has no ICAO Doc. 7910 location indicator</strong></td>
-</tr>
-<tr class="even">
-<td><p><strong>OPTION 1</strong></p>
-<p>designator</p></td>
-<td><p>
-
-```xml
-<fx:originator>
-   <fb:locationIndicator>EBBU</fb:locationIndicator>
-</fx:originator>
-```
-
-</p></td>
-<td><p>&lt;fx:originator&gt;</p>
-<p>
-
-```xml
-<fx:originator>
-   <fb:atcUnitNameOrAlternate>MILITARY DONLON TWR</fb:atcUnitNameOrAlternate>
-</fx:originator>
-```
-
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>OPTION 2</strong></p>
-<p>designator<br />
-+href</p></td>
-<td><p>
-
-```xml
-<fx:originator href="urn:uuid:...">
-   <fb:locationIndicator>EBBU</fb:locationIndicator>
-</fx:originator>
-```
-
-</p></td>
-<td><p>
-
-```xml
-<fx:originator href="urn:uuid:...">
-   <fb:atcUnitNameOrAlternate>MILITARY DONLON TWR</fb:atcUnitNameOrAlternate>
-</fx:originator>
-```
-
-</p></td>
-</tr>
-</tbody>
-</table>
 
 
 [AeronauticalReference.xsd]: https://www.fixm.aero/releases/FIXM-4.3.0/schemas/core/base/AeronauticalReference.xsd
@@ -1364,36 +1123,7 @@ as described in chapter [Generic hypertext references](#generic-hypertext-refere
 [O-02]: [W3C XML Linking Language (xlink) v1.1](https://www.w3.org/TR/xlink11/)
 
 
-## Relative Points
-
-### FIXM Representation
-
-#### Logical Model
-
-![Image](.//media/image21.png)
-
-UML Class `RelativePoint` in package `FIXM.Base.AeronauticalReference`
-
-#### XML Schemas
-
-```xml
-<xs:complexType name="RelativePointType">
-   <xs:sequence>
-      <xs:element name="bearing" type="fb:BearingType" minOccurs="1" maxOccurs="1">
-      </xs:element>
-      <xs:element name="distance" type="fb:DistanceType" minOccurs="1" maxOccurs="1">
-      </xs:element>
-      <xs:element name="extension" type="fb:RelativePointExtensionType" nillable="true" minOccurs="0" maxOccurs="2000">
-      </xs:element>
-      <xs:element name="position" type="fb:GeographicalPositionType" nillable="true" minOccurs="0" maxOccurs="1">
-      </xs:element>
-      <xs:element name="referencePoint" type="fb:NavaidType" minOccurs="1" maxOccurs="1">
-      </xs:element>
-   </xs:sequence>
-</xs:complexType>
-```
-
-Complex type [RelativePointType][RelativePointType] in file [AeronauticalReference.xsd][AeronauticalReference.xsd]
+## RelativePoint
 
 A relative point is a bearing and distance from a reference navaid.
 Encoding a relative point in FIXM requires the ‘bearing’, ‘distance’ and

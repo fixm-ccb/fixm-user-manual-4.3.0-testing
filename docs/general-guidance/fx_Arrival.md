@@ -6,10 +6,53 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
+## actualTimeOfArrival
+
 ?> COMING SOON
 
 ---
 
-## References
+## airportSlotIdentification
 
-...
+?> COMING SOON
+
+---
+
+## arrivalAerodrome
+
+?> COMING SOON
+
+---
+
+## destinationAerodrome
+
+?> COMING SOON
+
+---
+
+## destinationAerodromeAlternate
+
+?> COMING SOON
+
+---
+
+## destinationAerodromePrevious
+
+?> COMING SOON
+
+---
+
+## reclearanceInFlight
+
+?> COMING SOON
+
+---
+
+## runwayDirection
+
+?> COMING SOON
+
+---
+
+## -references
+

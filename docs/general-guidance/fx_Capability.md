@@ -6,7 +6,9 @@ Go to [XML schema documentation](https://fixm.aero/releases/FIXM-4.3.0/doc/schem
 
 ---
 
-## (COM) selectiveCallingCode
+## communication
+
+### selectiveCallingCode
 
 The `SELCAL` code is a four-character code acting as a paging system for an ATS unit to establish voice communications with the pilot of an aircraft. 
 
@@ -25,7 +27,7 @@ Examples of encoding:
 <fx:selectiveCallingCode>GQE8</fx:selectiveCallingCode>
 ```
 
-### Compatibility with FIXM Core 4.2.0
+#### Compatibility with FIXM Core 4.2.0
 
 FIXM Core 4.2.0 was released before the publication of Amendment 91 to ICAO Annex 10 Volume III and therefore does not natively support the new letters from T to Z and the numbers 1 to 9 added to the SELCAL standard. However, forward and backward compatibility between 4.2.0 and 4.3.0 is ensured:
 
@@ -49,7 +51,24 @@ FIXM Core 4.2.0 was released before the publication of Amendment 91 to ICAO Anne
 
 ---
 
-## References
+## navigation
 
-...
+?> COMING SOON
+
+---
+
+## surveillance
+
+?> COMING SOON
+
+---
+
+## survival
+
+?> COMING SOON
+
+---
+
+## -references
+
 

@@ -6,48 +6,7 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
-## Trajectory Point Properties
-
-Each Trajectory Point in a FIXM four-dimensional trajectory can indicate, via use of Trajectory Point Properties, the events of interest that occur at that particular point. The following table is intended to help clarify what each Trajectory Point Property is for and when each of the property types should be used.
-
-|Enumerated Value|Description|Uses|Number of Instances Allowed (M=multiple)|
-|:---|:---|:---|:---:|
-|TOP_OF_CLIMB|(From ARINC 702A) The point where the trajectory arrives at the cruise flight level after a climb. There will be one top-of-climb for each cruise flight level (step climbs).|Describes the vertical profile.|M|
-|TOP_OF_DESCENT|The point where the trajectory begins a descent from the final cruise flight level.|Describes the vertical profile.|1|
-|TCP_VERTICAL|Indicates that the associated trajectory change point (TCP) is one at which a level segment (intermediate or cruise) will be initiated or terminated.|Describes the vertical profile.|M|
-|TCP_SPEED|The point where the airplane will begin accelerating or decelerating as a result of a speed constraint or limit, or reaches the target speed. (ARINC 702A)|Describes the flight’s speed profile to obtain accurate assessment of time at points.|M|
-|TCP_LATERAL|Indicates that the associated trajectory change point (TCP) is one at which a course, track or heading change will be initiated or terminated. It is not required to be provided for a planned transition between published ATS routes.|Describes the lateral profile.|M|
-|CROSSOVER_ALTITUDE|The point in climb or descent where the airplane will transition between Mach Number and IAS control. (ARINC 702A)|Enhances the vertical profile.|M|
-|TRANSITION_ALTITUDE_OR_LEVEL|Indicates that the associated trajectory point is the point at which the trajectory reaches the transition altitude (in climb) or level (in descent).|Provides clarity on assumptions for altitude reference.|M|
-|DEPARTURE_RUNWAY_END|Indicates that the associated trajectory point corresponds to the point at the end of the runway on departure. This point is at the center of the runway at the departure end when departing.|Provides clarity regarding the point at which a computed trajectory is being initiated on the runway.|1|
-|RUNWAY_THRESHOLD|This point is the threshold (which may be displaced) at the centerline of the runway at the approach end when arriving. See ICAO Annex 14.|Provides clarity regarding the point at which a computed trajectory is being terminated on the runway.|1|
-|OFF_BLOCKS|This is the point at which the aircraft pushes back and begins to taxi for departure.|Provides clarity as to where the taxi will begin. May be the time provided in a departure message.|1|
-|START_TAKEOFF_ROLL|Indicates that the associated trajectory point corresponds to the point at the start of take-off roll (used for departures only)|Provides clarity regarding the point at which a computed trajectory is being initiated on the runway. May be the time provided in a departure message|1|
-|WHEELS_OFF|Indicates that the associated trajectory point corresponds to the point at which the aircraft is predicted to be wheels off the runway on departure.|Provides clarity regarding the point at which a computed trajectory is being initiated on the runway. May be the time provided in a departure message|1|
-|WHEELS_ON|Indicates that the associated trajectory point corresponds to the point at which the aircraft is predicted to be wheels on the runway for arrival.|Provides clarity regarding the point at which a computed trajectory is being terminated on the runway. May be the time provided in an arrival message|1|
-|END_LANDING_ROLL|Indicates that the associated trajectory point corresponds to the point at which the aircraft is predicted to come to a full stop on the arrival runway. (A prediction only, the flight will likely exit the runway without coming to a full stop).|Provides clarity regarding the point at which a computed trajectory is being terminated on the runway. May be the time provided in an arrival message|1|
-|IN_BLOCKS|Indicates the point and time at which an arriving aircraft is/was in blocks.|Provides clarity regarding when a flight has completed. May be the time provided in an arrival message.|1|
-|ENTRY_RESTRICTED_OR_RESERVED_AIRSPACE|Indicates that the associated trajectory point is the point at which the flight is predicted to enter an airspace restriction/reservation, including any additional safety buffer. An identifier to the airspace is provided in the trajectory point reference.|Used to indicate the point at which a flight’s trajectory is predicted to enter an airspace restriction/reservation.|M|
-|EXIT_RESTRICTED_OR_RESERVED_AIRSPACE|Indicates that the associated trajectory point is the point at which the flight is predicted to exit an airspace restriction/reservation, including any additional separation requirements. An identifier to the airspace is provided in the trajectory point reference.|Used to indicate the point at which a flight’s trajectory is predicted to exit an airspace restriction/reservation.|M, each must pair to an Entry|
-|ENTRY_CONSTRAINED_AIRSPACE|Indicates that the associated trajectory point is the point at which the trajectory is predicted to cross into designated constrained airspace.|Used during feedback to indicate the point at which a flight’s trajectory is predicted to enter constrained airspace.|M|
-|CROSSING_CONSTRAINED_AIRSPACE|Indicates that the associated trajectory point is the point at which the trajectory is predicted to cross constrained airspace designated as a line.|Used during feedback to indicate the point at which a flight’s trajectory is predicted to cross a line constraint.|M|
-|EXIT_CONSTRAINED_AIRSPACE|Indicates that the associated trajectory point is the point at which the trajectory is predicted to exit from designated constrained airspace.|Used during feedback to indicate the point at which a flight’s trajectory is predicted to exit constrained airspace.|M, each must pair to an Entry|
-|HOLD_ENTRY|Indicates that the associated trajectory point is a point at which the flight is expected to enter into planned holding.|Used to indicate a point at which a flight is expected to enter planned holding. Expression of this property should be used in conjunction with delay type OPERATOR_REQUEST_HOLDING.|M|
-|HOLD_EXIT|Indicates that the associated trajectory point is a point at which the flight is expected to exit from planned holding.|Used to indicate a point at which a flight is expected to exit planned holding. Expression of this property should be used in conjunction with delay type OPERATOR_REQUEST_HOLDING.|M, each must pair to an Entry|
-|BEGIN_STAY|Indicates that the associated trajectory point is a point at which the flight is expected to begin an operation at which the flight will remain for some time.|Used in conjunction with a Delay indication to specify the starting point. Expression of this property should be used in conjunction with non-holding delay types such as OPERATOR_REQUEST_POINT, OPERATOR_REQUEST_SEGMENT, OPERATOR_REQUEST_AIRSPACE, or OPERATOR_REQUEST_AERODROME.|M|
-|END_STAY|Indicates that the associated trajectory point is a point at which the flight is expected to terminate an operation at which it remained for some time.|Used in conjunction with a Delay indication to specify the ending point. Expression of this property should be used in conjunction with non-holding delay types such as OPERATOR_REQUEST_POINT, OPERATOR_REQUEST_SEGMENT, OPERATOR_REQUEST_AIRSPACE, or OPERATOR_REQUEST_AERODROME.|M, each must pair to a Begin|
-|INITIAL_PREDICTION_POINT|Indicates that the associated trajectory point is the initial point at which a prediction was made. For FF-ICE Planning, an eASP may provide a trajectory which is predicted to begin at an entry point into the eASP airspace. This includes a point near entry into the Area of Responsibility.|Provides the point at which a prediction was initiated. This point indicates an absolute time when others indicate time relative to this absolute time.|1|
-|END_PREDICTION_POINT|Indicates that the associated trajectory point is the final point at which a prediction was made. For FF-ICE Planning, an eASP may provide a trajectory which is predicted to end at an exit point from the eASP airspace.|Provides an indication of the last point at which a trajectory prediction was made. This point need not be the end of the flight.|1|
-|CONSTRAINT_POINT|Indicates that the associated trajectory point is the point of application of a constraint. These can include explicit altitude, speed or time constraints or implicit MIT/MINIT, or sequencing constraints. For named constraints, a reference to the name of the constraint should be provided under trajectory point reference.|Used to provide feedback on constraints applicable to a trajectory.|M|
-|FIR_BOUNDARY_CROSSING_POINT|Indicates the point at which the trajectory crosses from one FIR into another. A named reference to the FIR being entered may also be provided.|Used in conjunction with the time at a Trajectory Point to indicate the estimated elapsed time to a FIR boundary|M|
-|START_EXPECT_VECTORS|When procedures specify “Expect Vectors”, the associated point identifies the starting point of the vectoring.|Used to indicate a portion of the trajectory with uncertainty in lateral path choice and times.|M|
-|END_EXPECT_VECTORS|When procedures specify “Expect Vectors”, the associated point identifies the ending point of the vectoring. The Trajectory Point data at this point includes an estimate of the impact of vectoring.|Used to indicate the end of vectoring and associated uncertainty in lateral path and times.|M, each must pair to a Start|
-|PRESCRIBED_EET_POINT|Indicates that the associated trajectory point represents a point that has been prescribed for required Estimated Elapsed Time reporting. This can include a FIR boundary crossing point or a significant point as prescribed on the basis of regional air navigation agreements, or by the appropriate ATS authority.|Prescribed EET Point|M|
-|AIRPORT_REFERENCE_LOCATION|Indicates that the associated trajectory point is the airport reference location.|Used for expressing the departure or arrival point when specific runway locations information on the flight has not been used in the prediction.|2|
-
----
-
-## Performance Profile
+## climbProfile / descentProfile
 
 As explained in the FF-ICE/R1 Implementation Guidance Manual <sup>[[I-06]](#references)</sup>,
 the `Performance Profile` is a zero-wind, standard atmosphere profile reflective of the flight capabilities and desired parameters. 
@@ -61,31 +20,7 @@ Climb profiles begin at take-off with distance and time expressed relative to th
 
 Descent profiles begin at a top-of-descent at the maximum operational cruise altitude for the specific route/trajectory. Time and distance are expressed relative to the top-of-descent. Descent profiles end at touchdown.
 
-### FIXM Representation
-
 The FIXM Core class `RouteTrajectoryGroup` has two properties `climbProfile` and `descentProfile` that can be used for exchanging the `Performance Profile`.
-
-```mermaid	
-classDiagram	
-class ProfilePoint
-<<XSDcomplexType>> ProfilePoint
-link ProfilePoint "https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA9/EA2/EA372.htm" "Go to definition"
-ProfilePoint : + airspeed [0..1] TrueAirspeed
-ProfilePoint : + distance [0..1] Distance
-ProfilePoint : + level [0..1] FlightLevelOrAltitudeChoice
-ProfilePoint : + time [0..1] Duration
-ProfilePoint : + seqNum [0..1] Count
-
-class PerformanceProfile
-<<XSDcomplexType>> PerformanceProfile
-link PerformanceProfile "https://www.fixm.aero/releases/FIXM-4.3.0/doc/logical_model_documentation/EARoot/EA1/EA2/EA9/EA2/EA372.htm" "Go to definition"
-PerformanceProfile --> ProfilePoint : +profilePoint [0..2000]
-
-class RouteTrajectoryGroup
-<<XSDcomplexType>> RouteTrajectoryGroup
-RouteTrajectoryGroup --> PerformanceProfile : +climbProfile [0..1]
-RouteTrajectoryGroup --> PerformanceProfile : +descentProfile [0..1]
-```
 
 ### Example of Climb Profile
 
@@ -435,7 +370,113 @@ RouteTrajectoryGroup --> PerformanceProfile : +descentProfile [0..1]
 </fx:descentProfile>		
 ```
 
-## References
+---
+
+## climbSchedule / descentSchedule
+
+---
+
+## element
+
+### alongRouteDistance
+
+### elementStartPoint
+
+### modified / modifiedRouteItemReference
+
+### plannedDelay
+
+### point4D
+
+#### pointProperty
+
+Each Trajectory Point in a FIXM four-dimensional trajectory can indicate, via use of Trajectory Point Properties, the events of interest that occur at that particular point. The following table is intended to help clarify what each Trajectory Point Property is for and when each of the property types should be used.
+
+|Enumerated Value|Description|Uses|Number of Instances Allowed (M=multiple)|
+|:---|:---|:---|:---:|
+|TOP_OF_CLIMB|(From ARINC 702A) The point where the trajectory arrives at the cruise flight level after a climb. There will be one top-of-climb for each cruise flight level (step climbs).|Describes the vertical profile.|M|
+|TOP_OF_DESCENT|The point where the trajectory begins a descent from the final cruise flight level.|Describes the vertical profile.|1|
+|TCP_VERTICAL|Indicates that the associated trajectory change point (TCP) is one at which a level segment (intermediate or cruise) will be initiated or terminated.|Describes the vertical profile.|M|
+|TCP_SPEED|The point where the airplane will begin accelerating or decelerating as a result of a speed constraint or limit, or reaches the target speed. (ARINC 702A)|Describes the flight’s speed profile to obtain accurate assessment of time at points.|M|
+|TCP_LATERAL|Indicates that the associated trajectory change point (TCP) is one at which a course, track or heading change will be initiated or terminated. It is not required to be provided for a planned transition between published ATS routes.|Describes the lateral profile.|M|
+|CROSSOVER_ALTITUDE|The point in climb or descent where the airplane will transition between Mach Number and IAS control. (ARINC 702A)|Enhances the vertical profile.|M|
+|TRANSITION_ALTITUDE_OR_LEVEL|Indicates that the associated trajectory point is the point at which the trajectory reaches the transition altitude (in climb) or level (in descent).|Provides clarity on assumptions for altitude reference.|M|
+|DEPARTURE_RUNWAY_END|Indicates that the associated trajectory point corresponds to the point at the end of the runway on departure. This point is at the center of the runway at the departure end when departing.|Provides clarity regarding the point at which a computed trajectory is being initiated on the runway.|1|
+|RUNWAY_THRESHOLD|This point is the threshold (which may be displaced) at the centerline of the runway at the approach end when arriving. See ICAO Annex 14.|Provides clarity regarding the point at which a computed trajectory is being terminated on the runway.|1|
+|OFF_BLOCKS|This is the point at which the aircraft pushes back and begins to taxi for departure.|Provides clarity as to where the taxi will begin. May be the time provided in a departure message.|1|
+|START_TAKEOFF_ROLL|Indicates that the associated trajectory point corresponds to the point at the start of take-off roll (used for departures only)|Provides clarity regarding the point at which a computed trajectory is being initiated on the runway. May be the time provided in a departure message|1|
+|WHEELS_OFF|Indicates that the associated trajectory point corresponds to the point at which the aircraft is predicted to be wheels off the runway on departure.|Provides clarity regarding the point at which a computed trajectory is being initiated on the runway. May be the time provided in a departure message|1|
+|WHEELS_ON|Indicates that the associated trajectory point corresponds to the point at which the aircraft is predicted to be wheels on the runway for arrival.|Provides clarity regarding the point at which a computed trajectory is being terminated on the runway. May be the time provided in an arrival message|1|
+|END_LANDING_ROLL|Indicates that the associated trajectory point corresponds to the point at which the aircraft is predicted to come to a full stop on the arrival runway. (A prediction only, the flight will likely exit the runway without coming to a full stop).|Provides clarity regarding the point at which a computed trajectory is being terminated on the runway. May be the time provided in an arrival message|1|
+|IN_BLOCKS|Indicates the point and time at which an arriving aircraft is/was in blocks.|Provides clarity regarding when a flight has completed. May be the time provided in an arrival message.|1|
+|ENTRY_RESTRICTED_OR_RESERVED_AIRSPACE|Indicates that the associated trajectory point is the point at which the flight is predicted to enter an airspace restriction/reservation, including any additional safety buffer. An identifier to the airspace is provided in the trajectory point reference.|Used to indicate the point at which a flight’s trajectory is predicted to enter an airspace restriction/reservation.|M|
+|EXIT_RESTRICTED_OR_RESERVED_AIRSPACE|Indicates that the associated trajectory point is the point at which the flight is predicted to exit an airspace restriction/reservation, including any additional separation requirements. An identifier to the airspace is provided in the trajectory point reference.|Used to indicate the point at which a flight’s trajectory is predicted to exit an airspace restriction/reservation.|M, each must pair to an Entry|
+|ENTRY_CONSTRAINED_AIRSPACE|Indicates that the associated trajectory point is the point at which the trajectory is predicted to cross into designated constrained airspace.|Used during feedback to indicate the point at which a flight’s trajectory is predicted to enter constrained airspace.|M|
+|CROSSING_CONSTRAINED_AIRSPACE|Indicates that the associated trajectory point is the point at which the trajectory is predicted to cross constrained airspace designated as a line.|Used during feedback to indicate the point at which a flight’s trajectory is predicted to cross a line constraint.|M|
+|EXIT_CONSTRAINED_AIRSPACE|Indicates that the associated trajectory point is the point at which the trajectory is predicted to exit from designated constrained airspace.|Used during feedback to indicate the point at which a flight’s trajectory is predicted to exit constrained airspace.|M, each must pair to an Entry|
+|HOLD_ENTRY|Indicates that the associated trajectory point is a point at which the flight is expected to enter into planned holding.|Used to indicate a point at which a flight is expected to enter planned holding. Expression of this property should be used in conjunction with delay type OPERATOR_REQUEST_HOLDING.|M|
+|HOLD_EXIT|Indicates that the associated trajectory point is a point at which the flight is expected to exit from planned holding.|Used to indicate a point at which a flight is expected to exit planned holding. Expression of this property should be used in conjunction with delay type OPERATOR_REQUEST_HOLDING.|M, each must pair to an Entry|
+|BEGIN_STAY|Indicates that the associated trajectory point is a point at which the flight is expected to begin an operation at which the flight will remain for some time.|Used in conjunction with a Delay indication to specify the starting point. Expression of this property should be used in conjunction with non-holding delay types such as OPERATOR_REQUEST_POINT, OPERATOR_REQUEST_SEGMENT, OPERATOR_REQUEST_AIRSPACE, or OPERATOR_REQUEST_AERODROME.|M|
+|END_STAY|Indicates that the associated trajectory point is a point at which the flight is expected to terminate an operation at which it remained for some time.|Used in conjunction with a Delay indication to specify the ending point. Expression of this property should be used in conjunction with non-holding delay types such as OPERATOR_REQUEST_POINT, OPERATOR_REQUEST_SEGMENT, OPERATOR_REQUEST_AIRSPACE, or OPERATOR_REQUEST_AERODROME.|M, each must pair to a Begin|
+|INITIAL_PREDICTION_POINT|Indicates that the associated trajectory point is the initial point at which a prediction was made. For FF-ICE Planning, an eASP may provide a trajectory which is predicted to begin at an entry point into the eASP airspace. This includes a point near entry into the Area of Responsibility.|Provides the point at which a prediction was initiated. This point indicates an absolute time when others indicate time relative to this absolute time.|1|
+|END_PREDICTION_POINT|Indicates that the associated trajectory point is the final point at which a prediction was made. For FF-ICE Planning, an eASP may provide a trajectory which is predicted to end at an exit point from the eASP airspace.|Provides an indication of the last point at which a trajectory prediction was made. This point need not be the end of the flight.|1|
+|CONSTRAINT_POINT|Indicates that the associated trajectory point is the point of application of a constraint. These can include explicit altitude, speed or time constraints or implicit MIT/MINIT, or sequencing constraints. For named constraints, a reference to the name of the constraint should be provided under trajectory point reference.|Used to provide feedback on constraints applicable to a trajectory.|M|
+|FIR_BOUNDARY_CROSSING_POINT|Indicates the point at which the trajectory crosses from one FIR into another. A named reference to the FIR being entered may also be provided.|Used in conjunction with the time at a Trajectory Point to indicate the estimated elapsed time to a FIR boundary|M|
+|START_EXPECT_VECTORS|When procedures specify “Expect Vectors”, the associated point identifies the starting point of the vectoring.|Used to indicate a portion of the trajectory with uncertainty in lateral path choice and times.|M|
+|END_EXPECT_VECTORS|When procedures specify “Expect Vectors”, the associated point identifies the ending point of the vectoring. The Trajectory Point data at this point includes an estimate of the impact of vectoring.|Used to indicate the end of vectoring and associated uncertainty in lateral path and times.|M, each must pair to a Start|
+|PRESCRIBED_EET_POINT|Indicates that the associated trajectory point represents a point that has been prescribed for required Estimated Elapsed Time reporting. This can include a FIR boundary crossing point or a significant point as prescribed on the basis of regional air navigation agreements, or by the appropriate ATS authority.|Prescribed EET Point|M|
+|AIRPORT_REFERENCE_LOCATION|Indicates that the associated trajectory point is the airport reference location.|Used for expressing the departure or arrival point when specific runway locations information on the flight has not been used in the prediction.|2|
+
+---
+
+## flightRulesChange
+
+--- 
+
+## routeInformation
+
+### airacReference
+
+`FIXM Core 4.3.0` enables implementers, and in particular operators, to indicate, by reference to the AIRAC Effective date, the aeronautical dataset used in the creation of the flight plan and calculation of the route/trajectory. The AIRAC Effective Date is based on the [ICAO published schedule](https://www.icao.int/airnavigation/information-management/Pages/AIRAC.aspx).
+
+Example:
+
+|Cycle|Ident|**AIRAC Effective Date**|
+|:-|:-|:-|
+|1|2201|27 JAN 22|
+|**2**|**`2202`**|**`24 FEB 22`**|
+|...|...|...|
+
+The indication that the aeronautical dataset for cycle `2202` has been used for the computation of the route/trajectory will be expressed as:
+
+```xml
+<fx:routeInformation>
+  <fx:airacReference>2022-02-24Z</fx:airacReference>
+```
+
+!> **Note to implementers:** When used as the AIRAC reference in the FF-ICE Flight Plan, the AIRAC Effective Date shall be solely interpreted as an indication of the aeronautical data set that has been used by the operator for the computation of the flight plan, and not as the actual date at which that data set will effectively become applicable. Indeed, the date at which a new AIRAC cycle effectively becomes applicable may be subject to regional or domestic procedures and may therefore differ from the ICAO published schedule. For instance, in some Asians countries, a new AIRAC cycle would become effective on 00LCL, which is the day before AIRAC day in UTC as published by ICAO.
+
+### cruisingLevel
+
+### cruisingSpeed
+
+### estimatedElapsedTime
+
+### routeText
+
+### totalEstimatedElapsedTime
+
+---
+
+## seqNum
+
+---
+
+## takeOffMass
+
+---
+
+## -references
 
 ### ICAO References
 
