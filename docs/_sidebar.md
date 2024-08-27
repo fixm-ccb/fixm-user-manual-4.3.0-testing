@@ -34,7 +34,6 @@
   - [fb:Organization](general-guidance/fb_Organization.md)
   - [fb:RangesAndChoices](general-guidance/fb_RangesAndChoice.md)
   - [fb:Types](general-guidance/fb_Types.md)
-  - [Rules for Data Correctness](general-guidance/general-rules-for-data-correctness.md)
   - [Rules for Absent Data](general-guidance/rules-for-absent-data.md)
   - [Applying Templates in XML](general-guidance/applying_templates.md)
   - [Use of other -XMs](general-guidance/the-use-of-other-exchange-models.md)
