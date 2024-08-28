@@ -44,7 +44,7 @@ Package `fx:RouteChanges`
 - **fx:RouteChange:** cruiseClimbStart, level, speed 
 ---
 Package `fx:RouteTrajectory`
-- **fx:RouteTrajectoryGroup:** [climbProfile], climbSchedule, [descentProfile], descentSchedule, element, extension, [routeInformation], takeoffMass
+- **fx:RouteTrajectoryGroup:** [climbProfile], climbSchedule, [descentProfile], descentSchedule, element, [routeInformation], takeoffMass
 - **fx:FlightRouteInformation:** [airacReference], cruisingLevel, cruisingSpeed, estimatedElapsedTime, routeText, totalEstimatedElapsedTime
 - **fx:PerformanceProfile:** [profilePoint]
 - **fx:RouteTrajectoryElement:** alongRouteDistance, [constraint], elementStartPoint, flightRulesChange, modified, modifiedRouteItemReference, plannedDelay, [point4D], [routeChange], routeDesignatorToNextElement, routeTruncationIndicator, [seqNum]
