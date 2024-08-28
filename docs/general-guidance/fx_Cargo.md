@@ -6,36 +6,10 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
-## aircraftLimitation
-
 ?> COMING SOON
 
 ---
 
-## airWaybillNumber
-
-?> COMING SOON
-
----
-
-## onboardLocation
-
-?> COMING SOON
-
----
-
-## packageGroup
-
-?> COMING SOON
-
----
-
-## shippingInformation
-
-?> COMING SOON
-
----
-
-## -references
+## *references*
 
 ...
