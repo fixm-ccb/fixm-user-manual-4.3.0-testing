@@ -6,12 +6,6 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
-## actualTimeOfDeparture
-
-?> COMING SOON
-
----
-
 ## airportSlotIdentification
 
 Airport slots are being used to balance demand against available airport capacity at airports where the
@@ -131,19 +125,7 @@ See above - chapter departureAerodrome / departurePoint.
 
 ---
 
-## runwayDirection
-
-?> COMING SOON
-
----
-
-## takeOffAlternateAerodrome
-
-?> COMING SOON
-
----
-
-## -references
+## *references*
 
 ### ICAO References
 
