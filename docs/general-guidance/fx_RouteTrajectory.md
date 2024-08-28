@@ -6,7 +6,7 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
-## climbProfile / descentProfile
+## `climbProfile` / `descentProfile`
 
 As explained in the FF-ICE/R1 Implementation Guidance Manual <sup>[[I-06]](#references)</sup>,
 the `Performance Profile` is a zero-wind, standard atmosphere profile reflective of the flight capabilities and desired parameters. 
@@ -373,11 +373,11 @@ The FIXM Core class `RouteTrajectoryGroup` has two properties `climbProfile` and
 
 ---
 
-## element
+## `element`
 
-### point4D
+### `point4D`
 
-#### pointProperty
+#### `pointProperty`
 
 Each Trajectory Point in a FIXM four-dimensional trajectory can indicate, via use of Trajectory Point Properties, the events of interest that occur at that particular point. The following table is intended to help clarify what each Trajectory Point Property is for and when each of the property types should be used.
 
@@ -418,9 +418,9 @@ Each Trajectory Point in a FIXM four-dimensional trajectory can indicate, via us
 
 --- 
 
-## routeInformation
+## `routeInformation`
 
-### airacReference
+### `airacReference`
 
 `FIXM Core 4.3.0` enables implementers, and in particular operators, to indicate, by reference to the AIRAC Effective date, the aeronautical dataset used in the creation of the flight plan and calculation of the route/trajectory. The AIRAC Effective Date is based on the [ICAO published schedule](https://www.icao.int/airnavigation/information-management/Pages/AIRAC.aspx).
 
