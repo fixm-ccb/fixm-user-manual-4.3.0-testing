@@ -44,12 +44,12 @@ Package `fx:RouteChanges`
 - **fx:RouteChange:** cruiseClimbStart, level, speed 
 ---
 Package `fx:RouteTrajectory`
-- **fx:RouteTrajectoryGroup:** [climbProfile], climbSchedule, [descentProfile], descentSchedule, element, extension, routeInformation, takeoffMass
+- **fx:RouteTrajectoryGroup:** [climbProfile], climbSchedule, [descentProfile], descentSchedule, element, extension, [routeInformation], takeoffMass
 - **fx:FlightRouteInformation:** [airacReference], cruisingLevel, cruisingSpeed, estimatedElapsedTime, routeText, totalEstimatedElapsedTime
 - **fx:PerformanceProfile:** [profilePoint]
 - **fx:RouteTrajectoryElement:** alongRouteDistance, [constraint], elementStartPoint, flightRulesChange, modified, modifiedRouteItemReference, plannedDelay, [point4D], [routeChange], routeDesignatorToNextElement, routeTruncationIndicator, [seqNum]
 - **fx:TrajectoryPoint4D:** altimeterSetting, level, metData, [pointProperty], position, predictedAirspeed, predictedGroundspeed, time, verticalRange
-- **fx:TrajectoryPointProperty:** description, propertyType, reference
+- **fx:TrajectoryPointProperty:** description, [propertyType], reference
 ---
 Package `fx:RouteTrajectoryConstraint`
 - **fx:RouteTrajectoryConstraint:** departureOrArrivalIndicator, description, level, restrictionReference, speed, time
@@ -105,8 +105,11 @@ Package `fb:Types`
 [climbProfile]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=climbprofile-descentprofile
 [descentProfile]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=climbprofile-descentprofile
 [profilePoint]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=climbprofile-descentprofile
+[routeInformation]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=routeinformation
 [point4D]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=point4d
 [pointProperty]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=pointproperty
+[propertyType]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=pointproperty
+[element]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=element
 [airacReference]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=airacreference
 [constraint]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Constraints?id=encoding-guidance-for-fxconstraints
 [routeChange]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteChanges?id=encoding-guidance-for-fxroutechanges
