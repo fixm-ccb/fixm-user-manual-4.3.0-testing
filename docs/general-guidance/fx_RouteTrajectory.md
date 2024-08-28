@@ -372,19 +372,7 @@ The FIXM Core class `RouteTrajectoryGroup` has two properties `climbProfile` and
 
 ---
 
-## climbSchedule / descentSchedule
-
----
-
 ## element
-
-### alongRouteDistance
-
-### elementStartPoint
-
-### modified / modifiedRouteItemReference
-
-### plannedDelay
 
 ### point4D
 
@@ -427,10 +415,6 @@ Each Trajectory Point in a FIXM four-dimensional trajectory can indicate, via us
 |PRESCRIBED_EET_POINT|Indicates that the associated trajectory point represents a point that has been prescribed for required Estimated Elapsed Time reporting. This can include a FIR boundary crossing point or a significant point as prescribed on the basis of regional air navigation agreements, or by the appropriate ATS authority.|Prescribed EET Point|M|
 |AIRPORT_REFERENCE_LOCATION|Indicates that the associated trajectory point is the airport reference location.|Used for expressing the departure or arrival point when specific runway locations information on the flight has not been used in the prediction.|2|
 
----
-
-## flightRulesChange
-
 --- 
 
 ## routeInformation
@@ -456,23 +440,9 @@ The indication that the aeronautical dataset for cycle `2202` has been used for 
 
 !> **Note to implementers:** When used as the AIRAC reference in the FF-ICE Flight Plan, the AIRAC Effective Date shall be solely interpreted as an indication of the aeronautical data set that has been used by the operator for the computation of the flight plan, and not as the actual date at which that data set will effectively become applicable. Indeed, the date at which a new AIRAC cycle effectively becomes applicable may be subject to regional or domestic procedures and may therefore differ from the ICAO published schedule. For instance, in some Asians countries, a new AIRAC cycle would become effective on 00LCL, which is the day before AIRAC day in UTC as published by ICAO.
 
-### cruisingLevel
-
-### cruisingSpeed
-
-### estimatedElapsedTime
-
-### routeText
-
-### totalEstimatedElapsedTime
-
 ---
 
-## takeOffMass
-
----
-
-## -references
+## *references*
 
 ### ICAO References
 

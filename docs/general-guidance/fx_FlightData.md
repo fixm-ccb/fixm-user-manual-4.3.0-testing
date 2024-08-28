@@ -6,13 +6,6 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
-
-## flightConstraint
-
-?> COMING SOON
-
----
-
 ## flightIdentification
 
 ### aircraftIdentification
@@ -125,61 +118,9 @@ Example
 <fx:gufiLegacy codeSpace="urn:uuid">dd056de9-0ba9-4d55-82cf-7b976b0b6d29</fx:gufiLegacy>
 ```
 
-### iataFlightDesignator
-
-?> COMING SOON
-
 ---
 
-## flightPlanOriginator
-
-?> COMING SOON
-
----
-
-## flightPlanSubmitter
-
-?> COMING SOON
-
----
-
-## flightRulesCategory
-
-?> COMING SOON
-
----
-
-## flightType
-
-?> COMING SOON
-
----
-
-## remarks
-
-?> COMING SOON
-
----
-
-## routeTrajectoryGroup
-
-?> COMING SOON
-
----
-
-## specialHandling
-
-?> COMING SOON
-
----
-
-## supplementaryInformation
-
-?> COMING SOON
-
----
-
-## -references
+## *references*
 
 ### ICAO References
 

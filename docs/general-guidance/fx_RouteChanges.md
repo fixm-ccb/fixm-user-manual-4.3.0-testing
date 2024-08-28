@@ -6,24 +6,10 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
-## cruiseClimbStart
-
 ?> COMING SOON
 
 ---
 
-## level
-
-?> COMING SOON
-
----
-
-## speed
-
-?> COMING SOON
-
----
-
-## -references
+## *references*
 
 ...

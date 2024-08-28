@@ -24,12 +24,6 @@ Corresponding encoding in `FIXM 4.3.0`
 
 ---
 
-## aircraftApproachCategory
-
-?> COMING SOON
-
---- 
-
 ## aircraftCount
 
 In the case of a formation flight, FIXM does not represent the total number of aircraft within the formation directly. Rather, this number can be derived by adding up the individual values for each `<aircraftCount>` element under each `<aircraftType>` element of the formation.  For example, the following XML snippet would be used to represent a formation of nine aircraft including two F15s, four K35Rs, and three B2s:
@@ -53,18 +47,6 @@ In the case of a formation flight, FIXM does not represent the total number of a
 ```
 
 Although technically permitted, when the flight is not a formation, the `<aircraftCount>` element should be omitted.  It is only intended to be used for formation flights.
-
----
-
-## coloursAndMarkings
-
-?> COMING SOON
-
----
-
-## aircraftType
-
-?> COMING SOON
 
 ---
 
@@ -105,12 +87,6 @@ Corresponding encoding in `FIXM 4.3.0`
 
 ---
 
-## wakeTurbulence
-
-?> COMING SOON
-
----
-
-## -references
+## *references*
 
 ...

@@ -6,24 +6,9 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
-## emergency
-
 ?> COMING SOON
 
 ---
 
-## lastContact
+## *references*
 
-?> COMING SOON
-
----
-
-## radioCommunicationFailure
-
-?> COMING SOON
-
----
-
-## -references
-
-...
