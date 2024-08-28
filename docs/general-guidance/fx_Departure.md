@@ -17,7 +17,7 @@ for non-scheduled air transport operations or general aviation. The airport slot
 *the identifier of the scheduled time of arrival or departure available for allocation by, 
 or as allocated by, a coordinator for an aircraft movement on a specific date at a coordinated airport*. 
 
-The FIXM Core class `Departure` andhas  a property `airportSlotIdentification` that can be used for exchanging a departure slot reference. 
+The FIXM Core class `Departure` (resp. `Arrival`) has a property `airportSlotIdentification` that can be used for exchanging a departure (resp. arrival) slot reference. 
 
 This airport slot reference is expressed as a CharacterString with a maxLength set to 10. This is based on the recommendation of the taskforce of experts from 
 the European Airport Coordinators Association (EUACA), the International Air Transport Association (IATA) and EUROCONTROL 
