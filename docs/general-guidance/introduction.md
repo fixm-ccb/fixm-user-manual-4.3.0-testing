@@ -12,7 +12,7 @@ Package `fx:Arrival`
 - **fx:Arrival:** actualTimeOfArrival, airportSlotIdentification, arrivalAerodrome, destinationAerodrome, destinationAerodromeAlternate, destinationAerodromePrevious, reclearanceInFlight, runwayDirection
 ---
 Package `fx:Capability`
-- **fx:Capability:** communication, navigation, standardCapabilities, surveillance, survival
+- **fx:Capability:** [communication], navigation, standardCapabilities, surveillance, survival
 - **fx:CommunicationCapabilities:** communicationCapabilityCode, datalinkCommunicationCapabilityCode, otherCommunicationCapabilities, otherDatalinkCapabilities, [selectiveCallingCode]
 - **fx:NavigationCapabilities:** navigationCapabilityCode, otherNavigationCapabilities, performanceBasedCode, requiredRunwayVisualRange
 - **fx:SurveillanceCapabilities:** otherSurveillanceCapabilities, surveillanceCapabilityCode
@@ -24,12 +24,11 @@ Package `fx:Cargo`
 - **fx:DangerousGoodsPackage:** allPackedInOne, compatibilityGroup, dangerousGoodsLimitation, dangerousGoodsQuantity, hazardClass, packingGroup, properShippingName, radioactiveMaterials, shipmentDimensions, subsidiaryHazardClass, unNumber
 ---
 Package `fx:Departure`
-- **fx:Departure:** actualTimeOfDeparture, airfileIndicator, airportSlotIdentification, [departureAerodrome], departureAerodromePrevious, [departurePoint], departurePointPrevious, [estimatedOffBlockTime], estimatedOffBlockTimePrevious, [estimatedRouteStartTime], estimatedRouteStartTimePrevious, runwayDirection, takeoffAlternateAerodrome
+- **fx:Departure:** actualTimeOfDeparture, [airfileIndicator], airportSlotIdentification, [departureAerodrome], departureAerodromePrevious, [departurePoint], departurePointPrevious, [estimatedOffBlockTime], estimatedOffBlockTimePrevious, [estimatedRouteStartTime], estimatedRouteStartTimePrevious, runwayDirection, takeoffAlternateAerodrome
 ---
 Package `fx:Emergency`
 - **fx:FlightEmergency:** actionTaken, emergencyDescription, lastContact, originator, otherInformation, phase
 - **fx:LastContactType:** lastContactFrequency, lastContactTime, lastContactUnit, position
-- **fx:LastPositionReport:** altitude, determinationMethod, groundSpeed, heading, horizontalAccuracy, position, timeAtPosition
 - **fx:RadioCommunicationFailure:** contact, radioFailureRemarks, remainingComCapability
 ---
 Package `fx:EnRoute`
@@ -47,8 +46,8 @@ Package `fx:RouteChanges`
 Package `fx:RouteTrajectory`
 - **fx:RouteTrajectoryGroup:** [climbProfile], climbSchedule, [descentProfile], descentSchedule, element, extension, routeInformation, takeoffMass
 - **fx:FlightRouteInformation:** [airacReference], cruisingLevel, cruisingSpeed, estimatedElapsedTime, routeText, totalEstimatedElapsedTime
-- **fx:PerformanceProfile:** profilePoint
-- **fx:RouteTrajectoryElement:** alongRouteDistance, constraint, elementStartPoint, extension, flightRulesChange, modified, modifiedRouteItemReference, plannedDelay, [point4D], routeChange, routeDesignatorToNextElement, routeTruncationIndicator, seqNum
+- **fx:PerformanceProfile:** [profilePoint]
+- **fx:RouteTrajectoryElement:** alongRouteDistance, [constraint], elementStartPoint, flightRulesChange, modified, modifiedRouteItemReference, plannedDelay, [point4D], [routeChange], routeDesignatorToNextElement, routeTruncationIndicator, [seqNum]
 - **fx:TrajectoryPoint4D:** altimeterSetting, level, metData, [pointProperty], position, predictedAirspeed, predictedGroundspeed, time, verticalRange
 - **fx:TrajectoryPointProperty:** description, propertyType, reference
 ---
@@ -71,7 +70,7 @@ Package `fb:RangesAndChoice`
 - [TimeRange], [TrueAirspeedRange], [VerticalRange]
 ---
 Package `fb:Types`
-- Count, DateTimeUtc, DateTimeUtcHighPrecision, DateUtc, Duration, HyperTextReference
+- [Count], [DateTimeUtc], [DateTimeUtcHighPrecision], DateUtc, Duration, [HyperTextReference]
 ---
 
 
@@ -80,8 +79,10 @@ Package `fb:Types`
 [capabilities]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Capability
 [aircraftCount]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft?id=aircraftcount
 
+[communication]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Capability?id=communication
 [selectiveCallingCode]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Capability?id=selectivecallingcode
 
+[airfileIndicator]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=airfileindicator
 [airportslotidentification]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=airportslotidentification
 [departureAerodrome]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=departureaerodrome-departurepoint
 [departurePoint]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=departureaerodrome-departurepoint
@@ -103,10 +104,13 @@ Package `fb:Types`
 
 [climbProfile]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=climbprofile-descentprofile
 [descentProfile]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=climbprofile-descentprofile
+[profilePoint]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=climbprofile-descentprofile
 [point4D]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=point4d
 [pointProperty]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=pointproperty
 [airacReference]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=airacreference
-
+[constraint]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Constraints?id=encoding-guidance-for-fxconstraints
+[routeChange]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteChanges?id=encoding-guidance-for-fxroutechanges
+[seqNum]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_Types?id=count-sequence-numbers
 
 [ContactInformation]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_Address?id=contactinformation
 [OnlineContact]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_Address?id=onlinecontact
@@ -132,3 +136,8 @@ Package `fb:Types`
 [TimeRange]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_RangesAndChoice?id=timerange
 [TrueAirspeedRange]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_RangesAndChoice?id=trueairspeedrange
 [VerticalRange]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_RangesAndChoice?id=verticalrange
+
+[Count]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_Types?id=count-sequence-numbers
+[DateTimeUtc]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_Types?id=datetimeutchighprecision
+[DateTimeUtcHighPrecision]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_Types?id=datetimeutchighprecision
+[HyperTextReference]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_AeronauticalReference?id=href
