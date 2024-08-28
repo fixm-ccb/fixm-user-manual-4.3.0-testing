@@ -4,7 +4,7 @@
 
 ---
 
-## VerticalDistance
+## `VerticalDistance`
 
 The term vertical distance collectively refers to altitudes, elevations,
 and heights, as defined by ICAO
