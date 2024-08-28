@@ -55,7 +55,21 @@ Package `fx:RouteTrajectory`
 Package `fx:RouteTrajectoryConstraint`
 - **fx:RouteTrajectoryConstraint:** departureOrArrivalIndicator, description, level, restrictionReference, speed, time
 ---
-
+Package `fb:Address`
+- ContactInformation, OnlineContact, PostalAddress, TelephoneContact
+---
+Package `fb:AeronauticalReference`
+- AerodromeReference, AirspaceDesignator, AtcUnitReference, DesignatedPoint, GeographicalPosition, Navaid, RelativePoint, RouteDesignator, RunwayDirectionDesignator
+---
+Package `fb:Measures`
+- Altitude, AltitudeWithSource, Angle, Bearing, FlightLevel, Frequency, GroundSpeed, Height, IndicatedAirspeed, Length, Mass, Pressure, Speed, Temperature, TrueAirspeed, VerticalDistance, VerticalRate, Volume, Weight, WindDirection, WindSpeed
+---
+Package `fb:Organization`
+- AircraftOperator, PersonOrOrganisation
+---
+Package `fb:Types`
+- Count, DateTimeUtc, DateTimeUtcHighPrecision, DateUtc, Duration, HyperTextReference
+--- 
 
 
 [aircraftAddress]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft?id=aircraftaddress
