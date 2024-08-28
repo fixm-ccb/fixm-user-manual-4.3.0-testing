@@ -43,7 +43,7 @@ references in FIXM.
 
 ---
 
-## hypertext references to AIXM
+## hypertext references
 
 If an AIXM 5.1 feature exists that corresponds to the element being
 referred to, an **optional** hypertext reference to that AIXM feature
@@ -452,8 +452,9 @@ Examples:
 
 For instance:
 
-***Localizer only approach on RWY06 at KFOD***
-
+<details>
+  <summary>Localizer only approach on RWY06 at KFOD</summary>
+    
 > SUSAP KFODK3FL06 AFOD 010FOD K3D 0V IF 18000 0 NS 854081209
 >
 > SUSAP KFODK3FL06 AFOD 020<mark>FF06</mark> K3PC0E TF + 02800 0 NS 854091209
@@ -480,10 +481,12 @@ For instance:
 >
 > SUSAP KFODK3FL06 L 050FOD K3D 0VY L DF + 02800 0 NS 854201209
 >
-> SUSAP KFODK3FL06 L 060FOD K3D 0VE R HM 1204T010 + 02800 0 NS 854211209
+> SUSAP KFODK3FL06 L 060FOD K3D 0VE R HM 1204T010 + 02800 0 NS 854211209    
 
+</details>
 
-***GPS approach on RWY29 at KFOT***
+<details>
+  <summary>GPS approach on RWY29 at KFOT</summary>
 
 > SUSAP KFOTK2FP29 ADINSE 010DINSEK2EA0E A IF 18000 P PS 857251211
 >
@@ -518,6 +521,8 @@ For instance:
 > SUSAP KFOTK2FP29 P 050FOT K2D 0VY R DF + 03000 P PS 857401211
 >
 > SUSAP KFOTK2FP29 P 060FOT K2D 0VE R HM 1610T010 + 03000 P PS 857411510
+    
+</details>
 
 
 - **In the European AIS Database (EAD).** 
@@ -1174,9 +1179,7 @@ Atlantic Ocean. **The examples shall never be used as operational data**.
 
 
 [References to Navaid]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_AeronauticalReference?id=navaid
+[Generic hypertext references]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_AeronauticalReference?id=hypertext-references
 
 [AIXM feature Identification and Reference document]: http://www.aixm.aero/sites/aixm.aero/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf
-
-[Generic hypertext references]: #generic-hypertext-references  
-
 [US FAA’s publication of Instrument Flight Procedures encodings in ARINC 424-18 format]: https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/cifp/download/
