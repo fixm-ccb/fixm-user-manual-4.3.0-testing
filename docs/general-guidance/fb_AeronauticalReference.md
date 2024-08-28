@@ -454,7 +454,7 @@ For instance:
 
 <details>
   <summary>Localizer only approach on RWY06 at KFOD</summary>
-    
+
 > SUSAP KFODK3FL06 AFOD 010FOD K3D 0V IF 18000 0 NS 854081209
 >
 > SUSAP KFODK3FL06 AFOD 020<mark>FF06</mark> K3PC0E TF + 02800 0 NS 854091209
@@ -482,7 +482,7 @@ For instance:
 > SUSAP KFODK3FL06 L 050FOD K3D 0VY L DF + 02800 0 NS 854201209
 >
 > SUSAP KFODK3FL06 L 060FOD K3D 0VE R HM 1204T010 + 02800 0 NS 854211209    
-
+    
 </details>
 
 <details>
