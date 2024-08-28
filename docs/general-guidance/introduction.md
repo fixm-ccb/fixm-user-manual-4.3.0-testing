@@ -8,7 +8,7 @@ Package `fx:Aircraft`
 - **fx:AircraftType:** [aircraftCount], icaoAircraftTypeDesignator, otherAircraftType
 ---
 Package `fx:Arrival`
-- **fx:Arrival:** actualTimeOfArrival, airportSlotIdentification, arrivalAerodrome, destinationAerodrome, destinationAerodromeAlternate, destinationAerodromePrevious, reclearanceInFlight, runwayDirection
+- **fx:Arrival:** actualTimeOfArrival, airportSlotIdentification, arrivalAerodrome, destinationAerodrome, destinationAerodromeAlternate, [destinationAerodromePrevious], reclearanceInFlight, runwayDirection
 ---
 Package `fx:Capability`
 - **fx:Capability:** [communication], navigation, standardCapabilities, surveillance, survival
@@ -23,7 +23,7 @@ Package `fx:Cargo`
 - **fx:DangerousGoodsPackage:** allPackedInOne, compatibilityGroup, dangerousGoodsLimitation, dangerousGoodsQuantity, hazardClass, packingGroup, properShippingName, radioactiveMaterials, shipmentDimensions, subsidiaryHazardClass, unNumber
 ---
 Package `fx:Departure`
-- **fx:Departure:** actualTimeOfDeparture, [airfileIndicator], airportSlotIdentification, [departureAerodrome], departureAerodromePrevious, [departurePoint], departurePointPrevious, [estimatedOffBlockTime], estimatedOffBlockTimePrevious, [estimatedRouteStartTime], estimatedRouteStartTimePrevious, runwayDirection, takeoffAlternateAerodrome
+- **fx:Departure:** actualTimeOfDeparture, [airfileIndicator], airportSlotIdentification, [departureAerodrome], [departureAerodromePrevious], [departurePoint], [departurePointPrevious], [estimatedOffBlockTime], [estimatedOffBlockTimePrevious], [estimatedRouteStartTime], [estimatedRouteStartTimePrevious], runwayDirection, takeoffAlternateAerodrome
 ---
 Package `fx:Emergency`
 - **fx:FlightEmergency:** actionTaken, emergencyDescription, lastContact, originator, otherInformation, phase
@@ -36,7 +36,7 @@ Package `fx:EnRoute`
 ---
 Package `fx:FlightData`
 - **fx:Flight:** [aircraft], [arrival], [dangerousGoods], [departure], [emergency], [enRoute], flightConstraint, [flightIdentification], flightPlanOriginator, flightPlanSubmitter, flightRulesCategory, flightType, operator, radioCommunicationFailure, remarks, routeTrajectoryGroup, specialHandling, supplementaryInformation
-- **fx:FlightIdentification:** [aircraftIdentification], aircraftIdentificationPrevious, [gufi], [gufiLegacy], iataFlightDesignator
+- **fx:FlightIdentification:** [aircraftIdentification], [aircraftIdentificationPrevious], [gufi], [gufiLegacy], iataFlightDesignator
 - **fx:RouteTrajectoryGroupContainer:** agreed, current, desired, negotiating
 ---
 Package `fx:RouteChanges`
@@ -78,15 +78,21 @@ Package `fb:Types`
 [capabilities]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Capability
 [aircraftCount]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft?id=aircraftcount
 
+[destinationAerodromePrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentification
+
 [communication]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Capability?id=communication
 [selectiveCallingCode]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Capability?id=selectivecallingcode
 
 [airfileIndicator]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=airfileindicator
 [airportslotidentification]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=airportslotidentification
 [departureAerodrome]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=departureaerodrome-departurepoint
+[departureAerodromePrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentification
 [departurePoint]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=departureaerodrome-departurepoint
+[departurePointPrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentification
 [estimatedOffBlockTime]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=estimatedoffblocktime-estimatedroutestarttime
+[estimatedOffBlockTimePrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentification
 [estimatedRouteStartTime]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=estimatedoffblocktime-estimatedroutestarttime
+[estimatedRouteStartTimePrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentification
 
 
 [aircraft]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft?id=encoding-guidance-for-fxaircraft
@@ -97,6 +103,7 @@ Package `fb:Types`
 [enRoute]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_EnRoute?id=encoding-guidance-for-fxenroute
 [flightIdentification]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=flightidentification
 [aircraftIdentification]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentification
+[aircraftIdentificationPrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentification
 [gufi]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=gufi
 [gufiLegacy]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=compatibility-with-fixm-core-420
 
