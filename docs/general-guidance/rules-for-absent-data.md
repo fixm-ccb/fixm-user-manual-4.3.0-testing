@@ -83,7 +83,7 @@ against the FIXM Core schema, because the uom for a Mass is missing.
 
 ```xml
 <fx:desired>
-  <fx:takeoffMass xsi:nil="true/">
+  <fx:takeoffMass xsi:nil="true"/>
 </fx:desired>
 ```
 

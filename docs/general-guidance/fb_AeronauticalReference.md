@@ -577,10 +577,10 @@ values have different constraints.
 
 #### Example
 
+
 ```xml
 <fx:point4D srsName="urn:ogc:def:crs:EPSG::4326">
     <fb:pos>50.03330555555556 8.570455555555556</fb:pos>
-<!– [...] –>
 ```
 
 On EXAMPLE 1 above, number `59.0` represents the latitude and number
@@ -1053,14 +1053,14 @@ as described in chapter [Generic hypertext references](#generic-hypertext-refere
 <td><p>
 
 ```xml
-<fx:region>KZLC</fx:region>
+<fb:controlSectorDesignator>KZLC</fb:controlSectorDesignator>
 ```
 
 </p></td>
 <td><p>
 
 ```xml
-<fx:region>AMSWELL</fx:region> 
+<fb:controlSectorDesignator>AMSWELL</fb:controlSectorDesignator>
 ```
 
 </p></td>
@@ -1072,14 +1072,14 @@ as described in chapter [Generic hypertext references](#generic-hypertext-refere
 <td>
 
 ```xml
-<fx:region href="urn:uuid:...">KZLC</fx:region>
+<fb:controlSectorDesignator href="urn:uuid:...">KZLC</fb:controlSectorDesignator>
 ```
 
 </td>
 <td><p>
 
 ```xml
-<fx:region href="urn:uuid:...">AMSWELL</fx:region>
+<fb:controlSectorDesignator href="urn:uuid:...">AMSWELL</fb:controlSectorDesignator>
 ```
 
 </p>
@@ -1136,7 +1136,7 @@ Atlantic Ocean. **The examples shall never be used as operational data**.
     <fb:bearing uom="DEG" zeroBearingType="MAGNETIC_NORTH">82.0</fb:bearing>
     <fb:distance uom="NM">2.0</fb:distance>
     <fb:referencePoint>
-        <fb:designator>BOR</fb:designator>         (*)
+        <fb:designator>BOR</fb:designator>         <!--(*)-->
     </fb:referencePoint>
 </fb:relativePoint>
 ```
@@ -1153,7 +1153,7 @@ Atlantic Ocean. **The examples shall never be used as operational data**.
         <fb:pos>51.36833333333333 -32.375</fb:pos>
     </fb:position>
     <fb:referencePoint>
-        <fb:designator>BOR</fb:designator>         (*)
+        <fb:designator>BOR</fb:designator>         <!--(*)-->
     </fb:referencePoint>
 </fb:relativePoint>
 ```

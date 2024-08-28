@@ -21,7 +21,7 @@ should be reset to reflect this, not maintained so that a gap is formed.
 ### Example
 
 ```xml
-<fx:filed>
+<fx:desired>
   <fx:element seqNum="0">
     <!-- […] -->
   </fx:element>
@@ -29,7 +29,7 @@ should be reset to reflect this, not maintained so that a gap is formed.
     <!-- […] -->
   </fx:element>
   <!-- […] -->
-</fx:filed>
+</fx:desired>
 ```
 
 ---
@@ -50,7 +50,7 @@ Examples:
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->	
 <fx:actualTimeOfArrival>
-  <fx:time>1969-07-20T20:18:00Z</time>
+  <fx:time>1969-07-20T20:18:00Z</fx:time>
 ```
 
 - for message timestamps, higher precision can be provided, as needed: `1969-07-20T20:18:00.458Z`
@@ -59,15 +59,4 @@ Examples:
 
 ---
 
-## Duration
-
-?> COMING SOON
-
----
-
-## UniversallyUniqueIdentifier
-
-?> COMING SOON
-
----
 
