@@ -8,7 +8,7 @@ Package `fx:Aircraft`
 - **fx:AircraftType:** [aircraftCount], icaoAircraftTypeDesignator, otherAircraftType
 ---
 Package `fx:Arrival`
-- **fx:Arrival:** actualTimeOfArrival, airportSlotIdentification, arrivalAerodrome, destinationAerodrome, destinationAerodromeAlternate, [destinationAerodromePrevious], reclearanceInFlight, runwayDirection
+- **fx:Arrival:** actualTimeOfArrival, [airportSlotIdentification], arrivalAerodrome, destinationAerodrome, destinationAerodromeAlternate, [destinationAerodromePrevious], reclearanceInFlight, runwayDirection
 ---
 Package `fx:Capability`
 - **fx:Capability:** [communication], navigation, standardCapabilities, surveillance, survival
