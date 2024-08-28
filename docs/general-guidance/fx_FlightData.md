@@ -42,15 +42,15 @@ Example:
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->	
 <fx:departure>
-	<fx:departureAerodrome>
-  	<fb:locationIndicator>KDFW</fb:locationIndicator>
-	</fx:departureAerodrome>
+  <fx:departureAerodrome>
+    <fb:locationIndicator>KDFW</fb:locationIndicator>
+  </fx:departureAerodrome>
   <fx:estimatedOffBlockTime>2023-01-13T15:21:30Z</fx:estimatedOffBlockTime>
   <fx:estimatedOffBlockTimePrevious>2023-01-13T15:18:00Z</fx:estimatedOffBlockTimePrevious>
 </fx:departure>
 <fx:flightIdentification>
-	<fx:aircraftIdentification>UFO1234</fx:aircraftIdentification>
-	<fx:aircraftIdentificationPrevious>UFO9876</fx:aircraftIdentificationPrevious>
+  <fx:aircraftIdentification>UFO1234</fx:aircraftIdentification>
+  <fx:aircraftIdentificationPrevious>UFO9876</fx:aircraftIdentificationPrevious>
 </fx:flightIdentification>
 ```
 
