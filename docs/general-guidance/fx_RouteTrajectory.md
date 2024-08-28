@@ -49,8 +49,8 @@ The FIXM Core class `RouteTrajectoryGroup` has two properties `climbProfile` and
             <fb:altitude uom="M">914.0</fb:altitude>
         </fx:level>
         <fx:time>P0DT0H1M59S</fx:time>
-    </fx:profilePoint seqNum="3">
-    <fx:profilePoint>
+    </fx:profilePoint>
+    <fx:profilePoint seqNum="3">
         <fx:distance uom="M">11726.0</fx:distance>
         <fx:level>
             <fb:altitude uom="M">1219.0</fb:altitude>
@@ -275,98 +275,99 @@ The FIXM Core class `RouteTrajectoryGroup` has two properties `climbProfile` and
 ![Image](.//media/example_descent_profile.png ':size=100%')
 
 ```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
 <fx:descentProfile>			
-	<fx:profilePoint>		
-		<fx:distance uom="M">236300.0</fx:distance>	
-		<fx:level>	
-			<fb:altitude uom="M">11887.0</fb:altitude>
-		</fx:level>	
-		<fx:time>P0DT0H0M0S</fx:time>	
-	</fx:profilePoint>		
-	<fx:profilePoint>		
-		<fx:distance uom="M">197590.0</fx:distance>	
-		<fx:level>	
-			<fb:altitude uom="M">10404.0</fb:altitude>
-		</fx:level>	
-		<fx:time>P0DT0H2M51S</fx:time>	
-	</fx:profilePoint>		
-	<fx:profilePoint>		
-		<fx:distance uom="M">166603.0</fx:distance>	
-		<fx:level>	
-			<fb:altitude uom="M">8691.0</fb:altitude>
-		</fx:level>	
-		<fx:time>P0DT0H5M20S</fx:time>	
-	</fx:profilePoint>		
-	<fx:profilePoint>		
-		<fx:distance uom="M">157342.0</fx:distance>	
-		<fx:level>	
-			<fb:altitude uom="M">8157.0</fb:altitude>
-		</fx:level>	
-		<fx:time>P0DT0H6M7S</fx:time>	
-	</fx:profilePoint>		
-	<fx:profilePoint>		
-		<fx:distance uom="M">135395.0</fx:distance>	
-		<fx:level>	
-			<fb:altitude uom="M">6889.0</fb:altitude>
-		</fx:level>	
-		<fx:time>P0DT0H8M3S</fx:time>	
-	</fx:profilePoint>		
-	<fx:profilePoint>		
-		<fx:distance uom="M">126136.0</fx:distance>	
-		<fx:level>	
-			<fb:altitude uom="M">6373.0</fb:altitude>
-		</fx:level>	
-		<fx:time>P0DT0H8M54S</fx:time>	
-	</fx:profilePoint>		
-	<fx:profilePoint>		
-		<fx:distance uom="M">103893.0</fx:distance>	
-		<fx:level>	
-			<fb:altitude uom="M">5179.0</fb:altitude>
-		</fx:level>	
-		<fx:time>P0DT0H11M2S</fx:time>	
-	</fx:profilePoint>		
-	<fx:profilePoint>		
-		<fx:distance uom="M">85404.0</fx:distance>	
-		<fx:level>	
-			<fb:altitude uom="M">4220.0</fb:altitude>
-		</fx:level>	
-		<fx:time>P0DT0H12M56S</fx:time>	
-	</fx:profilePoint>		
-	<fx:profilePoint>		
-		<fx:distance uom="M">66881.0</fx:distance>	
-		<fx:level>	
-			<fb:altitude uom="M">3223.0</fb:altitude>
-		</fx:level>	
-		<fx:time>P0DT0H14M55S</fx:time>	
-	</fx:profilePoint>		
-	<fx:profilePoint>		
-		<fx:distance uom="M">58009.0</fx:distance>	
-		<fx:level>	
-			<fb:altitude uom="M">2733.0</fb:altitude>
-		</fx:level>	
-		<fx:time>P0DT0H15M55S</fx:time>	
-	</fx:profilePoint>		
-	<fx:profilePoint>		
-		<fx:distance uom="M">36961.0</fx:distance>	
-		<fx:level>	
-			<fb:altitude uom="M">1355.0</fb:altitude>
-		</fx:level>	
-		<fx:time>P0DT0H18M24S</fx:time>	
-	</fx:profilePoint>		
-	<fx:profilePoint>		
-		<fx:distance uom="M">27814.0</fx:distance>	
-		<fx:level>	
-			<fb:altitude uom="M">1129.0</fb:altitude>
-		</fx:level>	
-		<fx:time>P0DT0H20M17S</fx:time>	
-	</fx:profilePoint>		
-	<fx:profilePoint>		
-		<fx:distance uom="M">0.0</fx:distance>	
-		<fx:level>	
-			<fb:altitude uom="M">441.0</fb:altitude>
-		</fx:level>	
-		<fx:time>P0DT0H25M58S</fx:time>	
-	</fx:profilePoint>		
+    <fx:profilePoint seqNum="0">		
+        <fx:distance uom="M">236300.0</fx:distance>	
+        <fx:level>	
+            <fb:altitude uom="M">11887.0</fb:altitude>
+        </fx:level>	
+        <fx:time>P0DT0H0M0S</fx:time>	
+    </fx:profilePoint>		
+    <fx:profilePoint seqNum="1">		
+        <fx:distance uom="M">197590.0</fx:distance>	
+        <fx:level>	
+            <fb:altitude uom="M">10404.0</fb:altitude>
+        </fx:level>	
+        <fx:time>P0DT0H2M51S</fx:time>	
+    </fx:profilePoint>
+    <fx:profilePoint seqNum="2">		
+        <fx:distance uom="M">166603.0</fx:distance>	
+        <fx:level>	
+            <fb:altitude uom="M">8691.0</fb:altitude>
+        </fx:level>	
+        <fx:time>P0DT0H5M20S</fx:time>	
+    </fx:profilePoint>		
+    <fx:profilePoint seqNum="3">		
+        <fx:distance uom="M">157342.0</fx:distance>	
+        <fx:level>	
+            <fb:altitude uom="M">8157.0</fb:altitude>
+        </fx:level>	
+        <fx:time>P0DT0H6M7S</fx:time>	
+    </fx:profilePoint>		
+    <fx:profilePoint seqNum="4">		
+        <fx:distance uom="M">135395.0</fx:distance>	
+        <fx:level>	
+            <fb:altitude uom="M">6889.0</fb:altitude>
+        </fx:level>	
+        <fx:time>P0DT0H8M3S</fx:time>	
+    </fx:profilePoint>		
+    <fx:profilePoint seqNum="5">		
+        <fx:distance uom="M">126136.0</fx:distance>	
+        <fx:level>	
+            <fb:altitude uom="M">6373.0</fb:altitude>
+        </fx:level>	
+        <fx:time>P0DT0H8M54S</fx:time>	
+    </fx:profilePoint>		
+    <fx:profilePoint seqNum="6">		
+        <fx:distance uom="M">103893.0</fx:distance>	
+        <fx:level>	
+            <fb:altitude uom="M">5179.0</fb:altitude>
+        </fx:level>	
+        <fx:time>P0DT0H11M2S</fx:time>	
+    </fx:profilePoint>		
+    <fx:profilePoint seqNum="7">		
+        <fx:distance uom="M">85404.0</fx:distance>	
+        <fx:level>	
+            <fb:altitude uom="M">4220.0</fb:altitude>
+        </fx:level>	
+        <fx:time>P0DT0H12M56S</fx:time>	
+    </fx:profilePoint>		
+    <fx:profilePoint seqNum="8">		
+        <fx:distance uom="M">66881.0</fx:distance>	
+        <fx:level>	
+            <fb:altitude uom="M">3223.0</fb:altitude>
+        </fx:level>	
+        <fx:time>P0DT0H14M55S</fx:time>	
+    </fx:profilePoint>		
+    <fx:profilePoint seqNum="9">		
+        <fx:distance uom="M">58009.0</fx:distance>	
+        <fx:level>	
+            <fb:altitude uom="M">2733.0</fb:altitude>
+        </fx:level>	
+        <fx:time>P0DT0H15M55S</fx:time>
+    </fx:profilePoint>		
+    <fx:profilePoint seqNum="10">		
+        <fx:distance uom="M">36961.0</fx:distance>	
+        <fx:level>	
+            <fb:altitude uom="M">1355.0</fb:altitude>
+        </fx:level>	
+        <fx:time>P0DT0H18M24S</fx:time>	
+    </fx:profilePoint>		
+    <fx:profilePoint seqNum="11">		
+        <fx:distance uom="M">27814.0</fx:distance>
+        <fx:level>	
+            <fb:altitude uom="M">1129.0</fb:altitude>
+        </fx:level>	
+        <fx:time>P0DT0H20M17S</fx:time>	
+    </fx:profilePoint>		
+    <fx:profilePoint seqNum="12">		
+        <fx:distance uom="M">0.0</fx:distance>	
+        <fx:level>	
+            <fb:altitude uom="M">441.0</fb:altitude>
+        </fx:level>	
+        <fx:time>P0DT0H25M58S</fx:time>	
+    </fx:profilePoint>		
 </fx:descentProfile>		
 ```
 
