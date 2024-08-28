@@ -43,13 +43,13 @@ references in FIXM.
 
 ---
 
-## href
+## hypertext references to AIXM
 
 If an AIXM 5.1 feature exists that corresponds to the element being
 referred to, an **optional** hypertext reference to that AIXM feature
 may be provided. This reference shall be expressed in accordance with
-chapter 3.4.1 (*Abstract references using UUID*) of the [AIXM feature
-Identification and Reference](http://www.aixm.aero/sites/aixm.aero/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf) document developed by the AIXM community.
+chapter 3.4.1 (*Abstract references using UUID*) of the [AIXM feature Identification and Reference document]
+developed by the AIXM community.
 
 This hypertext reference may be used - or ignored - by the receiving
 system depending on its capabilities.
@@ -67,7 +67,7 @@ within the FIXM (Base) namespace<sup><a href="#general-guidance/references-to-pu
 
 ---
 
-## AerodromeReference
+## `AerodromeReference`
 
 #### OPTION 1 - Minimum Reference
 
@@ -82,7 +82,7 @@ namely the aerodrome reference point or relative reference point.
 *(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
 
 Option 2 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references](#generic-hypertext-references).
+as described in chapter [Generic hypertext references].
 
 #####  Examples (NOT for OPERATIONAL USE)
 
@@ -180,7 +180,82 @@ is at the discretion of the consuming system / service.
 
 ---
 
-## AtcUnitReference
+## `AirspaceDesignator`
+
+#### OPTION 1 - Minimum Reference
+
+The minimum airspace reference shall consist of the airspace location
+indicator, if provided by ICAO Doc 7910 <sup>[[I-07]](#references)</sup>. If the airspace has no
+ICAO Doc 7910 location indicator, the minimum airspace reference shall
+consist of the coded designator of the airspace as published in the AIP.
+
+#### OPTION 2 - Minimum Reference with Supplementary AIXM Pointer
+
+*(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
+
+Option 2 corresponds to Option 1 with an additional hypertext reference
+as described in chapter [Generic hypertext references].
+
+#### Examples (NOT for OPERATIONAL USE)
+
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Examples of Airspace references in FIXM</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><strong>CASE 1 – The Airspace has an ICAO Doc 7910 location indicator</strong></td>
+<td><strong>CASE 2 – The Airspace has no ICAO Doc. 7910 location indicator</strong></td>
+</tr>
+<tr class="even">
+<td><p><strong>OPTION 1</strong></p>
+<p>designator</p></td>
+<td><p>
+
+```xml
+<fb:controlSectorDesignator>KZLC</fb:controlSectorDesignator>
+```
+
+</p></td>
+<td><p>
+
+```xml
+<fb:controlSectorDesignator>AMSWELL</fb:controlSectorDesignator>
+```
+
+</p></td>
+</tr>
+<tr class="odd">
+<td><p><strong>OPTION 2</strong></p>
+<p>designator<br />
++href</p></td>
+<td>
+
+```xml
+<fb:controlSectorDesignator href="urn:uuid:...">KZLC</fb:controlSectorDesignator>
+```
+
+</td>
+<td><p>
+
+```xml
+<fb:controlSectorDesignator href="urn:uuid:...">AMSWELL</fb:controlSectorDesignator>
+```
+
+</p>
+<p><em>(from DONLON dataset)</em></p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+## `AtcUnitReference`
 
 #### OPTION 1 - Minimum Reference
 
@@ -195,7 +270,7 @@ the AIP.
 *(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
 
 Option 2 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references](#generic-hypertext-references).
+as described in chapter [Generic hypertext references].
 
 #### Examples (NOT for OPERATIONAL USE)
 
@@ -264,7 +339,7 @@ as described in chapter [Generic hypertext references](#generic-hypertext-refere
 
 ---
 
-## DesignatedPoint
+## `DesignatedPoint`
 
 #### OPTION 1 - Minimum Reference
 
@@ -316,7 +391,7 @@ duplicates/triplicates/…
 *(OPTION 3 = OPTION 1 + supplementary hypertext reference)*
 
 Option 3 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references](#generic-hypertext-references).
+as described in chapter [Generic hypertext references].
 
 ```xml
 <fb:designatedPoint href="urn:uuid:81e47548-9f00-4970-b641-8ff8f99098a5">
@@ -324,7 +399,7 @@ as described in chapter [Generic hypertext references](#generic-hypertext-refere
 </fb:designatedPoint>
 ```
 
-Hypertext reference to be provided in accordance with the <a href="http://www.aixm.aero/sites/aixm.aero/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf"><em>AIXM feature Identification and Reference document</em></a>, chapter 3.4.1.
+Hypertext reference to be provided in accordance with the [AIXM feature Identification and Reference document], chapter 3.4.1.
 
 #### OPTION 4 - Complete Reference
 
@@ -373,7 +448,7 @@ Examples:
 >
 >    Fix Name:   AB180013 AB 180.3 degrees 12.8
 
-- **In the [US FAA’s publication of Instrument Flight Procedures encodings in ARINC 424-18 format](https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/cifp/download/).**
+- **In the [US FAA’s publication of Instrument Flight Procedures encodings in ARINC 424-18 format]**
 
 For instance:
 
@@ -507,7 +582,7 @@ to these cases. The following table quotes a few random examples.
 
 ---
 
-## GeographicalPosition
+## `GeographicalPosition`
 
 FIXM captures the concept of Geographical Position as defined by ICAO
 Annex 15.
@@ -613,15 +688,14 @@ geospatial data. The reasons for not adopting GML are the following:
     technologies have been identified as *incompatible* with the GML
     usage.
 
-[AeronauticalReference.xsd]: https://www.fixm.aero/releases/FIXM-4.3.0/schemas/core/base/AeronauticalReference.xsd
-[GeographicalPositionType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_GeographicalPositionType.html
+
 
 ### Notes
 [1]: FIXM does not use GML but mimics it for geographic positions. GML encodes geographic locations as sequences of values since it employs the same construct to represent polygons.
 
 --- 
 
-## Navaid
+## `Navaid`
 
 #### OPTION 1 - Minimum Reference
 
@@ -657,7 +731,7 @@ and navaid service type) in case of duplicates/triplicates/…
 *(OPTION 3 = OPTION 1 + supplementary hypertext reference)*
 
 Option 3 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references](#generic-hypertext-references).
+as described in chapter [Generic hypertext references].
 
 #### OPTION 4 - Complete Reference
 
@@ -730,7 +804,7 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 ```
 
 </p></td>
-<td>Hypertext reference to be provided in accordance with the <a href="http://www.aixm.aero/sites/aixm.aero/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf"><em>AIXM feature Identification and Reference document</em></a>, chapter 3.4.1.</td>
+<td>Hypertext reference to be provided in accordance with the [AIXM feature Identification and Reference document], chapter 3.4.1.</td>
 </tr>
 <tr class="even">
 <td><p><strong>OPTION 4</strong></p>
@@ -758,7 +832,7 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 
 
 
-## RunwayDirectionDesignator
+## `RunwayDirectionDesignator`
 
 #### OPTION 1 - Minimum Reference
 
@@ -770,7 +844,7 @@ Direction designator.
 *(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
 
 Option 2 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references](#generic-hypertext-references).
+as described in chapter [Generic hypertext references].
 
 #### Examples (NOT for OPERATIONAL USE)
 
@@ -813,12 +887,12 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 ```
 
 </td>
-<td>Hypertext reference to be provided in accordance with the <a href="http://www.aixm.aero/sites/aixm.aero/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf"><em>AIXM feature Identification and Reference document</em></a>, chapter 3.4.1.</td>
+<td>Hypertext reference to be provided in accordance with the [AIXM feature Identification and Reference document], chapter 3.4.1.</td>
 </tr>
 </tbody>
 </table>
 
-## RouteDesignator
+## `RouteDesignator`
 
 #### OPTION 1 - Minimum Reference
 
@@ -834,7 +908,7 @@ unambiguous identification of the ATS Route being referred to.
 *(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
 
 Option 2 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references](#generic-hypertext-references).
+as described in chapter [Generic hypertext references].
 
 #### Examples (NOT for OPERATIONAL USE)
 
@@ -877,12 +951,12 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 ```
 
 </td>
-<td>Hypertext reference to be provided in accordance with the <a href="http://www.aixm.aero/sites/aixm.aero/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf"><em>AIXM feature Identification and Reference document</em></a>, chapter 3.4.1.</td>
+<td>Hypertext reference to be provided in accordance with the [AIXM feature Identification and Reference document], chapter 3.4.1.</td>
 </tr>
 </tbody>
 </table>
 
-### SidStarReference
+### `SidStarReference`
 
 #### OPTION 1 - Minimum Reference
 
@@ -894,7 +968,7 @@ designator as published in the AIP.
 *(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
 
 Option 2 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references](#generic-hypertext-references).
+as described in chapter [Generic hypertext references].
 
 #### Examples (NOT for OPERATIONAL USE)
 
@@ -937,7 +1011,7 @@ that is published in the French AIPs.
 ```
 
 </p></td>
-<td>Hypertext reference to be provided in accordance with the <a href="http://www.aixm.aero/sites/aixm.aero/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf"><em>AIXM feature Identification and Reference document</em></a>, chapter 3.4.1.</td>
+<td>Hypertext reference to be provided in accordance with the [AIXM feature Identification and Reference document] [AIXM feature Identification and Reference document], chapter 3.4.1.</td>
 </tr>
 </tbody>
 </table>
@@ -995,7 +1069,7 @@ that is published in the Argentinian AIPs.
 ```
 
 </p></td>
-<td>Hypertext reference to be provided in accordance with the <a href="http://www.aixm.aero/sites/aixm.aero/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf"><em>AIXM feature Identification and Reference document</em></a>, chapter 3.4.1.</td>
+<td>Hypertext reference to be provided in accordance with the [AIXM feature Identification and Reference document], chapter 3.4.1.</td>
 </tr>
 </tbody>
 </table>
@@ -1015,99 +1089,12 @@ specification, chapter 7.4. Example:
 ```
 
 
-## AirspaceDesignator
-
-#### OPTION 1 - Minimum Reference
-
-The minimum airspace reference shall consist of the airspace location
-indicator, if provided by ICAO Doc 7910 <sup>[[I-07]](#references)</sup>. If the airspace has no
-ICAO Doc 7910 location indicator, the minimum airspace reference shall
-consist of the coded designator of the airspace as published in the AIP.
-
-#### OPTION 2 - Minimum Reference with Supplementary AIXM Pointer
-
-*(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
-
-Option 2 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references](#generic-hypertext-references).
-
-#### Examples (NOT for OPERATIONAL USE)
-
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th><strong>Examples of Airspace references in FIXM</strong></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td><strong>CASE 1 – The Airspace has an ICAO Doc 7910 location indicator</strong></td>
-<td><strong>CASE 2 – The Airspace has no ICAO Doc. 7910 location indicator</strong></td>
-</tr>
-<tr class="even">
-<td><p><strong>OPTION 1</strong></p>
-<p>designator</p></td>
-<td><p>
-
-```xml
-<fb:controlSectorDesignator>KZLC</fb:controlSectorDesignator>
-```
-
-</p></td>
-<td><p>
-
-```xml
-<fb:controlSectorDesignator>AMSWELL</fb:controlSectorDesignator>
-```
-
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>OPTION 2</strong></p>
-<p>designator<br />
-+href</p></td>
-<td>
-
-```xml
-<fb:controlSectorDesignator href="urn:uuid:...">KZLC</fb:controlSectorDesignator>
-```
-
-</td>
-<td><p>
-
-```xml
-<fb:controlSectorDesignator href="urn:uuid:...">AMSWELL</fb:controlSectorDesignator>
-```
-
-</p>
-<p><em>(from DONLON dataset)</em></p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-[AeronauticalReference.xsd]: https://www.fixm.aero/releases/FIXM-4.3.0/schemas/core/base/AeronauticalReference.xsd
-[DesignatedPointType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_DesignatedPointType.html
-[NavaidType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_NavaidType.html
-[AerodromeReferenceType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_AerodromeReferenceType.html
-[RunwayDirectionDesignatorType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_RunwayDirectionDesignatorType.html
-[RouteDesignatorType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_RouteDesignatorType.html
-[SidStarReferenceType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_SidStarReferenceType.html
-[AirspaceDesignatorType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_AirspaceDesignatorType.html
-[AtcUnitReferenceType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_AtcUnitReferenceType.html
-
 ### Notes
 
 [1]: This design is intentional. It saves FIXM from being tied to an external standard for such a small use case and also aims to avoid potential issues or difficulties when marshalling / unmarshalling the standard xlink:href attribute.
 
 
-## RelativePoint
+## `RelativePoint`
 
 A relative point is a bearing and distance from a reference navaid.
 Encoding a relative point in FIXM requires the ‘bearing’, ‘distance’ and
@@ -1141,7 +1128,7 @@ Atlantic Ocean. **The examples shall never be used as operational data**.
 </fb:relativePoint>
 ```
 
-(*) See chapter [References to Navaid](general-guidance/references-to-published-aeronautical-information?id=references-to-navaid). All four options can be used for encoding this reference. OPTION 1 is used in this example.
+(*) See chapter [References to Navaid]. All four options can be used for encoding this reference. OPTION 1 is used in this example.
 
 #### Example of relative point in FIXM with position information
 
@@ -1158,11 +1145,8 @@ Atlantic Ocean. **The examples shall never be used as operational data**.
 </fb:relativePoint>
 ```
 
-[AeronauticalReference.xsd]: https://www.fixm.aero/releases/FIXM-4.3.0/schemas/core/base/AeronauticalReference.xsd
-[RelativePointType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_RelativePointType.html
 
-
-## -references
+## *references*
 
 ### ICAO References
 
@@ -1173,3 +1157,26 @@ Atlantic Ocean. **The examples shall never be used as operational data**.
 [O-01]: [Donlon AIP data Set](https://github.com/aixm/donlon) - A fictitious set of digital AIS data sets complying with the ICAO Annex 15, 16th edition and the new PANS-AIM provisions, in AIXM 5.1.1 format.
 [O-02]: [W3C XML Linking Language (xlink) v1.1](https://www.w3.org/TR/xlink11/)
 [O-03]: [OGC 12-028r1](https://portal.opengeospatial.org/files/?artifact_id=62061) - Use of Geography Markup Language (GML) for Aviation Data
+
+
+<!-- Other Links -->
+[AerodromeReferenceType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_AerodromeReferenceType.html
+[AeronauticalReference.xsd]: https://www.fixm.aero/releases/FIXM-4.3.0/schemas/core/base/AeronauticalReference.xsd
+[AirspaceDesignatorType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_AirspaceDesignatorType.html
+[AtcUnitReferenceType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_AtcUnitReferenceType.html
+[DesignatedPointType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_DesignatedPointType.html
+[GeographicalPositionType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_GeographicalPositionType.html
+[NavaidType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_NavaidType.html
+[RunwayDirectionDesignatorType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_RunwayDirectionDesignatorType.html
+[RouteDesignatorType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_RouteDesignatorType.html
+[SidStarReferenceType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_SidStarReferenceType.html
+[RelativePointType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_RelativePointType.html
+
+
+[References to Navaid]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_AeronauticalReference?id=navaid
+
+[AIXM feature Identification and Reference document]: http://www.aixm.aero/sites/aixm.aero/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf
+
+[Generic hypertext references]: #generic-hypertext-references  
+
+[US FAA’s publication of Instrument Flight Procedures encodings in ARINC 424-18 format]: https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/cifp/download/

@@ -6,9 +6,9 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
-## flightIdentification
+## `flightIdentification`
 
-### aircraftIdentification
+### `aircraftIdentification`
 
 The `Aircraft Identification`, abbreviated ACID (or ARCID in the [ADEXP specification](https://www.eurocontrol.int/publication/eurocontrol-specification-ats-data-exchange-presentation-adexp)), is defined by ICAO as *A group of letters, figures or a combination thereof which is either identical to, or the coded equivalent of, the aircraft call sign to be used in air-ground communications, and which is used to identify the aircraft in ground-ground air traffic services communications.* 
 The `Aircraft Identification` is NOT an identifier of an aircraft. It is an identifier of a flight, i.e. the operation of an aircraft from A to B.
@@ -27,7 +27,7 @@ Encoding of ACID in `FIXM Core 4.3.0`
     <fx:aircraftIdentification>AFR447</fx:aircraftIdentification>
 ```
 
-### aircraftIdentificationPrevious
+### `aircraftIdentificationPrevious`
 
 The process of associating FF-ICE Messages with flights, although faciliated by the gufi, can still involve several key fields, 
 including the aircraft identification, the departure airport, the departure time and the destination aerodrome. These key fields 
@@ -54,7 +54,7 @@ Example:
 </fx:flightIdentification>
 ```
 
-### gufi
+### `gufi`
 
 > The Globally Unique Flight Identifier (GUFI) is intended to provide a unique reference to a specific flight, civil or military.
 > Its purpose is to assist in associating a message to the correct flight and to help in distinguishing between similar flights.

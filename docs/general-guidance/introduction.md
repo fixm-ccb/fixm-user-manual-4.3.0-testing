@@ -82,7 +82,7 @@ Package [`fb:Types`]
 
 <!-- Links for fx:Arrival -->
 [`fx:Arrival`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Arrival
-[destinationAerodromePrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentification
+[destinationAerodromePrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentificationprevious
 
 <!-- Links for fx:Capability -->
 [`fx:Capability`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Capability
@@ -97,13 +97,13 @@ Package [`fb:Types`]
 [airfileIndicator]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=airfileindicator
 [airportslotidentification]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=airportslotidentification
 [departureAerodrome]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=departureaerodrome-departurepoint
-[departureAerodromePrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentification
+[departureAerodromePrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentificationprevious
 [departurePoint]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=departureaerodrome-departurepoint
-[departurePointPrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentification
+[departurePointPrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentificationprevious
 [estimatedOffBlockTime]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=estimatedoffblocktime-estimatedroutestarttime
-[estimatedOffBlockTimePrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentification
+[estimatedOffBlockTimePrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentificationprevious
 [estimatedRouteStartTime]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=estimatedoffblocktime-estimatedroutestarttime
-[estimatedRouteStartTimePrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentification
+[estimatedRouteStartTimePrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentificationprevious
 
 <!-- Links for fx:Emergency -->
 [`fx:Emergency`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Emergency
@@ -121,7 +121,7 @@ Package [`fb:Types`]
 [enRoute]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_EnRoute?id=encoding-guidance-for-fxenroute
 [flightIdentification]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=flightidentification
 [aircraftIdentification]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentification
-[aircraftIdentificationPrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentification
+[aircraftIdentificationPrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentificationprevious
 [gufi]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=gufi
 [gufiLegacy]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=compatibility-with-fixm-core-420
 

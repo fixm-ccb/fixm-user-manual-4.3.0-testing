@@ -4,7 +4,7 @@
 
 ---
 
-## Count (Sequence Numbers)
+## `Count` (Sequence Numbers)
 
 The FIXM Logical Model specifies several ordered repeating sequences.
 The FIXM XML schemas add an optional sequence number attribute to the
@@ -34,7 +34,7 @@ should be reset to reflect this, not maintained so that a gap is formed.
 
 ---
 
-## DateTimeUTC(HighPrecision)
+## `DateTimeUTC` / `DateTimeUTCHighPrecision`
 
 FIXM requires times to be expressed in UTC. A constraint is therefore placed on the FIXM classes used to represent date/time values that imposes the use of the trailing character `Z` to indicate UTC, in line with the W3C XSD specification.
 

@@ -4,43 +4,7 @@
 
 ---
 
-## Angle
-
-?> COMING SOON
-
----
-
-## Frequency
-
-?> COMING SOON
-
----
-
-## Length & Distance
-
-?> COMING SOON
-
----
-
-## Mass & Weight
-
-?> COMING SOON
-
----
-
-## Speed
-
-?> COMING SOON
-
----
-
-## Temperature
-
-?> COMING SOON
-
----
-
-## VerticalDistance
+## `VerticalDistance`
 
 The term vertical distance collectively refers to altitudes, elevations,
 and heights, as defined by ICAO
@@ -100,6 +64,3 @@ always represented with integer values.
 
 ---
 
-## Volume
-
-?> COMING SOON
