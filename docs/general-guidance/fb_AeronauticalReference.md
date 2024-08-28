@@ -180,6 +180,81 @@ is at the discretion of the consuming system / service.
 
 ---
 
+## `AirspaceDesignator`
+
+#### OPTION 1 - Minimum Reference
+
+The minimum airspace reference shall consist of the airspace location
+indicator, if provided by ICAO Doc 7910 <sup>[[I-07]](#references)</sup>. If the airspace has no
+ICAO Doc 7910 location indicator, the minimum airspace reference shall
+consist of the coded designator of the airspace as published in the AIP.
+
+#### OPTION 2 - Minimum Reference with Supplementary AIXM Pointer
+
+*(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
+
+Option 2 corresponds to Option 1 with an additional hypertext reference
+as described in chapter [Generic hypertext references].
+
+#### Examples (NOT for OPERATIONAL USE)
+
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Examples of Airspace references in FIXM</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><strong>CASE 1 – The Airspace has an ICAO Doc 7910 location indicator</strong></td>
+<td><strong>CASE 2 – The Airspace has no ICAO Doc. 7910 location indicator</strong></td>
+</tr>
+<tr class="even">
+<td><p><strong>OPTION 1</strong></p>
+<p>designator</p></td>
+<td><p>
+
+```xml
+<fb:controlSectorDesignator>KZLC</fb:controlSectorDesignator>
+```
+
+</p></td>
+<td><p>
+
+```xml
+<fb:controlSectorDesignator>AMSWELL</fb:controlSectorDesignator>
+```
+
+</p></td>
+</tr>
+<tr class="odd">
+<td><p><strong>OPTION 2</strong></p>
+<p>designator<br />
++href</p></td>
+<td>
+
+```xml
+<fb:controlSectorDesignator href="urn:uuid:...">KZLC</fb:controlSectorDesignator>
+```
+
+</td>
+<td><p>
+
+```xml
+<fb:controlSectorDesignator href="urn:uuid:...">AMSWELL</fb:controlSectorDesignator>
+```
+
+</p>
+<p><em>(from DONLON dataset)</em></p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
 ## `AtcUnitReference`
 
 #### OPTION 1 - Minimum Reference
@@ -258,81 +333,6 @@ as described in chapter [Generic hypertext references].
 ```
 
 </p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-## `AirspaceDesignator`
-
-#### OPTION 1 - Minimum Reference
-
-The minimum airspace reference shall consist of the airspace location
-indicator, if provided by ICAO Doc 7910 <sup>[[I-07]](#references)</sup>. If the airspace has no
-ICAO Doc 7910 location indicator, the minimum airspace reference shall
-consist of the coded designator of the airspace as published in the AIP.
-
-#### OPTION 2 - Minimum Reference with Supplementary AIXM Pointer
-
-*(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
-
-Option 2 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references].
-
-#### Examples (NOT for OPERATIONAL USE)
-
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th><strong>Examples of Airspace references in FIXM</strong></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td><strong>CASE 1 – The Airspace has an ICAO Doc 7910 location indicator</strong></td>
-<td><strong>CASE 2 – The Airspace has no ICAO Doc. 7910 location indicator</strong></td>
-</tr>
-<tr class="even">
-<td><p><strong>OPTION 1</strong></p>
-<p>designator</p></td>
-<td><p>
-
-```xml
-<fb:controlSectorDesignator>KZLC</fb:controlSectorDesignator>
-```
-
-</p></td>
-<td><p>
-
-```xml
-<fb:controlSectorDesignator>AMSWELL</fb:controlSectorDesignator>
-```
-
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>OPTION 2</strong></p>
-<p>designator<br />
-+href</p></td>
-<td>
-
-```xml
-<fb:controlSectorDesignator href="urn:uuid:...">KZLC</fb:controlSectorDesignator>
-```
-
-</td>
-<td><p>
-
-```xml
-<fb:controlSectorDesignator href="urn:uuid:...">AMSWELL</fb:controlSectorDesignator>
-```
-
-</p>
-<p><em>(from DONLON dataset)</em></p></td>
 </tr>
 </tbody>
 </table>
