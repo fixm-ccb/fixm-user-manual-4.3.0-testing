@@ -1173,10 +1173,10 @@ Atlantic Ocean. **The examples shall never be used as operational data**.
 [RelativePointType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_RelativePointType.html
 
 
-[References to Navaid]: general-guidance/references-to-published-aeronautical-information?id=references-to-navaid
+[References to Navaid]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_AeronauticalReference?id=navaid
 
 [AIXM feature Identification and Reference document]: http://www.aixm.aero/sites/aixm.aero/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf
 
-[Generic hypertext references]: #generic-hypertext-references
+[Generic hypertext references]: #generic-hypertext-references  
 
 [US FAA’s publication of Instrument Flight Procedures encodings in ARINC 424-18 format]: https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/cifp/download/
