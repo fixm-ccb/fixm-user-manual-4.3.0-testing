@@ -6,7 +6,7 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
-## airportSlotIdentification
+## `airportSlotIdentification`
 
 Airport slots are being used to balance demand against available airport capacity at airports where the
 demand exceeds this capacity. The process of allocating airport slots at
@@ -43,13 +43,13 @@ Identification of a departure airport slot allocated in Europe (from [EUROCONTRO
 
 ---
 
-## airfileIndicator
+## `airfileIndicator`
 
 See below - chapter departureAerodrome / departurePoint.
 
 ---
 
-## departureAerodrome / departurePoint
+## `departureAerodrome` / `departurePoint`
 
 There are three use cases associated with departure points that can be represented in FIXM:
  
@@ -119,7 +119,7 @@ Airfile flights will represent the route start point in `departurePoint`, and wi
 
 ---
 
-## estimatedOffBlockTime / estimatedRouteStartTime
+## `estimatedOffBlockTime` / `estimatedRouteStartTime`
 
 See above - chapter departureAerodrome / departurePoint.
 
