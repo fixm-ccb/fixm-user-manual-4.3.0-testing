@@ -536,7 +536,10 @@ A query on the EAD helped identify the following:
 Most of the designated points with 2, 3 or 4-letter designators
 actually correspond to designated points formed after the position of
 a navaid or an aerodrome. However, some occurrences cannot be related
-to these cases. The following table quotes a few random examples.
+to these cases. 
+
+<details>
+  <summary>The following table quotes a few random examples.</summary>
 
 | **Designator**        | **Lat**      | **Long**      | **Type** |
 |-----------------------|--------------|---------------|----------|
@@ -584,6 +587,8 @@ to these cases. The following table quotes a few random examples.
 | FF16                  | 513503.7055N | 1124320.1363W | ADHP     |
 | ECHO                  | 504818N      | 0051950E      | ADHP     |
 | ECHO                  | 482129.75N   | 0703422.93W   | OTHER    |
+    
+</details>
 
 ---
 

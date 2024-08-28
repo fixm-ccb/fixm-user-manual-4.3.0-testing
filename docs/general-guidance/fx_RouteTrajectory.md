@@ -26,6 +26,9 @@ The FIXM Core class `RouteTrajectoryGroup` has two properties `climbProfile` and
 
 ![Image](.//media/example_climb_profile.png ':size=100%')
 
+<details>
+  <summary>XML example</summary>
+
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
 <fx:climbProfile>
@@ -269,10 +272,16 @@ The FIXM Core class `RouteTrajectoryGroup` has two properties `climbProfile` and
     </fx:profilePoint>
 </fx:climbProfile>
 ```
+    
+</details>
+
 
 ### Example of Descent Profile
 
 ![Image](.//media/example_descent_profile.png ':size=100%')
+
+<details>
+  <summary>XML example</summary>
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
@@ -370,6 +379,8 @@ The FIXM Core class `RouteTrajectoryGroup` has two properties `climbProfile` and
     </fx:profilePoint>		
 </fx:descentProfile>		
 ```
+    
+</details>
 
 ---
 
