@@ -43,7 +43,7 @@ references in FIXM.
 
 ---
 
-## href
+## hypertext references to AIXM
 
 If an AIXM 5.1 feature exists that corresponds to the element being
 referred to, an **optional** hypertext reference to that AIXM feature
