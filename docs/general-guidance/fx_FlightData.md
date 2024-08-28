@@ -101,7 +101,6 @@ The creation timestamp is expressed as a `DateTimeUTC`. For more guidance, see [
     <fx:gufi codeSpace="urn:uuid" creationTime="2022-12-01T12:18:36Z" namespaceDomain="OPERATING_AGENCY_DESIGNATOR" namespaceIdentifier="AIB">dd056de9-0ba9-4d55-82cf-7b976b0b6d29</fx:gufi>
 ```
 
----
 
 - Example of GUFI encoding whereby the originator of the GUFI is an ATM unit that has been allocated a 4-letter location indicator listed in ICAO Doc 7910 <sup>[[I-07]](#references)</sup>.
 
@@ -112,7 +111,6 @@ The creation timestamp is expressed as a `DateTimeUTC`. For more guidance, see [
     <fx:gufi codeSpace="urn:uuid" creationTime="2022-12-01T12:18:36Z" namespaceDomain="LOCATION_INDICATOR" namespaceIdentifier="KZDC">dd056de9-0ba9-4d55-82cf-7b976b0b6d29</fx:gufi>
 ```
 
----
 
 - Example of GUFI encoding whereby the originator of the GUFI is an organisation identified by its registered, specific internet Fully Qualified Domain Name.
 
@@ -123,7 +121,6 @@ The creation timestamp is expressed as a `DateTimeUTC`. For more guidance, see [
     <fx:gufi codeSpace="urn:uuid" creationTime="2022-12-01T12:18:36Z" namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME" namespaceIdentifier="example.com">dd056de9-0ba9-4d55-82cf-7b976b0b6d29</fx:gufi>
 ```
 
----
 
 #### Compatibility with FIXM Core 4.2.0
 
