@@ -26,7 +26,7 @@ end
 
 subgraph Technical Guidance
 FIXM_COMPONENTS[FIXM<br>Components]
-GENERAL_GUIDANCE[General<br>Guidance]
+FIXM_ENCODING_GUIDANCE[Encoding<br>Guidance]
 FIXM_FOR_FFICE[Using FIXM<br>for FF-ICE]
 FIXM_FOR_OTHER_USE[Using FIXM<br>for other use cases]
 HOW_TO[How to...<br>sections]
@@ -39,7 +39,7 @@ FIXM -.  details method<br>for versioning .- VERSIONING
 
 
 FIXM_COMPONENTS-. provides explanations<br>about the components of .- FIXM
-GENERAL_GUIDANCE-. describes general<br>encoding rules for .- FIXM
+FIXM_ENCODING_GUIDANCE-. describes general<br>encoding rules for .- FIXM
 FIXM_FOR_FFICE-. provides guidance<br>in support of<br>FF-ICE implementation<br>using .- FIXM
 FIXM_FOR_OTHER_USE-. provides guidance<br>for non-ICAO use cases<br>using.- FIXM
 HOW_TO-. provides guidance for<br>creating 3rd party's<br>Applications/Extensions of .- FIXM
@@ -51,8 +51,8 @@ click STRATEGY "https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/stra
 click CHARTER "https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/strategic-docs/charter" "Browse the FIXM Change Management Charter"
 click VERSIONING "https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/strategic-docs/versioning_policy" "Browse the FIXM Versioning Policy"
 
-click FIXM_COMPONENTS "https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fixm-components-introduction" "Explanations about the main FIXM components"
-click GENERAL_GUIDANCE "https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/introduction" "The general rules always  applicable to FIXM"
+click FIXM_COMPONENTS "https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/introduction?id=fixm-encoding-guidance" "Explanations about the main FIXM components"
+click FIXM_ENCODING_GUIDANCE "https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/introduction" "The general rules always  applicable to FIXM"
 click FIXM_FOR_FFICE "https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/fixm-in-support-of-ffice/ffice-application-for-fixm" "Guidance about the use of FIXM for FF-ICE"
 click FIXM_FOR_OTHER_USE "https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/fixm-for-other-use-cases/using-fixm-core-without-an-application" "Guidance about the usage of FIXM in other contexts"
 click HOW_TO "https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/how-to-create-application/introduction" "The How to section for FIXM"
