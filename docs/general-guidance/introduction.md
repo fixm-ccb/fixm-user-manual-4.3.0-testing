@@ -1,10 +1,12 @@
 # FIXM Encoding Guidance
 
-This section describes general encoding guidance that is always applicable, whatever the implementation context. The guidance presented here includes a variety of topics including: encoding advice and examples, data plausibility rules, rules for absent data, advice on using FIXM in conjunction with other standards, etc.  
+This section describes general encoding guidance for FIXM Core that is always applicable, whatever the implementation context. Click on the FIXM Core packages, classes or properties below to open the corresponding encoding guidance. Alternatively, you can use the Search box in the side bar to find relevant user manual entries.
+
+*Note: links are provided below only when encoding guidance is available. The FIXM User Manual is being gradually enriched to cover all FIXM Core properties.*
 
 ---
 Package [`fx:Aircraft`]
-- **Aircraft:** [aircraftAddress], aircraftApproachCategory, aircraftType, [capabilities], coloursAndMarkings, [registration], wakeTurbulence
+- **Aircraft:** [aircraftAddress], aircraftApproachCategory, [aircraftType], [capabilities], coloursAndMarkings, [registration], wakeTurbulence
 - **AircraftType:** [aircraftCount], icaoAircraftTypeDesignator, otherAircraftType
 ---
 Package [`fx:Arrival`]
@@ -76,6 +78,7 @@ Package [`fb:Types`]
 <!-- Links for fx:Aircraft -->
 [`fx:Aircraft`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft
 [aircraftAddress]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft?id=aircraftaddress
+[aircraftType]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft?id=aircrafttype
 [registration]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft?id=registration
 [capabilities]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Capability
 [aircraftCount]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft?id=aircraftcount

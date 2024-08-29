@@ -966,7 +966,7 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 </tbody>
 </table>
 
-### `SidStarReference`
+## `SidStarReference`
 
 #### OPTION 1 - Minimum Reference
 
