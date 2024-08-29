@@ -2,6 +2,8 @@
 
 This section describes general encoding guidance for FIXM Core that is always applicable, whatever the implementation context. Click on the FIXM Core packages, classes or properties below to open the corresponding encoding guidance. Alternatively, you can use the Search box in the side bar to find relevant user manual entries.
 
+*Note: links are provided below only when encoding guidance is available. The FIXM User Manual is being gradually enriched to cover all FIXM Core properties.*
+
 ---
 Package [`fx:Aircraft`]
 - **Aircraft:** [aircraftAddress], aircraftApproachCategory, [aircraftType], [capabilities], coloursAndMarkings, [registration], wakeTurbulence
