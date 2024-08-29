@@ -1,6 +1,6 @@
 # FIXM Encoding Guidance
 
-This section describes general encoding guidance that is always applicable, whatever the implementation context. The guidance presented here includes a variety of topics including: encoding advice and examples, data plausibility rules, rules for absent data, advice on using FIXM in conjunction with other standards, etc.  
+This section describes general encoding guidance for FIXM Core that is always applicable, whatever the implementation context. Click on the FIXM Core packages, classes or properties below to open the corresponding encoding guidance. Alternatively, you can use the Search box in the side bar to find relevant user manual entries.
 
 ---
 Package [`fx:Aircraft`]
