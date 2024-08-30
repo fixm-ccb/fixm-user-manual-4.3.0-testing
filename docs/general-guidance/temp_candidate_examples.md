@@ -114,6 +114,8 @@ See https://www.icao.int/publications/DOC8643/Pages/Search.aspx
 
 ### survival
 
+
+
 Example from Doc 4444
 
 ```xml
@@ -177,6 +179,8 @@ Example from Doc 4444
 ## fx:Flight
 
 ### `supplementaryInformation`
+
+`personsOnBoard` = The total number of persons (passengers and crew) on board the aircraft.
 
 Encoding Rules
 - FF-ICE/R1 Manual B-2.33: *fuel endurance expressed as hours and minutes of flying time.* Encoding of a `fuelEndurance` shall always start with `P0Y0M0DT`.
