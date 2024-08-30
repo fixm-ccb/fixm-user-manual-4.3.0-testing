@@ -110,6 +110,29 @@ See https://www.icao.int/publications/DOC8643/Pages/Search.aspx
 </fx:aircraft>
 ```
 
+## fx:Capability
+
+### survival
+
+Example from Doc 4444
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:aircraft>
+  <fx:capabilities>
+    <fx:survival>
+      <fx:dinghyInformation>
+        <fx:colour>YELLOW</fx:colour>
+        <fx:covered>COVERED</fx:covered>
+        <fx:number>11</fx:number>
+        <fx:totalCapacity>330</fx:totalCapacity>
+      </fx:dinghyInformation>
+      <fx:emergencyRadioCapabilityType>EMERGENCY_LOCATOR_TRANSMITTER ULTRA_HIGH_FREQUENCY VERY_HIGH_FREQUENCY</fx:emergencyRadioCapabilityType>
+      <fx:lifeJacketType>LIGHTS FLUORESCENCE</fx:lifeJacketType>
+      <fx:survivalEquipmentType>MARITIME</fx:survivalEquipmentType>
+    </fx:survival>
+  </fx:capabilities>
+```
 
 ## fx:Emergency
 
