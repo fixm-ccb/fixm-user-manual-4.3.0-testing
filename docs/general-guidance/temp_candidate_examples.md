@@ -161,11 +161,13 @@ The `wakeTurbulenceCategory` specified for the aircraft shall be consistent with
 
 ### actualTimeOfArrival
 
-By default, the actual time of arrival should be the touchdown time. Yet, FIXM proposes different options to indicate the arrival time, in order to help system providers and operators select the one most applicable to theioperations. Concretely, the actual time of arrival is exchanged in FIXM using the following properties:
-- property `time` holds the time value, expressed as a [DateTimeUtc].
+> FF-ICE/R1 Manual 10.4.3.2 
+
+FIXM proposes different options to indicate the arrival time, in order to help system providers and operators select the one most applicable to their operations. Concretely, the actual time of arrival is exchanged in FIXM using the following properties:
+- property `time` holds the arrival time value, expressed as a [DateTimeUtc].
 - properties `type` and `position` may be used optionally to provide details about the point on the arrival aerodrome to which the arrival time refers.
-  - `type`, if used, shall be one of the following value: `WHEELS_ON`, `IN_BLOCKS`, `END_LANDING_ROLL`.
-  - `position`, if used, shall capture the geographical position of that point, expressed as a [GeographicalPosition]
+  - `type` shall be one of the following value: `WHEELS_ON`, `IN_BLOCKS`, `END_LANDING_ROLL`.
+  - `position` shall capture the geographical position of that point, expressed as a [GeographicalPosition]
 
 
 ### arrivalAerodrome
