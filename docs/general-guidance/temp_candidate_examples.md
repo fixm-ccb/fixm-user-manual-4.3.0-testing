@@ -1,10 +1,15 @@
-# Candidate examples and rules
+# Candidate examples and rules for section `Encoding guidance`
 
 ## fx:Aircraft
 
 ### `aircraftAddress`
 
-Example from Doc 10150 (LADR)
+The `aircraftAddress` is a unique combination of twenty-four bits available for assignment to an aircraft 
+for the purpose of air-ground communications, navigation and surveillance.
+
+
+> Example from Doc 10150 (LADR)
+
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
 <fx:aircraft>
@@ -14,19 +19,19 @@ Example from Doc 10150 (LADR)
 
 ### `aircraftApproachCategory`
 
-Classification of aircraft based on 1.3 times stall speed in landing configuration at maximum certified landing mass.
+The `aircraftApproachCategory` is a classification of aircraft based on 1.3 times stall speed in landing configuration at maximum certified landing mass.
 
-Encoding Rules:
-- FIXM Codelist: the `aircraftApproachCategory` shall be one of the following values:
-  - A - less than 169 km/h (91 kt) indicated airspeed 
-  - B - 169 km/h (91 kt) or more but less than 224 km/h 
-  - C - 224 km/h (121 kt) or more but less than 261 km/h (141 kt) 
-  - D - 261 km/h (141 kt) or more but less than 307 km/h (166 kt) 
-  - E - 307 km/h (166 kt) or more but less than 391 km/h (211 kt) 
-  - H - Helicopters
+The `aircraftApproachCategory` shall be one of the following values:
+  - `A` - less than 169 km/h (91 kt) indicated airspeed 
+  - `B` - 169 km/h (91 kt) or more but less than 224 km/h 
+  - `C` - 224 km/h (121 kt) or more but less than 261 km/h (141 kt) 
+  - `D` - 261 km/h (141 kt) or more but less than 307 km/h (166 kt) 
+  - `E` - 307 km/h (166 kt) or more but less than 391 km/h (211 kt) 
+  - `H` - Helicopters
 
-- Plausibility rule: the value of the `aircraftApproachCategory` should be consistent with the `aircraftType` content. For instance, the `aircraftApproachCategory` should not be set to `H` for e.g. an AIRBUS A380.
-- 
+The value of the `aircraftApproachCategory` shall be consistent with the `aircraftType` content. For instance, the `aircraftApproachCategory` should not be set to `H` for e.g. an AIRBUS A380.
+
+ 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
 <fx:aircraft>
@@ -40,13 +45,51 @@ Encoding Rules:
 
 #### `aircraftTypeDesignator`
 
-Encoding Rules
-- FF-ICE/R1 Manual B-2.5.1: the `aircraftTypeDesignator` shall be a valid two to four alphanumeric characters indicator, starting with a letter, per ICAO Doc. 8643.
-See https://www.icao.int/publications/DOC8643/Pages/Search.aspx
+> FF-ICE/R1 Manual B-2.5.1:
+
+The `aircraftTypeDesignator` shall be a valid two to four alphanumeric characters indicator, starting with a letter, per [ICAO Doc. 8643].
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<!-- For a ROBIN DR-400 -->
+<fx:aircraft>
+  <fx:aircraftType>
+    <fx:icaoAircraftTypeDesignator>DR40</fx:icaoAircraftTypeDesignator>
+    <!-- ... -->
+```
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<!-- For a COMAC ARJ-21-700 -->
+<fx:aircraft>
+  <fx:aircraftType>
+    <fx:icaoAircraftTypeDesignator>AJ27</fx:icaoAircraftTypeDesignator>
+    <!-- ... -->
+```
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<!-- For a BOEING 787-10 Dreamliner -->
+<fx:aircraft>
+  <fx:aircraftType>
+    <fx:icaoAircraftTypeDesignator>B78X</fx:icaoAircraftTypeDesignator>
+    <!-- ... -->
+```
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<!-- For an AIRBUS A-380-800 -->
+<fx:aircraft>
+  <fx:aircraftType>
+    <fx:icaoAircraftTypeDesignator>A388</fx:icaoAircraftTypeDesignator>
+    <!-- ... -->
+```
+
 
 ### `coloursAndMarkings`
 
-Example from Doc 4444
+> Example from Doc 4444
+
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
 <fx:aircraft>
@@ -56,15 +99,17 @@ Example from Doc 4444
 
 ### `wakeTurbulenceCategory`
 
-Encoding Rules
-- FIXM Codelist: the `wakeTurbulenceCategory` shall be one of the following values:
-  - J (SUPER) - for aircraft types specified as such in Doc 8643, Aircraft Type Designators
-  - H (HEAVY) - for aircraft types of 136 000 kg or more, with the exception of aircraft types listed in Doc 8643 in the SUPER (J) category
-  - M (MEDIUM) - for aircraft types less than 136 000 kg but more than 7 000 kg
-  - L (LIGHT) - aircraft types of 7 000 kg or less
+The `wakeTurbulenceCategory` is a grouping of aircraft according to the effect of the rotating air mass created behind the wing tips.
 
-- FF-ICE/R1 Manual E-4: the `wakeTurbulenceCategory` specified for the aircraft shall be consistent with the category associated with the `aircraftTypeDesignator` in ICAO Doc. 8643
-See https://www.icao.int/publications/DOC8643/Pages/Search.aspx
+The `wakeTurbulenceCategory` shall be one of the following values:
+  - `J` (SUPER) - for aircraft types specified as such in Doc 8643, Aircraft Type Designators
+  - `H` (HEAVY) - for aircraft types of 136 000 kg or more, with the exception of aircraft types listed in Doc 8643 in the SUPER (J) category
+  - `M` (MEDIUM) - for aircraft types less than 136 000 kg but more than 7 000 kg
+  - `L` (LIGHT) - aircraft types of 7 000 kg or less
+
+> FF-ICE/R1 Manual E-4:
+
+The `wakeTurbulenceCategory` specified for the aircraft shall be consistent with the category associated with the `aircraftTypeDesignator` in [ICAO Doc. 8643].
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
@@ -110,13 +155,38 @@ See https://www.icao.int/publications/DOC8643/Pages/Search.aspx
 </fx:aircraft>
 ```
 
+---
+
+## fx:Arrival
+
+### actualTimeOfArrival
+
+By default, the actual time of arrival should be the touchdown time. Yet, FIXM proposes different options to indicate the arrival time, in order to help system providers and operators select the one most applicable to theioperations. Concretely, the actual time of arrival is exchanged in FIXM using the following properties:
+- property `time` holds the time value, expressed as a [DateTimeUtc].
+- properties `type` and `position` may be used optionally to provide details about the point on the arrival aerodrome to which the arrival time refers.
+  - `type`, if used, shall be one of the following value: `WHEELS_ON`, `IN_BLOCKS`, `END_LANDING_ROLL`.
+  - `position`, if used, shall capture the geographical position of that point, expressed as a [GeographicalPosition]
+
+
+### arrivalAerodrome
+
+### destinationAerodrome
+
+### destinationAerodromeAlternate
+
+### reclearanceInFlight
+
+### runwayDirection
+
+---
+
 ## fx:Capability
 
 ### survival
 
 
 
-Example from Doc 4444
+> Example from Doc 4444
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
@@ -142,7 +212,7 @@ Example from Doc 4444
 
 #### `position`
 
-Example - values taken from Doc 10150 (LADR) 
+> Example - values taken from Doc 10150 (LADR) 
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
@@ -168,7 +238,8 @@ Example - values taken from Doc 10150 (LADR)
 
 ### `currentModeACode`
 
-Example from Doc 4444
+> Example from Doc 4444
+
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
 <fx:enRoute>
@@ -182,10 +253,12 @@ Example from Doc 4444
 
 `personsOnBoard` = The total number of persons (passengers and crew) on board the aircraft.
 
-Encoding Rules
-- FF-ICE/R1 Manual B-2.33: *fuel endurance expressed as hours and minutes of flying time.* Encoding of a `fuelEndurance` shall always start with `P0Y0M0DT`.
+> Encoding Rules: FF-ICE/R1 Manual B-2.33: *fuel endurance expressed as hours and minutes of flying time.*
 
-Example from Doc 4444
+The `fuelEndurance` shall be expressed as hours and minutes of flying time. The Encoding of a `fuelEndurance` shall therefore always start with `P0Y0M0DT`.
+
+> Example from Doc 4444
+
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
 <fx:supplementaryInformation>
@@ -198,3 +271,8 @@ Example from Doc 4444
 ```
 
 ## 
+
+
+[ICAO Doc. 8643]: https://www.icao.int/publications/DOC8643/Pages/Search.aspx
+[DateTimeUtc]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_Types?id=datetimeutc-datetimeutchighprecision
+[GeographicalPosition]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_AeronauticalReference?id=geographicalposition
