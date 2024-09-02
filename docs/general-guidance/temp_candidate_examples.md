@@ -172,13 +172,32 @@ FIXM proposes different options to indicate the arrival time, in order to help s
 
 ### arrivalAerodrome
 
+The `arrivalAerodrome` is the aerodrome at which the flight has ***actually*** arrived. The `arrivalAerodrome` shall be be expressed in FIXM as a valid [AerodromeReference].
+
+> FF-ICE/R1 Manual chapter 7.4.3
+
+The `arrivalAerodrome` indicates where the flight has actually landed. In normal circumstances, it will be
+the same as the `destinationAerodrome`, but will be different in the case of a diversion.
+
 ### destinationAerodrome
 
+The `destinationAerodrome` is the aerodrome at which the flight is scheduled to arrive. The `destinationAerodrome` shall be be expressed in FIXM as a valid [AerodromeReference].
+
 ### destinationAerodromeAlternate
+
+A `destinationAerodromeAlternate` is an alternate aerodrome at which the aircraft would be able to land should it become either
+impossible or inadvisable to land at the `destinationAerodrome`. Up to 2 `destinationAerodromeAlternate` may be specified for a flight.
+
+> FF-ICE/R1 Manual appendix C : *Up to 2 alternate destination aerodromes may be specified*
+
 
 ### reclearanceInFlight
 
 ### runwayDirection
+
+> FF-ICE/R1 Manual, chapter 10.4.3.2
+> Note: It is recognized that departure and arrival runways in conjunction with associated
+> SIDs and STARs may not be known with certainty prior to the flight’s departure.
 
 ---
 
@@ -278,3 +297,4 @@ The `fuelEndurance` shall be expressed as hours and minutes of flying time. The 
 [ICAO Doc. 8643]: https://www.icao.int/publications/DOC8643/Pages/Search.aspx
 [DateTimeUtc]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_Types?id=datetimeutc-datetimeutchighprecision
 [GeographicalPosition]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_AeronauticalReference?id=geographicalposition
+[AerodromeReference]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_AeronauticalReference?id=aerodromereference
