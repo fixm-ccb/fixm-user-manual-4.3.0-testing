@@ -193,6 +193,15 @@ impossible or inadvisable to land at the `destinationAerodrome`. Up to 2 `destin
 
 ### reclearanceInFlight
 
+> ICAO Doc 4444 RIF: *The route details to the revised destination aerodrome, followed by the ICAO four-letter location indicator
+> of the aerodrome. The revised route is subject to reclearance in flight.*
+>
+> Examples: RIF/DTA HEC KLAX
+> 
+> RIF/ESP G94 CLA YPPH
+
+
+
 ### runwayDirection
 
 > FF-ICE/R1 Manual, chapter 10.4.3.2
