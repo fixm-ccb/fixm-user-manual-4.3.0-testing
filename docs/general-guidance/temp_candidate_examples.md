@@ -88,6 +88,16 @@ The `aircraftTypeDesignator` shall be a valid two to four alphanumeric character
 
 ### `coloursAndMarkings`
 
+> From Doc 4444 Field Type 19:
+> 
+> (g) A/ followed by one or more of the following, separated by spaces:
+> The colour of the aircraft.
+> Significant markings (this may include the aircraft registration).
+
+Property `coloursAndMarkings` can be used to exchange one or more of the following, separeated by `WHICH SEPARATOR`?
+- The colour of the aircraft
+- Significant markings (this may include the aircraft registration).
+
 > Example from Doc 4444
 
 ```xml
@@ -96,6 +106,9 @@ The `aircraftTypeDesignator` shall be a valid two to four alphanumeric character
   <fx:coloursAndMarkings>WHITE</fx:coloursAndMarkings>
   <!-- ... -->
 ```
+
+:question: opportunity to introduce a codelist with predefined colours? (like [AIXM 5.1.1](https://aixm.aero/sites/default/files/imce/AIXM511HTML/AIXM/DataType_CodeColourBaseType.html)
+
 
 ### `wakeTurbulenceCategory`
 
@@ -159,7 +172,7 @@ The `wakeTurbulenceCategory` specified for the aircraft shall be consistent with
 
 ## fx:Arrival
 
-### actualTimeOfArrival
+### `actualTimeOfArrival`
 
 > FF-ICE/R1 Manual 10.4.3.2 
 
@@ -169,21 +182,55 @@ FIXM proposes different options to indicate the arrival time, in order to help s
   - `type` shall be one of the following value: `WHEELS_ON`, `IN_BLOCKS`, `END_LANDING_ROLL`.
   - `position` shall capture the geographical position of that point, expressed as a [GeographicalPosition]
 
+```xml
+<fx:arrival>
+  <fx:actualTimeOfArrival>
+    <fx:time>2024-06-19T20:43:26Z</fx:time>
+    <fx:type>WHEELS_ON</fx:type>
+  </fx:actualTimeOfArrival>
+</fx:arrival>
+```
 
-### arrivalAerodrome
 
-The `arrivalAerodrome` is the aerodrome at which the flight has ***actually*** arrived. The `arrivalAerodrome` shall be be expressed in FIXM as a valid [AerodromeReference].
+### `destinationAerodrome` / `arrivalAerodrome`
 
 > FF-ICE/R1 Manual chapter 7.4.3
 
-The `arrivalAerodrome` indicates where the flight has actually landed. In normal circumstances, it will be
-the same as the `destinationAerodrome`, but will be different in the case of a diversion.
+The `destinationAerodrome` is the aerodrome at which the flight is ***scheduled*** to arrive. The `arrivalAerodrome` is the aerodrome at which the flight has ***actually*** arrived. 
+In normal circumstances, the `arrivalAerodrome` will be the same as the `destinationAerodrome`, but will be different in the case of a diversion.
 
-### destinationAerodrome
+The `destinationAerodrome` and `arrivalAerodrome` shall be both expressed in FIXM as a valid [AerodromeReference].
 
-The `destinationAerodrome` is the aerodrome at which the flight is scheduled to arrive. The `destinationAerodrome` shall be be expressed in FIXM as a valid [AerodromeReference].
+Example - flight scheduled to arrive at Brussels Airport (EBBR) that has actually landed at this airport. 
 
-### destinationAerodromeAlternate
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:arrival>
+  <fx:arrivalAerodrome>
+    <fb:locationIndicator>EBBR</fb:locationIndicator>
+  </fx:arrivalAerodrome>
+  <fx:destinationAerodrome>
+    <fb:locationIndicator>EBBR</fb:locationIndicator>
+  </fx:destinationAerodrome>
+</fx:arrival>
+```
+
+Example - flight scheduled to arrive at Brussels Airport (EBBR) that actually landed at Lille Airport (LFQQ) following a diversion.
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:arrival>
+  <fx:arrivalAerodrome>
+    <fb:locationIndicator>LFQQ</fb:locationIndicator>
+  </fx:arrivalAerodrome>
+  <fx:destinationAerodrome>
+    <fb:locationIndicator>EBBR</fb:locationIndicator>
+  </fx:destinationAerodrome>
+</fx:arrival>
+```
+
+
+### `destinationAerodromeAlternate`
 
 A `destinationAerodromeAlternate` is an alternate aerodrome at which the aircraft would be able to land should it become either
 impossible or inadvisable to land at the `destinationAerodrome`. Up to 2 `destinationAerodromeAlternate` may be specified for a flight.
@@ -191,7 +238,7 @@ impossible or inadvisable to land at the `destinationAerodrome`. Up to 2 `destin
 > FF-ICE/R1 Manual appendix C : *Up to 2 alternate destination aerodromes may be specified*
 
 
-### reclearanceInFlight
+### `reclearanceInFlight`
 
 > ICAO Doc 4444 RIF: *The route details to the revised destination aerodrome, followed by the ICAO four-letter location indicator
 > of the aerodrome. The revised route is subject to reclearance in flight.*
@@ -201,8 +248,7 @@ impossible or inadvisable to land at the `destinationAerodrome`. Up to 2 `destin
 > RIF/ESP G94 CLA YPPH
 
 
-
-### runwayDirection
+### `runwayDirection`
 
 > FF-ICE/R1 Manual, chapter 10.4.3.2
 > Note: It is recognized that departure and arrival runways in conjunction with associated
@@ -212,11 +258,11 @@ impossible or inadvisable to land at the `destinationAerodrome`. Up to 2 `destin
 
 ## fx:Capability
 
-### survival
+### `survival`
 
 
 
-> Example from Doc 4444
+> Example - values taken from Doc 4444
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
