@@ -94,7 +94,7 @@ The `aircraftTypeDesignator` shall be a valid two to four alphanumeric character
 > The colour of the aircraft.
 > Significant markings (this may include the aircraft registration).
 
-Property `coloursAndMarkings` can be used to exchange one or more of the following, separeated by `WHICH SEPARATOR`?
+Property `coloursAndMarkings` can be used to exchange one or more of the following, separated by a space character: 
 - The colour of the aircraft
 - Significant markings (this may include the aircraft registration).
 
@@ -109,6 +109,7 @@ Property `coloursAndMarkings` can be used to exchange one or more of the followi
 
 :question: *Opportunity to introduce a codelist with predefined colours? (like [AIXM 5.1.1](https://aixm.aero/sites/default/files/imce/AIXM511HTML/AIXM/DataType_CodeColourBaseType.html)* :question: 
 
+:question: *Is the space character an appropriate separator? Should another separator be used?* :question:
 
 ### `wakeTurbulenceCategory`
 
@@ -176,9 +177,14 @@ The `wakeTurbulenceCategory` specified for the aircraft shall be consistent with
 
 > FF-ICE/R1 Manual 10.4.3.2 
 
-FIXM proposes different options to indicate the arrival time, in order to help system providers and operators select the one most applicable to their operations. Concretely, the actual time of arrival is exchanged in FIXM using the following properties:
-- property `time` holds the arrival time value, expressed as a [DateTimeUtc].
-- properties `type` and `position` may be used optionally to provide details about the point on the arrival aerodrome to which the arrival time refers.
+An arrival time can be recorded by different automated or manual means which do not
+always refer to the same event or location. Therefore, FIXM proposes different options 
+to exchange the `actualTimeOfArrival`, in order to help system providers and operators select the 
+one most applicable to their operations. 
+
+Concretely, the `actualTimeOfArrival` is exchanged in FIXM using the following properties:
+- property `time` captures the arrival time value, expressed as a [DateTimeUtc].
+- properties `type` and `position` may be used optionally to provide details about the event and point on the arrival aerodrome to which the arrival time refers.
   - `type` shall be one of the following value: `WHEELS_ON`, `IN_BLOCKS`, `END_LANDING_ROLL`.
   - `position` shall capture the geographical position of that point, expressed as a [GeographicalPosition]
 
@@ -316,12 +322,10 @@ in terms of CPDLC. It shall consist of zero or more of the following values, sep
 
 > FF-ICE/R1 B-2.10.2 
 
-The properties `otherCommunicationCapabilities` and `otherDatalinkCapabilities` can be used to exchanged 
+The properties `otherCommunicationCapabilities` and `otherDatalinkCapabilities` can be used to exchange 
 communication or datalink capabilities that are not pre-defined. This is to allow for new capabilities or ANSP-
 specific capabilities that have not been designated standard codes but are required
 in a flight plan.
-
-#### 
 
 
 ### `navigation`
@@ -331,7 +335,7 @@ in a flight plan.
 The property `navigationCapabilityCode` is used to exchange information about the following
 capabilities:
 
-- Required Navigation Capabilities from ICAO Doc 9965 Vol II chapter B-2.10.3
+- Navigation capabilities listed in ICAO Doc 9965 Vol II chapter B-2.10.3
   - `F`: Automatic Direction Finder (ADF)
   - `O`: VHF omnidirectional radio range (VOR)
   - `T`: UHF tactical air navigation aid (TACAN)
@@ -340,41 +344,71 @@ capabilities:
   - :warning: MISSING SBAS ??? :warning: 
   - `A`: Indicate presence of Ground Based Augmentation System (GBAS)
   - `I`: Inertial Navigation (INS)
-  - :warning: Missing VOR/DME ??? :warning: 
-  - :warning: Missing DME/DME ??? :warning:
+  - :warning: MISSING VOR/DME ??? :warning: 
+  - :warning: MISSING DME/DME ??? :warning:
   - :warning: DME/DME/Inertial Reference Unit (IRU) :warning:
   - `W`: Reduced Vertical Separation Minimum (RVSM)
-- Not listed
+- Addional navigation capabilities from PANS-ATM Item 10a
   - `C`: LORAN C
-- Approach capabilities from ICAO Doc 9965 Vol II chapter B-2.10.4
-  - `L`: ILS
-  - `K`: MLS
-  - `B`: LPV
-
-
-
-X: MNPS
-
-- Approach Capability
-
+  - `X`: MNPS approved
+- Approach capabilities listed in ICAO Doc 9965 Vol II chapter B-2.10.4
+  - `L`: Instrument Landing System (ILS)
+  - `K`: Microwave Landing System (MLS)
+  - `B`: Localizer Performance with Vertical Guidance (LPV)
+  - :warning: MISSING Ground-Based Augmentation Landing System (GBAS Landing System) ??? :warning: 
 
 
 #### `otherNavigationCapabilities`
 
+
 #### `performanceBasedCode`
+
+The property `performanceBasedCode` is used to exchange information about the following
+PBN capabilities:
+
+- PBN capabilities listed in PANS-ATM Appendix 3, item 18 PBN/
+  - `A1`: RNAV 10 (RNP 10)
+  - `B1`: RNAV 5 all permitted sensors
+  - `B2`: RNAV 5 GNSS
+  - `B3`: RNAV 5 DME/DME
+  - `B4`: RNAV 5 VOR/DME
+  - `B5`: RNAV 5 INS or IRS
+  - `B6`: RNAV 5 LORANC
+  - `C1`: RNAV 2 all permitted sensors
+  - `C2`: RNAV 2 GNSS
+  - `C3`: RNAV 2 DME/DME
+  - `C4`: RNAV 2 DME/DME/IRU
+  - `D1` RNAV 1 all permitted sensors
+  - `D2`: RNAV 1 GNSS
+  - `D3`: RNAV 1 DME/DME
+  - `D4`: RNAV 1 DME/DME/IRU
+  - `L1`: RNP 4
+  - `O1`: Basic RNP 1 all permitted sensors
+  - `O2`: Basic RNP 1 GNSS
+  - `O3`: Basic RNP 1 DME/DME
+  - `O4`: Basic RNP 1 DME/DME/IRU
+  - `S1`: RNP APCH
+  - `S2`: RNP APCH with BAR-VNAV
+  - `T1`: RNP AR APCH with RF (special authorization required)
+  - `T2`: RNP AR APCH without RF (special authorization required)
+- optional functional capabilities described in ICAO Doc. 9613 Vol. 1, Attachment A, section 5
+  - :warning: MISSING Fixed radius paths including RF legs and Fixed Radius Turns ??? :warning: 
+- identification of the type of Vertical Navigation required, as explained in ICAO Doc. 9613 Part A. section 1.1.4.2.
+  - TODO 
+
+ 
 
 Each PBN capability depends on certain navigational capabilities. When a PBN capability
 is based on a navigational capability, that navigational capability must also be present.
-
 The following table details the rules that shall be respected to ensure consistency between 
-the content of `performanceBasedCode` and `navigationCapabilityCode`.
+the content of `performanceBasedCode` and `navigationCapabilityCode` / `standardCapabilities`.
 
-|`performanceBasedCode`|`navigationCapabilityCode`|
+|`performanceBasedCode`|`navigationCapabilityCode` & `standardCapabilities`|
 |:-|:-|
-| `B1` | `G` and `D` and `I` and (`O` or `S`) |
+| `B1` | `G` and `D` and `I` and (`O` or `STANDARD`) |
 | `B2` | `G` |
 | `B3` | `D` |
-| `B4` | `D` and (`O` or `S`) |
+| `B4` | `D` and (`O` or `STANDARD`) |
 | `B5` | `I` |
 | `B6` | `C` |
 | `C1` | `G` and `D` and `I` |
