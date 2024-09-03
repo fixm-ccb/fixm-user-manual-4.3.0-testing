@@ -107,7 +107,7 @@ Property `coloursAndMarkings` can be used to exchange one or more of the followi
   <!-- ... -->
 ```
 
-:question: opportunity to introduce a codelist with predefined colours? (like [AIXM 5.1.1](https://aixm.aero/sites/default/files/imce/AIXM511HTML/AIXM/DataType_CodeColourBaseType.html)
+:question: *Opportunity to introduce a codelist with predefined colours? (like [AIXM 5.1.1](https://aixm.aero/sites/default/files/imce/AIXM511HTML/AIXM/DataType_CodeColourBaseType.html)* :question: 
 
 
 ### `wakeTurbulenceCategory`
@@ -270,9 +270,139 @@ Example - a flight scheduled to land at Düsseldorf Airport (EDDL) with Münster
 
 ## fx:Capability
 
+### `communication`
+
+#### `communicationCapabilityCode`
+
+The property `communicationCapabilityCode` is used to exchange information about the capabilities of the flight in terms of voice communication, ACARS data communication and RCP (Required Communication Performance). It shall consist of zero or more of the following values, separated by a space character:
+
+- Voice communication
+  - `H`: HF RTF
+  - `M1`: ATC RTF SATCOM (INMARSAT)
+  - `M2`: ATC RTF (MTSAT)
+  - `M3`: ATC RTF (Iridium)
+  - `U`: UHF RTF
+  - `V`: VHF RTF
+  - `Y`: VHF with 8.33 kHz channel spacing capability
+- ACARS data communication
+  - `E1`: FMC Waypoint Reporting (WPR) ACARS
+  - `E2`: Digital Flight Information System (D-FIS) ACARS
+  - `E3`: Pre-Departure Clearance (PDC) ACARS
+- RCP (categories specified in ICAO Doc. 9869)
+  - `P1`: CPDLC RCP 400 
+  - `P2`: CPDLC RCP 240 
+  - `P3`: SATVOICE RCP 400
+  - *Values `P4` to `P9` are reserved for future RCP capabilities.*
+
+:warning: *The current FIXM 4.3.0 codelist has the definition **Reserved for RCP** for values P1, P2, P3. FIXM Core definitions should be updated.* :warning: 
+
+
+#### `datalinkCommunicationCapabilityCode` 
+
+The property `datalinkCommunicationCapabilityCode` is used to exchange information about the capabilities of the flight 
+in terms of CPDLC. It shall consist of zero or more of the following values, separated by a space character:
+
+- ATN CPDLC
+  - `J1`: CPDLC ATN Via VHF Data Link (VDL) Mode 2
+- FANS 1/A CPDLC
+  - `J2`: CPDLC FANS 1/A Via HF Data Link (HFDL) 
+  - `J3`: CPDLC FANS 1/A Via VDL Mode 0/a (ACARS)
+  - `J4`: CPDLC FANS 1/A Via VHF Data Link, Mode 2 (VDL Mode 2)
+  - `J5`: CPDLC FANS 1/A Via SATCOM (INMARSAT)
+  - `J6`: CPDLC FANS 1/A Via SATCOM (MTSAT)
+  - `J7`: CPDLC FANS 1/A Via SATCOM (Iridium) 
+
+#### `otherCommunicationCapabilities` / `otherDatalinkCapabilities`
+
+These properties can be used for new capabilities or ANSP- specific capabilities 
+that have not been designated standard codes.
+
+
+#### 
+
+
+### `navigation`
+
+#### `navigationCapabilityCode`
+
+The property `navigationCapabilityCode` is used to exchange information about the following
+capabilities:
+
+- Required Navigation Capabilities from ICAO Doc 9965 Vol II chapter B-2.10.3
+  - `F`: Automatic Direction Finder (ADF)
+  - `O`: VHF omnidirectional radio range (VOR)
+  - `T`: UHF tactical air navigation aid (TACAN)
+  - `D`: Distance Measuring Equipment (DME)
+  - `G`: Global Navigation Satellite System (GNSS)
+  - :warning: MISSING SBAS ??? :warning: 
+  - `A`: Indicate presence of Ground Based Augmentation System (GBAS)
+  - `I`: Inertial Navigation (INS)
+  - :warning: Missing VOR/DME ??? :warning: 
+  - :warning: Missing DME/DME ??? :warning:
+  - :warning: DME/DME/Inertial Reference Unit (IRU) :warning:
+  - `W`: Reduced Vertical Separation Minimum (RVSM)
+- Not listed
+  - `C`: LORAN C
+- Approach capabilities from ICAO Doc 9965 Vol II chapter B-2.10.4
+  - `L`: ILS
+  - `K`: MLS
+  - `B`: LPV
+
+
+
+X: MNPS
+
+- Approach Capability
+
+
+
+#### `otherNavigationCapabilities`
+
+#### `performanceBasedCode`
+
+Each PBN capability depends on certain navigational capabilities. When a PBN capability
+is based on a navigational capability, that navigational capability must also be present.
+
+The following table details the rules that shall be respected to ensure consistency between 
+the content of `performanceBasedCode` and `navigationCapabilityCode`.
+
+|`performanceBasedCode`|`navigationCapabilityCode`|
+|:-|:-|
+| `B1` | `G` and `D` and `I` and (`O` or `S`) |
+| `B2` | `G` |
+| `B3` | `D` |
+| `B4` | `D` and (`O` or `S`) |
+| `B5` | `I` |
+| `B6` | `C` |
+| `C1` | `G` and `D` and `I` |
+| `C2` | `G` |
+| `C3` | `D` | 
+| `C4` | `D` and `I`  |
+| `D1` | `G` and `D` and `I` |
+| `O1` | `G` and `D` and `I` |
+| `O2` | `G` |
+| `O3` | `D` |
+| `O4` | `D` and `I` |
+| `S1` | `G` |
+| `S2` | `G` |
+| `T1` | `G` |
+| `T2` | `G` |
+
+
+
+
+#### `requiredRunwayVisualRange`
+
+
+### `standardCapabilities`
+
+
+
+### `surveillance`
+
+
+
 ### `survival`
-
-
 
 > Example - values taken from Doc 4444
 
