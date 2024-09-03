@@ -238,6 +238,18 @@ impossible or inadvisable to land at the `destinationAerodrome`. Up to 2 `destin
 > FF-ICE/R1 Manual appendix C : *Up to 2 alternate destination aerodromes may be specified*
 
 
+Example - a flight scheduled to land at Düsseldorf Airport (EDDL) with Münster Osnabrück Airport (EDDG) identified as destination alternate.
+
+```xml
+<fx:arrival>
+  <fx:destinationAerodrome>
+    <fb:locationIndicator>EDDL</fb:locationIndicator>
+  </fx:destinationAerodrome>
+  <fx:destinationAerodromeAlternate>
+    <fb:locationIndicator>EDDG</fb:locationIndicator>
+  </fx:destinationAerodromeAlternate>
+```
+
 ### `reclearanceInFlight`
 
 > ICAO Doc 4444 RIF: *The route details to the revised destination aerodrome, followed by the ICAO four-letter location indicator
