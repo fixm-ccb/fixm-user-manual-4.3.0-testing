@@ -314,9 +314,12 @@ in terms of CPDLC. It shall consist of zero or more of the following values, sep
 
 #### `otherCommunicationCapabilities` / `otherDatalinkCapabilities`
 
-These properties can be used for new capabilities or ANSP- specific capabilities 
-that have not been designated standard codes.
+> FF-ICE/R1 B-2.10.2 
 
+The properties `otherCommunicationCapabilities` and `otherDatalinkCapabilities` can be used to exchanged 
+communication or datalink capabilities that are not pre-defined. This is to allow for new capabilities or ANSP-
+specific capabilities that have not been designated standard codes but are required
+in a flight plan.
 
 #### 
 
