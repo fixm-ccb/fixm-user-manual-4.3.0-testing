@@ -597,7 +597,7 @@ The property `dinghyInformation` is used to exchange information about the dingh
 
 #### emergencyRadioCapabilityType
 
-The property `emergencyRadioCapabilityType` is ued to exchange information about the types of emergency radios carried on board th aircraft.
+The property `emergencyRadioCapabilityType` is ued to exchange information about the types of emergency radios carried on board the aircraft.
 It shall consist of zero or more of the following values, separated by a space character:
 - `EMERGENCY_LOCATOR_TRANSMITTER`: Emergency locator transmitter (ELT) is available.
 - `ULTRA_HIGH_FREQUENCY`: UHF on frequency 243.0 MHz is available.
@@ -632,28 +632,6 @@ The field `survivalEquipmentRemarks`  can be used to provide clarifying remarks 
     <fx:survival>
       <fx:survivalEquipmentType>MARITIME</fx:survivalEquipmentType>
       <!-- ... -->
-```
-
-----
-
-> Example - values taken from Doc 4444
-
-```xml
-<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
-<fx:aircraft>
-  <fx:capabilities>
-    <fx:survival>
-      <fx:dinghyInformation>
-        <fx:colour>YELLOW</fx:colour>
-        <fx:covered>COVERED</fx:covered>
-        <fx:number>11</fx:number>
-        <fx:totalCapacity>330</fx:totalCapacity>
-      </fx:dinghyInformation>
-      <fx:emergencyRadioCapabilityType>EMERGENCY_LOCATOR_TRANSMITTER ULTRA_HIGH_FREQUENCY VERY_HIGH_FREQUENCY</fx:emergencyRadioCapabilityType>
-      <fx:lifeJacketType>LIGHTS FLUORESCENCE</fx:lifeJacketType>
-      <fx:survivalEquipmentType>MARITIME</fx:survivalEquipmentType>
-    </fx:survival>
-  </fx:capabilities>
 ```
 
 ## fx:Emergency
