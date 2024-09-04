@@ -258,6 +258,8 @@ Example - a flight scheduled to land at Düsseldorf Airport (EDDL) with Münster
 
 ### `reclearanceInFlight`
 
+`TODO`
+
 > ICAO Doc 4444 RIF: *The route details to the revised destination aerodrome, followed by the ICAO four-letter location indicator
 > of the aerodrome. The revised route is subject to reclearance in flight.*
 >
@@ -267,6 +269,8 @@ Example - a flight scheduled to land at Düsseldorf Airport (EDDL) with Münster
 
 
 ### `runwayDirection`
+
+`TODO`
 
 > FF-ICE/R1 Manual, chapter 10.4.3.2
 > Note: It is recognized that departure and arrival runways in conjunction with associated
@@ -294,13 +298,13 @@ The property `communicationCapabilityCode` is used to exchange information about
   - `E1`: FMC Waypoint Reporting (WPR) ACARS
   - `E2`: Digital Flight Information System (D-FIS) ACARS
   - `E3`: Pre-Departure Clearance (PDC) ACARS
-- RCP (categories specified in ICAO Doc. 9869)
+- RCP (categories specified in ICAO Doc. 9869, chapter 4.4.3)
   - `P1`: CPDLC RCP 400 
   - `P2`: CPDLC RCP 240 
   - `P3`: SATVOICE RCP 400
   - *Values `P4` to `P9` are reserved for future RCP capabilities.*
 
-:warning: *The current FIXM 4.3.0 codelist has the definition **Reserved for RCP** for values P1, P2, P3. FIXM Core definitions should be updated.* :warning: 
+:warning: *The current FIXM 4.3.0 codelist has the definition **Reserved for RCP** for values P1, P2, P3. These definitions should be updated in the next version.* :warning: 
 
 
 #### `datalinkCommunicationCapabilityCode` 
@@ -341,12 +345,12 @@ capabilities:
   - `T`: UHF tactical air navigation aid (TACAN)
   - `D`: Distance Measuring Equipment (DME)
   - `G`: Global Navigation Satellite System (GNSS)
-  - :warning: MISSING SBAS ??? :warning: 
+  - :warning: MISSING "SBAS" ??? How is this capability exchange in FIXM ??? :warning: 
   - `A`: Indicate presence of Ground Based Augmentation System (GBAS)
   - `I`: Inertial Navigation (INS)
-  - :warning: MISSING VOR/DME ??? :warning: 
-  - :warning: MISSING DME/DME ??? :warning:
-  - :warning: DME/DME/Inertial Reference Unit (IRU) :warning:
+  - :warning: MISSING VOR/DME ??? How is this capability exchanged in FIXM ??? :warning: 
+  - :warning: MISSING DME/DME ??? How is this capability exchanged in FIXM ??? :warning:
+  - :warning: MISSING DME/DME/Inertial Reference Unit (IRU) ??? How is this capability exchanged in FIXM ??? :warning:
   - `W`: Reduced Vertical Separation Minimum (RVSM)
 - Addional navigation capabilities from PANS-ATM Item 10a
   - `C`: LORAN C
@@ -355,10 +359,15 @@ capabilities:
   - `L`: Instrument Landing System (ILS)
   - `K`: Microwave Landing System (MLS)
   - `B`: Localizer Performance with Vertical Guidance (LPV)
-  - :warning: MISSING Ground-Based Augmentation Landing System (GBAS Landing System) ??? :warning: 
+  - :warning: MISSING Ground-Based Augmentation Landing System (GBAS Landing System) ??? How is this capability exchanged in FIXM ??? Or does it duplicate perhaps code `A` above ??? :warning: 
 
 
 #### `otherNavigationCapabilities`
+
+The properties `otherNavigationCapabilities` can be used to exchange 
+navigation capabilities that are not pre-defined. This is to allow for new capabilities or ANSP-
+specific capabilities that have not been designated standard codes but are required
+in a flight plan.
 
 
 #### `performanceBasedCode`
@@ -378,7 +387,7 @@ PBN capabilities:
   - `C2`: RNAV 2 GNSS
   - `C3`: RNAV 2 DME/DME
   - `C4`: RNAV 2 DME/DME/IRU
-  - `D1` RNAV 1 all permitted sensors
+  - `D1`: RNAV 1 all permitted sensors
   - `D2`: RNAV 1 GNSS
   - `D3`: RNAV 1 DME/DME
   - `D4`: RNAV 1 DME/DME/IRU
@@ -392,11 +401,11 @@ PBN capabilities:
   - `T1`: RNP AR APCH with RF (special authorization required)
   - `T2`: RNP AR APCH without RF (special authorization required)
 - optional functional capabilities described in ICAO Doc. 9613 Vol. 1, Attachment A, section 5
-  - :warning: MISSING Fixed radius paths including RF legs and Fixed Radius Turns ??? :warning: 
+  - :warning: MISSING Fixed radius paths including RF legs and Fixed Radius Turns - or possibly other combinations ??? How are these capabilities exchanged in FIXM ??? Using `otherNavigationCapabilities` ??? :warning: 
 - identification of the type of Vertical Navigation required, as explained in ICAO Doc. 9613 Part A. section 1.1.4.2.
-  - TODO 
+  - :warning: TODO :warning: 
 
- 
+> From FF-ICE/R1 Manual appendix E-2. Performance Based Navigation 
 
 Each PBN capability depends on certain navigational capabilities. When a PBN capability
 is based on a navigational capability, that navigational capability must also be present.
@@ -425,19 +434,104 @@ the content of `performanceBasedCode` and `navigationCapabilityCode` / `standard
 | `T1` | `G` |
 | `T2` | `G` |
 
+If any of the navigation capabilities (`STANDARD`, `O`, `D`, `I`, `G`, `C`) are changed then 
+the dependencies should be re-checked.
 
+:warning: no consistency rule specified in the FF-ICE/R1 for codes `D2`, `D3`, `D4`, `L1`. Is this intentional or is it a gap? :warning: 
 
 
 #### `requiredRunwayVisualRange`
 
+> From FF-ICE/R1 Manual chapter B-2.39
+
+The property `requiredRunwayVisualRange` can be used to exchange the minimum RVR value required by the flight in order to execute an
+approach to land at the destination aerodrome in accordance with the applicable ATM configuration.
+
+The `requiredRunwayVisualRange` is expressed as a [Distance].
 
 ### `standardCapabilities`
 
+The property `standardCapabilities` can be used to insicate standard equipment and capabilities. 
 
+> From Doc 4444 Appendix 3 Field 10a) Note 1
+
+Standard equipment is considered to be `V` (VHF RTF), `O` (VOR) and `L` (ILS), unless another combination is prescribed by the appropriate ATS authority.
 
 ### `surveillance`
 
+#### `otherSurveillanceCapabilities`
 
+The properties `otherSurveillanceCapabilities` can be used to exchange 
+surveillance capabilities that are not pre-defined. This is to allow for new capabilities or ANSP-
+specific capabilities that have not been designated standard codes but are required
+in a flight plan.
+
+#### `surveillanceCapabilityCode`
+
+The property `surveillanceCapabilityCode` is used to exchange information about the following
+surveillance capabilities:
+
+- Transponder capabilities
+  - `A`: Mode A Transponder (4 digits-4,096 codes)
+  - `C`: Mode A Transponder (4 digits-4,096 codes) with Mode C altitude
+  - `S`: Mode S Transponder with aircraft identification and pressure-altitude
+  - `E`: Mode S Transponder with aircraft identification, pressure-altitude, and extended squitter capability (ADS-B)
+  - `H`: Mode S Transponder with aircraft identification, pressure-altitude, and enhanced surveillance capability
+  - `L`: Mode S Transponder with aircraft identification, pressure-altitude, extended squitter, and enhanced surveillance capability
+  - `I`: Mode S Transponder with aircraft identification, but no pressure-altitude capability
+  - `P`: Mode S Transponder with pressure-altitude, but no aircraft identification capability
+  - `X`: Mode S Transponder with neither aircraft identification nor pressure-altitude capability
+- ADS-B capabilities
+  - `V1`: VDL Mode 4 With "Out" Capability 
+  - `V2`: VDL Mode 4 With "Out" and "In" Capability
+  - :warning: *The FF-ICE/R1 Manual Chapter B-2.10.14 b) ii) explains that it shall be possible to indicate the ABS-B capability "1090 MHz With "In" Capability". The code `B2` indicated "In" and "Out" capability altogether. It is assumed that the "In" capability always come together with the "Out" capability.* :warning: 
+  - `B1`: 1090 MHz With "Out" Capability
+  - `B2`: 1090 MHz With "Out" and "In" Capability
+  - `U1`: Universal Access Transceiver (UAT) With "Out" Capability
+  - `U2`: Universal Access Transceiver (UAT) With "Out" and "In" Capability
+  - :warning: *MISSING CODES for B-2.10.14 d) ??? See quote below. How are these capabilities exchanged in FIXM ??? Using `otherSurveillanceCapabilities`???* :warning: 
+
+> FF-ICE/R1 Manual
+> B-2.10.14 Expression of Surveillance Capability shall allow at a minimum indication of
+> the following ADS-B capabilities ...
+> 
+> i. Airborne traffic situational awareness (AIRB)
+> 
+> ii. Own Visual Separation in Approach (VSA)
+> 
+> iii. Traffic Situational Awareness on the Surface (SURF)
+> 
+> iv. Traffic Situational Awareness with Alerts (TSAA)
+> 
+> v. CDTI (Cockpit Display of Traffic Information) Assisted Visual
+> Separation (CAVS) RTCA DO-317B / EUROCAE ED-194A
+> 
+> vi. Flight Deck based Interval Management for Spacing (FIM-S)
+> RTCA DO-361 / EUROCAE ED-236
+> vii. Advanced Interval Management (A-IM) RTCA DO-361A /
+> EUROCAE ED-236A
+> 
+> viii. Paired Approach (PA) RTCA DO-361A / EUROCAE ED-236A
+> 
+> ix. In trail Procedures (ITP) RTCA DO-317A / EUROCAE ED-194
+> (including subsequent versions)
+
+- ADS-C capabilities
+  - `G1`: ADS-C with ATN capabilities
+  - `D1`: ADS-C with FANS 1/A capabilities
+
+
+
+> FF-ICE/R1 Manual
+> B-2.10.14 Expression of Surveillance Capability shall allow at a minimum indication of
+> the following ADS-B capabilities including the ability to indicate whether certified against:
+> • EASA AMC20-24,
+> • CASA CA020.18,
+> • USA 14 CFR 91.227 / FAA AC 20-165 (all versions),
+> • EASA CS-ACNS.D.ADSB, and/or
+> • EASA CS-STAN 005 configuration 1.
+
+:warning: *How can this be exchanged in FIXM ? Using `otherSurveillanceCapabilities`? Encoding guidance probably required for this.* :warning:
 
 ### `survival`
 
@@ -532,3 +626,4 @@ The `fuelEndurance` shall be expressed as hours and minutes of flying time. The 
 [DateTimeUtc]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_Types?id=datetimeutc-datetimeutchighprecision
 [GeographicalPosition]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_AeronauticalReference?id=geographicalposition
 [AerodromeReference]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_AeronauticalReference?id=aerodromereference
+[Distance]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_Measures
