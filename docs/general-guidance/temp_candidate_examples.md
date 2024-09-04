@@ -637,7 +637,7 @@ The field `survivalEquipmentRemarks`  can be used to provide clarifying remarks 
 
 ### actualTimeOfDeparture
 
-An departure time can be recorded by different automated or manual means which do not
+A departure time can be recorded by different automated or manual means which do not
 always refer to the same event or location. Therefore, FIXM proposes different options 
 to exchange the `actualTimeOfDeparture`, in order to help system providers and operators select the 
 one most applicable to their operations. 
