@@ -336,8 +336,8 @@ in a flight plan.
 
 #### `navigationCapabilityCode`
 
-The property `navigationCapabilityCode` is used to exchange information about the following
-capabilities:
+The property `navigationCapabilityCode` is used to exchange information about the navigation capabilities of the flight. 
+It shall consist of zero or more of the following values, separated by a space character:
 
 - Navigation capabilities listed in ICAO Doc 9965 Vol II chapter B-2.10.3
   - `F`: Automatic Direction Finder (ADF)
@@ -372,8 +372,7 @@ in a flight plan.
 
 #### `performanceBasedCode`
 
-The property `performanceBasedCode` is used to exchange information about the following
-PBN capabilities:
+The property `performanceBasedCode` is used to exchange information about the PBN capabilities of the flight. It shall consist of zero or more of the following values, separated by a space character:
 
 - PBN capabilities listed in PANS-ATM Appendix 3, item 18 PBN/
   - `A1`: RNAV 10 (RNP 10)
@@ -437,7 +436,7 @@ the content of `performanceBasedCode` and `navigationCapabilityCode` / `standard
 If any of the navigation capabilities (`STANDARD`, `O`, `D`, `I`, `G`, `C`) are changed then 
 the dependencies should be re-checked.
 
-:warning: no consistency rule specified in the FF-ICE/R1 for codes `D2`, `D3`, `D4`, `L1`. Is this intentional or is it a gap? :warning: 
+:warning: no consistency rule specified in the FF-ICE/R1 manual for codes `D2`, `D3`, `D4`, `L1`. Is this intentional or is it a gap? :warning: 
 
 
 #### `requiredRunwayVisualRange`
@@ -468,8 +467,8 @@ in a flight plan.
 
 #### `surveillanceCapabilityCode`
 
-The property `surveillanceCapabilityCode` is used to exchange information about the following
-surveillance capabilities:
+The property `surveillanceCapabilityCode` is used to exchange information about the Transponder, ADS-B and ADS-C capabilities pf the flight. 
+It shall consist of zero or more of the following values, separated by a space character:
 
 - Transponder capabilities
   - `A`: Mode A Transponder (4 digits-4,096 codes)
@@ -534,6 +533,99 @@ surveillance capabilities:
 :warning: *How can this be exchanged in FIXM ? Using `otherSurveillanceCapabilities`? Encoding guidance probably required for this.* :warning:
 
 ### `survival`
+
+
+
+#### carriedEltHexIdentifier
+
+The property `carriedEltHexIdentifier` is used to exchange the identifier(s) of the Emergency Locator Transmitter(s) (Distress Tracking) on board the aircraft. 
+An ELT DT identifier consists of 15 or 23 hexadecimal characters. When there is more than one ELT DT per aircraft, the identifiers shall be seperated by a space character.
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:aircraft>
+  <fx:capabilities>
+    <fx:survival>
+      <fx:carriedEltHexIdentifier>1B71E26D012FDFF</fx:carriedEltHexIdentifier>
+      <!-- ... -->
+```
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:aircraft>
+  <fx:capabilities>
+    <fx:survival>
+      <fx:carriedEltHexIdentifier>1B71E26D012FDFF AEF4F4F0BAD40F0F0F19580</fx:carriedEltHexIdentifier>
+      <!-- ... -->
+```
+
+
+More than one 
+
+#### `dinghyInformation`
+
+The property `dinghyInformation` is used to exchange information about the dinghies on board the aircraft. This `dinghyInformation` consists of the following fields:
+- `colour`: used for indicating the colour of the dinghies.
+- `covered`: put the value `COVERED` in this field if the dinghies are covered. If the dinghies are not covered, the field `covered` shall be omitted.
+- `number`: used for indicating the number of dinghies carried, expressed as a positive integer.
+- `totalCapacity`: used for indicating the number of persons that the dinghies on board the aircraft can altogether receive.
+
+> Example - values taken from Doc 4444
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:aircraft>
+  <fx:capabilities>
+    <fx:survival>
+      <fx:dinghyInformation>
+        <fx:colour>YELLOW</fx:colour>
+        <fx:covered>COVERED</fx:covered>
+        <fx:number>11</fx:number>
+        <fx:totalCapacity>330</fx:totalCapacity>
+      </fx:dinghyInformation>
+      <!-- ... -->
+```
+
+#### emergencyRadioCapabilityType
+
+The property `emergencyRadioCapabilityType` is ued to exchange information about the types of emergency radios carried on board th aircraft.
+It shall consist of zero or more of the following values, separated by a space character:
+- `EMERGENCY_LOCATOR_TRANSMITTER`: Emergency locator transmitter (ELT) is available.
+- `ULTRA_HIGH_FREQUENCY`: UHF on frequency 243.0 MHz is available.
+- `VERY_HIGH_FREQUENCY`: VHF on frequency 121.5 MHz is available.
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:aircraft>
+  <fx:capabilities>
+    <fx:survival>
+      <fx:emergencyRadioCapabilityType>EMERGENCY_LOCATOR_TRANSMITTER ULTRA_HIGH_FREQUENCY VERY_HIGH_FREQUENCY</fx:emergencyRadioCapabilityType>
+      <!-- ... -->
+```
+
+#### lifeJacketType
+
+#### survivalEquipmentType / survivalEquipmentRemarks
+
+The property `survivalEquipmentType` is used to exchange information about the types of survival capabilities on board the aircraft.
+It shall consist of zero or more of the following values, separated by a space character:
+- `DESERT`: Desert survival equipment is carried.
+- `JUNGLE`: Jungle survival equipment is carried.
+- `MARITIME`: Maritime survival equipment is carried.
+- `POLAR`: Polar survival equipment is carried.
+
+The field `survivalEquipmentRemarks`  can be used to provide clarifying remarks and other survival equipment carried that is not specified above.
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:aircraft>
+  <fx:capabilities>
+    <fx:survival>
+      <fx:survivalEquipmentType>MARITIME</fx:survivalEquipmentType>
+      <!-- ... -->
+```
+
+----
 
 > Example - values taken from Doc 4444
 
