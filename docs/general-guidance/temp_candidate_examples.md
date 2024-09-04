@@ -460,9 +460,8 @@ Standard equipment is considered to be `V` (VHF RTF), `O` (VOR) and `L` (ILS), u
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
 <fx:aircraft>
   <fx:capabilities>
-		<fx:capabilities>
-			<fx:standardCapabilities>STANDARD</fx:standardCapabilities>
-      <!-- ... -->
+    <fx:standardCapabilities>STANDARD</fx:standardCapabilities>
+    <!-- ... -->
 ```
 
 
