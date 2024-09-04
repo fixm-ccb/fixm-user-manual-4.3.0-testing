@@ -679,11 +679,13 @@ The field `survivalEquipmentRemarks`  can be used to provide clarifying remarks 
 
 ### `supplementaryInformation`
 
-`personsOnBoard` = The total number of persons (passengers and crew) on board the aircraft.
+In FIXM, the property `supplementaryInformation` consists of the following fields:
+- `fuelEndurance`: This is the estimated maximum length of time the aircraft can spend in the cruise phase of flight, determined by the amount of fuel at takeoff. The fuel endurance shall be expressed as hours and minutes of flying time. The encoding of a `fuelEndurance` shall therefore always start with `P0Y0M0DT`.
 
 > Encoding Rules: FF-ICE/R1 Manual B-2.33: *fuel endurance expressed as hours and minutes of flying time.*
 
-The `fuelEndurance` shall be expressed as hours and minutes of flying time. The Encoding of a `fuelEndurance` shall therefore always start with `P0Y0M0DT`.
+- `personsOnBoard`: This is the total number of persons (passengers and crew) on board the aircraft.
+- `pilotInCommand`: This is the pilot designated by the operator, or in the case of general aviation, the owner, as being in command and charged with the safe conduct of a flight.
 
 > Example from Doc 4444
 
@@ -697,6 +699,9 @@ The `fuelEndurance` shall be expressed as hours and minutes of flying time. The 
   </fx:pilotInCommand>
 </fx:supplementaryInformation>
 ```
+
+Note: The `supplementaryInformation` does not capture the complete set of elements described in ICAO Doc 4444 ITEM 19 "Supplementary Information"; it only contains those elements that could not be modeled more logically in other FIXM structures. 
+
 
 ## 
 
