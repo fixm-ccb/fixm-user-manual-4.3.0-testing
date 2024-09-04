@@ -450,11 +450,21 @@ The `requiredRunwayVisualRange` is expressed as a [Distance].
 
 ### `standardCapabilities`
 
-The property `standardCapabilities` can be used to insicate standard equipment and capabilities. 
+The property `standardCapabilities` can be used to indicate standard equipment and capabilities. The property, if exchanged, shall take the value `STANDARD`.
 
 > From Doc 4444 Appendix 3 Field 10a) Note 1
 
 Standard equipment is considered to be `V` (VHF RTF), `O` (VOR) and `L` (ILS), unless another combination is prescribed by the appropriate ATS authority.
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:aircraft>
+  <fx:capabilities>
+		<fx:capabilities>
+			<fx:standardCapabilities>STANDARD</fx:standardCapabilities>
+      <!-- ... -->
+```
+
 
 ### `surveillance`
 
