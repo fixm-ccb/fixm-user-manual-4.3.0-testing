@@ -189,6 +189,7 @@ Concretely, the `actualTimeOfArrival` is exchanged in FIXM using the following p
   - `position` shall capture the geographical position of that point, expressed as a [GeographicalPosition]
 
 ```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
 <fx:arrival>
   <fx:actualTimeOfArrival>
     <fx:time>2024-06-19T20:43:26Z</fx:time>
@@ -247,6 +248,7 @@ impossible or inadvisable to land at the `destinationAerodrome`. Up to 2 `destin
 Example - a flight scheduled to land at Düsseldorf Airport (EDDL) with Münster Osnabrück Airport (EDDG) identified as destination alternate.
 
 ```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
 <fx:arrival>
   <fx:destinationAerodrome>
     <fb:locationIndicator>EDDL</fb:locationIndicator>
@@ -543,8 +545,6 @@ It shall consist of zero or more of the following values, separated by a space c
 
 ### `survival`
 
-
-
 #### carriedEltHexIdentifier
 
 The property `carriedEltHexIdentifier` is used to exchange the identifier(s) of the Emergency Locator Transmitter(s) (Distress Tracking) on board the aircraft. 
@@ -568,8 +568,6 @@ An ELT DT identifier consists of 15 or 23 hexadecimal characters. When there is 
       <!-- ... -->
 ```
 
-
-More than one 
 
 #### `dinghyInformation`
 
@@ -633,6 +631,43 @@ The field `survivalEquipmentRemarks`  can be used to provide clarifying remarks 
       <fx:survivalEquipmentType>MARITIME</fx:survivalEquipmentType>
       <!-- ... -->
 ```
+
+
+## Package fx:Departure
+
+### actualTimeOfDeparture
+
+An departure time can be recorded by different automated or manual means which do not
+always refer to the same event or location. Therefore, FIXM proposes different options 
+to exchange the `actualTimeOfDeparture`, in order to help system providers and operators select the 
+one most applicable to their operations. 
+
+Concretely, the `actualTimeOfDeparture` is exchanged in FIXM using the following properties:
+- property `time` captures the departure time value, expressed as a [DateTimeUtc].
+- properties `type` and `position` may be used optionally to provide details about the event and point on the departure aerodrome to which the departure time refers.
+  - `type` shall be one of the following value: `WHEELS_OFF`, `OFF_BLOCKS`, `START_TAKEOFF_ROLL`.
+  - `position` shall capture the geographical position of that point, expressed as a [GeographicalPosition]
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:departure>
+  <fx:actualTimeOfDeparture>
+    <fx:time>2024-06-19T20:47:32Z</fx:time>
+    <fx:type>WHEELS_OFF</fx:type>
+  </fx:actualTimeOfDeparture>
+  <!-- ... -->
+```
+
+### runwayDirection 
+
+`TODO`
+
+###takeoffAlternateAerodrome
+
+A `takeoffAlternateAerodrome` is an alternate aerodrome at which an aircraft would be able to land should this become necessary
+shortly after take-off and it is not possible to use the `departureAerodrome`. Up to 2 `takeoffAlternateAerodrome` may be
+specified.
+
 
 ## fx:Emergency
 
