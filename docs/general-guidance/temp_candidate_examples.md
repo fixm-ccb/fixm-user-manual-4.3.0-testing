@@ -286,7 +286,8 @@ Example - a flight scheduled to land at Düsseldorf Airport (EDDL) with Münster
 
 #### `communicationCapabilityCode`
 
-The property `communicationCapabilityCode` is used to exchange information about the capabilities of the flight in terms of voice communication, ACARS data communication and RCP (Required Communication Performance). It shall consist of zero or more of the following values, separated by a space character:
+The property `communicationCapabilityCode` is used to exchange information about the capabilities of the flight in terms of voice communication, ACARS data communication and RCP (Required Communication Performance). 
+If present, it shall consist of one or more of the following values, separated by a space character:
 
 - Voice communication
   - `H`: HF RTF
@@ -339,7 +340,7 @@ in a flight plan.
 #### `navigationCapabilityCode`
 
 The property `navigationCapabilityCode` is used to exchange information about the navigation capabilities of the flight. 
-It shall consist of zero or more of the following values, separated by a space character:
+If present, it shall consist of one or more of the following values, separated by a space character:
 
 - Navigation capabilities listed in ICAO Doc 9965 Vol II chapter B-2.10.3
   - `F`: Automatic Direction Finder (ADF)
@@ -374,7 +375,8 @@ in a flight plan.
 
 #### `performanceBasedCode`
 
-The property `performanceBasedCode` is used to exchange information about the PBN capabilities of the flight. It shall consist of zero or more of the following values, separated by a space character:
+The property `performanceBasedCode` is used to exchange information about the PBN capabilities of the flight. 
+If present, it shall consist of one or more of the following values, separated by a space character:
 
 - PBN capabilities listed in PANS-ATM Appendix 3, item 18 PBN/
   - `A1`: RNAV 10 (RNP 10)
@@ -478,7 +480,7 @@ in a flight plan.
 
 #### `surveillanceCapabilityCode`
 
-The property `surveillanceCapabilityCode` is used to exchange information about the Transponder, ADS-B and ADS-C capabilities pf the flight. 
+The property `surveillanceCapabilityCode` is used to exchange information about the Transponder, ADS-B and ADS-C capabilities of the flight. 
 It shall consist of zero or more of the following values, separated by a space character:
 
 - Transponder capabilities
@@ -545,7 +547,7 @@ It shall consist of zero or more of the following values, separated by a space c
 
 ### `survival`
 
-#### carriedEltHexIdentifier
+#### `carriedEltHexIdentifier`
 
 The property `carriedEltHexIdentifier` is used to exchange the identifier(s) of the Emergency Locator Transmitter(s) (Distress Tracking) on board the aircraft. 
 An ELT DT identifier consists of 15 or 23 hexadecimal characters. When there is more than one ELT DT per aircraft, the identifiers shall be seperated by a space character.
@@ -593,7 +595,7 @@ The property `dinghyInformation` is used to exchange information about the dingh
       <!-- ... -->
 ```
 
-#### emergencyRadioCapabilityType
+#### `emergencyRadioCapabilityType`
 
 The property `emergencyRadioCapabilityType` is ued to exchange information about the types of emergency radios carried on board the aircraft.
 It shall consist of zero or more of the following values, separated by a space character:
@@ -612,7 +614,7 @@ It shall consist of zero or more of the following values, separated by a space c
 
 #### lifeJacketType
 
-#### survivalEquipmentType / survivalEquipmentRemarks
+#### `survivalEquipmentType` / `survivalEquipmentRemarks`
 
 The property `survivalEquipmentType` is used to exchange information about the types of survival capabilities on board the aircraft.
 It shall consist of zero or more of the following values, separated by a space character:
@@ -635,7 +637,7 @@ The field `survivalEquipmentRemarks`  can be used to provide clarifying remarks 
 
 ## Package fx:Departure
 
-### actualTimeOfDeparture
+### `actualTimeOfDeparture`
 
 A departure time can be recorded by different automated or manual means which do not
 always refer to the same event or location. Therefore, FIXM proposes different options 
@@ -658,11 +660,11 @@ Concretely, the `actualTimeOfDeparture` is exchanged in FIXM using the following
   <!-- ... -->
 ```
 
-### runwayDirection 
+### `runwayDirection`
 
 `TODO`
 
-###takeoffAlternateAerodrome
+### `takeoffAlternateAerodrome`
 
 A `takeoffAlternateAerodrome` is an alternate aerodrome at which an aircraft would be able to land should this become necessary
 shortly after take-off and it is not possible to use the `departureAerodrome`. Up to 2 `takeoffAlternateAerodrome` may be
@@ -699,7 +701,19 @@ specified.
 
 ## fx:EnRoute
 
+### `alternateAerodrome`
+
+An en-route `alternateAerodrome` is an alternate aerodrome at which an aircraft would be able to land in the event that a diversion
+becomes necessary while en route. Up to 20 en-route `alternateAerodrome`  may be specified.
+
+### `boundaryCrossingCoordination`
+
+`TODO`
+
 ### `currentModeACode`
+
+The propoerty `currentModeACode` is used to exchange the SSR code assigned to the aircraft by ATS and
+transmitted in Mode A.
 
 > Example from Doc 4444
 
@@ -711,6 +725,130 @@ specified.
 ```
 
 ## fx:Flight
+
+### `flightConstraint`
+
+`TODO`
+
+### `flightIdentification`
+
+#### `iataFlightDesignator`
+
+FIXM strives to facilitate interoperability between the ATM and airline domains by including the ability, where necessary, to add the IATA
+representation of relevant information. In particular, property `flightIdentification` has a field `iataFlightDesignator` that can be used to 
+exchange the commercial flight identifier. 
+
+If provided, property `iataFlightDesignator` shall consist of: 
+- the `iataOperatorCode`: the IATA identifier for the operator of the flight. The `iataOperatorCode` shall be valid code listed in IATA's [Airline Coding Directory].
+- the `flightNumber`: Up to four-digit commercial flight number.
+- optionally, the `operationalSuffix`: One character suffix used to further identify a flight. 
+
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->    
+<fx:flight>
+  <fx:flightIdentification>
+    <fx:iataFlightDesignator>			
+      <fx:flightNumber>12</fx:flightNumber>
+      <fx:iataOperatorCode>UA</fx:iataOperatorCode>
+    </fx:iataFlightDesignator>
+    <!-- [...] -->
+```
+
+
+### `flightPlanOriginator`
+
+`TODO`
+
+### `flightPlanSubmitter`
+
+`TODO`
+
+### `flightRulesCategory`
+
+The property `flightRulesCategory` is used to exchange the category of flight rules with which the pilot intends to comply.
+It shall be one of the following values:
+- `I`: Intention to operate the entire flight under the IFR;
+- `V`: Intention to operate the entire flight under the VFR;
+- `Y`: Intention to operate initially under the IFR, followed by one or more subsequent changes of flight rules;
+- `Z`: Intention to operate initially under the VFR, followed by one or more subsequent changes of flight rules.
+
+If the value `Y` or `Z` is used, the point or points at which a [flight rules change] is planned shall be described in the `routeTrajectoryGroup`. 
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:flightRulesCategory>I</fx:flightRulesCategory>
+```
+
+### `flightType`
+
+The property `flightType` is used to exchange the indication of the type of carried out aircraft operation. 
+It shall be one of the following values:
+- `S`: Scheduled Air Transport
+- `N`: Non-Scheduled Air Transport
+- `G`: General Aviation
+- `M`: Military
+- `X`: Other
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:flightType>S</fx:flightType>
+```
+
+### `operator`
+
+`TODO`
+
+### `radioCommunicationFailure`
+
+`TODO`
+
+### `remarks`
+
+The property `remarks` is used to exchange any other plain-language remarks when required by the appropriate ATS authority or deemed necessary, by the pilot-in-command for the provision of air traffic services. 
+This may include, for instance, other reasons for special handling by ATS not covered by property `specialHandling`.
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:remarks>NO POSITION REPORT SINCE DEP PLUS 2 MINUTES</fx:remarks>
+```
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:remarks>CHARTER</fx:remarks>
+```
+
+### `routeTrajectoryGroup`
+
+`TODO`
+
+### `specialHandling`
+
+The property `specialHandling` is used to exchange to the reason for special handling of a flight by ATS. 
+If present, it shall consist of one or more of the following values, separated by a space character:
+- `ALTRV`: for a flight operated in accordance with an altitude reservation;
+- `ATFMX`: for a flight approved for exemption from ATFM measures by the appropriate ATS authority;
+- `FFR`: fire-fighting;
+- `FLTCK`: flight check for calibration of navaids;
+- `HAZMAT`: for a flight carrying hazardous material;
+- `HEAD`: a flight with Head of State status;
+- `HOSP`: for a medical flight declared by medical authorities;
+- `HUM`: for a flight operating on a humanitarian mission;
+- `MARSA`: for a flight for which a military entity assumes responsibility for separation of military aircraft;
+- `MEDEVAC`: for a life critical medical emergency evacuation;
+- `NONRVSM`: for a non-RVSM capable flight intending to operate in RVSM airspace;
+- `SAR`: for a flight engaged in a search and rescue mission;
+- `STATE`: for a flight engaged in military, customs or police services.
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:specialHandling>MEDEVAC</fx:specialHandling>
+```
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:specialHandling>HEAD MARSA</fx:specialHandling>
+```
 
 ### `supplementaryInformation`
 
@@ -746,3 +884,5 @@ Note: The `supplementaryInformation` does not capture the complete set of elemen
 [GeographicalPosition]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_AeronauticalReference?id=geographicalposition
 [AerodromeReference]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_AeronauticalReference?id=aerodromereference
 [Distance]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_Measures
+[Flight Rules Change]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory
+[Airline Coding Directory]: https://www.iata.org/en/publications/manuals/airline-coding-directory/
