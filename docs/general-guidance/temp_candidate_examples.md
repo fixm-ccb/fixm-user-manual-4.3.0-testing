@@ -496,7 +496,7 @@ It shall consist of zero or more of the following values, separated by a space c
 - ADS-B capabilities
   - `V1`: VDL Mode 4 With "Out" Capability 
   - `V2`: VDL Mode 4 With "Out" and "In" Capability
-  - :warning: *The FF-ICE/R1 Manual Chapter B-2.10.14 b) ii) explains that it shall be possible to indicate the ABS-B capability "1090 MHz With "In" Capability". The code `B2` indicated "In" and "Out" capability altogether. It is assumed that the "In" capability always come together with the "Out" capability.* :warning: 
+  - :warning: *The FF-ICE/R1 Manual Chapter B-2.10.14 b) ii) explains that it shall be possible to indicate the ABS-B capability "1090 MHz With "In" Capability". The definition of code `B2` in FIXM says "In" and "Out" capability altogether. It is assumed that the "In" capability always come together with the "Out" capability. TBC* :warning: 
   - `B1`: 1090 MHz With "Out" Capability
   - `B2`: 1090 MHz With "Out" and "In" Capability
   - `U1`: Universal Access Transceiver (UAT) With "Out" Capability
