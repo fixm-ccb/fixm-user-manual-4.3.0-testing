@@ -738,7 +738,7 @@ FIXM strives to facilitate interoperability between the ATM and airline domains 
 representation of relevant information. In particular, property `flightIdentification` has a field `iataFlightDesignator` that can be used to 
 exchange the commercial flight identifier. 
 
-If provided, property `iataFlightDesignator` shall consist of: 
+If exchanged, property `iataFlightDesignator` shall consist of: 
 - the `iataOperatorCode`: the IATA identifier for the operator of the flight. The `iataOperatorCode` shall be valid code listed in IATA's [Airline Coding Directory].
 - the `flightNumber`: Up to four-digit commercial flight number.
 - optionally, the `operationalSuffix`: One character suffix used to further identify a flight. 
