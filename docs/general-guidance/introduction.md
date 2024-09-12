@@ -25,7 +25,7 @@ Package [`fx:Cargo`]
 <!-- - **fx:DangerousGoodsPackage:** allPackedInOne, compatibilityGroup, dangerousGoodsLimitation, dangerousGoodsQuantity, hazardClass, packingGroup, properShippingName, radioactiveMaterials, shipmentDimensions, subsidiaryHazardClass, unNumber -->
 ---
 Package [`fx:Departure`]
-- **Departure:** actualTimeOfDeparture, [airfileIndicator], airportSlotIdentification, [departureAerodrome], [departureAerodromePrevious], [departurePoint], [departurePointPrevious], [estimatedOffBlockTime], [estimatedOffBlockTimePrevious], [estimatedRouteStartTime], [estimatedRouteStartTimePrevious], runwayDirection, takeoffAlternateAerodrome
+- **Departure:** actualTimeOfDeparture, [airfileIndicator], [airportSlotIdentification], [departureAerodrome], [departureAerodromePrevious], [departurePoint], [departurePointPrevious], [estimatedOffBlockTime], [estimatedOffBlockTimePrevious], [estimatedRouteStartTime], [estimatedRouteStartTimePrevious], runwayDirection, takeoffAlternateAerodrome
 ---
 Package [`fx:Emergency`]
 - **FlightEmergency:** actionTaken, emergencyDescription, lastContact, originator, otherInformation, phase
