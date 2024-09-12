@@ -658,6 +658,7 @@ The field `survivalEquipmentRemarks`  can be used to provide clarifying remarks 
       <!-- ... -->
 ```
 
+---
 
 ## Package fx:Departure
 
@@ -694,6 +695,7 @@ A `takeoffAlternateAerodrome` is an alternate aerodrome at which an aircraft wou
 shortly after take-off and it is not possible to use the `departureAerodrome`. Up to 2 `takeoffAlternateAerodrome` may be
 specified.
 
+---
 
 ## fx:Emergency
 
@@ -748,6 +750,8 @@ transmitted in Mode A.
   <!-- [...] -->
 ```
 
+---
+
 ## fx:Flight
 
 ### `flightConstraint`
@@ -778,7 +782,6 @@ If exchanged, property `iataFlightDesignator` shall consist of:
     </fx:iataFlightDesignator>
     <!-- [...] -->
 ```
-
 
 ### `flightPlanOriginator`
 
@@ -899,8 +902,22 @@ In FIXM, the property `supplementaryInformation` consists of the following field
 
 Note: The `supplementaryInformation` does not capture the complete set of elements described in ICAO Doc 4444 ITEM 19 "Supplementary Information"; it only contains those elements that could not be modeled more logically in other FIXM structures. 
 
+---
 
-## 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 [ICAO Doc. 8643]: https://www.icao.int/publications/DOC8643/Pages/Search.aspx
