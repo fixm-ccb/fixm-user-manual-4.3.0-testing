@@ -85,6 +85,15 @@ The `icaoAircraftTypeDesignator` shall be a valid two to four alphanumeric chara
 
 The property `otherAircraftType` can be used to exchange an aircraft type that has no ICAO Doc. 8643 identifier.
 
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:aircraft>
+  <fx:aircraftType>
+    <fx:otherAircraftType>STIPA-CAPRONI</fx:otherAircraftType>
+    <!-- https://en.wikipedia.org/wiki/Stipa-Caproni -->
+```
+
+
 ### `coloursAndMarkings`
 
 > From Doc 4444 Field Type 19:
