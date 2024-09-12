@@ -81,6 +81,9 @@ The `icaoAircraftTypeDesignator` shall be a valid two to four alphanumeric chara
     <!-- ... -->
 ```
 
+#### `otherAircraftType`
+
+The property `otherAircraftType` can be used to exchange an aircraft type that has no ICAO Doc. 8643 identifier.
 
 ### `coloursAndMarkings`
 
