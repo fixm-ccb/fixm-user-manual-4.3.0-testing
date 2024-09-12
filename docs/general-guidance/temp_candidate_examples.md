@@ -107,11 +107,11 @@ Property `coloursAndMarkings` can be used to exchange one or more of the followi
 
 :question: *Is the space character an appropriate separator? Should another separator be used?* :question:
 
-### `wakeTurbulenceCategory`
+### `wakeTurbulence`
 
-The `wakeTurbulenceCategory` is a grouping of aircraft according to the effect of the rotating air mass created behind the wing tips.
+The `wakeTurbulence` category is a grouping of aircraft according to the effect of the rotating air mass created behind the wing tips.
 
-The `wakeTurbulenceCategory` shall be one of the following values:
+The `wakeTurbulence` category shall be one of the following values:
   - `J` (SUPER) - for aircraft types specified as such in Doc 8643, Aircraft Type Designators
   - `H` (HEAVY) - for aircraft types of 136 000 kg or more, with the exception of aircraft types listed in Doc 8643 in the SUPER (J) category
   - `M` (MEDIUM) - for aircraft types less than 136 000 kg but more than 7 000 kg
@@ -119,7 +119,7 @@ The `wakeTurbulenceCategory` shall be one of the following values:
 
 > FF-ICE/R1 Manual E-4:
 
-The `wakeTurbulenceCategory` specified for the aircraft shall be consistent with the category associated with the `aircraftTypeDesignator` in [ICAO Doc. 8643].
+The `wakeTurbulence` specified for the aircraft shall be consistent with the category associated with the `aircraftTypeDesignator` in [ICAO Doc. 8643].
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
