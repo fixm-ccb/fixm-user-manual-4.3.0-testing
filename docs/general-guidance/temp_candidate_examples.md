@@ -4,10 +4,6 @@
 
 ### `aircraftAddress`
 
-The `aircraftAddress` is a unique combination of twenty-four bits available for assignment to an aircraft 
-for the purpose of air-ground communications, navigation and surveillance.
-
-
 > Example from Doc 10150 (LADR)
 
 ```xml
@@ -43,11 +39,11 @@ The value of the `aircraftApproachCategory` shall be consistent with the `aircra
 
 ### `aircraftType`
 
-#### `aircraftTypeDesignator`
+#### `icaoAircraftTypeDesignator`
 
 > FF-ICE/R1 Manual B-2.5.1:
 
-The `aircraftTypeDesignator` shall be a valid two to four alphanumeric characters indicator, starting with a letter, per [ICAO Doc. 8643].
+The `icaoAircraftTypeDesignator` shall be a valid two to four alphanumeric characters indicator, starting with a letter, per [ICAO Doc. 8643].
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
