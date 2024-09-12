@@ -4,7 +4,7 @@
 
 ### `aircraftAddress`
 
-> Example from Doc 10150 (LADR)
+> Additional example from Doc 10150 (LADR)
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
@@ -593,7 +593,7 @@ The property `dinghyInformation` is used to exchange information about the dingh
 
 #### `emergencyRadioCapabilityType`
 
-The property `emergencyRadioCapabilityType` is ued to exchange information about the types of emergency radios carried on board the aircraft.
+The property `emergencyRadioCapabilityType` is used to exchange information about the types of emergency radios carried on board the aircraft.
 It shall consist of zero or more of the following values, separated by a space character:
 - `EMERGENCY_LOCATOR_TRANSMITTER`: Emergency locator transmitter (ELT) is available.
 - `ULTRA_HIGH_FREQUENCY`: UHF on frequency 243.0 MHz is available.
@@ -608,7 +608,23 @@ It shall consist of zero or more of the following values, separated by a space c
       <!-- ... -->
 ```
 
-#### lifeJacketType
+#### `lifeJacketType`
+
+The property `lifeJacketType` is used to exchange information about the types of life jackets available on board the aircraft.
+It shall consist of zero or more of the following values, separated by a space character:
+- `FLUORESCENCE`: Life jackets are equipped with fluorescence.
+- `LIGHTS`: Life jackets are equipped with lights.
+- `ULTRA_HIGH_FREQUENCY`: UHF on frequency 243.0 MHz is available.
+- `VERY_HIGH_FREQUENCY`: VHF on frequency 121.5 MHz is available.
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:aircraft>
+  <fx:capabilities>
+    <fx:survival>
+      <fx:lifeJacketType>LIGHTS FLUORESCENCE</fx:lifeJacketType>
+      <!-- ... -->
+```
 
 #### `survivalEquipmentType` / `survivalEquipmentRemarks`
 
