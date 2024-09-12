@@ -89,8 +89,8 @@ The property `otherAircraftType` can be used to exchange an aircraft type that h
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
 <fx:aircraft>
   <fx:aircraftType>
-    <fx:otherAircraftType>STIPA-CAPRONI</fx:otherAircraftType>
-    <!-- https://en.wikipedia.org/wiki/Stipa-Caproni -->
+    <fx:otherAircraftType>PL-11 AIRTRUCK</fx:otherAircraftType>
+    <!-- https://en.wikipedia.org/wiki/Bennett_Airtruck -->
 ```
 
 
