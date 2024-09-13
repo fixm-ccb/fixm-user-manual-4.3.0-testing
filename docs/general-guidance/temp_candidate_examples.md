@@ -1011,15 +1011,27 @@ Examples:
 
 ## originator
 
-
+`TODO`
 
 ## planningStatus
 
+The property `planningStatus` is used in an `FficeMessage` of `type`=`PLANNING_STATUS` or `type`=`TRIAL_RESPONSE` to indicate the status of the preliminary flight plan or trial request with respect to the eASP. 
+It consists of the following properties:
+- as a minimum, property `value` is used to exchange the value of the planning status. It shall be one the following values:
+  - `CONCUR` - Indicates that the prelimnary flight plan or trial request, and in particular the route and trajectory, is acceptable without the need for modification. This should mean that if the flight plan were to be filed, it would be accepted.
+  - `NON_CONCUR` - Indicates that the preliminary flight plan or trial request does not comply with published airspace/route availability or published restrictions and would result in a rejection or an unacceptable status if the flight plan were to be filed.
+  - `NEGOTIATE` - Indicates that the flight plan, and in particular the route and trajectory, is acceptable and would be accepted if filed. However the route/trajectory determined by the eASP has included additional constraints and/or has applied ATM configuration factors such as runway-in-use or Met data which may have resulted in a route/trajectory that is different to the Desired route/trajectory.
+- property `explanation` is used to detail the inconsistencies with the ATM configuration and/or with restrictions that have led to the planning status `value` being set to `NON_CONCUR`. Property `explanation` shall be exchanged if and only if the Planning Status `value` is `NON_CONCUR`.
+
 ## recipient
+
+`TODO`
 
 ## referencedMessageIdentifier
 
 ## relevantAtmServiceProvider
+
+`TODO`
 
 ## respondByLimit
 
