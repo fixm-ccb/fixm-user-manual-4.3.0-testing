@@ -926,15 +926,15 @@ It consists of the following properties:
 ```xml
 <!--xmlns:ffice="http://www.fixm.aero/app/ffice/1.1"-->
 <ffice:filingStatus>
-	<ffice:value>ACCEPTABLE</ffice:value>
+  <ffice:value>ACCEPTABLE</ffice:value>
 </ffice:filingStatus>
 ```
 
 ```xml
 <!--xmlns:ffice="http://www.fixm.aero/app/ffice/1.1"-->
 <ffice:filingStatus>
-	<ffice:expectedEvaluationTime>2024-12-25T00:00:00Z</ffice:expectedEvaluationTime>
-	<ffice:value>PENDING</ffice:value>
+  <ffice:expectedEvaluationTime>2024-12-25T00:00:00Z</ffice:expectedEvaluationTime>
+  <ffice:value>PENDING</ffice:value>
 </ffice:filingStatus>
 ```
 
@@ -949,13 +949,69 @@ Note: when a Filing Status value is `NOT_ACCEPTABLE`, the content of the propert
 
 ## flight
 
-## forwardingProvider
+The property `flight` is captures the information about the flight associated with the `FficeMessage`. The expected content will vary depending on the `type` of `FficeMessage`.
+The information captured in property `flight` shall conform to the general encoding guidance.
 
 ## informationRequest
 
+The property `informationRequest` is used in an `FficeMessage` of `type`=`FLIGHT_DATA_REQUEST` in order to indicate what information about the flight is being requested. 
+
+The property `informationRequest` provides a choice between:
+- a predefined `type` of request, being one of the following values:
+    - `FLIGHT_PLAN`, to request the latest submitted flight plan;
+    - `FLIGHT_STATUS`, to request the latest status (Planning or Filing) from an eASP;
+    - `SUPPLEMENTARY_FLIGHT_PLAN`, to request the latest submitted search and rescue information;
+- an `other` custom type of request established by the flight data request service.
+
+```xml
+<!--xmlns:ffice="http://www.fixm.aero/app/ffice/1.1"-->
+<ffice:informationRequest>
+  <ffice:type>FLIGHT_PLAN</ffice:type>
+</ffice:informationRequest>
+```
+
+```xml
+<!--xmlns:ffice="http://www.fixm.aero/app/ffice/1.1"-->
+<ffice:informationRequest>
+  <ffice:other>PRELIMINARY_FLIGHT_PLAN</ffice:other>
+</ffice:informationRequest>
+```
+
 ## operatorFlightPlanVersion
 
+The negotiation process introducd by FF-ICE can give rise to a significant number of modifications to the flight plan, performed over a period of time.
+In order to assist in data synchronisation and in providing a reference for feedback, the operator is required to provide an 
+indication of the flight plan revision, using property `operatorFlightPlanVersion`.
+
+The `operatorFlightPlanVersion` shall be always expressed as a positive integer. An initial eFPL submission shall have the `operatorFlightPlanVersion` set to `1`. 
+A subsequent submission intending to replace the previous flight plan should indicate an `operatorFlightPlanVersion` one greater than the previously submitted plan or update.
+
+Examples:
+
+```xml
+<!-- Initial submission -->
+<!--xmlns:ffice="http://www.fixm.aero/app/ffice/1.1"-->
+<ffice:operatorFlightPlanVersion>1</ffice:operatorFlightPlanVersion>
+```
+
+```xml
+<!-- First subsequent submission -->
+<!--xmlns:ffice="http://www.fixm.aero/app/ffice/1.1"-->
+<ffice:operatorFlightPlanVersion>2</ffice:operatorFlightPlanVersion>
+```
+
+```xml
+<!-- Second subsequent submission -->
+<!--xmlns:ffice="http://www.fixm.aero/app/ffice/1.1"-->
+<ffice:operatorFlightPlanVersion>3</ffice:operatorFlightPlanVersion>
+```
+
+*Note: The `operatorFlightPlanVersion` only relates to the provision and update of flight plan data provided by the operator.*
+
+
 ## originator
+
+
 
 ## planningStatus
 
