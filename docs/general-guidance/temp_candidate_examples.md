@@ -1023,6 +1023,10 @@ It consists of the following properties:
   - `NEGOTIATE` - Indicates that the flight plan, and in particular the route and trajectory, is acceptable and would be accepted if filed. However the route/trajectory determined by the eASP has included additional constraints and/or has applied ATM configuration factors such as runway-in-use or Met data which may have resulted in a route/trajectory that is different to the Desired route/trajectory.
 - property `explanation` is used to detail the inconsistencies with the ATM configuration and/or with restrictions that have led to the planning status `value` being set to `NON_CONCUR`. Property `explanation` shall be exchanged if and only if the Planning Status `value` is `NON_CONCUR`.
 
+Rules:
+- The provision of a `negotiating` route/trajectory group by the eASP is appropriate for a status response of type `NEGOTIATE` or `NON-CONCUR`
+
+
 ## recipient
 
 `TODO`
