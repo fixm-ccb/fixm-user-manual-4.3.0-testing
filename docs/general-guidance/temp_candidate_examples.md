@@ -1,4 +1,4 @@
-# Candidate examples and rules for section `Encoding guidance`
+# Candidate inputs to section `Encoding guidance`
 
 ## fx:Aircraft
 
@@ -851,7 +851,7 @@ This may include, for instance, other reasons for special handling by ATS not co
 
 ### `specialHandling`
 
-The property `specialHandling` is used to exchange to the reason for special handling of a flight by ATS. 
+The property `specialHandling` is used to exchange the reason for special handling of a flight by ATS. 
 If present, it shall consist of one or more of the following values, separated by a space character:
 - `ALTRV`: for a flight operated in accordance with an altitude reservation;
 - `ATFMX`: for a flight approved for exemption from ATFM measures by the appropriate ATS authority;
@@ -907,9 +907,11 @@ Note: The `supplementaryInformation` does not capture the complete set of elemen
 
 ---
 
-# Candidate examples and rules for `ffice:FFiceMessage`
+# Candidate inputs to a new page `ffice:FFiceMessage` for section `USING FIXM IN SUPPORT OF FF-ICE`
 
-## filingStatus
+![Image](https://www.fixm.aero/releases/FFICE-Msg-1.1.0/doc/logical_model_documentation/EARoot/EA1/EA1/EA4.png)
+
+## `filingStatus`
 
 The property `filingStatus` is used in an `FficeMessage` of `type`=`FILING_STATUS` to indicate the status of the submitted flight with respect to the eASP. 
 It consists of the following properties:
@@ -947,9 +949,9 @@ Note: when a Filing Status value is `NOT_ACCEPTABLE`, the content of the propert
    - `EFPM402: CLOSED FPL WITH SAME GUFI EXISTS: (ARCID) (ADEP) (ADES) (EOBT)`
 - Other examples: ...
 
-## flight
+## `flight`
 
-The property `flight` is captures the information about the flight associated with the `FficeMessage`. The expected content will vary depending on the `type` of `FficeMessage`.
+The property `flight` captures the information about the flight associated with the `FficeMessage`. The expected content will vary depending on the `type` of `FficeMessage`.
 The information captured in property `flight` shall conform to the general encoding guidance.
 
 ## informationRequest
@@ -977,7 +979,7 @@ The property `informationRequest` provides a choice between:
 </ffice:informationRequest>
 ```
 
-## operatorFlightPlanVersion
+## `operatorFlightPlanVersion`
 
 The negotiation process introducd by FF-ICE can give rise to a significant number of modifications to the flight plan, performed over a period of time.
 In order to assist in data synchronisation and in providing a reference for feedback, the operator is required to provide an 
@@ -1009,11 +1011,12 @@ Examples:
 *Note: The `operatorFlightPlanVersion` only relates to the provision and update of flight plan data provided by the operator.*
 
 
-## originator
+## `originator`
 
-`TODO`
+:warning: unclear how FF-ICE Participants should be encoded :warning: 
 
-## planningStatus
+
+## `planningStatus`
 
 The property `planningStatus` is used in an `FficeMessage` of `type`=`PLANNING_STATUS` or `type`=`TRIAL_RESPONSE` to indicate the status of the preliminary flight plan or trial request with respect to the eASP. 
 It consists of the following properties:
@@ -1027,30 +1030,114 @@ Rules:
 - The provision of a `negotiating` route/trajectory group by the eASP is appropriate for a status response of type `NEGOTIATE` or `NON-CONCUR`
 
 
-## recipient
+## `recipient`
 
-`TODO`
+:warning: unclear how FF-ICE Participants should be encoded :warning: 
 
-## referencedMessageIdentifier
 
-## relevantAtmServiceProvider
+## `referencedMessageIdentifier`
 
-`TODO`
+The property `referencedMessageIdentifier` can be used in an `FficeMessage` of type `SUBMISSION_RESPONSE`, `FILING_STATUS`, `PLANNING_STATUS`, `TRIAL_RESPONSE` or `FLIGHT_DATA_RESPONSE` in order to capture the identifier of the `FficeMessage` being responded to. It shall be expressed as a valid UUID v4.
 
-## respondByLimit
+```xml
+<!--xmlns:ffice="http://www.fixm.aero/app/ffice/1.1"-->
+<!-- RESPONSE TO AN FF-ICE MESSAGE -->
+<ffice:FficeMessage [...] >
+  <ffice:referencedMessageIdentifier codeSpace="urn:uuid">b4b24bb7-87c7-4ee2-8da9-e78977b1c752</ffice:referencedMessageIdentifier>
+  <ffice:type>SUBMISSION_RESPONSE</ffice:type>
+  <ffice:uniqueMessageIdentifier codeSpace="urn:uuid">c1e1e0b6-22ae-417b-b125-982fd00c4aae</ffice:uniqueMessageIdentifier>
+</ffice:FficeMessage>
+```
 
-## submissionStatus
+```xml
+<!--xmlns:ffice="http://www.fixm.aero/app/ffice/1.1"-->
+<!-- FFICE MESSAGE BEING RESPONDED TO -->
+<ffice:FficeMessage [...] >
+  <ffice:type>FILED_FLIGHT_PLAN</ffice:type>
+  <ffice:uniqueMessageIdentifier codeSpace="urn:uuid">b4b24bb7-87c7-4ee2-8da9-e78977b1c752</ffice:uniqueMessageIdentifier>
+</ffice:FficeMessage>  
+```
 
-## timestamp
 
-## translationProvider
+## `relevantAtmServiceProvider`
 
-## translationRecipient
+:warning: unclear how FF-ICE Participants should be encoded :warning: 
 
-## type
+
+## `respondByLimit`
+
+The property `respondByLimit` can be used in an `FficeMessage` of type `PLANNING_STATUS` or `FILING_STATUS`, as a complement to a `negotiating` route/trajectory, in order to capture the time limit by which a response is required. If the appropriate response has not been received within the `respondByLimit` provided, the conditions under which the `negotiating` route/trajectory is proposed may no longer be available or valid. 
+
+The `respondByLimit` shall be expressed as a valid [DateTimeUtc].
+
+```xml
+<!--xmlns:ffice="http://www.fixm.aero/app/ffice/1.1"-->
+<ffice:respondByLimit>2024-07-02T17:30:00Z</ffice:respondByLimit>
+```
+
+
+## `submissionStatus`
+
+The property `submissionStatus` is used in an `FficeMessage` of `type`=`SUBMISSION_RESPONSE` to indicate whether an `FficeMessage` could be processed and acted on. 
+It consists of the following properties:
+- as a minimum, property `value` is used to exchange the value of the submission status. It shall be one the following values:
+  - `ACK` - Indicates that a message could be processed and acted on.
+  - `MAN` - Indicates that a message could not be processed and acted on, and the receiving unit is attempting manual handling of the message.
+  - `REJ` - Indicates that a message could not be processed and acted on, and was not retained by the receiving system.
+- property `explanation` is used to detail the reasons why the `value` of the submission status has been set to `MAN` or `REJ`. Property `explanation` is mandatory when the submission status `value` is `MAN` or `REJ`.
+- property `originator` is used to identify the originator of the Submission Status, to be provided when forwarding the Submission Status back to the originator of a forwarding request.
+
+```xml
+<!--xmlns:ffice="http://www.fixm.aero/app/ffice/1.1"-->
+<ffice:submissionStatus>
+  <ffice:value>ACK</ffice:value>
+</ffice:submissionStatus>	
+```
+
+## `timestamp`
+
+The property `timestamp` is used to exchange the time and date that the `FficeMessage` was sent. It shall be expressed as a valid [DateTimeUtcHighPrecision].
+
+```xml
+<!--xmlns:ffice="http://www.fixm.aero/app/ffice/1.1"-->
+<ffice:timestamp>2024-06-20T13:54:32.199Z</ffice:timestamp>
+```
+
+## `translationProvider`
+
+:warning: unclear how FF-ICE Participants should be encoded :warning: 
+
+
+## `translationRecipient`
+
+:warning: unclear how FF-ICE Participants should be encoded :warning: 
+
+
+## `type`
+
+The property `type` is used to captured the type of `FficeMessage`. It shall be one of the following values:
+  - `FILED_FLIGHT_PLAN`
+  - `FILING_STATUS`
+  - `FLIGHT_ARRIVAL`
+  - `FLIGHT_CANCELLATION`
+  - `FLIGHT_DATA_REQUEST`
+  - `FLIGHT_DATA_RESPONSE`
+  - `FLIGHT_DEPARTURE`
+  - `FLIGHT_PLAN_UPDATE`
+  - `PLANNING_STATUS`
+  - `PRELIMINARY_FLIGHT_PLAN`
+  - `SUBMISSION_RESPONSE`
+  - `TRIAL_REQUEST`
+  - `TRIAL_RESPONSE`
 
 ## uniqueMessageIdentifier
 
+The property `uniqueMessageIdentifier` can be used to capture the unique identifier of the `FficeMessage`. It shall be expressed as a valid UUID v4.
+
+```xml
+<!--xmlns:ffice="http://www.fixm.aero/app/ffice/1.1"-->
+<ffice:uniqueMessageIdentifier codeSpace="urn:uuid">ac6d8016-44a6-4038-bf19-e3b7822f302a</ffice:uniqueMessageIdentifier>
+```
 
 
 
@@ -1058,6 +1145,7 @@ Rules:
 
 [ICAO Doc. 8643]: https://www.icao.int/publications/DOC8643/Pages/Search.aspx
 [DateTimeUtc]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_Types?id=datetimeutc-datetimeutchighprecision
+[DateTimeUtcHighPrecision]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_Types?id=datetimeutc-datetimeutchighprecision
 [GeographicalPosition]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_AeronauticalReference?id=geographicalposition
 [AerodromeReference]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_AeronauticalReference?id=aerodromereference
 [Distance]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_Measures
