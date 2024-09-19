@@ -26,6 +26,7 @@ end
 
 subgraph Technical Guidance
 FIXM_COMPONENTS[FIXM<br>Components]
+FIXM_DATA_SAMPLES[Data<br>Samples]
 FIXM_ENCODING_GUIDANCE[Encoding<br>Guidance]
 FIXM_FOR_FFICE[Using FIXM<br>for FF-ICE]
 FIXM_FOR_OTHER_USE[Using FIXM<br>for other use cases]
@@ -39,6 +40,7 @@ FIXM -.  details method<br>for versioning .- VERSIONING
 
 
 FIXM_COMPONENTS-. provides explanations<br>about the components of .- FIXM
+FIXM_DATA_SAMPLES-. provides XML samples<br>valid against .- FIXM
 FIXM_ENCODING_GUIDANCE-. describes general<br>encoding rules for .- FIXM
 FIXM_FOR_FFICE-. provides guidance<br>in support of<br>FF-ICE implementation<br>using .- FIXM
 FIXM_FOR_OTHER_USE-. provides guidance<br>for non-ICAO use cases<br>using.- FIXM
@@ -52,6 +54,7 @@ click CHARTER "https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/strat
 click VERSIONING "https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/strategic-docs/versioning_policy" "Browse the FIXM Versioning Policy"
 
 click FIXM_COMPONENTS "https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/introduction?id=fixm-encoding-guidance" "Explanations about the main FIXM components"
+click FIXM_DATA_SAMPLES "https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/fixm-data-samples/overview" "FIXM data samples"
 click FIXM_ENCODING_GUIDANCE "https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/introduction" "The general rules always  applicable to FIXM"
 click FIXM_FOR_FFICE "https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/fixm-in-support-of-ffice/ffice-application-for-fixm" "Guidance about the use of FIXM for FF-ICE"
 click FIXM_FOR_OTHER_USE "https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/fixm-for-other-use-cases/using-fixm-core-without-an-application" "Guidance about the usage of FIXM in other contexts"
