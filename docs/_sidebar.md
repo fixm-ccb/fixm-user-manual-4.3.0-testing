@@ -15,7 +15,7 @@
   - [Overview](fixm-data-samples/overview.md)
 
 
-- **FIXM Encoding Guidance**
+- **FIXM Encoding Guidance<br>(FLIGHT package)**
   - [Overview](general-guidance/introduction.md)
   - [fx:Aircraft](general-guidance/fx_Aircraft.md)
   - [fx:Arrival](general-guidance/fx_Arrival.md)
@@ -28,12 +28,18 @@
   - [fx:RouteChanges](general-guidance/fx_RouteChanges.md)
   - [fx:RouteTrajectory](general-guidance/fx_RouteTrajectory.md)
   - [fx:Constraints](general-guidance/fx_Constraints.md)
+
+
+- **FIXM Encoding Guidance<br>(BASE package)**
   - [fb:Address](general-guidance/fb_Address.md)
   - [fb:AeronauticalReference](general-guidance/fb_AeronauticalReference.md)
   - [fb:Measures](general-guidance/fb_Measures.md)
   - [fb:Organization](general-guidance/fb_Organization.md)
   - [fb:RangesAndChoices](general-guidance/fb_RangesAndChoice.md)
   - [fb:Types](general-guidance/fb_Types.md)
+
+
+- **FIXM Encoding Guidance<br>(Miscellaneous)**
   - [Rules for Absent Data](general-guidance/rules-for-absent-data.md)
   - [Applying Templates in XML](general-guidance/applying_templates.md)
   - [Use of other -XMs](general-guidance/the-use-of-other-exchange-models.md)
