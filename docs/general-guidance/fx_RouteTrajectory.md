@@ -454,7 +454,7 @@ The indication that the aeronautical dataset for cycle `2202` has been used for 
 
 ---
 
-## *references*
+## *references* <!-- {docsify-ignore} -->
 
 ### ICAO References
 
