@@ -8,6 +8,6 @@
 
 ---
 
-## *references*
+## *references* <!-- {docsify-ignore} -->
 
 ...

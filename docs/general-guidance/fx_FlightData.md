@@ -144,7 +144,7 @@ Example
 
 ---
 
-## *references*
+## *references* <!-- {docsify-ignore} -->
 
 ### ICAO References
 

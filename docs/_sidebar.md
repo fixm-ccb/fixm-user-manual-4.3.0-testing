@@ -13,7 +13,7 @@
   - [Overview](fixm-data-samples/overview.md)
 ---
 - **FIXM Encoding Guidance<br>(FLIGHT package)**
-  - [Overview](general-guidance/introduction.md?id=fxflight)
+  - [Overview](general-guidance/fx_overview.md)
   - [fx:Aircraft](general-guidance/fx_Aircraft.md)
   - [fx:Arrival](general-guidance/fx_Arrival.md)
   - [fx:Capability](general-guidance/fx_Capability.md)
@@ -27,7 +27,7 @@
   - [fx:Constraints](general-guidance/fx_Constraints.md)
 ---
 - **FIXM Encoding Guidance<br>(BASE package)**
-  - [Overview](general-guidance/introduction.md?id=fbbase)
+  - [Overview](general-guidance/fb_overview.md)
   - [fb:Address](general-guidance/fb_Address.md)
   - [fb:AeronauticalReference](general-guidance/fb_AeronauticalReference.md)
   - [fb:Measures](general-guidance/fb_Measures.md)

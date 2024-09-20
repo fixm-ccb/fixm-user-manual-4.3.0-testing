@@ -125,7 +125,7 @@ See above - chapter departureAerodrome / departurePoint.
 
 ---
 
-## *references*
+## *references*  <!-- {docsify-ignore} -->
 
 ### ICAO References
 
