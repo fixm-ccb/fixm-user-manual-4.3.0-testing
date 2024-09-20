@@ -1156,7 +1156,7 @@ Atlantic Ocean. **The examples shall never be used as operational data**.
 ```
 
 
-## *references*
+## *references* <!-- {docsify-ignore} -->
 
 ### ICAO References
 
