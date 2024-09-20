@@ -4,6 +4,8 @@ This section describes general encoding guidance for FIXM Core that is always ap
 
 *Note: links are provided below only when encoding guidance is available. The FIXM User Manual is being gradually enriched to cover all FIXM Core properties.*
 
+## `fx:Flight`
+
 ---
 Package [`fx:Aircraft`]
 - **Aircraft:** [aircraftAddress], aircraftApproachCategory, [aircraftType], [capabilities], coloursAndMarkings, [registration], wakeTurbulence
@@ -54,6 +56,9 @@ Package [`fx:RouteTrajectory`]
 ---
 Package [`fx:Constraints`]
 - **RouteTrajectoryConstraint:** departureOrArrivalIndicator, description, level, restrictionReference, speed, time
+---
+
+## `fb:Base`
 ---
 Package [`fb:Address`]
 - [ContactInformation], [OnlineContact], [PostalAddress], TelephoneContact
