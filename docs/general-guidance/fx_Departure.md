@@ -119,9 +119,21 @@ Airfile flights will represent the route start point in `departurePoint`, and wi
 
 ---
 
+## `departureAerodromePrevious` / `departurePointPrevious`
+
+See [`aircraftIdentificationPrevious`].
+
+---
+
 ## `estimatedOffBlockTime` / `estimatedRouteStartTime`
 
 See above - chapter departureAerodrome / departurePoint.
+
+---
+
+## `estimatedOffBlockTimePrevious` / `estimatedRouteStartTimePrevious`
+
+See [`aircraftIdentificationPrevious`].
 
 ---
 
@@ -130,3 +142,10 @@ See above - chapter departureAerodrome / departurePoint.
 ### ICAO References
 
 [I-04]: [ICAO Doc 4444, 16th Edition, 2016](https://portal.icao.int/icao-net/ICAO%20Documents/4444_cons_en.pdf) - PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management
+
+
+
+
+
+
+[`aircraftIdentificationPrevious`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentificationprevious
