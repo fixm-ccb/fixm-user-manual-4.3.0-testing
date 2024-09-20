@@ -89,6 +89,6 @@ Corresponding encoding in `FIXM 4.3.0`
 
 ---
 
-## *references*
+## *references* <!-- {docsify-ignore} -->
 
 ...
