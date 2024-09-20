@@ -6,9 +6,12 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
-?> COMING SOON
+## `destinationAerodromePrevious`
+
+See [`aircraftIdentificationPrevious`]
 
 ---
 
 ## *references* <!-- {docsify-ignore} -->
 
+[`aircraftIdentificationPrevious`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentificationprevious
