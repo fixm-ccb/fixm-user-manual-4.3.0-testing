@@ -177,7 +177,7 @@ This page formalizes the organization of the FIXM community and its operating pr
 5.3	The state diagram below indicates the main steps in the lifecycle of a FIXM Bug.
 
 ```mermaid
-graph TD
+graph TB
 INITIAL_STATE(( ))
 END_STATE(( ))
 UNDER_DISCUSSION([Under Discussion])
@@ -228,7 +228,7 @@ click CLICK_HERE "https://teams.microsoft.com/l/entity/2a527703-1f6f-4559-a332-d
 
 
 ```mermaid
-graph TD
+graph TB
 INITIAL_STATE(( ))
 END_STATE(( ))
 PROPOSED([Proposed])
