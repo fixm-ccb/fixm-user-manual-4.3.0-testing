@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ffice:FficeMessage xmlns:fb="http://www.fixm.aero/base/4.3" xmlns:fx="http://www.fixm.aero/flight/4.3" xmlns:ffice="http://www.fixm.aero/app/ffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="FficeSR_FficeMessageType">
+	<ffice:extension xsi:type="a type derived from ffice:FficeMessageExtensionType"/>
+	<ffice:flight>
+		<fx:extension xsi:type="a type derived from fb:FlightExtensionType"/>
+		<fx:flightIdentification>
+			<fx:extension xsi:type="a type derived from fb:FlightIdentificationExtensionType"/>
+			<fx:gufi codeSpace="" creationTime="" namespaceDomain="" namespaceIdentifier=""/>
+			<fx:gufiLegacy codeSpace=""/>
+		</fx:flightIdentification>
+	</ffice:flight>
+	<ffice:originator>
+		<fb:contact>
+			<fb:address>
+				<fb:administrativeArea/>
+				<fb:city/>
+				<fb:countryCode/>
+				<fb:countryName/>
+				<fb:deliveryPoint/>
+				<fb:extension xsi:type="a type derived from fb:PostalAddressExtensionType"/>
+				<fb:postalCode/>
+			</fb:address>
+			<fb:extension xsi:type="a type derived from fb:ContactInformationExtensionType"/>
+			<fb:name/>
+			<fb:onlineContact>
+				<fb:email/>
+				<fb:extension xsi:type="a type derived from fb:OnlineContactExtensionType"/>
+				<fb:linkage/>
+				<fb:network>
+					<fb:other/>
+					<fb:type/>
+				</fb:network>
+			</fb:onlineContact>
+			<fb:phoneFax>
+				<fb:extension xsi:type="a type derived from fb:TelephoneContactExtensionType"/>
+				<fb:facsimile/>
+				<fb:voice/>
+			</fb:phoneFax>
+			<fb:title/>
+		</fb:contact>
+		<fb:extension xsi:type="a type derived from fb:PersonOrOrganizationExtensionType"/>
+		<fb:identifier/>
+		<fb:identifierDomain/>
+		<fb:name/>
+	</ffice:originator>
+	<ffice:recipient>
+		<fb:contact>
+			<fb:address>
+				<fb:administrativeArea/>
+				<fb:city/>
+				<fb:countryCode/>
+				<fb:countryName/>
+				<fb:deliveryPoint/>
+				<fb:extension xsi:type="a type derived from fb:PostalAddressExtensionType"/>
+				<fb:postalCode/>
+			</fb:address>
+			<fb:extension xsi:type="a type derived from fb:ContactInformationExtensionType"/>
+			<fb:name/>
+			<fb:onlineContact>
+				<fb:email/>
+				<fb:extension xsi:type="a type derived from fb:OnlineContactExtensionType"/>
+				<fb:linkage/>
+				<fb:network>
+					<fb:other/>
+					<fb:type/>
+				</fb:network>
+			</fb:onlineContact>
+			<fb:phoneFax>
+				<fb:extension xsi:type="a type derived from fb:TelephoneContactExtensionType"/>
+				<fb:facsimile/>
+				<fb:voice/>
+			</fb:phoneFax>
+			<fb:title/>
+		</fb:contact>
+		<fb:extension xsi:type="a type derived from fb:PersonOrOrganizationExtensionType"/>
+		<fb:identifier/>
+		<fb:identifierDomain/>
+		<fb:name/>
+	</ffice:recipient>
+	<ffice:referencedMessageIdentifier codeSpace=""/>
+	<ffice:submissionStatus>
+		<ffice:explanation/>
+		<ffice:extension xsi:type="a type derived from ffice:SubmissionStatusExtensionType"/>
+		<ffice:originator>
+			<fb:contact>
+				<fb:address>
+					<fb:administrativeArea/>
+					<fb:city/>
+					<fb:countryCode/>
+					<fb:countryName/>
+					<fb:deliveryPoint/>
+					<fb:extension xsi:type="a type derived from fb:PostalAddressExtensionType"/>
+					<fb:postalCode/>
+				</fb:address>
+				<fb:extension xsi:type="a type derived from fb:ContactInformationExtensionType"/>
+				<fb:name/>
+				<fb:onlineContact>
+					<fb:email/>
+					<fb:extension xsi:type="a type derived from fb:OnlineContactExtensionType"/>
+					<fb:linkage/>
+					<fb:network>
+						<fb:other/>
+						<fb:type/>
+					</fb:network>
+				</fb:onlineContact>
+				<fb:phoneFax>
+					<fb:extension xsi:type="a type derived from fb:TelephoneContactExtensionType"/>
+					<fb:facsimile/>
+					<fb:voice/>
+				</fb:phoneFax>
+				<fb:title/>
+			</fb:contact>
+			<fb:extension xsi:type="a type derived from fb:PersonOrOrganizationExtensionType"/>
+			<fb:identifier/>
+			<fb:identifierDomain/>
+			<fb:name/>
+		</ffice:originator>
+		<ffice:value/>
+	</ffice:submissionStatus>
+	<ffice:timestamp/>
+	<ffice:type/>
+	<ffice:uniqueMessageIdentifier codeSpace=""/>
+</ffice:FficeMessage>
