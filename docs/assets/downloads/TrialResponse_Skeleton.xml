@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ffice:FficeMessage xmlns:fb="http://www.fixm.aero/base/4.3" xmlns:fx="http://www.fixm.aero/flight/4.3" xmlns:ffice="http://www.fixm.aero/app/ffice/1.1" xmlns:fficebugfix="http://www.fixm.aero/ffice/1.1/bugfix/2024.04.30" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="FficeTRP_FficeMessageType">
+	<ffice:extension xsi:type="a type derived from ffice:FficeMessageExtensionType"/>
+	<ffice:flight>
+		<fx:arrival>
+			<fx:extension xsi:type="a type derived from fb:ArrivalExtensionType"/>
+			<fx:runwayDirection href=""/>
+		</fx:arrival>
+		<fx:departure>
+			<fx:extension xsi:type="a type derived from fb:DepartureExtensionType"/>
+			<fx:runwayDirection href=""/>
+		</fx:departure>
+		<fx:extension xsi:type="a type derived from fb:FlightExtensionType"/>
+		<fx:flightConstraint>
+			<fx:applicability/>
+			<fx:extension xsi:type="a type derived from fb:FlightConstraintExtensionType"/>
+			<fx:impact/>
+			<fx:restrictionReference href="">
+				<fb:extension xsi:type="a type derived from fb:RestrictionReferenceExtensionType"/>
+				<fb:restrictionIdentifier/>
+				<fb:restrictionType/>
+			</fx:restrictionReference>
+		</fx:flightConstraint>
+		<fx:flightIdentification>
+			<fx:aircraftIdentification/>
+			<fx:extension xsi:type="a type derived from fb:FlightIdentificationExtensionType"/>
+			<fx:gufi codeSpace="" creationTime="" namespaceDomain="" namespaceIdentifier=""/>
+			<fx:gufiLegacy codeSpace=""/>
+			<fx:iataFlightDesignator>
+				<fx:extension xsi:type="a type derived from fb:IataFlightDesignatorExtensionType"/>
+				<fx:flightNumber/>
+				<fx:iataOperatorCode/>
+				<fx:operationalSuffix/>
+			</fx:iataFlightDesignator>
+		</fx:flightIdentification>
+		<fx:routeTrajectoryGroup>
+			<fx:extension xsi:type="a type derived from fb:RouteTrajectoryGroupContainerExtensionType"/>
+			<fx:negotiating>
+				<fx:climbProfile>
+					<fx:extension xsi:type="a type derived from fb:PerformanceProfileExtensionType"/>
+					<fx:profilePoint seqNum="">
+						<fx:airspeed uom=""/>
+						<fx:distance uom=""/>
+						<fx:extension xsi:type="a type derived from fb:ProfilePointExtensionType"/>
+						<fx:level>
+							<fb:altitude uom=""/>
+							<fb:flightLevel uom=""/>
+						</fx:level>
+						<fx:time/>
+					</fx:profilePoint>
+				</fx:climbProfile>
+				<fx:climbSchedule>
+					<fx:extension xsi:type="a type derived from fb:SpeedScheduleExtensionType"/>
+					<fx:initialSpeed uom=""/>
+					<fx:subsequentSpeed uom=""/>
+				</fx:climbSchedule>
+				<fx:descentProfile>
+					<fx:extension xsi:type="a type derived from fb:PerformanceProfileExtensionType"/>
+					<fx:profilePoint seqNum="">
+						<fx:airspeed uom=""/>
+						<fx:distance uom=""/>
+						<fx:extension xsi:type="a type derived from fb:ProfilePointExtensionType"/>
+						<fx:level>
+							<fb:altitude uom=""/>
+							<fb:flightLevel uom=""/>
+						</fx:level>
+						<fx:time/>
+					</fx:profilePoint>
+				</fx:descentProfile>
+				<fx:descentSchedule>
+					<fx:extension xsi:type="a type derived from fb:SpeedScheduleExtensionType"/>
+					<fx:initialSpeed uom=""/>
+					<fx:subsequentSpeed uom=""/>
+				</fx:descentSchedule>
+				<fx:element seqNum="">
+					<fx:alongRouteDistance uom=""/>
+					<fx:constraint>
+						<fx:departureOrArrivalIndicator/>
+						<fx:description/>
+						<fx:extension xsi:type="a type derived from fb:RouteTrajectoryConstraintExtensionType"/>
+						<fx:level>
+							<fx:activation/>
+							<fx:extension xsi:type="a type derived from fb:LevelConstraintExtensionType"/>
+							<fx:level>
+								<fb:altitude uom=""/>
+								<fb:flightLevel uom=""/>
+								<fb:range>
+									<fb:extension xsi:type="a type derived from fb:VerticalRangeExtensionType"/>
+									<fb:lowerBound>
+										<fb:altitude uom=""/>
+										<fb:flightLevel uom=""/>
+									</fb:lowerBound>
+									<fb:upperBound>
+										<fb:altitude uom=""/>
+										<fb:flightLevel uom=""/>
+									</fb:upperBound>
+								</fb:range>
+							</fx:level>
+						</fx:level>
+						<fx:restrictionReference href="">
+							<fb:extension xsi:type="a type derived from fb:RestrictionReferenceExtensionType"/>
+							<fb:restrictionIdentifier/>
+							<fb:restrictionType/>
+						</fx:restrictionReference>
+						<fx:speed>
+							<fx:activation/>
+							<fx:extension xsi:type="a type derived from fb:SpeedConstraintExtensionType"/>
+							<fx:speed>
+								<fb:range>
+									<fb:extension xsi:type="a type derived from fb:TrueAirspeedRangeExtensionType"/>
+									<fb:lowerSpeed uom=""/>
+									<fb:upperSpeed uom=""/>
+								</fb:range>
+								<fb:value uom=""/>
+							</fx:speed>
+						</fx:speed>
+						<fx:time>
+							<fx:extension xsi:type="a type derived from fb:TimeConstraintExtensionType"/>
+							<fx:timeSpecification>
+								<fb:range>
+									<fb:earliest/>
+									<fb:extension xsi:type="a type derived from fb:TimeRangeExtensionType"/>
+									<fb:latest/>
+								</fb:range>
+								<fb:value/>
+							</fx:timeSpecification>
+						</fx:time>
+					</fx:constraint>
+					<fx:elementStartPoint>
+						<fb:aerodromeReferencePoint href="">
+							<fb:extension xsi:type="a type derived from fb:AerodromeReferenceExtensionType"/>
+							<fb:iataDesignator/>
+							<fb:locationIndicator/>
+							<fb:name/>
+							<fb:referencePoint srsName="">
+								<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+								<fb:pos/>
+							</fb:referencePoint>
+							<fb:referenceRelativePoint>
+								<fb:bearing uom="" zeroBearingType=""/>
+								<fb:distance uom=""/>
+								<fb:extension xsi:type="a type derived from fb:RelativePointExtensionType"/>
+								<fb:position srsName="">
+									<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+									<fb:pos/>
+								</fb:position>
+								<fb:referencePoint href="">
+									<fb:designator/>
+									<fb:extension xsi:type="a type derived from fb:NavaidExtensionType"/>
+									<fb:navaidServiceType/>
+									<fb:position srsName="">
+										<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+										<fb:pos/>
+									</fb:position>
+								</fb:referencePoint>
+							</fb:referenceRelativePoint>
+						</fb:aerodromeReferencePoint>
+						<fb:designatedPoint href="">
+							<fb:designator/>
+							<fb:extension xsi:type="a type derived from fb:DesignatedPointExtensionType"/>
+							<fb:position srsName="">
+								<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+								<fb:pos/>
+							</fb:position>
+						</fb:designatedPoint>
+						<fb:navaid href="">
+							<fb:designator/>
+							<fb:extension xsi:type="a type derived from fb:NavaidExtensionType"/>
+							<fb:navaidServiceType/>
+							<fb:position srsName="">
+								<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+								<fb:pos/>
+							</fb:position>
+						</fb:navaid>
+						<fb:position srsName="">
+							<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+							<fb:pos/>
+						</fb:position>
+						<fb:relativePoint>
+							<fb:bearing uom="" zeroBearingType=""/>
+							<fb:distance uom=""/>
+							<fb:extension xsi:type="a type derived from fb:RelativePointExtensionType"/>
+							<fb:position srsName="">
+								<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+								<fb:pos/>
+							</fb:position>
+							<fb:referencePoint href="">
+								<fb:designator/>
+								<fb:extension xsi:type="a type derived from fb:NavaidExtensionType"/>
+								<fb:navaidServiceType/>
+								<fb:position srsName="">
+									<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+									<fb:pos/>
+								</fb:position>
+							</fb:referencePoint>
+						</fb:relativePoint>
+					</fx:elementStartPoint>
+					<fx:extension xsi:type="fficebugfix:FficeMessageBugFixRouteTrajectoryElementExtensionType">
+						<fficebugfix:modifiedRouteItemReference/>
+					</fx:extension>
+					<fx:extension xsi:type="a type derived from fb:RouteTrajectoryElementExtensionType"/>
+					<fx:flightRulesChange/>
+					<fx:modified/>
+					<fx:plannedDelay>
+						<fx:delayReason/>
+						<fx:delayReference/>
+						<fx:delayType/>
+						<fx:delayValue/>
+						<fx:extension xsi:type="a type derived from fb:PlannedDelayExtensionType"/>
+					</fx:plannedDelay>
+					<fx:point4D>
+						<fx:altimeterSetting uom=""/>
+						<fx:extension xsi:type="a type derived from fb:TrajectoryPoint4DExtensionType"/>
+						<fx:level>
+							<fb:altitude uom=""/>
+							<fb:flightLevel uom=""/>
+						</fx:level>
+						<fx:metData>
+							<fx:extension xsi:type="a type derived from fb:MeteorologicalDataExtensionType"/>
+							<fx:temperature uom=""/>
+							<fx:windDirection uom=""/>
+							<fx:windSpeed uom=""/>
+						</fx:metData>
+						<fx:pointProperty>
+							<fx:description/>
+							<fx:extension xsi:type="a type derived from fb:TrajectoryPointPropertyExtensionType"/>
+							<fx:propertyType/>
+							<fx:reference href="">
+								<fx:extension xsi:type="a type derived from fb:TrajectoryPointReferenceExtensionType"/>
+								<fx:identifier/>
+								<fx:type/>
+							</fx:reference>
+						</fx:pointProperty>
+						<fx:position srsName="">
+							<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+							<fb:pos/>
+						</fx:position>
+						<fx:predictedAirspeed uom=""/>
+						<fx:predictedGroundspeed uom=""/>
+						<fx:time>
+							<fx:absoluteTime/>
+							<fx:relativeTimeFromInitialPredictionPoint/>
+						</fx:time>
+						<fx:verticalRange>
+							<fb:extension xsi:type="a type derived from fb:VerticalRangeExtensionType"/>
+							<fb:lowerBound>
+								<fb:altitude uom=""/>
+								<fb:flightLevel uom=""/>
+							</fb:lowerBound>
+							<fb:upperBound>
+								<fb:altitude uom=""/>
+								<fb:flightLevel uom=""/>
+							</fb:upperBound>
+						</fx:verticalRange>
+					</fx:point4D>
+					<fx:routeChange>
+						<fx:cruiseClimbStart>
+							<fx:extension xsi:type="a type derived from fb:CruiseClimbStartExtensionType"/>
+							<fx:lowerLevel>
+								<fb:altitude uom=""/>
+								<fb:flightLevel uom=""/>
+							</fx:lowerLevel>
+							<fx:speed uom=""/>
+							<fx:upperLevel>
+								<fx:altitude uom=""/>
+								<fx:atOrAbove/>
+								<fx:flightLevel uom=""/>
+							</fx:upperLevel>
+						</fx:cruiseClimbStart>
+						<fx:extension xsi:type="a type derived from fb:RouteChangeExtensionType"/>
+						<fx:level>
+							<fx:activation/>
+							<fx:extension xsi:type="a type derived from fb:CruisingLevelChangeExtensionType"/>
+							<fx:level>
+								<fb:altitude uom=""/>
+								<fb:flightLevel uom=""/>
+							</fx:level>
+						</fx:level>
+						<fx:speed>
+							<fx:activation/>
+							<fx:extension xsi:type="a type derived from fb:CruisingSpeedChangeExtensionType"/>
+							<fx:speed uom=""/>
+						</fx:speed>
+					</fx:routeChange>
+					<fx:routeDesignatorToNextElement>
+						<fx:otherRouteDesignator/>
+						<fx:routeDesignator href=""/>
+						<fx:standardInstrumentArrival href="">
+							<fb:abbreviatedDesignator/>
+							<fb:designator/>
+							<fb:extension xsi:type="a type derived from fb:SidStarReferenceExtensionType"/>
+						</fx:standardInstrumentArrival>
+						<fx:standardInstrumentDeparture href="">
+							<fb:abbreviatedDesignator/>
+							<fb:designator/>
+							<fb:extension xsi:type="a type derived from fb:SidStarReferenceExtensionType"/>
+						</fx:standardInstrumentDeparture>
+					</fx:routeDesignatorToNextElement>
+					<fx:routeTruncationIndicator/>
+				</fx:element>
+				<fx:extension xsi:type="a type derived from fb:RouteTrajectoryGroupExtensionType"/>
+				<fx:routeInformation>
+					<fx:cruisingLevel>
+						<fb:altitude uom=""/>
+						<fb:flightLevel uom=""/>
+						<fb:visualFlightRules/>
+					</fx:cruisingLevel>
+					<fx:cruisingSpeed uom=""/>
+					<fx:extension xsi:type="a type derived from fb:FlightRouteInformationExtensionType"/>
+					<fx:totalEstimatedElapsedTime/>
+				</fx:routeInformation>
+				<fx:takeoffMass uom=""/>
+			</fx:negotiating>
+		</fx:routeTrajectoryGroup>
+	</ffice:flight>
+	<ffice:originator>
+		<fb:contact>
+			<fb:address>
+				<fb:administrativeArea/>
+				<fb:city/>
+				<fb:countryCode/>
+				<fb:countryName/>
+				<fb:deliveryPoint/>
+				<fb:extension xsi:type="a type derived from fb:PostalAddressExtensionType"/>
+				<fb:postalCode/>
+			</fb:address>
+			<fb:extension xsi:type="a type derived from fb:ContactInformationExtensionType"/>
+			<fb:name/>
+			<fb:onlineContact>
+				<fb:email/>
+				<fb:extension xsi:type="a type derived from fb:OnlineContactExtensionType"/>
+				<fb:linkage/>
+				<fb:network>
+					<fb:other/>
+					<fb:type/>
+				</fb:network>
+			</fb:onlineContact>
+			<fb:phoneFax>
+				<fb:extension xsi:type="a type derived from fb:TelephoneContactExtensionType"/>
+				<fb:facsimile/>
+				<fb:voice/>
+			</fb:phoneFax>
+			<fb:title/>
+		</fb:contact>
+		<fb:extension xsi:type="a type derived from fb:PersonOrOrganizationExtensionType"/>
+		<fb:identifier/>
+		<fb:identifierDomain/>
+		<fb:name/>
+	</ffice:originator>
+	<ffice:planningStatus>
+		<ffice:explanation/>
+		<ffice:extension xsi:type="a type derived from ffice:PlanningStatusExtensionType"/>
+		<ffice:value/>
+	</ffice:planningStatus>
+	<ffice:recipient>
+		<fb:contact>
+			<fb:address>
+				<fb:administrativeArea/>
+				<fb:city/>
+				<fb:countryCode/>
+				<fb:countryName/>
+				<fb:deliveryPoint/>
+				<fb:extension xsi:type="a type derived from fb:PostalAddressExtensionType"/>
+				<fb:postalCode/>
+			</fb:address>
+			<fb:extension xsi:type="a type derived from fb:ContactInformationExtensionType"/>
+			<fb:name/>
+			<fb:onlineContact>
+				<fb:email/>
+				<fb:extension xsi:type="a type derived from fb:OnlineContactExtensionType"/>
+				<fb:linkage/>
+				<fb:network>
+					<fb:other/>
+					<fb:type/>
+				</fb:network>
+			</fb:onlineContact>
+			<fb:phoneFax>
+				<fb:extension xsi:type="a type derived from fb:TelephoneContactExtensionType"/>
+				<fb:facsimile/>
+				<fb:voice/>
+			</fb:phoneFax>
+			<fb:title/>
+		</fb:contact>
+		<fb:extension xsi:type="a type derived from fb:PersonOrOrganizationExtensionType"/>
+		<fb:identifier/>
+		<fb:identifierDomain/>
+		<fb:name/>
+	</ffice:recipient>
+	<ffice:referencedMessageIdentifier codeSpace=""/>
+	<ffice:timestamp/>
+	<ffice:type/>
+	<ffice:uniqueMessageIdentifier codeSpace=""/>
+</ffice:FficeMessage>

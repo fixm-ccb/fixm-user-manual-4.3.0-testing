@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ffice:FficeMessage xmlns:fb="http://www.fixm.aero/base/4.3" xmlns:fx="http://www.fixm.aero/flight/4.3" xmlns:ffice="http://www.fixm.aero/app/ffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="FficeFC_FficeMessageType">
+	<ffice:extension xsi:type="a type derived from ffice:FficeMessageExtensionType"/>
+	<ffice:flight>
+		<fx:arrival>
+			<fx:destinationAerodrome href="">
+				<fb:extension xsi:type="a type derived from fb:AerodromeReferenceExtensionType"/>
+				<fb:iataDesignator/>
+				<fb:locationIndicator/>
+				<fb:name/>
+				<fb:referencePoint srsName="">
+					<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+					<fb:pos/>
+				</fb:referencePoint>
+				<fb:referenceRelativePoint>
+					<fb:bearing uom="" zeroBearingType=""/>
+					<fb:distance uom=""/>
+					<fb:extension xsi:type="a type derived from fb:RelativePointExtensionType"/>
+					<fb:position srsName="">
+						<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+						<fb:pos/>
+					</fb:position>
+					<fb:referencePoint href="">
+						<fb:designator/>
+						<fb:extension xsi:type="a type derived from fb:NavaidExtensionType"/>
+						<fb:navaidServiceType/>
+						<fb:position srsName="">
+							<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+							<fb:pos/>
+						</fb:position>
+					</fb:referencePoint>
+				</fb:referenceRelativePoint>
+			</fx:destinationAerodrome>
+			<fx:extension xsi:type="a type derived from fb:ArrivalExtensionType"/>
+		</fx:arrival>
+		<fx:departure>
+			<fx:airfileIndicator/>
+			<fx:departureAerodrome href="">
+				<fb:extension xsi:type="a type derived from fb:AerodromeReferenceExtensionType"/>
+				<fb:iataDesignator/>
+				<fb:locationIndicator/>
+				<fb:name/>
+				<fb:referencePoint srsName="">
+					<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+					<fb:pos/>
+				</fb:referencePoint>
+				<fb:referenceRelativePoint>
+					<fb:bearing uom="" zeroBearingType=""/>
+					<fb:distance uom=""/>
+					<fb:extension xsi:type="a type derived from fb:RelativePointExtensionType"/>
+					<fb:position srsName="">
+						<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+						<fb:pos/>
+					</fb:position>
+					<fb:referencePoint href="">
+						<fb:designator/>
+						<fb:extension xsi:type="a type derived from fb:NavaidExtensionType"/>
+						<fb:navaidServiceType/>
+						<fb:position srsName="">
+							<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+							<fb:pos/>
+						</fb:position>
+					</fb:referencePoint>
+				</fb:referenceRelativePoint>
+			</fx:departureAerodrome>
+			<fx:departurePoint>
+				<fx:designatedPoint href="">
+					<fb:designator/>
+					<fb:extension xsi:type="a type derived from fb:DesignatedPointExtensionType"/>
+					<fb:position srsName="">
+						<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+						<fb:pos/>
+					</fb:position>
+				</fx:designatedPoint>
+				<fx:navaid href="">
+					<fb:designator/>
+					<fb:extension xsi:type="a type derived from fb:NavaidExtensionType"/>
+					<fb:navaidServiceType/>
+					<fb:position srsName="">
+						<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+						<fb:pos/>
+					</fb:position>
+				</fx:navaid>
+				<fx:position srsName="">
+					<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+					<fb:pos/>
+				</fx:position>
+				<fx:relativePoint>
+					<fb:bearing uom="" zeroBearingType=""/>
+					<fb:distance uom=""/>
+					<fb:extension xsi:type="a type derived from fb:RelativePointExtensionType"/>
+					<fb:position srsName="">
+						<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+						<fb:pos/>
+					</fb:position>
+					<fb:referencePoint href="">
+						<fb:designator/>
+						<fb:extension xsi:type="a type derived from fb:NavaidExtensionType"/>
+						<fb:navaidServiceType/>
+						<fb:position srsName="">
+							<fb:extension xsi:type="a type derived from fb:GeographicalPositionExtensionType"/>
+							<fb:pos/>
+						</fb:position>
+					</fb:referencePoint>
+				</fx:relativePoint>
+			</fx:departurePoint>
+			<fx:estimatedOffBlockTime/>
+			<fx:estimatedRouteStartTime/>
+			<fx:extension xsi:type="a type derived from fb:DepartureExtensionType"/>
+		</fx:departure>
+		<fx:extension xsi:type="a type derived from fb:FlightExtensionType"/>
+		<fx:flightIdentification>
+			<fx:aircraftIdentification/>
+			<fx:extension xsi:type="a type derived from fb:FlightIdentificationExtensionType"/>
+			<fx:gufi codeSpace="" creationTime="" namespaceDomain="" namespaceIdentifier=""/>
+			<fx:gufiLegacy codeSpace=""/>
+			<fx:iataFlightDesignator>
+				<fx:extension xsi:type="a type derived from fb:IataFlightDesignatorExtensionType"/>
+				<fx:flightNumber/>
+				<fx:iataOperatorCode/>
+				<fx:operationalSuffix/>
+			</fx:iataFlightDesignator>
+		</fx:flightIdentification>
+	</ffice:flight>
+	<ffice:forwardingProvider>
+		<fb:contact>
+			<fb:address>
+				<fb:administrativeArea/>
+				<fb:city/>
+				<fb:countryCode/>
+				<fb:countryName/>
+				<fb:deliveryPoint/>
+				<fb:extension xsi:type="a type derived from fb:PostalAddressExtensionType"/>
+				<fb:postalCode/>
+			</fb:address>
+			<fb:extension xsi:type="a type derived from fb:ContactInformationExtensionType"/>
+			<fb:name/>
+			<fb:onlineContact>
+				<fb:email/>
+				<fb:extension xsi:type="a type derived from fb:OnlineContactExtensionType"/>
+				<fb:linkage/>
+				<fb:network>
+					<fb:other/>
+					<fb:type/>
+				</fb:network>
+			</fb:onlineContact>
+			<fb:phoneFax>
+				<fb:extension xsi:type="a type derived from fb:TelephoneContactExtensionType"/>
+				<fb:facsimile/>
+				<fb:voice/>
+			</fb:phoneFax>
+			<fb:title/>
+		</fb:contact>
+		<fb:extension xsi:type="a type derived from fb:PersonOrOrganizationExtensionType"/>
+		<fb:identifier/>
+		<fb:identifierDomain/>
+		<fb:name/>
+	</ffice:forwardingProvider>
+	<ffice:originator>
+		<fb:contact>
+			<fb:address>
+				<fb:administrativeArea/>
+				<fb:city/>
+				<fb:countryCode/>
+				<fb:countryName/>
+				<fb:deliveryPoint/>
+				<fb:extension xsi:type="a type derived from fb:PostalAddressExtensionType"/>
+				<fb:postalCode/>
+			</fb:address>
+			<fb:extension xsi:type="a type derived from fb:ContactInformationExtensionType"/>
+			<fb:name/>
+			<fb:onlineContact>
+				<fb:email/>
+				<fb:extension xsi:type="a type derived from fb:OnlineContactExtensionType"/>
+				<fb:linkage/>
+				<fb:network>
+					<fb:other/>
+					<fb:type/>
+				</fb:network>
+			</fb:onlineContact>
+			<fb:phoneFax>
+				<fb:extension xsi:type="a type derived from fb:TelephoneContactExtensionType"/>
+				<fb:facsimile/>
+				<fb:voice/>
+			</fb:phoneFax>
+			<fb:title/>
+		</fb:contact>
+		<fb:extension xsi:type="a type derived from fb:PersonOrOrganizationExtensionType"/>
+		<fb:identifier/>
+		<fb:identifierDomain/>
+		<fb:name/>
+	</ffice:originator>
+	<ffice:recipient>
+		<fb:contact>
+			<fb:address>
+				<fb:administrativeArea/>
+				<fb:city/>
+				<fb:countryCode/>
+				<fb:countryName/>
+				<fb:deliveryPoint/>
+				<fb:extension xsi:type="a type derived from fb:PostalAddressExtensionType"/>
+				<fb:postalCode/>
+			</fb:address>
+			<fb:extension xsi:type="a type derived from fb:ContactInformationExtensionType"/>
+			<fb:name/>
+			<fb:onlineContact>
+				<fb:email/>
+				<fb:extension xsi:type="a type derived from fb:OnlineContactExtensionType"/>
+				<fb:linkage/>
+				<fb:network>
+					<fb:other/>
+					<fb:type/>
+				</fb:network>
+			</fb:onlineContact>
+			<fb:phoneFax>
+				<fb:extension xsi:type="a type derived from fb:TelephoneContactExtensionType"/>
+				<fb:facsimile/>
+				<fb:voice/>
+			</fb:phoneFax>
+			<fb:title/>
+		</fb:contact>
+		<fb:extension xsi:type="a type derived from fb:PersonOrOrganizationExtensionType"/>
+		<fb:identifier/>
+		<fb:identifierDomain/>
+		<fb:name/>
+	</ffice:recipient>
+	<ffice:relevantAtmServiceProvider>
+		<ffice:extension xsi:type="a type derived from ffice:AtmServiceProviderExtensionType"/>
+		<ffice:provider>
+			<fb:contact>
+				<fb:address>
+					<fb:administrativeArea/>
+					<fb:city/>
+					<fb:countryCode/>
+					<fb:countryName/>
+					<fb:deliveryPoint/>
+					<fb:extension xsi:type="a type derived from fb:PostalAddressExtensionType"/>
+					<fb:postalCode/>
+				</fb:address>
+				<fb:extension xsi:type="a type derived from fb:ContactInformationExtensionType"/>
+				<fb:name/>
+				<fb:onlineContact>
+					<fb:email/>
+					<fb:extension xsi:type="a type derived from fb:OnlineContactExtensionType"/>
+					<fb:linkage/>
+					<fb:network>
+						<fb:other/>
+						<fb:type/>
+					</fb:network>
+				</fb:onlineContact>
+				<fb:phoneFax>
+					<fb:extension xsi:type="a type derived from fb:TelephoneContactExtensionType"/>
+					<fb:facsimile/>
+					<fb:voice/>
+				</fb:phoneFax>
+				<fb:title/>
+			</fb:contact>
+			<fb:extension xsi:type="a type derived from fb:PersonOrOrganizationExtensionType"/>
+			<fb:identifier/>
+			<fb:identifierDomain/>
+			<fb:name/>
+		</ffice:provider>
+		<ffice:providerType/>
+	</ffice:relevantAtmServiceProvider>
+	<ffice:timestamp/>
+	<ffice:translationProvider>
+		<fb:contact>
+			<fb:address>
+				<fb:administrativeArea/>
+				<fb:city/>
+				<fb:countryCode/>
+				<fb:countryName/>
+				<fb:deliveryPoint/>
+				<fb:extension xsi:type="a type derived from fb:PostalAddressExtensionType"/>
+				<fb:postalCode/>
+			</fb:address>
+			<fb:extension xsi:type="a type derived from fb:ContactInformationExtensionType"/>
+			<fb:name/>
+			<fb:onlineContact>
+				<fb:email/>
+				<fb:extension xsi:type="a type derived from fb:OnlineContactExtensionType"/>
+				<fb:linkage/>
+				<fb:network>
+					<fb:other/>
+					<fb:type/>
+				</fb:network>
+			</fb:onlineContact>
+			<fb:phoneFax>
+				<fb:extension xsi:type="a type derived from fb:TelephoneContactExtensionType"/>
+				<fb:facsimile/>
+				<fb:voice/>
+			</fb:phoneFax>
+			<fb:title/>
+		</fb:contact>
+		<fb:extension xsi:type="a type derived from fb:PersonOrOrganizationExtensionType"/>
+		<fb:identifier/>
+		<fb:identifierDomain/>
+		<fb:name/>
+	</ffice:translationProvider>
+	<ffice:translationRecipient>
+		<fb:contact>
+			<fb:address>
+				<fb:administrativeArea/>
+				<fb:city/>
+				<fb:countryCode/>
+				<fb:countryName/>
+				<fb:deliveryPoint/>
+				<fb:extension xsi:type="a type derived from fb:PostalAddressExtensionType"/>
+				<fb:postalCode/>
+			</fb:address>
+			<fb:extension xsi:type="a type derived from fb:ContactInformationExtensionType"/>
+			<fb:name/>
+			<fb:onlineContact>
+				<fb:email/>
+				<fb:extension xsi:type="a type derived from fb:OnlineContactExtensionType"/>
+				<fb:linkage/>
+				<fb:network>
+					<fb:other/>
+					<fb:type/>
+				</fb:network>
+			</fb:onlineContact>
+			<fb:phoneFax>
+				<fb:extension xsi:type="a type derived from fb:TelephoneContactExtensionType"/>
+				<fb:facsimile/>
+				<fb:voice/>
+			</fb:phoneFax>
+			<fb:title/>
+		</fb:contact>
+		<fb:extension xsi:type="a type derived from fb:PersonOrOrganizationExtensionType"/>
+		<fb:identifier/>
+		<fb:identifierDomain/>
+		<fb:name/>
+	</ffice:translationRecipient>
+	<ffice:type/>
+	<ffice:uniqueMessageIdentifier codeSpace=""/>
+</ffice:FficeMessage>
