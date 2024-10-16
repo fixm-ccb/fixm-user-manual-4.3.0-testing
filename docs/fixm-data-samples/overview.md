@@ -36,7 +36,7 @@ These XML documents contain only the underlying elements and attributes themselv
 2. In order to provide a listing of all possible XML elements, every option available under FIXM's xsd:choice elements are present (only one option can be present in schema-valid messages)
 3. A handful of templates require at least two instances of a repeating element, but the skeletons only provide one (the goal was not to create schema-valid messages but rather to show the structure and organization of FIXM and what fields are available within it - showing the same sets of fields twice for a small subset of repeating elements does not advance that goal)
 
-Due to these exceptions, the skeletons are not themselves schema-valid messages but, again, this was not the goal.  Rather they are intended to give users an easy way to see the organized content of FIXM messages (without the need for tools such as schema visualizers) as well as providing simple, structured listings of all available fields for each type of message.
+Due to these exceptions, the skeletons are not themselves schema-valid messages but, again, this was not the goal.  Rather they are intended to provide an easy way to see the organized content of FIXM messages (without the need for tools such as schema visualizers) as well as supplying simple, structured listings of all available fields for each type of message.
 
 | Example Message | Skeleton Type |
 |:-|:-|
