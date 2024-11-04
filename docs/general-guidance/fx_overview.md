@@ -55,7 +55,7 @@ Package [`fx:RouteTrajectory`]
 - **TrajectoryPointProperty:** description, [propertyType], reference
 ---
 Package [`fx:Constraints`]
-- **RouteTrajectoryConstraint:** departureOrArrivalIndicator, description, level, restrictionReference, speed, time
+- **RouteTrajectoryConstraint:** departureOrArrivalIndicator, description, [level], restrictionReference, [speed], [time]
 ---
 
 <!----------------------------------------------------->
@@ -132,5 +132,8 @@ Package [`fx:Constraints`]
 
 <!-- Links for fx:Constraints -->
 [`fx:Constraints`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Constraints
+[level]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Constraints?id=level
+[speed]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Constraints?id=speed
+[time]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Constraints?id=time
 
 <!-----------------------------------------------------> 
