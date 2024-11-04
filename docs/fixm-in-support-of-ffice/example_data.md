@@ -66,7 +66,7 @@ Departure Aerodrome `KHGR`, Route `DCT HGR V268 EMI DCT`, Destination Aerodrome 
 |3|EMI|48.67 NM|Direct|
 |4|KBWI|72.47 NM|N/A|
 
-- Download XML [here](https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/example_data_FFICE_IG_E-3.7_basic_route.xml)
+- Download XML [here](.//assets/downloads/example_data_FFICE_IG_E-3.7_basic_route.xml)
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
@@ -136,7 +136,7 @@ Encoding Rules:
 |4|EMI|48.67 NM|N39:29:42 W076:58:43|Direct|
 |5|KBWI|72.47 NM|N39:10:33 W076:40:08|N/A|
 
-- Download XML [here](https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/example_data_FFICE_IG_E-3.7_expanded_route.xml)
+- Download XML [here](.//assets/downloads/example_data_FFICE_IG_E-3.7_expanded_route.xml)
    
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
@@ -234,7 +234,7 @@ Encoding Rules:
 |10|||71.52 NM|Direct|N39:11:16<br>W076:40:50||366|120|Relative: 00:26:55|
 |11|KBWI|N39:10:33<br>W076:40:08|72.45 NM|n/a|N39:10:33<br>W076:40:08|Airport Reference Loc.<br><br>End Prediction Point|143|100|Relative: 00:27:15|
 
-- Download XML [here](https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/example_data_FFICE_IG_E-3.7_trajectory.xml)
+- Download XML [here](.//assets/downloads/example_data_FFICE_IG_E-3.7_trajectory.xml)
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
