@@ -33,18 +33,18 @@ The following table provides fictitious examples of FF-ICE Messages.
 [FficeTRQ]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/trialrequest/TrialRequest.xsd
 [FficeTRP]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/trialresponse/TrialResponse.xsd
 
-[FficeFFP_Example_1]: https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/C-4_Filed_Flight_Plan_EXAMPLE_001.xml
-[FficeFS_Example_1]: https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/C-5_Filing_Status_EXAMPLE_001.xml
-[FficeFA_Example_1]: https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/C-13_Flight_Arrival_EXAMPLE_001.xml
-[FficeFC_Example_1]: https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/C-8_Flight_Cancellation_EXAMPLE_001.xml
-[FficeFDRQ_Example_1]: https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/C-10_Flight_Data_Request_EXAMPLE_001.xml
-[FficeFDRP_Example_1]: https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/C-11_Flight_Data_Response_EXAMPLE_001.xml
-[FficeFDRP_Example_2]: https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/C-11_Flight_Data_Response_EXAMPLE_002.xml
-[FficeFD_Example_1]: https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/C-12_Flight_Departure_EXAMPLE_001.xml
-[FficeFPU_Example_1]: https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/C-9_Flight_Plan_Update_EXAMPLE_001.xml
-[FficeSR_Example_1]: https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/C-1_Submission_Response_EXAMPLE_001.xml
-[FficeTRQ_Example_1]: https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/C-6_Trial_Request_EXAMPLE_001.xml
-[FficeTRP_Example_1]: https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/C-7_Trial_Response_EXAMPLE_001.xml
+[FficeFFP_Example_1]: .//assets/downloads/C-4_Filed_Flight_Plan_EXAMPLE_001.xml
+[FficeFS_Example_1]: .//assets/downloads/C-5_Filing_Status_EXAMPLE_001.xml
+[FficeFA_Example_1]: .//assets/downloads/C-13_Flight_Arrival_EXAMPLE_001.xml
+[FficeFC_Example_1]: .//assets/downloads/C-8_Flight_Cancellation_EXAMPLE_001.xml
+[FficeFDRQ_Example_1]: .//assets/downloads/C-10_Flight_Data_Request_EXAMPLE_001.xml
+[FficeFDRP_Example_1]: .//assets/downloads/C-11_Flight_Data_Response_EXAMPLE_001.xml
+[FficeFDRP_Example_2]: .//assets/downloads/C-11_Flight_Data_Response_EXAMPLE_002.xml
+[FficeFD_Example_1]: .//assets/downloads/C-12_Flight_Departure_EXAMPLE_001.xml
+[FficeFPU_Example_1]: .//assets/downloads/C-9_Flight_Plan_Update_EXAMPLE_001.xml
+[FficeSR_Example_1]: .//assets/downloads/C-1_Submission_Response_EXAMPLE_001.xml
+[FficeTRQ_Example_1]: .//assets/downloads/C-6_Trial_Request_EXAMPLE_001.xml
+[FficeTRP_Example_1]: .//assets/downloads/C-7_Trial_Response_EXAMPLE_001.xml
 
 
 

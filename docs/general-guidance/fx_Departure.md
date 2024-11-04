@@ -76,8 +76,10 @@ Airfile flights will represent the route start point in `departurePoint`, and wi
 
 ```xml
 <fx:departure>
-    <fx:departureAerodrome>KDFW</fx:departureAerodrome>
-    <fx:estimatedOffBlockTime>2023-01-13T15:18:00Z</fx:estimatedOffBlockTime>
+  <fx:departureAerodrome>
+    <fb:locationIndicator>KDFW</fb:locationIndicator>
+  </fx:departureAerodrome>
+  <fx:estimatedOffBlockTime>2023-01-13T15:18:00Z</fx:estimatedOffBlockTime>
 </fx:departure>
 ```
 
@@ -86,9 +88,9 @@ Airfile flights will represent the route start point in `departurePoint`, and wi
 ```xml
 <fx:departure>
     <fx:departurePoint>
-        <fb:position srsName="urn:ogc:def:crs:EPSG::4326">
+        <fx:position srsName="urn:ogc:def:crs:EPSG::4326">
             <fb:pos>59.0 -30.0</fb:pos>
-        </fb:position>
+        </fx:position>
     </fx:departurePoint>
     <fx:estimatedRouteStartTime>2023-01-13T15:18:00Z</fx:estimatedRouteStartTime>
 </fx:departure>
@@ -98,16 +100,16 @@ Airfile flights will represent the route start point in `departurePoint`, and wi
 
 ```xml
 <fx:departure>
-    <fx:departurePoint>
-        <fb:navaid>
-              <fb:designator>FAM<fb:designator>
-              <fb:position srsName="urn:ogc:def:crs:EPSG::4326">
-                  <fb:pos>37.6734614 -90.2340597</fb:pos>
-              </fb:position>
-        </fb:navaid>
-    </fx:departurePoint>
-    <fx:estimatedRouteStartTime>2023-01-13T20:05:00Z</fx:estimatedRouteStartTime>
-    <fx:airfileIndicator>AIRFILE</fx:airfileIndicator>
+  <fx:airfileIndicator>AIRFILE</fx:airfileIndicator>
+  <fx:departurePoint>
+    <fx:navaid>
+      <fb:designator>FAM</fb:designator>
+      <fb:position srsName="urn:ogc:def:crs:EPSG::4326">
+        <fb:pos>37.6734614 -90.2340597</fb:pos>
+      </fb:position>
+    </fx:navaid>
+  </fx:departurePoint>
+  <fx:estimatedRouteStartTime>2023-01-13T20:05:00Z</fx:estimatedRouteStartTime>
 </fx:departure>
 ```
 

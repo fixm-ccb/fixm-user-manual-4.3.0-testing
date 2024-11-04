@@ -19,8 +19,8 @@ Departure Aerodrome `KHGR`, EOBT `07:00`
 </fx:departure>
 ```
 Encoding Rules:
-* Rules for [`<fx:aerodrome>`](https://docs.fixm.aero/#/general-guidance/references-to-published-aeronautical-information?id=references-to-aerodromes)
-* Rules for [`<fx:estimatedOffBlockTime>`](https://docs.fixm.aero/#/general-guidance/date-time-specification)
+* Rules for [`departureAerodrome`]
+* Rules for [`estimatedOffBlockTime`]
 
 ## Content of `<fx:arrival>`
 
@@ -35,7 +35,7 @@ Destination Aerodrome `KBWI`
 </fx:arrival>
 ```
 Encoding Rules:
-* Rules for [`<fx:aerodrome>`](https://docs.fixm.aero/#/general-guidance/references-to-published-aeronautical-information?id=references-to-aerodromes)
+* Rules for `destinationAerodrome`
 
 ## Content of `<fx:routeInformation>`
 
@@ -52,9 +52,9 @@ Total EET `00:27:15`, Cruising Level `5000 ft`, Cruising Speed `160 kts`
 </fx:routeInformation>
 ```
 Encoding Rules:
-* Rules for [`<fb:altitude>`](https://docs.fixm.aero/#/general-guidance/vertical-distances)
-* Rules for `<fx:cruisingSpeed>`
-* Rules for [`<fx:totalEstimatedElapsedTime>`](https://docs.fixm.aero/#/general-guidance/date-time-specification)
+* Rules for `cruisingLevel`
+* Rules for `cruisingSpeed`
+* Rules for `totalEstimatedElapsedTime`
 
 ## Content of `<fx:routeTrajectoryGroup>` - FF-ICE Basic Route
 Departure Aerodrome `KHGR`, Route `DCT HGR V268 EMI DCT`, Destination Aerodrome `KBWI`
@@ -66,7 +66,7 @@ Departure Aerodrome `KHGR`, Route `DCT HGR V268 EMI DCT`, Destination Aerodrome 
 |3|EMI|48.67 NM|Direct|
 |4|KBWI|72.47 NM|N/A|
 
-- Download XML [here](https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/example_data_FFICE_IG_E-3.7_basic_route.xml)
+- Download XML [here](.//assets/downloads/example_data_FFICE_IG_E-3.7_basic_route.xml)
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
@@ -122,10 +122,9 @@ Departure Aerodrome `KHGR`, Route `DCT HGR V268 EMI DCT`, Destination Aerodrome 
 ```
 
 Encoding Rules:
-* Rules for [`seqNum`](https://docs.fixm.aero/#/general-guidance/sequence-numbers)
-* Rules for [`<fb:aerodromeReferencePoint>`](https://docs.fixm.aero/#/general-guidance/references-to-published-aeronautical-information?id=references-to-aerodromes) 
-* Rules for [`<fb:navaid>`](https://docs.fixm.aero/#/general-guidance/references-to-published-aeronautical-information?id=references-to-navaid) 
-* ...
+* Rules for [`element`]
+* Rules for [`seqNum`]
+
 
 ## Content of `<fx:routeTrajectoryGroup>` - FF-ICE Expanded Route
 
@@ -137,7 +136,7 @@ Encoding Rules:
 |4|EMI|48.67 NM|N39:29:42 W076:58:43|Direct|
 |5|KBWI|72.47 NM|N39:10:33 W076:40:08|N/A|
 
-- Download XML [here](https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/example_data_FFICE_IG_E-3.7_expanded_route.xml)
+- Download XML [here](.//assets/downloads/example_data_FFICE_IG_E-3.7_expanded_route.xml)
    
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
@@ -235,7 +234,7 @@ Encoding Rules:
 |10|||71.52 NM|Direct|N39:11:16<br>W076:40:50||366|120|Relative: 00:26:55|
 |11|KBWI|N39:10:33<br>W076:40:08|72.45 NM|n/a|N39:10:33<br>W076:40:08|Airport Reference Loc.<br><br>End Prediction Point|143|100|Relative: 00:27:15|
 
-- Download XML [here](https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/example_data_FFICE_IG_E-3.7_trajectory.xml)
+- Download XML [here](.//assets/downloads/example_data_FFICE_IG_E-3.7_trajectory.xml)
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
@@ -523,3 +522,14 @@ Encoding Rules:
 ### ICAO References
 
 [I-06]: [ICAO Doc 9965, 2nd Edition, Volume II, v0.993 (DRAFT)](https://portal.icao.int/atmrpp/ATMRPP5%20Montreal%2059%20June%202023/1_Working%20papers/ATMRPP5_WP1000_Appendix%20C%20Doc%209965%20Vol%20II%20Implementation%20Guidance%20d0.993_markup.pdf) - Manual on FF-ICE, FF-ICE/R1 Implementation Guidance Manual **DRAFT** 
+
+
+
+[`departureAerodrome`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=departureaerodrome-departurepoint
+[`estimatedOffBlockTime`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=estimatedoffblocktime-estimatedroutestarttime
+
+[`element`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=element
+[`seqNum`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_Types?id=count-sequence-numbers
+
+
+
