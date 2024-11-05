@@ -123,7 +123,7 @@ First-time users should follow these [instructions](https://www.fixm.aero/conten
 
 [I-09]: [PAN AIDC ICD, version 1.0](https://www.icao.int/APAC/Documents/edocs/PAN_ICD_AIDC_v1%200.pdf) - PAN Regional (NAT and APAC) Interface Control Document for ATC Interfacility Data Communications
 
-[I-10]: [**DRAFT** ICAO Manual on System Wide Information Management (SWIM) Implementation, version September 2021](https://portal.icao.int/imp/MeetingDocs/IMP-2/Working%20Papers/Appendix%20A%20to%20IMP_2%20WP006%20%E2%80%93%20Manual%20on%20SWIM%20Implementation.pdf)
+[I-10]: [ICAO Doc 10203, Edition 1.0 unedited](https://portal.icao.int/icao-net/ICAO%20Documents/10203_unedited_en.PDF) - Manual on the SWIM Implementation
 
 [I-11]: [ATMRPP/4-WP/922](https://portal.icao.int/atmrpp/Virtual%20ATMRPP4%201930%20April%202021/1_Working%20papers/ATMRPP4_WP_922_Updated%20FF-ICE%20R1%20Provisions_Appendix%20B_Clean.pdf) - Proposed Amendments to Annex 2, Doc 10066, and Doc 4444 concerning the initial implementation of FF-ICE Services
 
@@ -131,11 +131,16 @@ First-time users should follow these [instructions](https://www.fixm.aero/conten
 
 [I-13]: [ICAO Doc 9971, 3st Edition](https://portal.icao.int/icao-net/ICAO%20Documents/9971_cons_en.pdf) - Manual on Collaborative Air Traffic Flow Management]
 
-[I-14]: ​[ICAO Aviation System Block Upgrades (ASBU) framework](https://www4.icao.int/ganpportal/ASBU?_gl=1*1k7ewhd*_ga*MTc2MDEwOTgyOS4xNjU4MzAxNzIy*_ga_992N3YDLBQ*MTY5MDc5MTQzNC4xNi4xLjE2OTA3OTM4NjIuMC4wLjA.)
+[I-14]: [ICAO Aviation System Block Upgrades (ASBU) framework](https://www4.icao.int/ganpportal/ASBU?_gl=1*1k7ewhd*_ga*MTc2MDEwOTgyOS4xNjU4MzAxNzIy*_ga_992N3YDLBQ*MTY5MDc5MTQzNC4xNi4xLjE2OTA3OTM4NjIuMC4wLjA.)
 
 [I-15]: [ICAO Doc 8585](https://www.icao.int/safety/OPS/OPS-Tools/Pages/3LD.aspx) - Designators for Aircraft Operating Agencies, Aeronautical Authorities and Services
 
 [I-16]: [ICAO Doc 10150, 1st Edition, 2021](https://portal.icao.int/icao-net/ICAO%20Documents/10150_cons_en.PDF) - Manual on the Functional Specifications for the Location of an Aircraft in Distress Repository (LADR)
+
+[I-17]: [ICAO Doc 10199, 1st Edition](https://portal.icao.int/icao-net/Pages/Doc10199.aspx) - PANS Information Management
+
+[I-18]: [ICAO Doc 10039, 1st Edition](https://portal.icao.int/icao-net/ICAO%20Documents/10039_cons_en.pdf) - Manual on the System-wide Information Management (SWIM) Concept
+
 
 ### Other References
 
@@ -225,6 +230,8 @@ First-time users should follow these [instructions](https://www.fixm.aero/conten
 | XML               | Extensible Markup Language |
 | XSD               | XML Schema Definition |
 | XSLT              | Extensible Stylesheet Language Transformations |
+
+
 
 [FIXM Core 4.3.0]: https://fixm.aero/release.html?rel=FIXM-4.3.0&ret=core
 [FF-ICE Application 1.1.0]: https://fixm.aero/release.html?rel=FFICE-Msg-1.1.0&ret=app
