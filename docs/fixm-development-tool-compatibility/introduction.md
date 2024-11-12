@@ -14,5 +14,7 @@ For each approach, testing involved:
 - several common development tools 
 
 The result of this compatibility analysis was the creation of a FIXM
-support matrix. The section [Compatibility Analysis Results](fixm-development-tool-compatibility/compatibility-analysis-results.md)
+support matrix. The section [Compatibility Analysis Results]
 supplies a list of the supported tools and technologies. 
+
+[Compatibility Analysis Results]: fixm-development-tool-compatibility/compatibility-analysis-results?id=compatibility-analysis-results
