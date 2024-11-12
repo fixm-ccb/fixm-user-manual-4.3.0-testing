@@ -86,5 +86,3 @@ Corresponding encoding in `FIXM 4.3.0`
   <fx:aircraft>
     <fx:registration>9MMRO</fx:registration>
 ```
-
----
