@@ -150,7 +150,7 @@ Example
 
 ---
 
-## *References*
+## *References* <!-- {docsify-ignore} -->
 
 ### ICAO References
 
