@@ -8,7 +8,7 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ## `climbProfile` / `descentProfile`
 
-As explained in the FF-ICE/R1 Implementation Guidance Manual <sup>[[I-06]](#references)</sup>,
+As explained in the FF-ICE/R1 Implementation Guidance Manual <sup>[[I-06]](#References)</sup>,
 the `Performance Profile` is a zero-wind, standard atmosphere profile reflective of the flight capabilities and desired parameters. 
 It does not include any flight-specific constraints such as altitude or speed restrictions applicable to the route of flight. 
 However, it does incorporate constraints that are always applicable (e.g., a 250 knot constraint applicable to all flights below 10,000 feet), 
@@ -454,7 +454,7 @@ The indication that the aeronautical dataset for cycle `2202` has been used for 
 
 ---
 
-## *references* <!-- {docsify-ignore} -->
+## *References*
 
 ### ICAO References
 
