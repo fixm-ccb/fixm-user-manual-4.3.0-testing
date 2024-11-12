@@ -45,7 +45,7 @@ The tables below provide examples of how to encode each of these types of constr
 | **BETWEEN**       | **`timeSpecification`**.**`range`**.**`earliest`**<br>*AND*<br>**`timeSpecification`**.**`range`**.**`latest`** |
 
 
-## *References*
+## *References* <!-- {docsify-ignore} -->
 
 ### ICAO References
 
