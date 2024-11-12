@@ -63,8 +63,7 @@ they are also required.
 Per the PANSATM <sup>[[I-04]](#references)</sup>, see the final clause of the DEP/ indicator under the Field Type 18 
 section of Appendix 3 for the specific need to provide representation for a non-aerodrome departure point:  
 
-> “The first point of the route (name or LAT/LONG) or the marker radio beacon, if the aircraft has not taken 
-off from an aerodrome.”
+> “The first point of the route (name or LAT/LONG) or the marker radio beacon, if the aircraft has not taken off from an aerodrome.”
 
 For most flights, i.e., flights departing from aerodromes, the departure aerodrome will be represented in `departureAerodrome`., and the estimated off block time will be represented in `estimatedOffBlockTime`.
 
@@ -113,12 +112,6 @@ Airfile flights will represent the route start point in `departurePoint`, and wi
 </fx:departure>
 ```
 
-[DepartureType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_DepartureType.html
-[Departure.xsd]: https://www.fixm.aero/releases/FIXM-4.3.0/schemas/core/flight/departure/Departure.xsd
-
-### Notes
-[1]: To create the logical model, four new embedded choice classes using the <\<XSDchoice\>> stereotype were created named DepartureLocationChoice, DepartureLocationPreviousChoice, DepartureTimeChoice, and DepartureTimePreviousChoice. This approach was used to retain the explicit representation for the departure aerodrome as its own field with non-aerodrome departure points collected under a second field.
-
 ---
 
 ## `departureAerodromePrevious` / `departurePointPrevious`
@@ -139,15 +132,10 @@ See [`aircraftIdentificationPrevious`].
 
 ---
 
-## *references*  <!-- {docsify-ignore} -->
+## *References*
 
 ### ICAO References
 
 [I-04]: [ICAO Doc 4444, 16th Edition, 2016](https://portal.icao.int/icao-net/ICAO%20Documents/4444_cons_en.pdf) - PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management
 
-
-
-
-
-
-[`aircraftIdentificationPrevious`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentificationprevious
+[`aircraftIdentificationPrevious`]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
