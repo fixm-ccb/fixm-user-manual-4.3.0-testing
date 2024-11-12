@@ -132,7 +132,7 @@ See [`aircraftIdentificationPrevious`].
 
 ---
 
-## *References*
+## *References* <!-- {docsify-ignore} -->
 
 ### ICAO References
 
