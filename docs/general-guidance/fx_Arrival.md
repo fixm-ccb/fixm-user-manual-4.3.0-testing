@@ -6,8 +6,15 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
+## `airportSlotIdentification`
+
+See [`airportSlotIdentification`]
+
+---
+
 ## `destinationAerodromePrevious`
 
 See [`aircraftIdentificationPrevious`]
 
 [`aircraftIdentificationPrevious`]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
+[`airportSlotIdentification`]: general-guidance/fx_Departure?id=airportslotidentification
