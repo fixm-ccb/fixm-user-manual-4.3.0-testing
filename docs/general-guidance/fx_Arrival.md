@@ -10,8 +10,4 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 See [`aircraftIdentificationPrevious`]
 
----
-
-## *references* <!-- {docsify-ignore} -->
-
-[`aircraftIdentificationPrevious`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentificationprevious
+[`aircraftIdentificationPrevious`]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
