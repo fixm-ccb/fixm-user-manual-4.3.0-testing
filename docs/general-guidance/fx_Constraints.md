@@ -4,18 +4,20 @@
 
 Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_RouteTrajectoryConstraintType.html)
 
-FF-ICE outlines the route/trajectory speed, level, and time constraints that FIXM must be able to represent in sections B-3.4.3, B-3.4.4, and B-3.4.5 of the FF-ICE Implementation Guidance <sup>[[I-06]](#references)</sup>. This includes characterizing the type of constraint by specifying it as occuring:
+FF-ICE outlines the route/trajectory speed, level, and time constraints that FIXM must be able to represent in sections B-3.4.3, B-3.4.4, and B-3.4.5 of the FF-ICE Implementation Guidance <sup>[[I-06]](#References)</sup>. This includes characterizing the type of constraint by specifying it as occuring:
 
 - at, at or above, at or below, or between two levels
 - at, at or greater, at or less, or between two speeds
 - at, at or before, at or after, or between two times
+
+The tables below provide examples of how to encode each of these types of constraints in FIXM format:
 
 ---
 
 ## `level`
 
 
-| **Type:**       | **Encoding** |
+| **Type:**       | **Encoding:** |
 |:--              |:------ |
 | **AT**          | level.**`altitude`**<br>*OR*<br>level.**`flightLevel`** |
 | **AT_OR_ABOVE** | level.**`range`**.**`lowerBound`**.**`altitude`**<br>*OR*<br>level.**`range`**.**`lowerBound`**.**`flightLevel`** |  
@@ -25,7 +27,7 @@ FF-ICE outlines the route/trajectory speed, level, and time constraints that FIX
 
 ## `speed`
 
-| **Type:**         | **Encoding** |
+| **Type:**         | **Encoding:** |
 |:--                |:------ |
 | **AT**            | speed.**`value`** |
 | **AT_OR_GREATER** | speed.**`range`**.**`lowerSpeed`** |  
@@ -35,7 +37,7 @@ FF-ICE outlines the route/trajectory speed, level, and time constraints that FIX
 
 ## `time`
 
-| **Type:**         | **Encoding** |
+| **Type:**         | **Encoding:** |
 |:--                |:------ |
 | **AT**            | **`timeSpecification`**.**`value`** |
 | **AT_OR_AFTER**   | **`timeSpecification`**.**`range`**.**`earliest`** |  
@@ -43,7 +45,7 @@ FF-ICE outlines the route/trajectory speed, level, and time constraints that FIX
 | **BETWEEN**       | **`timeSpecification`**.**`range`**.**`earliest`**<br>*AND*<br>**`timeSpecification`**.**`range`**.**`latest`** |
 
 
-## *references*  <!-- {docsify-ignore} -->
+## *References*
 
 ### ICAO References
 
