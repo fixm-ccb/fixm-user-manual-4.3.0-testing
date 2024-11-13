@@ -23,7 +23,7 @@ Package [`fb:RangesAndChoices`]
 - [TimeRange], [TrueAirspeedRange], [VerticalRange]
 ---
 Package [`fb:Types`]
-- [Count], [DateTimeUtc], [DateTimeUtcHighPrecision], DateUtc, Duration, [HyperTextReference], UniversallyUniqueIdentifier
+- [Count], [DateTimeUtc], [DateTimeUtcHighPrecision], DateUtc, Duration, [HypertextReference], UniversallyUniqueIdentifier
 ---
 
 <!----------------------------------------------------->
