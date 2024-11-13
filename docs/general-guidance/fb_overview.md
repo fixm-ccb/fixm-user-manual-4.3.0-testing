@@ -23,7 +23,7 @@ Package [`fb:RangesAndChoices`]
 - [TimeRange], [TrueAirspeedRange], [VerticalRange]
 ---
 Package [`fb:Types`]
-- [Count], [DateTimeUtc], [DateTimeUtcHighPrecision], DateUtc, Duration, [HypertextReference], UniversallyUniqueIdentifier
+- [Count], [DateTimeUtc], [DateTimeUtcHighPrecision], DateUtc, Duration, [GloballyUniqueFlightIdentifier], [HypertextReference], UniversallyUniqueIdentifier
 ---
 
 <!----------------------------------------------------->
@@ -46,6 +46,9 @@ Package [`fb:Types`]
 [RouteDesignator]: general-guidance/fb_AeronauticalReference?id=routedesignator
 [RunwayDirectionDesignator]: general-guidance/fb_AeronauticalReference?id=runwaydirectiondesignator
 [SidStarReference]: general-guidance/fb_AeronauticalReference?id=sidstarreference
+
+<!-- Links for fx:FlightData -->
+[GloballyUniqueFlightIdentifier]: general-guidance/fx_FlightData?id=gufi
 
 <!-- Links for fb:Measures -->
 [`fb:Measures`]: general-guidance/fb_Measures
