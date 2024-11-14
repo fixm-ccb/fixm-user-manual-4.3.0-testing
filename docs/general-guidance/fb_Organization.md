@@ -5,9 +5,3 @@
 ---
 
 ?> COMING SOON
-
----
-
-## *references* <!-- {docsify-ignore} -->
-
-...

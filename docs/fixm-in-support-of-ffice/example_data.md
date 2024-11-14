@@ -525,11 +525,11 @@ Encoding Rules:
 
 
 
-[`departureAerodrome`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=departureaerodrome-departurepoint
-[`estimatedOffBlockTime`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=estimatedoffblocktime-estimatedroutestarttime
+[`departureAerodrome`]: general-guidance/fx_Departure?id=departureaerodrome-departurepoint
+[`estimatedOffBlockTime`]: general-guidance/fx_Departure?id=estimatedoffblocktime-estimatedroutestarttime
 
-[`element`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=element
-[`seqNum`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_Types?id=count-sequence-numbers
+[`element`]: general-guidance/fx_RouteTrajectory?id=element
+[`seqNum`]: general-guidance/fb_Types?id=count-sequence-numbers
 
 
 

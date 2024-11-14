@@ -8,7 +8,7 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ## `aircraftAddress`
 
-The `Aircraft Address` is *A unique combination of twenty-four bits available for assignment to an aircraft for the purpose of air-ground communications, navigation and surveillance.* The `Aircraft Address` is hardcoded in the aircraft and is commonly called Mode S Address.
+The `Aircraft Address` is *a unique combination of twenty-four bits available for assignment to an aircraft for the purpose of air-ground communications, navigation and surveillance.* The `Aircraft Address` is hardcoded in the aircraft and is commonly called Mode S Address.
 
 Example: 
 - Aircraft Address = `4010DA`
@@ -56,7 +56,7 @@ Although technically permitted, when the flight is not a formation, the `<aircra
 
 The `Aircraft Registration` is *a unique, alphanumeric string that identifies a civil aircraft and consists of the Aircraft Nationality or Common Mark and an additional alphanumeric string assigned by the state of registry or common mark registering authority.* 
 
-The `Aircraft Registration` is commonly called tail number, and is visible on the airframe. 
+The `Aircraft Registration` is commonly called tail number and is visible on the airframe. 
 
 Examples: 
 
@@ -86,9 +86,3 @@ Corresponding encoding in `FIXM 4.3.0`
   <fx:aircraft>
     <fx:registration>9MMRO</fx:registration>
 ```
-
----
-
-## *references* <!-- {docsify-ignore} -->
-
-...

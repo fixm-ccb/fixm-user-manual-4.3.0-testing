@@ -23,9 +23,3 @@ The `lowerSpeed` shall always be lower than the `upperSpeed`.
 This represents a vertical range with a `lowerBound` and an`upperBound`. 
 Both values can be either an `altitude` or a `flightLevel`. 
 The `lowerBound` shall always be lower than the `upperBound`.
-
----
-
-
-
-

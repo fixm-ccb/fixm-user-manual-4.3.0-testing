@@ -1,10 +1,10 @@
 # FIXM Encoding Guidance - `fx:Flight`
 
 This section describes general encoding guidance for FIXM Core's `fx:Flight` package that is always applicable, whatever the implementation context. 
-Click on the packages, classes or properties below to open the corresponding encoding guidance. 
+Click on the packages, classes, or properties below to open the corresponding encoding guidance. 
 Alternatively, you can use the Search box in the side bar to find relevant user manual entries.
 
-*Note: links are provided below only when encoding guidance is available. The FIXM User Manual is being gradually enriched to cover all FIXM Core properties.*
+*Note: links are provided below only when encoding guidance is available. The FIXM User Manual is being gradually enriched to provide guidance for all FIXM Core content.*
 
 ---
 Package [`fx:Aircraft`]
@@ -60,80 +60,80 @@ Package [`fx:Constraints`]
 
 <!----------------------------------------------------->
 <!-- Links for fx:Aircraft -->
-[`fx:Aircraft`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft
-[aircraftAddress]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft?id=aircraftaddress
-[aircraftType]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft?id=aircrafttype
-[registration]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft?id=registration
-[capabilities]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Capability
-[aircraftCount]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft?id=aircraftcount
+[`fx:Aircraft`]: general-guidance/fx_Aircraft
+[aircraftAddress]: general-guidance/fx_Aircraft?id=aircraftaddress
+[aircraftType]: general-guidance/fx_Aircraft?id=aircrafttype
+[registration]: general-guidance/fx_Aircraft?id=registration
+[capabilities]: general-guidance/fx_Capability
+[aircraftCount]: general-guidance/fx_Aircraft?id=aircraftcount
 
 <!-- Links for fx:Arrival -->
-[`fx:Arrival`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Arrival
-[destinationAerodromePrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentificationprevious
+[`fx:Arrival`]: general-guidance/fx_Arrival
+[destinationAerodromePrevious]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
 
 <!-- Links for fx:Capability -->
-[`fx:Capability`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Capability
-[communication]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Capability?id=communication
-[selectiveCallingCode]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Capability?id=selectivecallingcode
+[`fx:Capability`]: general-guidance/fx_Capability
+[communication]: general-guidance/fx_Capability?id=communication
+[selectiveCallingCode]: general-guidance/fx_Capability?id=selectivecallingcode
 
 <!-- Links for fx:Cargo -->
-[`fx:Cargo`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Cargo
+[`fx:Cargo`]: general-guidance/fx_Cargo
 
 <!-- Links for fx:Departure -->
-[`fx:Departure`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure
-[airfileIndicator]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=airfileindicator
-[airportslotidentification]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=airportslotidentification
-[departureAerodrome]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=departureaerodrome-departurepoint
-[departureAerodromePrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentificationprevious
-[departurePoint]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=departureaerodrome-departurepoint
-[departurePointPrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentificationprevious
-[estimatedOffBlockTime]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=estimatedoffblocktime-estimatedroutestarttime
-[estimatedOffBlockTimePrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentificationprevious
-[estimatedRouteStartTime]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=estimatedoffblocktime-estimatedroutestarttime
-[estimatedRouteStartTimePrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentificationprevious
+[`fx:Departure`]: general-guidance/fx_Departure
+[airfileIndicator]: general-guidance/fx_Departure?id=airfileindicator
+[airportslotidentification]: general-guidance/fx_Departure?id=airportslotidentification
+[departureAerodrome]: general-guidance/fx_Departure?id=departureaerodrome-departurepoint
+[departureAerodromePrevious]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
+[departurePoint]: general-guidance/fx_Departure?id=departureaerodrome-departurepoint
+[departurePointPrevious]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
+[estimatedOffBlockTime]: general-guidance/fx_Departure?id=estimatedoffblocktime-estimatedroutestarttime
+[estimatedOffBlockTimePrevious]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
+[estimatedRouteStartTime]: general-guidance/fx_Departure?id=estimatedoffblocktime-estimatedroutestarttime
+[estimatedRouteStartTimePrevious]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
 
 <!-- Links for fx:Emergency -->
-[`fx:Emergency`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Emergency
+[`fx:Emergency`]: general-guidance/fx_Emergency
 
 <!-- Links for fx:EnRoute -->
-[`fx:EnRoute`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_EnRoute
+[`fx:EnRoute`]: general-guidance/fx_EnRoute
 
 <!-- Links for fx:FlightData -->
-[`fx:FlightData`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData
-[aircraft]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Aircraft?id=encoding-guidance-for-fxaircraft
-[arrival]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Arrival?id=encoding-guidance-for-fxarrival
-[dangerousGoods]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Cargo?id=encoding-guidance-for-fxcargo
-[departure]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Departure?id=encoding-guidance-for-fxdeparture
-[emergency]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Emergency?id=encoding-guidance-for-fxemergency
-[enRoute]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_EnRoute?id=encoding-guidance-for-fxenroute
-[flightIdentification]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=flightidentification
-[aircraftIdentification]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentification
-[aircraftIdentificationPrevious]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=aircraftidentificationprevious
-[gufi]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=gufi
-[gufiLegacy]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_FlightData?id=compatibility-with-fixm-core-420
+[`fx:FlightData`]: general-guidance/fx_FlightData
+[aircraft]: general-guidance/fx_Aircraft?id=encoding-guidance-for-fxaircraft
+[arrival]: general-guidance/fx_Arrival?id=encoding-guidance-for-fxarrival
+[dangerousGoods]: general-guidance/fx_Cargo?id=encoding-guidance-for-fxcargo
+[departure]: general-guidance/fx_Departure?id=encoding-guidance-for-fxdeparture
+[emergency]: general-guidance/fx_Emergency?id=encoding-guidance-for-fxemergency
+[enRoute]: general-guidance/fx_EnRoute?id=encoding-guidance-for-fxenroute
+[flightIdentification]: general-guidance/fx_FlightData?id=flightidentification
+[aircraftIdentification]: general-guidance/fx_FlightData?id=aircraftidentification
+[aircraftIdentificationPrevious]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
+[gufi]: general-guidance/fx_FlightData?id=gufi
+[gufiLegacy]: general-guidance/fx_FlightData?id=compatibility-with-fixm-core-420
 
 <!-- Links for fx:RouteChanges -->
-[`fx:RouteChanges`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteChanges
+[`fx:RouteChanges`]: general-guidance/fx_RouteChanges
 
 <!-- Links for fx:RouteTrajectory -->
-[`fx:RouteTrajectory`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory
-[climbProfile]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=climbprofile-descentprofile
-[descentProfile]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=climbprofile-descentprofile
-[profilePoint]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=climbprofile-descentprofile
-[routeInformation]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=routeinformation
-[point4D]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=point4d
-[pointProperty]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=pointproperty
-[propertyType]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=pointproperty
-[element]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=element
-[airacReference]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteTrajectory?id=airacreference
-[constraint]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Constraints?id=encoding-guidance-for-fxconstraints
-[routeChange]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_RouteChanges?id=encoding-guidance-for-fxroutechanges
-[seqNum]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_Types?id=count-sequence-numbers
+[`fx:RouteTrajectory`]: general-guidance/fx_RouteTrajectory
+[climbProfile]: general-guidance/fx_RouteTrajectory?id=climbprofile-descentprofile
+[descentProfile]: general-guidance/fx_RouteTrajectory?id=climbprofile-descentprofile
+[profilePoint]: general-guidance/fx_RouteTrajectory?id=climbprofile-descentprofile
+[routeInformation]: general-guidance/fx_RouteTrajectory?id=routeinformation
+[point4D]: general-guidance/fx_RouteTrajectory?id=point4d
+[pointProperty]: general-guidance/fx_RouteTrajectory?id=pointproperty
+[propertyType]: general-guidance/fx_RouteTrajectory?id=pointproperty
+[element]: general-guidance/fx_RouteTrajectory?id=element
+[airacReference]: general-guidance/fx_RouteTrajectory?id=airacreference
+[constraint]: general-guidance/fx_Constraints?id=encoding-guidance-for-fxconstraints
+[routeChange]: general-guidance/fx_RouteChanges?id=encoding-guidance-for-fxroutechanges
+[seqNum]: general-guidance/fb_Types?id=count-sequence-numbers
 
 <!-- Links for fx:Constraints -->
-[`fx:Constraints`]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Constraints
-[level]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Constraints?id=level
-[speed]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Constraints?id=speed
-[time]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fx_Constraints?id=time
+[`fx:Constraints`]: general-guidance/fx_Constraints
+[level]: general-guidance/fx_Constraints?id=level
+[speed]: general-guidance/fx_Constraints?id=speed
+[time]: general-guidance/fx_Constraints?id=time
 
 <!-----------------------------------------------------> 

@@ -45,7 +45,7 @@ Sub-second precision is considered unneeded for most aviation data, but other fi
 - `DateTimeUtcHighPrecision` employs unrestricted sub-second precision. It is used for typing the message timestamps in the FIXM Applications.
 
 Examples: 
-- for aviation-related times, *20th July 1969 at 20:18 UTC* is expressed as `1969-07-20T20:18:00Z`
+- For aviation-related times, *20th July 1969 at 20:18 UTC* is expressed as `1969-07-20T20:18:00Z`
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->	
@@ -53,10 +53,21 @@ Examples:
   <fx:time>1969-07-20T20:18:00Z</fx:time>
 ```
 
-- for message timestamps, higher precision can be provided, as needed: `1969-07-20T20:18:00.458Z`
+- For message timestamps, higher precision can be provided, as needed: `1969-07-20T20:18:00.458Z`
 
 !> **Note to implementers:** The mapping of the XSD type `dateTime` to native structures in various development contexts is not always 1-1 and may exhibit a wide variety of difficulties depending on the tooling and runtime context. In particular, the trailing character `Z` indicating UTC may actually be stripped/omitted, leading to FIXM times being interpreted as local times instead of UTC times by some applications. FIXM implementers are therefore invited to crosscheck that their systems correctly interpret FIXM times as UTC time.
 
 ---
 
+## `GloballyUniqueFlightIdentifier`
 
+See [`gufi`]
+
+---
+
+## `HypertextReference`
+
+See [Hypertext References]
+
+[`gufi`]: general-guidance/fx_FlightData?id=gufi
+[Hypertext References]: general-guidance/fb_AeronauticalReference?id=hypertext-references

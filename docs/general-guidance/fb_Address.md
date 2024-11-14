@@ -6,8 +6,7 @@
 
 ## `ContactInformation`
 
-If the usage of `ContactInformation` is associated with a person, the ContactInformation.`name` field should not be used and the PersonOrOrganization.`name` should be used instead.
-
+If the use of `ContactInformation` is associated with a person, the ContactInformation.`name` field should not be used and the PersonOrOrganization.`name` field should be used instead.
 
 
 ## `OnlineContact`
@@ -19,16 +18,16 @@ A network address is always formed of two pieces of information: the
 **linkage** and the **network** information.
 
 - The former captures the expression of the network address. This is
-    supported by property `OnlineContact.linkage`.
+    supported by the property `OnlineContact.linkage`.
 
 - The latter captures the network on which the address is valid. This
-    is supported by property `OnlineContact.network`.
+    is supported by the property `OnlineContact.network`.
 
-Property `OnlineContact.network` provides a choice between predefined
+The property `OnlineContact.network` provides a choice between predefined
 network types and free text. Network information should be preferably
 encoded using the property `NetworkChoice.type` populated with the
 applicable enumerated value from enumeration `TelecomNetworkType`. If none
-of the enumerated values is suitable, the property `NetworkChoice.other`
+of the enumerated values are suitable, the property `NetworkChoice.other`
 shall be used. The ATM Information Reference Model provides additional
 telecom network types that should be used for populating
 `NetworkChoice.other`, as appropriate. These additional AIRM values are
@@ -42,7 +41,7 @@ The type of network affects the format of the linkage information.
 
 ### Examples
 
-The following example illustrates contact information formed of an email
+The following example illustrates contact information consisting of an email
 address and an Internet address expressed as a resolvable URL.
 
 ```xml
@@ -55,8 +54,8 @@ address and an Internet address expressed as a resolvable URL.
 </fb:onlineContact>
 ```
 
-The following example illustrates contact information formed of an AFTN
-address. The example features the EUROCONTROL NM ‘AFTN address’ for
+The following example illustrates contact information consisting of an AFTN
+address. The example features the EUROCONTROL NM 'AFTN address' for
 Flight Plan Message Submission to IFPS (FP1 - Brussels (Haren)).
 
 ```xml
@@ -68,8 +67,8 @@ Flight Plan Message Submission to IFPS (FP1 - Brussels (Haren)).
 </fb:onlineContact>
 ```
 
-The following example illustrates contact information formed of a SITA
-address. `SITA` is not a value captured in FIXM enumeration
+The following example illustrates contact information consisting of a SITA
+address. `SITA` is not a value captured in the FIXM enumeration
 `TelecomNetworkType` but is part of the reference ATM vocabulary provided
 by the AIRM (AIRM codelist
 [`CodeTelecomNetworkType`](http://airm.aero/viewer/1.0.0/logical-model/CodeTelecomNetworkType.html)).
@@ -91,5 +90,3 @@ Message Submission to IFPS (FP1 - Brussels (Haren)).
 
 The `countryName` shall always be populated with the full name, not an ISO 3166 abbreviation.
 The `countryCode` shall always be populated using an ISO 3166 abbreviation.
-
----

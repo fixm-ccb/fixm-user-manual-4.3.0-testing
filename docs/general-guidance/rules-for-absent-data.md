@@ -115,7 +115,7 @@ When a geographical position is to be declared null:
 </fx:desired>
 ```
 
-## References
+## References <!-- {docsify-ignore} -->
 
 ### ICAO References
 

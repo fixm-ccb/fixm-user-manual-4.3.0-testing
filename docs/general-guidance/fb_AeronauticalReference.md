@@ -43,12 +43,12 @@ references in FIXM.
 
 ---
 
-## hypertext references
+## Hypertext References
 
 If an AIXM 5.1 feature exists that corresponds to the element being
 referred to, an **optional** hypertext reference to that AIXM feature
 may be provided. This reference shall be expressed in accordance with
-chapter 3.4.1 (*Abstract references using UUID*) of the [AIXM feature Identification and Reference document]
+chapter 3.4.1 (*Abstract references using UUID*) of the <a href="https://aixm.aero/sites/default/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf"><em>AIXM feature Identification and Reference document</em></a>
 developed by the AIXM community.
 
 This hypertext reference may be used - or ignored - by the receiving
@@ -82,7 +82,7 @@ namely the aerodrome reference point or relative reference point.
 *(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
 
 Option 2 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references].
+as described in [Hypertext References] above.
 
 #####  Examples (NOT for OPERATIONAL USE)
 
@@ -194,7 +194,7 @@ consist of the coded designator of the airspace as published in the AIP.
 *(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
 
 Option 2 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references].
+as described in [Hypertext References] above.
 
 #### Examples (NOT for OPERATIONAL USE)
 
@@ -270,7 +270,7 @@ the AIP.
 *(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
 
 Option 2 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references].
+as described in [Hypertext References] above.
 
 #### Examples (NOT for OPERATIONAL USE)
 
@@ -391,7 +391,7 @@ duplicates/triplicates/…
 *(OPTION 3 = OPTION 1 + supplementary hypertext reference)*
 
 Option 3 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references].
+as described in [Hypertext References] above.
 
 ```xml
 <fb:designatedPoint href="urn:uuid:81e47548-9f00-4970-b641-8ff8f99098a5">
@@ -399,7 +399,7 @@ as described in chapter [Generic hypertext references].
 </fb:designatedPoint>
 ```
 
-Hypertext reference to be provided in accordance with the [AIXM feature Identification and Reference document], chapter 3.4.1.
+Hypertext reference to be provided in accordance with the <a href="https://aixm.aero/sites/default/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf"><em>AIXM feature Identification and Reference document</em></a>, chapter 3.4.1.
 
 #### OPTION 4 - Complete Reference
 
@@ -741,7 +741,7 @@ and navaid service type) in case of duplicates/triplicates/…
 *(OPTION 3 = OPTION 1 + supplementary hypertext reference)*
 
 Option 3 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references].
+as described in [Hypertext References] above.
 
 #### OPTION 4 - Complete Reference
 
@@ -814,7 +814,7 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 ```
 
 </p></td>
-<td>Hypertext reference to be provided in accordance with the [AIXM feature Identification and Reference document], chapter 3.4.1.</td>
+<td>Hypertext reference to be provided in accordance with the <a href="https://aixm.aero/sites/default/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf"><em>AIXM feature Identification and Reference document</em></a>, chapter 3.4.1.</td>
 </tr>
 <tr class="even">
 <td><p><strong>OPTION 4</strong></p>
@@ -854,7 +854,7 @@ Direction designator.
 *(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
 
 Option 2 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references].
+as described in [Hypertext References] above.
 
 #### Examples (NOT for OPERATIONAL USE)
 
@@ -897,7 +897,7 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 ```
 
 </td>
-<td>Hypertext reference to be provided in accordance with the [AIXM feature Identification and Reference document], chapter 3.4.1.</td>
+<td>Hypertext reference to be provided in accordance with the <a href="https://aixm.aero/sites/default/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf"><em>AIXM feature Identification and Reference document</em></a>, chapter 3.4.1.</td>
 </tr>
 </tbody>
 </table>
@@ -918,7 +918,7 @@ unambiguous identification of the ATS Route being referred to.
 *(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
 
 Option 2 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references].
+as described in [Hypertext References] above.
 
 #### Examples (NOT for OPERATIONAL USE)
 
@@ -961,7 +961,7 @@ Atlantic Ocean. The examples shall NEVER BE USED AS OPERATIONAL DATA.
 ```
 
 </td>
-<td>Hypertext reference to be provided in accordance with the [AIXM feature Identification and Reference document], chapter 3.4.1.</td>
+<td>Hypertext reference to be provided in accordance with the <a href="https://aixm.aero/sites/default/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf"><em>AIXM feature Identification and Reference document</em></a>, chapter 3.4.1.</td>
 </tr>
 </tbody>
 </table>
@@ -978,7 +978,7 @@ designator as published in the AIP.
 *(OPTION 2 = OPTION 1 + supplementary hypertext reference)*
 
 Option 2 corresponds to Option 1 with an additional hypertext reference
-as described in chapter [Generic hypertext references].
+as described in [Hypertext References] above.
 
 #### Examples (NOT for OPERATIONAL USE)
 
@@ -1021,7 +1021,7 @@ that is published in the French AIPs.
 ```
 
 </p></td>
-<td>Hypertext reference to be provided in accordance with the [AIXM feature Identification and Reference document] [AIXM feature Identification and Reference document], chapter 3.4.1.</td>
+<td>Hypertext reference to be provided in accordance with the <a href="https://aixm.aero/sites/default/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf"><em>AIXM feature Identification and Reference document</em></a>, chapter 3.4.1.</td>
 </tr>
 </tbody>
 </table>
@@ -1079,7 +1079,7 @@ that is published in the Argentinian AIPs.
 ```
 
 </p></td>
-<td>Hypertext reference to be provided in accordance with the [AIXM feature Identification and Reference document], chapter 3.4.1.</td>
+<td>Hypertext reference to be provided in accordance with the <a href="https://aixm.aero/sites/default/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf"><em>AIXM feature Identification and Reference document</em></a>, chapter 3.4.1.</td>
 </tr>
 </tbody>
 </table>
@@ -1156,7 +1156,7 @@ Atlantic Ocean. **The examples shall never be used as operational data**.
 ```
 
 
-## *references* <!-- {docsify-ignore} -->
+## *References* <!-- {docsify-ignore} -->
 
 ### ICAO References
 
@@ -1165,7 +1165,9 @@ Atlantic Ocean. **The examples shall never be used as operational data**.
 ### Other References
 
 [O-01]: [Donlon AIP data Set](https://github.com/aixm/donlon) - A fictitious set of digital AIS data sets complying with the ICAO Annex 15, 16th edition and the new PANS-AIM provisions, in AIXM 5.1.1 format.
+
 [O-02]: [W3C XML Linking Language (xlink) v1.1](https://www.w3.org/TR/xlink11/)
+
 [O-03]: [OGC 12-028r1](https://portal.opengeospatial.org/files/?artifact_id=62061) - Use of Geography Markup Language (GML) for Aviation Data
 
 
@@ -1183,8 +1185,7 @@ Atlantic Ocean. **The examples shall never be used as operational data**.
 [RelativePointType]: https://www.fixm.aero/releases/FIXM-4.3.0/doc/schema_documentation/Fixm_RelativePointType.html
 
 
-[References to Navaid]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_AeronauticalReference?id=navaid
-[Generic hypertext references]: https://fixm-ccb.github.io/fixm-user-manual-4.3.0-testing/#/general-guidance/fb_AeronauticalReference?id=hypertext-references
+[References to Navaid]: general-guidance/fb_AeronauticalReference?id=navaid
+[Hypertext References]: general-guidance/fb_AeronauticalReference?id=hypertext-references
 
-[AIXM feature Identification and Reference document]: https://aixm.aero/sites/default/files/imce/AIXM51/aixm_feature_identification_and_reference-1.0.pdf
 [US FAA’s publication of Instrument Flight Procedures encodings in ARINC 424-18 format]: https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/cifp/download/
