@@ -60,7 +60,7 @@ Due to these exceptions, the skeletons are not themselves schema-valid messages 
 [EUROCONTROL_PUBLICATION_SERVICE_DESCRIPTION]: https://eur-registry.swim.aero/services/eurocontrol-nm-publicationservice-270
 [EUROCONTROL_NM_B2B_SERVICES]: https://www.eurocontrol.int/service/network-manager-business-business-b2b-web-services
 
-[GIHUB_SAMPLES_REPOSITORY]: assets/downloads
+[GIHUB_SAMPLES_REPOSITORY]: https://github.com/fixm-ccb/fixm-user-manual-4.3.0-testing/tree/main/docs/assets/downloads/
 
 [FixmCore]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/core/Fixm.xsd
 [FficeMsg]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/FficeMessage.xsd
