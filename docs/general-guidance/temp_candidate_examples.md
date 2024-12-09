@@ -103,8 +103,9 @@ The property `otherAircraftType` can be used to exchange an aircraft type that h
 > Significant markings (this may include the aircraft registration).
 
 Property `coloursAndMarkings` can be used to exchange one or more of the following, separated by a space character: 
-- The colour of the aircraft
+- The colour of the aircraft. The AIRM provides a [list of colour codes](https://airm.aero/developers/advanced-search/1.1.0/CodeColourType?model=LogicalModel) that should be used preferably when encoding the colour of the aircraft.
 - Significant markings (this may include the aircraft registration).
+  
 
 > Example from Doc 4444
 
