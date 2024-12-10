@@ -53,8 +53,9 @@
 
 
 - **Using FIXM in Support of FF-ICE**
-  - [The FF-ICE Application for FIXM](fixm-in-support-of-ffice/ffice-application-for-fixm.md)
+  - [FIXM FF-ICE Message Application](fixm-in-support-of-ffice/ffice-application-for-fixm.md)
   - [FF-ICE Message Templates](fixm-in-support-of-ffice/message-templates.md)
+  - [ffice:FficeMessage](fixm-in-support-of-ffice/ffice_FficeMessage.md)
   - [Route/Trajectory Example Data](fixm-in-support-of-ffice/example_data.md)
   - [Examples of FF-ICE Messages](fixm-in-support-of-ffice/example_messages.md)
 
