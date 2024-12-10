@@ -6,7 +6,7 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
-### `actualTimeOfDeparture`
+## `actualTimeOfDeparture`
 
 A departure time can be recorded by different automated or manual means which do not
 always refer to the same event or location. Therefore, FIXM proposes different options 
