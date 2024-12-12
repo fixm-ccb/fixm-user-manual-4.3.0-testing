@@ -278,7 +278,7 @@ An ELT DT identifier consists of 15 or 23 hexadecimal characters. When there is 
 ### `dinghyInformation`
 
 The property `dinghyInformation` is used to exchange information about the dinghies on board the aircraft. This `dinghyInformation` consists of the following fields:
-- `colour`: used for indicating the colour of the dinghies.
+- `colour`: used for indicating the colour of the dinghies. The AIRM provides a [list of colour codes](https://airm.aero/developers/advanced-search/1.1.0/CodeColourType?model=LogicalModel) that should be used preferably when encoding the colour of the dinghies.
 - `covered`: put the value `COVERED` in this field if the dinghies are covered. If the dinghies are not covered, the field `covered` shall be omitted.
 - `number`: used for indicating the number of dinghies carried, expressed as a positive integer.
 - `totalCapacity`: used for indicating the number of persons that the dinghies on board the aircraft can altogether receive.
