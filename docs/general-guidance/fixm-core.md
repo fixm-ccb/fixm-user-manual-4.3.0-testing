@@ -133,9 +133,11 @@ identified in [this chapter](general-guidance/general-rules-for-data-correctness
   <fb:pos>19.740115 NaN</fb:pos>
 </fx:position>
 ```
-This example shows the FIXM encoding of a latitude/longitude pair that fails to follow the rules for data correctness from [this chapter](general-guidance/general-rules-for-data-correctness). This example validates from a data structure point of view (that is, it validates against the FIXM Core XML schemas) but is not correct because “NaN” is not a valid number in a latitude/longitude pair.
+This example shows the FIXM encoding of a latitude/longitude pair that fails to follow the rules for data correctness in the [Aeronautical Reference Chapter]. This example validates from a data structure point of view (that is, it validates against the FIXM Core XML schemas) but is not correct because “NaN” is not a valid number in a latitude/longitude pair.
 
 ## References
+
+[Aeronautical Reference Chapter]: general-guidance/fb_AeronauticalReference?id=GeographicalPosition
 
 ### ICAO References
 
