@@ -31,6 +31,12 @@ Concretely, the `actualTimeOfDeparture` is exchanged in FIXM using the following
 
 ---
 
+## `airfileIndicator`
+
+See below - chapter departureAerodrome / departurePoint.
+
+---
+
 ## `airportSlotIdentification`
 
 Airport slots are being used to balance demand against available airport capacity at airports where the
@@ -65,12 +71,6 @@ Identification of a departure airport slot allocated in Europe (from [EUROCONTRO
   <fx:departure>
     <fx:airportSlotIdentification>QB7361</fx:airportSlotIdentification>    
 ```
-
----
-
-## `airfileIndicator`
-
-See below - chapter departureAerodrome / departurePoint.
 
 ---
 
