@@ -15,7 +15,7 @@ becomes necessary while en route. Up to 20 en-route `alternateAerodrome`  may be
 
 ## `currentModeACode`
 
-The propoerty `currentModeACode` is used to exchange the SSR code assigned to the aircraft by ATS and
+The property `currentModeACode` is used to exchange the SSR code assigned to the aircraft by ATS and
 transmitted in Mode A.
 
 ```xml
