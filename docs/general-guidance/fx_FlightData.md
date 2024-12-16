@@ -148,6 +148,130 @@ Example
 <fx:gufiLegacy codeSpace="urn:uuid">dd056de9-0ba9-4d55-82cf-7b976b0b6d29</fx:gufiLegacy>
 ```
 
+### `iataFlightDesignator`
+
+FIXM strives to facilitate interoperability between the ATM and airline domains by including the ability, where necessary, to add the IATA
+representation of relevant information. In particular, property `flightIdentification` has a field `iataFlightDesignator` that can be used to 
+exchange the commercial flight identifier. 
+
+If exchanged, property `iataFlightDesignator` shall consist of: 
+- the `iataOperatorCode`: the IATA identifier for the operator of the flight. The `iataOperatorCode` shall be valid code listed in IATA's [Airline Coding Directory].
+- the `flightNumber`: Up to four-digit commercial flight number.
+- optionally, the `operationalSuffix`: One character suffix used to further identify a flight. 
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->    
+<fx:flight>
+  <fx:flightIdentification>
+    <fx:iataFlightDesignator>			
+      <fx:flightNumber>12</fx:flightNumber>
+      <fx:iataOperatorCode>UA</fx:iataOperatorCode>
+    </fx:iataFlightDesignator>
+    <!-- [...] -->
+```
+
+---
+
+## `flightRulesCategory`
+
+The property `flightRulesCategory` is used to exchange the category of flight rules with which the pilot intends to comply.
+It shall be one of the following values:
+- `I`: Intention to operate the entire flight under the IFR;
+- `V`: Intention to operate the entire flight under the VFR;
+- `Y`: Intention to operate initially under the IFR, followed by one or more subsequent changes of flight rules;
+- `Z`: Intention to operate initially under the VFR, followed by one or more subsequent changes of flight rules.
+
+If the value `Y` or `Z` is used, the point or points at which a [flight rules change] is planned shall be described in the `routeTrajectoryGroup`. 
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:flightRulesCategory>I</fx:flightRulesCategory>
+```
+
+## `flightType`
+
+The property `flightType` is used to exchange the indication of the type of carried out aircraft operation. 
+It shall be one of the following values:
+- `S`: Scheduled Air Transport
+- `N`: Non-Scheduled Air Transport
+- `G`: General Aviation
+- `M`: Military
+- `X`: Other
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:flightType>S</fx:flightType>
+```
+
+---
+
+## `remarks`
+
+The property `remarks` is used to exchange any other plain-language remarks when required by the appropriate ATS authority or deemed necessary, by the pilot-in-command for the provision of air traffic services. 
+This may include, for instance, other reasons for special handling by ATS not covered by property `specialHandling`.
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:remarks>NO POSITION REPORT SINCE DEP PLUS 2 MINUTES</fx:remarks>
+```
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:remarks>CHARTER</fx:remarks>
+```
+
+---
+
+## `specialHandling`
+
+The property `specialHandling` is used to exchange the reason for special handling of a flight by ATS. 
+If present, it shall consist of one or more of the following values, separated by a space character:
+- `ALTRV`: for a flight operated in accordance with an altitude reservation;
+- `ATFMX`: for a flight approved for exemption from ATFM measures by the appropriate ATS authority;
+- `FFR`: fire-fighting;
+- `FLTCK`: flight check for calibration of navaids;
+- `HAZMAT`: for a flight carrying hazardous material;
+- `HEAD`: a flight with Head of State status;
+- `HOSP`: for a medical flight declared by medical authorities;
+- `HUM`: for a flight operating on a humanitarian mission;
+- `MARSA`: for a flight for which a military entity assumes responsibility for separation of military aircraft;
+- `MEDEVAC`: for a life critical medical emergency evacuation;
+- `NONRVSM`: for a non-RVSM capable flight intending to operate in RVSM airspace;
+- `SAR`: for a flight engaged in a search and rescue mission;
+- `STATE`: for a flight engaged in military, customs or police services.
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:specialHandling>MEDEVAC</fx:specialHandling>
+```
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:specialHandling>HEAD MARSA</fx:specialHandling>
+```
+
+## `supplementaryInformation`
+
+In FIXM, the property `supplementaryInformation` consists of the following fields:
+- `fuelEndurance`: This is the estimated maximum length of time the aircraft can spend in the cruise phase of flight, determined by the amount of fuel at takeoff. The fuel endurance shall be expressed as hours and minutes of flying time. The encoding of a `fuelEndurance` shall therefore always start with `P0Y0M0DT`.
+- `personsOnBoard`: This is the total number of persons (passengers and crew) on board the aircraft.
+- `pilotInCommand`: This is the pilot designated by the operator, or in the case of general aviation, the owner, as being in command and charged with the safe conduct of a flight.
+
+Example (based on ICAO Doc 4444)
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:supplementaryInformation>
+  <fx:fuelEndurance>P0Y0M0DT3H45M0S</fx:fuelEndurance>
+  <fx:personsOnBoard>300</fx:personsOnBoard>
+  <fx:pilotInCommand>
+    <fb:name>DENKE</fb:name>
+  </fx:pilotInCommand>
+</fx:supplementaryInformation>
+```
+
+Note: The `supplementaryInformation` does not capture the complete set of elements described in ICAO Doc 4444 ITEM 19 "Supplementary Information"; it only contains those elements that could not be modeled more logically in other FIXM structures. 
+
 ---
 
 ## *References* <!-- {docsify-ignore} -->
@@ -166,3 +290,7 @@ Example
 
 [O-08]: [ISO/IEC 9834-8:2014](https://www.iso.org/obp/ui#iso:std:iso-iec:9834:-8:ed-3:v1:en)
 
+
+
+
+[Airline Coding Directory]: https://www.iata.org/en/publications/manuals/airline-coding-directory/
