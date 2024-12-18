@@ -106,7 +106,7 @@ the FIXM Core requirement on data structure.
 |-|-|-|
 | **Requirement**                     | To qualify as valid usage of FIXM Core, the flight-related content of a given message, or relevant part thereof, shall satisfy the minimum set of rules addressing data plausibility and consistency.                                                                                                                                                                                            |
 | **Rationale**                       | The flight-related content of a message being syntactically correct and complete may still not make sense from an operational or plausibility perspective. Additional business rules are required to check the correctness of the encoded information, such as the consistency between model elements.                                                                                           |
-| **How to check this**               | The content of a message, or the relevant part thereof, validates without error against the applicable business rules addressing data correctness. [This chapter](general-guidance/general-rules-for-data-correctness) lists business rules addressing data correctness which are always applicable whatever the context of the exchange. Additional business rules addressing data correctness may exist which are specific to particular use-cases. |
+| **How to check this**               | The content of a message, or the relevant part thereof, validates without error against the applicable business rules addressing data correctness. Specific examples of business rules addressing data correctness are provided in the corresponding sections of this user manual. |
 
 #### Example of FIXM Core usage satisfying the requirement on data correctness
 
@@ -124,7 +124,7 @@ the FIXM Core requirement on data structure.
 This example shows the FIXM encoding of vertical range \[FL240;FL250\].
 It satisfies the basic data plausibility/correctness rule “*The
 lowerBound shall always be lower than the upperBound*" that is
-identified in [this chapter](general-guidance/general-rules-for-data-correctness). It qualifies as valid FIXM Core usage.
+identified in the [Ranges and Choices Chapter]. It qualifies as valid FIXM Core usage.
 
 #### Example of FIXM Core usage NOT satisfying the requirement on data correctness
 
@@ -133,9 +133,12 @@ identified in [this chapter](general-guidance/general-rules-for-data-correctness
   <fb:pos>19.740115 NaN</fb:pos>
 </fx:position>
 ```
-This example shows the FIXM encoding of a latitude/longitude pair that fails to follow the rules for data correctness from [this chapter](general-guidance/general-rules-for-data-correctness). This example validates from a data structure point of view (that is, it validates against the FIXM Core XML schemas) but is not correct because “NaN” is not a valid number in a latitude/longitude pair.
+This example shows the FIXM encoding of a latitude/longitude pair that fails to follow the rules for data correctness in the [Aeronautical Reference Chapter]. This example validates from a data structure point of view (that is, it validates against the FIXM Core XML schemas) but is not correct because “NaN” is not a valid number in a latitude/longitude pair.
 
 ## References
+
+[Aeronautical Reference Chapter]: general-guidance/fb_AeronauticalReference?id=GeographicalPosition
+[Ranges and Choices Chapter]: general-guidance/fb_RangesAndChoice
 
 ### ICAO References
 

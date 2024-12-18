@@ -63,7 +63,7 @@ Example:
 Important note: FIXM does not import the W3C XML Linking Language<sup>[[O-02]](#references)</sup>
 (xlink) v1.1 schemas in order to represent the hypertext references.
 FIXM mimics the xlink Locator attribute named “href” but defines it
-within the FIXM (Base) namespace<sup><a href="#general-guidance/references-to-published-aeronautical-information?id=notes">[note 1]</a></sup>.
+within the FIXM (Base) namespace.
 
 ---
 
@@ -634,7 +634,7 @@ The EPSG:4326 CRS has latitude as the primary axis, which indicates that
 **second longitude**. This ordering convention is the one applied to the
 aviation domain.
 
-The co-ordinates are represented in FIXM by a two-valued sequence<sup><a href="#general-guidance/geographical-positions?id=notes">[note 1]</a></sup>,
+The co-ordinates are represented in FIXM by a two-valued sequence,
 the first being the latitude and the second being the longitude, each of
 which is a floating point number (the decimal value in degrees). The
 direction is determined by the sign of the value, as specified in the
