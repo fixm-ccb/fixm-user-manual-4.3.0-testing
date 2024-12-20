@@ -110,7 +110,7 @@ This chapter lists a number of strategic requirements for `FIXM` with regards to
 #### 2.4.1	AIXM, WXXM and FIXM
 
 The AIXM (Aeronautical Information Exchange Model) is designed to enable the management and distribution of AIS (Aeronautical Information Services) data in digital format. More information about this data exchange model can be found in the website www.AIXM.aero.
-The WXXM (Weather Information Exchange Model) is designed to enable a platform independent, harmonized and interoperable meteorological information exchange covering all the needs of the air transport industry. More information about this data exchange model can be found in the website www.WXXM.aero.
+The WXXM (Weather Information Exchange Model) is designed to enable a platform independent, harmonized and interoperable meteorological information exchange covering all the needs of the air transport industry. More information about this data exchange model can be found in the website community.wmo.int/en/activity-areas/wis/iwxxm.
 
 `FIXM` (Flight Information Exchange Model) is designed to enable the interoperability of flight and flow information at a global level.
 
@@ -251,7 +251,7 @@ The picture below provides an illustration of the catalogue of third-parties FIX
 
 [I-06]: [ICAO Doc 9965, 2nd Edition, Volume II, v0.993 (DRAFT)](https://portal.icao.int/atmrpp/ATMRPP5%20Montreal%2059%20June%202023/1_Working%20papers/ATMRPP5_WP1000_Appendix%20C%20Doc%209965%20Vol%20II%20Implementation%20Guidance%20d0.993_markup.pdf) - Manual on FF-ICE, FF-ICE/R1 Implementation Guidance Manual **DRAFT** 
 
-[I-10]: [**DRAFT** ICAO Manual on System Wide Information Management (SWIM) Implementation, version September 2021](https://portal.icao.int/imp/MeetingDocs/IMP-2/Working%20Papers/Appendix%20A%20to%20IMP_2%20WP006%20%E2%80%93%20Manual%20on%20SWIM%20Implementation.pdf)
+[I-10]: [ICAO Manual on System Wide Information Management (SWIM) Implementation, 1st Edition, 2024](https://store.icao.int/en/manual-on-the-system-wide-information-management-swim-implementation-doc-10203)
 
 [I-12]: [ICAO Doc 9883, 1st Edition](https://portal.icao.int/icao-net/ICAO%20Documents/9883_cons_en.pdf) - Manual on Global Performance of the Air Navigation System
 
