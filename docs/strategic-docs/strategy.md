@@ -4,11 +4,9 @@
 
 ### 1.1	Introduction to FIXM
 
-The Flight Information Exchange Model (`FIXM`) is an exchange model capturing Flight and Flow information that is globally standardised. The requirement for `FIXM` was identified by the International Civil Aviation Organisation (ICAO) <sup>[[I-01]](#references)</sup> <sup>[[I-02]](#references)</sup> <sup>[[I-03]](#references)</sup> <sup>[[I-12]](#references)</sup> <sup>[[I-13]](#references)</sup> Air Traffic Management Requirements and Performance Panel (ATMRPP) and endorsed at the 12th Air Navigation Conference as part of the Aviation System Block Upgrades (ASBU) and as described in Flight and Flow Information for a Collaborative Environment (FF-ICE) <sup>[[I-05]](#references)</sup>.
+The Flight Information Exchange Model (`FIXM`) is an exchange model capturing Flight and Flow information that is globally standardised. FIXM is the domain specific Information Exchange Model recommended by ICAO [I-6] for implementing FF-ICE information exchanges in accordance with the ICAO PANS-IM requirements on information.
 
-`FIXM` is the equivalent, for the Flight domain, of AIXM (Aeronautical Information Exchange Model) and WXXM (Weather Information Exchange Model) both of which were developed in order to achieve global interoperability for, respectively, AIS and MET information exchange. FIXM is therefore part of a family of technology independent, harmonized and interoperable information exchange models designed to cover the information needs of Air Traffic Management.
-
-According to the ICAO SWIM concept <sup>[[I-10]](#references)</sup>, `FIXM` is one of the models that belong to the “Information Exchange Models” layer of the ICAO SWIM Global Interoperability framework.
+`FIXM` is the equivalent, for the Flight domain, of AIXM (Aeronautical Information Exchange Model) and IWXXM (ICAO Weather Information Exchange Model) both of which were developed in order to achieve global interoperability for, respectively, AIS and MET information exchange. FIXM is therefore part of a family of technology independent, harmonized and interoperable information exchange models designed to cover the information needs of Air Traffic Management. This family forms the “Information Exchange Models” layer of the ICAO SWIM Global Interoperability framework<sup>[[I-10]](#references)</sup>.
 
 ### 1.2	Purpose of the Strategy
 
@@ -241,21 +239,11 @@ The picture below provides an illustration of the catalogue of third-parties FIX
 
 ### ICAO References
 
-[I-01]: [ICAO Doc 9854, 1st Edition, 2005](https://www.icao.int/Meetings/anconf12/Document%20Archive/9854_cons_en[1].pdf) - Global Air Traffic Management Operational Concept
-
-[I-02]: [ICAO Doc 9882, 1st Edition, 2007](https://www.icao.int/airnavigation/IMP/Documents/Doc%209882%20-%20Manual%20on%20ATM%20Requirements.pdf) - Manual on Air Traffic Management System Requirements
-
-[I-03]: [Global Air Navigation Plan](https://www4.icao.int/ganpportal/)
-
 [I-05]: [ICAO Doc 9965, 2nd Edition, Volume I, v2022a (DRAFT)](https://portal.icao.int/atmrpp/ATMRPP5%20Montreal%2059%20June%202023/1_Working%20papers/ATMRPP5_WP1000_%20Appendix%20B%20Doc%209965%20Vol%20I%20Concept%20Document_v2022a%20_clean.pdf) - Manual on FF-ICE, Concept document **DRAFT** 
 
 [I-06]: [ICAO Doc 9965, 2nd Edition, Volume II, v0.993 (DRAFT)](https://portal.icao.int/atmrpp/ATMRPP5%20Montreal%2059%20June%202023/1_Working%20papers/ATMRPP5_WP1000_Appendix%20C%20Doc%209965%20Vol%20II%20Implementation%20Guidance%20d0.993_markup.pdf) - Manual on FF-ICE, FF-ICE/R1 Implementation Guidance Manual **DRAFT** 
 
 [I-10]: [ICAO Manual on System Wide Information Management (SWIM) Implementation, 1st Edition, 2024](https://store.icao.int/en/manual-on-the-system-wide-information-management-swim-implementation-doc-10203)
-
-[I-12]: [ICAO Doc 9883, 1st Edition](https://portal.icao.int/icao-net/ICAO%20Documents/9883_cons_en.pdf) - Manual on Global Performance of the Air Navigation System
-
-[I-13]: [ICAO Doc 9971, 3st Edition](https://portal.icao.int/icao-net/ICAO%20Documents/9971_cons_en.pdf) - Manual on Collaborative Air Traffic Flow Management]
 
 [I-14]: ​[ICAO Aviation System Block Upgrades (ASBU) framework](https://www4.icao.int/ganpportal/ASBU?_gl=1*1k7ewhd*_ga*MTc2MDEwOTgyOS4xNjU4MzAxNzIy*_ga_992N3YDLBQ*MTY5MDc5MTQzNC4xNi4xLjE2OTA3OTM4NjIuMC4wLjA.)
 
