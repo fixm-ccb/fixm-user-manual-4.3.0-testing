@@ -30,7 +30,7 @@ The `aircraftApproachCategory` is a classification of aircraft based on 1.3 time
 
 The `aircraftApproachCategory` shall be one of the following values:
   - `A` - less than 169 km/h (91 kt) indicated airspeed 
-  - `B` - 169 km/h (91 kt) or more but less than 224 km/h 
+  - `B` - 169 km/h (91 kt) or more but less than 224 km/h (121 kt)
   - `C` - 224 km/h (121 kt) or more but less than 261 km/h (141 kt) 
   - `D` - 261 km/h (141 kt) or more but less than 307 km/h (166 kt) 
   - `E` - 307 km/h (166 kt) or more but less than 391 km/h (211 kt) 
