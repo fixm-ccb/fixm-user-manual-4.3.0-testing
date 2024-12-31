@@ -160,7 +160,7 @@ See [`aircraftIdentificationPrevious`].
 ## `takeoffAlternateAerodrome`
 
 A `takeoffAlternateAerodrome` is an alternate aerodrome at which an aircraft would be able to land should this become necessary
-shortly after take-off and it is not possible to use the `departureAerodrome`. Up to 2 `takeoffAlternateAerodrome` may be
+shortly after take-off and it is not possible to use the `departureAerodrome`. Up to two `takeoffAlternateAerodrome` entries may be
 specified.
 
 ---
@@ -173,5 +173,6 @@ specified.
 
 [`aircraftIdentificationPrevious`]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
 
-
+[DateTimeUtc]: general-guidance/fb_Types?id=datetimeutc-datetimeutchighprecision
+[GeographicalPosition]: general-guidance/fb_AeronauticalReference?id=geographicalposition
 
