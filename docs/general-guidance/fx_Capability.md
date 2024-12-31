@@ -50,8 +50,7 @@ in terms of CPDLC. It shall consist of zero or more of the following values, sep
 
 The properties `otherCommunicationCapabilities` and `otherDatalinkCapabilities` can be used to exchange 
 communication or datalink capabilities that are not pre-defined. This is to allow for new capabilities or ANSP-
-specific capabilities that have not been designated standard codes but are required
-in a flight plan.
+specific capabilities that have not been designated standard codes.
 
 
 ### `selectiveCallingCode` 
@@ -125,8 +124,7 @@ If present, it shall consist of one or more of the following values, separated b
 
 The properties `otherNavigationCapabilities` can be used to exchange 
 navigation capabilities that are not pre-defined. This is to allow for new capabilities or ANSP-
-specific capabilities that have not been designated standard codes but are required
-in a flight plan.
+specific capabilities that have not been designated standard codes.
 
 
 ### `performanceBasedCode`
@@ -219,8 +217,7 @@ Standard equipment is considered to be `V` (VHF RTF), `O` (VOR) and `L` (ILS), u
 
 The properties `otherSurveillanceCapabilities` can be used to exchange 
 surveillance capabilities that are not pre-defined. This is to allow for new capabilities or ANSP-
-specific capabilities that have not been designated standard codes but are required
-in a flight plan.
+specific capabilities that have not been designated standard codes.
 
 ### `surveillanceCapabilityCode`
 
@@ -343,7 +340,7 @@ It shall consist of zero or more of the following values, separated by a space c
 - `MARITIME`: Maritime survival equipment is carried.
 - `POLAR`: Polar survival equipment is carried.
 
-The field `survivalEquipmentRemarks`  can be used to provide clarifying remarks and other survival equipment carried that is not specified above.
+The field `survivalEquipmentRemarks` can be used to provide clarifying remarks and other survival equipment carried that is not specified above.
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
@@ -353,7 +350,5 @@ The field `survivalEquipmentRemarks`  can be used to provide clarifying remarks 
       <fx:survivalEquipmentType>MARITIME</fx:survivalEquipmentType>
       <!-- ... -->
 ```
-
----
 
 [Distance]: //general-guidance/fb_Measures
