@@ -79,7 +79,7 @@ Example - flight scheduled to arrive at Brussels Airport (EBBR) that actually la
 ## `destinationAerodromeAlternate`
 
 A `destinationAerodromeAlternate` is an alternate aerodrome at which the aircraft would be able to land should it become either
-impossible or inadvisable to land at the `destinationAerodrome`. Up to 2 `destinationAerodromeAlternate` may be specified for a flight.
+impossible or inadvisable to land at the `destinationAerodrome`. Up to two `destinationAerodromeAlternate` entries may be specified for a flight.
 
 Example - a flight scheduled to land at Düsseldorf Airport (EDDL) with Münster Osnabrück Airport (EDDG) identified as destination alternate.
 
@@ -100,12 +100,9 @@ Example - a flight scheduled to land at Düsseldorf Airport (EDDL) with Münster
 
 See [`aircraftIdentificationPrevious`]
 
----
-
 [`aircraftIdentificationPrevious`]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
 [`airportSlotIdentification`]: general-guidance/fx_Departure?id=airportslotidentification
 
 [AerodromeReference]: general-guidance/fb_AeronauticalReference?id=aerodromereference
-
-
-
+[DateTimeUtc]: general-guidance/fb_Types?id=datetimeutc-datetimeutchighprecision
+[GeographicalPosition]: general-guidance/fb_AeronauticalReference?id=geographicalposition
