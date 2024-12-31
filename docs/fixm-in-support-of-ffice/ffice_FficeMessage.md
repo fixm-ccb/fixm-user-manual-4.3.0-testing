@@ -13,7 +13,7 @@ It consists of the following properties:
 - as a minimum, property `value` is used to exchange the value of the filing status. It shall be one the following values:
   - `ACCEPTABLE` - Indicates the the eFPL, and in particular the desired route/trajectory, is acceptable.
   - `NOT_ACCEPTABLE` - Indicates that the eFPL, typically the desired route/trajectory, does not comply with operational requirements.
-  - `PENDING` - Indicates that the flight plan has not yet been evaluated. This might happen when the eFPL is receivedby the eASP at a time which is in advance of its processing horizon for the flight, leading to 
+  - `PENDING` - Indicates that the flight plan has not yet been evaluated. This might happen when the eFPL is received by the eASP at a time which is in advance of its processing horizon for the flight, leading to 
      a deferral of the eFPL evaluation.
 - property `trajectoryPurpose` can be used to provide the eASP's intended purpose in providing an Agreed R/T in a Filing Status. Property `trajectoryPurpose` may be used only if the Filing Status `value` is `ACCEPTABLE`.
 - property `explanation` is used to detail the inconsistencies with the ATM configuration and/or with restrictions that have led to the filing status `value` being set to `NOT_ACCEPTABLE`. Property `explanation` shall be exchanged if and only if the Filing Status `value` is `NOT_ACCEPTABLE`.
@@ -53,7 +53,7 @@ accross systems. Here are local/regional examples of possible content for proper
 The property `flight` captures the information about the flight associated with the `FficeMessage`. The expected content will vary depending on the `type` of `FficeMessage`.
 The information captured in property `flight` shall conform to the general encoding guidance.
 
-## informationRequest
+## `informationRequest`
 
 The property `informationRequest` is used in an `FficeMessage` of `type`=`FLIGHT_DATA_REQUEST` in order to indicate what information about the flight is being requested. 
 
