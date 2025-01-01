@@ -9,7 +9,7 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 ## `alternateAerodrome`
 
 An en-route `alternateAerodrome` is an alternate aerodrome at which an aircraft would be able to land in the event that a diversion
-becomes necessary while en route. Up to 20 en-route `alternateAerodrome`  entries may be specified.
+becomes necessary while en route. Up to 20 en-route `alternateAerodrome` entries may be specified.
 
 ---
 
