@@ -155,7 +155,7 @@ representation of relevant information. In particular, property `flightIdentific
 exchange the commercial flight identifier. 
 
 If exchanged, property `iataFlightDesignator` shall consist of: 
-- the `iataOperatorCode`: the IATA identifier for the operator of the flight. The `iataOperatorCode` shall be valid code listed in IATA's [Airline Coding Directory].
+- the `iataOperatorCode`: the IATA identifier for the operator of the flight. The `iataOperatorCode` shall be a valid code listed in IATA's [Airline Coding Directory].
 - the `flightNumber`: Up to four-digit commercial flight number.
 - optionally, the `operationalSuffix`: One character suffix used to further identify a flight. 
 
@@ -181,7 +181,7 @@ It shall be one of the following values:
 - `Y`: Intention to operate initially under the IFR, followed by one or more subsequent changes of flight rules;
 - `Z`: Intention to operate initially under the VFR, followed by one or more subsequent changes of flight rules.
 
-If the value `Y` or `Z` is used, the point or points at which a [flight rules change] is planned shall be described in the `routeTrajectoryGroup`. 
+If the value `Y` or `Z` is used, the point or points at which a flight rules change is planned shall be described in the `routeTrajectoryGroup`. 
 
 ```xml
 <!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
@@ -253,9 +253,9 @@ If present, it shall consist of one or more of the following values, separated b
 ## `supplementaryInformation`
 
 In FIXM, the property `supplementaryInformation` consists of the following fields:
-- `fuelEndurance`: This is the estimated maximum length of time the aircraft can spend in the cruise phase of flight, determined by the amount of fuel at takeoff. The fuel endurance shall be expressed as hours and minutes of flying time. The encoding of a `fuelEndurance` shall therefore always start with `P0Y0M0DT`.
+- `fuelEndurance`: This is the estimated maximum length of time the aircraft can spend in the cruise phase of flight, determined by the amount of fuel at takeoff. The fuel endurance shall be expressed as hours and minutes of flying time. The encoding of a `fuelEndurance` shall therefore always start with `P0Y0M0DT` if the year, month, and day duration categories are included.
 - `personsOnBoard`: This is the total number of persons (passengers and crew) on board the aircraft.
-- `pilotInCommand`: This is the pilot designated by the operator, or in the case of general aviation, the owner, as being in command and charged with the safe conduct of a flight.
+- `pilotInCommand`: This is the pilot designated by the operator (or in the case of general aviation, the owner) as being in command and charged with the safe conduct of a flight.
 
 Example (based on ICAO Doc 4444)
 
