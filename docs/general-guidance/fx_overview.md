@@ -39,7 +39,7 @@ Package [`fx:EnRoute`]
 - **BoundaryCrossing:** altitudeInTransition, clearedLevel, crossingPoint, crossingTime
 ---
 Package [`fx:FlightData`]
-- **Flight:** [aircraft], [arrival], [dangerousGoods], [departure], [emergency], [enRoute], flightConstraint, [flightIdentification], flightPlanOriginator, flightPlanSubmitter, [flightRulesCategory], [flightType], [operator], radioCommunicationFailure, [remarks], routeTrajectoryGroup, [specialHandling], [supplementaryInformation]
+- **Flight:** [aircraft], [arrival], [dangerousGoods], [departure], [emergency], [enRoute], flightConstraint, [flightIdentification], flightPlanOriginator, flightPlanSubmitter, [flightRulesCategory], [flightType], operator, radioCommunicationFailure, [remarks], routeTrajectoryGroup, [specialHandling], [supplementaryInformation]
 - **FlightIdentification:** [aircraftIdentification], [aircraftIdentificationPrevious], [gufi], [gufiLegacy], [iataFlightDesignator]
 - **RouteTrajectoryGroupContainer:** agreed, current, desired, negotiating
 ---
@@ -147,7 +147,6 @@ Package [`fx:Constraints`]
 [gufiLegacy]: general-guidance/fx_FlightData?id=compatibility-with-fixm-core-420
 [flightRulesCategory]: general-guidance/fx_FlightData?id=flightRulesCategory
 [flightType]: general-guidance/fx_FlightData?id=flightType
-[operator]: general-guidance/fx_FlightData?id=operator
 [remarks]: general-guidance/fx_FlightData?id=remarks
 [specialHandling]: general-guidance/fx_FlightData?id=specialHandling
 [supplementaryInformation]: general-guidance/fx_FlightData?id=supplementaryInformation
