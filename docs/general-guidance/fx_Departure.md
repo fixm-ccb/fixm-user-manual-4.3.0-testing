@@ -136,6 +136,6 @@ See [`aircraftIdentificationPrevious`].
 
 ### ICAO References
 
-[I-04]: [ICAO Doc 4444, 16th Edition, 2016](https://portal.icao.int/icao-net/ICAO%20Documents/4444_cons_en.pdf) - PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management
+[I-04]: [ICAO Doc 4444, 16th Edition, 2016](https://store.icao.int/en/procedures-for-air-navigation-services-air-traffic-management-doc-4444) - PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management
 
 [`aircraftIdentificationPrevious`]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
