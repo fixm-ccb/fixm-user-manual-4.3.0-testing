@@ -50,4 +50,4 @@ and receive this data.
 
 ## References <!-- {docsify-ignore} -->
 
-[I-10]: [ICAO Manual on System Wide Information Management (SWIM) Implementation, version September 2021](https://store.icao.int/en/manual-on-the-system-wide-information-management-swim-implementation-doc-10203)
+[I-10]: [ICAO Manual on System Wide Information Management (SWIM) Implementation, 1st Edition, 2024](https://store.icao.int/en/manual-on-the-system-wide-information-management-swim-implementation-doc-10203)
