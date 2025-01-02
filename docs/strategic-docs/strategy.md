@@ -108,7 +108,7 @@ This chapter lists a number of strategic requirements for `FIXM` with regards to
 #### 2.4.1	AIXM, WXXM and FIXM
 
 The AIXM (Aeronautical Information Exchange Model) is designed to enable the management and distribution of AIS (Aeronautical Information Services) data in digital format. More information about this data exchange model can be found in the website www.AIXM.aero.
-The WXXM (Weather Information Exchange Model) is designed to enable a platform independent, harmonized and interoperable meteorological information exchange covering all the needs of the air transport industry. More information about this data exchange model can be found in the website community.wmo.int/en/activity-areas/wis/iwxxm.
+The WXXM (Weather Information Exchange Model) is designed to enable a platform independent, harmonized and interoperable meteorological information exchange covering all the needs of the air transport industry. More information about this data exchange model can be found in the website https://community.wmo.int/en/activity-areas/wis/iwxxm.
 
 `FIXM` (Flight Information Exchange Model) is designed to enable the interoperability of flight and flow information at a global level.
 
