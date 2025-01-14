@@ -34,7 +34,7 @@ If present, it shall consist of one or more of the following values, separated b
 ### `datalinkCommunicationCapabilityCode` 
 
 The property `datalinkCommunicationCapabilityCode` is used to exchange information about the capabilities of the flight 
-in terms of CPDLC. It shall consist of zero or more of the following values, separated by a space character:
+in terms of CPDLC. It shall consist of one or more of the following values, separated by a space character:
 
 - ATN CPDLC
   - `J1`: CPDLC ATN Via VHF Data Link (VDL) Mode 2
@@ -222,7 +222,7 @@ specific capabilities that have not been designated standard codes.
 ### `surveillanceCapabilityCode`
 
 The property `surveillanceCapabilityCode` is used to exchange information about the Transponder, ADS-B and ADS-C capabilities of the flight. 
-It shall consist of zero or more of the following values, separated by a space character:
+It shall consist of one or more of the following values, separated by a space character:
 
 - Transponder capabilities
   - `A`: Mode A Transponder (4 digits-4,096 codes)
@@ -299,7 +299,7 @@ The property `dinghyInformation` is used to exchange information about the dingh
 ### `emergencyRadioCapabilityType`
 
 The property `emergencyRadioCapabilityType` is used to exchange information about the types of emergency radios carried on board the aircraft.
-It shall consist of zero or more of the following values, separated by a space character:
+It shall consist of one or more of the following values, separated by a space character:
 - `EMERGENCY_LOCATOR_TRANSMITTER`: Emergency locator transmitter (ELT) is available.
 - `ULTRA_HIGH_FREQUENCY`: UHF on frequency 243.0 MHz is available.
 - `VERY_HIGH_FREQUENCY`: VHF on frequency 121.5 MHz is available.
@@ -316,7 +316,7 @@ It shall consist of zero or more of the following values, separated by a space c
 ### `lifeJacketType`
 
 The property `lifeJacketType` is used to exchange information about the types of life jackets available on board the aircraft.
-It shall consist of zero or more of the following values, separated by a space character:
+It shall consist of one or more of the following values, separated by a space character:
 - `FLUORESCENCE`: Life jackets are equipped with fluorescence.
 - `LIGHTS`: Life jackets are equipped with lights.
 - `ULTRA_HIGH_FREQUENCY`: UHF on frequency 243.0 MHz is available.
@@ -334,7 +334,7 @@ It shall consist of zero or more of the following values, separated by a space c
 ### `survivalEquipmentType` / `survivalEquipmentRemarks`
 
 The property `survivalEquipmentType` is used to exchange information about the types of survival capabilities on board the aircraft.
-It shall consist of zero or more of the following values, separated by a space character:
+It shall consist of one or more of the following values, separated by a space character:
 - `DESERT`: Desert survival equipment is carried.
 - `JUNGLE`: Jungle survival equipment is carried.
 - `MARITIME`: Maritime survival equipment is carried.
