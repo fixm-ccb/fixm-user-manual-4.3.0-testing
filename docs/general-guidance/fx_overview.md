@@ -8,18 +8,18 @@ Alternatively, you can use the Search box in the side bar to find relevant user 
 
 ---
 Package [`fx:Aircraft`]
-- **Aircraft:** [aircraftAddress], aircraftApproachCategory, [aircraftType], [capabilities], coloursAndMarkings, [registration], wakeTurbulence
-- **AircraftType:** [aircraftCount], icaoAircraftTypeDesignator, otherAircraftType
+- **Aircraft:** [aircraftAddress], [aircraftApproachCategory], [aircraftType], [capabilities], [coloursAndMarkings], [registration], [wakeTurbulence]
+- **AircraftType:** [aircraftCount], [icaoAircraftTypeDesignator], [otherAircraftType]
 ---
 Package [`fx:Arrival`]
-- **Arrival:** actualTimeOfArrival, [airportSlotIdentification], arrivalAerodrome, destinationAerodrome, destinationAerodromeAlternate, [destinationAerodromePrevious], reclearanceInFlight, runwayDirection
+- **Arrival:** [actualTimeOfArrival], [airportSlotIdentification], [arrivalAerodrome], [destinationAerodrome], [destinationAerodromeAlternate], [destinationAerodromePrevious], reclearanceInFlight, runwayDirection
 ---
 Package [`fx:Capability`]
-- **Capability:** [communication], navigation, standardCapabilities, surveillance, survival
-- **CommunicationCapabilities:** communicationCapabilityCode, datalinkCommunicationCapabilityCode, otherCommunicationCapabilities, otherDatalinkCapabilities, [selectiveCallingCode]
-- **NavigationCapabilities:** navigationCapabilityCode, otherNavigationCapabilities, performanceBasedCode, requiredRunwayVisualRange
-- **SurveillanceCapabilities:** otherSurveillanceCapabilities, surveillanceCapabilityCode
-- **SurvivalCapabilities:** carriedEltHexIdentifier, dinghyInformation, emergencyRadioCapabilityType, lifeJacketType, survivalEquipmentRemarks, survivalEquipmentType
+- **Capability:** [communication], [navigation], [standardCapabilities], [surveillance], [survival]
+- **CommunicationCapabilities:** [communicationCapabilityCode], [datalinkCommunicationCapabilityCode], [otherCommunicationCapabilities], [otherDatalinkCapabilities], [selectiveCallingCode]
+- **NavigationCapabilities:** [navigationCapabilityCode], [otherNavigationCapabilities], [performanceBasedCode], [requiredRunwayVisualRange]
+- **SurveillanceCapabilities:** [otherSurveillanceCapabilities], [surveillanceCapabilityCode]
+- **SurvivalCapabilities:** [carriedEltHexIdentifier], [dinghyInformation], [emergencyRadioCapabilityType], [lifeJacketType], [survivalEquipmentRemarks], [survivalEquipmentType]
 ---
 Package [`fx:Cargo`]
 - **DangerousGoods:** aircraftLimitation, airWaybillNumber, onboardLocation, packageGroup, shippingInformation
@@ -27,7 +27,7 @@ Package [`fx:Cargo`]
 <!-- - **fx:DangerousGoodsPackage:** allPackedInOne, compatibilityGroup, dangerousGoodsLimitation, dangerousGoodsQuantity, hazardClass, packingGroup, properShippingName, radioactiveMaterials, shipmentDimensions, subsidiaryHazardClass, unNumber -->
 ---
 Package [`fx:Departure`]
-- **Departure:** actualTimeOfDeparture, [airfileIndicator], [airportSlotIdentification], [departureAerodrome], [departureAerodromePrevious], [departurePoint], [departurePointPrevious], [estimatedOffBlockTime], [estimatedOffBlockTimePrevious], [estimatedRouteStartTime], [estimatedRouteStartTimePrevious], runwayDirection, takeoffAlternateAerodrome
+- **Departure:** [actualTimeOfDeparture], [airfileIndicator], [airportSlotIdentification], [departureAerodrome], [departureAerodromePrevious], [departurePoint], [departurePointPrevious], [estimatedOffBlockTime], [estimatedOffBlockTimePrevious], [estimatedRouteStartTime], [estimatedRouteStartTimePrevious], runwayDirection, [takeoffAlternateAerodrome]
 ---
 Package [`fx:Emergency`]
 - **FlightEmergency:** actionTaken, emergencyDescription, lastContact, originator, otherInformation, phase
@@ -35,12 +35,12 @@ Package [`fx:Emergency`]
 - **RadioCommunicationFailure:** contact, radioFailureRemarks, remainingComCapability
 ---
 Package [`fx:EnRoute`]
-- **EnRoute:** alternateAerodrome, boundaryCrossingCoordination, currentModeACode
+- **EnRoute:** [alternateAerodrome], boundaryCrossingCoordination, [currentModeACode]
 - **BoundaryCrossing:** altitudeInTransition, clearedLevel, crossingPoint, crossingTime
 ---
 Package [`fx:FlightData`]
-- **Flight:** [aircraft], [arrival], [dangerousGoods], [departure], [emergency], [enRoute], flightConstraint, [flightIdentification], flightPlanOriginator, flightPlanSubmitter, flightRulesCategory, flightType, operator, radioCommunicationFailure, remarks, routeTrajectoryGroup, specialHandling, supplementaryInformation
-- **FlightIdentification:** [aircraftIdentification], [aircraftIdentificationPrevious], [gufi], [gufiLegacy], iataFlightDesignator
+- **Flight:** [aircraft], [arrival], [dangerousGoods], [departure], [emergency], [enRoute], flightConstraint, [flightIdentification], flightPlanOriginator, flightPlanSubmitter, [flightRulesCategory], [flightType], operator, radioCommunicationFailure, [remarks], routeTrajectoryGroup, [specialHandling], [supplementaryInformation]
+- **FlightIdentification:** [aircraftIdentification], [aircraftIdentificationPrevious], [gufi], [gufiLegacy], [iataFlightDesignator]
 - **RouteTrajectoryGroupContainer:** agreed, current, desired, negotiating
 ---
 Package [`fx:RouteChanges`]
@@ -66,15 +66,45 @@ Package [`fx:Constraints`]
 [registration]: general-guidance/fx_Aircraft?id=registration
 [capabilities]: general-guidance/fx_Capability
 [aircraftCount]: general-guidance/fx_Aircraft?id=aircraftcount
+[aircraftApproachCategory]: general-guidance/fx_Aircraft?id=aircraftApproachCategory
+[coloursAndMarkings]: general-guidance/fx_Aircraft?id=coloursAndMarkings
+[wakeTurbulence]: general-guidance/fx_Aircraft?id=wakeTurbulence
+[icaoAircraftTypeDesignator]: general-guidance/fx_Aircraft?id=icaoAircraftTypeDesignator
+[otherAircraftType]: general-guidance/fx_Aircraft?id=otherAircraftType
 
 <!-- Links for fx:Arrival -->
 [`fx:Arrival`]: general-guidance/fx_Arrival
 [destinationAerodromePrevious]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
+[actualTimeOfArrival]: general-guidance/fx_Arrival?id=actualTimeOfArrival
+[arrivalAerodrome]: general-guidance/fx_Arrival?id=arrivalAerodrome
+[destinationAerodrome]: general-guidance/fx_Arrival?id=destinationAerodrome
+[destinationAerodromeAlternate]: general-guidance/fx_Arrival?id=destinationAerodromeAlternate
 
 <!-- Links for fx:Capability -->
 [`fx:Capability`]: general-guidance/fx_Capability
 [communication]: general-guidance/fx_Capability?id=communication
 [selectiveCallingCode]: general-guidance/fx_Capability?id=selectivecallingcode
+[navigation]: general-guidance/fx_Capability?id=navigation
+[standardCapabilities]: general-guidance/fx_Capability?id=standardCapabilities
+[surveillance]: general-guidance/fx_Capability?id=surveillance
+[survival]: general-guidance/fx_Capability?id=survival
+[communicationCapabilityCode]: general-guidance/fx_Capability?id=communicationCapabilityCode
+[datalinkCommunicationCapabilityCode]: general-guidance/fx_Capability?id=datalinkCommunicationCapabilityCode
+[otherCommunicationCapabilities]: general-guidance/fx_Capability?id=otherCommunicationCapabilities
+[otherDatalinkCapabilities]: general-guidance/fx_Capability?id=otherDatalinkCapabilities
+[navigationCapabilityCode]: general-guidance/fx_Capability?id=navigationCapabilityCode
+[otherNavigationCapabilities]: general-guidance/fx_Capability?id=otherNavigationCapabilities
+[performanceBasedCode]: general-guidance/fx_Capability?id=performanceBasedCode
+[requiredRunwayVisualRange]: general-guidance/fx_Capability?id=requiredRunwayVisualRange
+[otherSurveillanceCapabilities]: general-guidance/fx_Capability?id=otherSurveillanceCapabilities
+[surveillanceCapabilityCode]: general-guidance/fx_Capability?id=surveillanceCapabilityCode
+[carriedEltHexIdentifier]: general-guidance/fx_Capability?id=carriedEltHexIdentifier
+[dinghyInformation]: general-guidance/fx_Capability?id=dinghyInformation
+[emergencyRadioCapabilityType]: general-guidance/fx_Capability?id=emergencyRadioCapabilityType
+[lifeJacketType]: general-guidance/fx_Capability?id=lifeJacketType
+[survivalEquipmentRemarks]: general-guidance/fx_Capability?id=survivalEquipmentRemarks
+[survivalEquipmentType]: general-guidance/fx_Capability?id=survivalEquipmentType
+
 
 <!-- Links for fx:Cargo -->
 [`fx:Cargo`]: general-guidance/fx_Cargo
@@ -91,12 +121,16 @@ Package [`fx:Constraints`]
 [estimatedOffBlockTimePrevious]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
 [estimatedRouteStartTime]: general-guidance/fx_Departure?id=estimatedoffblocktime-estimatedroutestarttime
 [estimatedRouteStartTimePrevious]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
+[actualTimeOfDeparture]: general-guidance/fx_Departure?id=actualTimeOfDeparture
+[takeoffAlternateAerodrome]: general-guidance/fx_Departure?id=takeoffAlternateAerodrome
 
 <!-- Links for fx:Emergency -->
 [`fx:Emergency`]: general-guidance/fx_Emergency
 
 <!-- Links for fx:EnRoute -->
 [`fx:EnRoute`]: general-guidance/fx_EnRoute
+[alternateAerodrome]: general-guidance/fx_EnRoute?id=alternateAerodrome
+[currentModeACode]: general-guidance/fx_EnRoute?id=currentModeACode
 
 <!-- Links for fx:FlightData -->
 [`fx:FlightData`]: general-guidance/fx_FlightData
@@ -111,6 +145,13 @@ Package [`fx:Constraints`]
 [aircraftIdentificationPrevious]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
 [gufi]: general-guidance/fx_FlightData?id=gufi
 [gufiLegacy]: general-guidance/fx_FlightData?id=compatibility-with-fixm-core-420
+[flightRulesCategory]: general-guidance/fx_FlightData?id=flightRulesCategory
+[flightType]: general-guidance/fx_FlightData?id=flightType
+[remarks]: general-guidance/fx_FlightData?id=remarks
+[specialHandling]: general-guidance/fx_FlightData?id=specialHandling
+[supplementaryInformation]: general-guidance/fx_FlightData?id=supplementaryInformation
+[iataFlightDesignator]: general-guidance/fx_FlightData?id=iataFlightDesignator
+
 
 <!-- Links for fx:RouteChanges -->
 [`fx:RouteChanges`]: general-guidance/fx_RouteChanges

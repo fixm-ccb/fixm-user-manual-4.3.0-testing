@@ -45,6 +45,11 @@
 
 
 
+- **FIXM Encoding Guidance<br>(APPLICATIONS)**
+  - [ffice:FficeMessage](general-guidance/ffice_FficeMessage.md)
+
+
+
 - **FIXM Encoding Guidance<br>(Miscellaneous)**
   - [Rules for Absent Data](general-guidance/rules-for-absent-data.md)
   - [Applying Templates in XML](general-guidance/applying_templates.md)
@@ -53,7 +58,7 @@
 
 
 - **Using FIXM in Support of FF-ICE**
-  - [The FF-ICE Application for FIXM](fixm-in-support-of-ffice/ffice-application-for-fixm.md)
+  - [FIXM FF-ICE Message Application](fixm-in-support-of-ffice/ffice-application-for-fixm.md)
   - [FF-ICE Message Templates](fixm-in-support-of-ffice/message-templates.md)
   - [Route/Trajectory Example Data](fixm-in-support-of-ffice/example_data.md)
   - [Examples of FF-ICE Messages](fixm-in-support-of-ffice/example_messages.md)

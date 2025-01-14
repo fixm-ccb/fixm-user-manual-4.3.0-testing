@@ -6,6 +6,37 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
+## `actualTimeOfDeparture`
+
+A departure time can be recorded by different automated or manual means which do not
+always refer to the same event or location. Therefore, FIXM proposes different options 
+to exchange the `actualTimeOfDeparture`, in order to help system providers and operators select the 
+one most applicable to their operations. 
+
+Concretely, the `actualTimeOfDeparture` is exchanged in FIXM using the following properties:
+- property `time` captures the departure time value, expressed as a [DateTimeUtc].
+- properties `type` and `position` may be used optionally to provide details about the event and point on the departure aerodrome to which the departure time refers.
+  - `type` shall be one of the following value: `WHEELS_OFF`, `OFF_BLOCKS`, `START_TAKEOFF_ROLL`.
+  - `position` shall capture the geographical position of that point, expressed as a [GeographicalPosition]
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:departure>
+  <fx:actualTimeOfDeparture>
+    <fx:time>2024-06-19T20:47:32Z</fx:time>
+    <fx:type>WHEELS_OFF</fx:type>
+  </fx:actualTimeOfDeparture>
+  <!-- ... -->
+```
+
+---
+
+## `airfileIndicator`
+
+See below - chapter departureAerodrome / departurePoint.
+
+---
+
 ## `airportSlotIdentification`
 
 Airport slots are being used to balance demand against available airport capacity at airports where the
@@ -40,12 +71,6 @@ Identification of a departure airport slot allocated in Europe (from [EUROCONTRO
   <fx:departure>
     <fx:airportSlotIdentification>QB7361</fx:airportSlotIdentification>    
 ```
-
----
-
-## `airfileIndicator`
-
-See below - chapter departureAerodrome / departurePoint.
 
 ---
 
@@ -132,6 +157,14 @@ See [`aircraftIdentificationPrevious`].
 
 ---
 
+## `takeoffAlternateAerodrome`
+
+A `takeoffAlternateAerodrome` is an alternate aerodrome at which an aircraft would be able to land should this become necessary
+shortly after take-off and it is not possible to use the `departureAerodrome`. Up to two `takeoffAlternateAerodrome` entries may be
+specified.
+
+---
+
 ## *References* <!-- {docsify-ignore} -->
 
 ### ICAO References
@@ -139,3 +172,7 @@ See [`aircraftIdentificationPrevious`].
 [I-04]: [ICAO Doc 4444, 16th Edition, 2016](https://portal.icao.int/icao-net/ICAO%20Documents/4444_cons_en.pdf) - PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management
 
 [`aircraftIdentificationPrevious`]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
+
+[DateTimeUtc]: general-guidance/fb_Types?id=datetimeutc-datetimeutchighprecision
+[GeographicalPosition]: general-guidance/fb_AeronauticalReference?id=geographicalposition
+
