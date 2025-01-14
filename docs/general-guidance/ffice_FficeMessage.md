@@ -11,7 +11,7 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FFICE-Msg-1.1.0/
 The property `filingStatus` is used in an `FficeMessage` of `type`=`FILING_STATUS` to indicate the status of the submitted flight with respect to the eASP. 
 It consists of the following properties:
 - as a minimum, property `value` is used to exchange the value of the filing status. It shall be one the following values:
-  - `ACCEPTABLE` - Indicates the the eFPL, and in particular the desired route/trajectory, is acceptable.
+  - `ACCEPTABLE` - Indicates that the eFPL, and in particular the desired route/trajectory, is acceptable.
   - `NOT_ACCEPTABLE` - Indicates that the eFPL, typically the desired route/trajectory, does not comply with operational requirements.
   - `PENDING` - Indicates that the flight plan has not yet been evaluated. This might happen when the eFPL is received by the eASP at a time which is in advance of its processing horizon for the flight, leading to 
      a deferral of the eFPL evaluation.
