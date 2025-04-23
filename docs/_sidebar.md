@@ -52,7 +52,7 @@
 
 - **FIXM Encoding Guidance<br>(Miscellaneous)**
   - [Rules for Absent Data](general-guidance/rules-for-absent-data.md)
-  - [Applying Templates in XML](general-guidance/applying_templates.md)
+  - [Applying Templates in XML](general-guidance/applying-templates.md)
   - [Use of other -XMs](general-guidance/the-use-of-other-exchange-models.md)
 
 
