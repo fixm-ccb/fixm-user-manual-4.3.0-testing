@@ -76,8 +76,8 @@ Package [`fx:Constraints`]
 [`fx:Arrival`]: general-guidance/fx_Arrival
 [destinationAerodromePrevious]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
 [actualTimeOfArrival]: general-guidance/fx_Arrival?id=actualTimeOfArrival
-[arrivalAerodrome]: general-guidance/fx_Arrival?id=arrivalAerodrome
-[destinationAerodrome]: general-guidance/fx_Arrival?id=destinationAerodrome
+[arrivalAerodrome]: general-guidance/fx_Arrival?id=destinationaerodrome-arrivalaerodrome
+[destinationAerodrome]: general-guidance/fx_Arrival?id=destinationaerodrome-arrivalaerodrome
 [destinationAerodromeAlternate]: general-guidance/fx_Arrival?id=destinationAerodromeAlternate
 
 <!-- Links for fx:Capability -->
@@ -90,8 +90,8 @@ Package [`fx:Constraints`]
 [survival]: general-guidance/fx_Capability?id=survival
 [communicationCapabilityCode]: general-guidance/fx_Capability?id=communicationCapabilityCode
 [datalinkCommunicationCapabilityCode]: general-guidance/fx_Capability?id=datalinkCommunicationCapabilityCode
-[otherCommunicationCapabilities]: general-guidance/fx_Capability?id=otherCommunicationCapabilities
-[otherDatalinkCapabilities]: general-guidance/fx_Capability?id=otherDatalinkCapabilities
+[otherCommunicationCapabilities]: general-guidance/fx_Capability?id=othercommunicationcapabilities-otherdatalinkcapabilities
+[otherDatalinkCapabilities]: general-guidance/fx_Capability?id=othercommunicationcapabilities-otherdatalinkcapabilities
 [navigationCapabilityCode]: general-guidance/fx_Capability?id=navigationCapabilityCode
 [otherNavigationCapabilities]: general-guidance/fx_Capability?id=otherNavigationCapabilities
 [performanceBasedCode]: general-guidance/fx_Capability?id=performanceBasedCode
@@ -102,8 +102,8 @@ Package [`fx:Constraints`]
 [dinghyInformation]: general-guidance/fx_Capability?id=dinghyInformation
 [emergencyRadioCapabilityType]: general-guidance/fx_Capability?id=emergencyRadioCapabilityType
 [lifeJacketType]: general-guidance/fx_Capability?id=lifeJacketType
-[survivalEquipmentRemarks]: general-guidance/fx_Capability?id=survivalEquipmentRemarks
-[survivalEquipmentType]: general-guidance/fx_Capability?id=survivalEquipmentType
+[survivalEquipmentRemarks]: general-guidance/fx_Capability?id=survivalequipmenttype-survivalequipmentremarks
+[survivalEquipmentType]: general-guidance/fx_Capability?id=survivalequipmenttype-survivalequipmentremarks
 
 
 <!-- Links for fx:Cargo -->
