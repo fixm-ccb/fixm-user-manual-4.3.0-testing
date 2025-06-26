@@ -69,7 +69,7 @@ Package [`fb:Types`]
 <!-- Links for fb:Types -->
 [`fb:Types`]: general-guidance/fb_Types
 [Count]: general-guidance/fb_Types?id=count-sequence-numbers
-[DateTimeUtc]: general-guidance/fb_Types?id=datetimeutchighprecision
-[DateTimeUtcHighPrecision]: general-guidance/fb_Types?id=datetimeutchighprecision
+[DateTimeUtc]: general-guidance/fb_Types?id=datetimeutc-datetimeutchighprecision
+[DateTimeUtcHighPrecision]: general-guidance/fb_Types?id=datetimeutc-datetimeutchighprecision
 [HyperTextReference]: general-guidance/fb_AeronauticalReference?id=hypertext-references
 <!----------------------------------------------------->
