@@ -231,5 +231,5 @@ The property `uniqueMessageIdentifier` can be used to capture the unique identif
 ```
 
 
-[DateTimeUtc]: //general-guidance/fb_Types?id=datetimeutc-datetimeutchighprecision
-[DateTimeUtcHighPrecision]: //general-guidance/fb_Types?id=datetimeutc-datetimeutchighprecision
+[DateTimeUtc]: general-guidance/fb_Types?id=datetimeutc-datetimeutchighprecision
+[DateTimeUtcHighPrecision]: general-guidance/fb_Types?id=datetimeutc-datetimeutchighprecision
