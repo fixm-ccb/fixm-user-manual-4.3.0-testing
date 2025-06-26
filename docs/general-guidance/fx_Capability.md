@@ -49,8 +49,8 @@ in terms of CPDLC. It shall consist of one or more of the following values, sepa
 ### `otherCommunicationCapabilities` / `otherDatalinkCapabilities`
 
 The properties `otherCommunicationCapabilities` and `otherDatalinkCapabilities` can be used to exchange 
-communication or datalink capabilities that are not pre-defined. This is to allow for new capabilities or ANSP-
-specific capabilities that have not been designated standard codes.
+communication or datalink capabilities that are not pre-defined. This is to allow for new capabilities or 
+ANSP-specific capabilities that have not been designated standard codes.
 
 
 ### `selectiveCallingCode` 
