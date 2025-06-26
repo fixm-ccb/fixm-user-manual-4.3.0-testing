@@ -216,8 +216,8 @@ Standard equipment is considered to be `V` (VHF RTF), `O` (VOR) and `L` (ILS), u
 ### `otherSurveillanceCapabilities`
 
 The properties `otherSurveillanceCapabilities` can be used to exchange 
-surveillance capabilities that are not pre-defined. This is to allow for new capabilities or ANSP-
-specific capabilities that have not been designated standard codes.
+surveillance capabilities that are not pre-defined. This is to allow for new capabilities or 
+ANSP-specific capabilities that have not been designated standard codes.
 
 ### `surveillanceCapabilityCode`
 
