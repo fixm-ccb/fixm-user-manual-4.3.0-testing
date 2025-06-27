@@ -60,6 +60,7 @@
 - **Using FIXM in Support of FF-ICE**
   - [FIXM FF-ICE Message Application](fixm-in-support-of-ffice/ffice-application-for-fixm.md)
   - [FF-ICE Message Templates](fixm-in-support-of-ffice/message-templates.md)
+  - [FF-ICE Verification and Mapping](fixm-in-support-of-ffice/ffice-verification-mapping.md)
   - [Route/Trajectory Example Data](fixm-in-support-of-ffice/example_data.md)
   - [Examples of FF-ICE Messages](fixm-in-support-of-ffice/example_messages.md)
 
