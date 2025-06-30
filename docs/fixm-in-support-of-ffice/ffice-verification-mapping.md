@@ -19,7 +19,5 @@ This verification spreadsheet was generated after the release of v1.1.0 of the F
 successfully identified the fields erroneously left out of the templates as well as a number of additional fields not called for in d0.99 of the Implementation
 Guidance (that were added as forward-looking changes in coordination with the ATMRPP).
 
-> [!TIP]
-> Though created as a verification document, users may find the mappings between FF-ICE requirements and FIXM Xpaths provided in the spreadsheet useful as a general
-> reference document, showing the corresponding FIXM fields for each FF-ICE data item in Appendix C.
+?> Though created as a verification document, users may find the mappings between FF-ICE requirements and FIXM Xpaths provided in the spreadsheet useful as a general reference document, showing the corresponding FIXM fields for each FF-ICE data item in Appendix C.
 
