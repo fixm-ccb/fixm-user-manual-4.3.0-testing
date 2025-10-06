@@ -135,7 +135,7 @@ There was also an update to make `airspeed` optional for performance profile poi
 
 ## Maintenance Release
 
-On April 30, 2024, the FIXM CCB provided a maintenance release of FF-ICE Message v1.1.0 that included the FficeMessageBugFix.xsd schema to address two fields missing in the templates:
+On April 30, 2024, the FIXM CCB provided a [maintenance release][MaintenanceRelease] of FF-ICE Message v1.1.0 that included the FficeMessageBugFix.xsd schema to address two fields missing in the templates:
 
 - Flight.flightRulesCategory, missing in the Flight Data Response template.
 - RouteTrajectoryElement.modifiedRouteItemReference, missing in the Filing Status, Planning Status, and Trial Response templates.
@@ -179,5 +179,7 @@ Some XML parsers are known to ignore all but the first `<xs:import>` statement f
 [FficeSR]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/submissionresponse/fficemessage/FficeSR_FficeMessage.xsd
 [FficeTRQ]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/trialrequest/fficemessage/FficeTRQ_FficeMessage.xsd
 [FficeTRP]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/trialresponse/fficemessage/FficeTRP_FficeMessage.xsd
+
+[MaintenanceRelease]: https://fixm.aero/release.html?rel=FFICE-Msg-1.1.0&ret=app
 
 [FficeFDRP_Example_1]: .//assets/downloads/C-11_Flight_Data_Response_EXAMPLE_001.xml
