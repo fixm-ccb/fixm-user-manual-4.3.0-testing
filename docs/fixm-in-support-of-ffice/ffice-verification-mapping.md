@@ -16,8 +16,10 @@ that **SHOULD BE** used to represent each requirement.
 The spreadsheet from the most recent verification effort can be found [here](.//assets/downloads/FficeVerificationAndMapping.xlsx).
 
 This verification spreadsheet was generated after the release of v1.1.0 of the FF-ICE templates. Careful examination of the document shows it would have 
-successfully identified the fields erroneously left out of the templates as well as a number of additional fields not called for in d0.99 of the Implementation
-Guidance (that were added as forward-looking changes in coordination with the ATMRPP).
+successfully identified the fields [erroneously left out][MaintenanceRelease] of the templates as well as a number of additional fields not called for in d0.99 of the Implementation
+Guidance (that were added as [forward-looking changes][ForwardLooking] in coordination with the ATMRPP).
 
 ?> Though created as a verification document, users may find the mappings between FF-ICE requirements and FIXM Xpaths provided in the spreadsheet useful as a general reference document, showing the corresponding FIXM fields for each FF-ICE data item in Appendix C.
 
+[MaintenanceRelease]: fixm-in-support-of-ffice/message-templates?id=maintenance-release
+[ForwardLooking]: fixm-in-support-of-ffice/message-templates?id=forward-looking

@@ -103,20 +103,6 @@ The full message template resulting from this process is displayed below.  The s
 
 ![The FF-ICE Flight Cancellation Message Template](.//media/image31.png "The FF-ICE Flight Cancellation Message Template")
 
-[FficeFFP]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/filedflightplan/fficemessage/FficeFFP_FficeMessage.xsd
-[FficeFS]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/filingstatus/fficemessage/FficeFS_FficeMessage.xsd
-[FficeFA]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/flightarrival/fficemessage/FficeFA_FficeMessage.xsd
-[FficeFC]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/flightcancellation/fficemessage/FficeFC_FficeMessage.xsd
-[FficeFDRQ]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/flightdatarequest/fficemessage/FficeFDRQ_FficeMessage.xsd
-[FficeFDRP]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/flightdataresponse/fficemessage/FficeFDRP_FficeMessage.xsd
-[FficeFD]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/flightdeparture/fficemessage/FficeFD_FficeMessage.xsd
-[FficeFPU]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/flightplanupdate/fficemessage/FficeFPU_FficeMessage.xsd
-[FficePS]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/planningstatus/fficemessage/FficePS_FficeMessage.xsd
-[FficePFP]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/preliminaryflightplan/fficemessage/FficePFP_FficeMessage.xsd
-[FficeSR]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/submissionresponse/fficemessage/FficeSR_FficeMessage.xsd
-[FficeTRQ]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/trialrequest/fficemessage/FficeTRQ_FficeMessage.xsd
-[FficeTRP]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/trialresponse/fficemessage/FficeTRP_FficeMessage.xsd
-
 ## Intentional Differences between the Implementation Guidance and Templates
 
 There are a number of intentional differences between the message content as described in the FF-ICE Implementation Guidance Manual, Appendices B & C, and the FF-ICE Application v1.1.0 templates.  These discrepancies fall into two categories:  __technical__ and __forward looking__.  The __technical__ differences are present to accommodate the realities of implementing concepts in a physical model, such as including fields for backwards compatibility reasons or accommodating FF-ICE content that could preferably be represented outside of an XML payload.  The __forward looking__ differences are instances where significant, upcoming changes were incorporated into FIXM even though they were not present in the version of the Implementation Guidance the model was based on.
@@ -147,8 +133,53 @@ Other forward looking changes include the addition of fields in the FF-ICE templ
 
 There was also an update to make `airspeed` optional for performance profile points.
 
+## Maintenance Release
+
+On April 30, 2024, the FIXM CCB provided a [maintenance release][MaintenanceRelease] of FF-ICE Message v1.1.0 that included the FficeMessageBugFix.xsd schema to address two fields missing in the templates:
+
+- Flight.flightRulesCategory, missing in the Flight Data Response template.
+- RouteTrajectoryElement.modifiedRouteItemReference, missing in the Filing Status, Planning Status, and Trial Response templates.
+
+This schema added back in representation for the two missing fields via FIXM’s extension mechanism and is intended to be used as the new root schema for FIXM users who require those fields.  See [this sample message][FficeFDRP_Example_1] for an example of the maintenance release in use. 
+
+### Import Issue and Workaround
+
+The FficeMessageBugFix.xsd schema contains three `<xs:import>` statements, in the following order:
+
+```xml
+<xs:import namespace="http://www.fixm.aero/base/4.3" schemaLocation="../../core/base/Base.xsd"/>
+<xs:import namespace="http://www.fixm.aero/flight/4.3" schemaLocation="../../core/flight/Flight.xsd"/>
+<xs:import namespace="http://www.fixm.aero/app/ffice/1.1" schemaLocation="../../applications/fficemessage/fficetemplates/FficeTemplates.xsd"/>
+```
+
+Some XML parsers are known to ignore all but the first `<xs:import>` statement for a given namespace.  Because the FF-ICE templates operate in the same namespace as the schemas they restrict (Base and Flight), this import ordering can cause these XML parsers to ignore the templates when processing the schemas.  If the XML parser you use experiences this issue, reordering the `<xs:import>` statements so that the template schema is imported first should resolve the matter:
+
+```xml
+<xs:import namespace="http://www.fixm.aero/app/ffice/1.1" schemaLocation="../../applications/fficemessage/fficetemplates/FficeTemplates.xsd"/>
+<xs:import namespace="http://www.fixm.aero/base/4.3" schemaLocation="../../core/base/Base.xsd"/>
+<xs:import namespace="http://www.fixm.aero/flight/4.3" schemaLocation="../../core/flight/Flight.xsd"/>
+```
+
 ## References
 
 ### ICAO References
 
 [I-06]: [ICAO Doc 9965, 2nd Edition, Volume II, v0.993 (DRAFT)](https://portal.icao.int/atmrpp/ATMRPP5%20Montreal%2059%20June%202023/1_Working%20papers/ATMRPP5_WP1000_Appendix%20C%20Doc%209965%20Vol%20II%20Implementation%20Guidance%20d0.993_markup.pdf) - Manual on FF-ICE, FF-ICE/R1 Implementation Guidance Manual **DRAFT** 
+
+[FficeFFP]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/filedflightplan/fficemessage/FficeFFP_FficeMessage.xsd
+[FficeFS]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/filingstatus/fficemessage/FficeFS_FficeMessage.xsd
+[FficeFA]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/flightarrival/fficemessage/FficeFA_FficeMessage.xsd
+[FficeFC]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/flightcancellation/fficemessage/FficeFC_FficeMessage.xsd
+[FficeFDRQ]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/flightdatarequest/fficemessage/FficeFDRQ_FficeMessage.xsd
+[FficeFDRP]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/flightdataresponse/fficemessage/FficeFDRP_FficeMessage.xsd
+[FficeFD]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/flightdeparture/fficemessage/FficeFD_FficeMessage.xsd
+[FficeFPU]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/flightplanupdate/fficemessage/FficeFPU_FficeMessage.xsd
+[FficePS]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/planningstatus/fficemessage/FficePS_FficeMessage.xsd
+[FficePFP]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/preliminaryflightplan/fficemessage/FficePFP_FficeMessage.xsd
+[FficeSR]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/submissionresponse/fficemessage/FficeSR_FficeMessage.xsd
+[FficeTRQ]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/trialrequest/fficemessage/FficeTRQ_FficeMessage.xsd
+[FficeTRP]: https://www.fixm.aero/releases/FFICE-Msg-1.1.0/schemas/applications/fficemessage/fficetemplates/trialresponse/fficemessage/FficeTRP_FficeMessage.xsd
+
+[MaintenanceRelease]: https://fixm.aero/release.html?rel=FFICE-Msg-1.1.0&ret=app
+
+[FficeFDRP_Example_1]: .//assets/downloads/C-11_Flight_Data_Response_EXAMPLE_001.xml
