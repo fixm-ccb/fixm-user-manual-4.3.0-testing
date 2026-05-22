@@ -1,5 +1,7 @@
 # FficeFPU guidance
 
+> ⚠️⚠️ !! WORK IN PROGRESS !! ⚠️⚠️
+
 ## General
 
 A `Flight Plan Update Message` (`FficeFPU`) may be used to update all items that may be included in a `FficeFFP` or `FficePFP` except:
@@ -19,7 +21,7 @@ An `FficeFPU` may be also used for the removal of a previously provided flight d
 
 ### Mandatory flight data items
 
-| FF-ICE data item | FIXM data item | Encoding rules | 
+| FF-ICE data item | FIXM data item in `FficeFPU` | Encoding rules | 
 |:-|:-|:-|
 | **GUFI**<br>*invariant* | `gufi`[1] | MUST be the same GUFI as the FficePFP or FficeFFP to which the FficeFPU refers |
 | **Aircraft Identification**<br>*invariant* | `aircraftIdentification`[1] |  MUST be the same aircraftIdentification as the FficePFP or FficeFFP to which the FficeFPU refers |
@@ -30,19 +32,19 @@ An `FficeFPU` may be also used for the removal of a previously provided flight d
 
 ### Flight data items to be changed
 
-An `FficeFPU` is only required to contain those items that have changed, in addition to the mandatory items specified for an Update message, 
+An `FficeFPU` is only required to contain those items that have changed, in addition to the mandatory items specified for the `FficeFPU`, 
 i.e. it is not necessary to resend complete flight data. Data items that were included in the previous version of the flight plan and have not been 
-included in the Flight Plan Update will remain unchanged. 
+included in the `FficeFPU` will remain unchanged. 
 
 Flight data items to be changed should therefore be included as necessary into the `FficeFPU`. 
 
 The following table details specific encoding rules for some properties.
 
-| FF-ICE data item | FIXM data item | Encoding rules | 
+| FF-ICE data item | FIXM data item in `FficeFPU` | Encoding rules | 
 |:-|:-|:-|
-| **Departure Aerodrome**<br>*new value* | `departureAerodrome`[1] | If there is a change of departure aerodrome, MUST contain the new value.<br><br>If there is no change of departure aerodrome, MUST be present (cardinality [1]) with a locationIndicator declared NULL. |
-| **Destination Aerodrome**<br>*new value* | `destinationAerodrome`[1] | If there is a change of destination aerodrome, MUST contain the new value.<br><br>If there is no change of destination aerodrome, MUST be present (cardinality [1]) with a locationIndicator declared NULL. |
-| **Estimated Off-Block Time**<br>*new value* | `estimatedOffBlockTime`[1] | If there is a change of EOBT, MUST contain the new value.<br><br>If there is no change of EOBT, MUST be present (cardinality [1]) and declared NULL. |
+| **Departure Aerodrome**<br>*new value* | `departureAerodrome`[1] | If there is a change of departure aerodrome, MUST contain the new value.<br><br>If there is no change of departure aerodrome, MUST be present (cardinality [1]) with a nil locationIndicator. |
+| **Destination Aerodrome**<br>*new value* | `destinationAerodrome`[1] | If there is a change of destination aerodrome, MUST contain the new value.<br><br>If there is no change of destination aerodrome, MUST be present (cardinality [1]) with a nil locationIndicator. |
+| **Estimated Off-Block Time**<br>*new value* | `estimatedOffBlockTime`[1] | If there is a change of EOBT, MUST contain the new value.<br><br>If there is no change of EOBT, MUST be present (cardinality [1]) and declared nil. |
 
 
 
@@ -64,7 +66,7 @@ This is a fictional `FficeFPU` message that updates the EOBT for flight `UFO1234
   <ffice:flight>
     <fx:arrival>
       <-- ENCODING RULE - If there is no change of destination aerodrome, destinationAerodrome MUST
-          be present (cardinality [1]) with a locationIndicator declared NULL. -->
+          be present (cardinality [1]) with a nil locationIndicator. -->
       <fx:destinationAerodrome>
         <fb:locationIndicator xsi:nil="true"/>
       </fx:destinationAerodrome>
@@ -75,7 +77,7 @@ This is a fictional `FficeFPU` message that updates the EOBT for flight `UFO1234
     </fx:arrival>
   	<fx:departure>
       <-- ENCODING RULE - If there is no change of departure aerodrome, departureAerodrome MUST
-          be present (cardinality [1]) with a locationIndicator declared NULL. -->
+          be present (cardinality [1]) with a nil locationIndicator. -->
   		<fx:departureAerodrome>
   			<fb:locationIndicator xsi:nil="true"/>
   		</fx:departureAerodrome>
