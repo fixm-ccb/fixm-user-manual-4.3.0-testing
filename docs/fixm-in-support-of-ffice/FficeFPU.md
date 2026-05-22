@@ -135,8 +135,12 @@ FIXM Core 4.3.0 introduces a couple of properties suffixed “Previous” that c
 in a filed or preliminary flight plan in addition to an updated value. The FficeFPU message template from the FF-ICE Message Application 1.1.0 
 further constrains the cardinality of these properties, and declares the properties suffixed "Previous" optional and their counterparts without suffix mandatory. 
 
-This designs implies that it becomes impossible to omit a mandatory property without suffix in the FficeFPU even when there is no change. The encoding rules described above
-aims to address these limitations.
+This design comes with some limitations:
+- it technically allows the exchange of an `FficeFPU` message with an updated EOBT value only, i.e. without the previous EOBT value, which is not allowed according to the FF-ICE/IG.
+- it makes it impossible to omit a mandatory property (without suffix previous) even when there is no change.
+
+The encoding rules described above aims to address these limitations.
+
 
 
 
