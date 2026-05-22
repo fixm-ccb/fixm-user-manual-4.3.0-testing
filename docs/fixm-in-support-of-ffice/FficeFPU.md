@@ -23,8 +23,8 @@ An `FficeFPU` may be also used for the removal of a previously provided flight d
 
 | FF-ICE data item | FIXM data item in `FficeFPU` | Encoding rules | 
 |:-|:-|:-|
-| **GUFI**<br>*invariant* | `gufi`[1] | MUST be the same GUFI as the FficePFP or FficeFFP to which the FficeFPU refers |
-| **Aircraft Identification**<br>*invariant* | `aircraftIdentification`[1] |  MUST be the same aircraftIdentification as the FficePFP or FficeFFP to which the FficeFPU refers |
+| **GUFI**<br>*unchanging* | `gufi`[1] | MUST be the same GUFI as the FficePFP or FficeFFP to which the FficeFPU refers |
+| **Aircraft Identification**<br>*unchanging* | `aircraftIdentification`[1] |  MUST be the same aircraftIdentification as the FficePFP or FficeFFP to which the FficeFPU refers |
 | **Departure Aerodrome**<br>*existing value* | `departureAerodromePrevious`[0..1] | MUST be present although the cardinality is [0..1]. MUST be the value before the change. |
 | **Destination Aerodrome**<br>*existing value* | `destinationAerodromePrevious`[0..1]  | MUST be present although the cardinality is [0..1]. MUST be the value before the change.  |
 | **Estimated Off-Block Time**<br>*existing value* | `estimatedOffBlockTimePrevious`[0..1] | MUST be present although the cardinality is [0..1]. MUST be the value before the change. | 
@@ -120,11 +120,11 @@ This is a fictional `FficeFPU` message that updates the EOBT for flight `UFO1234
 ### Enabling change of aircraft identification locally
 
 Many ATS systems globally are unable to support a modification to the aircraft identification as it is used as a unique key in accessing the flight data. Use of FF-ICE will 
-not automatically overcome these processing limitations. This is why the `aircraftIdentifocation` is considered invariant in FF-ICE.
+not automatically overcome these processing limitations. This is why the `aircraftIdentifocation` is considered unchanging for a given flight in FF-ICE.
 
 However, nothing precludes a local system(s), capable of accepting aircraft identification modifications, to continue to do so for flights that are conducted entirely within their area(s) of responsibility.
 
-This is achieved already in some countries / regions 
+This is achieved already in some countries / regions as outlined below
 - `TODO` - quote Skyguide example
 - ...
 
