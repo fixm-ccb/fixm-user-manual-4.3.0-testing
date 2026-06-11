@@ -31,7 +31,7 @@ An `FficeFPU` may be also used for the removal of a previously provided flight d
 | **Operator Flight Plan Version**<br>*incremented value* | `operatorFlightPlanVersion`[1] | MUST be incremented each time a FficeFPU is submitted. |
 
 !> Note to implementers: the cardinality of properties `departureAerodromePrevious`, `destinationAerodromePrevious` and `estimatedOffBlockTimePrevious` is `0..1` in the `FficeFPU` message template,
-but the properties shall always be provided. The cardinalities will be updated in a future version of the `FficeFPU` message template to read `1`.
+but the properties shall always be provided. These cardinalities will be updated in a future version of the `FficeFPU` message template to read `1`.
 
 
 ### Flight data items to be changed
@@ -49,6 +49,9 @@ The following table details specific encoding rules for some properties.
 | **Departure Aerodrome**<br>*new value* | `departureAerodrome`[1] | If there is a change of departure aerodrome, MUST contain the new value.<br><br>If there is no change of departure aerodrome, MUST be present (cardinality [1]) with a nil locationIndicator. |
 | **Destination Aerodrome**<br>*new value* | `destinationAerodrome`[1] | If there is a change of destination aerodrome, MUST contain the new value.<br><br>If there is no change of destination aerodrome, MUST be present (cardinality [1]) with a nil locationIndicator. |
 | **Estimated Off-Block Time**<br>*new value* | `estimatedOffBlockTime`[1] | If there is a change of EOBT, MUST contain the new value.<br><br>If there is no change of EOBT, MUST be present (cardinality [1]) and declared nil. |
+
+!> Note to implementers: the cardinality of properties `departureAerodrome`, `destinationAerodrome` and `estimatedOffBlockTime` is `1` in the `FficeFPU` message template,
+but the properties are optional and should only be provided when there is a change of value. These cardinalities will be updated in a future version of the `FficeFPU` message template to read `0..1`.
 
 
 ### Removal of a previously provided item
@@ -113,7 +116,7 @@ This is a fictional `FficeFPU` message that updates the EOBT for flight `UFO1234
 
 `TODO`
 
-### Flight formation detils update
+### Flight formation details update
 
 `TODO`
 
@@ -123,11 +126,11 @@ This is a fictional `FficeFPU` message that updates the EOBT for flight `UFO1234
 ### Enabling change of aircraft identification locally
 
 Many ATS systems globally are unable to support a modification to the aircraft identification as it is used as a unique key in accessing the flight data. Use of FF-ICE will 
-not automatically overcome these processing limitations. This is why the `aircraftIdentifocation` is considered unchanging for a given flight in FF-ICE.
+not automatically overcome these processing limitations. This is why the `aircraftIdentification` is considered unchanging for a given flight in FF-ICE.
 
-However, nothing precludes a local system(s), capable of accepting aircraft identification modifications, to continue to do so for flights that are conducted entirely within their area(s) of responsibility.
+However, nothing precludes local systems, capable of accepting aircraft identification modifications, to continue to do so for flights that are conducted entirely within their areas of responsibility.
 
-This is achieved already in some countries / regions as outlined below
+This is achieved already in some countries / regions as outlined below:
 - `TODO` - quote Skyguide example
 - ...
 
@@ -135,12 +138,12 @@ This is achieved already in some countries / regions as outlined below
 ## Known bugs and limitations
 
 FIXM Core 4.3.0 introduces a couple of properties suffixed “Previous” that can be used for exchanging values initially submitted 
-in a filed or preliminary flight plan in addition to an updated value. The FficeFPU message template from the FF-ICE Message Application 1.1.0 
+in a filed or preliminary flight plan in addition to an updated value. The `FficeFPU` message template from the FF-ICE Message Application 1.1.0 
 further constrains the cardinality of these properties, and declares the properties suffixed "Previous" optional and their counterparts without suffix mandatory. 
 
 This design comes with some limitations:
-- it technically allows the exchange of an `FficeFPU` message with an updated EOBT value only, i.e. without the previous EOBT value, which is not allowed according to the FF-ICE/IG.
-- it makes it impossible to omit a mandatory property (without suffix previous) even when there is no change.
+- it technically allows the exchange of an `FficeFPU` message with an updated EOBT value only, i.e. without the previous EOBT value, which is not allowed according to the FF-ICE/R1 Implementation Guidance Manual.
+- it forces some  mandatory property (without suffix previous) to be present even when there is no change.
 
 The encoding rules described above aims to address these limitations.
 
