@@ -30,6 +30,10 @@ An `FficeFPU` may be also used for the removal of a previously provided flight d
 | **Estimated Off-Block Time**<br>*existing value* | `estimatedOffBlockTimePrevious`[0..1] | MUST be present although the cardinality is [0..1]. MUST be the value before the change. | 
 | **Operator Flight Plan Version**<br>*incremented value* | `operatorFlightPlanVersion`[1] | MUST be incremented each time a FficeFPU is submitted. |
 
+!> Note to implementers: the cardinality of properties `departureAerodromePrevious`, `destinationAerodromePrevious` and `estimatedOffBlockTimePrevious` is `0..1` in the `FficeFPU` message template,
+but the properties shall always be provided. The cardinalities will be updated in a future version of the `FficeFPU` message template to read `1`.
+
+
 ### Flight data items to be changed
 
 An `FficeFPU` is only required to contain those items that have changed, in addition to the mandatory items specified for the `FficeFPU`, 
@@ -47,11 +51,10 @@ The following table details specific encoding rules for some properties.
 | **Estimated Off-Block Time**<br>*new value* | `estimatedOffBlockTime`[1] | If there is a change of EOBT, MUST contain the new value.<br><br>If there is no change of EOBT, MUST be present (cardinality [1]) and declared nil. |
 
 
-
 ### Removal of a previously provided item
 
-A nil element included in an FF-ICE Flight Plan Update message indicates that this flight plan data item is to be deleted. Individual elements within 
-a repeating sequence of elements such as those found within a route/trajectory group or a climb/descent performance profile cannot be modified or deleted. 
+Except for `departureAerodrome`, `destinationAerodrome` and `estimatedOffBlockTime`, a nil element included in an FF-ICE Flight Plan Update message indicates that this flight plan data item is to be deleted.
+Individual elements within a repeating sequence of elements such as those found within a route/trajectory group or a climb/descent performance profile cannot be modified or deleted. 
 The entire group must be updated as required.
 
 
