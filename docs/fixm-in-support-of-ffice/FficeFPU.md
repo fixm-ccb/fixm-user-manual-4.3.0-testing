@@ -1,5 +1,3 @@
-# FficeFPU guidance
-
 > ⚠️⚠️ !! WORK IN PROGRESS !! ⚠️⚠️
 
 ## General
@@ -25,13 +23,10 @@ An `FficeFPU` may be also used for the removal of a previously provided flight d
 |:-|:-|:-|
 | **GUFI**<br>*unchanging* | `gufi`[1] | MUST be the same GUFI as the FficePFP or FficeFFP to which the FficeFPU refers |
 | **Aircraft Identification**<br>*unchanging* | `aircraftIdentification`[1] |  MUST be the same aircraftIdentification as the FficePFP or FficeFFP to which the FficeFPU refers |
-| **Departure Aerodrome**<br>*existing value* | `departureAerodromePrevious`[0..1] | MUST be present although the cardinality is [0..1]. MUST be the value before the change. |
-| **Destination Aerodrome**<br>*existing value* | `destinationAerodromePrevious`[0..1]  | MUST be present although the cardinality is [0..1]. MUST be the value before the change.  |
-| **Estimated Off-Block Time**<br>*existing value* | `estimatedOffBlockTimePrevious`[0..1] | MUST be present although the cardinality is [0..1]. MUST be the value before the change. | 
+| **Departure Aerodrome**<br>*existing value* | *(if there is a change)* <br> `departureAerodromePrevious`[0..1] <br><br> *(if there is no change)* <br> `departureAerodrome`[1] | If there is a change, `departureAerodromePrevious` MUST contain the existing value, and `departureAerodrome` MUST contain the new value. <br><br> If there is no change, `departureAerodromePrevious` MUST be absent, and `departureAerodrome` MUST contain the existing value. |
+| **Destination Aerodrome**<br>*existing value* | *(if there is a change)* <br> `destinationAerodromePrevious`[0..1] <br><br> *(if there is no change)* <br> `destinationAerodrome`[1] | If there is a change, `destinationAerodromePrevious` MUST contain the existing value, and `destinationAerodrome` MUST contain the new value. <br><br> If there is no change, `destinationAerodromePrevious` MUST be absent, and `destinationAerodrome` MUST contain the existing value. |
+| **Estimated Off-Block Time**<br>*existing value* | *(if there is a change)* <br> `estimatedOffBlockTimePrevious`[0..1] <br><br> *(if there is no change)* <br> `estimatedOffBlockTime`[1] | If there is a change, `estimatedOffBlockTimePrevious` MUST contain the existing value, and `estimatedOffBlockTime` MUST contain the new value. <br><br> If there is no change, `estimatedOffBlockTimePrevious` MUST be absent, and `estimatedOffBlockTime` MUST contain the existing value. |
 | **Operator Flight Plan Version**<br>*incremented value* | `operatorFlightPlanVersion`[1] | MUST be incremented each time a FficeFPU is submitted. |
-
-!> Note to implementers: the cardinality of properties `departureAerodromePrevious`, `destinationAerodromePrevious` and `estimatedOffBlockTimePrevious` is `0..1` in the `FficeFPU` message template,
-but the properties shall always be provided. These cardinalities will be updated in a future version of the `FficeFPU` message template to read `1`.
 
 
 ### Flight data items to be changed
@@ -42,24 +37,16 @@ included in the `FficeFPU` will remain unchanged.
 
 Flight data items to be changed should therefore be included as necessary into the `FficeFPU`. 
 
-The following table details specific encoding rules for some properties.
-
-| FF-ICE data item | FIXM data item in `FficeFPU` | Encoding rules | 
-|:-|:-|:-|
-| **Departure Aerodrome**<br>*new value* | `departureAerodrome`[1] | If there is a change of departure aerodrome, MUST contain the new value.<br><br>If there is no change of departure aerodrome, MUST be present (cardinality [1]) with a nil locationIndicator. |
-| **Destination Aerodrome**<br>*new value* | `destinationAerodrome`[1] | If there is a change of destination aerodrome, MUST contain the new value.<br><br>If there is no change of destination aerodrome, MUST be present (cardinality [1]) with a nil locationIndicator. |
-| **Estimated Off-Block Time**<br>*new value* | `estimatedOffBlockTime`[1] | If there is a change of EOBT, MUST contain the new value.<br><br>If there is no change of EOBT, MUST be present (cardinality [1]) and declared nil. |
-
-!> Note to implementers: the cardinality of properties `departureAerodrome`, `destinationAerodrome` and `estimatedOffBlockTime` is `1` in the `FficeFPU` message template,
-but the properties are optional and should only be provided when there is a change of value. These cardinalities will be updated in a future version of the `FficeFPU` message template to read `0..1`.
-
+Individual elements within a repeating sequence of elements such as those found within a route/trajectory group 
+or a climb/descent performance profile cannot be modified. The entire group must be updated.
 
 ### Removal of a previously provided item
 
-Except for `departureAerodrome`, `destinationAerodrome` and `estimatedOffBlockTime`, a nil element included in an FF-ICE Flight Plan Update message indicates that this flight plan data item is to be deleted.
-Individual elements within a repeating sequence of elements such as those found within a route/trajectory group or a climb/descent performance profile cannot be modified or deleted. 
-The entire group must be updated as required.
+Except for `gufi`, `aircraftIdentification`, `departureAerodrome`, `destinationAerodrome` and `estimatedOffBlockTime`, which cannot be removed, 
+a nil element included in an `FficeFPU` indicates that this flight plan data item is to be deleted.
 
+Individual elements within a repeating sequence of elements such as those found within a route/trajectory group 
+or a climb/descent performance profile cannot be deleted. The entire group must be deleted as required.
 
 ## Examples
 
@@ -71,55 +58,37 @@ This is a fictional `FficeFPU` message that updates the EOBT for flight `UFO1234
 <ffice:FficeMessage xmlns:ffice="http://www.fixm.aero/app/ffice/1.1" [...] xsi:type="ffice:FficeFPU_FficeMessageType">
   <ffice:flight>
     <fx:arrival>
-      <-- ENCODING RULE - If there is no change of destination aerodrome, destinationAerodrome MUST
-          be present (cardinality [1]) with a nil locationIndicator. -->
+      <!-- ENCODING RULE - If there is no change, destinationAerodromePrevious MUST be absent,
+           and destinationAerodrome MUST contain the existing value. -->
       <fx:destinationAerodrome>
-        <fb:locationIndicator xsi:nil="true"/>
-      </fx:destinationAerodrome>
-      <-- ENCODING RULE - destinationAerodromePrevious MUST be present although the cardinality is [0..1]. -->
-      <fx:destinationAerodromePrevious>
         <fb:locationIndicator>EBBR</fb:locationIndicator>
-      </fx:destinationAerodromePrevious>
+      </fx:destinationAerodrome>
     </fx:arrival>
-  	<fx:departure>
-      <-- ENCODING RULE - If there is no change of departure aerodrome, departureAerodrome MUST
-          be present (cardinality [1]) with a nil locationIndicator. -->
-  		<fx:departureAerodrome>
-  			<fb:locationIndicator xsi:nil="true"/>
-  		</fx:departureAerodrome>
-      <-- ENCODING RULE - departureAerodromePrevious MUST be present although the cardinality is [0..1]. -->
-      <fx:departureAerodromePrevious>
+    <fx:departure>
+      <!-- ENCODING RULE - If there is no change, departureAerodromePrevious MUST be absent, 
+           and departureAerodrome MUST contain the existing value. -->
+      <fx:departureAerodrome>
         <fb:locationIndicator>LFBO</fb:locationIndicator>
-      </fx:departureAerodromePrevious>
-      <-- ENCODING RULE - If there is a change of EOBT, estimatedOffBlockTime MUST contain the new value. -->
-  		<fx:estimatedOffBlockTime>2026-05-22T15:10:00Z</fx:estimatedOffBlockTime>			
-      <-- ENCODING RULE - estimatedOffBlockTimePrevious MUST be present although the cardinality is [0..1].
-          MUST be the value before the change. -->
+      </fx:departureAerodrome>
+      <!-- ENCODING RULE - if there is a change, estimatedOffBlockTimePrevious MUST contain 
+           the existing value, and estimatedOffBlockTime MUST contain the new value. -->
+      <fx:estimatedOffBlockTime>2026-05-22T15:10:00Z</fx:estimatedOffBlockTime>
       <fx:estimatedOffBlockTimePrevious>2026-05-22T15:00:00Z</fx:estimatedOffBlockTimePrevious>
-  	</fx:departure>
-  	<fx:flightIdentification>
-       <-- ENCODING RULE - MUST be the same aircraftIdentification as the FficePFP or FficeFFP
+    </fx:departure>
+    <fx:flightIdentification>
+      <!-- ENCODING RULE - MUST be the same aircraftIdentification as the FficePFP or FficeFFP
            to which the FficeFPU refers -->
-	  	<fx:aircraftIdentification>UFO1234</fx:aircraftIdentification>
-      <-- ENCODING RULE - MUST be the same GUFI as the FficePFP or FficeFFP to which the FficeFPU refers -->
-	  	<fx:gufi [...]>f244dbb2-2225-49a3-b542-06c3ccc2384a</fx:gufi>
-  	</fx:flightIdentification>
+      <fx:aircraftIdentification>UFO1234</fx:aircraftIdentification>
+      <!-- ENCODING RULE - MUST be the same GUFI as the FficePFP or FficeFFP to which the FficeFPU refers -->
+      <fx:gufi [...]>f244dbb2-2225-49a3-b542-06c3ccc2384a</fx:gufi>
+    </fx:flightIdentification>
   </ffice:flight>
-  <-- ENCODING RULE - MUST be incremented each time a FficeFPU is submitted -->
+  <!-- ENCODING RULE - MUST be incremented each time a FficeFPU is submitted -->	
   <ffice:operatorFlightPlanVersion>2</ffice:operatorFlightPlanVersion>
-  <--[...]-->
+  <!-- [...] -->
   <ffice:type>FLIGHT_PLAN_UPDATE</ffice:type>
 </ffice:FficeMessage>
 ```
-
-### Route/Trajectory update
-
-`TODO`
-
-### Flight formation details update
-
-`TODO`
-
 
 ## Special cases 
 
@@ -133,23 +102,6 @@ However, nothing precludes local systems, capable of accepting aircraft identifi
 This is achieved already in some countries / regions as outlined below:
 - `TODO` - quote Skyguide example
 - ...
-
-
-## Known bugs and limitations
-
-FIXM Core 4.3.0 introduces a couple of properties suffixed “Previous” that can be used for exchanging values initially submitted 
-in a filed or preliminary flight plan in addition to an updated value. The `FficeFPU` message template from the FF-ICE Message Application 1.1.0 
-further constrains the cardinality of these properties, and declares the properties suffixed "Previous" optional and their counterparts without suffix mandatory. 
-
-This design comes with some limitations:
-- it technically allows the exchange of an `FficeFPU` message with an updated EOBT value only, i.e. without the previous EOBT value, which is not allowed according to the FF-ICE/R1 Implementation Guidance Manual.
-- it forces some  mandatory property (without suffix previous) to be present even when there is no change.
-
-The encoding rules described above aims to address these limitations.
-
-
-
-
 
 
 
