@@ -144,7 +144,7 @@ This example shows the FIXM encoding of a latitude/longitude pair that fails to 
 
 [I-06]: [ICAO Doc 9965, 2nd Edition, Volume II, v0.993 (DRAFT)](https://portal.icao.int/atmrpp/ATMRPP5%20Montreal%2059%20June%202023/1_Working%20papers/ATMRPP5_WP1000_Appendix%20C%20Doc%209965%20Vol%20II%20Implementation%20Guidance%20d0.993_markup.pdf) - Manual on FF-ICE, FF-ICE/R1 Implementation Guidance Manual **DRAFT** 
 
-[I-16]: [ICAO Doc 10150, 1st Edition, 2021](https://portal.icao.int/icao-net/ICAO%20Documents/10150_cons_en.PDF) - Manual on the Functional Specifications for the Location of an Aircraft in Distress Repository (LADR)
+[I-16]: [ICAO Doc 10150, 1st Edition, 2021](https://store.icao.int/en/functional-specifications-for-the-location-of-an-aircraft-in-distress-repository-ladr-doc-10150) - Manual on the Functional Specifications for the Location of an Aircraft in Distress Repository (LADR)
 
 
 
