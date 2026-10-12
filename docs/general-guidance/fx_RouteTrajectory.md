@@ -6,23 +6,29 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ---
 
-## `climbProfile` / `descentProfile`
+## `climbProfile`
 
-As explained in the FF-ICE/R1 Implementation Guidance Manual <sup>[[I-06]](#References)</sup>,
-the `Performance Profile` is a zero-wind, standard atmosphere profile reflective of the flight capabilities and desired parameters. 
-It does not include any flight-specific constraints such as altitude or speed restrictions applicable to the route of flight. 
-However, it does incorporate constraints that are always applicable (e.g., a 250 knot constraint applicable to all flights below 10,000 feet), 
-and gradients required for obstacle clearance along the route of flight.
+The `climbProfile` represents an unconstrained profile for the climb reflective of 
+- the aircraft capabilities and desired parameters for that specific flight (planned take-off mass, speed schedule etc.),
+- actual weather and atmospheric data as used by the Airspace user or its designated representative. The actual weather and atmospheric data will exclude wind and temperature as these values will be calculated using zero wind and a temperature of ISA 0 (zero).
 
-A `Performance Profile` is expressed as a sequence of `Profile Points` each containing: distance, time duration, flight level or altitude, and optionally the true airspeed.
+The `climbProfile` is  expressed as an ordered sequence of `profilePoint` each containing: distance, time duration, flight level or altitude, and optionally the true airspeed. The `climbProfile` is expected to include one `profilePoint` every 1000 feet. This ensures that the `profilePoint` are evenly distributed and that the resulting `climbProfile` has a granularity that is sufficient to support the intended use cases. 
 
-Climb profiles begin at take-off with distance and time expressed relative to the point associated with take-off, nominally the “Wheels Off” point. Climb profiles end at the maximum operational cruise altitude for the specific route/trajectory.
+### Constructing the  `climbProfile`
 
-Descent profiles begin at a top-of-descent at the maximum operational cruise altitude for the specific route/trajectory. Time and distance are expressed relative to the top-of-descent. Descent profiles end at touchdown.
+The `climbProfile` will be based on the planned take off mass. The The `climbProfile` begins at take-off with distance and time expressed relative to the point associated with take-off and end at the maximum altitude the aircraft could reach at the planned take off mass.
 
-The FIXM Core class `RouteTrajectoryGroup` has two properties `climbProfile` and `descentProfile` that can be used for exchanging the `Performance Profile`.
+| # | Altitude | Distance | Time duration |
+| :- | :------- | :-----   | :----- |
+| Profile Point `0` | Altitude at take-off | 0 |  0 |
+| Profile Point `1` | First relevant 1000ft increment (upwards) | Expressed relative to Profile Point `0` | Expressed relative to Profile Point `0` |
+| ... |  ... |  ""  | "" | 
+| Profile Point `k` | 9 000 ft | "" | "" | 
+| Profile Point `k+1` | 10 000 ft | "" | "" | 
+| ... |  ... |  ""  | "" | 
+| Profile Point `n` |  Maximum altitude the aircraft could reach at the planned take-off mass |  ""  | "" | 
 
-### Example of Climb Profile
+### Example
 
 ![Image](.//media/example_climb_profile.png ':size=100%')
 
@@ -276,7 +282,74 @@ The FIXM Core class `RouteTrajectoryGroup` has two properties `climbProfile` and
 </details>
 
 
-### Example of Descent Profile
+## `climbSchedule` / `descentSchedule`
+
+The speed schedule is one of the new aircraft performance data items that can be exchanged in an FF-ICE Flight Plan. According to ICAO Doc 9965 Ed2 Volume II, it is composed of a climb speed schedule and a descent speed schedule, each being comprised of a target Indicated Airspeed and Mach Number representing speed targets for the flight in transition.
+
+The speed targets for the flight in transition are the speed parameters when the flight reaches the **cross-over altitude**. The cross-over altitude is defined in ARINC 702A as the altitude at which the aircraft transitions from Mach number to IAS or vice versa. Therefore, there are four speed targets for the flight in transition which are:
+- The target Indicated Air Speed when reaching the cross-over altitude in climb, i.e. when transitioning from IAS to Mach control;
+- The target Mach number when transitioning from IAS to Mach control;
+- The target Mach number when reaching the cross-over altitude in descent, i.e. when transitioning from Mach to IAS control;
+- The target Indicated Air Speed when transitioning from Mach to IAS control.
+
+![Image](.//media/speed_schedule.png "The four speed parameters of the FF-ICE Speed Schedule")
+
+FIXM Core 4.3.0 specifies two properties that altogether form the FF-ICE Speed Schedule: `climbSchedule` and `descentSchedule`. Both properties are of type `SpeedScheduleType` and have two sub-properties `initialSpeed` and `subsequentSpeed`. This design technically enables the exchange of the four speed parameters of the Speed Schedule as required by ICAO Doc 9965 Ed2 Vol II, but requires additional encoding rules in order to ensure harmonised encoding practices accross implementers. These encoding rules are described below.
+
+**The speed parameters SHALL always be encoded in the order of the trajectory.**
+
+| # | Speed Parameters | FIXM 4.3.0 property to be used | Business rules | 
+| :-- | :-- | :-- | :-- |
+| 1 | CLIMB Target IAS | `climbSchedule`.`initialSpeed`    | attribute `uom` shall always be set to `KT` or `KM_H` |
+| 2 | CLIMB Target MACH number | `climbSchedule`.`subsequentSpeed`   | attribute `uom` shall always be set to `MACH` | 
+| 3 | DESCENT Target MACH number | `descentSchedule`.`initialSpeed`   | attribute `uom` shall always be set to `MACH` | 
+| 4 | DESCENT Target IAS | `descentSchedule`.`subsequentSpeed`  | attribute `uom` shall always be set to `KT` or `KM_H` |
+
+Example of speed schedule encoding:
+
+```xml
+<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
+<fx:climbSchedule>
+  <fx:initialSpeed uom="KT">280</fx:initialSpeed>
+  <fx:subsequentSpeed uom="MACH">0.77</fx:subsequentSpeed>
+</fx:climbSchedule>
+<fx:descentSchedule>
+  <fx:initialSpeed uom="MACH">0.80</fx:initialSpeed>
+  <fx:subsequentSpeed uom="KT">300</fx:subsequentSpeed>
+</fx:descentSchedule>
+```
+
+The `climbSchedule` and `descentSchedule` can be used in combination with the `estimatedTakeOffMass` in order to improve the trajectory prediction. Some shadow mode trials run in Europe showed a significant decrease (9%) in the rate of false alerts generated by a medium term conflict detection tool when both mass and climb speed information that comes from the AUs/CFSPs are used instead of default values from a performance model (BADA). 
+
+---
+
+## `descentProfile`
+
+The `descentProfile` represent an unconstrained profile for the descent reflective of: 
+- the aircraft capabilities and desired parameters for that specific flight (planned take-off mass, speed schedule etc.),
+- actual weather and atmospheric data as used by the Airspace user or its designated representative. The actual weather and atmospheric data will exclude wind and temperature as these values will be calculated using zero wind and a temperature of ISA 0 (zero).
+
+The `descentProfile` is expressed as an ordered sequence of `profilePoint` each containing: distance, time duration, flight level or altitude, and optionally the true airspeed. The `descentProfile` is expected to include one `profilePoint` every 1000 feet. This ensures that the `profilePoint` are evenly distributed and that the resulting `descentProfile` has a granularity that is sufficient to support the intended use cases. 
+
+## Constructing the `descentProfile`
+
+Two options can be considered for computing the `descentProfile`:
+- ***Option 1 - Forward calculation***: the `descentProfile` will be based upon the planned aircraft mass at the calculated top-of-descent and will start at the max altitude available at the planned mass. Time and distance are expressed relative to the point in the profile corresponding to the max altitude. The `descentProfile` ends at touchdown. 
+- ***Option 2 - Backward calculation***: the `descentProfile` will be based upon the planned aircraft mass at landing and will end at the max altitude available. Time and distance are expressed relative to the point in the profile corresponding to the max altitude. The `descentProfile` ends at touchdown.
+
+Figure 1: Illustration of the Performance Descent Profile 
+
+| # | Altitude | Distance | Time duration |
+| :- | :------- | :-----   | :----- |
+| Profile Point `0` | Max capable altitude at the reference mass | 0 |  0 |
+| Profile Point `1` | First relevant 1000ft increment (downwards) | Expressed relative to Profile Point `0` | Expressed relative to Profile Point `0` |
+| ... |  ... |  ""  | "" | 
+| Profile Point `k` | 10 000 ft | "" | "" | 
+| Profile Point `k+1` | 9 000 ft | "" | "" | 
+| ... |  ... |  ""  | "" | 
+| Profile Point `n` |  Altitude at touchdown |  ""  | "" | 
+
+### Example
 
 ![Image](.//media/example_descent_profile.png ':size=100%')
 
@@ -384,46 +457,6 @@ The FIXM Core class `RouteTrajectoryGroup` has two properties `climbProfile` and
 
 ---
 
-## `climbSchedule` / `descentSchedule`
-
-The speed schedule is one of the new aircraft performance data items that can be exchanged in an FF-ICE Flight Plan. According to ICAO Doc 9965 Ed2 Volume II, it is composed of a climb speed schedule and a descent speed schedule, each being comprised of a target Indicated Airspeed and Mach Number representing speed targets for the flight in transition.
-
-The speed targets for the flight in transition are the speed parameters when the flight reaches the **cross-over altitude**. The cross-over altitude is defined in ARINC 702A as the altitude at which the aircraft transitions from Mach number to IAS or vice versa. Therefore, there are four speed targets for the flight in transition which are:
-- The target Indicated Air Speed when reaching the cross-over altitude in climb, i.e. when transitioning from IAS to Mach control;
-- The target Mach number when transitioning from IAS to Mach control;
-- The target Mach number when reaching the cross-over altitude in descent, i.e. when transitioning from Mach to IAS control;
-- The target Indicated Air Speed when transitioning from Mach to IAS control.
-
-![Image](.//media/speed_schedule.png "The four speed parameters of the FF-ICE Speed Schedule")
-
-FIXM Core 4.3.0 specifies two properties that altogether form the FF-ICE Speed Schedule: `climbSchedule` and `descentSchedule`. Both properties are of type `SpeedScheduleType` and have two sub-properties `initialSpeed` and `subsequentSpeed`. This design technically enables the exchange of the four speed parameters of the Speed Schedule as required by ICAO Doc 9965 Ed2 Vol II, but requires additional encoding rules in order to ensure harmonised encoding practices accross implementers. These encoding rules are described below.
-
-**The speed parameters SHALL always be encoded in the order of the trajectory.**
-
-| # | Speed Parameters | FIXM 4.3.0 property to be used | Business rules | 
-| :-- | :-- | :-- | :-- |
-| 1 | CLIMB Target IAS | `climbSchedule`.`initialSpeed`    | attribute `uom` shall always be set to `KT` or `KM_H` |
-| 2 | CLIMB Target MACH number | `climbSchedule`.`subsequentSpeed`   | attribute `uom` shall always be set to `MACH` | 
-| 3 | DESCENT Target MACH number | `descentSchedule`.`initialSpeed`   | attribute `uom` shall always be set to `MACH` | 
-| 4 | DESCENT Target IAS | `descentSchedule`.`subsequentSpeed`  | attribute `uom` shall always be set to `KT` or `KM_H` |
-
-Example of speed schedule encoding:
-
-```xml
-<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->
-<fx:climbSchedule>
-  <fx:initialSpeed uom="KT">280</fx:initialSpeed>
-  <fx:subsequentSpeed uom="MACH">0.77</fx:subsequentSpeed>
-</fx:climbSchedule>
-<fx:descentSchedule>
-  <fx:initialSpeed uom="MACH">0.80</fx:initialSpeed>
-  <fx:subsequentSpeed uom="KT">300</fx:subsequentSpeed>
-</fx:descentSchedule>
-```
-
-The `climbSchedule` and `descentSchedule` can be used in combination with the `estimatedTakeOffMass` in order to improve the trajectory prediction. Some shadow mode trials run in Europe showed a significant decrease (9%) in the rate of false alerts generated by a medium term conflict detection tool when both mass and climb speed information that comes from the AUs/CFSPs are used instead of default values from a performance model (BADA). 
-
----
 
 ## `element`
 
