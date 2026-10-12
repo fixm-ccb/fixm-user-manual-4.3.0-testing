@@ -337,7 +337,8 @@ Two options can be considered for computing the `descentProfile`:
 - ***Option 1 - Forward calculation***: the `descentProfile` will be based upon the planned aircraft mass at the calculated top-of-descent and will start at the max altitude available at the planned mass. Time and distance are expressed relative to the point in the profile corresponding to the max altitude. The `descentProfile` ends at touchdown. 
 - ***Option 2 - Backward calculation***: the `descentProfile` will be based upon the planned aircraft mass at landing and will end at the max altitude available. Time and distance are expressed relative to the point in the profile corresponding to the max altitude. The `descentProfile` ends at touchdown.
 
-Figure 1: Illustration of the Performance Descent Profile 
+![Image](.//media/descentProfileIllustration.png "Illustration of the Performance Descent Profile ")
+
 
 | # | Altitude | Distance | Time duration |
 | :- | :------- | :-----   | :----- |
