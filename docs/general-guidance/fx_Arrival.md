@@ -98,7 +98,10 @@ Example - a flight scheduled to land at Düsseldorf Airport (EDDL) with Münster
 
 ## `destinationAerodromePrevious`
 
-See [`aircraftIdentificationPrevious`]
+This property is used to support the expression of a change of destination aerodrome in a Flight Plan update. 
+See guidance for the [`FficeFPU`] message.
+
+The `destinationAerodromePrevious` shall be expressed in FIXM as a valid [AerodromeReference].
 
 [`aircraftIdentificationPrevious`]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
 [`airportSlotIdentification`]: general-guidance/fx_Departure?id=airportslotidentification
@@ -106,3 +109,5 @@ See [`aircraftIdentificationPrevious`]
 [AerodromeReference]: general-guidance/fb_AeronauticalReference?id=aerodromereference
 [DateTimeUtc]: general-guidance/fb_Types?id=datetimeutc-datetimeutchighprecision
 [GeographicalPosition]: general-guidance/fb_AeronauticalReference?id=geographicalposition
+
+[`FficeFPU`]: fixm-in-support-of-ffice/FficeFPU?id=mandatory-flight-data-items
