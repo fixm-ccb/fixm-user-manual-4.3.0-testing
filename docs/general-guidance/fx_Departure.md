@@ -141,7 +141,8 @@ Airfile flights will represent the route start point in `departurePoint`, and wi
 
 ## `departureAerodromePrevious` / `departurePointPrevious`
 
-See [`aircraftIdentificationPrevious`].
+These properties are used to support the expression of a change of departure aerodrome in a Flight Plan update. 
+See guidance for the [`FficeFPU`] message.
 
 ---
 
@@ -153,7 +154,8 @@ See above - chapter departureAerodrome / departurePoint.
 
 ## `estimatedOffBlockTimePrevious` / `estimatedRouteStartTimePrevious`
 
-See [`aircraftIdentificationPrevious`].
+These properties are used to support the expression of a change of EOBT in a Flight Plan update. 
+See guidance for the [`FficeFPU`] message.
 
 ---
 
@@ -171,8 +173,8 @@ specified.
 
 [I-04]: [ICAO Doc 4444, 16th Edition, 2016](https://portal.icao.int/icao-net/ICAO%20Documents/4444_cons_en.pdf) - PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management
 
-[`aircraftIdentificationPrevious`]: general-guidance/fx_FlightData?id=aircraftidentificationprevious
-
 [DateTimeUtc]: general-guidance/fb_Types?id=datetimeutc-datetimeutchighprecision
 [GeographicalPosition]: general-guidance/fb_AeronauticalReference?id=geographicalposition
+
+[`FficeFPU`]: fixm-in-support-of-ffice/FficeFPU?id=mandatory-flight-data-items
 
