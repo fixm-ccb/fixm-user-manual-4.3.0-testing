@@ -32,15 +32,15 @@ fixed and may, for instance, be changed by a Flight Plan Update. FIXM enables th
 so that traditional message/flight matching can still be performed, and also so that translation to an ATS message (e.g. CHG or DLA) remains possible.
 For more information, see guidance for the [FficeFPU] message.
 
-[`aircraftIdentification`] general-guidance/fx_FlightData?id=aircraftidentification
+[`aircraftIdentification`]: general-guidance/fx_FlightData?id=aircraftidentification
 [`gufi`]: general-guidance/fx_FlightData?id=gufi
 
-[`departureAerodrome`] general-guidance/fx_Departure?id=departureaerodrome
-[`estimatedOffBlockTime`] general-guidance/fx_Departure?id=estimatedoffblocktime
-[`destinationAerodrome`] general-guidance/fx_Arrival?id=destinationaerodrome
-[`departureAerodromePrevious`] general-guidance/fx_Departure?id=departureaerodromeprevious
-[`estimatedOffBlockTimePrevious`] general-guidance/fx_Departure?id=estimatedoffblocktimeprevious
-[`destinationAerodromePrevious`] general-guidance/fx_Arrival?id=destinationaerodromeprevious
+[`departureAerodrome`]: general-guidance/fx_Departure?id=departureaerodrome
+[`estimatedOffBlockTime`]: general-guidance/fx_Departure?id=estimatedoffblocktime
+[`destinationAerodrome`]: general-guidance/fx_Arrival?id=destinationaerodrome
+[`departureAerodromePrevious`]: general-guidance/fx_Departure?id=departureaerodromeprevious
+[`estimatedOffBlockTimePrevious`]: general-guidance/fx_Departure?id=estimatedoffblocktimeprevious
+[`destinationAerodromePrevious`]: general-guidance/fx_Arrival?id=destinationaerodromeprevious
 
 [FficeFPU]: fixm-in-support-of-ffice/FficeFPU
 
