@@ -74,7 +74,7 @@
   - Flight Data Response
   - Flight Departure
   - Flight Arrival
-  - [FF-ICE Message <=> Flight association](fixm-in-support-of-ffice/message_flight_association.md))
+  - [Message-Flight association](fixm-in-support-of-ffice/message_flight_association.md)
   - [Route/Trajectory Example Data](fixm-in-support-of-ffice/example_data.md)
   - [Examples of FF-ICE Messages](fixm-in-support-of-ffice/example_messages.md)
 
