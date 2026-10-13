@@ -29,30 +29,14 @@ Encoding of ACID in `FIXM Core 4.3.0`
 
 ### `aircraftIdentificationPrevious`
 
-The process of associating FF-ICE Messages with flights, although faciliated by the gufi, can still involve several key fields, 
-including the aircraft identification, the departure airport, the departure time, and the destination aerodrome. These key fields 
-may not always be fixed and may, for instance, be changed by a Flight Plan Update. 
+Many ATS systems globally are unable to support a modification to the aircraft identification as it is used as 
+a unique key in accessing the flight data. Use of FF-ICE will not automatically overcome these processing limitations. 
+Therefore, global acceptability of aircraft identification modification cannot be guaranteed. 
 
-FIXM enables the exchange of these key fields as they were initially (i.e. prior to any change) using the fields `...Previous` 
-(`aircraftIdentificationPrevious`, `estimatedOffBlockTimePrevious`, `estimatedRouteStartTimePrevious`, etc.), 
-so that traditional message/flight matching can still be performed, and also so that translation to an ATS message (e.g. CHG or DLA) remains possible.
-
-Example:
-
-```xml
-<!--xmlns:fx="http://www.fixm.aero/flight/4.3"-->	
-<fx:departure>
-  <fx:departureAerodrome>
-    <fb:locationIndicator>KDFW</fb:locationIndicator>
-  </fx:departureAerodrome>
-  <fx:estimatedOffBlockTime>2023-01-13T15:21:30Z</fx:estimatedOffBlockTime>
-  <fx:estimatedOffBlockTimePrevious>2023-01-13T15:18:00Z</fx:estimatedOffBlockTimePrevious>
-</fx:departure>
-<fx:flightIdentification>
-  <fx:aircraftIdentification>UFO1234</fx:aircraftIdentification>
-  <fx:aircraftIdentificationPrevious>UFO9876</fx:aircraftIdentificationPrevious>
-</fx:flightIdentification>
-```
+However, nothing precludes a local system(s), capable of accepting aircraft identification modifications, to continue to do so using FF-ICE 
+services for flights that are conducted entirely within their area(s) of responsibility. To enable this local use case, FIXM introduces 
+property `aircraftIdentificationPrevious` that can be used exchange the value of the callsign as it was before a change, in addition to the 
+new value (captured in `aircraftIdentification`).
 
 ### `gufi`
 
