@@ -144,6 +144,8 @@ Airfile flights will represent the route start point in `departurePoint`, and wi
 These properties are used to support the expression of a change of departure aerodrome in a Flight Plan update. 
 See guidance for the [`FficeFPU`] message.
 
+The `departureAerodromePrevious` shall be expressed in FIXM as a valid [AerodromeReference].
+
 ---
 
 ## `estimatedOffBlockTime` / `estimatedRouteStartTime`
@@ -173,6 +175,7 @@ specified.
 
 [I-04]: [ICAO Doc 4444, 16th Edition, 2016](https://portal.icao.int/icao-net/ICAO%20Documents/4444_cons_en.pdf) - PANS-ATM: Procedures for Air Navigation Services: Air Traffic Management
 
+[AerodromeReference]: general-guidance/fb_AeronauticalReference?id=aerodromereference
 [DateTimeUtc]: general-guidance/fb_Types?id=datetimeutc-datetimeutchighprecision
 [GeographicalPosition]: general-guidance/fb_AeronauticalReference?id=geographicalposition
 
