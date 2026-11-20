@@ -24,15 +24,15 @@ The `climbProfile` is expressed as an ordered sequence of `profilePoint` each co
 The `climbProfile` is expected to include one `profilePoint` every 1000 feet. This ensures that the `profilePoint` are evenly distributed and that the resulting `climbProfile` has a granularity that is sufficient to support the intended use cases. 
 
 
-| `seqNum` | `level` | `distance` | `time` |
-| :- | :------- | :-----   | :----- |
-| Profile Point `0` | Altitude at take-off | 0 |  0 |
-| Profile Point `1` | First relevant 1000ft increment (upwards) | Expressed relative to Profile Point `0` | Expressed relative to Profile Point `0` |
-| ... |  ... |  ""  | "" | 
-| Profile Point `k` | 9 000 ft | "" | "" | 
-| Profile Point `k+1` | 10 000 ft | "" | "" | 
-| ... |  ... |  ""  | "" | 
-| Profile Point `n` |  Maximum altitude the aircraft could reach at the planned take-off mass |  ""  | "" | 
+| | `seqNum` | `level`   | `distance` | `time` |
+| :- | :- | :-------       | :-----   | :----- |
+| `profilePoint` | `0`   | Altitude at take-off | 0 |  0 |
+| `profilePoint` | `1`   | First relevant 1000ft increment (upwards) | Expressed relative to Profile Point `0` | Expressed relative to Profile Point `0` |
+| `profilePoint` | ...   |  ...      | "" | "" | 
+| `profilePoint` | `k`   | 9 000 ft  | "" | "" | 
+| `profilePoint` | `k+1` | 10 000 ft | "" | "" | 
+| `profilePoint` | ...   |  ...      | "" | "" | 
+| `profilePoint` | `n`   |  Maximum altitude the aircraft could reach at the planned take-off mass |  ""  | "" | 
 
 
 ## `climbSchedule` / `descentSchedule`
