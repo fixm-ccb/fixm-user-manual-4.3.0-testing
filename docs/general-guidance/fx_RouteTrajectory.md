@@ -24,7 +24,7 @@ The `climbProfile` is expressed as an ordered sequence of `profilePoint` each co
 The `climbProfile` is expected to include one `profilePoint` every 1000 feet. This ensures that the `profilePoint` are evenly distributed and that the resulting `climbProfile` has a granularity that is sufficient to support the intended use cases. 
 
 
-| `seqNum` | `altitude` | `distance` | `time` |
+| `seqNum` | `level` | `distance` | `time` |
 | :- | :------- | :-----   | :----- |
 | Profile Point `0` | Altitude at take-off | 0 |  0 |
 | Profile Point `1` | First relevant 1000ft increment (upwards) | Expressed relative to Profile Point `0` | Expressed relative to Profile Point `0` |
