@@ -14,7 +14,7 @@ The `climbProfile` represents an unconstrained profile for the climb reflective 
 
 The `climbProfile` is based on the planned take off mass. It begins at take-off and ends at the maximum altitude the aircraft could reach at the planned take off mass. It is computed using actual weather and atmospheric data as used by the Airspace user or its designated representative excluding wind and temperature as these values will be calculated using zero wind and a temperature of ISA 0 (zero).
 
-### Encoding rules for exchanging the 'climbProfile'
+### Encoding rules for exchanging the `climbProfile`
 
 The `climbProfile` is expressed as an ordered sequence of `profilePoint` each containing: distance, time duration, flight level or altitude, and optionally the true airspeed. 
 - The first `profilePoint` of the `climbProfile` is the point associated with take-off. It shall be encoded with `seqNum` set to `0`. 
