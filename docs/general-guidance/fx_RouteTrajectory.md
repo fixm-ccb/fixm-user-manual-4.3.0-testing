@@ -17,11 +17,11 @@ The `climbProfile` is based on the planned take off mass. It begins at take-off 
 ### Encoding rules for exchanging the `climbProfile`
 
 The `climbProfile` is expressed as an ordered sequence of `profilePoint` each containing: distance, time duration, flight level or altitude, and optionally the true airspeed. 
-- The first `profilePoint` of the `climbProfile` is the point associated with take-off. It shall be encoded with `seqNum` set to `0`. 
-- Subsequent `profilePoint` elements shall be added as necessary, with a `seqNum` incremented by one. Distance and time shall be expressed relative to the the point associated with take-off.
+- The first `profilePoint` of the `climbProfile` is the point associated with take-off. It shall be encoded with `seqNum` set to `0`.
+- Subsequent `profilePoint` elements shall be added as necessary, with a `seqNum` incremented by one. Distance and time shall be expressed relative to the point associated with take-off.
 - The last `profilePoint` of the `climbProfile` is the point associated with the maximum capable altitude that the aircraft can reach considering the planned take-off mass.
 
-The `climbProfile` is expected to include one `profilePoint` every 1000 feet. This ensures that the `profilePoint` are evenly distributed and that the resulting `climbProfile` has a granularity that is sufficient to support the intended use cases. 
+The `climbProfile` is expected to include one `profilePoint` every 1000 feet. This ensures that the `profilePoint` are evenly distributed and that the resulting `climbProfile` has a granularity that is sufficient to support the intended use cases.
 
 
 | | `seqNum` | `level`   | `distance` | `time` |
@@ -91,7 +91,7 @@ Regardless of the method used, the `descentProfile` is always constructed using 
 ### Encoding rules for exchanging the `descentProfile`
 
 Regardless of how it is computed, the descent profile is always exchanged as an ordered series of `profilePoint` each containing: distance, time duration, flight level or altitude, and optionally the true airspeed. 
-- The first `profilePoint` of the `descentProfile` is the point associated with the maximum capable altitude
+- The first `profilePoint` of the `descentProfile` is the point associated with the maximum capable altitude.
 - Subsequent `profilePoint` elements shall be added as necessary, with a `seqNum` incremented by one. Distance and time shall be expressed relative to the first `profilePoint` of the `descentProfile`.
 - The last `profilePoint` of the `descentProfile` is the point associated with touchdown.
 
