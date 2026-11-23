@@ -8,25 +8,31 @@ Go to [XML schema documentation](https://www.fixm.aero/releases/FIXM-4.3.0/doc/s
 
 ## `climbProfile`
 
-The `climbProfile` represents an unconstrained profile for the climb reflective of 
-- the aircraft capabilities and desired parameters for that specific flight (planned take-off mass, speed schedule etc.),
-- actual weather and atmospheric data as used by the Airspace user or its designated representative. The actual weather and atmospheric data will exclude wind and temperature as these values will be calculated using zero wind and a temperature of ISA 0 (zero).
-
-The `climbProfile` is  expressed as an ordered sequence of `profilePoint` each containing: distance, time duration, flight level or altitude, and optionally the true airspeed. The `climbProfile` is expected to include one `profilePoint` every 1000 feet. This ensures that the `profilePoint` are evenly distributed and that the resulting `climbProfile` has a granularity that is sufficient to support the intended use cases. 
+The `climbProfile` represents an unconstrained profile for the climb reflective of the aircraft capabilities and desired parameters for that specific flight (planned take-off mass, speed schedule etc.).
 
 ### Constructing the  `climbProfile`
 
-The `climbProfile` is based on the planned take off mass. The `climbProfile` begins at take-off with distance and time expressed relative to the point associated with take-off and end at the maximum altitude the aircraft could reach at the planned take off mass.
+The `climbProfile` is based on the planned take off mass. It begins at take-off and ends at the maximum altitude the aircraft could reach at the planned take off mass. It is computed using actual weather and atmospheric data as used by the Airspace user or its designated representative excluding wind and temperature as these values will be calculated using zero wind and a temperature of ISA 0 (zero).
 
-| # | Altitude | Distance | Time duration |
-| :- | :------- | :-----   | :----- |
-| Profile Point `0` | Altitude at take-off | 0 |  0 |
-| Profile Point `1` | First relevant 1000ft increment (upwards) | Expressed relative to Profile Point `0` | Expressed relative to Profile Point `0` |
-| ... |  ... |  ""  | "" | 
-| Profile Point `k` | 9 000 ft | "" | "" | 
-| Profile Point `k+1` | 10 000 ft | "" | "" | 
-| ... |  ... |  ""  | "" | 
-| Profile Point `n` |  Maximum altitude the aircraft could reach at the planned take-off mass |  ""  | "" | 
+### Encoding rules for exchanging the `climbProfile`
+
+The `climbProfile` is expressed as an ordered sequence of `profilePoint` each containing: distance, time duration, flight level or altitude, and optionally the true airspeed. 
+- The first `profilePoint` of the `climbProfile` is the point associated with take-off. It shall be encoded with `seqNum` set to `0`.
+- Subsequent `profilePoint` elements shall be added as necessary, with a `seqNum` incremented by one. Distance and time shall be expressed relative to the point associated with take-off.
+- The last `profilePoint` of the `climbProfile` is the point associated with the maximum capable altitude that the aircraft can reach considering the planned take-off mass.
+
+The `climbProfile` is expected to include one `profilePoint` every 1000 feet. This ensures that the `profilePoint` are evenly distributed and that the resulting `climbProfile` has a granularity that is sufficient to support the intended use cases.
+
+
+| | `seqNum` | `level`   | `distance` | `time` |
+| :- | :- | :-------       | :-----   | :----- |
+| `profilePoint` | `0`   | Altitude at take-off | 0 |  0 |
+| `profilePoint` | `1`   | First relevant 1000ft increment (upwards) | Expressed relative to `profilePoint` `0` | Expressed relative to `profilePoint` `0` |
+| `profilePoint` | ...   |  ...      | "" | "" | 
+| `profilePoint` | `k`   | 9 000 ft  | "" | "" | 
+| `profilePoint` | `k+1` | 10 000 ft | "" | "" | 
+| `profilePoint` | ...   |  ...      | "" | "" | 
+| `profilePoint` | `n`   |  Maximum altitude the aircraft could reach at the planned take-off mass |  ""  | "" | 
 
 
 ## `climbSchedule` / `descentSchedule`
@@ -72,30 +78,34 @@ The `climbSchedule` and `descentSchedule` can be used in combination with the `e
 
 ## `descentProfile`
 
-The `descentProfile` represents an unconstrained profile for the descent reflective of: 
-- the aircraft capabilities and desired parameters for that specific flight (planned take-off mass, speed schedule etc.),
-- actual weather and atmospheric data as used by the Airspace user or its designated representative. The actual weather and atmospheric data will exclude wind and temperature as these values will be calculated using zero wind and a temperature of ISA 0 (zero).
+The `descentProfile` represents an unconstrained profile for the descent reflective of the aircraft capabilities and desired parameters for that specific flight (planned take-off mass, speed schedule etc.).
 
-The `descentProfile` is expressed as an ordered sequence of `profilePoint` each containing: distance, time duration, flight level or altitude, and optionally the true airspeed. The `descentProfile` is expected to include one `profilePoint` every 1000 feet. This ensures that the `profilePoint` are evenly distributed and that the resulting `descentProfile` has a granularity that is sufficient to support the intended use cases. 
+### Constructing the `descentProfile`
 
-## Constructing the `descentProfile`
+Two methods can be considered for computing the `descentProfile`: ***Forward calculation*** or ***Backward calculation***.
 
-Two options can be considered for computing the `descentProfile`:
-- ***Option 1 - Forward calculation***: the `descentProfile` is based upon the planned aircraft mass at the calculated top-of-descent and starts at the max altitude available at the planned mass. Time and distance are expressed relative to the point in the profile corresponding to the max altitude. The `descentProfile` ends at touchdown. 
-- ***Option 2 - Backward calculation***: the `descentProfile` is based upon the planned aircraft mass at landing and ends at the max altitude available. Time and distance are expressed relative to the point in the profile corresponding to the max altitude. The `descentProfile` ends at touchdown.
+![Image](.//media/generating_the_descent_profile.png "Constructing the descent profile")
+ 
+Regardless of the method used, the `descentProfile` is always constructed using actual weather and atmospheric data as used by the Airspace user or its designated representative, excluding wind and temperature as these values will be calculated using zero wind and a temperature of ISA 0 (zero).
 
-![Image](.//media/descentProfileIllustration.png "Illustration of the Performance Descent Profile ")
+### Encoding rules for exchanging the `descentProfile`
 
+Regardless of how it is computed, the descent profile is always exchanged as an ordered series of `profilePoint` each containing: distance, time duration, flight level or altitude, and optionally the true airspeed. 
+- The first `profilePoint` of the `descentProfile` is the point associated with the maximum capable altitude.
+- Subsequent `profilePoint` elements shall be added as necessary, with a `seqNum` incremented by one. Distance and time shall be expressed relative to the first `profilePoint` of the `descentProfile`.
+- The last `profilePoint` of the `descentProfile` is the point associated with touchdown.
 
-| # | Altitude | Distance | Time duration |
-| :- | :------- | :-----   | :----- |
-| Profile Point `0` | Max capable altitude at the reference mass | 0 |  0 |
-| Profile Point `1` | First relevant 1000ft increment (downwards) | Expressed relative to Profile Point `0` | Expressed relative to Profile Point `0` |
-| ... |  ... |  ""  | "" | 
-| Profile Point `k` | 10 000 ft | "" | "" | 
-| Profile Point `k+1` | 9 000 ft | "" | "" | 
-| ... |  ... |  ""  | "" | 
-| Profile Point `n` |  Altitude at touchdown |  ""  | "" | 
+The `descentProfile` is expected to include one `profilePoint` every 1000 feet. This ensures that the `profilePoint` are evenly distributed and that the resulting `descentProfile` has a granularity that is sufficient to support the intended use cases. 
+
+| | `seqNum` | `level`   | `distance` | `time` |
+| :- | :- | :-------       | :-----   | :----- |
+| `profilePoint` | `0` | Max capable altitude at the reference mass | 0 |  0 |
+| `profilePoint` | `1` | First relevant 1000ft increment (downwards) | Expressed relative to `profilePoint` `0` | Expressed relative to `profilePoint` `0` |
+| `profilePoint` | ... |  ... |  ""  | "" | 
+| `profilePoint` | `k` | 10 000 ft | "" | "" | 
+| `profilePoint` | `k+1` | 9 000 ft | "" | "" | 
+| `profilePoint` | ... |  ... |  ""  | "" | 
+| `profilePoint` | `n` |  Altitude at touchdown |  ""  | "" | 
 
 ---
 
